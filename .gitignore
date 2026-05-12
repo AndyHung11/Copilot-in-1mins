@@ -1,6 +1,7 @@
-# 只保留 html
+# 排除非內容檔
 *
 !*/
 !*.html
+!*.msg
 !.gitignore
 !README.md
