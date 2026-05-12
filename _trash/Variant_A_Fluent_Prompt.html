@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分鐘小教室：Power of Prompt #001</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: Consolas, "Courier New", monospace !important; }
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- Banner -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一分鐘小教室</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 001 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">打造你的個人化指令</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- Intro -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br />
+            從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br />
+            <b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Prompt Title -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🪞 打造你的個人化指令</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Personalize Your Comms Style</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 讓 Copilot 寫出「像你會寫的」內容
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Story -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          有沒有發現？Copilot 預設寫出來的東西雖然 OK，但總覺得「不太像自己的口吻」。其實它不是不會寫，而是還不認識你！<br /><br />
+          只要把這份 <b>個人化指令</b> 一次設定好，告訴它你的職稱、團隊、常往來對象、寫作風格與愛用的工具，之後每一封郵件、每一份會議摘要、每一段 Teams 訊息，Copilot 都會用 <b>更貼近你風格</b> 的方式產出。<br /><br />
+          一次設定，<b>長期受用</b> — 從此告別「再幫我重寫一次，口吻像我一點」的迴圈！
+        </div>
+      </td></tr>
+
+      <!-- Prompt (繁中主版) -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr><td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+              <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td></tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 把 <b>{方括號}</b> 內的內容換成自己的資訊，再貼到 Copilot 對話框</div>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div class="mono" style="font-family:Consolas,'Courier New',monospace;font-size:13px;line-height:1.7;color:#111827;white-space:pre-wrap;word-break:break-word;">請依照以下我的個人資訊，調整你協助我撰寫郵件、回覆訊息、產生摘要時的風格與內容：
+
+【關於我】
+- 姓名與職稱：{你的姓名} / {你的職稱}
+- 部門 / 團隊：{部門名稱}
+- 主要工作職責：{2–3 句描述你日常負責的事務}
+
+【常往來對象】
+- 直屬主管：{主管姓名與職稱}
+- 重要協作夥伴：{部門 / 角色名稱}
+- 常聯繫的客戶或外部單位：{舉例}
+
+【慣用語言與風格】
+- 主要工作語言：{繁體中文 / 英文 / 雙語}
+- 寫作風格：{例：簡潔、正式、帶一點親切感}
+- 通常使用的稱呼：{Hi {Name} / 您好 / Dear {Name}}
+
+【常用工具與資料來源】
+- 主要使用的 Microsoft 365 工具：{Outlook / Teams / SharePoint / OneDrive / Loop}
+- 常引用的資料夾或網站：{舉例}
+
+【特別注意事項】
+- {例：對外信件請保持正式且加上完整敬語}
+- {例：對主管的更新請以條列式呈現重點}
+- {例：避免使用過於口語的縮寫}
+
+請記住以上資訊，未來協助我撰寫任何內容時，主動套用這些風格設定。</div>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Prompt (英文次版) -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr><td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+              <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td></tr>
+        </table>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div class="mono" style="font-family:Consolas,'Courier New',monospace;font-size:13px;line-height:1.7;color:#374151;white-space:pre-wrap;word-break:break-word;">Please use the following personal context to tailor how you help me draft emails, reply to messages, and create summaries:
+
+[About Me]
+- Name & Title: {Your Name} / {Your Title}
+- Department / Team: {Department Name}
+- Key Responsibilities: {2–3 sentences about your day-to-day work}
+
+[Frequent Contacts]
+- Direct Manager: {Manager's name & title}
+- Key Collaborators: {Departments / Roles}
+- Frequent Customers or External Parties: {Examples}
+
+[Preferred Language & Style]
+- Primary Working Language: {English / Traditional Chinese / Bilingual}
+- Writing Style: {e.g., concise, formal, slightly friendly}
+- Default Greeting: {Hi {Name} / Dear {Name}}
+
+[Common Tools & References]
+- Main Microsoft 365 Tools: {Outlook / Teams / SharePoint / OneDrive / Loop}
+- Frequently Referenced Folders or Sites: {Examples}
+
+[Special Notes]
+- {e.g., External emails must remain formal and include full sign-off}
+- {e.g., Updates to my manager should be in bullet format with key takeaways}
+- {e.g., Avoid casual abbreviations}
+
+Please remember the above and proactively apply these style preferences whenever you help me write content in the future.</div>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Tips -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用小撇步</b><br />
+            1. 第一次貼上後，可以請 Copilot：「請複述一下你記住的我的個人風格」確認是否正確收到。<br />
+            2. 之後在新對話開頭簡短提一句：「請依照我之前提供的個人風格設定協助我」，效果最佳。<br />
+            3. 風格會隨時間調整，建議 <b>每季回頭檢視一次</b> 並更新內容。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Badge -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            ✨ 適用所有 Microsoft 365 Copilot 使用者
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- Footer -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>

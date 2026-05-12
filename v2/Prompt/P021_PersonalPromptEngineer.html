@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分鐘小教室：Power of Prompt #P021 — 讓 Copilot 當你的 Prompt 工程師</title>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- BANNER -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分鐘小教室</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P021 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">讓 Copilot 當你的 Prompt 工程師</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- HERO -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">🔧✨💬🤖🎯</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">
+        🔧 讓 Copilot 當你的 Prompt 工程師
+      </div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Your Personal Prompt Engineer</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">
+        一鍵迭代打造完美提示詞
+      </div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⚡ 試用：Copilot Chat - Web</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- TAGLINE -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- PAIN POINTS -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣工作嗎？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">😵</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">每次問 Copilot<br>出來的結果都差那麼一點</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤷</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">不知道怎麼問<br>才能讓 Copilot 真正理解</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏳</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">反覆修改 Prompt<br>耗掉整個下午</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        每次打開 Copilot，腦海有想法，卻不知道怎麼「說對」？問題不在 Copilot，而在於 Prompt 的品質。這週的提示詞把 Copilot 變成你的 <b>Prompt 工程師</b>！透過迭代對話，Copilot 先問你需求，再提出修訂版與追問，直到 Prompt 完全符合你的目標為止。<b style="color:#D03A3A;">一次就問到位，從此不再撞牆 🎯</b>
+      </div>
+    </td>
+  </tr>
+
+  <!-- WHAT YOU GET -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">💬 迭代修訂</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">Copilot 持續優化 Prompt 直到符合需求，每輪都產出清晰的修訂版。</div>
+            </div></td>
+          <td width="50%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">❓ 追問補全</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">自動問你缺少的關鍵資訊，讓 Prompt 越來越精準。</div>
+            </div></td>
+        </tr>
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🔁 反覆精煉</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">你可以多輪對話，每次都比上次更貼近目標。</div>
+            </div></td>
+          <td width="50%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🛠️ 立即可用</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">最終版 Prompt 直接可複製給 Copilot 或其他 AI 工具使用。</div>
+            </div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- TRY IT - CHINESE -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
+        <div style="font-size:10.5pt; color:#7B5500; padding-bottom:10px; font-style:italic;">
+          打開 Copilot Chat - Web，把下面整段貼上去就能跑。
+        </div>
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          Hi，我想請你擔任我的 Prompt 工程師。你的目標是幫我為我的需求打造最棒的 Prompt，並用於你 Copilot 本身。在本次對話中請依照以下流程：你的第一個回應是詢問我這個 Prompt 的用途。我會提供答案，之後透過第二步和第三步反覆改進。根據我的輸入，你將產出兩個區塊：<b>修訂版 Prompt</b>（清晰、精簡的版本），以及<b>問題</b>（你需要問我以補足資訊的相關問題）。我們將持續迭代，直到 Prompt 完全符合我的需求。
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ENGLISH PROMPT -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">💬 English Prompt｜英文版</div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        Hi, I'd like you to act as my Prompt engineer. Your goal as a Copilot is to help me craft the best possible prompt for my needs. The purpose of the prompt is to use it with you, Copilot. You must follow the following process during this chat session: Your first response will be to ask me what the prompt should be about. I will provide my answer, but we will need to improve it through continual iterations by going through steps two and three. Based on my input, you will generate two sections. Revised Prompt: A clear, concise version of the prompt as you understand it. Questions: Any relevant questions you need to ask to gather additional information from me to improve the prompt. We will continue this iterative process with me providing additional information to you, and you will continuously update the prompt in the Revised Prompt section so I can use it.
+      </div>
+    </td>
+  </tr>
+
+  <!-- SCENARIOS -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🧑‍💼 PM 寫需求規格提示詞</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">正在寫功能需求文件，想讓 Copilot 生成格式一致的 PRD，但不知道怎麼問——讓 Copilot 引導你建立完整提示詞。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+<tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📊 分析師建立數據分析提示詞</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">有一份銷售數據，想讓 Copilot 找出異常趨勢，但問出來的結果太籠統——用迭代法精煉到位。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+<tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📝 業務打造可重用提案信提示詞</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">每次寫提案信都要花很多時間，想建立一個高品質且可重複使用的 Prompt 模板。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- CTA -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">準備打造你的完美提示詞了嗎？▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td style="padding-right:8px;"></td>
+          <td style="padding-left:8px;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- LICENSE -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">
+        ＊本 Prompt <b>無需 M365 Copilot 授權</b>，可在 Copilot Chat (Web) 直接使用。
+      </div>
+    </td>
+  </tr>
+
+    <!-- CTA -->
+  <tr><td align="center" style="padding:18px 36px 24px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+  </td></tr>  <!-- FOOTER -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

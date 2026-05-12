@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分鐘小教室：Power of Prompt #P068 — 信箱規則大改造！讓 Copilot 設計你的智慧分類架構</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+      <!-- Banner -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一分鐘小教室</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P068 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">信箱規則大改造！讓 Copilot 設計你的智慧分類架構</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+      <!-- Intro -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br />
+            從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br />
+            <b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Prompt Title -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">信箱規則大改造！讓 Copilot 設計你的智慧分類架構</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Smart Inbox Architecture — Metadata-Based Rule Design</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 問題不是信太多，是雜訊太多——讓 Copilot 幫你設計信箱防噪架構 🎯
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Story -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          大多數信箱的問題不是「信太多」——而是「雜訊太多、訊號太少」。<br><br><b>這個 Prompt</b> 讓 Copilot 以 <b>唯讀方式</b> 分析你最近 14-30 天的郵件 <b>元資料</b>（寄件者、網域、主旨模式、To/CC 使用情況），識別噪音來源，並設計一套 <b>有護欄的信箱規則架構</b>。不讀信件內容、不刪郵件、只做設計——讓你的重要郵件永遠不會消失，雜訊卻自動歸位。
+        </div>
+      </td></tr>
+      <!-- Prompt ZH -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr><td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+              <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td></tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 直接複製整段，貼到 Copilot Chat (Work) 即可使用</div>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>範圍與護欄：</b>唯讀分析。分析最近 14–30 天的 Outlook 郵件，優先使用元資料：寄件者名稱、網域、主旨模式、預覽文字、To/CC 使用、通訊群組、noreply/系統訊號。不摘要信件內容，僅在需要時用於偵測明確行動訊號（例如 action required、截止日、核准、升報）。不刪郵件。只設計規則，不執行。<br><br><b>第 1 步 — 收件匣模式分析：</b>識別：電子報與廣播、FYI 摘要、社群貼文、系統/工具通知、會議邀請/更新、外部郵件、行動訊號。建立 Top 寄件者網域、重複主旨關鍵字、郵件頻率、Signal vs Noise 分類快照。標出來自主管、越級主管與關鍵合作者的郵件。<br><br><b>第 2 步 — 規則架構（僅設計）：</b>設計有護欄的規則：收件匣維持預設、不刪除、主管/越級/關鍵合作者與 action-required 郵件設例外。最多 10 條規則。每條規則提供：名稱與目的、條件（寄件者/網域/主旨/類型/To-CC）、動作（資料夾/分類/重要性/標已讀）、風險等級、建議順序（1-10）。<br><br><b>第 3 步 — 資料夾藍圖：</b>最多 6 個資料夾，含清楚目的，以及新版 Outlook 和傳統 Outlook 的快速設定步驟，包含 dry-run 測試建議。</div>
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Prompt EN -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr><td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+              <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td></tr>
+        </table>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Scope & Guardrails: READ-ONLY analysis. Analyze Outlook emails from the last 14-30 days using METADATA FIRST: sender name, domain, subject line patterns, preview line, To/CC usage, distribution lists, noreply/system signals. Email body content is not summarized and is used only if needed to detect explicit action signals. No deleting emails. Design rules only. No execution.
+
+STEP 1 - Inbox Pattern Analysis: Identify patterns: newsletters & broadcasts, FYI digests, community posts, system/tool notifications, meeting invites/updates, external emails, action signals. Create a snapshot of top sender domains, recurring subject keywords, email frequency, and signal vs. noise classification. Highlight messages from manager, skip manager, and key collaborators.
+
+STEP 2 - Rule Architecture (DESIGN ONLY): Design inbox rules with guardrails: inbox stays default, no deleting, exceptions for manager/skip/key collaborators and action-required emails. Max 10 rules. For each rule provide: name & intent, conditions, actions, risk level, recommended order (1-10).
+
+STEP 3 - Folder Blueprint: Propose up to 6 folders with clear intent, plus quick setup steps for New Outlook and Classic Outlook, including dry-run testing advice.</div>
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Tips -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用小撇步</b><br />
+            🧪 <b>先 Dry-run 再套用</b>：設完規則後，先用測試模式跑一週，確認沒有誤傷重要郵件再正式啟用。<br />
+            ⚠️ <b>護欄例外不要省</b>：主管、越級主管、關鍵合作者的郵件務必設為例外，永遠進收件匣。<br />
+            📆 <b>每季回頭調整一次</b>：信件來源會變化，每季重新跑一次分析，更新規則保持精準。<br />
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Example Prompts -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr><td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+              <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#5B5FC7;">💬 範例提示詞（Example Prompts）</td></tr>
+        </table>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">請以唯讀方式分析我最近 30 天的 Outlook 郵件元資料。先給我一份 Signal vs Noise 快照，再設計最多 8 條規則，並標出每條的風險等級。最後建議 4 個資料夾架構與設定步驟。</div>
+          </td></tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
+          <tr><td style="padding:12px;">
+            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Read-only: analyze my last 30 days of Outlook email metadata. Give me a Signal vs Noise snapshot, then design up to 8 inbox rules with risk levels. Finally suggest 4 folders with setup steps for New Outlook.</div>
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Badge -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
+            🔑 需 M365 Copilot 授權
+          </td></tr>
+        </table>
+      </td></tr>
+      <!-- Footer -->
+            <tr><td align="center" style="padding:18px 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+      </td></tr>      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>

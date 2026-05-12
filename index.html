@@ -1,0 +1,1604 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Copilot 一分鐘小教室 — Newsletter Index</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: 'Microsoft JhengHei', '微軟正黑體', -apple-system, Segoe UI, sans-serif; background: #f4f6f8; color: #1f2937; }
+  .app { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
+  /* Sidebar */
+  aside { background: #fff; border-right: 1px solid #e3e8ee; display: flex; flex-direction: column; }
+  .head { padding: 18px 18px 12px; border-bottom: 1px solid #e3e8ee; }
+  .head h1 { margin: 0 0 4px; font-size: 18px; color: #0F6CBD; }
+  .head .sub { font-size: 12px; color: #6b7280; letter-spacing: 1px; }
+  /* Tabs */
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e3e8ee; }
+  .tab { padding: 12px; text-align: center; font-size: 14px; font-weight: bold; cursor: pointer; background: #f8fafc; color: #6b7280; border: none; transition: all .15s; }
+  .tab.active.agent { background: #0F6CBD; color: #fff; }
+  .tab.active.prompt { background: #8378DE; color: #fff; }
+  .tab:not(.active):hover { background: #eef2f7; color: #1f2937; }
+  /* Version toggle */
+  .vtoggle { display: grid; grid-template-columns: 1fr 1fr; padding: 10px 14px; gap: 8px; border-bottom: 1px solid #e3e8ee; background: #fafbfc; }
+  .vtoggle button { padding: 8px; font-size: 13px; cursor: pointer; border: 1px solid #d1d5db; background: #fff; border-radius: 6px; font-weight: bold; color: #6b7280; }
+  .vtoggle button.active { background: #1f2937; color: #fff; border-color: #1f2937; }
+  /* Search */
+  .search { padding: 10px 14px; border-bottom: 1px solid #e3e8ee; }
+  .search input { width: 100%; padding: 8px 10px; font-size: 13px; border: 1px solid #d1d5db; border-radius: 6px; }
+  /* List */
+  .list { flex: 1; overflow-y: auto; }
+  .list a { display: block; padding: 10px 16px; border-bottom: 1px solid #f1f3f5; text-decoration: none; color: #1f2937; font-size: 13px; line-height: 1.5; word-break: break-word; }
+  .list a .en { display: block; font-size: 11px; color: #9ca3af; margin-top: 2px; padding-left: 2px; }
+  .list a:hover { background: #f4f6f8; }
+  .list a.active { background: #eef4fb; border-left: 3px solid #0F6CBD; padding-left: 13px; }
+  .list a.active.prompt { background: #f3f1fb; border-left-color: #8378DE; }
+  .list .seq { display: inline-block; background: #e3e8ee; color: #4b5563; font-size: 11px; padding: 2px 7px; border-radius: 10px; margin-right: 8px; font-weight: bold; }
+  .list a.active .seq { background: #0F6CBD; color: #fff; }
+  .list a.active.prompt .seq { background: #8378DE; color: #fff; }
+  .empty { padding: 20px; text-align: center; color: #9ca3af; font-size: 13px; }
+  /* Main / preview */
+  main { display: flex; flex-direction: column; background: #f4f6f8; }
+  .toolbar { padding: 10px 16px; background: #fff; border-bottom: 1px solid #e3e8ee; display: flex; align-items: center; gap: 12px; font-size: 13px; }
+  .toolbar .name { font-weight: bold; color: #1f2937; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .toolbar a { color: #0F6CBD; text-decoration: none; padding: 4px 10px; border: 1px solid #cfe5f6; border-radius: 4px; font-size: 12px; }
+  .toolbar a:hover { background: #eef4fb; }
+  .frame-wrap { flex: 1; overflow: hidden; padding: 16px; min-height: 0; }
+  iframe { display: block; width: 100%; height: 100%; border: 1px solid #e3e8ee; background: #fff; border-radius: 4px; }
+  .placeholder { display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3af; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="head">
+      <h1>📚 Copilot 一分鐘小教室</h1>
+      <div class="sub">NEWSLETTER INDEX · v1 + v2 預覽</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab agent active" data-type="Agent" id="tab-agent">⚡ Power of Agent</button>
+      <button class="tab prompt" data-type="Prompt" id="tab-prompt">💬 Power of Prompt</button>
+    </div>
+
+    <div class="vtoggle">
+      <button class="vbtn active" data-v="v1" id="v1btn">v1 · 經典</button>
+      <button class="vbtn" data-v="v2" id="v2btn">v2 · 豐富</button>
+    </div>
+
+    <div class="search"><input type="text" id="q" placeholder="🔍 搜尋編號或名稱…" /></div>
+
+    <div class="list" id="list"></div>
+  </aside>
+
+  <main>
+    <div class="toolbar">
+      <span class="name" id="name">— 從左側清單選一篇 —</span>
+      <a href="#" id="open-msg" title="用 Outlook 開啟 .msg 檔（可編輯/寄送）。如瀏覽器擋下載，請按下載後雙擊開啟，或改用 Edge。" style="background:#fff4e5;border-color:#ffd591;color:#d46b08;">📧 用 Outlook 開啟</a>
+      <a href="#" id="open-new" target="_blank">在新分頁開啟 ↗</a>
+    </div>
+    <div class="frame-wrap">
+      <iframe id="frame" src="about:blank"></iframe>
+    </div>
+  </main>
+</div>
+
+<script>
+const CATALOG = /*CATALOG-START*/
+{
+    "generated":  "2026-05-12 10:16:35",
+    "Agent_v1":  [
+                     {
+                         "seq":  "A001",
+                         "name":  "Exec News Aggregator",
+                         "cname":  "主管新聞聚合器",
+                         "file":  "v1/Agent/A001_ExecNewsAggregator.html"
+                     },
+                     {
+                         "seq":  "A002",
+                         "name":  "Daily Challenge Agent",
+                         "cname":  "每日挑戰 Agent",
+                         "file":  "v1/Agent/A002_DailyChallengeAgent.html"
+                     },
+                     {
+                         "seq":  "A003",
+                         "name":  "SWOT Analysis Agent",
+                         "cname":  "SWOT 分析 Agent",
+                         "file":  "v1/Agent/A003_SWOTAnalysisAgent.html"
+                     },
+                     {
+                         "seq":  "A004",
+                         "name":  "Statement Of Work Agent",
+                         "cname":  "工作說明書 Agent",
+                         "file":  "v1/Agent/A004_StatementOfWorkAgent.html"
+                     },
+                     {
+                         "seq":  "A005",
+                         "name":  "Event Agent",
+                         "cname":  "活動問答 Agent",
+                         "file":  "v1/Agent/A005_EventAgent.html"
+                     },
+                     {
+                         "seq":  "A006",
+                         "name":  "Knowledge Extractor",
+                         "cname":  "知識萃取器",
+                         "file":  "v1/Agent/A006_KnowledgeExtractor.html"
+                     },
+                     {
+                         "seq":  "A007",
+                         "name":  "Scenario Simulator",
+                         "cname":  "情境模擬器",
+                         "file":  "v1/Agent/A007_ScenarioSimulator.html"
+                     },
+                     {
+                         "seq":  "A008",
+                         "name":  "M365 Project Helper",
+                         "cname":  "M365 專案小幫手",
+                         "file":  "v1/Agent/A008_M365ProjectHelper.html"
+                     },
+                     {
+                         "seq":  "A009",
+                         "name":  "Your Namesake",
+                         "cname":  "命名大師",
+                         "file":  "v1/Agent/A009_YourNamesake.html"
+                     },
+                     {
+                         "seq":  "A010",
+                         "name":  "AI Mindset Agent",
+                         "cname":  "AI 思維顧問",
+                         "file":  "v1/Agent/A010_AIMindsetAgent.html"
+                     },
+                     {
+                         "seq":  "A011",
+                         "name":  "Prompting Mentor",
+                         "cname":  "提示詞導師",
+                         "file":  "v1/Agent/A011_PromptingMentor.html"
+                     },
+                     {
+                         "seq":  "A012",
+                         "name":  "Document Classificator",
+                         "cname":  "文件分類師",
+                         "file":  "v1/Agent/A012_DocumentClassificator.html"
+                     },
+                     {
+                         "seq":  "A013",
+                         "name":  "SMART Goals",
+                         "cname":  "SMART 目標 Agent",
+                         "file":  "v1/Agent/A013_SMARTGoals.html"
+                     },
+                     {
+                         "seq":  "A014",
+                         "name":  "NDA Comparison Agent",
+                         "cname":  "保密協議比對 Agent",
+                         "file":  "v1/Agent/A014_NDAComparisonAgent.html"
+                     },
+                     {
+                         "seq":  "A015",
+                         "name":  "Agent Crafter",
+                         "cname":  "Agent 設計師",
+                         "file":  "v1/Agent/A015_AgentCrafter.html"
+                     },
+                     {
+                         "seq":  "A016",
+                         "name":  "Your Proofreader",
+                         "cname":  "校稿助手",
+                         "file":  "v1/Agent/A016_YourProofreader.html"
+                     },
+                     {
+                         "seq":  "A017",
+                         "name":  "Your Problem Solver",
+                         "cname":  "萬能解題助手",
+                         "file":  "v1/Agent/A017_YourProblemSolver.html"
+                     },
+                     {
+                         "seq":  "A018",
+                         "name":  "News Aggregator Agent",
+                         "cname":  "新聞聚合 Agent",
+                         "file":  "v1/Agent/A018_NewsAggregatorAgent.html"
+                     },
+                     {
+                         "seq":  "A019",
+                         "name":  "Checklist Manifesto Agent",
+                         "cname":  "清單宣言 Agent",
+                         "file":  "v1/Agent/A019_ChecklistManifestoAgent.html"
+                     },
+                     {
+                         "seq":  "A020",
+                         "name":  "Dealcrafter Agent",
+                         "cname":  "談判大師 Agent",
+                         "file":  "v1/Agent/A020_DealcrafterAgent.html"
+                     },
+                     {
+                         "seq":  "A021",
+                         "name":  "Training Content Writer",
+                         "cname":  "培訓內容創作者",
+                         "file":  "v1/Agent/A021_TrainingContentWriter.html"
+                     },
+                     {
+                         "seq":  "A022",
+                         "name":  "Decision Architect",
+                         "cname":  "決策架構師",
+                         "file":  "v1/Agent/A022_DecisionArchitect.html"
+                     },
+                     {
+                         "seq":  "A023",
+                         "name":  "Wellness Productivity Coach",
+                         "cname":  "健康生產力教練",
+                         "file":  "v1/Agent/A023_WellnessProductivityCoach.html"
+                     },
+                     {
+                         "seq":  "A024",
+                         "name":  "Innovation Radar Agent",
+                         "cname":  "創新雷達 Agent",
+                         "file":  "v1/Agent/A024_InnovationRadarAgent.html"
+                     },
+                     {
+                         "seq":  "A025",
+                         "name":  "Product Crafter",
+                         "cname":  "產品規劃師",
+                         "file":  "v1/Agent/A025_ProductCrafter.html"
+                     },
+                     {
+                         "seq":  "A026",
+                         "name":  "Coherence Agent",
+                         "cname":  "一致性 Agent",
+                         "file":  "v1/Agent/A026_CoherenceAgent.html"
+                     },
+                     {
+                         "seq":  "A027",
+                         "name":  "Resolution Agent",
+                         "cname":  "決心教練",
+                         "file":  "v1/Agent/A027_ResolutionAgent.html"
+                     },
+                     {
+                         "seq":  "A028",
+                         "name":  "Storytelling Mentor",
+                         "cname":  "說故事導師",
+                         "file":  "v1/Agent/A028_StorytellingMentor.html"
+                     },
+                     {
+                         "seq":  "A029",
+                         "name":  "Marketing Agent",
+                         "cname":  "社群行銷 Agent",
+                         "file":  "v1/Agent/A029_MarketingAgent.html"
+                     },
+                     {
+                         "seq":  "A030",
+                         "name":  "Peer Feedback Agent",
+                         "cname":  "同儕回饋 Agent",
+                         "file":  "v1/Agent/A030_PeerFeedbackAgent.html"
+                     },
+                     {
+                         "seq":  "A031",
+                         "name":  "Presentation Optimizer Agent",
+                         "cname":  "簡報最佳化 Agent",
+                         "file":  "v1/Agent/A031_PresentationOptimizerAgent.html"
+                     },
+                     {
+                         "seq":  "A032",
+                         "name":  "Porter Five Forces Profiler",
+                         "cname":  "波特五力分析師",
+                         "file":  "v1/Agent/A032_PorterFiveForcesProfiler.html"
+                     },
+                     {
+                         "seq":  "A033",
+                         "name":  "Say No Coach2",
+                         "cname":  "職場婉拒教練",
+                         "file":  "v1/Agent/A033_SayNoCoach2.html"
+                     },
+                     {
+                         "seq":  "A034",
+                         "name":  "OKR Coach Agent",
+                         "cname":  "OKR 教練",
+                         "file":  "v1/Agent/A034_OKRCoachAgent.html"
+                     },
+                     {
+                         "seq":  "A035",
+                         "name":  "AB Testing Ideas",
+                         "cname":  "A/B 測試創意產生器",
+                         "file":  "v1/Agent/A035_ABTestingIdeas.html"
+                     },
+                     {
+                         "seq":  "A036",
+                         "name":  "Meeting Recap Companion",
+                         "cname":  "會議摘要助理",
+                         "file":  "v1/Agent/A036_MeetingRecapCompanion.html"
+                     },
+                     {
+                         "seq":  "A037",
+                         "name":  "Policy Author Pro",
+                         "cname":  "政策文件撰寫師",
+                         "file":  "v1/Agent/A037_PolicyAuthorPro.html"
+                     },
+                     {
+                         "seq":  "A038",
+                         "name":  "Monthly KPI Comparator",
+                         "cname":  "月度 KPI 比較器",
+                         "file":  "v1/Agent/A038_MonthlyKPIComparator.html"
+                     },
+                     {
+                         "seq":  "A039",
+                         "name":  "Agent Of Change",
+                         "cname":  "變革推動教練",
+                         "file":  "v1/Agent/A039_AgentOfChange.html"
+                     },
+                     {
+                         "seq":  "A040",
+                         "name":  "Meeting Prep",
+                         "cname":  "會議準備助手",
+                         "file":  "v1/Agent/A040_MeetingPrep.html"
+                     },
+                     {
+                         "seq":  "A041",
+                         "name":  "Policy Simplifier",
+                         "cname":  "政策白話翻譯師",
+                         "file":  "v1/Agent/A041_PolicySimplifier.html"
+                     },
+                     {
+                         "seq":  "A042",
+                         "name":  "Evite",
+                         "cname":  "會議邀請設計師",
+                         "file":  "v1/Agent/A042_Evite.html"
+                     },
+                     {
+                         "seq":  "A043",
+                         "name":  "Devils Advocate",
+                         "cname":  "魔鬼辯護人",
+                         "file":  "v1/Agent/A043_DevilsAdvocate.html"
+                     },
+                     {
+                         "seq":  "A044",
+                         "name":  "Team Morale Assistant",
+                         "cname":  "團隊士氣激勵助手",
+                         "file":  "v1/Agent/A044_TeamMoraleAssistant.html"
+                     }
+                 ],
+    "Agent_v2":  [
+                     {
+                         "seq":  "A001",
+                         "name":  "Exec News Aggregator",
+                         "cname":  "主管新聞聚合器",
+                         "file":  "v2/Agent/A001_ExecNewsAggregator.html"
+                     },
+                     {
+                         "seq":  "A002",
+                         "name":  "Daily Challenge Agent",
+                         "cname":  "每日挑戰 Agent",
+                         "file":  "v2/Agent/A002_DailyChallengeAgent.html"
+                     },
+                     {
+                         "seq":  "A003",
+                         "name":  "SWOT Analysis Agent",
+                         "cname":  "SWOT 分析 Agent",
+                         "file":  "v2/Agent/A003_SWOTAnalysisAgent.html"
+                     },
+                     {
+                         "seq":  "A004",
+                         "name":  "Statement Of Work Agent",
+                         "cname":  "工作說明書 Agent",
+                         "file":  "v2/Agent/A004_StatementOfWorkAgent.html"
+                     },
+                     {
+                         "seq":  "A005",
+                         "name":  "Event Agent",
+                         "cname":  "活動問答 Agent",
+                         "file":  "v2/Agent/A005_EventAgent.html"
+                     },
+                     {
+                         "seq":  "A006",
+                         "name":  "Knowledge Extractor",
+                         "cname":  "知識萃取器",
+                         "file":  "v2/Agent/A006_KnowledgeExtractor.html"
+                     },
+                     {
+                         "seq":  "A007",
+                         "name":  "Scenario Simulator",
+                         "cname":  "情境模擬器",
+                         "file":  "v2/Agent/A007_ScenarioSimulator.html"
+                     },
+                     {
+                         "seq":  "A008",
+                         "name":  "M365 Project Helper",
+                         "cname":  "M365 專案小幫手",
+                         "file":  "v2/Agent/A008_M365ProjectHelper.html"
+                     },
+                     {
+                         "seq":  "A009",
+                         "name":  "Your Namesake",
+                         "cname":  "命名大師",
+                         "file":  "v2/Agent/A009_YourNamesake.html"
+                     },
+                     {
+                         "seq":  "A010",
+                         "name":  "AI Mindset Agent",
+                         "cname":  "AI 思維顧問",
+                         "file":  "v2/Agent/A010_AIMindsetAgent.html"
+                     },
+                     {
+                         "seq":  "A011",
+                         "name":  "Prompting Mentor",
+                         "cname":  "提示詞導師",
+                         "file":  "v2/Agent/A011_PromptingMentor.html"
+                     },
+                     {
+                         "seq":  "A012",
+                         "name":  "Document Classificator",
+                         "cname":  "文件分類師",
+                         "file":  "v2/Agent/A012_DocumentClassificator.html"
+                     },
+                     {
+                         "seq":  "A013",
+                         "name":  "SMART Goals",
+                         "cname":  "SMART 目標 Agent",
+                         "file":  "v2/Agent/A013_SMARTGoals.html"
+                     },
+                     {
+                         "seq":  "A014",
+                         "name":  "NDA Comparison Agent",
+                         "cname":  "保密協議比對 Agent",
+                         "file":  "v2/Agent/A014_NDAComparisonAgent.html"
+                     },
+                     {
+                         "seq":  "A015",
+                         "name":  "Agent Crafter",
+                         "cname":  "Agent 設計師",
+                         "file":  "v2/Agent/A015_AgentCrafter.html"
+                     },
+                     {
+                         "seq":  "A016",
+                         "name":  "Your Proofreader",
+                         "cname":  "校稿助手",
+                         "file":  "v2/Agent/A016_YourProofreader.html"
+                     },
+                     {
+                         "seq":  "A017",
+                         "name":  "Your Problem Solver",
+                         "cname":  "萬能解題助手",
+                         "file":  "v2/Agent/A017_YourProblemSolver.html"
+                     },
+                     {
+                         "seq":  "A018",
+                         "name":  "News Aggregator Agent",
+                         "cname":  "新聞聚合 Agent",
+                         "file":  "v2/Agent/A018_NewsAggregatorAgent.html"
+                     },
+                     {
+                         "seq":  "A019",
+                         "name":  "Checklist Manifesto Agent",
+                         "cname":  "清單宣言 Agent",
+                         "file":  "v2/Agent/A019_ChecklistManifestoAgent.html"
+                     },
+                     {
+                         "seq":  "A020",
+                         "name":  "Dealcrafter Agent",
+                         "cname":  "談判大師 Agent",
+                         "file":  "v2/Agent/A020_DealcrafterAgent.html"
+                     },
+                     {
+                         "seq":  "A021",
+                         "name":  "Training Content Writer",
+                         "cname":  "培訓內容創作者",
+                         "file":  "v2/Agent/A021_TrainingContentWriter.html"
+                     },
+                     {
+                         "seq":  "A022",
+                         "name":  "Decision Architect",
+                         "cname":  "決策架構師",
+                         "file":  "v2/Agent/A022_DecisionArchitect.html"
+                     },
+                     {
+                         "seq":  "A023",
+                         "name":  "Wellness Productivity Coach",
+                         "cname":  "健康生產力教練",
+                         "file":  "v2/Agent/A023_WellnessProductivityCoach.html"
+                     },
+                     {
+                         "seq":  "A024",
+                         "name":  "Innovation Radar Agent",
+                         "cname":  "創新雷達 Agent",
+                         "file":  "v2/Agent/A024_InnovationRadarAgent.html"
+                     },
+                     {
+                         "seq":  "A025",
+                         "name":  "Product Crafter",
+                         "cname":  "產品規劃師",
+                         "file":  "v2/Agent/A025_ProductCrafter.html"
+                     },
+                     {
+                         "seq":  "A026",
+                         "name":  "Coherence Agent",
+                         "cname":  "一致性 Agent",
+                         "file":  "v2/Agent/A026_CoherenceAgent.html"
+                     },
+                     {
+                         "seq":  "A027",
+                         "name":  "Resolution Agent",
+                         "cname":  "決心教練",
+                         "file":  "v2/Agent/A027_ResolutionAgent.html"
+                     },
+                     {
+                         "seq":  "A028",
+                         "name":  "Storytelling Mentor",
+                         "cname":  "說故事導師",
+                         "file":  "v2/Agent/A028_StorytellingMentor.html"
+                     },
+                     {
+                         "seq":  "A029",
+                         "name":  "Marketing Agent",
+                         "cname":  "社群行銷 Agent",
+                         "file":  "v2/Agent/A029_MarketingAgent.html"
+                     },
+                     {
+                         "seq":  "A030",
+                         "name":  "Peer Feedback Agent",
+                         "cname":  "同儕回饋 Agent",
+                         "file":  "v2/Agent/A030_PeerFeedbackAgent.html"
+                     },
+                     {
+                         "seq":  "A031",
+                         "name":  "Presentation Optimizer Agent",
+                         "cname":  "簡報最佳化 Agent",
+                         "file":  "v2/Agent/A031_PresentationOptimizerAgent.html"
+                     },
+                     {
+                         "seq":  "A032",
+                         "name":  "Porter Five Forces Profiler",
+                         "cname":  "波特五力分析師",
+                         "file":  "v2/Agent/A032_PorterFiveForcesProfiler.html"
+                     },
+                     {
+                         "seq":  "A033",
+                         "name":  "Say No Coach2",
+                         "cname":  "職場婉拒教練",
+                         "file":  "v2/Agent/A033_SayNoCoach2.html"
+                     },
+                     {
+                         "seq":  "A034",
+                         "name":  "OKR Coach Agent",
+                         "cname":  "OKR 教練",
+                         "file":  "v2/Agent/A034_OKRCoachAgent.html"
+                     },
+                     {
+                         "seq":  "A035",
+                         "name":  "AB Testing Ideas",
+                         "cname":  "A/B 測試創意產生器",
+                         "file":  "v2/Agent/A035_ABTestingIdeas.html"
+                     },
+                     {
+                         "seq":  "A036",
+                         "name":  "Meeting Recap Companion",
+                         "cname":  "會議摘要助理",
+                         "file":  "v2/Agent/A036_MeetingRecapCompanion.html"
+                     },
+                     {
+                         "seq":  "A037",
+                         "name":  "Policy Author Pro",
+                         "cname":  "政策文件撰寫師",
+                         "file":  "v2/Agent/A037_PolicyAuthorPro.html"
+                     },
+                     {
+                         "seq":  "A038",
+                         "name":  "Monthly KPI Comparator",
+                         "cname":  "月度 KPI 比較器",
+                         "file":  "v2/Agent/A038_MonthlyKPIComparator.html"
+                     },
+                     {
+                         "seq":  "A039",
+                         "name":  "Agent Of Change",
+                         "cname":  "變革推動教練",
+                         "file":  "v2/Agent/A039_AgentOfChange.html"
+                     },
+                     {
+                         "seq":  "A040",
+                         "name":  "Meeting Prep",
+                         "cname":  "會議準備助手",
+                         "file":  "v2/Agent/A040_MeetingPrep.html"
+                     },
+                     {
+                         "seq":  "A041",
+                         "name":  "Policy Simplifier",
+                         "cname":  "政策白話翻譯師",
+                         "file":  "v2/Agent/A041_PolicySimplifier.html"
+                     },
+                     {
+                         "seq":  "A042",
+                         "name":  "Evite",
+                         "cname":  "會議邀請設計師",
+                         "file":  "v2/Agent/A042_Evite.html"
+                     },
+                     {
+                         "seq":  "A043",
+                         "name":  "Devils Advocate",
+                         "cname":  "魔鬼辯護人",
+                         "file":  "v2/Agent/A043_DevilsAdvocate.html"
+                     },
+                     {
+                         "seq":  "A044",
+                         "name":  "Team Morale Assistant",
+                         "cname":  "團隊士氣激勵助手",
+                         "file":  "v2/Agent/A044_TeamMoraleAssistant.html"
+                     }
+                 ],
+    "Prompt_v1":  [
+                      {
+                          "seq":  "P001",
+                          "name":  "Copilot Memory",
+                          "cname":  "啟用 Copilot Memory",
+                          "file":  "v1/Prompt/P001_CopilotMemory.html"
+                      },
+                      {
+                          "seq":  "P002",
+                          "name":  "Communication Style Personalizer",
+                          "cname":  "溝通風格個人化設定",
+                          "file":  "v1/Prompt/P002_CommunicationStylePersonalizer.html"
+                      },
+                      {
+                          "seq":  "P003",
+                          "name":  "Contribution Opportunity Finder",
+                          "cname":  "貢獻機會探索器",
+                          "file":  "v1/Prompt/P003_ContributionOpportunityFinder.html"
+                      },
+                      {
+                          "seq":  "P004",
+                          "name":  "Accessibility Review",
+                          "cname":  "無障礙文件審查助理",
+                          "file":  "v1/Prompt/P004_AccessibilityReview.html"
+                      },
+                      {
+                          "seq":  "P005",
+                          "name":  "Email Thread Stakeholder Update",
+                          "cname":  "電子郵件串利害關係人更新",
+                          "file":  "v1/Prompt/P005_EmailThreadStakeholderUpdate.html"
+                      },
+                      {
+                          "seq":  "P006",
+                          "name":  "One On One Agenda Generator",
+                          "cname":  "🗓️ 自動生成 1:1 會議議程",
+                          "file":  "v1/Prompt/P006_OneOnOneAgendaGenerator.html"
+                      },
+                      {
+                          "seq":  "P007",
+                          "name":  "Outlook Email Summarizer",
+                          "cname":  "📧 Outlook 郵件摘要與回覆草稿",
+                          "file":  "v1/Prompt/P007_OutlookEmailSummarizer.html"
+                      },
+                      {
+                          "seq":  "P008",
+                          "name":  "Researcher Executive Brief",
+                          "cname":  "🔬 Researcher：生成有引用來源的高管簡報",
+                          "file":  "v1/Prompt/P008_ResearcherExecutiveBrief.html"
+                      },
+                      {
+                          "seq":  "P009",
+                          "name":  "Excel Data Quality Audit",
+                          "cname":  "📊 Excel 資料品質稽核與修復清單",
+                          "file":  "v1/Prompt/P009_ExcelDataQualityAudit.html"
+                      },
+                      {
+                          "seq":  "P010",
+                          "name":  "Document Glossary Builder",
+                          "cname":  "📖 文件術語表自動生成",
+                          "file":  "v1/Prompt/P010_DocumentGlossaryBuilder.html"
+                      },
+                      {
+                          "seq":  "P011",
+                          "name":  "Honest Friend Mirror",
+                          "cname":  "🪞 誠實之友：給自己的10個真心話",
+                          "file":  "v1/Prompt/P011_HonestFriendMirror.html"
+                      },
+                      {
+                          "seq":  "P012",
+                          "name":  "Communication Style Analyzer",
+                          "cname":  "🔎 分析溝通風格，量身訂製回覆",
+                          "file":  "v1/Prompt/P012_CommunicationStyleAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P013",
+                          "name":  "Word Cloud Generator",
+                          "cname":  "☁️ 文件文字雲視覺化",
+                          "file":  "v1/Prompt/P013_WordCloudGenerator.html"
+                      },
+                      {
+                          "seq":  "P014",
+                          "name":  "Conversation Consolidator",
+                          "cname":  "🔄 對話彙整為單一可重用提示詞",
+                          "file":  "v1/Prompt/P014_ConversationConsolidator.html"
+                      },
+                      {
+                          "seq":  "P015",
+                          "name":  "Data Visualization Analyzer",
+                          "cname":  "📈 資料視覺化與洞察分析",
+                          "file":  "v1/Prompt/P015_DataVisualizationAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P016",
+                          "name":  "Role Specific Doc Summary",
+                          "cname":  "📋 依職務角色量身定制的文件摘要",
+                          "file":  "v1/Prompt/P016_RoleSpecificDocSummary.html"
+                      },
+                      {
+                          "seq":  "P017",
+                          "name":  "Dominant Color Extractor",
+                          "cname":  "🎨 圖片主色調提取工具",
+                          "file":  "v1/Prompt/P017_DominantColorExtractor.html"
+                      },
+                      {
+                          "seq":  "P018",
+                          "name":  "Speaker Notes Optimizer",
+                          "cname":  "🎤 簡報演講者備忘稿優化",
+                          "file":  "v1/Prompt/P018_SpeakerNotesOptimizer.html"
+                      },
+                      {
+                          "seq":  "P019",
+                          "name":  "Meeting Chat Qa Summary",
+                          "cname":  "💬 會議聊天室問答摘要文件",
+                          "file":  "v1/Prompt/P019_MeetingChatQaSummary.html"
+                      },
+                      {
+                          "seq":  "P020",
+                          "name":  "Inbox Priority Analyzer",
+                          "cname":  "📬 收件匣優先序智慧分析",
+                          "file":  "v1/Prompt/P020_InboxPriorityAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P021",
+                          "name":  "Personal Prompt Engineer",
+                          "cname":  "讓 Copilot 當你的 Prompt 工程師",
+                          "file":  "v1/Prompt/P021_PersonalPromptEngineer.html"
+                      },
+                      {
+                          "seq":  "P022",
+                          "name":  "Weekly Status Report",
+                          "cname":  "一鍵產出週報摘要",
+                          "file":  "v1/Prompt/P022_WeeklyStatusReport.html"
+                      },
+                      {
+                          "seq":  "P023",
+                          "name":  "One Note Task Summary",
+                          "cname":  "OneNote 待辦事項一覽表",
+                          "file":  "v1/Prompt/P023_OneNoteTaskSummary.html"
+                      },
+                      {
+                          "seq":  "P024",
+                          "name":  "Transcribe Scanned Document",
+                          "cname":  "掃描文件一鍵轉數位文字",
+                          "file":  "v1/Prompt/P024_TranscribeScannedDocument.html"
+                      },
+                      {
+                          "seq":  "P025",
+                          "name":  "Email Categorization",
+                          "cname":  "信件主題分類一覽",
+                          "file":  "v1/Prompt/P025_EmailCategorization.html"
+                      },
+                      {
+                          "seq":  "P026",
+                          "name":  "Day Wrap Up Prep",
+                          "cname":  "一鍵收工＋明日備戰計畫",
+                          "file":  "v1/Prompt/P026_DayWrapUpPrep.html"
+                      },
+                      {
+                          "seq":  "P027",
+                          "name":  "Excel Kpi Generator",
+                          "cname":  "Excel 表格 KPI 自動提案",
+                          "file":  "v1/Prompt/P027_ExcelKpiGenerator.html"
+                      },
+                      {
+                          "seq":  "P028",
+                          "name":  "Schedule Meeting",
+                          "cname":  "用 Copilot 一鍵排會議時間",
+                          "file":  "v1/Prompt/P028_ScheduleMeeting.html"
+                      },
+                      {
+                          "seq":  "P029",
+                          "name":  "Three Level Content",
+                          "cname":  "一份內容，三種複雜度版本",
+                          "file":  "v1/Prompt/P029_ThreeLevelContent.html"
+                      },
+                      {
+                          "seq":  "P030",
+                          "name":  "Meeting Follow Up Email",
+                          "cname":  "會議跟進信自動產出",
+                          "file":  "v1/Prompt/P030_MeetingFollowUpEmail.html"
+                      },
+                      {
+                          "seq":  "P031",
+                          "name":  "Skill Learning Guide",
+                          "cname":  "Copilot 技能學習導師",
+                          "file":  "v1/Prompt/P031_SkillLearningGuide.html"
+                      },
+                      {
+                          "seq":  "P032",
+                          "name":  "Presentation Questions",
+                          "cname":  "簡報互動提問產生器",
+                          "file":  "v1/Prompt/P032_PresentationQuestions.html"
+                      },
+                      {
+                          "seq":  "P033",
+                          "name":  "Translate Presentation",
+                          "cname":  "簡報語言一鍵翻譯",
+                          "file":  "v1/Prompt/P033_TranslatePresentation.html"
+                      },
+                      {
+                          "seq":  "P034",
+                          "name":  "Problem Solving Buddy",
+                          "cname":  "問題解決腦力激盪夥伴",
+                          "file":  "v1/Prompt/P034_ProblemSolvingBuddy.html"
+                      },
+                      {
+                          "seq":  "P035",
+                          "name":  "Out Of Office Message",
+                          "cname":  "自動休假回覆信設定",
+                          "file":  "v1/Prompt/P035_OutOfOfficeMessage.html"
+                      },
+                      {
+                          "seq":  "P036",
+                          "name":  "Daily News Briefing",
+                          "cname":  "每日產業新聞簡報",
+                          "file":  "v1/Prompt/P036_DailyNewsBriefing.html"
+                      },
+                      {
+                          "seq":  "P037",
+                          "name":  "QR Code Generator",
+                          "cname":  "QR Code 快速產生器",
+                          "file":  "v1/Prompt/P037_QRCodeGenerator.html"
+                      },
+                      {
+                          "seq":  "P038",
+                          "name":  "Group Chat Topics Overview",
+                          "cname":  "Teams 群組聊天主題全覽表",
+                          "file":  "v1/Prompt/P038_GroupChatTopicsOverview.html"
+                      },
+                      {
+                          "seq":  "P039",
+                          "name":  "Presentation Poll Questions",
+                          "cname":  "簡報互動問卷設計師",
+                          "file":  "v1/Prompt/P039_PresentationPollQuestions.html"
+                      },
+                      {
+                          "seq":  "P040",
+                          "name":  "Workday Task Prioritizer",
+                          "cname":  "工作日任務優先排序器",
+                          "file":  "v1/Prompt/P040_WorkdayTaskPrioritizer.html"
+                      },
+                      {
+                          "seq":  "P041",
+                          "name":  "Workshop Handout Creator",
+                          "cname":  "工作坊簡報講義產生器",
+                          "file":  "v1/Prompt/P041_WorkshopHandoutCreator.html"
+                      },
+                      {
+                          "seq":  "P042",
+                          "name":  "New Year Goals Planner",
+                          "cname":  "新年職涯目標規劃師",
+                          "file":  "v1/Prompt/P042_NewYearGoalsPlanner.html"
+                      },
+                      {
+                          "seq":  "P043",
+                          "name":  "Excel Correlation Report",
+                          "cname":  "Excel 數值相關性分析報告",
+                          "file":  "v1/Prompt/P043_ExcelCorrelationReport.html"
+                      },
+                      {
+                          "seq":  "P044",
+                          "name":  "Year End Team Message",
+                          "cname":  "年末團隊感謝信產生器",
+                          "file":  "v1/Prompt/P044_YearEndTeamMessage.html"
+                      },
+                      {
+                          "seq":  "P045",
+                          "name":  "Document Best Practices Review",
+                          "cname":  "文件最佳實踐差距分析",
+                          "file":  "v1/Prompt/P045_DocumentBestPracticesReview.html"
+                      },
+                      {
+                          "seq":  "P046",
+                          "name":  "Weekly Time Categories",
+                          "cname":  "每週時間分配類別分析",
+                          "file":  "v1/Prompt/P046_WeeklyTimeCategories.html"
+                      },
+                      {
+                          "seq":  "P047",
+                          "name":  "FAQ Generator",
+                          "cname":  "多文件 FAQ 快速產生器",
+                          "file":  "v1/Prompt/P047_FAQGenerator.html"
+                      },
+                      {
+                          "seq":  "P048",
+                          "name":  "Email Thread Summarizer",
+                          "cname":  "郵件串摘要與行動項目產生器",
+                          "file":  "v1/Prompt/P048_EmailThreadSummarizer.html"
+                      },
+                      {
+                          "seq":  "P049",
+                          "name":  "Excel Executive Briefing",
+                          "cname":  "Excel 一頁式主管決策簡報",
+                          "file":  "v1/Prompt/P049_ExcelExecutiveBriefing.html"
+                      },
+                      {
+                          "seq":  "P050",
+                          "name":  "Workday Recap Summary",
+                          "cname":  "工作日訊息回顧與行動摘要",
+                          "file":  "v1/Prompt/P050_WorkdayRecapSummary.html"
+                      },
+                      {
+                          "seq":  "P051",
+                          "name":  "Meeting Briefing Generator",
+                          "cname":  "📋 商務會議前情資簡報",
+                          "file":  "v1/Prompt/P051_MeetingBriefingGenerator.html"
+                      },
+                      {
+                          "seq":  "P052",
+                          "name":  "Guided Email Reply Assistant",
+                          "cname":  "📧 智慧郵件回覆引導",
+                          "file":  "v1/Prompt/P052_GuidedEmailReplyAssistant.html"
+                      },
+                      {
+                          "seq":  "P053",
+                          "name":  "Presentation Quality Check",
+                          "cname":  "🎯 簡報品質全面健診",
+                          "file":  "v1/Prompt/P053_PresentationQualityCheck.html"
+                      },
+                      {
+                          "seq":  "P054",
+                          "name":  "Workplace Language Coach",
+                          "cname":  "🗣️ 職場外語學習教練",
+                          "file":  "v1/Prompt/P054_WorkplaceLanguageCoach.html"
+                      },
+                      {
+                          "seq":  "P055",
+                          "name":  "Schedule Conflict Resolver",
+                          "cname":  "📅 下週行程衝突排除器",
+                          "file":  "v1/Prompt/P055_ScheduleConflictResolver.html"
+                      },
+                      {
+                          "seq":  "P056",
+                          "name":  "Text Simplifier",
+                          "cname":  "✍️ 複雜文字簡化大師",
+                          "file":  "v1/Prompt/P056_TextSimplifier.html"
+                      },
+                      {
+                          "seq":  "P057",
+                          "name":  "Graceful No Plant Framework",
+                          "cname":  "🌱 優雅說不：PLANT 拒絕框架",
+                          "file":  "v1/Prompt/P057_GracefulNoPlantFramework.html"
+                      },
+                      {
+                          "seq":  "P058",
+                          "name":  "Email Misunderstanding Resolver",
+                          "cname":  "📨 郵件誤解化解術",
+                          "file":  "v1/Prompt/P058_EmailMisunderstandingResolver.html"
+                      },
+                      {
+                          "seq":  "P059",
+                          "name":  "Team Chat Faq Generator",
+                          "cname":  "💬 團隊對話 FAQ 自動生成",
+                          "file":  "v1/Prompt/P059_TeamChatFaqGenerator.html"
+                      },
+                      {
+                          "seq":  "P060",
+                          "name":  "Leadership Strengths Analysis",
+                          "cname":  "🏆 領導風格與優勢自我分析",
+                          "file":  "v1/Prompt/P060_LeadershipStrengthsAnalysis.html"
+                      },
+                      {
+                          "seq":  "P061",
+                          "name":  "Weekly Team Pulse Survey",
+                          "cname":  "📊 每週團隊脈動問卷生成器",
+                          "file":  "v1/Prompt/P061_WeeklyTeamPulseSurvey.html"
+                      },
+                      {
+                          "seq":  "P062",
+                          "name":  "Ocean Outlook Instructions",
+                          "cname":  "🧬 OCEAN 個人化 Outlook 起草指示詞",
+                          "file":  "v1/Prompt/P062_OceanOutlookInstructions.html"
+                      },
+                      {
+                          "seq":  "P063",
+                          "name":  "Presentation Optimization Planner",
+                          "cname":  "🗂️ 簡報精簡與時間優化助手",
+                          "file":  "v1/Prompt/P063_PresentationOptimizationPlanner.html"
+                      },
+                      {
+                          "seq":  "P064",
+                          "name":  "Customer Issue Best Practices Doc",
+                          "cname":  "📚 客戶問題最佳實踐文件生成",
+                          "file":  "v1/Prompt/P064_CustomerIssueBestPracticesDoc.html"
+                      },
+                      {
+                          "seq":  "P065",
+                          "name":  "Copilot Learning Plan",
+                          "cname":  "🎓 M365 Copilot 個人化學習計畫",
+                          "file":  "v1/Prompt/P065_CopilotLearningPlan.html"
+                      },
+                      {
+                          "seq":  "P066",
+                          "name":  "Neurodiversity Exam Prep",
+                          "cname":  "告別死背！為你的大腦量身打造備考計畫",
+                          "file":  "v1/Prompt/P066_NeurodiversityExamPrep.html"
+                      },
+                      {
+                          "seq":  "P067",
+                          "name":  "Email Risk Radar",
+                          "cname":  "讓 Copilot 掃你的信箱，提前發現潛在風險",
+                          "file":  "v1/Prompt/P067_EmailRiskRadar.html"
+                      },
+                      {
+                          "seq":  "P068",
+                          "name":  "Smart Inbox Architecture",
+                          "cname":  "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
+                          "file":  "v1/Prompt/P068_SmartInboxArchitecture.html"
+                      },
+                      {
+                          "seq":  "P069",
+                          "name":  "Recipient Style Matching",
+                          "cname":  "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
+                          "file":  "v1/Prompt/P069_RecipientStyleMatching.html"
+                      },
+                      {
+                          "seq":  "P070",
+                          "name":  "Presentation Rehearsal Coach",
+                          "cname":  "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
+                          "file":  "v1/Prompt/P070_PresentationRehearsalCoach.html"
+                      },
+                      {
+                          "seq":  "P071",
+                          "name":  "Writing Style Prefix",
+                          "cname":  "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
+                          "file":  "v1/Prompt/P071_WritingStylePrefix.html"
+                      },
+                      {
+                          "seq":  "P072",
+                          "name":  "Executive Doc Summary",
+                          "cname":  "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
+                          "file":  "v1/Prompt/P072_ExecutiveDocSummary.html"
+                      },
+                      {
+                          "seq":  "P073",
+                          "name":  "Work Rhythm Analyzer",
+                          "cname":  "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
+                          "file":  "v1/Prompt/P073_WorkRhythmAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P074",
+                          "name":  "Weekly Action Item Summary",
+                          "cname":  "一鍵彙整本週指派給我的待辦事項",
+                          "file":  "v1/Prompt/P074_WeeklyActionItemSummary.html"
+                      },
+                      {
+                          "seq":  "P075",
+                          "name":  "Excel Forecasting Model",
+                          "cname":  "用歷史資料打造 Excel 預測模型",
+                          "file":  "v1/Prompt/P075_ExcelForecastingModel.html"
+                      }
+                  ],
+    "Prompt_v2":  [
+                      {
+                          "seq":  "P001",
+                          "name":  "Copilot Memory",
+                          "cname":  "啟用 Copilot Memory",
+                          "file":  "v2/Prompt/P001_CopilotMemory.html"
+                      },
+                      {
+                          "seq":  "P002",
+                          "name":  "Communication Style Personalizer",
+                          "cname":  "溝通風格個人化設定",
+                          "file":  "v2/Prompt/P002_CommunicationStylePersonalizer.html"
+                      },
+                      {
+                          "seq":  "P003",
+                          "name":  "Contribution Opportunity Finder",
+                          "cname":  "貢獻機會探索器",
+                          "file":  "v2/Prompt/P003_ContributionOpportunityFinder.html"
+                      },
+                      {
+                          "seq":  "P004",
+                          "name":  "Accessibility Review",
+                          "cname":  "無障礙文件審查助理",
+                          "file":  "v2/Prompt/P004_AccessibilityReview.html"
+                      },
+                      {
+                          "seq":  "P005",
+                          "name":  "Email Thread Stakeholder Update",
+                          "cname":  "電子郵件串利害關係人更新",
+                          "file":  "v2/Prompt/P005_EmailThreadStakeholderUpdate.html"
+                      },
+                      {
+                          "seq":  "P006",
+                          "name":  "One On One Agenda Generator",
+                          "cname":  "🗓️ 自動生成 1:1 會議議程",
+                          "file":  "v2/Prompt/P006_OneOnOneAgendaGenerator.html"
+                      },
+                      {
+                          "seq":  "P007",
+                          "name":  "Outlook Email Summarizer",
+                          "cname":  "📧 Outlook 郵件摘要與回覆草稿",
+                          "file":  "v2/Prompt/P007_OutlookEmailSummarizer.html"
+                      },
+                      {
+                          "seq":  "P008",
+                          "name":  "Researcher Executive Brief",
+                          "cname":  "🔬 Researcher：生成有引用來源的高管簡報",
+                          "file":  "v2/Prompt/P008_ResearcherExecutiveBrief.html"
+                      },
+                      {
+                          "seq":  "P009",
+                          "name":  "Excel Data Quality Audit",
+                          "cname":  "📊 Excel 資料品質稽核與修復清單",
+                          "file":  "v2/Prompt/P009_ExcelDataQualityAudit.html"
+                      },
+                      {
+                          "seq":  "P010",
+                          "name":  "Document Glossary Builder",
+                          "cname":  "📖 文件術語表自動生成",
+                          "file":  "v2/Prompt/P010_DocumentGlossaryBuilder.html"
+                      },
+                      {
+                          "seq":  "P011",
+                          "name":  "Honest Friend Mirror",
+                          "cname":  "🪞 誠實之友：給自己的10個真心話",
+                          "file":  "v2/Prompt/P011_HonestFriendMirror.html"
+                      },
+                      {
+                          "seq":  "P012",
+                          "name":  "Communication Style Analyzer",
+                          "cname":  "🔎 分析溝通風格，量身訂製回覆",
+                          "file":  "v2/Prompt/P012_CommunicationStyleAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P013",
+                          "name":  "Word Cloud Generator",
+                          "cname":  "☁️ 文件文字雲視覺化",
+                          "file":  "v2/Prompt/P013_WordCloudGenerator.html"
+                      },
+                      {
+                          "seq":  "P014",
+                          "name":  "Conversation Consolidator",
+                          "cname":  "🔄 對話彙整為單一可重用提示詞",
+                          "file":  "v2/Prompt/P014_ConversationConsolidator.html"
+                      },
+                      {
+                          "seq":  "P015",
+                          "name":  "Data Visualization Analyzer",
+                          "cname":  "📈 資料視覺化與洞察分析",
+                          "file":  "v2/Prompt/P015_DataVisualizationAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P016",
+                          "name":  "Role Specific Doc Summary",
+                          "cname":  "📋 依職務角色量身定制的文件摘要",
+                          "file":  "v2/Prompt/P016_RoleSpecificDocSummary.html"
+                      },
+                      {
+                          "seq":  "P017",
+                          "name":  "Dominant Color Extractor",
+                          "cname":  "🎨 圖片主色調提取工具",
+                          "file":  "v2/Prompt/P017_DominantColorExtractor.html"
+                      },
+                      {
+                          "seq":  "P018",
+                          "name":  "Speaker Notes Optimizer",
+                          "cname":  "🎤 簡報演講者備忘稿優化",
+                          "file":  "v2/Prompt/P018_SpeakerNotesOptimizer.html"
+                      },
+                      {
+                          "seq":  "P019",
+                          "name":  "Meeting Chat Qa Summary",
+                          "cname":  "💬 會議聊天室問答摘要文件",
+                          "file":  "v2/Prompt/P019_MeetingChatQaSummary.html"
+                      },
+                      {
+                          "seq":  "P020",
+                          "name":  "Inbox Priority Analyzer",
+                          "cname":  "📬 收件匣優先序智慧分析",
+                          "file":  "v2/Prompt/P020_InboxPriorityAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P021",
+                          "name":  "Personal Prompt Engineer",
+                          "cname":  "讓 Copilot 當你的 Prompt 工程師",
+                          "file":  "v2/Prompt/P021_PersonalPromptEngineer.html"
+                      },
+                      {
+                          "seq":  "P022",
+                          "name":  "Weekly Status Report",
+                          "cname":  "一鍵產出週報摘要",
+                          "file":  "v2/Prompt/P022_WeeklyStatusReport.html"
+                      },
+                      {
+                          "seq":  "P023",
+                          "name":  "One Note Task Summary",
+                          "cname":  "OneNote 待辦事項一覽表",
+                          "file":  "v2/Prompt/P023_OneNoteTaskSummary.html"
+                      },
+                      {
+                          "seq":  "P024",
+                          "name":  "Transcribe Scanned Document",
+                          "cname":  "掃描文件一鍵轉數位文字",
+                          "file":  "v2/Prompt/P024_TranscribeScannedDocument.html"
+                      },
+                      {
+                          "seq":  "P025",
+                          "name":  "Email Categorization",
+                          "cname":  "信件主題分類一覽",
+                          "file":  "v2/Prompt/P025_EmailCategorization.html"
+                      },
+                      {
+                          "seq":  "P026",
+                          "name":  "Day Wrap Up Prep",
+                          "cname":  "一鍵收工＋明日備戰計畫",
+                          "file":  "v2/Prompt/P026_DayWrapUpPrep.html"
+                      },
+                      {
+                          "seq":  "P027",
+                          "name":  "Excel Kpi Generator",
+                          "cname":  "Excel 表格 KPI 自動提案",
+                          "file":  "v2/Prompt/P027_ExcelKpiGenerator.html"
+                      },
+                      {
+                          "seq":  "P028",
+                          "name":  "Schedule Meeting",
+                          "cname":  "用 Copilot 一鍵排會議時間",
+                          "file":  "v2/Prompt/P028_ScheduleMeeting.html"
+                      },
+                      {
+                          "seq":  "P029",
+                          "name":  "Three Level Content",
+                          "cname":  "一份內容，三種複雜度版本",
+                          "file":  "v2/Prompt/P029_ThreeLevelContent.html"
+                      },
+                      {
+                          "seq":  "P030",
+                          "name":  "Meeting Follow Up Email",
+                          "cname":  "會議跟進信自動產出",
+                          "file":  "v2/Prompt/P030_MeetingFollowUpEmail.html"
+                      },
+                      {
+                          "seq":  "P031",
+                          "name":  "Skill Learning Guide",
+                          "cname":  "Copilot 技能學習導師",
+                          "file":  "v2/Prompt/P031_SkillLearningGuide.html"
+                      },
+                      {
+                          "seq":  "P032",
+                          "name":  "Presentation Questions",
+                          "cname":  "簡報互動提問產生器",
+                          "file":  "v2/Prompt/P032_PresentationQuestions.html"
+                      },
+                      {
+                          "seq":  "P033",
+                          "name":  "Translate Presentation",
+                          "cname":  "簡報語言一鍵翻譯",
+                          "file":  "v2/Prompt/P033_TranslatePresentation.html"
+                      },
+                      {
+                          "seq":  "P034",
+                          "name":  "Problem Solving Buddy",
+                          "cname":  "問題解決腦力激盪夥伴",
+                          "file":  "v2/Prompt/P034_ProblemSolvingBuddy.html"
+                      },
+                      {
+                          "seq":  "P035",
+                          "name":  "Out Of Office Message",
+                          "cname":  "自動休假回覆信設定",
+                          "file":  "v2/Prompt/P035_OutOfOfficeMessage.html"
+                      },
+                      {
+                          "seq":  "P036",
+                          "name":  "Daily News Briefing",
+                          "cname":  "每日產業新聞簡報",
+                          "file":  "v2/Prompt/P036_DailyNewsBriefing.html"
+                      },
+                      {
+                          "seq":  "P037",
+                          "name":  "QR Code Generator",
+                          "cname":  "QR Code 快速產生器",
+                          "file":  "v2/Prompt/P037_QRCodeGenerator.html"
+                      },
+                      {
+                          "seq":  "P038",
+                          "name":  "Group Chat Topics Overview",
+                          "cname":  "Teams 群組聊天主題全覽表",
+                          "file":  "v2/Prompt/P038_GroupChatTopicsOverview.html"
+                      },
+                      {
+                          "seq":  "P039",
+                          "name":  "Presentation Poll Questions",
+                          "cname":  "簡報互動問卷設計師",
+                          "file":  "v2/Prompt/P039_PresentationPollQuestions.html"
+                      },
+                      {
+                          "seq":  "P040",
+                          "name":  "Workday Task Prioritizer",
+                          "cname":  "工作日任務優先排序器",
+                          "file":  "v2/Prompt/P040_WorkdayTaskPrioritizer.html"
+                      },
+                      {
+                          "seq":  "P041",
+                          "name":  "Workshop Handout Creator",
+                          "cname":  "工作坊簡報講義產生器",
+                          "file":  "v2/Prompt/P041_WorkshopHandoutCreator.html"
+                      },
+                      {
+                          "seq":  "P042",
+                          "name":  "New Year Goals Planner",
+                          "cname":  "新年職涯目標規劃師",
+                          "file":  "v2/Prompt/P042_NewYearGoalsPlanner.html"
+                      },
+                      {
+                          "seq":  "P043",
+                          "name":  "Excel Correlation Report",
+                          "cname":  "Excel 數值相關性分析報告",
+                          "file":  "v2/Prompt/P043_ExcelCorrelationReport.html"
+                      },
+                      {
+                          "seq":  "P044",
+                          "name":  "Year End Team Message",
+                          "cname":  "年末團隊感謝信產生器",
+                          "file":  "v2/Prompt/P044_YearEndTeamMessage.html"
+                      },
+                      {
+                          "seq":  "P045",
+                          "name":  "Document Best Practices Review",
+                          "cname":  "文件最佳實踐差距分析",
+                          "file":  "v2/Prompt/P045_DocumentBestPracticesReview.html"
+                      },
+                      {
+                          "seq":  "P046",
+                          "name":  "Weekly Time Categories",
+                          "cname":  "每週時間分配類別分析",
+                          "file":  "v2/Prompt/P046_WeeklyTimeCategories.html"
+                      },
+                      {
+                          "seq":  "P047",
+                          "name":  "FAQ Generator",
+                          "cname":  "多文件 FAQ 快速產生器",
+                          "file":  "v2/Prompt/P047_FAQGenerator.html"
+                      },
+                      {
+                          "seq":  "P048",
+                          "name":  "Email Thread Summarizer",
+                          "cname":  "郵件串摘要與行動項目產生器",
+                          "file":  "v2/Prompt/P048_EmailThreadSummarizer.html"
+                      },
+                      {
+                          "seq":  "P049",
+                          "name":  "Excel Executive Briefing",
+                          "cname":  "Excel 一頁式主管決策簡報",
+                          "file":  "v2/Prompt/P049_ExcelExecutiveBriefing.html"
+                      },
+                      {
+                          "seq":  "P050",
+                          "name":  "Workday Recap Summary",
+                          "cname":  "工作日訊息回顧與行動摘要",
+                          "file":  "v2/Prompt/P050_WorkdayRecapSummary.html"
+                      },
+                      {
+                          "seq":  "P051",
+                          "name":  "Meeting Briefing Generator",
+                          "cname":  "📋 商務會議前情資簡報",
+                          "file":  "v2/Prompt/P051_MeetingBriefingGenerator.html"
+                      },
+                      {
+                          "seq":  "P052",
+                          "name":  "Guided Email Reply Assistant",
+                          "cname":  "📧 智慧郵件回覆引導",
+                          "file":  "v2/Prompt/P052_GuidedEmailReplyAssistant.html"
+                      },
+                      {
+                          "seq":  "P053",
+                          "name":  "Presentation Quality Check",
+                          "cname":  "🎯 簡報品質全面健診",
+                          "file":  "v2/Prompt/P053_PresentationQualityCheck.html"
+                      },
+                      {
+                          "seq":  "P054",
+                          "name":  "Workplace Language Coach",
+                          "cname":  "🗣️ 職場外語學習教練",
+                          "file":  "v2/Prompt/P054_WorkplaceLanguageCoach.html"
+                      },
+                      {
+                          "seq":  "P055",
+                          "name":  "Schedule Conflict Resolver",
+                          "cname":  "📅 下週行程衝突排除器",
+                          "file":  "v2/Prompt/P055_ScheduleConflictResolver.html"
+                      },
+                      {
+                          "seq":  "P056",
+                          "name":  "Text Simplifier",
+                          "cname":  "✍️ 複雜文字簡化大師",
+                          "file":  "v2/Prompt/P056_TextSimplifier.html"
+                      },
+                      {
+                          "seq":  "P057",
+                          "name":  "Graceful No Plant Framework",
+                          "cname":  "🌱 優雅說不：PLANT 拒絕框架",
+                          "file":  "v2/Prompt/P057_GracefulNoPlantFramework.html"
+                      },
+                      {
+                          "seq":  "P058",
+                          "name":  "Email Misunderstanding Resolver",
+                          "cname":  "📨 郵件誤解化解術",
+                          "file":  "v2/Prompt/P058_EmailMisunderstandingResolver.html"
+                      },
+                      {
+                          "seq":  "P059",
+                          "name":  "Team Chat Faq Generator",
+                          "cname":  "💬 團隊對話 FAQ 自動生成",
+                          "file":  "v2/Prompt/P059_TeamChatFaqGenerator.html"
+                      },
+                      {
+                          "seq":  "P060",
+                          "name":  "Leadership Strengths Analysis",
+                          "cname":  "🏆 領導風格與優勢自我分析",
+                          "file":  "v2/Prompt/P060_LeadershipStrengthsAnalysis.html"
+                      },
+                      {
+                          "seq":  "P061",
+                          "name":  "Weekly Team Pulse Survey",
+                          "cname":  "📊 每週團隊脈動問卷生成器",
+                          "file":  "v2/Prompt/P061_WeeklyTeamPulseSurvey.html"
+                      },
+                      {
+                          "seq":  "P062",
+                          "name":  "Ocean Outlook Instructions",
+                          "cname":  "🧬 OCEAN 個人化 Outlook 起草指示詞",
+                          "file":  "v2/Prompt/P062_OceanOutlookInstructions.html"
+                      },
+                      {
+                          "seq":  "P063",
+                          "name":  "Presentation Optimization Planner",
+                          "cname":  "🗂️ 簡報精簡與時間優化助手",
+                          "file":  "v2/Prompt/P063_PresentationOptimizationPlanner.html"
+                      },
+                      {
+                          "seq":  "P064",
+                          "name":  "Customer Issue Best Practices Doc",
+                          "cname":  "📚 客戶問題最佳實踐文件生成",
+                          "file":  "v2/Prompt/P064_CustomerIssueBestPracticesDoc.html"
+                      },
+                      {
+                          "seq":  "P065",
+                          "name":  "Copilot Learning Plan",
+                          "cname":  "🎓 M365 Copilot 個人化學習計畫",
+                          "file":  "v2/Prompt/P065_CopilotLearningPlan.html"
+                      },
+                      {
+                          "seq":  "P066",
+                          "name":  "Neurodiversity Exam Prep",
+                          "cname":  "告別死背！為你的大腦量身打造備考計畫",
+                          "file":  "v2/Prompt/P066_NeurodiversityExamPrep.html"
+                      },
+                      {
+                          "seq":  "P067",
+                          "name":  "Email Risk Radar",
+                          "cname":  "讓 Copilot 掃你的信箱，提前發現潛在風險",
+                          "file":  "v2/Prompt/P067_EmailRiskRadar.html"
+                      },
+                      {
+                          "seq":  "P068",
+                          "name":  "Smart Inbox Architecture",
+                          "cname":  "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
+                          "file":  "v2/Prompt/P068_SmartInboxArchitecture.html"
+                      },
+                      {
+                          "seq":  "P069",
+                          "name":  "Recipient Style Matching",
+                          "cname":  "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
+                          "file":  "v2/Prompt/P069_RecipientStyleMatching.html"
+                      },
+                      {
+                          "seq":  "P070",
+                          "name":  "Presentation Rehearsal Coach",
+                          "cname":  "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
+                          "file":  "v2/Prompt/P070_PresentationRehearsalCoach.html"
+                      },
+                      {
+                          "seq":  "P071",
+                          "name":  "Writing Style Prefix",
+                          "cname":  "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
+                          "file":  "v2/Prompt/P071_WritingStylePrefix.html"
+                      },
+                      {
+                          "seq":  "P072",
+                          "name":  "Executive Doc Summary",
+                          "cname":  "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
+                          "file":  "v2/Prompt/P072_ExecutiveDocSummary.html"
+                      },
+                      {
+                          "seq":  "P073",
+                          "name":  "Work Rhythm Analyzer",
+                          "cname":  "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
+                          "file":  "v2/Prompt/P073_WorkRhythmAnalyzer.html"
+                      },
+                      {
+                          "seq":  "P074",
+                          "name":  "Weekly Action Item Summary",
+                          "cname":  "一鍵彙整本週指派給我的待辦事項",
+                          "file":  "v2/Prompt/P074_WeeklyActionItemSummary.html"
+                      },
+                      {
+                          "seq":  "P075",
+                          "name":  "Excel Forecasting Model",
+                          "cname":  "用歷史資料打造 Excel 預測模型",
+                          "file":  "v2/Prompt/P075_ExcelForecastingModel.html"
+                      }
+                  ]
+}
+/*CATALOG-END*/;
+let state = { type: 'Agent', v: 'v1', file: null };
+
+function key() { return state.type + '_' + state.v; }
+function items() { return CATALOG[key()] || []; }
+
+function renderList() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const colorClass = state.type === 'Prompt' ? 'prompt' : '';
+  const list = document.getElementById('list');
+  const filtered = items().filter(it => {
+    if (!q) return true;
+    const hay = (it.seq + ' ' + it.name + ' ' + (it.cname || '')).toLowerCase();
+    return hay.includes(q);
+  });
+  if (!filtered.length) { list.innerHTML = '<div class="empty">沒有符合的項目</div>'; return; }
+  list.innerHTML = filtered.map(it => {
+    const active = state.file === it.file ? 'active ' + colorClass : '';
+    const display = it.cname || it.name;
+    const subEn = it.cname ? `<span class="en">${it.name}</span>` : '';
+    return `<a href="#" class="${active}" data-file="${it.file}" data-name="${it.seq} — ${display}">
+      <span class="seq">${it.seq}</span>${display}${subEn}
+    </a>`;
+  }).join('');
+  list.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      load(a.dataset.file, a.dataset.name);
+    });
+  });
+}
+
+function load(file, name) {
+  state.file = file;
+  document.getElementById('frame').src = file;
+  document.getElementById('name').textContent = name;
+  document.getElementById('open-new').href = file;
+  // .msg 路徑：v1/Agent/Foo.html -> v1/Agent/msg/Foo.msg
+  const msgPath = file.replace(/\/([^/]+)\.html$/, '/msg/$1.msg');
+  document.getElementById('open-msg').href = msgPath;
+  renderList();
+}
+
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    state.type = t.dataset.type;
+    state.file = null;
+    document.getElementById('frame').src = 'about:blank';
+    document.getElementById('name').textContent = '— 從左側清單選一篇 —';
+    renderList();
+  });
+});
+
+document.querySelectorAll('.vbtn').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.vbtn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    state.v = b.dataset.v;
+    // Try to keep same seq when switching version
+    if (state.file) {
+      const m = state.file.match(/([AP]\d{3})_/);
+      if (m) {
+        const same = items().find(it => it.seq === m[1]);
+        if (same) { load(same.file, same.seq + ' — ' + (same.cname || same.name)); return; }
+      }
+    }
+    renderList();
+  });
+});
+
+document.getElementById('q').addEventListener('input', renderList);
+
+renderList();
+</script>
+</body>
+</html>

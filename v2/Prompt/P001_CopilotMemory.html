@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分鐘小教室：Power of Prompt #P001 — 啟用 Copilot Memory</title>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- BANNER -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分鐘小教室</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P001 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">啟用 Copilot Memory</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- HERO -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">🧠💜✨🔖🎯</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">
+        🧠 啟用你的 Copilot Memory<br>讓 AI 真正「記得你是誰」
+      </div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Get Started with Copilot Memory</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">
+        每次對話都要從頭交代自己？三個問題搞定，從此不重複。
+      </div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 不需 M365 Copilot 授權</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒設定完</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- TAGLINE -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- PAIN POINTS -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣跟 Copilot 對話嗎？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔁</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">每次都要交代<br>「我是 PM、寫繁中…」</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">😩</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">產出語氣每次都<br>不一樣，得反覆改</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏳</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">前情提要打半天<br>正事還沒問</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        <b style="color:#5B5FC7;">Copilot Memory</b> 是新功能 — 它會記住你的偏好、工作風格、關鍵細節，讓對話更有效率、更貼近你的情境。這週的 Prompt 就是 <b style="color:#5B5FC7;">啟動鑰匙</b> — 它會問你三個簡單的問題，然後一次把答案存進你的 Copilot Memory 個人檔案。<b style="color:#D03A3A;">一次設定，從此告別重複交代 🌿</b>
+      </div>
+    </td>
+  </tr>
+
+  <!-- WHAT YOU GET -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">💼 工作風格 Memory</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">你怎麼安排一天、喜歡先看摘要還是細節、會議節奏 — Copilot 都記住。</div>
+            </div>
+          </td>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">✍️ 寫作風格 Memory</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">慣用語氣、長度、稱呼方式（Hi vs 您好），下次寫信不用再修。</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🎯 角色 Memory</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">職稱、團隊、客戶類型 — 讓 Copilot 用對你最有用的角度回答。</div>
+            </div>
+          </td>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+              <div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🔧 隨時可改</div>
+              <div style="font-size:11.5pt; color:#333; line-height:1.6;">在 Copilot 設定 ➜ Memory 隨時檢視、刪除、新增任何一條記憶。</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- TRY IT - CHINESE -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
+        <div style="font-size:10.5pt; color:#7B5500; padding-bottom:10px; font-style:italic;">
+          打開 Copilot Chat (Web 或 Work)，把下面整段貼上去就能跑。
+        </div>
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          幫我啟動我的 <b>Copilot Memory</b>。請問我三個簡單的問題：分別關於我的<b>工作風格</b>、<b>寫作風格</b>，以及<b>我的職務角色</b>的關鍵事實。請把我的回答加到我的 Copilot Memory 個人檔案中。
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ENGLISH PROMPT -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">💬 English Prompt｜英文版</div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        Help me with getting started on my Copilot Memory. Ask me three simple questions about my work style, writing style and key facts about my role. Add the results to my Copilot Memory profile.
+      </div>
+    </td>
+  </tr>
+
+  <!-- TIPS -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🔍 第一次跑完馬上驗收</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">問 Copilot：「請複述你剛剛幫我記住的每一條 Memory」確認它有完整收到。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">➕ 隨時加新記憶</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">日常對話中說「Copilot, 我比較偏好…」或「請記住…」就會看到小通知，直接存進 Memory。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding:8px 0;">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td width="48" valign="top">
+                  <div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div>
+                </td>
+                <td valign="top">
+                  <div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🧹 每季回頭整理</div>
+                  <div style="font-size:12pt; color:#444; line-height:1.7;">打開 Copilot 設定 ➜ <b>Memory</b>，刪掉過時或不再適用的舊偏好，保持精準。</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- CTA -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">準備教 Copilot 認識你了嗎？▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td style="padding-right:8px;"></td>
+          <td style="padding-left:8px;"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- LICENSE -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">
+        ＊本 Prompt <b>無需 M365 Copilot 授權</b>，可在 Copilot Chat (Web) 直接使用。
+      </div>
+    </td>
+  </tr>
+
+    <!-- CTA -->
+  <tr><td align="center" style="padding:18px 36px 24px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+  </td></tr>  <!-- FOOTER -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

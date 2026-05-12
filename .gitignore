@@ -1,0 +1,6 @@
+# 只保留 html
+*
+!*/
+!*.html
+!.gitignore
+!README.md
