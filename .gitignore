@@ -1,7 +1,13 @@
-# 排除非內容檔
+# 預設排除
 *
+# 但保留目錄結構與內容類型
 !*/
 !*.html
 !*.msg
 !.gitignore
 !README.md
+!robots.txt
+# 工作中暫存目錄一律排除
+_trash/
+_bak_*/
+*_bak_*/
