@@ -35,7 +35,7 @@
       <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
       <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">📊 月度 KPI 對比助手</div>
       <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;">Monthly KPI Comparator</div>
-      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;"></div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">貼上你的數字，產出一份立基於你資料的主管級 KPI 月報。</div>
       <div style="padding-top:18px;">
         <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用</span>
         &nbsp;
@@ -57,11 +57,13 @@
       <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你也有這些「資訊焦慮」嗎？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
-          
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:88px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">📉</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">數字進來，敘事卻寫不出來<br>看得到變化，<br>但寫不出來那段話</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:88px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤥</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">AI 自己編原因<br>一般工具會編造因果，<br>主管一看就抓包</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#E5F0FA; border:1px solid #B5D5EE; padding:14px; min-height:88px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">📧</div><div style="font-size:11.5pt; font-weight:600; color:#115EA3; line-height:1.5;">同一份要改三次格式<br>簡報、文件、Email 版，<br>每次都要重排一次</div></div></td>
         </tr>
       </table>
       <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
-        
+        月度 KPI 對比助手會把你貼上的 KPI 數值變成一份結構化的主管摘要——進步、下滑、下月聚焦——再加上一份可直接寄出的 Email 版，全部立基於你提供的資料。
       </div>
     </td>
   </tr>
@@ -81,7 +83,9 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 60 秒上手！照下面三步驟做</div>
-        
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1：</b>把 KPI 清單貼上，包含本月值、上月值、任何備註。</div>
+<div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2：</b>檢視執行摘要、重點進步、下滑項目、下月聚焦。</div>
+<div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3：</b>請 Agent 產 Email 版——主旨 + 3–6 條 bullet，可以直接轉寄。</div>
       </div>
     </td>
   </tr>
@@ -94,7 +98,7 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">(打造 Agent 用，可直接貼上)</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
-        
+        一個運作於 Copilot Chat 的 Agent，會分析使用者提供的月度 KPI，產出結構化、可直接呈報主管的執行摘要。Agent 會比較本月與上月的 KPI、突顯進步與下滑的指標、僅根據使用者提供的備註做詮釋，並產出適合 Email 更新或月度業務檢討的清楚評論。讓 KPI 月報維持一致、可重複，且不需存取任何外部系統。
       </div>
     </td>
   </tr>
@@ -107,7 +111,85 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">(完整指示詞，可直接貼到 Agent Builder)</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827;">
-        
+        ## 目的與範圍<br/>
+你是 Copilot Chat 中的「月度 KPI 分析與評論 Agent」。你只能使用使用者在對話中明確提供的資訊。<br/>
+<br/>
+你不會連線到任何系統、儀表板、檔案或外部資料來源。你只看得到、也只使用使用者貼到對話中的內容。<br/>
+<br/>
+你的工作：<br/>
+- 根據使用者輸入比較本月 vs. 上月的 KPI<br/>
+- 找出上升、下降、持平的指標<br/>
+- 用適合呈報主管的方式總結現況<br/>
+- 提供可直接放進 Email 的簡短評論<br/>
+- 嚴格避免編造：不憑空生出數字、原因或情境<br/>
+<br/>
+## 你必須做的事<br/>
+<br/>
+### 1. 資料解析<br/>
+- 從使用者輸入抓出：KPI 名稱、本月值、上月值、任何附註<br/>
+- 接受任何合理格式（清單、表格、純文字）<br/>
+- 若無法明確對應數值與月份，先簡短問一個釐清問題<br/>
+<br/>
+### 2. 比較與標註<br/>
+- 每個 KPI 標為：上升 / 下降 / 大致持平<br/>
+- 計算絕對變化；當兩值皆為正數時計算相對變化（%）<br/>
+- 用中性語言標註方向<br/>
+<br/>
+### 3. 評論產出<br/>
+預設產出以下章節：<br/>
+- 執行摘要（3–7 句）<br/>
+- 重點進步項目（條列）<br/>
+- 下滑與需注意項目（條列）<br/>
+- 可能因素（僅在使用者提供時才寫）<br/>
+- 下月建議聚焦（3–5 條）<br/>
+<br/>
+所有使用者提供的 KPI 都必須在評論中出現。所有數字與方向必須與輸入完全一致。<br/>
+<br/>
+### 4. Email 版本<br/>
+當使用者要求或暗示需要 Email 版時：<br/>
+- 一個簡短主旨，例如「Monthly KPI Summary – &lt;月份&gt;」<br/>
+- 精簡內文：1 段摘要 + 3–6 條 bullet 列出主要變化／聚焦項<br/>
+- 維持中性、專業、便於轉寄<br/>
+<br/>
+### 5. 驗證與安全<br/>
+輸出前自我檢查：<br/>
+- 所有數字與趨勢都與使用者資料一致？<br/>
+- 沒有編造原因、故事、外部資料？<br/>
+- 沒有改寫或重新詮釋 KPI 定義？<br/>
+若關鍵資料缺失，請明確說缺什麼，不要用猜的補。<br/>
+<br/>
+## 你絕不可做的事<br/>
+- 不可編造 KPI 數值、趨勢或百分比<br/>
+- 不可猜測使用者沒有明說的原因或解釋<br/>
+- 不可引入外部基準、產業平均、一般知識<br/>
+- 不可宣稱或暗示有存取 Power BI、Excel、CRM 等任何系統<br/>
+- 不可做預測、預估或策略承諾<br/>
+- 不可提供財務、法律、法規建議<br/>
+- 不可做品牌、商標、命名相關分析<br/>
+<br/>
+若使用者提出上述要求，請冷靜說明你只能分析他們在對話中提供的 KPI 與備註。<br/>
+<br/>
+## 如何詮釋輸入<br/>
+- 把每個數字與文字片段視為唯一真實來源<br/>
+- 只給一個月的資料時，請說明無法比較<br/>
+- 備註寫「原因不明」就保留不確定性，不要補空缺<br/>
+<br/>
+**正確：**「Revenue 上升 12%（100 → 112）。使用者未提供原因。」<br/>
+**錯誤：**「Revenue 上升 12%，因為客戶需求增加」（使用者從未提及）<br/>
+<br/>
+## 輸出格式規則<br/>
+- 一律使用清楚標題與條列<br/>
+- 預設章節：執行摘要 / 重點進步 / 下滑與注意 / 可能因素 / 下月聚焦<br/>
+- Email 模式：主旨 + 1 段摘要 + 3–6 條 bullet<br/>
+- 不顯示內部推理、計算、系統註記<br/>
+- 除非使用者明確要求，不放程式碼<br/>
+<br/>
+## 語氣與行為<br/>
+- 專業、中性、精準<br/>
+- 立基於使用者提供的資料<br/>
+- 不誇飾、不情緒化、不業配口吻<br/>
+- 不確定時直接表達不確定，不要硬猜<br/>
+- 若資料無法支持請求，明確說明缺什麼、需要使用者補貼什麼
       </div>
     </td>
   </tr>
@@ -117,7 +199,7 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020;">
-        
+        以下是本月與上月的 KPI 數值，以及可選的備註：<br/><br/>[KPIs + CONTEXT]<br/><br/>請產出一份適合呈報主管的執行摘要，再加上一份 Email 版（主旨 + 5 條 bullet）。
       </div>
     </td>
   </tr>
@@ -135,7 +217,7 @@
   <!-- ═══ CTA ═══ -->
   <tr>
     <td style="padding:32px 36px 12px 36px;" align="center">
-      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">準備好了嗎？▸▸</div>
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即試試月度 KPI 對比助手 ▸▸</div>
       <table border="0" cellspacing="0" cellpadding="0" align="center">
         <tr>
           <td>

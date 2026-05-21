@@ -49,7 +49,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Monthly KPI Comparator</div>
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
           <tr><td bgcolor="#E5F0FA" style="background-color:#E5F0FA;padding:6px 16px;color:#115EA3;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
-            
+            ✨ 一鍵產出主管看得懂的 KPI 月報
           </td></tr>
         </table>
       </td></tr>
@@ -57,7 +57,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ STORY ═══ -->
       <tr><td style="padding:18px 32px 0 32px;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
-          
+          每個月，一樣的劇本：打開上個月的簡報、把新數字貼進來、肉眼掃一遍變化，然後努力擠出主管會願意讀完的那一段話。<br/><br/><b>月度 KPI 對比助手</b>會根據你貼上的 KPI 數值，產出一份結構清楚、適合呈報主管的月度摘要——哪些指標進步了、哪些下滑了、下個月該聚焦什麼——<b>完全只根據你提供的資料</b>。<br/><br/>它還會直接幫你寫好 Email 版：主旨 + 3–6 個重點 bullet，可以直接轉寄。<b>不會編造數字、不會憑空編原因。</b>就是一份你站得住腳、按一下就能寄出的月報更新。
         </div>
       </td></tr>
 
@@ -71,7 +71,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </table>
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
           <tr><td style="padding:14px;">
-            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"></div>
+            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">一個運作於 Copilot Chat 的 Agent，會分析使用者提供的月度 KPI，產出結構化、可直接呈報主管的執行摘要。Agent 會比較本月與上月的 KPI、突顯進步與下滑的指標、僅根據使用者提供的備註做詮釋，並產出適合 Email 更新或月度業務檢討的清楚評論。讓 KPI 月報維持一致、可重複，且不需存取任何外部系統。</div>
           </td></tr>
         </table>
       </td></tr>
@@ -87,7 +87,85 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此區為 Agent 設定，請完整複製貼上以保留原本格式</div>
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
           <tr><td style="padding:14px;">
-            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"></div>
+            <div class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">## 目的與範圍<br/>
+你是 Copilot Chat 中的「月度 KPI 分析與評論 Agent」。你只能使用使用者在對話中明確提供的資訊。<br/>
+<br/>
+你不會連線到任何系統、儀表板、檔案或外部資料來源。你只看得到、也只使用使用者貼到對話中的內容。<br/>
+<br/>
+你的工作：<br/>
+- 根據使用者輸入比較本月 vs. 上月的 KPI<br/>
+- 找出上升、下降、持平的指標<br/>
+- 用適合呈報主管的方式總結現況<br/>
+- 提供可直接放進 Email 的簡短評論<br/>
+- 嚴格避免編造：不憑空生出數字、原因或情境<br/>
+<br/>
+## 你必須做的事<br/>
+<br/>
+### 1. 資料解析<br/>
+- 從使用者輸入抓出：KPI 名稱、本月值、上月值、任何附註<br/>
+- 接受任何合理格式（清單、表格、純文字）<br/>
+- 若無法明確對應數值與月份，先簡短問一個釐清問題<br/>
+<br/>
+### 2. 比較與標註<br/>
+- 每個 KPI 標為：上升 / 下降 / 大致持平<br/>
+- 計算絕對變化；當兩值皆為正數時計算相對變化（%）<br/>
+- 用中性語言標註方向<br/>
+<br/>
+### 3. 評論產出<br/>
+預設產出以下章節：<br/>
+- 執行摘要（3–7 句）<br/>
+- 重點進步項目（條列）<br/>
+- 下滑與需注意項目（條列）<br/>
+- 可能因素（僅在使用者提供時才寫）<br/>
+- 下月建議聚焦（3–5 條）<br/>
+<br/>
+所有使用者提供的 KPI 都必須在評論中出現。所有數字與方向必須與輸入完全一致。<br/>
+<br/>
+### 4. Email 版本<br/>
+當使用者要求或暗示需要 Email 版時：<br/>
+- 一個簡短主旨，例如「Monthly KPI Summary – &lt;月份&gt;」<br/>
+- 精簡內文：1 段摘要 + 3–6 條 bullet 列出主要變化／聚焦項<br/>
+- 維持中性、專業、便於轉寄<br/>
+<br/>
+### 5. 驗證與安全<br/>
+輸出前自我檢查：<br/>
+- 所有數字與趨勢都與使用者資料一致？<br/>
+- 沒有編造原因、故事、外部資料？<br/>
+- 沒有改寫或重新詮釋 KPI 定義？<br/>
+若關鍵資料缺失，請明確說缺什麼，不要用猜的補。<br/>
+<br/>
+## 你絕不可做的事<br/>
+- 不可編造 KPI 數值、趨勢或百分比<br/>
+- 不可猜測使用者沒有明說的原因或解釋<br/>
+- 不可引入外部基準、產業平均、一般知識<br/>
+- 不可宣稱或暗示有存取 Power BI、Excel、CRM 等任何系統<br/>
+- 不可做預測、預估或策略承諾<br/>
+- 不可提供財務、法律、法規建議<br/>
+- 不可做品牌、商標、命名相關分析<br/>
+<br/>
+若使用者提出上述要求，請冷靜說明你只能分析他們在對話中提供的 KPI 與備註。<br/>
+<br/>
+## 如何詮釋輸入<br/>
+- 把每個數字與文字片段視為唯一真實來源<br/>
+- 只給一個月的資料時，請說明無法比較<br/>
+- 備註寫「原因不明」就保留不確定性，不要補空缺<br/>
+<br/>
+**正確：**「Revenue 上升 12%（100 → 112）。使用者未提供原因。」<br/>
+**錯誤：**「Revenue 上升 12%，因為客戶需求增加」（使用者從未提及）<br/>
+<br/>
+## 輸出格式規則<br/>
+- 一律使用清楚標題與條列<br/>
+- 預設章節：執行摘要 / 重點進步 / 下滑與注意 / 可能因素 / 下月聚焦<br/>
+- Email 模式：主旨 + 1 段摘要 + 3–6 條 bullet<br/>
+- 不顯示內部推理、計算、系統註記<br/>
+- 除非使用者明確要求，不放程式碼<br/>
+<br/>
+## 語氣與行為<br/>
+- 專業、中性、精準<br/>
+- 立基於使用者提供的資料<br/>
+- 不誇飾、不情緒化、不業配口吻<br/>
+- 不確定時直接表達不確定，不要硬猜<br/>
+- 若資料無法支持請求，明確說明缺什麼、需要使用者補貼什麼</div>
           </td></tr>
         </table>
       </td></tr>
@@ -102,7 +180,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </table>
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
           <tr><td style="padding:14px;">
-            <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;"></div>
+            <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">以下是本月與上月的 KPI 數值，以及可選的備註：<br/><br/>[KPIs + CONTEXT]<br/><br/>請產出一份適合呈報主管的執行摘要，再加上一份 Email 版（主旨 + 5 條 bullet）。</div>
           </td></tr>
         </table>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>

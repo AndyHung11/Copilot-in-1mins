@@ -35,7 +35,7 @@
       <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
       <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">📡 專案脈動週報生成器</div>
       <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Project Pulse Weekly Update</div>
-      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;"></div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把散落的 M365 訊號變成可呈報的專案週報——連追問信都幫你寫好。</div>
       <div style="padding-top:18px;">
         <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需 M365 Copilot 授權</span>
         &nbsp;
@@ -57,11 +57,28 @@
       <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣跟 Copilot 對話嗎？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
-          
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔍</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">每週五的 Status 大搜捕<br>Email、Teams、筆記、SharePoint——<br>一小時都在複製貼上</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">❓</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">確認過的還是用猜的？<br>哪些是事實、<br>哪些是推論你分不出來</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">📨</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">追問信永遠寫不完<br>看到缺口卻沒時間<br>真的去寄那幾封</div>
+            </div>
+          </td>
         </tr>
       </table>
       <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
-        
+        專案脈動週報生成器把散落的 M365 訊號變成一份可呈報 Stakeholder 的 Status（進度、決策、風險、待拍板），每條都標 🟢/🟡/🔴，並把缺口需要的追問信也幫你起草好，讓你真的會寄出去。
       </div>
     </td>
   </tr>
@@ -71,7 +88,7 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        
+        <tr><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">📋 可呈報的專案脈動</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">進度、決策、阻礙、風險、里程碑——一份結構完整、適合 Steering 的更新。</div></div></td><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🟢🟡🔴 信心標籤</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">每條都標已確認、推論或待驗證——並註明來源。</div></div></td><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">📨 追問信幫你寫好</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">每個缺口或 🔴 都附一封可貼上 Outlook 的信：收件人、主旨、內文。</div></div></td></tr>
       </table>
     </td>
   </tr>
@@ -83,7 +100,7 @@
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
         <div style="font-size:10.5pt; color:#7B5500; padding-bottom:10px; font-style:italic;">打開 Copilot Chat (Web 或 Work)，把下面整段貼上去就能跑。</div>
         <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
-          
+          幫我為專案「[專案名稱]」產出最近 7 天的 Status Update。請使用我的 Email、Teams 對話、會議記錄、近期檔案編輯為來源。請依以下結構產出：1) 執行摘要（3 句），2) 自上次更新以來的進度（條列，含負責人），3) 已做出的決策，4) 待處理的風險與阻礙，並提出建議的因應方式，5) 本週需要做出的決策以及需誰拍板，6) 接下來 14 天的關鍵里程碑。每一條都請標註信心程度（🟢 已確認、🟡 推論、🔴 待驗證），推論項目請註明來源。針對每一個 🔴 項目或關鍵資訊缺失之處，請幫我寫一封簡短、有禮貌的追問信給對應的負責人，索取所需的具體資訊。每封追問信請以可直接複製的區塊呈現，含收件人、建議主旨、完整內文，讓我可以貼進 Outlook、自行檢視後寄出。
         </div>
       </div>
     </td>
@@ -94,7 +111,7 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
-        Generate a status update for the project &quot;[PROJECT NAME]&quot; covering the last 7 days. Use my emails, Teams chats, meeting notes, and recent file edits as sources. Structure the update as: 1) Executive summary (3 sentences), 2) Progress since last update (bullet list with owners), 3) Decisions made, 4) Open risks and blockers with proposed mitigations, 5) Decisions needed this week and from whom, 6) Upcoming milestones in the next 14 days. Mark each item with a confidence indicator (🟢 confirmed, 🟡 inferred, 🔴 needs validation) and cite the source for inferred items. For every 🔴 item or any point where critical information is missing, write a short, polite follow-up email I can send to the relevant owner asking for the specific input needed. Provide each follow-up as a ready-to-copy block with the recipient, suggested subject line, and full email body, so I can paste it into Outlook and send it myself.
+        Generate a status updatefor the project &quot;[PROJECT NAME]&quot; covering the last 7 days. Use my emails, Teams chats, meeting notes, and recent file edits as sources. Structure the update as: 1) Executive summary (3 sentences), 2) Progress since last update (bullet list with owners), 3) Decisions made, 4) Open risks and blockers with proposed mitigations, 5) Decisions needed this week and from whom, 6) Upcoming milestones in the next 14 days. Mark each item with a confidence indicator (🟢 confirmed, 🟡 inferred, 🔴 needs validation) and cite the source for inferred items. For every 🔴 item or any point where critical information is missing, write a short, polite follow-up email I can send to the relevant owner asking for the specific input needed. Provide each follow-up as a ready-to-copy block with the recipient, suggested subject line, and full email body, so I can paste it into Outlook and send it myself.
       </div>
     </td>
   </tr>
@@ -104,7 +121,9 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🚀 在 Copilot Chat (Work) 貼上</div><div style="font-size:12pt; color:#444; line-height:1.7;">打開 Copilot Chat – Work 並貼上完整 Prompt，讓它掃描你的 M365 訊號。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✏️ 換掉 [專案名稱]</div><div style="font-size:12pt; color:#444; line-height:1.7;">填上你實際的專案名，Copilot 才能精準鎖定相關訊號。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📨 檢視並寄出追問信</div><div style="font-size:12pt; color:#444; line-height:1.7;">把起草好的追問信複製到 Outlook，調整語氣，下班前真的寄出去。</div></td></tr></table></td></tr>
       </table>
     </td>
   </tr>
