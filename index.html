@@ -80,6 +80,9 @@
     <div class="search"><input type="text" id="q" placeholder="🔍 搜尋編號或名稱…" /></div>
 
     <div class="list" id="list"></div>
+    <div style="padding:10px 14px; border-top:1px solid #e3e8ee; background:#fafbfc;">
+      <a id="download-zip" href="PowerOfCopilot.zip" download style="display:block; text-align:center; padding:8px; background:#0F6CBD; color:#fff; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600;">⬇️ 下載整包 (.zip)</a>
+    </div>
   </aside>
 
   <main>
@@ -97,7 +100,7 @@
 <script>
 const CATALOG = /*CATALOG-START*/
 {
-  "generated": "2026-05-25 10:25:10",
+  "generated": "2026-05-25 10:30:57",
   "Agent_v1": [
     {
       "seq": "A001",
@@ -1845,6 +1848,7 @@ const UI = {
     empty: '沒有符合的項目',
     openMsg: '📧 用 Outlook 開啟',
     openNew: '在新分頁開啟 ↗',
+    download: '⬇️ 下載整包 (.zip)',
     docTitle: 'Copilot 一分鐘小教室 — Newsletter Index'
   },
   en: {
@@ -1859,6 +1863,7 @@ const UI = {
     empty: 'No matching items',
     openMsg: '📧 Open in Outlook',
     openNew: 'Open in new tab ↗',
+    download: '⬇️ Download all (.zip)',
     docTitle: 'Copilot in 1 Minute — Newsletter Index'
   }
 };
@@ -1877,6 +1882,8 @@ function applyI18n() {
   document.getElementById('q').placeholder = u.search;
   document.getElementById('open-msg').textContent = u.openMsg;
   document.getElementById('open-new').textContent = u.openNew;
+  const dl = document.getElementById('download-zip');
+  if (dl) dl.textContent = u.download;
   if (!state.file) document.getElementById('name').textContent = u.placeholder;
 }
 

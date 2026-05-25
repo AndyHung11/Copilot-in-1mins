@@ -6,7 +6,9 @@
 !*.msg
 !.gitignore
 !README.md
+!README.zh.md
 !robots.txt
+!PowerOfCopilot.zip
 # 工作中暫存目錄一律排除
 _trash/
 _bak_*/
