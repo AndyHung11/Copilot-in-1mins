@@ -5,7 +5,9 @@
 A curated archive of weekly **Power of Copilot** tips — Agents and Prompts. Every entry ships in both Chinese (繁中) and English, and in two layout versions (v1 / v2).
 
 🔗 **公開網址 / Public site**：https://andyhung11.github.io/Copilot-in-1mins/
+
 📚 **本地索引 / Local browser**：[index.html](./index.html) — 右上角 中／EN 切換語言 / use the top-right 中 / EN toggle
+
 📦 **整包下載 / Download everything**：[PowerOfCopilot.zip](./PowerOfCopilot.zip)
 
 ---
