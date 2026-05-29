@@ -11,7 +11,7 @@
     --chip:#eef2f7; --chip-on:#0F6CBD; --shadow:0 1px 2px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.08);
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;font-family:-apple-system,Segoe UI,'Microsoft JhengHei',微軟正黑體,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px}
+  html,body{margin:0;padding:0;font-family:-apple-system,Segoe UI,'Microsoft JhengHei',微軟正黑體,Arial,sans-serif;background:var(--bg);color:#111827;font-size:15.5px;font-weight:450}
   a{color:inherit;text-decoration:none}
   button{font:inherit;cursor:pointer}
 
@@ -21,16 +21,19 @@
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px}
   .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
   .tabs{display:flex;gap:6px}
-  .tabs button{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:13px}
+  .tabs button{padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#4b5563;font-size:14px;font-weight:600}
   .tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
   .tabs button.on.prompt{background:var(--accent2);border-color:var(--accent2)}
   .tabs button.on.all{background:#111827;border-color:#111827}
   .search{flex:1;max-width:520px;position:relative}
-  .search input{width:100%;padding:8px 12px 8px 34px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff}
+  .search input{width:100%;padding:9px 12px 9px 36px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff}
   .search::before{content:"🔍";position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.6}
-  .toggles{display:flex;gap:6px;align-items:center}
-  .toggles button{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:12px;color:var(--muted)}
-  .toggles button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  /* Segmented toggle group */
+  .seg{display:inline-flex;background:#f3f4f6;border:1px solid var(--line);border-radius:8px;padding:2px;gap:0}
+  .seg button{padding:5px 12px;border:none;background:transparent;font-size:13px;color:#4b5563;font-weight:600;border-radius:6px;line-height:1.4}
+  .seg button.on{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .seg.lang button.on{background:var(--ink);color:#fff}
+  .toggles{display:flex;gap:10px;align-items:center}
   .kbd{padding:1px 6px;background:#f3f4f6;border:1px solid var(--line);border-radius:4px;font-family:ui-monospace,monospace;font-size:11px;color:#374151}
 
   /* ── Layout ──────────────────────────────── */
@@ -67,13 +70,13 @@
   .card .seq{font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);background:#f3f4f6;padding:2px 7px;border-radius:5px}
   .card .fav{background:none;border:none;font-size:18px;padding:0;opacity:.3}
   .card .fav.on{opacity:1;color:#f59e0b}
-  .card .ttl{font-size:15px;font-weight:700;line-height:1.4}
-  .card .ename{font-size:12px;color:var(--muted);margin-top:-2px}
-  .card .prev{font-size:12.5px;color:#4b5563;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:58px}
+  .card .ttl{font-size:16.5px;font-weight:800;line-height:1.4;color:#0F172A}
+  .card .ename{font-size:13px;color:var(--muted);margin-top:-2px;font-weight:500}
+  .card .prev{font-size:13.5px;color:#374151;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:62px}
   .card .tags{display:flex;flex-wrap:wrap;gap:4px}
   .card .tags .tag{font-size:11px;background:#eef2f7;color:#374151;padding:2px 7px;border-radius:4px}
   .card .actions{display:flex;gap:6px;margin-top:auto;padding-top:6px;border-top:1px solid var(--line)}
-  .card .actions button{flex:1;padding:6px;font-size:12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+  .card .actions button{flex:1;padding:8px;font-size:13px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font-weight:600}
   .card .actions button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
   .card .actions button.primary.prompt{background:var(--accent2);border-color:var(--accent2)}
   .card[data-kind=Agent] .seq{color:var(--accent);background:#e8f1f9}
@@ -122,8 +125,15 @@
       <input id="q" placeholder="搜尋編號、名稱、內容…  /  快捷鍵 /">
     </div>
     <div class="toggles">
-      <button id="ver" class="on" title="版本切換">v1 + v2</button>
-      <button id="lang">中文</button>
+      <div class="seg" id="ver">
+        <button data-ver="both" class="on">v1+v2</button>
+        <button data-ver="v1">v1</button>
+        <button data-ver="v2">v2</button>
+      </div>
+      <div class="seg lang" id="lang">
+        <button data-lang="zh" class="on">中文</button>
+        <button data-lang="en">EN</button>
+      </div>
     </div>
   </div>
 </header>
@@ -137,8 +147,8 @@
     </div>
     <div class="section">
       <h4>授權</h4>
-      <span class="chip" data-license="free">🆓 免費 (Copilot Chat)</span>
-      <span class="chip" data-license="required">🔑 M365 Copilot</span>
+      <span class="chip" data-license="basic">🆓 Microsoft 365 Copilot 基本版 (Basic)</span>
+      <span class="chip" data-license="premium">🔑 Microsoft 365 Copilot 進階版 (Premium)</span>
     </div>
     <div class="section">
       <h4>類別</h4>
@@ -2426,18 +2436,18 @@ document.getElementById('sidebar').addEventListener('click', e=>{
 document.getElementById('clearTags').addEventListener('click', ()=>{ state.tags.clear(); refresh(); });
 
 document.getElementById('ver').addEventListener('click', e=>{
-  const cyc = {both:'v2', v2:'v1', v1:'both'};
-  state.ver = cyc[state.ver] || 'both';
+  const b = e.target.closest('button[data-ver]'); if (!b) return;
+  state.ver = b.dataset.ver;
   localStorage.setItem(LS.ver, state.ver);
-  e.target.textContent = state.ver === 'both' ? 'v1 + v2' : (state.ver === 'v2' ? '只看 v2' : '只看 v1');
-  e.target.classList.toggle('on', state.ver==='both');
+  document.querySelectorAll('#ver button').forEach(x=>x.classList.toggle('on', x===b));
   refresh();
 });
 
 document.getElementById('lang').addEventListener('click', e=>{
-  state.lang = state.lang === 'zh' ? 'en' : 'zh';
+  const b = e.target.closest('button[data-lang]'); if (!b) return;
+  state.lang = b.dataset.lang;
   localStorage.setItem(LS.lang, state.lang);
-  e.target.textContent = state.lang === 'zh' ? '中文' : 'EN';
+  document.querySelectorAll('#lang button').forEach(x=>x.classList.toggle('on', x===b));
   refresh();
 });
 
@@ -2514,9 +2524,9 @@ document.addEventListener('keydown', e=>{
   }
 });
 
-// Init UI labels from persisted state
-document.getElementById('ver').textContent = state.ver === 'both' ? 'v1 + v2' : (state.ver === 'v2' ? '只看 v2' : '只看 v1');
-document.getElementById('lang').textContent = state.lang === 'zh' ? '中文' : 'EN';
+// Init UI toggles from persisted state
+document.querySelectorAll('#ver button').forEach(x=>x.classList.toggle('on', x.dataset.ver === state.ver));
+document.querySelectorAll('#lang button').forEach(x=>x.classList.toggle('on', x.dataset.lang === state.lang));
 
 refresh();
 </script>
