@@ -35,9 +35,11 @@
   .langtoggle button.active { background: #0F6CBD; color: #fff; }
   .list a.disabled { color: #c1c7d0; cursor: not-allowed; background: #fafbfc; }
   .list a.disabled .seq { background: #eef0f3; color: #9ca3af; }
-  /* Search */
-  .search { padding: 10px 14px; border-bottom: 1px solid #e3e8ee; }
-  .search input { width: 100%; padding: 8px 10px; font-size: 13px; border: 1px solid #d1d5db; border-radius: 6px; }
+  /* Search + Sort */
+  .search { padding: 10px 14px; border-bottom: 1px solid #e3e8ee; display:flex; gap:8px; align-items:center; }
+  .search input { flex:1; min-width:0; padding: 8px 10px; font-size: 13px; border: 1px solid #d1d5db; border-radius: 6px; }
+  .sort-btn { flex:none; padding:8px 10px; font-size:12px; border:1px solid #d1d5db; background:#fff; border-radius:6px; cursor:pointer; color:#4b5563; font-weight:600; white-space:nowrap; }
+  .sort-btn:hover { background:#f4f6f8; }
   /* List */
   .list { flex: 1; overflow-y: auto; }
   .list a { display: block; padding: 10px 16px; border-bottom: 1px solid #f1f3f5; text-decoration: none; color: #1f2937; font-size: 13px; line-height: 1.5; word-break: break-word; }
@@ -82,7 +84,10 @@
       <button class="vbtn" data-v="v2" id="v2btn">v2 · 豐富</button>
     </div>
 
-    <div class="search"><input type="text" id="q" placeholder="🔍 搜尋編號或名稱…" /></div>
+    <div class="search">
+      <input type="text" id="q" placeholder="🔍 搜尋編號或名稱…" />
+      <button type="button" id="sortBtn" class="sort-btn" title="切換編號排序">↓ 新→舊</button>
+    </div>
 
     <div class="list" id="list"></div>
   </aside>
@@ -107,7 +112,7 @@
 <script>
 const CATALOG = /*CATALOG-START*/
 {
-  "generated": "2026-05-30 02:50:53",
+  "generated": "2026-05-30 03:40:04",
   "Agent_v1": [
     {
       "seq": "A001",
@@ -1868,7 +1873,7 @@ const CATALOG = /*CATALOG-START*/
   ]
 }
 /*CATALOG-END*/;
-let state = { type: 'Agent', v: 'v1', file: null, lang: 'zh' };
+let state = { type: 'Agent', v: 'v1', file: null, lang: 'zh', sort: 'desc' };
 
 const UI = {
   zh: {
@@ -1885,6 +1890,8 @@ const UI = {
     openNew: '在新分頁開啟 ↗',
     download: '⬇️ 全部下載 (.zip)',
     uiSwitchNew: '試用新版',
+    sortDesc: '↓ 新→舊',
+    sortAsc: '↑ 舊→新',
     docTitle: 'Copilot 一分鐘小教室 — Newsletter Index'
   },
   en: {
@@ -1901,6 +1908,8 @@ const UI = {
     openNew: 'Open in new tab ↗',
     download: '⬇️ Download all (.zip)',
     uiSwitchNew: 'Try new view',
+    sortDesc: '↓ Newest',
+    sortAsc: '↑ Oldest',
     docTitle: 'Copilot in 1 Minute — Newsletter Index'
   }
 };
@@ -1922,6 +1931,8 @@ function applyI18n() {
   if (dl) dl.textContent = u.download;
   const usw = document.querySelector('#uiSwitch .ui-switch-text');
   if (usw) usw.textContent = u.uiSwitchNew;
+  const sb = document.getElementById('sortBtn');
+  if (sb) sb.textContent = state.sort === 'desc' ? u.sortDesc : u.sortAsc;
   if (!state.file) document.getElementById('name').textContent = u.placeholder;
 }
 
@@ -1932,10 +1943,20 @@ function applyI18n() {
   const stored = localStorage.getItem('powerofcopilot.lang');
   const lang = (urlLang === 'en' || urlLang === 'zh') ? urlLang : (stored === 'en' ? 'en' : 'zh');
   state.lang = lang;
+  const storedSort = localStorage.getItem('powerofcopilot.sort');
+  if (storedSort === 'asc' || storedSort === 'desc') state.sort = storedSort;
 })();
 
 function key() { return state.type + '_' + state.v; }
-function items() { return CATALOG[key()] || []; }
+function items() {
+  const arr = (CATALOG[key()] || []).slice();
+  arr.sort((a, b) => {
+    const na = parseInt((a.seq || '').slice(1), 10) || 0;
+    const nb = parseInt((b.seq || '').slice(1), 10) || 0;
+    return state.sort === 'desc' ? nb - na : na - nb;
+  });
+  return arr;
+}
 function isEN() { return state.lang === 'en'; }
 function fileOf(it) { return isEN() ? (it.en_file || null) : it.file; }
 
@@ -2040,9 +2061,27 @@ document.querySelectorAll('.langtoggle button').forEach(b => {
 
 document.getElementById('q').addEventListener('input', renderList);
 
+document.getElementById('sortBtn').addEventListener('click', () => {
+  state.sort = state.sort === 'desc' ? 'asc' : 'desc';
+  localStorage.setItem('powerofcopilot.sort', state.sort);
+  const u = t();
+  document.getElementById('sortBtn').textContent = state.sort === 'desc' ? u.sortDesc : u.sortAsc;
+  renderList();
+});
+
 document.querySelectorAll('.langtoggle button').forEach(x => x.classList.toggle('active', x.dataset.lang === state.lang));
 applyI18n();
 renderList();
+
+// auto-select the first item on initial load
+(function autoSelectFirst() {
+  const first = items().find(it => fileOf(it));
+  if (first) {
+    const f = fileOf(first);
+    const primary = isEN() ? first.name : (first.cname || first.name);
+    load(f, first.seq + ' — ' + primary);
+  }
+})();
 </script>
 </body>
 </html>
