@@ -1,64 +1,67 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Copilot 一分鐘小教室：Power of Prompt #P009 — 📊 Excel 資料品質稽核與修復清單</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
 </head>
-<body style="margin:0;padding:0;background:#F2EEF7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
-<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
 <tr><td align="center" style="padding:20px 10px;">
 <table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
-       style="width:728px;max-width:100%;margin:0 auto;background:#FFFFFF;
-              border-collapse:collapse;box-shadow:0 4px 20px rgba(91,95,199,0.15);
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
               font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
 
-  <!-- BANNER -->
-  <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
     <table border="0" cellspacing="0" cellpadding="0" width="100%">
       <tr>
-        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;">
-          <div style="font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一分鐘小教室</div>
-          <div style="font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一 分鐘小教室</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
         </td>
-        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;border-left:1px solid #A7A0E8;">
-          <div style="font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P009 期</div>
-          <div style="font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">📊 Excel 資料品質稽核與修復清單</div>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P009 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">📊 Excel 資料品質稽核與修復清單</div>
         </td>
       </tr>
     </table>
   </td></tr>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <tr>
-    <td style="background:#5B5FC7;padding:36px 36px 32px 36px;color:#FFFFFF;text-align:center;">
-      <div style="font-size:46pt;line-height:1;padding-bottom:12px;">📊🔍🧹✅📋</div>
-      <div style="font-size:26pt;font-weight:800;color:#FFFFFF;line-height:1.3;padding-bottom:8px;">
-        📊 Excel 資料品質稽核與修復清單<br>讓 AI 真正為你工作
-      </div>
-      <div style="font-size:13pt;color:#E5D5F4;padding-bottom:14px;">Excel Data Quality Audit</div>
-      <div style="font-size:14pt;font-weight:500;color:#EDEBFB;line-height:1.6;">
-        分析前先清資料，一個 Prompt 找出所有問題並給你修復指南
-      </div>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">📊🔍🧹✅📋</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">📊 Excel 資料品質稽核與修復清單<br>讓 AI 真正為你工作</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Excel Data Quality Audit</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">分析前先清資料，一個 Prompt 找出所有問題並給你修復指南</div>
       <div style="padding-top:18px;">
-        <span style="display:inline-block;padding:6px 16px;background:#ffffff;color:#5B5FC7;font-size:11pt;font-weight:700;">✅ 需 M365 Copilot 授權</span>
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需 M365 Copilot 授權</span>
         &nbsp;
-        <span style="display:inline-block;padding:6px 16px;background:#ffffff;color:#5B5FC7;font-size:11pt;font-weight:700;">⏱️ 立即可用</span>
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒設定完</span>
       </div>
     </td>
   </tr>
 
-  <!-- TAGLINE -->
+  <!-- ═══ TAGLINE BAR ═══ -->
   <tr>
-    <td bgcolor="#FAF7FD" style="background:#FAF7FD;padding:14px 36px;border-bottom:1px solid #E0D6EE;text-align:center;">
-      <span style="font-size:13pt;font-weight:700;color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
     </td>
   </tr>
 
-  <!-- PAIN POINTS -->
+  <!-- ═══ PAIN POINTS ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <div style="font-size:16pt;font-weight:700;color:#202020;padding-bottom:14px;">💭 你還有這樣的困擾嗎？</div>
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣跟 Copilot 對話嗎？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
           <td width="33%" valign="top" style="padding:6px;">
@@ -81,14 +84,18 @@
           </td>
         </tr>
       </table>
-      <div style="font-size:13pt;color:#202020;line-height:1.8;padding:16px 4px 0 4px;text-align:justify;">
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
         在 Excel 裡做分析，最怕的就是資料根本是「髒的」——有重複的列、異常的數字、格式亂七八糟的類別——但你渾然不知，做出來的報告結論全是錯的。<br /><br />這個 Prompt 讓 <b>Copilot in Excel</b> 幫你全面稽核工作表上的資料，找出重複值、異常值、空白、不一致的格式，還提供 KPI 快照和修復清單。不需要巨集、不需要外掛，只要 Copilot 和你的資料，就能做出品質保證的分析。
       </div>
     </td>
   </tr>
 
-  <!-- WHAT YOU GET -->
+  <!-- ═══ WHAT YOU GET ═══ -->
   <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt;font-weight:700;color:#5B5FC7;padding-bottom:14px;">🎁 你會得到什麼？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -105,7 +112,7 @@
               <div style="font-size:11.5pt;color:#333;line-height:1.6;">重複值、異常值（z-score>3）、格式不一致全部找出來。</div>
             </div>
           </td></tr>
-<tr>
+        <tr>
           <td width="50%" valign="top" style="padding:6px;">
             <div style="background:#FAF7FD;border-left:4px solid #5B5FC7;padding:14px 16px;">
               <div style="font-size:13pt;font-weight:700;color:#5B5FC7;padding-bottom:4px;">📈 KPI 快照</div>
@@ -122,112 +129,64 @@
     </td>
   </tr>
 
-  <!-- TRY IT - CHINESE -->
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <div style="background:#FFF8E1;border:2px dashed #F5A623;padding:18px 20px;">
-        <div style="font-size:14pt;font-weight:700;color:#946800;padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
-        <div style="font-size:10.5pt;color:#7B5500;padding-bottom:10px;font-style:italic;">
-          打開 Excel，把下面整段貼上去就能跑。
-        </div>
-        <div style="background:#FFFFFF;border:1px solid #F5DC9C;padding:14px 16px;font-size:12pt;line-height:1.85;color:#202020;text-align:justify;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
+        <div style="font-size:10.5pt; color:#7B5500; padding-bottom:10px; font-style:italic;">打開 Copilot Chat (Web 或 Work)，把下面整段貼上去就能跑。</div>
+        <div id="cp-prompt" style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
           任務：對這份工作表上的資料表進行概況分析與品質檢查。<br />假設：第一列為標題。若有多個資料表，請先問我使用哪一個。若需要 ID 或數值欄位，請先詢問我。<br />請對資料的副本執行以下操作：<br />1. 資料概況：每個欄位的資料類型、空白率、唯一率、最小/最大值（數值或日期欄位）<br />2. 品質標記：重複值（以最佳判斷鍵）、異常值（數值z-score>3）、不一致類別（大小寫/空格變體）、日期缺口<br />3. KPI 快照：針對選定數值欄位建立基礎統計表（筆數、均值、中位數、標準差）<br />4. 修復清單：列出問題、影響筆數及建議修法（公式或步驟）<br />若有任何必要欄位不明確，請在繼續前先詢問。說明請保持簡潔。
         </div>
       </div>
     </td>
   </tr>
 
-  <!-- ENGLISH PROMPT -->
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
   <tr>
     <td style="padding:24px 36px 0 36px;">
-      <div style="font-size:14pt;font-weight:700;color:#5B5FC7;padding-bottom:8px;">💬 English Prompt｜英文版</div>
-      <div style="background:#F8FAFC;border:1px solid #D1D5DB;border-left:4px solid #5B5FC7;padding:16px 18px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:11pt;line-height:1.75;color:#111827;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         Task: Profile and quality-check the table on this worksheet. Assumptions: The first row contains headers. If multiple tables exist, ask me which one to use. If you need an ID or numeric column, ask me first. Do the following with a copy of the data: Create a Data Profile — for each column: data type, % blank, % unique, min/max (if numeric/date). Quality Flags — list duplicates (by a best-guess key), outliers (z-score > 3 for numeric), inconsistent categories (case/spacing variants), and date gaps. KPI Snapshot — a separate table basic stats for a chosen numeric column (row count, mean, median, standard deviation). Fix-It Checklist — a table listing issue, count impacted, and a suggested fix (formula or step). Ask clarifying questions before proceeding if any required column isn't clear. Keep explanations concise.
       </div>
     </td>
   </tr>
 
-  <!-- SCENARIOS -->
+  <!-- ═══ TIPS (numbered) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <div style="font-size:18pt;font-weight:700;color:#5B5FC7;padding-bottom:14px;">💡 三個情境式玩法</div>
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        <tr>
-          <td valign="top" style="padding:8px 0;">
-            <table border="0" cellspacing="0" cellpadding="0" width="100%">
-              <tr>
-                <td width="48" valign="top">
-                  <div style="width:36px;height:36px;background:#5B5FC7;color:#FFFFFF;text-align:center;line-height:36px;font-size:16pt;font-weight:700;">1</div>
-                </td>
-                <td valign="top">
-                  <div style="font-size:13pt;font-weight:700;color:#202020;padding-bottom:4px;">💰 財務報表清理</div>
-                  <div style="font-size:12pt;color:#444;line-height:1.7;">月底合併各部門 Excel 前，先跑資料稽核，自動找出重複的成本中心碼與格式不一致的日期欄位。</div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" style="padding:8px 0;">
-            <table border="0" cellspacing="0" cellpadding="0" width="100%">
-              <tr>
-                <td width="48" valign="top">
-                  <div style="width:36px;height:36px;background:#5B5FC7;color:#FFFFFF;text-align:center;line-height:36px;font-size:16pt;font-weight:700;">2</div>
-                </td>
-                <td valign="top">
-                  <div style="font-size:13pt;font-weight:700;color:#202020;padding-bottom:4px;">📋 客戶名單品質驗證</div>
-                  <div style="font-size:12pt;color:#444;line-height:1.7;">CRM 匯出後，一個 Prompt 找出重複的客戶 Email、空白的必填欄位，修復清單一目瞭然。</div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" style="padding:8px 0;">
-            <table border="0" cellspacing="0" cellpadding="0" width="100%">
-              <tr>
-                <td width="48" valign="top">
-                  <div style="width:36px;height:36px;background:#5B5FC7;color:#FFFFFF;text-align:center;line-height:36px;font-size:16pt;font-weight:700;">3</div>
-                </td>
-                <td valign="top">
-                  <div style="font-size:13pt;font-weight:700;color:#202020;padding-bottom:4px;">📈 銷售資料分析前置</div>
-                  <div style="font-size:12pt;color:#444;line-height:1.7;">在 Power BI 匯入前先清理銷售資料，確保異常值和空白不會扭曲儀表板的分析結果。</div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+        📂 <b>上傳 Excel 檔案</b>：在 Copilot in Excel 中直接對目前工作表執行，或上傳檔案給 Copilot Chat。<br />
+            🔎 <b>跑完後追問細節</b>：說「展開第2欄的重複值清單，顯示每筆重複的列號」取得更具體資訊。<br />
+            📊 <b>資料量大時拆分執行</b>：若資料表超過10000列，可先針對特定欄位執行概況分析。<br />
       </table>
     </td>
   </tr>
 
-  <!-- CTA -->
+  <!-- ═══ CTA ═══ -->
   <tr>
     <td style="padding:32px 36px 12px 36px;" align="center">
-      <div style="font-size:15pt;font-weight:700;color:#202020;padding-bottom:14px;">準備好開始了嗎？▸▸</div>
-      <table border="0" cellspacing="0" cellpadding="0" align="center">
-        <tr>
-          <td style="padding-right:8px;"></td>
-          <td style="padding-left:8px;"></td>
-        </tr>
-      </table>
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">準備好開始了嗎？▸▸</div>
     </td>
   </tr>
 
-  <!-- LICENSE -->
+  <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
-    <td style="padding:14px 36px 0 36px;" align="center">
-      <div style="font-size:10pt;color:#C00000;line-height:1.6;">
-        ＊本 Prompt <b>需要 M365 Copilot 授權</b>，請在 Excel 中使用。
-      </div>
+    <td style="padding:0 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt 需具備 <b>Microsoft 365 Copilot 授權</b>，並透過 Copilot Chat (Work) 使用。</div>
     </td>
   </tr>
 
-    <!-- CTA -->
+  <!-- ═══ CTA BUTTON ═══ -->
   <tr><td align="center" style="padding:18px 36px 24px 36px;">
     <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
-  </td></tr>  <!-- FOOTER -->
-  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-size:12px;color:#6b7280;line-height:1.8;">
+  </td></tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
     Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br>
     Powered by Weeklyprompt@microsoft
   </td></tr>
@@ -235,5 +194,10 @@
 </table>
 </td></tr>
 </table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
 </body>
 </html>
