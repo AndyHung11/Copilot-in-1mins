@@ -14,10 +14,10 @@
   .head h1 { margin: 0 0 8px; font-size: 20px; color: #0F6CBD; padding-right: 80px; }
   .head .sub { display: none; }
   /* Floating UI version switch (top-right of viewport) */
-  .ui-switch{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;padding:8px 12px;border-radius:8px;background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);color:#78350f;border:1px solid #fcd34d;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .15s, box-shadow .15s;}
-  .ui-switch:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(252,211,77,0.5)}
+  .ui-switch{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:14px;background:#eef2ff;color:#3730a3 !important;border:1px solid #c7d2fe;font-size:13px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+  .ui-switch:hover{background:#e0e7ff}
   .ui-switch .ui-switch-icon{font-size:14px}
-  .ui-switch .ui-switch-badge{font-size:10px;padding:1px 6px;background:#dc2626;color:#fff;border-radius:8px;margin-left:2px;font-weight:700;letter-spacing:.04em}
+  .ui-switch .ui-switch-badge{font-size:9px;padding:1px 5px;background:#6366f1;color:#fff;border-radius:6px;margin-left:2px;font-weight:700;letter-spacing:.04em}
   /* Tabs */
   .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 10px 14px; gap: 8px; border-bottom: 1px solid #e3e8ee; }
   .tab { padding: 10px 6px; text-align: center; font-size: 13px; font-weight: bold; cursor: pointer; background: #f8fafc; color: #6b7280; border: 1px solid #e3e8ee; border-radius: 8px; transition: all .15s; white-space: nowrap; }
@@ -65,11 +65,6 @@
   <aside>
     <div class="head">
       <h1 id="brand-title">📚 Copilot 一分鐘小教室</h1>
-      <a id="uiSwitch" class="ui-switch" href="index_v2.html" title="切換為新版介面">
-        <span class="ui-switch-icon">✨</span>
-        <span class="ui-switch-text">試用新版</span>
-        <span class="ui-switch-badge">NEW</span>
-      </a>
       <a id="download-zip"href="PowerOfCopilot.zip" download style="display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; padding:10px 12px; background:linear-gradient(135deg,#0F6CBD 0%,#0a5599 100%); color:#fff; border-radius:8px; text-decoration:none; font-size:14px; font-weight:700; box-shadow:0 2px 6px rgba(15,108,189,0.35); transition:transform .15s, box-shadow .15s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 10px rgba(15,108,189,0.5)';" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(15,108,189,0.35)';">⬇️ 全部下載 (.zip)</a>
       <div class="langtoggle" role="tablist" aria-label="Language">
         <button id="lang-zh" class="active" data-lang="zh">中</button>
@@ -97,6 +92,11 @@
       <span class="name" id="name">— 從左側清單選一篇 —</span>
       <a href="#" id="open-msg" title="用 Outlook 開啟 .msg 檔（可編輯/寄送）。如瀏覽器擋下載，請按下載後雙擊開啟，或改用 Edge。" style="background:#fff4e5;border-color:#ffd591;color:#d46b08;">📧 用 Outlook 開啟</a>
       <a href="#" id="open-new" target="_blank">在新分頁開啟 ↗</a>
+      <a id="uiSwitch" class="ui-switch" href="index_v2.html" title="切換為新版介面" style="margin-left:auto">
+        <span class="ui-switch-icon">✨</span>
+        <span class="ui-switch-text">試用新版</span>
+        <span class="ui-switch-badge">NEW</span>
+      </a>
     </div>
     <div class="frame-wrap">
       <iframe id="frame" src="about:blank"></iframe>

@@ -259,7 +259,8 @@
     <div class="modal-head">
       <strong id="modalTitle">—</strong>
       <span>
-        <a id="modalOpen" href="#" target="_blank" style="font-size:12px;color:var(--accent)" data-i18n="newTab">↗ 新分頁開啟</a>
+        <a id="modalMsg" href="#" style="font-size:14px;font-weight:600;color:#d46b08;background:#fff4e5;border:1px solid #ffd591;padding:9px 14px;border-radius:8px;text-decoration:none;margin-right:8px" title="用 Outlook 開啟 .msg 檔（可編輯/寄送）" data-i18n="openMsg">📧 用 Outlook 開啟</a>
+        <a id="modalOpen" href="#" target="_blank" style="font-size:14px;font-weight:600;color:#0F6CBD;background:#fff;border:1px solid #cfe5f6;padding:9px 14px;border-radius:8px;text-decoration:none;margin-right:8px" data-i18n="newTab">在新分頁開啟 ↗</a>
         <button class="x" id="modalClose">×</button>
       </span>
     </div>
@@ -2298,7 +2299,8 @@ const I18N = {
     uiSwitchOld: '回經典版',
     kbdSearch: '搜尋', kbdClear: '清除', kbdFav: '收藏目前篩選結果',
     emptyTitle: '沒有符合條件的結果', emptyHint: '試試清除標籤或換個搜尋詞',
-    newTab: '↗ 新分頁開啟', toast: '已複製', unit: '篇',
+    newTab: '在新分頁開啟 ↗', toast: '已複製', unit: '篇',
+    openMsg: '📧 用 Outlook 開啟',
     preview: '預覽', open: '開啟', noPrev: '內容預覽',
   },
   en: {
@@ -2313,7 +2315,8 @@ const I18N = {
     uiSwitchOld: 'Classic view',
     kbdSearch: 'search', kbdClear: 'clear', kbdFav: 'save current filter',
     emptyTitle: 'No results', emptyHint: 'Try clearing tags or a different keyword',
-    newTab: '↗ Open in new tab', toast: 'Copied', unit: 'items',
+    newTab: 'Open in new tab ↗', toast: 'Copied', unit: 'items',
+    openMsg: '📧 Open in Outlook',
     preview: 'Preview', open: 'Open', noPrev: 'preview',
   },
 };
@@ -2652,6 +2655,7 @@ function showModal(href, title){
   document.getElementById('modalTitle').textContent = title || '';
   document.getElementById('modalFrame').src = href;
   document.getElementById('modalOpen').href = href;
+  document.getElementById('modalMsg').href = href.replace(/\/([^/]+)\.html$/, '/msg/$1.msg');
   document.getElementById('modal').classList.add('on');
 }
 document.getElementById('modalClose').onclick = ()=>document.getElementById('modal').classList.remove('on');
