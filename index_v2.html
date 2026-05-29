@@ -3,48 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Power of Copilot · 探索中心 (MVP)</title>
+<title>Copilot 一分鐘小教室 · Power of Copilot</title>
 <style>
   :root{
     --bg:#f6f8fb; --panel:#fff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb;
     --accent:#0F6CBD; --accent2:#8378DE; --gold:#946800; --ok:#16a34a;
     --chip:#eef2f7; --chip-on:#0F6CBD; --shadow:0 1px 2px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.08);
   }
+  [data-theme="dark"]{
+    --bg:#0f172a; --panel:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --line:#334155;
+    --accent:#60a5fa; --accent2:#a78bfa;
+    --chip:#1e293b; --shadow:0 1px 2px rgba(0,0,0,.4),0 2px 6px rgba(0,0,0,.5);
+  }
+  [data-theme="dark"] body{color:#e2e8f0}
+  [data-theme="dark"] header{background:#1e293b;border-bottom-color:#334155}
+  [data-theme="dark"] .tabs{background:#0f172a;border-color:#334155}
+  [data-theme="dark"] .tabs button{color:#cbd5e1}
+  [data-theme="dark"] .tabs button.on{background:#3b82f6;color:#fff}
+  [data-theme="dark"] .search input{background:#0f172a;color:#e2e8f0;border-color:#334155}
+  [data-theme="dark"] .seg{background:#0f172a;border-color:#334155}
+  [data-theme="dark"] .seg button{color:#cbd5e1}
+  [data-theme="dark"] .seg button.on{background:#3b82f6;color:#fff}
+  [data-theme="dark"] aside, [data-theme="dark"] .card, [data-theme="dark"] .recent{background:#1e293b;border-color:#334155}
+  [data-theme="dark"] .card .ttl{color:#f1f5f9}
+  [data-theme="dark"] .card .prev{color:#cbd5e1}
+  [data-theme="dark"] .card .actions{border-top-color:#334155}
+  [data-theme="dark"] .card .actions button{background:#0f172a;color:#e2e8f0;border-color:#334155}
+  [data-theme="dark"] .card .seq{background:#0f172a}
+  [data-theme="dark"] .card[data-kind=Agent] .seq{background:#1e3a5f;color:#93c5fd}
+  [data-theme="dark"] .card[data-kind=Prompt] .seq{background:#3b2f6b;color:#c4b5fd}
+  [data-theme="dark"] .card .tags .tag{background:#0f172a;color:#cbd5e1}
+  [data-theme="dark"] .chip{background:#0f172a;color:#cbd5e1}
+  [data-theme="dark"] .ver-bar a{background:#0f172a;border-color:#334155;color:#94a3b8}
+  [data-theme="dark"] .kbd{background:#0f172a;border-color:#334155;color:#cbd5e1}
+  [data-theme="dark"] .modal-card{background:#1e293b}
+  [data-theme="dark"] .modal-head{border-bottom-color:#334155;color:#f1f5f9}
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;font-family:-apple-system,Segoe UI,'Microsoft JhengHei',微軟正黑體,Arial,sans-serif;background:var(--bg);color:#111827;font-size:15.5px;font-weight:450}
+  html,body{margin:0;padding:0;font-family:"Microsoft JhengHei UI","Microsoft JhengHei","PingFang TC","Noto Sans TC",-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:#111827;font-size:16px;font-weight:450}
   a{color:inherit;text-decoration:none}
   button{font:inherit;cursor:pointer}
 
   /* ── Top nav ──────────────────────────────── */
   header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,.04)}
   .nav{display:flex;align-items:center;gap:18px;padding:10px 20px;max-width:1480px;margin:0 auto}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px}
-  .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-  .tabs{display:flex;gap:6px}
-  .tabs button{padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#4b5563;font-size:14px;font-weight:600}
-  .tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-  .tabs button.on.prompt{background:var(--accent2);border-color:var(--accent2)}
-  .tabs button.on.all{background:#111827;border-color:#111827}
+  .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .brand .ico{font-size:24px}
+  .brand-stack{display:flex;flex-direction:column;line-height:1.1;align-items:center}
+  .brand-text{font-weight:800;font-size:20px;color:var(--accent)}
+  .brand-sub{font-size:11.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-top:2px}
+  .tabs{display:inline-flex;background:#f3f4f6;border:1px solid var(--line);border-radius:8px;padding:3px;gap:0}
+  .tabs button{padding:7px 16px;border:none;background:transparent;color:#4b5563;font-size:15px;font-weight:600;border-radius:6px;line-height:1.4;cursor:pointer;position:relative}
+  .tabs button + button:not(.on)::before{content:"";position:absolute;left:-1px;top:22%;bottom:22%;width:1px;background:#9ca3af}
+  .tabs button.on + button::before,.tabs button:hover::before{display:none}
+  .tabs button:hover:not(.on){background:#e5e7eb}
+  .tabs button.on{background:var(--accent);color:#fff;box-shadow:0 1px 2px rgba(15,108,189,.3);font-weight:700}
+  .favbtn{padding:7px 14px;border:1px solid var(--line);background:#fff;color:#4b5563;font-size:15px;font-weight:600;border-radius:8px;cursor:pointer;margin-left:8px}
+  .favbtn:hover{background:#f3f4f6}
+  .favbtn.on{background:#fff7d6;border-color:#f59e0b;color:#92400e}
+  [data-theme="dark"] .favbtn{background:#1e293b;border-color:#334155;color:#cbd5e1}
+  [data-theme="dark"] .favbtn.on{background:#78350f;border-color:#f59e0b;color:#fde68a}
+  .tabs button.on.prompt{background:var(--accent);border:none}
+  .tabs button.on.all{background:var(--accent);border:none}
   .search{flex:1;max-width:520px;position:relative}
   .search input{width:100%;padding:9px 12px 9px 36px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff}
   .search::before{content:"🔍";position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.6}
   /* Segmented toggle group */
-  .seg{display:inline-flex;background:#f3f4f6;border:1px solid var(--line);border-radius:8px;padding:2px;gap:0}
-  .seg button{padding:5px 12px;border:none;background:transparent;font-size:13px;color:#4b5563;font-weight:600;border-radius:6px;line-height:1.4}
-  .seg button.on{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
-  .seg.lang button.on{background:var(--ink);color:#fff}
+  .seg{display:inline-flex;background:#f3f4f6;border:1px solid var(--line);border-radius:8px;padding:3px;gap:0}
+  .seg button{padding:6px 13px;border:none;background:transparent;font-size:14px;color:#4b5563;font-weight:600;border-radius:6px;line-height:1.4;position:relative}
+  .seg button + button:not(.on)::before{content:"";position:absolute;left:-1px;top:22%;bottom:22%;width:1px;background:#9ca3af}
+  .seg button.on + button::before,.seg button:hover::before{display:none}
+  .seg button:hover:not(.on){background:#e5e7eb}
+  .seg button.on{background:var(--accent);color:#fff;box-shadow:0 1px 2px rgba(15,108,189,.3);font-weight:700}
   .toggles{display:flex;gap:10px;align-items:center}
   .kbd{padding:1px 6px;background:#f3f4f6;border:1px solid var(--line);border-radius:4px;font-family:ui-monospace,monospace;font-size:11px;color:#374151}
 
   /* ── Layout ──────────────────────────────── */
   .wrap{display:grid;grid-template-columns:240px 1fr;gap:18px;padding:18px 20px;max-width:1480px;margin:0 auto}
   aside{position:sticky;top:60px;align-self:start;max-height:calc(100vh - 80px);overflow:auto;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
-  aside h4{margin:0 0 8px 0;font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
-  aside .section{margin-bottom:14px}
-  .chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:var(--chip);border-radius:999px;font-size:12px;margin:3px 4px 3px 0;border:1px solid transparent;cursor:pointer;user-select:none}
+  aside h4{margin:0 0 10px 0;font-size:13px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;font-weight:700}
+  aside .section{margin-bottom:16px}
+  .chip{display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:var(--chip);border-radius:14px;font-size:14px;margin:4px 5px 4px 0;border:1px solid transparent;cursor:pointer;user-select:none}
+  .chip.lic{align-items:center;gap:6px;line-height:1.35}
   .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
   .chip .x{opacity:.7}
-  .clear{font-size:12px;color:var(--accent);background:none;border:none;padding:0;margin-top:4px}
+  .clear{font-size:13px;color:var(--accent);background:none;border:none;padding:0;margin-top:6px;cursor:pointer}
 
   /* ── Hero / featured ──────────────────────────────── */
   .hero{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:18px}
@@ -70,9 +112,9 @@
   .card .seq{font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);background:#f3f4f6;padding:2px 7px;border-radius:5px}
   .card .fav{background:none;border:none;font-size:18px;padding:0;opacity:.3}
   .card .fav.on{opacity:1;color:#f59e0b}
-  .card .ttl{font-size:16.5px;font-weight:800;line-height:1.4;color:#0F172A}
-  .card .ename{font-size:13px;color:var(--muted);margin-top:-2px;font-weight:500}
-  .card .prev{font-size:13.5px;color:#374151;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:62px}
+  .card .ttl{font-size:17.5px;font-weight:800;line-height:1.4;color:#0F172A}
+  .card .ename{font-size:13.5px;color:var(--muted);margin-top:-2px;font-weight:500}
+  .card .prev{font-size:14px;color:#374151;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:66px}
   .card .tags{display:flex;flex-wrap:wrap;gap:4px}
   .card .tags .tag{font-size:11px;background:#eef2f7;color:#374151;padding:2px 7px;border-radius:4px}
   .card .actions{display:flex;gap:6px;margin-top:auto;padding-top:6px;border-top:1px solid var(--line)}
@@ -114,25 +156,33 @@
 
 <header>
   <div class="nav">
-    <div class="brand"><span class="dot"></span> Power of Copilot</div>
-    <div class="tabs">
-      <button data-tab="All" class="on all">全部</button>
-      <button data-tab="Agent">⚡ Agent</button>
-      <button data-tab="Prompt">💬 Prompt</button>
-      <button data-tab="fav">⭐ 我的最愛</button>
+    <div class="brand">
+      <span class="ico">📚</span>
+      <span class="brand-stack">
+        <span class="brand-text" data-i18n="brandTitle">Copilot 一分鐘小教室</span>
+        <span class="brand-sub">Power of Copilot</span>
+      </span>
     </div>
+    <div class="tabs">
+      <button data-tab="Agent" class="on">⚡ Agent</button>
+      <button data-tab="Prompt">💬 Prompt</button>
+    </div>
+    <button id="favBtn" class="favbtn" title="只看我的最愛"><span data-i18n="favBtn">⭐ 我的最愛</span></button>
     <div class="search">
-      <input id="q" placeholder="搜尋編號、名稱、內容…  /  快捷鍵 /">
+      <input id="q" data-i18n-placeholder="searchPh" placeholder="搜尋編號、名稱、內容…  /  快捷鍵 /">
     </div>
     <div class="toggles">
       <div class="seg" id="ver">
-        <button data-ver="both" class="on">v1+v2</button>
         <button data-ver="v1">v1</button>
-        <button data-ver="v2">v2</button>
+        <button data-ver="v2" class="on">v2</button>
       </div>
       <div class="seg lang" id="lang">
         <button data-lang="zh" class="on">中文</button>
         <button data-lang="en">EN</button>
+      </div>
+      <div class="seg lang" id="theme">
+        <button data-theme="light" class="on" title="淺色">☀️</button>
+        <button data-theme="dark" title="深色">🌙</button>
       </div>
     </div>
   </div>
@@ -141,49 +191,50 @@
 <main class="wrap">
   <aside id="sidebar">
     <div class="section">
-      <h4>場景</h4>
+      <h4 data-i18n="hScene">場景</h4>
       <div id="tagBox"></div>
-      <button class="clear" id="clearTags">清除標籤</button>
+      <button class="clear" id="clearTags" data-i18n="clearTags">清除標籤</button>
     </div>
     <div class="section">
-      <h4>授權</h4>
-      <span class="chip" data-license="basic">🆓 Microsoft 365 Copilot 基本版 (Basic)</span>
-      <span class="chip" data-license="premium">🔑 Microsoft 365 Copilot 進階版 (Premium)</span>
+      <h4 data-i18n="hLicense">授權</h4>
+      <span class="chip lic" data-license="basic"><span>💬</span><span>Microsoft 365 Copilot<br><span data-i18n="licBasic">基本版 (Basic)</span></span></span>
+      <span class="chip lic" data-license="premium"><span>✨</span><span>Microsoft 365 Copilot<br><span data-i18n="licPremium">進階版 (Premium)</span></span></span>
     </div>
     <div class="section">
-      <h4>類別</h4>
-      <span class="chip" data-kind="Agent">⚡ Agent</span>
-      <span class="chip" data-kind="Prompt">💬 Prompt</span>
     </div>
     <div class="section">
-      <h4>排序</h4>
-      <span class="chip on" data-sort="newest">🆕 最新</span>
-      <span class="chip" data-sort="seq-asc">↑ 編號</span>
-      <span class="chip" data-sort="alpha">A→Z</span>
+      <h4 data-i18n="hSort">排序</h4>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="color:#6b7280;font-size:14px" data-i18n="bySeq">編號</span>
+        <button id="sortDir" class="favbtn" title="切換升降冪" style="padding:5px 12px;margin:0">↓</button>
+      </div>
     </div>
   </aside>
 
   <section>
     <div class="hero">
       <div class="featured">
-        <h2>🆕 本週新刊</h2>
-        <div class="sub">最新 6 篇 — 點即看</div>
+        <h2><span>🆕 </span><span data-i18n="heroTitle">本週新刊</span></h2>
+        <div class="sub" data-i18n="heroSub">最新 6 篇 — 點即看</div>
         <div id="featList" class="list"></div>
       </div>
       <div class="recent">
-        <h3>最近看過</h3>
-        <ol id="recentList"><li class="empty">尚無瀏覽紀錄</li></ol>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <h3 data-i18n="recentTitle" style="margin:0">最近看過</h3>
+          <button id="recentClear" data-i18n="clear" title="清除" style="background:none;border:none;color:#6b7280;font-size:12px;cursor:pointer;padding:2px 6px">清除</button>
+        </div>
+        <ol id="recentList"><li class="empty" data-i18n="noRecent">尚無瀏覽紀錄</li></ol>
       </div>
     </div>
 
     <div class="stats">
       <span id="cnt">— 篇</span>
-      <span><span class="kbd">/</span> 搜尋　<span class="kbd">Esc</span> 清除　<span class="kbd">F</span> 收藏目前篩選結果</span>
+      <span><span class="kbd">/</span> <span data-i18n="kbdSearch">搜尋</span>　<span class="kbd">Esc</span> <span data-i18n="kbdClear">清除</span>　<span class="kbd">F</span> <span data-i18n="kbdFav">收藏目前篩選結果</span></span>
     </div>
     <div id="grid" class="grid"></div>
     <div id="empty" class="empty-state" style="display:none">
-      <h3>沒有符合條件的結果</h3>
-      <p>試試清除標籤或換個搜尋詞</p>
+      <h3 data-i18n="emptyTitle">沒有符合條件的結果</h3>
+      <p data-i18n="emptyHint">試試清除標籤或換個搜尋詞</p>
     </div>
   </section>
 </main>
@@ -193,7 +244,7 @@
     <div class="modal-head">
       <strong id="modalTitle">—</strong>
       <span>
-        <a id="modalOpen" href="#" target="_blank" style="font-size:12px;color:var(--accent)">↗ 新分頁開啟</a>
+        <a id="modalOpen" href="#" target="_blank" style="font-size:12px;color:var(--accent)" data-i18n="newTab">↗ 新分頁開啟</a>
         <button class="x" id="modalClose">×</button>
       </span>
     </div>
@@ -347,7 +398,7 @@
    "cname": "新聞聚合 Agent",
    "file": "zh/v1/Agent/A018_NewsAggregatorAgent.html",
    "en_file": "en/v1/Agent/A018_NewsAggregatorAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "新聞聚合 Agent（Exec News Aggregator） 主動為主管提供精簡、可信、即時的產業新聞摘要，依個人關注領域客製化內容。支援即時警示、互動式查詢與持續學習，幫助決策者快速掌握市場、競爭與法規變化，保持資訊領先。"
   },
   {
    "seq": "A019",
@@ -355,7 +406,7 @@
    "cname": "清單宣言 Agent",
    "file": "zh/v1/Agent/A019_ChecklistManifestoAgent.html",
    "en_file": "en/v1/Agent/A019_ChecklistManifestoAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "清單宣言 Agent（Checklist Manifesto） 協助使用者為複雜或高風險任務設計與審查清單，把零散待辦轉成清晰可執行的步驟。確保關鍵環節不被遺漏、邏輯順序合理，提升交付一致性與品質。"
   },
   {
    "seq": "A020",
@@ -363,7 +414,7 @@
    "cname": "談判大師 Agent",
    "file": "zh/v1/Agent/A020_DealcrafterAgent.html",
    "en_file": "en/v1/Agent/A020_DealcrafterAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "談判大師 Agent（Dealcrafter） 作為談判助手，協助使用者規劃、模擬、提案與優化談判結果。引導你拆解利益、設計策略、預演對話，並在事後檢討中持續強化談判能力。"
   },
   {
    "seq": "A021",
@@ -411,7 +462,7 @@
    "cname": "一致性 Agent",
    "file": "zh/v1/Agent/A026_CoherenceAgent.html",
    "en_file": "en/v1/Agent/A026_CoherenceAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "一致性 Agent（Alignment Agent） 協助團隊維持策略一致性，分析使用者貼上的目標、計畫與內容，找出落差、矛盾與隱藏依賴。透過結構化提示，協助對齊跨部門方向、化解溝通鴻溝。"
   },
   {
    "seq": "A027",
@@ -427,7 +478,7 @@
    "cname": "說故事導師",
    "file": "zh/v1/Agent/A028_StorytellingMentor.html",
    "en_file": "en/v1/Agent/A028_StorytellingMentor_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "說故事導師（Storytelling Mentor） 協助使用者編織動人故事、架構有影響力的演說、提升簡報與提案的表達力。適用於 pitch、領導演說、產品發表等場合，從故事骨架到台風細節都能優化。"
   },
   {
    "seq": "A029",
@@ -443,7 +494,7 @@
    "cname": "同儕回饋 Agent",
    "file": "zh/v1/Agent/A030_PeerFeedbackAgent.html",
    "en_file": "en/v1/Agent/A030_PeerFeedbackAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "同儕回饋 Agent（Peer Feedback） 協助你為同事撰寫專業、用心的回饋或讚美，無論是慶賀里程碑、給予建設性建議或感謝協助。確保語氣得體、重點清晰，讓回饋既真誠又有影響力。"
   },
   {
    "seq": "A031",
@@ -725,7 +776,7 @@
    "cname": "新聞聚合 Agent",
    "file": "zh/v2/Agent/A018_NewsAggregatorAgent.html",
    "en_file": "en/v2/Agent/A018_NewsAggregatorAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "新聞聚合 Agent（Exec News Aggregator） 主動為主管提供精簡、可信、即時的產業新聞摘要，依個人關注領域客製化內容。支援即時警示、互動式查詢與持續學習，幫助決策者快速掌握市場、競爭與法規變化，保持資訊領先。"
   },
   {
    "seq": "A019",
@@ -733,7 +784,7 @@
    "cname": "清單宣言 Agent",
    "file": "zh/v2/Agent/A019_ChecklistManifestoAgent.html",
    "en_file": "en/v2/Agent/A019_ChecklistManifestoAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "清單宣言 Agent（Checklist Manifesto） 協助使用者為複雜或高風險任務設計與審查清單，把零散待辦轉成清晰可執行的步驟。確保關鍵環節不被遺漏、邏輯順序合理，提升交付一致性與品質。"
   },
   {
    "seq": "A020",
@@ -741,7 +792,7 @@
    "cname": "談判大師 Agent",
    "file": "zh/v2/Agent/A020_DealcrafterAgent.html",
    "en_file": "en/v2/Agent/A020_DealcrafterAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "談判大師 Agent（Dealcrafter） 作為談判助手，協助使用者規劃、模擬、提案與優化談判結果。引導你拆解利益、設計策略、預演對話，並在事後檢討中持續強化談判能力。"
   },
   {
    "seq": "A021",
@@ -789,7 +840,7 @@
    "cname": "一致性 Agent",
    "file": "zh/v2/Agent/A026_CoherenceAgent.html",
    "en_file": "en/v2/Agent/A026_CoherenceAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "一致性 Agent（Alignment Agent） 協助團隊維持策略一致性，分析使用者貼上的目標、計畫與內容，找出落差、矛盾與隱藏依賴。透過結構化提示，協助對齊跨部門方向、化解溝通鴻溝。"
   },
   {
    "seq": "A027",
@@ -805,7 +856,7 @@
    "cname": "說故事導師",
    "file": "zh/v2/Agent/A028_StorytellingMentor.html",
    "en_file": "en/v2/Agent/A028_StorytellingMentor_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "說故事導師（Storytelling Mentor） 協助使用者編織動人故事、架構有影響力的演說、提升簡報與提案的表達力。適用於 pitch、領導演說、產品發表等場合，從故事骨架到台風細節都能優化。"
   },
   {
    "seq": "A029",
@@ -821,7 +872,7 @@
    "cname": "同儕回饋 Agent",
    "file": "zh/v2/Agent/A030_PeerFeedbackAgent.html",
    "en_file": "en/v2/Agent/A030_PeerFeedbackAgent_EN.html",
-   "preview": "📝 Agent 描述"
+   "preview": "同儕回饋 Agent（Peer Feedback） 協助你為同事撰寫專業、用心的回饋或讚美，無論是慶賀里程碑、給予建設性建議或感謝協助。確保語氣得體、重點清晰，讓回饋既真誠又有影響力。"
   },
   {
    "seq": "A031",
@@ -2217,16 +2268,60 @@
 // ─── State ───────────────────────────────────────────────
 const CAT = JSON.parse(document.getElementById('CATALOG').textContent);
 const LS = {
-  fav: 'poc.fav', recent: 'poc.recent', lang: 'poc.lang', ver: 'poc.ver',
+  fav: 'poc.fav', recent: 'poc.recent', lang: 'poc.lang', ver: 'poc.ver', theme: 'poc.theme',
 };
+const I18N = {
+  zh: {
+    brandTitle: 'Copilot 一分鐘小教室',
+    favBtn: '⭐ 我的最愛', favTip: '只看我的最愛',
+    searchPh: '搜尋編號、名稱、內容…  /  快捷鍵 /',
+    hScene: '場景', clearTags: '清除標籤',
+    hLicense: '授權', licBasic: '基本版 (Basic)', licPremium: '進階版 (Premium)',
+    hSort: '排序', bySeq: '編號',
+    heroTitle: '本週新刊', heroSub: '最新 6 篇 — 點即看',
+    recentTitle: '最近看過', noRecent: '尚無瀏覽紀錄', clear: '清除',
+    kbdSearch: '搜尋', kbdClear: '清除', kbdFav: '收藏目前篩選結果',
+    emptyTitle: '沒有符合條件的結果', emptyHint: '試試清除標籤或換個搜尋詞',
+    newTab: '↗ 新分頁開啟', toast: '已複製', unit: '篇',
+    preview: '預覽', open: '開啟', noPrev: '內容預覽',
+  },
+  en: {
+    brandTitle: 'Copilot in 1 Minute',
+    favBtn: '⭐ Favorites', favTip: 'Show favorites only',
+    searchPh: 'Search by ID, name, content…  /  shortcut /',
+    hScene: 'Scenes', clearTags: 'Clear tags',
+    hLicense: 'License', licBasic: 'Basic', licPremium: 'Premium',
+    hSort: 'Sort', bySeq: 'Seq',
+    heroTitle: "What's New", heroSub: 'Latest 6 — click to view',
+    recentTitle: 'Recently Viewed', noRecent: 'No history yet', clear: 'Clear',
+    kbdSearch: 'search', kbdClear: 'clear', kbdFav: 'save current filter',
+    emptyTitle: 'No results', emptyHint: 'Try clearing tags or a different keyword',
+    newTab: '↗ Open in new tab', toast: 'Copied', unit: 'items',
+    preview: 'Preview', open: 'Open', noPrev: 'preview',
+  },
+};
+function applyI18n(){
+  const d = I18N[state.lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.dataset.i18n; if (d[k] != null) el.textContent = d[k];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const k = el.dataset.i18nPlaceholder; if (d[k] != null) el.placeholder = d[k];
+  });
+  document.getElementById('favBtn').title = d.favTip;
+  document.title = d.brandTitle + ' · Power of Copilot';
+  document.documentElement.lang = state.lang === 'zh' ? 'zh-Hant' : 'en';
+}
 const state = {
-  tab: 'All',
+  tab: 'Agent',
+  favOnly: false,
   q: '',
   tags: new Set(),
   license: null,
   kindFilter: null,
-  sort: 'newest',
-  ver: localStorage.getItem(LS.ver) || 'both',
+  sort: 'seq',
+  sortDir: 'desc',
+  ver: (localStorage.getItem(LS.ver) === 'v1' ? 'v1' : 'v2'),
   lang: localStorage.getItem(LS.lang) || 'zh',
   fav: new Set(JSON.parse(localStorage.getItem(LS.fav) || '[]')),
   recent: JSON.parse(localStorage.getItem(LS.recent) || '[]'),
@@ -2244,6 +2339,12 @@ function buildItems(){
   return items;
 }
 const ALL_ITEMS = buildItems();
+
+// ─── License map (free=Basic, required=Premium) ──────────
+var LIC_MAP = {"P065":"required","A026":"free","P035":"required","A019":"free","P067":"required","P040":"required","A008":"free","A031":"free","P060":"required","P062":"required","A016":"free","A015":"free","A009":"free","P070":"required","A047":"free","P068":"required","P041":"required","A028":"free","A033":"free","A012":"required","A036":"free","P051":"required","P038":"required","P022":"required","P007":"required","A021":"free","P071":"required","P005":"required","P036":"free","P047":"required","A003":"free","P043":"required","A025":"free","P028":"required","P053":"required","A045":"free","P075":"required","P037":"free","P030":"required","A001":"free","P064":"required","A029":"free","P018":"required","P011":"required","A042":"free","P027":"required","P024":"free","A002":"free","P063":"free","A030":"free","P012":"required","P019":"required","P074":"required","A040":"required","A044":"free","A038":"required","P039":"required","P006":"required","A039":"free","P058":"required","A010":"free","P046":"required","A014":"required","P003":"required","P078":"required","A004":"free","A020":"free","A043":"required","A006":"free","P057":"free","A027":"free","P077":"required","P059":"required","A034":"free","P061":"required","A007":"free","P073":"required","P034":"free","A018":"free","A041":"required","P020":"required","P025":"required","A023":"free","P015":"required","A013":"free","A024":"free","P013":"free","P004":"free","P023":"required","A032":"free","P008":"required","P055":"required","P001":"free","P009":"required","A011":"free","P042":"required","P016":"required","P044":"required","P033":"required","P017":"free","P048":"required","P076":"required","P029":"required","P002":"required","A017":"free","P014":"free","P069":"required","A035":"free","A037":"required","P052":"required","P050":"required","P026":"required","P072":"required","P056":"free","P066":"free","P049":"required","P054":"free","P032":"required","P031":"required","A022":"free","P021":"free","P045":"required","A005":"required","P010":"required","A046":"free"};
+ALL_ITEMS.forEach(it=>{ it.license = LIC_MAP[it.seq] || null; });
+var PREV_EN = {"P019":"Based on the meeting chat of [meeting chat], generate a comprehensive Q&amp;A document with the most interesting questions. Use Markdown to format the document,","P007":"Summarize this mail in two sentences. In the next section, highlight any task given for me in the mail thread. Then create a draft for my response.","P014":"Summarize the entire conversation so far in this thread and generate a single, comprehensive prompt that would reproduce the latest response I received. The goa","P004":"Review this document to ensure it meets accessibility standards. Identify any accessibility issues and provide recommendations for improvement. Ensure that the ","A015":"Helps users craft high-quality instructions for their agents or reviews existing instructions and integrates suggested improvements.","P012":"Review my Outlook email and Team chats with [/Name]. Analyze their communication style based on tone, formality, length, and key phrases they frequently use. Su","P065":"Create a training plan to help me adopt M365 Copilot. Include a list of daily activities I can do to build Copilot into my routine. Add helpful resources to get","P017":"Extract the [8] dominant colors from this image. Provide the RGB values, HEX codes, and a short description of each color (e.g., for accessibility or design pur","A013":"The SMART Agent is designed to support users in defining, refining, and scoping their goals and tasks using the SMART framework. SMART stands for: Specific, Mea","P041":"Create a handout, starting with a short summary of the content, followed by a table with the key elements of the content. The table should have the columns key ","P071":"Analyze my recent Teams messages and Outlook emails from the last 90 days. Based on this, identify and summarize my personal writing style covering: - Tone (for","P001":"Help me with getting started on my Copilot Memory. Ask me three simple questions about my work style, writing style and key facts about my role. Add the results","P016":"Summarize the [Document] with insights tailored to my role as a [HR recruiter]. Focus on strategic initiatives, innovations, and sustainability efforts that imp","P076":"Generate a status updatefor the project &quot;[PROJECT NAME]&quot; covering the last 7 days. Use my emails, Teams chats, meeting notes, and recent file edits as","P022":"Create a draft of my weekly status report using my recent meetings, sent emails, and updated documents. Group the update by project or topic. Ensure the update ","P031":"[Method/Skill/Keyword]: Help me learn this skill or method. Provide tips, resources, and practical exercises that will help me improve in this area. Summarize t","P057":"I need help formulating an effective \"no\" response for a work situation. As a [your role], I've been asked to [describe specific request], but I'm concerned bec","P064":"Based on the discussion notes with [person / team] regarding the recent customer issue with [topic], create an updated best practices document that outlines a s","P005":"Draft a concise stakeholder status update based on this email thread. • Include 4 sections with headings: Decisions Made, Current Status, Risks/Blockers (with s","A004":"You are a Statement of Work Creator. Your role is to craft detailed and effective Statements of Work (SoWs) based on user input and any reference documents or t","P067":"Analyze my emails from the last 45 days (read-only). Detect and flag patterns indicating delivery or relationship risk: 1) Rising tension or conflict indicators","A016":"An agent that analyzes uploaded texts and documents, provides constructive feedback, and suggests clear improvements for direct implementation and use.","P040":"Hey Copilot, let's get my workday in shape! Start by analyzing my emails, calendar invites, and Teams chats to prioritize my tasks. Organize them into three cat","P074":"Create a concise, cited executive brief on [TOPIC] tailored to my role as a [ROLE]. Deliverables: 1. Executive Summary: Five key bullet points. 2. Trends, Risks","P036":"Create a daily briefing on news from [industry] related to [topic]. Structure each summary into a well-organized paragraph, beginning with a clear and assertive","A029":"Create, optimize, and manage engaging social media content across multiple platforms.","A020":"The Dealcrafter Agent functions as a negotiation Assistant which helps users develop effective negotiation strategies by guiding them through planning, simulati","P032":"Generate three engaging questions for each section of this presentation, along with suggested answers. These questions will be used as a basis for audience inte","A011":"This agent helps users improve their prompt engineering skills through daily challenges and interactive quizzes. It teaches and reinforces best practices using ","P060":"Look at the emails, Teams meetings, documents, and Teams chats that I've sent in the last year. Use these messages to distill a leadership style document that I","A045":"A Copilot Chat agentthat analyzes monthly KPIs provided by the user and produces a structured, leadership-ready executive summary. The agent compares this month","A014":"The agent assists legal professionals in comparing Non-Disclosure Agreements (NDAs) by analyzing both uploaded and internal reference documents. It identifies a","A038":"A Copilot Chat agent that analyzes monthly KPIs provided directly by the user and produces a structured, leadership‑ready executive summary. The agent compares ","P025":"Categorize my emails from last week into 5 themes. Give a rough percentage weight for each overarching topic based on the number of emails in each theme.","P028":"Schedule a 30-minute meeting earliest next week with /Megan Bowen starting next week for 'Rollout Copilot Netherlands'.","P018":"Add and optimize speaker notes for the whole slide deck. Use short sentences and simple language, so it is easy to follow for the audience.","A042":"Use **Invite Designer** in Microsoft 365 Copilot to draft beautifully formatted Outlook meeting invitations. It asks targeted questions about the event, audienc","P062":"Please create a Markdown-based Copilot instruction for Outlook that reflects my preferred communication style – based on my communication profile according to t","P069":"RECIPIENT: [Name / Person] INPUT TEXT: [PASTE YOUR EMAIL / TEXT / SUMMARY HERE] Goal: Rewrite the input text so it matches the recipient's communication style a","A035":"AI assistant designed to support marketing and product teams by generating well‑structured, creative A/B testing ideas and clearly formulated hypotheses that he","A008":"A versatile project assistant designed to streamline Microsoft 365 initiatives by offering structured guidance, planning support, and best-practice insights. Bu","P054":"Act as my language instructor to help me improve my language skills. Begin by asking me: 1. Which language I want to learn and 2. My current language level (bas","A021":"Enhance your corporate learning materials with Training Content Writer. This agent helps content creators craft high-quality, engaging, and effective learning c","A022":"The Decision Architect Agent helps users make informed choices by guiding them through the Multi-Criteria Decision Analysis (MCDA) framework in a clear, step-by","P052":"I need to respond to this email. Please read it, summarize the key points, and then ask me one question at a time to help craft a reply that matches my tone and","P051":"Help me prepare for my upcoming meeting with [client / company / business partner] by creating a comprehensive briefing. Provide key company metrics, with a foc","P048":"Create a summary of this email thread with detailed activities in a list and then create a separate Bullet list of actions items to be sent to my colleagues. Pl","P049":"Summarize this Excel file into a one-page executive briefing. Include KPIs, trends, and any red flags. Give me a suitable visual representation of the dataset i","P024":"Copilot, transcribe the text from this scanned document. The document includes handwritten notes and printed text. I want to transform all relevant content in e","P029":"Create three versions of this content with different complexity levels: executive summary, mid-level explanation, and in-depth analysis.","A028":"Storytelling Mentor helps users craft compelling narratives, structure impactful speeches, and improve delivery for pitches, presentations, and leadership talks","A003":"The SWOT Agent is designed to support users in generating structured and insightful SWOT analysis across a wide range of subjects, including products, teams, bu","A034":"OKR Coach Agent is an experienced strategy and OKR advisor that helps teams translate strategic goals into clear, outcome-focused Objectives, measurable Key Res","A018":"Proactively delivers concise, credible, and timely industry news summaries tailored to executive interests. Supports real-time alerts, interactive queries, and ","P039":"I want to do a presentation in front of end users. To make my session more engaging and interactive I want to start a poll after each section to capture the tho","P070":"Use the current PowerPoint presentation as input (slides, structure, speaker notes). Act as a presentation coach preparing me for a tough senior audience. Gener","A039":"The Change Agent helps you and your organization, leaders, and teams navigate transformation with clarity and confidence. It defines the why, what, who, how, an","P037":"Please create me a QR code for [mywebsite]","A026":"This agent helps teams maintain strategic alignment by analyzing user-provided content for gaps, contradictions, and hidden dependencies. It relies on input suc","P073":"Review my recent documents, emails, chat activity, and file edits to identify the times of day when I tend to do my best focused work, creative work, and reacti","P033":"Please create a new version of this slide deck and translate all the slides to [Choose Language]","A012":"This agent reviews a single uploaded document and recommends one of the available data classification labels. The recommendation is based on internal classifica","A019":"This agent helps users design and audit checklists for complex or high-stakes tasks. It transforms unstructured to-dos into clear, actionable steps, ensuring lo","P059":"Analyze the last [X] messages in the selected team chat [Y]. Identify the most frequent questions and their corresponding answers, especially those that will be","A046":"A Copilot Chat agentthat helps users turn project ideas into structured, management-ready business cases. Based on the project description, expected benefits, a","P013":"Create a Word Cloud of the top 10 key words in [text-document.docx]. Ignore filler words.","A017":"Use this Copilot Agent to create your buddy to help you solving your challenges! The Brainstorming Buddy is guiding you in an iterative conversation, giving you","A027":"With the new year approaching, are you willing to pick up a new skill, stick to a workflow, or turn a habit into something that actually lasts along the years? ","A030":"Peer Feedback Agent is a Copilot Agent that helps you craft professional, thoughtful peer‑to‑peer feedback or praise for your colleagues. Use it to draft congra","P053":"Review this presentation and provide a structured analysis: Identify content and argumentation weaknesses, errors, and gaps. Highlight sections that are too lon","P015":"Analyze and visualize this data and identify [areas] that are doing well and [areas] that are not doing so well. What is influencing changes the most? Additiona","P038":"Create an overview of all the messages in this chat of the last 7 days sorted by newest to oldest. Follow the formatting instructions exactly. Summarize every t","P002":"I want you to help me create a set of instructions for the personalization feature in Copilot. Read through my recent emails and chats from Teams and provide a ","P006":"Generate a structured agenda for my weekly 1:1 with my manager. I want to reflect on the past week, align on priorities, and raise any blockers or feedback. Sou","A009":"This agent helps users generate creative, relevant, and professional names for solutions and projects. It consistently delivers a set of 10 name suggestions, ea","P045":"Review my [document.docx] and analyze it against the best practices listed here [Best-Practices.pdf]. Make a list of the things that we do not yet cover and the","P056":"Act as a rewriting expert. Your task is to rewrite the following text to make it easier for a general audience to understand. The rewritten text should keep the","A044":"The Team Engagement &amp; Morale Assistant is a declarative agent designed to help managers, individual contributors, HR professionals or any team member build ","A032":"AI assistant for the structured and in-depth analysis of an industry’s competitive intensity and attractiveness based on Porter’s Five Forces model. It supports","P026":"Help me wrap up my day and prepare myself for tomorrow. Please name the first section: Today. Could you write a short paragraph about my work today and list the","A006":"This agent enables users to extract key learning and knowledge elements from meetings, workshops, or expert discussions and convert them into concise, ready-to-","P003":"You are going to find contribution opportunities for me from my emails. Here is what I want you to do: 1. Identify my current priorities and focus areas by anal","A033":"This agent helps you formulate clear and respectful \"no\" responses in professional situations. Using the PLANT framework (Pause, Listen, Assess, Name, Translate","A043":"Stress-tests your ideas, plans and decisions before you take them to a real audience. Surfaces hidden assumptions, runs a pre-mortem and predicts the toughest q","A010":"The AI Mindset Advisor is your expert guide to identifying the right AI solution for your business needs. Whether you're exploring Microsoft 365 Copilot or just","A001":"The Exec News Aggregator agent keeps you informed by gathering, filtering, and summarizing recent, credible, and relevant industry news and trends. It delivers ","P072":"Generate a concise, executive-ready summary for senior decision makers. Instructions: Identify the document [DOCUMENT] purpose and intended stakeholders. Extrac","A040":"Meeting Prep is a support agent designed to help users prepare for all types of meetings, internal, customer-facing, or recurring. It guides users through addit","A047":"A Copilot Chat agent that helps users systematically plan or optimize any business process. The agent opens with 9 structured intake questions (new vs. existing","A037":"Policy Author Pro helps you turn notes outlines or half‑finished drafts into clear and professionally structured corporate policies. Whether you are working on ","P035":"I'm going to be out of the office from [date] until [date]. Draft a short message I can set as an automatic reply to emails while I'm out. Be sure to include my","P061":"Create a 3-minute weekly 'Team Pulse' survey suitable for any industry and 10–200 respondents. • Sections: Workload, Progress, Blockers, Support, Open Feedback.","P010":"Without editing the document, create a list of the common terms and their definitions.","P078":"Create a tableshowing all emails I received from DOMAINNAME (e.g., @customer.com) in the last X weeks. Include a column that shows any action required from the ","P066":"I'm taking an exam / certification [exam name/code] on [date] . My level: [new / mid / confident] . Goal: [pass / %] . Time I have: [x mins/day, y hrs/week] . W","P021":"Hi, I'd like you to act as my Prompt engineer. Your goal as a Copilot is to help me craft the best possible prompt for my needs. The purpose of the prompt is to","A002":"This agent helps users improve their prompt engineering skills through daily challenges and interactive quizzes. It teaches and reinforces best practices using ","P027":"Analyze my table and provide me with three increasingly complex KPIs. Generate the formula to calculate each KPI in Excel and briefly explain what the KPI does.","A024":"Retrieves insights and combines them with recent industry trends based on user queries and inputs. Synthesizes these into actionable innovation ideas, facilitat","P043":"Produce a correlation report for the numerical columns. Include a summary of key findings and provide insights on potential actions based on the correlations id","P011":"Act like a close friend, someone who's been in my corner for a long time—who's seen my wins, my struggles, and my patterns. I ask for honesty, not comfort. Base","A025":"Product Crafter is designed to assist product teams (product managers, UX designers, and software developers) in early-stage product planning. It helps transfor","A036":"Meeting Recap Companion transforms your meeting inputs - such as transcripts, recordings, or meeting details - into clear, structured minutes. It focuses only o","A007":"The Scenario Simulator Agent helps business users pre-explore the impact of operational and financial changes through conversational what-if simulations. By int","P047":"Create an FAQ based on [presentation.pptx] and [document.docx] that includes clear headings and bullet points to enhance readability. Ensure that the document i","A023":"The Wellness &amp; Productivity Coach helps employees improve their physical and mental well-being while enhancing daily productivity. It offers personalized gu","P008":"Create a concise, cited executive brief on [TOPIC] tailored to my role as a [ROLE]. Deliverables: 1. Executive Summary: Five key bullet points. 2. Trends, Risks","A005":"Event Agent helps you quickly navigate [Event Name]. Whether you're looking for details about sessions, the venue, or the speakers, Event Agent is here to ensur","P009":"Task: Profile and quality-check the table on this worksheet. Assumptions: The first row contains headers. If multiple tables exist, ask me which one to use. If ","A041":"The Policy Simplifier Agent helps employees quickly understand long and complex policy or compliance documents by turning formal, legal, or highly technical tex","P068":"Scope & Guardrails: READ-ONLY analysis. Analyze Outlook emails from the last 14-30 days using METADATA FIRST: sender name, domain, subject line patterns, previe","P063":"Please review and optimize my presentation for an upcoming [type of meeting, e.g., customer briefing or internal workshop]. The meeting is scheduled for [durati","P023":"Summarize in a table all the actions I have outstanding across this section. Add a description and a status for each action.","P046":"Looking at my calendar over this coming week, create five categories that describe how I spend my time. Give me a short description for each category and estima","P030":"Write a follow-up email to the attendees of this meeting based on the [Meeting Transcript]. The email should include: A table showing the decisions made during ","P058":"Craft a concise reply in this Outlook thread to calmly and politely resolve a misunderstanding. Use the thread context and the outcome I want (below) to: • Ackn","P044":"Write an end-of-the-year message to my team members congratulating them on a great year and all the work on [name a specific project here]. Use a warm and appre","P020":"Analyze the emails in my Outlook [folder name] folder and summarize the most common content and information received. Provide a brief summary for each email, in","A031":"This agent helps optimize presentations for upcoming meetings by reviewing content, identifying redundancies and proposing a streamlined version that saves time","P050":"Summarize my emails and Teams messages from the last workday. List action items in a separate column. If possible, suggest follow-up actions in a separate colum","P055":"Highlight any conflicts in my schedule for next week and prioritize them for me according to the email contents.","P034":"I need you to become my problem-solving brainstorm buddy. Start by asking me about my problem or opportunity. Then ask me the 3 most relevant questions to help ","P077":"Create a concise 7-slide deckfrom the brief below. Inputs: Use only the pasted text as the source. Slides (exactly): Title — [PROJECT/PROPOSAL NAME] Problem/Con","P075":"Build a forecasting model for [METRIC] based on this historical data. Include: 1) Trend analysis and seasonality detection, 2) Forecast for next [3/6/12] months","P042":"It's the start of 2025, and I want to make the most of this year in my professional life. Help me outline strategies for setting and achieving impactful busines"};
+ALL_ITEMS.forEach(it=>{ it.preview_en = PREV_EN[it.seq] || ''; });
 
 // ─── Tag auto-derivation ────────────────────────────────
 const TAGS = [
@@ -2292,20 +2393,20 @@ function applyFilters(items){
   let arr = items.slice();
   if (state.tab === 'Agent' || state.kindFilter === 'Agent') arr = arr.filter(x=>x.kind==='Agent');
   if (state.tab === 'Prompt' || state.kindFilter === 'Prompt') arr = arr.filter(x=>x.kind==='Prompt');
-  if (state.tab === 'fav') arr = arr.filter(x=>state.fav.has(x.favKey));
+  if (state.favOnly) arr = arr.filter(x=>state.fav.has(x.favKey));
   if (state.tags.size) arr = arr.filter(x=> [...state.tags].every(t=>x.tags.includes(t)));
-  if (state.license === 'free') arr = arr.filter(x=>/free|free \(/i.test(x.preview||'') || /chat \(web\)|copilot chat/i.test(x.preview||''));
-  // license filter is best-effort here without re-parsing the HTML — keep loose for MVP
+  if (state.license === 'basic') arr = arr.filter(x=>x.license === 'free');
+  else if (state.license === 'premium') arr = arr.filter(x=>x.license === 'required');
   if (state.q){
     const q = state.q.toLowerCase();
     arr = arr.filter(x=>{
-      const blob = `${x.seq} ${x.name||''} ${x.cname||''} ${x.preview||''} ${x.tags.join(' ')}`.toLowerCase();
+      const blob = `${x.seq} ${x.name||''} ${x.cname||''} ${x.preview||''} ${x.preview_en||''} ${x.tags.join(' ')}`.toLowerCase();
       return blob.includes(q);
     });
   }
-  if (state.sort === 'newest') arr.sort((a,b)=>b.sortSeq - a.sortSeq);
-  else if (state.sort === 'seq-asc') arr.sort((a,b)=>a.sortSeq - b.sortSeq);
-  else if (state.sort === 'alpha') arr.sort((a,b)=>(a.cname||a.name||'').localeCompare(b.cname||b.name||'','zh-Hant'));
+  const dir = state.sortDir === 'asc' ? 1 : -1;
+  if (state.sort === 'seq') arr.sort((a,b)=>(a.sortSeq - b.sortSeq) * dir);
+  else if (state.sort === 'alpha') arr.sort((a,b)=>(a.cname||a.name||'').localeCompare(b.cname||b.name||'','zh-Hant') * dir);
   return arr;
 }
 
@@ -2322,7 +2423,7 @@ function pickHref(it, ver){
 function renderCards(items){
   const grid = document.getElementById('grid');
   const emp  = document.getElementById('empty');
-  document.getElementById('cnt').textContent = items.length + ' 篇';
+  document.getElementById('cnt').textContent = items.length + ' ' + I18N[state.lang].unit;
   if (!items.length){ grid.innerHTML=''; emp.style.display='block'; return; }
   emp.style.display='none';
   grid.innerHTML = items.map(it=>{
@@ -2335,16 +2436,16 @@ function renderCards(items){
     <div class="card" data-kind="${it.kind}" data-key="${it.favKey}">
       <div class="head">
         <span class="seq">${it.seq}</span>
-        <button class="fav ${isFav?'on':''}" title="收藏" data-fav="${it.favKey}">${isFav?'★':'☆'}</button>
+        <button class="fav ${isFav?'on':''}" title="${I18N[state.lang].favTip}" data-fav="${it.favKey}">${isFav?'★':'☆'}</button>
       </div>
       <div class="ttl">${state.lang==='zh'?titleZH:titleEN}</div>
       <div class="ename">${state.lang==='zh'?titleEN:(it.cname||'')}</div>
-      <div class="prev">${(it.preview||'').replace(/[<>]/g,'')||'<span style="color:#9ca3af">— 內容預覽 —</span>'}</div>
+      <div class="prev">${(state.lang==='en' ? (it.preview_en||it.preview||'') : (it.preview||'')).replace(/[<>]/g,'').replace(/&amp;/g,'&')||'<span style="color:#9ca3af">— '+I18N[state.lang].noPrev+' —</span>'}</div>
       <div class="tags">${tags}</div>
       <div class="ver-bar">${it.versions.map(v=>`<a href="${pickHref(it,v)}" target="_blank" data-stop>${v}</a>`).join('')}</div>
       <div class="actions">
-        <button data-open="${href}" data-title="${(it.cname||it.name||'').replace(/"/g,'')}">👁 預覽</button>
-        <button class="primary ${it.kind==='Prompt'?'prompt':''}" data-newtab="${href}">↗ 開啟</button>
+        <button data-open="${href}" data-seq="${it.seq}" data-title="${(it.cname||it.name||'').replace(/"/g,'')}">👁 ${I18N[state.lang].preview}</button>
+        <button class="primary ${it.kind==='Prompt'?'prompt':''}" data-newtab="${href}">↗ ${I18N[state.lang].open}</button>
       </div>
     </div>`;
   }).join('');
@@ -2356,15 +2457,20 @@ function renderFeatured(items){
   document.getElementById('featList').innerHTML = items_.map(it=>{
     const href = pickHref(it);
     const title = state.lang==='zh'?(it.cname||it.name):it.name;
-    return `<span class="pill" data-open="${href}" data-title="${title.replace(/"/g,'')}">${it.kind==='Agent'?'⚡':'💬'} ${it.seq} ${title}</span>`;
+    return `<span class="pill" data-open="${href}" data-seq="${it.seq}" data-title="${title.replace(/"/g,'')}">${it.kind==='Agent'?'⚡':'💬'} ${it.seq} ${title}</span>`;
   }).join('');
 }
 
 function renderRecent(){
   const ol = document.getElementById('recentList');
-  if (!state.recent.length){ ol.innerHTML='<li class="empty">尚無瀏覽紀錄</li>'; return; }
+  if (!state.recent.length){ ol.innerHTML='<li class="empty">'+I18N[state.lang].noRecent+'</li>'; return; }
   ol.innerHTML = state.recent.slice(0,5).map(r=>{
-    return `<li><a href="${r.href}" target="_blank" rel="noopener">${r.title}</a></li>`;
+    let seq = r.seq;
+    let it = seq ? ALL_ITEMS.find(x=>x.seq===seq) : ALL_ITEMS.find(x=>pickHref(x)===r.href || x.versions.some(v=>pickHref(x,v)===r.href));
+    if (it) seq = it.seq;
+    const label = it ? (state.lang==='zh' ? (it.cname||it.name) : it.name) : r.title;
+    const prefix = seq ? `<span style="color:#6b7280;font-variant-numeric:tabular-nums">${seq}</span> ` : '';
+    return `<li><a href="${r.href}" target="_blank" rel="noopener">${prefix}${label}</a></li>`;
   }).join('');
 }
 
@@ -2388,13 +2494,18 @@ function refresh(){
   const baseScope = grouped.filter(x=>{
     if (state.tab==='Agent' && x.kind!=='Agent') return false;
     if (state.tab==='Prompt' && x.kind!=='Prompt') return false;
-    if (state.tab==='fav' && !state.fav.has(x.favKey)) return false;
+    if (state.favOnly && !state.fav.has(x.favKey)) return false;
     return true;
   });
   renderTagBox(baseScope);
   const filtered = applyFilters(grouped);
   renderCards(filtered);
-  renderFeatured(grouped);
+  const featScope = grouped.filter(x=>{
+    if (state.tab==='Agent' && x.kind!=='Agent') return false;
+    if (state.tab==='Prompt' && x.kind!=='Prompt') return false;
+    return true;
+  });
+  renderFeatured(featScope);
   renderRecent();
 }
 
@@ -2403,10 +2514,11 @@ document.querySelector('.tabs').addEventListener('click', e=>{
   const b = e.target.closest('button'); if(!b) return;
   state.tab = b.dataset.tab;
   document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on', x===b));
-  // recolor for prompt
-  b.classList.remove('all','prompt');
-  if (state.tab==='Prompt') b.classList.add('prompt');
-  if (state.tab==='All') b.classList.add('all');
+  refresh();
+});
+document.getElementById('favBtn').addEventListener('click', e=>{
+  state.favOnly = !state.favOnly;
+  e.currentTarget.classList.toggle('on', state.favOnly);
   refresh();
 });
 
@@ -2416,7 +2528,7 @@ document.getElementById('q').addEventListener('input', e=>{
 });
 
 document.getElementById('sidebar').addEventListener('click', e=>{
-  const c = e.target.closest('.chip'); if(!c) return;
+  const c = e.target.closest('.chip,[data-sort],[data-license],[data-kind],[data-tag]'); if(!c) return;
   if (c.dataset.tag){
     if (state.tags.has(c.dataset.tag)) state.tags.delete(c.dataset.tag);
     else state.tags.add(c.dataset.tag);
@@ -2428,12 +2540,17 @@ document.getElementById('sidebar').addEventListener('click', e=>{
     document.querySelectorAll('[data-kind]').forEach(x=>x.classList.toggle('on', x===c && state.kindFilter));
   } else if (c.dataset.sort){
     state.sort = c.dataset.sort;
-    document.querySelectorAll('[data-sort]').forEach(x=>x.classList.toggle('on', x===c));
+    document.querySelectorAll('#sortSeg button').forEach(x=>x.classList.toggle('on', x===c));
   }
   refresh();
 });
 
 document.getElementById('clearTags').addEventListener('click', ()=>{ state.tags.clear(); refresh(); });
+document.getElementById('sortDir').addEventListener('click', e=>{
+  state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+  e.currentTarget.textContent = state.sortDir === 'asc' ? '↑' : '↓';
+  refresh();
+});
 
 document.getElementById('ver').addEventListener('click', e=>{
   const b = e.target.closest('button[data-ver]'); if (!b) return;
@@ -2448,6 +2565,7 @@ document.getElementById('lang').addEventListener('click', e=>{
   state.lang = b.dataset.lang;
   localStorage.setItem(LS.lang, state.lang);
   document.querySelectorAll('#lang button').forEach(x=>x.classList.toggle('on', x===b));
+  applyI18n();
   refresh();
 });
 
@@ -2465,7 +2583,7 @@ document.getElementById('grid').addEventListener('click', e=>{
   const open = e.target.closest('[data-open]');
   if (open){
     showModal(open.dataset.open, open.dataset.title);
-    addRecent(open.dataset.open, open.dataset.title);
+    addRecent(open.dataset.open, open.dataset.title, open.dataset.seq);
     return;
   }
   const nt = e.target.closest('[data-newtab]');
@@ -2483,7 +2601,7 @@ document.getElementById('featList').addEventListener('click', e=>{
   const p = e.target.closest('[data-open]');
   if (!p) return;
   showModal(p.dataset.open, p.dataset.title);
-  addRecent(p.dataset.open, p.dataset.title);
+  addRecent(p.dataset.open, p.dataset.title, p.dataset.seq);
 });
 
 // Modal
@@ -2497,11 +2615,17 @@ function showModal(href, title){
 document.getElementById('modalClose').onclick = ()=>document.getElementById('modal').classList.remove('on');
 document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') document.getElementById('modal').classList.remove('on'); });
 
-function addRecent(href, title){
-  state.recent = [{href,title,t:Date.now()}, ...state.recent.filter(r=>r.href!==href)].slice(0,10);
+function addRecent(href, title, seq){
+  state.recent = [{href,title,seq,t:Date.now()}, ...state.recent.filter(r=> seq ? r.seq!==seq : r.href!==href)].slice(0,10);
   localStorage.setItem(LS.recent, JSON.stringify(state.recent));
   renderRecent();
 }
+
+document.getElementById('recentClear').addEventListener('click', ()=>{
+  state.recent = [];
+  localStorage.removeItem(LS.recent);
+  renderRecent();
+});
 
 function toast(msg){
   const t = document.getElementById('toast');
@@ -2528,6 +2652,18 @@ document.addEventListener('keydown', e=>{
 document.querySelectorAll('#ver button').forEach(x=>x.classList.toggle('on', x.dataset.ver === state.ver));
 document.querySelectorAll('#lang button').forEach(x=>x.classList.toggle('on', x.dataset.lang === state.lang));
 
+// Theme
+const initTheme = localStorage.getItem(LS.theme) || 'light';
+document.documentElement.setAttribute('data-theme', initTheme);
+document.querySelectorAll('#theme button').forEach(x=>x.classList.toggle('on', x.dataset.theme === initTheme));
+document.getElementById('theme').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-theme]'); if (!b) return;
+  document.documentElement.setAttribute('data-theme', b.dataset.theme);
+  localStorage.setItem(LS.theme, b.dataset.theme);
+  document.querySelectorAll('#theme button').forEach(x=>x.classList.toggle('on', x===b));
+});
+
+applyI18n();
 refresh();
 </script>
 </body>
