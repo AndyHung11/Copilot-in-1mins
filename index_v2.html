@@ -271,2014 +271,1765 @@
 <div class="toast" id="toast">已複製</div>
 
 <script id="CATALOG" type="application/json">{
- "Agent_v1": [
-  {
-   "seq": "A001",
-   "name": "Exec News Aggregator",
-   "cname": "主管新聞聚合器",
-   "file": "zh/v1/Agent/A001_ExecNewsAggregator.html",
-   "en_file": "en/v1/Agent/A001_ExecNewsAggregator_EN.html",
-   "preview": "**主管新聞聚合器（Exec News Aggregator）** 透過蒐集、過濾、摘要近期、可信賴且相關的產業新聞與趨勢，協助你保持資訊靈通。 它會交付精簡、聚焦決策的更新內容，並依你的關注領域客製化， 幫助你掌握市場變化、競爭對手動態與"
-  },
-  {
-   "seq": "A002",
-   "name": "Daily Challenge Agent",
-   "cname": "每日挑戰 Agent",
-   "file": "zh/v1/Agent/A002_DailyChallengeAgent.html",
-   "en_file": "en/v1/Agent/A002_DailyChallengeAgent_EN.html",
-   "preview": "這個 Agent 透過每日挑戰與互動測驗，幫助使用者提升提示詞工程技能。它使用 GSEC 框架 （目標 Goal、來源 Source、期望 Expectation、情境 Context）教導並強化最佳實踐，並透過實作練習鼓勵使用者不斷迭代、"
-  },
-  {
-   "seq": "A003",
-   "name": "SWOT Analysis Agent",
-   "cname": "SWOT 分析 Agent",
-   "file": "zh/v1/Agent/A003_SWOTAnalysisAgent.html",
-   "en_file": "en/v1/Agent/A003_SWOTAnalysisAgent_EN.html",
-   "preview": "SWOT Agent 協助使用者針對各種主題——包括產品、團隊、事業單位、策略與計畫——產生結構化且具洞察力的 SWOT 分析。它是策略規劃、回顧會議、工作坊和主管報告的寶貴工具，幫助找出關鍵洞察、對齊利害關係人，並以清晰精準的方式支援決策"
-  },
-  {
-   "seq": "A004",
-   "name": "Statement Of Work Agent",
-   "cname": "工作說明書 Agent",
-   "file": "zh/v1/Agent/A004_StatementOfWorkAgent.html",
-   "en_file": "en/v1/Agent/A004_StatementOfWorkAgent_EN.html",
-   "preview": "你是一位工作說明書建立工具。你的職責是根據使用者輸入及提供的參考文件或範本，撰寫詳細且有效的工作說明書（Statement of Work, SoW）。"
-  },
-  {
-   "seq": "A005",
-   "name": "Event Agent",
-   "cname": "活動問答 Agent",
-   "file": "zh/v1/Agent/A005_EventAgent.html",
-   "en_file": "en/v1/Agent/A005_EventAgent_EN.html",
-   "preview": "活動問答 Agent 協助你快速導覽 [活動名稱]。無論你在尋找議程場次、場地資訊還是講者介紹，活動 Agent 都能確保你充分享受活動體驗。"
-  },
-  {
-   "seq": "A006",
-   "name": "Knowledge Extractor",
-   "cname": "知識萃取器",
-   "file": "zh/v1/Agent/A006_KnowledgeExtractor.html",
-   "en_file": "en/v1/Agent/A006_KnowledgeExtractor_EN.html",
-   "preview": "這個 Agent 協助使用者從會議、工作坊或專家討論中萃取關鍵學習和知識元素，並將其轉化為簡潔、即用的學習片段。它分析描述、文件、筆記或其他內容，生成可快速分享或加入內部知識庫的摘要、測驗題和實用技巧。"
-  },
-  {
-   "seq": "A007",
-   "name": "Scenario Simulator",
-   "cname": "情境模擬器",
-   "file": "zh/v1/Agent/A007_ScenarioSimulator.html",
-   "en_file": "en/v1/Agent/A007_ScenarioSimulator_EN.html",
-   "preview": "情境模擬器 Agent 協助商業使用者透過對話式 What-if 模擬，預先探索營運和財務變化的影響。透過解讀自然語言輸入，Agent 生成結構化的決策簡報，包含假設條件、敏感度分析、風險因素和建議下一步。設計用於快速探索性分析，而非取代正"
-  },
-  {
-   "seq": "A008",
-   "name": "M365 Project Helper",
-   "cname": "M365 專案小幫手",
-   "file": "zh/v1/Agent/A008_M365ProjectHelper.html",
-   "en_file": "en/v1/Agent/A008_M365ProjectHelper_EN.html",
-   "preview": "一個多功能的專案助手，專為簡化 Microsoft 365 計畫而設計，提供結構化引導、規劃支援和最佳實踐洞察。內建彈性設計，可輕鬆客製化用於其他 IT 或業務專案，確保各種場景下都能達成一致、可擴展且高效的專案執行。"
-  },
-  {
-   "seq": "A009",
-   "name": "Your Namesake",
-   "cname": "命名大師",
-   "file": "zh/v1/Agent/A009_YourNamesake.html",
-   "en_file": "en/v1/Agent/A009_YourNamesake_EN.html",
-   "preview": "這個 Agent 協助使用者為解決方案和專案產生有創意、相關且專業的名稱。它一致輸出 10 個名稱建議，每個都搭配一句朗朗上口的 Slogan，確保輸出既有想像力又適合專業使用。設計用於支援各行業的內部團隊或外部客戶，依使用者偏好調整語氣和"
-  },
-  {
-   "seq": "A010",
-   "name": "AI Mindset Agent",
-   "cname": "AI 思維顧問",
-   "file": "zh/v1/Agent/A010_AIMindsetAgent.html",
-   "en_file": "en/v1/Agent/A010_AIMindsetAgent_EN.html",
-   "preview": "AI 思維顧問是你識別合適 AI 解決方案的專業嚮導。無論你在探索 Microsoft 365 Copilot，還是不確定從哪裡開始，這個助手都會引導你完成結構化的探索流程，挖掘你的目標、痛點和 AI 機會，並推薦最合適的 AI 驅動解決方"
-  },
-  {
-   "seq": "A011",
-   "name": "Prompting Mentor",
-   "cname": "提示詞導師",
-   "file": "zh/v1/Agent/A011_PromptingMentor.html",
-   "en_file": "en/v1/Agent/A011_PromptingMentor_EN.html",
-   "preview": "這個 Agent 透過每日挑戰與互動測驗，幫助使用者提升提示詞工程技能。它使用 GSEC 框架（目標 Goal、來源 Source、期望 Expectation、情境 Context）教導並強化最佳實踐，並透過實作練習鼓勵使用者不斷迭代、反"
-  },
-  {
-   "seq": "A012",
-   "name": "Document Classificator",
-   "cname": "文件分類師",
-   "file": "zh/v1/Agent/A012_DocumentClassificator.html",
-   "en_file": "en/v1/Agent/A012_DocumentClassificator_EN.html",
-   "preview": "這個 Agent 審查單一上傳文件，並根據內部分類指引建議適當的資料分類標籤。建議結果包含以文件原始語言撰寫的正式說明。"
-  },
-  {
-   "seq": "A013",
-   "name": "SMART Goals",
-   "cname": "SMART 目標 Agent",
-   "file": "zh/v1/Agent/A013_SMARTGoals.html",
-   "en_file": "en/v1/Agent/A013_SMARTGoals_EN.html",
-   "preview": "SMART Agent 協助使用者使用 SMART 框架定義、精煉和確定目標範圍。SMART 代表：具體 Specific、可測量 Measurable、吸引人 Attractive、現實的 Realistic、有期限 Time-bound"
-  },
-  {
-   "seq": "A014",
-   "name": "NDA Comparison Agent",
-   "cname": "保密協議比對 Agent",
-   "file": "zh/v1/Agent/A014_NDAComparisonAgent.html",
-   "en_file": "en/v1/Agent/A014_NDAComparisonAgent_EN.html",
-   "preview": "這個 Agent 協助法律專業人員比對保密協議（NDA），分析上傳的文件和內部參考文件，識別並突顯關鍵條款、潛在風險和文件之間的差異。Agent 以表格格式輸出結構化比較，確保整個過程的法律準確性、清晰度和保密性。"
-  },
-  {
-   "seq": "A015",
-   "name": "Agent Crafter",
-   "cname": "Agent 設計師",
-   "file": "zh/v1/Agent/A015_AgentCrafter.html",
-   "en_file": "en/v1/Agent/A015_AgentCrafter_EN.html",
-   "preview": "協助使用者為其 Agent 撰寫高品質的指示詞，或審查現有指示詞並整合建議的改善方案。"
-  },
-  {
-   "seq": "A016",
-   "name": "Your Proofreader",
-   "cname": "校稿助手",
-   "file": "zh/v1/Agent/A016_YourProofreader.html",
-   "en_file": "en/v1/Agent/A016_YourProofreader_EN.html",
-   "preview": "一個分析上傳文字和文件的 Agent，提供建設性回饋，並建議可直接實施和使用的清晰改善方案。"
-  },
-  {
-   "seq": "A017",
-   "name": "Your Problem Solver",
-   "cname": "萬能解題助手",
-   "file": "zh/v1/Agent/A017_YourProblemSolver.html",
-   "en_file": "en/v1/Agent/A017_YourProblemSolver_EN.html",
-   "preview": "使用本 Copilot Agent 打造你的個人解題夥伴，幫助你解決各種挑戰！透過 AI 引導的互動式對話，以逐步深入的方式探索你的問題，並提供建議和更深入的分析，每一輪對話都更接近解決方案。"
-  },
-  {
-   "seq": "A018",
-   "name": "News Aggregator Agent",
-   "cname": "新聞聚合 Agent",
-   "file": "zh/v1/Agent/A018_NewsAggregatorAgent.html",
-   "en_file": "en/v1/Agent/A018_NewsAggregatorAgent_EN.html",
-   "preview": "新聞聚合 Agent（Exec News Aggregator） 主動為主管提供精簡、可信、即時的產業新聞摘要，依個人關注領域客製化內容。支援即時警示、互動式查詢與持續學習，幫助決策者快速掌握市場、競爭與法規變化，保持資訊領先。"
-  },
-  {
-   "seq": "A019",
-   "name": "Checklist Manifesto Agent",
-   "cname": "清單宣言 Agent",
-   "file": "zh/v1/Agent/A019_ChecklistManifestoAgent.html",
-   "en_file": "en/v1/Agent/A019_ChecklistManifestoAgent_EN.html",
-   "preview": "清單宣言 Agent（Checklist Manifesto） 協助使用者為複雜或高風險任務設計與審查清單，把零散待辦轉成清晰可執行的步驟。確保關鍵環節不被遺漏、邏輯順序合理，提升交付一致性與品質。"
-  },
-  {
-   "seq": "A020",
-   "name": "Dealcrafter Agent",
-   "cname": "談判大師 Agent",
-   "file": "zh/v1/Agent/A020_DealcrafterAgent.html",
-   "en_file": "en/v1/Agent/A020_DealcrafterAgent_EN.html",
-   "preview": "談判大師 Agent（Dealcrafter） 作為談判助手，協助使用者規劃、模擬、提案與優化談判結果。引導你拆解利益、設計策略、預演對話，並在事後檢討中持續強化談判能力。"
-  },
-  {
-   "seq": "A021",
-   "name": "Training Content Writer",
-   "cname": "培訓內容創作者",
-   "file": "zh/v1/Agent/A021_TrainingContentWriter.html",
-   "en_file": "en/v1/Agent/A021_TrainingContentWriter_EN.html",
-   "preview": "提升企業學習素材的品質。協助內容創作者製作高品質、吸引人且有效的學習內容，用於內部溝通。從定義目標、了解受眾、最佳化內容到確保正確語調，全程支援內容創作流程，提升培訓計畫效果，賦能員工發展。"
-  },
-  {
-   "seq": "A022",
-   "name": "Decision Architect",
-   "cname": "決策架構師",
-   "file": "zh/v1/Agent/A022_DecisionArchitect.html",
-   "en_file": "en/v1/Agent/A022_DecisionArchitect_EN.html",
-   "preview": "幫助使用者透過多標準決策分析（MCDA）框架，以清晰、逐步的方式做出明智選擇。透過結構化呈現選項評估，提升決策品質，確保透明、以證據為基礎的決策流程，降低認知偏差，為日常工作場景中的複雜決策帶來清晰度。"
-  },
-  {
-   "seq": "A023",
-   "name": "Wellness Productivity Coach",
-   "cname": "健康生產力教練",
-   "file": "zh/v1/Agent/A023_WellnessProductivityCoach.html",
-   "en_file": "en/v1/Agent/A023_WellnessProductivityCoach_EN.html",
-   "preview": "幫助員工改善身心健康，同時提升日常生產力。提供個人化指導，包括每日生產力提示、工作生活平衡建議，以及快速健康建議（桌邊伸展、正念練習、時間管理技巧）。透過鼓勵健康習慣與激勵訊息，幫助使用者將健康融入工作日常，維持高效表現。"
-  },
-  {
-   "seq": "A024",
-   "name": "Innovation Radar Agent",
-   "cname": "創新雷達 Agent",
-   "file": "zh/v1/Agent/A024_InnovationRadarAgent.html",
-   "en_file": "en/v1/Agent/A024_InnovationRadarAgent_EN.html",
-   "preview": "依據使用者查詢和輸入，從中擷取洞察並結合最新產業趨勢。將這些資訊合成為可行的創新想法，使用結構化框架和提示詞引導腦力激盪，並透過遊戲化設計（挑戰賽或測驗）將創意轉化為促進團隊參與的活動。"
-  },
-  {
-   "seq": "A025",
-   "name": "Product Crafter",
-   "cname": "產品規劃師",
-   "file": "zh/v1/Agent/A025_ProductCrafter.html",
-   "en_file": "en/v1/Agent/A025_ProductCrafter_EN.html",
-   "preview": "協助產品團隊（產品經理、UX 設計師、軟體開發者）進行早期產品規劃。利用 Agile 使用者故事、客戶旅程地圖和 JTBD 等成熟框架，將原始想法轉化為可行、以使用者為中心的產出物。確保產出一致、高品質，並與業務目標對齊，幫助團隊優先排序功"
-  },
-  {
-   "seq": "A026",
-   "name": "Coherence Agent",
-   "cname": "一致性 Agent",
-   "file": "zh/v1/Agent/A026_CoherenceAgent.html",
-   "en_file": "en/v1/Agent/A026_CoherenceAgent_EN.html",
-   "preview": "一致性 Agent（Alignment Agent） 協助團隊維持策略一致性，分析使用者貼上的目標、計畫與內容，找出落差、矛盾與隱藏依賴。透過結構化提示，協助對齊跨部門方向、化解溝通鴻溝。"
-  },
-  {
-   "seq": "A027",
-   "name": "Resolution Agent",
-   "cname": "決心教練",
-   "file": "zh/v1/Agent/A027_ResolutionAgent.html",
-   "en_file": "en/v1/Agent/A027_ResolutionAgent_EN.html",
-   "preview": "透過行為科學框架 COM-B（能力、機會、動機）幫助使用者突破行為障礙，建立一致的決心和挑戰。提供及時、個性化的支持，讓技能採用、流程執行、習慣養成和決策更直覺、更可達成，成為你全年可靠的行為改變夥伴。"
-  },
-  {
-   "seq": "A028",
-   "name": "Storytelling Mentor",
-   "cname": "說故事導師",
-   "file": "zh/v1/Agent/A028_StorytellingMentor.html",
-   "en_file": "en/v1/Agent/A028_StorytellingMentor_EN.html",
-   "preview": "說故事導師（Storytelling Mentor） 協助使用者編織動人故事、架構有影響力的演說、提升簡報與提案的表達力。適用於 pitch、領導演說、產品發表等場合，從故事骨架到台風細節都能優化。"
-  },
-  {
-   "seq": "A029",
-   "name": "Marketing Agent",
-   "cname": "社群行銷 Agent",
-   "file": "zh/v1/Agent/A029_MarketingAgent.html",
-   "en_file": "en/v1/Agent/A029_MarketingAgent_EN.html",
-   "preview": "在 Facebook、Instagram、Twitter、LinkedIn 和 TikTok 等多個平台上，創建、最佳化和管理吸引人的社群媒體內容。維持品牌聲音、提升互動率和驅動成長，同時確保符合法律與道德標準。可選擇性地在 Agent 設"
-  },
-  {
-   "seq": "A030",
-   "name": "Peer Feedback Agent",
-   "cname": "同儕回饋 Agent",
-   "file": "zh/v1/Agent/A030_PeerFeedbackAgent.html",
-   "en_file": "en/v1/Agent/A030_PeerFeedbackAgent_EN.html",
-   "preview": "同儕回饋 Agent（Peer Feedback） 協助你為同事撰寫專業、用心的回饋或讚美，無論是慶賀里程碑、給予建設性建議或感謝協助。確保語氣得體、重點清晰，讓回饋既真誠又有影響力。"
-  },
-  {
-   "seq": "A031",
-   "name": "Presentation Optimizer Agent",
-   "cname": "簡報最佳化 Agent",
-   "file": "zh/v1/Agent/A031_PresentationOptimizerAgent.html",
-   "en_file": "en/v1/Agent/A031_PresentationOptimizerAgent_EN.html",
-   "preview": "幫助最佳化即將進行的會議簡報，審查內容、識別冗餘，並提出精簡版本，在保留關鍵訊息的同時節省時間。主要功能：確認會議細節（時長、受眾、預留時間）、分析重複或冗餘投影片、建議整合與時間調整、確保語調和內容符合特定受眾。輸出精簡且符合受眾需求的簡"
-  },
-  {
-   "seq": "A032",
-   "name": "Porter Five Forces Profiler",
-   "cname": "波特五力分析師",
-   "file": "zh/v1/Agent/A032_PorterFiveForcesProfiler.html",
-   "en_file": "en/v1/Agent/A032_PorterFiveForcesProfiler_EN.html",
-   "preview": "Porter Five Forces Profiler 協助使用者透過 Michael Porter 的五力架構，分析任一產業的競爭結構與市場吸引力，並提供策略性洞察與行動建議。"
-  },
-  {
-   "seq": "A033",
-   "name": "Say No Coach2",
-   "cname": "職場婉拒教練",
-   "file": "zh/v1/Agent/A033_SayNoCoach2.html",
-   "en_file": "en/v1/Agent/A033_SayNoCoach2_EN.html",
-   "preview": "Say No Coach 2 透過 PLANT 框架（Pause、Listen、Acknowledge、Negotiate、Tend）協助使用者在職場以專業、尊重且自信的方式婉拒請求，提供具同理心的回應範本與替代方案。"
-  },
-  {
-   "seq": "A034",
-   "name": "OKR Coach Agent",
-   "cname": "OKR 教練",
-   "file": "zh/v1/Agent/A034_OKRCoachAgent.html",
-   "en_file": "en/v1/Agent/A034_OKRCoachAgent_EN.html",
-   "preview": "OKR Coach Agent 協助使用者把策略主題或目標轉化為結構良好、可量化、可執行的 OKR（Objectives & Key Results），並建議對應行動方案。"
-  },
-  {
-   "seq": "A035",
-   "name": "AB Testing Ideas",
-   "cname": "A/B 測試創意產生器",
-   "file": "zh/v1/Agent/A035_ABTestingIdeas.html",
-   "en_file": "en/v1/Agent/A035_ABTestingIdeas_EN.html",
-   "preview": "A/B Testing Ideas 協助行銷與產品團隊針對任意主題快速產出多組可執行的 A/B 測試假設，包含變數設計、預期 KPI 影響與實驗計畫。"
-  },
-  {
-   "seq": "A036",
-   "name": "Meeting Recap Companion",
-   "cname": "會議摘要助理",
-   "file": "zh/v1/Agent/A036_MeetingRecapCompanion.html",
-   "en_file": "en/v1/Agent/A036_MeetingRecapCompanion_EN.html",
-   "preview": "Meeting Recap Companion 將會議逐字稿或筆記轉換為結構化的會後摘要，包含關鍵決策、行動事項、負責人與時程，方便團隊跟進。"
-  },
-  {
-   "seq": "A037",
-   "name": "Policy Author Pro",
-   "cname": "政策文件撰寫師",
-   "file": "zh/v1/Agent/A037_PolicyAuthorPro.html",
-   "en_file": "en/v1/Agent/A037_PolicyAuthorPro_EN.html",
-   "preview": "Policy Author Pro 將政策主題與粗略想法轉化為符合企業標準的完整政策文件草稿，提供一致的章節結構與專業語氣。"
-  },
-  {
-   "seq": "A038",
-   "name": "Monthly KPI Comparator",
-   "cname": "月度 KPI 比較器",
-   "file": "zh/v1/Agent/A038_MonthlyKPIComparator.html",
-   "en_file": "en/v1/Agent/A038_MonthlyKPIComparator_EN.html",
-   "preview": "Monthly KPI Comparator 接受當月與前月 KPI 數據，自動計算變化幅度，產生具洞察的月度比較報告與主管摘要。"
-  },
-  {
-   "seq": "A039",
-   "name": "Agent Of Change",
-   "cname": "變革推動教練",
-   "file": "zh/v1/Agent/A039_AgentOfChange.html",
-   "en_file": "en/v1/Agent/A039_AgentOfChange_EN.html",
-   "preview": "Agent of Change 協助使用者規劃並推動組織變革，透過 Why/What/Who/How/When 框架建立清晰、以人為本的變革計畫。"
-  },
-  {
-   "seq": "A040",
-   "name": "Meeting Prep",
-   "cname": "會議準備助手",
-   "file": "zh/v1/Agent/A040_MeetingPrep.html",
-   "en_file": "en/v1/Agent/A040_MeetingPrep_EN.html",
-   "preview": "Meeting Prep 協助使用者在會前快速規劃議程、識別關鍵問題、準備談話要點與反向論點，提升會議效率。"
-  },
-  {
-   "seq": "A041",
-   "name": "Policy Simplifier",
-   "cname": "政策白話翻譯師",
-   "file": "zh/v1/Agent/A041_PolicySimplifier.html",
-   "en_file": "en/v1/Agent/A041_PolicySimplifier_EN.html",
-   "preview": "Policy Simplifier 將冗長複雜的政策文件轉為易讀的角色專屬一頁說明，包含關鍵重點、待辦清單、禁止事項與待釐清項目。"
-  },
-  {
-   "seq": "A042",
-   "name": "Evite",
-   "cname": "會議邀請設計師",
-   "file": "zh/v1/Agent/A042_Evite.html",
-   "en_file": "en/v1/Agent/A042_Evite_EN.html",
-   "preview": "Evite 透過引導問題協助使用者快速產出有溫度、有設計感的 Outlook 會議邀請，可直接貼上寄送。"
-  },
-  {
-   "seq": "A043",
-   "name": "Devils Advocate",
-   "cname": "魔鬼辯護人",
-   "file": "zh/v1/Agent/A043_DevilsAdvocate.html",
-   "en_file": "en/v1/Agent/A043_DevilsAdvocate_EN.html",
-   "preview": "在你把想法、計畫、決策帶到真實聽眾面前之前，先把它們狠狠壓力測試一遍。揭露隱性假設、跑一場 pre-mortem、預測最挑剔的主管會丟出哪些最難的問題。預設絕不肯定。當你不想要一個應聲蟲時，這個 Agent 正好能派上用場。"
-  },
-  {
-   "seq": "A044",
-   "name": "Team Morale Assistant",
-   "cname": "團隊士氣激勵助手",
-   "file": "zh/v1/Agent/A044_TeamMoraleAssistant.html",
-   "en_file": "en/v1/Agent/A044_TeamMoraleAssistant_EN.html",
-   "preview": "「團隊參與與士氣助手」是一個宣告式 Agent，協助主管、個別貢獻者、HR 人員或任何團隊成員打造正向且具包容力的團隊文化。它依團隊規模、工作模式（遠距／混合／實體）與明確偏好，提供具創意、可擴展的團隊建立活動、表揚方案與士氣提振活動建議。"
-  },
-  {
-   "seq": "A045",
-   "name": "Monthly KPI Comparator",
-   "cname": "月度 KPI 對比助手",
-   "file": "zh/v1/Agent/A045_MonthlyKPIComparator.html",
-   "en_file": "en/v1/Agent/A045_MonthlyKPIComparator_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，會分析使用者提供的月度 KPI，產出結構化、可直接呈報主管的執行摘要。Agent 會比較本月與上月的 KPI、突顯進步與下滑的指標、僅根據使用者提供的備註做詮釋，並產出適合 Email "
-  },
-  {
-   "seq": "A046",
-   "name": "Business Case Builder",
-   "cname": "商業提案產生器",
-   "file": "zh/v1/Agent/A046_BusinessCaseBuilder.html",
-   "en_file": "en/v1/Agent/A046_BusinessCaseBuilder_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，協助使用者把專案構想轉換成結構完整、適合呈報管理層的商業提案。Agent 會根據使用者提供的專案描述、預期效益與估算成本，產出包含問題敘述、解決方案、策略對齊、成本效益分析、時程、風險分"
-  },
-  {
-   "seq": "A047",
-   "name": "Process Optimizer",
-   "cname": "流程優化師",
-   "file": "zh/v1/Agent/A047_ProcessOptimizer.html",
-   "en_file": "en/v1/Agent/A047_ProcessOptimizer_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，協助使用者系統化規劃或優化任何業務流程。Agent 先以 9 道結構化問題收集脈絡（新／舊流程、目標、KPI、scope、利害關係人、資源、限制等），確認 scope 後才產出完整工作藍"
-  }
- ],
- "Agent_v2": [
-  {
-   "seq": "A001",
-   "name": "Exec News Aggregator",
-   "cname": "主管新聞聚合器",
-   "file": "zh/v2/Agent/A001_ExecNewsAggregator.html",
-   "en_file": "en/v2/Agent/A001_ExecNewsAggregator_EN.html",
-   "preview": "**主管新聞聚合器（Exec News Aggregator）** 透過蒐集、過濾、摘要近期、可信賴且相關的產業新聞與趨勢，協助你保持資訊靈通。 它會交付精簡、聚焦決策的更新內容，並依你的關注領域客製化， 幫助你掌握市場變化、競爭對手動態與"
-  },
-  {
-   "seq": "A002",
-   "name": "Daily Challenge Agent",
-   "cname": "每日挑戰 Agent",
-   "file": "zh/v2/Agent/A002_DailyChallengeAgent.html",
-   "en_file": "en/v2/Agent/A002_DailyChallengeAgent_EN.html",
-   "preview": "這個 Agent 透過每日挑戰與互動測驗，幫助使用者提升提示詞工程技能。它使用 GSEC 框架 （目標 Goal、來源 Source、期望 Expectation、情境 Context）教導並強化最佳實踐，並透過實作練習鼓勵使用者不斷迭代、"
-  },
-  {
-   "seq": "A003",
-   "name": "SWOT Analysis Agent",
-   "cname": "SWOT 分析 Agent",
-   "file": "zh/v2/Agent/A003_SWOTAnalysisAgent.html",
-   "en_file": "en/v2/Agent/A003_SWOTAnalysisAgent_EN.html",
-   "preview": "SWOT Agent 協助使用者針對各種主題——包括產品、團隊、事業單位、策略與計畫——產生結構化且具洞察力的 SWOT 分析。它是策略規劃、回顧會議、工作坊和主管報告的寶貴工具，幫助找出關鍵洞察、對齊利害關係人，並以清晰精準的方式支援決策"
-  },
-  {
-   "seq": "A004",
-   "name": "Statement Of Work Agent",
-   "cname": "工作說明書 Agent",
-   "file": "zh/v2/Agent/A004_StatementOfWorkAgent.html",
-   "en_file": "en/v2/Agent/A004_StatementOfWorkAgent_EN.html",
-   "preview": "你是一位工作說明書建立工具。你的職責是根據使用者輸入及提供的參考文件或範本，撰寫詳細且有效的工作說明書（Statement of Work, SoW）。"
-  },
-  {
-   "seq": "A005",
-   "name": "Event Agent",
-   "cname": "活動問答 Agent",
-   "file": "zh/v2/Agent/A005_EventAgent.html",
-   "en_file": "en/v2/Agent/A005_EventAgent_EN.html",
-   "preview": "活動問答 Agent 協助你快速導覽 [活動名稱]。無論你在尋找議程場次、場地資訊還是講者介紹，活動 Agent 都能確保你充分享受活動體驗。"
-  },
-  {
-   "seq": "A006",
-   "name": "Knowledge Extractor",
-   "cname": "知識萃取器",
-   "file": "zh/v2/Agent/A006_KnowledgeExtractor.html",
-   "en_file": "en/v2/Agent/A006_KnowledgeExtractor_EN.html",
-   "preview": "這個 Agent 協助使用者從會議、工作坊或專家討論中萃取關鍵學習和知識元素，並將其轉化為簡潔、即用的學習片段。它分析描述、文件、筆記或其他內容，生成可快速分享或加入內部知識庫的摘要、測驗題和實用技巧。"
-  },
-  {
-   "seq": "A007",
-   "name": "Scenario Simulator",
-   "cname": "情境模擬器",
-   "file": "zh/v2/Agent/A007_ScenarioSimulator.html",
-   "en_file": "en/v2/Agent/A007_ScenarioSimulator_EN.html",
-   "preview": "情境模擬器 Agent 協助商業使用者透過對話式 What-if 模擬，預先探索營運和財務變化的影響。透過解讀自然語言輸入，Agent 生成結構化的決策簡報，包含假設條件、敏感度分析、風險因素和建議下一步。設計用於快速探索性分析，而非取代正"
-  },
-  {
-   "seq": "A008",
-   "name": "M365 Project Helper",
-   "cname": "M365 專案小幫手",
-   "file": "zh/v2/Agent/A008_M365ProjectHelper.html",
-   "en_file": "en/v2/Agent/A008_M365ProjectHelper_EN.html",
-   "preview": "一個多功能的專案助手，專為簡化 Microsoft 365 計畫而設計，提供結構化引導、規劃支援和最佳實踐洞察。內建彈性設計，可輕鬆客製化用於其他 IT 或業務專案，確保各種場景下都能達成一致、可擴展且高效的專案執行。"
-  },
-  {
-   "seq": "A009",
-   "name": "Your Namesake",
-   "cname": "命名大師",
-   "file": "zh/v2/Agent/A009_YourNamesake.html",
-   "en_file": "en/v2/Agent/A009_YourNamesake_EN.html",
-   "preview": "這個 Agent 協助使用者為解決方案和專案產生有創意、相關且專業的名稱。它一致輸出 10 個名稱建議，每個都搭配一句朗朗上口的 Slogan，確保輸出既有想像力又適合專業使用。設計用於支援各行業的內部團隊或外部客戶，依使用者偏好調整語氣和"
-  },
-  {
-   "seq": "A010",
-   "name": "AI Mindset Agent",
-   "cname": "AI 思維顧問",
-   "file": "zh/v2/Agent/A010_AIMindsetAgent.html",
-   "en_file": "en/v2/Agent/A010_AIMindsetAgent_EN.html",
-   "preview": "AI 思維顧問是你識別合適 AI 解決方案的專業嚮導。無論你在探索 Microsoft 365 Copilot，還是不確定從哪裡開始，這個助手都會引導你完成結構化的探索流程，挖掘你的目標、痛點和 AI 機會，並推薦最合適的 AI 驅動解決方"
-  },
-  {
-   "seq": "A011",
-   "name": "Prompting Mentor",
-   "cname": "提示詞導師",
-   "file": "zh/v2/Agent/A011_PromptingMentor.html",
-   "en_file": "en/v2/Agent/A011_PromptingMentor_EN.html",
-   "preview": "這個 Agent 透過每日挑戰與互動測驗，幫助使用者提升提示詞工程技能。它使用 GSEC 框架（目標 Goal、來源 Source、期望 Expectation、情境 Context）教導並強化最佳實踐，並透過實作練習鼓勵使用者不斷迭代、反"
-  },
-  {
-   "seq": "A012",
-   "name": "Document Classificator",
-   "cname": "文件分類師",
-   "file": "zh/v2/Agent/A012_DocumentClassificator.html",
-   "en_file": "en/v2/Agent/A012_DocumentClassificator_EN.html",
-   "preview": "這個 Agent 審查單一上傳文件，並根據內部分類指引建議適當的資料分類標籤。建議結果包含以文件原始語言撰寫的正式說明。"
-  },
-  {
-   "seq": "A013",
-   "name": "SMART Goals",
-   "cname": "SMART 目標 Agent",
-   "file": "zh/v2/Agent/A013_SMARTGoals.html",
-   "en_file": "en/v2/Agent/A013_SMARTGoals_EN.html",
-   "preview": "SMART Agent 協助使用者使用 SMART 框架定義、精煉和確定目標範圍。SMART 代表：具體 Specific、可測量 Measurable、吸引人 Attractive、現實的 Realistic、有期限 Time-bound"
-  },
-  {
-   "seq": "A014",
-   "name": "NDA Comparison Agent",
-   "cname": "保密協議比對 Agent",
-   "file": "zh/v2/Agent/A014_NDAComparisonAgent.html",
-   "en_file": "en/v2/Agent/A014_NDAComparisonAgent_EN.html",
-   "preview": "這個 Agent 協助法律專業人員比對保密協議（NDA），分析上傳的文件和內部參考文件，識別並突顯關鍵條款、潛在風險和文件之間的差異。Agent 以表格格式輸出結構化比較，確保整個過程的法律準確性、清晰度和保密性。"
-  },
-  {
-   "seq": "A015",
-   "name": "Agent Crafter",
-   "cname": "Agent 設計師",
-   "file": "zh/v2/Agent/A015_AgentCrafter.html",
-   "en_file": "en/v2/Agent/A015_AgentCrafter_EN.html",
-   "preview": "協助使用者為其 Agent 撰寫高品質的指示詞，或審查現有指示詞並整合建議的改善方案。"
-  },
-  {
-   "seq": "A016",
-   "name": "Your Proofreader",
-   "cname": "校稿助手",
-   "file": "zh/v2/Agent/A016_YourProofreader.html",
-   "en_file": "en/v2/Agent/A016_YourProofreader_EN.html",
-   "preview": "一個分析上傳文字和文件的 Agent，提供建設性回饋，並建議可直接實施和使用的清晰改善方案。"
-  },
-  {
-   "seq": "A017",
-   "name": "Your Problem Solver",
-   "cname": "萬能解題助手",
-   "file": "zh/v2/Agent/A017_YourProblemSolver.html",
-   "en_file": "en/v2/Agent/A017_YourProblemSolver_EN.html",
-   "preview": "使用本 Copilot Agent 打造你的個人解題夥伴，幫助你解決各種挑戰！透過 AI 引導的互動式對話，以逐步深入的方式探索你的問題，並提供建議和更深入的分析，每一輪對話都更接近解決方案。"
-  },
-  {
-   "seq": "A018",
-   "name": "News Aggregator Agent",
-   "cname": "新聞聚合 Agent",
-   "file": "zh/v2/Agent/A018_NewsAggregatorAgent.html",
-   "en_file": "en/v2/Agent/A018_NewsAggregatorAgent_EN.html",
-   "preview": "新聞聚合 Agent（Exec News Aggregator） 主動為主管提供精簡、可信、即時的產業新聞摘要，依個人關注領域客製化內容。支援即時警示、互動式查詢與持續學習，幫助決策者快速掌握市場、競爭與法規變化，保持資訊領先。"
-  },
-  {
-   "seq": "A019",
-   "name": "Checklist Manifesto Agent",
-   "cname": "清單宣言 Agent",
-   "file": "zh/v2/Agent/A019_ChecklistManifestoAgent.html",
-   "en_file": "en/v2/Agent/A019_ChecklistManifestoAgent_EN.html",
-   "preview": "清單宣言 Agent（Checklist Manifesto） 協助使用者為複雜或高風險任務設計與審查清單，把零散待辦轉成清晰可執行的步驟。確保關鍵環節不被遺漏、邏輯順序合理，提升交付一致性與品質。"
-  },
-  {
-   "seq": "A020",
-   "name": "Dealcrafter Agent",
-   "cname": "談判大師 Agent",
-   "file": "zh/v2/Agent/A020_DealcrafterAgent.html",
-   "en_file": "en/v2/Agent/A020_DealcrafterAgent_EN.html",
-   "preview": "談判大師 Agent（Dealcrafter） 作為談判助手，協助使用者規劃、模擬、提案與優化談判結果。引導你拆解利益、設計策略、預演對話，並在事後檢討中持續強化談判能力。"
-  },
-  {
-   "seq": "A021",
-   "name": "Training Content Writer",
-   "cname": "培訓內容創作者",
-   "file": "zh/v2/Agent/A021_TrainingContentWriter.html",
-   "en_file": "en/v2/Agent/A021_TrainingContentWriter_EN.html",
-   "preview": "提升企業學習素材的品質。協助內容創作者製作高品質、吸引人且有效的學習內容，用於內部溝通。從定義目標、了解受眾、最佳化內容到確保正確語調，全程支援內容創作流程，提升培訓計畫效果，賦能員工發展。"
-  },
-  {
-   "seq": "A022",
-   "name": "Decision Architect",
-   "cname": "決策架構師",
-   "file": "zh/v2/Agent/A022_DecisionArchitect.html",
-   "en_file": "en/v2/Agent/A022_DecisionArchitect_EN.html",
-   "preview": "幫助使用者透過多標準決策分析（MCDA）框架，以清晰、逐步的方式做出明智選擇。透過結構化呈現選項評估，提升決策品質，確保透明、以證據為基礎的決策流程，降低認知偏差，為日常工作場景中的複雜決策帶來清晰度。"
-  },
-  {
-   "seq": "A023",
-   "name": "Wellness Productivity Coach",
-   "cname": "健康生產力教練",
-   "file": "zh/v2/Agent/A023_WellnessProductivityCoach.html",
-   "en_file": "en/v2/Agent/A023_WellnessProductivityCoach_EN.html",
-   "preview": "幫助員工改善身心健康，同時提升日常生產力。提供個人化指導，包括每日生產力提示、工作生活平衡建議，以及快速健康建議（桌邊伸展、正念練習、時間管理技巧）。透過鼓勵健康習慣與激勵訊息，幫助使用者將健康融入工作日常，維持高效表現。"
-  },
-  {
-   "seq": "A024",
-   "name": "Innovation Radar Agent",
-   "cname": "創新雷達 Agent",
-   "file": "zh/v2/Agent/A024_InnovationRadarAgent.html",
-   "en_file": "en/v2/Agent/A024_InnovationRadarAgent_EN.html",
-   "preview": "依據使用者查詢和輸入，從中擷取洞察並結合最新產業趨勢。將這些資訊合成為可行的創新想法，使用結構化框架和提示詞引導腦力激盪，並透過遊戲化設計（挑戰賽或測驗）將創意轉化為促進團隊參與的活動。"
-  },
-  {
-   "seq": "A025",
-   "name": "Product Crafter",
-   "cname": "產品規劃師",
-   "file": "zh/v2/Agent/A025_ProductCrafter.html",
-   "en_file": "en/v2/Agent/A025_ProductCrafter_EN.html",
-   "preview": "協助產品團隊（產品經理、UX 設計師、軟體開發者）進行早期產品規劃。利用 Agile 使用者故事、客戶旅程地圖和 JTBD 等成熟框架，將原始想法轉化為可行、以使用者為中心的產出物。確保產出一致、高品質，並與業務目標對齊，幫助團隊優先排序功"
-  },
-  {
-   "seq": "A026",
-   "name": "Coherence Agent",
-   "cname": "一致性 Agent",
-   "file": "zh/v2/Agent/A026_CoherenceAgent.html",
-   "en_file": "en/v2/Agent/A026_CoherenceAgent_EN.html",
-   "preview": "一致性 Agent（Alignment Agent） 協助團隊維持策略一致性，分析使用者貼上的目標、計畫與內容，找出落差、矛盾與隱藏依賴。透過結構化提示，協助對齊跨部門方向、化解溝通鴻溝。"
-  },
-  {
-   "seq": "A027",
-   "name": "Resolution Agent",
-   "cname": "決心教練",
-   "file": "zh/v2/Agent/A027_ResolutionAgent.html",
-   "en_file": "en/v2/Agent/A027_ResolutionAgent_EN.html",
-   "preview": "透過行為科學框架 COM-B（能力、機會、動機）幫助使用者突破行為障礙，建立一致的決心和挑戰。提供及時、個性化的支持，讓技能採用、流程執行、習慣養成和決策更直覺、更可達成，成為你全年可靠的行為改變夥伴。"
-  },
-  {
-   "seq": "A028",
-   "name": "Storytelling Mentor",
-   "cname": "說故事導師",
-   "file": "zh/v2/Agent/A028_StorytellingMentor.html",
-   "en_file": "en/v2/Agent/A028_StorytellingMentor_EN.html",
-   "preview": "說故事導師（Storytelling Mentor） 協助使用者編織動人故事、架構有影響力的演說、提升簡報與提案的表達力。適用於 pitch、領導演說、產品發表等場合，從故事骨架到台風細節都能優化。"
-  },
-  {
-   "seq": "A029",
-   "name": "Marketing Agent",
-   "cname": "社群行銷 Agent",
-   "file": "zh/v2/Agent/A029_MarketingAgent.html",
-   "en_file": "en/v2/Agent/A029_MarketingAgent_EN.html",
-   "preview": "在 Facebook、Instagram、Twitter、LinkedIn 和 TikTok 等多個平台上，創建、最佳化和管理吸引人的社群媒體內容。維持品牌聲音、提升互動率和驅動成長，同時確保符合法律與道德標準。可選擇性地在 Agent 設"
-  },
-  {
-   "seq": "A030",
-   "name": "Peer Feedback Agent",
-   "cname": "同儕回饋 Agent",
-   "file": "zh/v2/Agent/A030_PeerFeedbackAgent.html",
-   "en_file": "en/v2/Agent/A030_PeerFeedbackAgent_EN.html",
-   "preview": "同儕回饋 Agent（Peer Feedback） 協助你為同事撰寫專業、用心的回饋或讚美，無論是慶賀里程碑、給予建設性建議或感謝協助。確保語氣得體、重點清晰，讓回饋既真誠又有影響力。"
-  },
-  {
-   "seq": "A031",
-   "name": "Presentation Optimizer Agent",
-   "cname": "簡報最佳化 Agent",
-   "file": "zh/v2/Agent/A031_PresentationOptimizerAgent.html",
-   "en_file": "en/v2/Agent/A031_PresentationOptimizerAgent_EN.html",
-   "preview": "幫助最佳化即將進行的會議簡報，審查內容、識別冗餘，並提出精簡版本，在保留關鍵訊息的同時節省時間。主要功能：確認會議細節（時長、受眾、預留時間）、分析重複或冗餘投影片、建議整合與時間調整、確保語調和內容符合特定受眾。輸出精簡且符合受眾需求的簡"
-  },
-  {
-   "seq": "A032",
-   "name": "Porter Five Forces Profiler",
-   "cname": "波特五力分析師",
-   "file": "zh/v2/Agent/A032_PorterFiveForcesProfiler.html",
-   "en_file": "en/v2/Agent/A032_PorterFiveForcesProfiler_EN.html",
-   "preview": "Porter Five Forces Profiler 協助使用者透過 Michael Porter 的五力架構，分析任一產業的競爭結構與市場吸引力，並提供策略性洞察與行動建議。"
-  },
-  {
-   "seq": "A033",
-   "name": "Say No Coach2",
-   "cname": "職場婉拒教練",
-   "file": "zh/v2/Agent/A033_SayNoCoach2.html",
-   "en_file": "en/v2/Agent/A033_SayNoCoach2_EN.html",
-   "preview": "Say No Coach 2 透過 PLANT 框架（Pause、Listen、Acknowledge、Negotiate、Tend）協助使用者在職場以專業、尊重且自信的方式婉拒請求，提供具同理心的回應範本與替代方案。"
-  },
-  {
-   "seq": "A034",
-   "name": "OKR Coach Agent",
-   "cname": "OKR 教練",
-   "file": "zh/v2/Agent/A034_OKRCoachAgent.html",
-   "en_file": "en/v2/Agent/A034_OKRCoachAgent_EN.html",
-   "preview": "OKR Coach Agent 協助使用者把策略主題或目標轉化為結構良好、可量化、可執行的 OKR（Objectives & Key Results），並建議對應行動方案。"
-  },
-  {
-   "seq": "A035",
-   "name": "AB Testing Ideas",
-   "cname": "A/B 測試創意產生器",
-   "file": "zh/v2/Agent/A035_ABTestingIdeas.html",
-   "en_file": "en/v2/Agent/A035_ABTestingIdeas_EN.html",
-   "preview": "A/B Testing Ideas 協助行銷與產品團隊針對任意主題快速產出多組可執行的 A/B 測試假設，包含變數設計、預期 KPI 影響與實驗計畫。"
-  },
-  {
-   "seq": "A036",
-   "name": "Meeting Recap Companion",
-   "cname": "會議摘要助理",
-   "file": "zh/v2/Agent/A036_MeetingRecapCompanion.html",
-   "en_file": "en/v2/Agent/A036_MeetingRecapCompanion_EN.html",
-   "preview": "Meeting Recap Companion 將會議逐字稿或筆記轉換為結構化的會後摘要，包含關鍵決策、行動事項、負責人與時程，方便團隊跟進。"
-  },
-  {
-   "seq": "A037",
-   "name": "Policy Author Pro",
-   "cname": "政策文件撰寫師",
-   "file": "zh/v2/Agent/A037_PolicyAuthorPro.html",
-   "en_file": "en/v2/Agent/A037_PolicyAuthorPro_EN.html",
-   "preview": "Policy Author Pro 將政策主題與粗略想法轉化為符合企業標準的完整政策文件草稿，提供一致的章節結構與專業語氣。"
-  },
-  {
-   "seq": "A038",
-   "name": "Monthly KPI Comparator",
-   "cname": "月度 KPI 比較器",
-   "file": "zh/v2/Agent/A038_MonthlyKPIComparator.html",
-   "en_file": "en/v2/Agent/A038_MonthlyKPIComparator_EN.html",
-   "preview": "Monthly KPI Comparator 接受當月與前月 KPI 數據，自動計算變化幅度，產生具洞察的月度比較報告與主管摘要。"
-  },
-  {
-   "seq": "A039",
-   "name": "Agent Of Change",
-   "cname": "變革推動教練",
-   "file": "zh/v2/Agent/A039_AgentOfChange.html",
-   "en_file": "en/v2/Agent/A039_AgentOfChange_EN.html",
-   "preview": "Agent of Change 協助使用者規劃並推動組織變革，透過 Why/What/Who/How/When 框架建立清晰、以人為本的變革計畫。"
-  },
-  {
-   "seq": "A040",
-   "name": "Meeting Prep",
-   "cname": "會議準備助手",
-   "file": "zh/v2/Agent/A040_MeetingPrep.html",
-   "en_file": "en/v2/Agent/A040_MeetingPrep_EN.html",
-   "preview": "Meeting Prep 協助使用者在會前快速規劃議程、識別關鍵問題、準備談話要點與反向論點，提升會議效率。"
-  },
-  {
-   "seq": "A041",
-   "name": "Policy Simplifier",
-   "cname": "政策白話翻譯師",
-   "file": "zh/v2/Agent/A041_PolicySimplifier.html",
-   "en_file": "en/v2/Agent/A041_PolicySimplifier_EN.html",
-   "preview": "Policy Simplifier 將冗長複雜的政策文件轉為易讀的角色專屬一頁說明，包含關鍵重點、待辦清單、禁止事項與待釐清項目。"
-  },
-  {
-   "seq": "A042",
-   "name": "Evite",
-   "cname": "會議邀請設計師",
-   "file": "zh/v2/Agent/A042_Evite.html",
-   "en_file": "en/v2/Agent/A042_Evite_EN.html",
-   "preview": "Evite 透過引導問題協助使用者快速產出有溫度、有設計感的 Outlook 會議邀請，可直接貼上寄送。"
-  },
-  {
-   "seq": "A043",
-   "name": "Devils Advocate",
-   "cname": "魔鬼辯護人",
-   "file": "zh/v2/Agent/A043_DevilsAdvocate.html",
-   "en_file": "en/v2/Agent/A043_DevilsAdvocate_EN.html",
-   "preview": "在你把想法、計畫、決策帶到真實聽眾面前之前，先把它們狠狠壓力測試一遍。揭露隱性假設、跑一場 pre-mortem、預測最挑剔的主管會丟出哪些最難的問題。預設絕不肯定。當你不想要一個應聲蟲時，這個 Agent 正好能派上用場。"
-  },
-  {
-   "seq": "A044",
-   "name": "Team Morale Assistant",
-   "cname": "團隊士氣激勵助手",
-   "file": "zh/v2/Agent/A044_TeamMoraleAssistant.html",
-   "en_file": "en/v2/Agent/A044_TeamMoraleAssistant_EN.html",
-   "preview": "「團隊參與與士氣助手」是一個宣告式 Agent，協助主管、個別貢獻者、HR 人員或任何團隊成員打造正向且具包容力的團隊文化。它依團隊規模、工作模式（遠距／混合／實體）與明確偏好，提供具創意、可擴展的團隊建立活動、表揚方案與士氣提振活動建議。"
-  },
-  {
-   "seq": "A045",
-   "name": "Monthly KPI Comparator",
-   "cname": "月度 KPI 對比助手",
-   "file": "zh/v2/Agent/A045_MonthlyKPIComparator.html",
-   "en_file": "en/v2/Agent/A045_MonthlyKPIComparator_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，會分析使用者提供的月度 KPI，產出結構化、可直接呈報主管的執行摘要。Agent 會比較本月與上月的 KPI、突顯進步與下滑的指標、僅根據使用者提供的備註做詮釋，並產出適合 Email "
-  },
-  {
-   "seq": "A046",
-   "name": "Business Case Builder",
-   "cname": "商業提案產生器",
-   "file": "zh/v2/Agent/A046_BusinessCaseBuilder.html",
-   "en_file": "en/v2/Agent/A046_BusinessCaseBuilder_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，協助使用者把專案構想轉換成結構完整、適合呈報管理層的商業提案。Agent 會根據使用者提供的專案描述、預期效益與估算成本，產出包含問題敘述、解決方案、策略對齊、成本效益分析、時程、風險分"
-  },
-  {
-   "seq": "A047",
-   "name": "Process Optimizer",
-   "cname": "流程優化師",
-   "file": "zh/v2/Agent/A047_ProcessOptimizer.html",
-   "en_file": "en/v2/Agent/A047_ProcessOptimizer_EN.html",
-   "preview": "一個運作於 Copilot Chat 的 Agent，協助使用者系統化規劃或優化任何業務流程。Agent 先以 9 道結構化問題收集脈絡（新／舊流程、目標、KPI、scope、利害關係人、資源、限制等），確認 scope 後才產出完整工作藍"
-  }
- ],
- "Prompt_v1": [
-  {
-   "seq": "P001",
-   "name": "Copilot Memory",
-   "cname": "啟用 Copilot Memory",
-   "file": "zh/v1/Prompt/P001_CopilotMemory.html",
-   "en_file": "en/v1/Prompt/P001_CopilotMemory_EN.html",
-   "preview": "幫我啟動我的 Copilot Memory 。請問我三個簡單的問題：分別關於我的 工作風格 、 寫作風格 ，以及 我的職務角色 的關鍵事實。請把我的回答加到我的 Copilot Memory 個人檔案中。"
-  },
-  {
-   "seq": "P002",
-   "name": "Communication Style Personalizer",
-   "cname": "溝通風格個人化設定",
-   "file": "zh/v1/Prompt/P002_CommunicationStylePersonalizer.html",
-   "en_file": "en/v1/Prompt/P002_CommunicationStylePersonalizer_EN.html",
-   "preview": "請分析我過去 3 個月在 Outlook 與 Teams 的溝通內容（訊息、回覆、會議筆記），歸納出我的溝通風格，包含： 1. 語氣（正式/口語、直接/委婉、嚴謹/輕鬆） 2. 結構偏好（條列、段落、開門見山或鋪陳） 3. 常用詞彙與避免詞"
-  },
-  {
-   "seq": "P003",
-   "name": "Contribution Opportunity Finder",
-   "cname": "貢獻機會探索器",
-   "file": "zh/v1/Prompt/P003_ContributionOpportunityFinder.html",
-   "en_file": "en/v1/Prompt/P003_ContributionOpportunityFinder_EN.html",
-   "preview": "請執行兩個步驟： Step 1. 從我最近的 Email、行事曆與 Teams 訊息，整理出我目前最重要的 3–5 個工作優先事項，每個用一句話描述。 Step 2. 接著掃描我過去 30 天的電子報訂閱（newsletter）內容，找出與"
-  },
-  {
-   "seq": "P004",
-   "name": "Accessibility Review",
-   "cname": "無障礙文件審查助理",
-   "file": "zh/v1/Prompt/P004_AccessibilityReview.html",
-   "en_file": "en/v1/Prompt/P004_AccessibilityReview_EN.html",
-   "preview": "請審查此文件，確保其符合無障礙標準。識別任何無障礙問題並提供改善建議。確保文件完全無障礙且符合相關無障礙指引。此文件面向多元受眾，包括身心障礙者。它應能供螢幕閱讀器使用、具備適當的色彩對比度，並為圖片提供替代文字。請確保輸出內容詳盡，提供詳"
-  },
-  {
-   "seq": "P005",
-   "name": "Email Thread Stakeholder Update",
-   "cname": "電子郵件串利害關係人更新",
-   "file": "zh/v1/Prompt/P005_EmailThreadStakeholderUpdate.html",
-   "en_file": "en/v1/Prompt/P005_EmailThreadStakeholderUpdate_EN.html",
-   "preview": "請根據此電子郵件串草擬一份簡潔的利害關係人狀態更新。• 包含 4 個帶標題的章節：已做決策、目前狀態、風險/阻礙（附建議的緩解措施）、後續步驟（負責人 + 目標日期）。• 正文限制在約 150 字；使用可快速掃描的項目符號。• 在頂部提出清"
-  },
-  {
-   "seq": "P006",
-   "name": "One On One Agenda Generator",
-   "cname": "🗓️ 自動生成 1:1 會議議程",
-   "file": "zh/v1/Prompt/P006_OneOnOneAgendaGenerator.html",
-   "en_file": "en/v1/Prompt/P006_OneOnOneAgendaGenerator_EN.html",
-   "preview": "為我和主管的每週一對一會議生成一份結構化議程。我想回顧過去一週、對齊優先事項，並提出任何阻礙或需要的回饋。來源：使用我最近的工作主題（電子郵件、會議、聊天…）。以條列式議程格式輸出，分為以下幾個部分： - 成果與進展 - 挑戰與阻礙 - 下"
-  },
-  {
-   "seq": "P007",
-   "name": "Outlook Email Summarizer",
-   "cname": "📧 Outlook 郵件摘要與回覆草稿",
-   "file": "zh/v1/Prompt/P007_OutlookEmailSummarizer.html",
-   "en_file": "en/v1/Prompt/P007_OutlookEmailSummarizer_EN.html",
-   "preview": "用兩句話摘要這封郵件。在下一節中，標示郵件串中指派給我的任何任務。然後為我的回覆建立一份草稿。"
-  },
-  {
-   "seq": "P008",
-   "name": "Researcher Executive Brief",
-   "cname": "🔬 Researcher：生成有引用來源的高管簡報",
-   "file": "zh/v1/Prompt/P008_ResearcherExecutiveBrief.html",
-   "en_file": "en/v1/Prompt/P008_ResearcherExecutiveBrief_EN.html",
-   "preview": "針對 [主題]，請依我的職務角色 [角色] 建立一份簡潔的高管簡報，並附上引用來源。 請包含以下內容： 1. 執行摘要：五個重點條列 2. 趨勢、風險、機會：各三項，每項附 1-2 個引用來源 3. 競爭格局快覽：五個重點，摘要市場上各方在"
-  },
-  {
-   "seq": "P009",
-   "name": "Excel Data Quality Audit",
-   "cname": "📊 Excel 資料品質稽核與修復清單",
-   "file": "zh/v1/Prompt/P009_ExcelDataQualityAudit.html",
-   "en_file": "en/v1/Prompt/P009_ExcelDataQualityAudit_EN.html",
-   "preview": "任務：對這份工作表上的資料表進行概況分析與品質檢查。 假設：第一列為標題。若有多個資料表，請先問我使用哪一個。若需要 ID 或數值欄位，請先詢問我。 請對資料的副本執行以下操作： 1. 資料概況：每個欄位的資料類型、空白率、唯一率、最小/最"
-  },
-  {
-   "seq": "P010",
-   "name": "Document Glossary Builder",
-   "cname": "📖 文件術語表自動生成",
-   "file": "zh/v1/Prompt/P010_DocumentGlossaryBuilder.html",
-   "en_file": "en/v1/Prompt/P010_DocumentGlossaryBuilder_EN.html",
-   "preview": "在不修改文件的情況下，建立一份文件中常見術語及其定義的清單。"
-  },
-  {
-   "seq": "P011",
-   "name": "Honest Friend Mirror",
-   "cname": "🪞 誠實之友：給自己的10個真心話",
-   "file": "zh/v1/Prompt/P011_HonestFriendMirror.html",
-   "en_file": "en/v1/Prompt/P011_HonestFriendMirror_EN.html",
-   "preview": "扮演一位老朋友的角色——一個長期支持我的人，看過我的成功、挣扎與習慣模式。我需要的是誠實，不是安慰。根據你從我們過去互動、我的郵件和團隊聊天記錄中了解到的一切，告訴我10件現在我需要聽到、長期對我有益的事情。針對每一條，解釋你為什麼這樣說，"
-  },
-  {
-   "seq": "P012",
-   "name": "Communication Style Analyzer",
-   "cname": "🔎 分析溝通風格，量身訂製回覆",
-   "file": "zh/v1/Prompt/P012_CommunicationStyleAnalyzer.html",
-   "en_file": "en/v1/Prompt/P012_CommunicationStyleAnalyzer_EN.html",
-   "preview": "查看我和 [/姓名] 的 Outlook 郵件和 Teams 聊天記錄。根據語氣、正式度、訊息長度和常用措辭分析他們的溝通風格。摘要他們偏好的溝通方式，並建議我應如何調整回覆，在配合對方風格的同時保持自己的聲音既專業又真實。"
-  },
-  {
-   "seq": "P013",
-   "name": "Word Cloud Generator",
-   "cname": "☁️ 文件文字雲視覺化",
-   "file": "zh/v1/Prompt/P013_WordCloudGenerator.html",
-   "en_file": "en/v1/Prompt/P013_WordCloudGenerator_EN.html",
-   "preview": "建立 [text-document.docx] 中前10大關鍵字的文字雲。請忽略填充詞。"
-  },
-  {
-   "seq": "P014",
-   "name": "Conversation Consolidator",
-   "cname": "🔄 對話彙整為單一可重用提示詞",
-   "file": "zh/v1/Prompt/P014_ConversationConsolidator.html",
-   "en_file": "en/v1/Prompt/P014_ConversationConsolidator_EN.html",
-   "preview": "摘要這個對話串中的完整對話，並生成一個單一的、完整的提示詞，可以重現我收到的最新回覆。目標是將所有之前的提示和情境整合成一個可重複使用的輸入。"
-  },
-  {
-   "seq": "P015",
-   "name": "Data Visualization Analyzer",
-   "cname": "📈 資料視覺化與洞察分析",
-   "file": "zh/v1/Prompt/P015_DataVisualizationAnalyzer.html",
-   "en_file": "en/v1/Prompt/P015_DataVisualizationAnalyzer_EN.html",
-   "preview": "分析並視覺化這份資料，找出表現良好的 [指標/區域] 和表現不佳的 [指標/區域]。什麼因素對這些變化影響最大？另外，如果資料允許，請分析細分市場或地區績效。"
-  },
-  {
-   "seq": "P016",
-   "name": "Role Specific Doc Summary",
-   "cname": "📋 依職務角色量身定制的文件摘要",
-   "file": "zh/v1/Prompt/P016_RoleSpecificDocSummary.html",
-   "en_file": "en/v1/Prompt/P016_RoleSpecificDocSummary_EN.html",
-   "preview": "請用對我 [職務角色] 最相關的洞察摘要 [文件]。重點放在影響我工作方式的策略舉措、創新和永續發展努力。標出與我職責相關的產品、市場或數位轉型發展。包含我應注意的組織優先事項或變革。以簡潔、可行動的格式呈現摘要，讓我可以用於規劃並在目前職"
-  },
-  {
-   "seq": "P017",
-   "name": "Dominant Color Extractor",
-   "cname": "🎨 圖片主色調提取工具",
-   "file": "zh/v1/Prompt/P017_DominantColorExtractor.html",
-   "en_file": "en/v1/Prompt/P017_DominantColorExtractor_EN.html",
-   "preview": "提取這張圖片中的 [8] 個主要顏色。提供每個顏色的 RGB 數值、HEX 色碼，以及每個顏色的簡短描述（例如用於無障礙設計或設計用途）。"
-  },
-  {
-   "seq": "P018",
-   "name": "Speaker Notes Optimizer",
-   "cname": "🎤 簡報演講者備忘稿優化",
-   "file": "zh/v1/Prompt/P018_SpeakerNotesOptimizer.html",
-   "en_file": "en/v1/Prompt/P018_SpeakerNotesOptimizer_EN.html",
-   "preview": "為整份投影片加上並優化演講者備忘稿。請使用短句和簡單語言，讓觀眾更容易跟上內容。"
-  },
-  {
-   "seq": "P019",
-   "name": "Meeting Chat Qa Summary",
-   "cname": "💬 會議聊天室問答摘要文件",
-   "file": "zh/v1/Prompt/P019_MeetingChatQaSummary.html",
-   "en_file": "en/v1/Prompt/P019_MeetingChatQaSummary_EN.html",
-   "preview": "根據 [會議聊天記錄] 的會議聊天記錄，生成一份包含最重要問題的完整問答文件。使用 Markdown 格式設計文件，包含每個問題和答案的清晰標題、重點的條列格式，以及粗體標示重要資訊。確保文件視覺清晰且易於導覽。"
-  },
-  {
-   "seq": "P020",
-   "name": "Inbox Priority Analyzer",
-   "cname": "📬 收件匣優先序智慧分析",
-   "file": "zh/v1/Prompt/P020_InboxPriorityAnalyzer.html",
-   "en_file": "en/v1/Prompt/P020_InboxPriorityAnalyzer_EN.html",
-   "preview": "分析我 Outlook [資料夾名稱] 資料夾中的郵件，摘要收到的最常見內容和資訊。為每封郵件提供簡短摘要，包含主題或話題以及發信人。識別並說明郵件中重複出現的主題、趨勢或模式。標示需要我高度注意的郵件。將其餘郵件分類為中優先和低優先，如果"
-  },
-  {
-   "seq": "P021",
-   "name": "Personal Prompt Engineer",
-   "cname": "讓 Copilot 當你的 Prompt 工程師",
-   "file": "zh/v1/Prompt/P021_PersonalPromptEngineer.html",
-   "en_file": "en/v1/Prompt/P021_PersonalPromptEngineer_EN.html",
-   "preview": "Hi，我想請你擔任我的 Prompt 工程師。你的目標是幫我為我的需求打造最棒的 Prompt，並用於你 Copilot 本身。在本次對話中請依照以下流程：你的第一個回應是詢問我這個 Prompt 的用途。我會提供答案，之後透過第二步和第三"
-  },
-  {
-   "seq": "P022",
-   "name": "Weekly Status Report",
-   "cname": "一鍵產出週報摘要",
-   "file": "zh/v1/Prompt/P022_WeeklyStatusReport.html",
-   "en_file": "en/v1/Prompt/P022_WeeklyStatusReport_EN.html",
-   "preview": "請用我近期的會議記錄、寄出的信件和更新的文件，產出我的週報草稿。依 專案或主題 分組。確保內容專業、精簡，易於直接複製到信件中。另外，請找出本週與我互動最頻繁的 2-3 位最重要的利害關係人與合作夥伴 （根據信件、Teams 會議、Team"
-  },
-  {
-   "seq": "P023",
-   "name": "One Note Task Summary",
-   "cname": "OneNote 待辦事項一覽表",
-   "file": "zh/v1/Prompt/P023_OneNoteTaskSummary.html",
-   "en_file": "en/v1/Prompt/P023_OneNoteTaskSummary_EN.html",
-   "preview": "請以表格方式摘要本章節中所有我 尚未完成的行動項目 。為每個行動項目加上說明和狀態。"
-  },
-  {
-   "seq": "P024",
-   "name": "Transcribe Scanned Document",
-   "cname": "掃描文件一鍵轉數位文字",
-   "file": "zh/v1/Prompt/P024_TranscribeScannedDocument.html",
-   "en_file": "en/v1/Prompt/P024_TranscribeScannedDocument_EN.html",
-   "preview": "Copilot，請轉錄這份掃描文件的文字。文件中包含 手寫筆記 和 印刷文字 ，我想將所有相關內容轉換成可編輯的數位文字。"
-  },
-  {
-   "seq": "P025",
-   "name": "Email Categorization",
-   "cname": "信件主題分類一覽",
-   "file": "zh/v1/Prompt/P025_EmailCategorization.html",
-   "en_file": "en/v1/Prompt/P025_EmailCategorization_EN.html",
-   "preview": "請將我 上週的信件 分類成 5 大主題。並依各主題的信件數量，給出每個大方向的概略百分比。"
-  },
-  {
-   "seq": "P026",
-   "name": "Day Wrap Up Prep",
-   "cname": "一鍵收工＋明日備戰計畫",
-   "file": "zh/v1/Prompt/P026_DayWrapUpPrep.html",
-   "en_file": "en/v1/Prompt/P026_DayWrapUpPrep_EN.html",
-   "preview": "幫我收拾今天並為明天做好準備。第一個區塊標題為「 今天 」：請簡短描述我今天的工作，並把會議中衍生的任務另外列出；同時根據你的分析，標示我信件中的重要事項。第二個區塊標題為「 明天的會議 」：請提供明天會議的總覽，建立一張表格列出會議組織者"
-  },
-  {
-   "seq": "P027",
-   "name": "Excel Kpi Generator",
-   "cname": "Excel 表格 KPI 自動提案",
-   "file": "zh/v1/Prompt/P027_ExcelKpiGenerator.html",
-   "en_file": "en/v1/Prompt/P027_ExcelKpiGenerator_EN.html",
-   "preview": "分析我的表格並提供 三個複雜度遞增的 KPI 。為每個 KPI 產出 Excel 計算公式，並簡短說明該 KPI 的作用。"
-  },
-  {
-   "seq": "P028",
-   "name": "Schedule Meeting",
-   "cname": "用 Copilot 一鍵排會議時間",
-   "file": "zh/v1/Prompt/P028_ScheduleMeeting.html",
-   "en_file": "en/v1/Prompt/P028_ScheduleMeeting_EN.html",
-   "preview": "幫我排一個 30 分鐘 的會議，最早從 下週 開始，與 /Megan Bowen ，主題是「 Rollout Copilot Netherlands 」。"
-  },
-  {
-   "seq": "P029",
-   "name": "Three Level Content",
-   "cname": "一份內容，三種複雜度版本",
-   "file": "zh/v1/Prompt/P029_ThreeLevelContent.html",
-   "en_file": "en/v1/Prompt/P029_ThreeLevelContent_EN.html",
-   "preview": "請將這份內容產出 三個複雜度不同的版本 ： 主管摘要版 、 中階說明版 ，以及 深度分析版 。"
-  },
-  {
-   "seq": "P030",
-   "name": "Meeting Follow Up Email",
-   "cname": "會議跟進信自動產出",
-   "file": "zh/v1/Prompt/P030_MeetingFollowUpEmail.html",
-   "en_file": "en/v1/Prompt/P030_MeetingFollowUpEmail_EN.html",
-   "preview": "請根據 [會議逐字稿] 為與會者撰寫一封 跟進信 。信件應包含：一張呈現 會議決議事項 的表格；一張列出 行動項目及各項目負責人 的表格；以及 下次會議的注意事項清單 。"
-  },
-  {
-   "seq": "P031",
-   "name": "Skill Learning Guide",
-   "cname": "Copilot 技能學習導師",
-   "file": "zh/v1/Prompt/P031_SkillLearningGuide.html",
-   "en_file": "en/v1/Prompt/P031_SkillLearningGuide_EN.html",
-   "preview": "[方法/技能/關鍵詞] ：幫我學會這個技能或方法。提供 技巧、資源 和 實際練習 ，幫助我在這個領域進步。摘要核心概念，並提供清晰易懂的說明，幫助我理解並有效應用這個概念。"
-  },
-  {
-   "seq": "P032",
-   "name": "Presentation Questions",
-   "cname": "簡報互動提問產生器",
-   "file": "zh/v1/Prompt/P032_PresentationQuestions.html",
-   "en_file": "en/v1/Prompt/P032_PresentationQuestions_EN.html",
-   "preview": "為這份簡報的 每個章節 產出 三個吸引人的問題 ，並附上建議答案。這些問題將作為簡報過程中與觀眾互動的基礎。請確保問題與各章節內容相關、能讓觀眾反思自身理解，並鼓勵積極參與。"
-  },
-  {
-   "seq": "P033",
-   "name": "Translate Presentation",
-   "cname": "簡報語言一鍵翻譯",
-   "file": "zh/v1/Prompt/P033_TranslatePresentation.html",
-   "en_file": "en/v1/Prompt/P033_TranslatePresentation_EN.html",
-   "preview": "請建立這份簡報的新版本，並將所有投影片翻譯成 [選擇語言] 。"
-  },
-  {
-   "seq": "P034",
-   "name": "Problem Solving Buddy",
-   "cname": "問題解決腦力激盪夥伴",
-   "file": "zh/v1/Prompt/P034_ProblemSolvingBuddy.html",
-   "en_file": "en/v1/Prompt/P034_ProblemSolvingBuddy_EN.html",
-   "preview": "我需要你成為我的 問題解決腦力激盪夥伴 。請先問我有什麼問題或機會。然後提出 3 個最相關的問題 ，幫助我找到最佳解決方案。根據我的回答，提出解決我挑戰的方案，並 每次都附加 3 個新問題 來持續迭代解法。"
-  },
-  {
-   "seq": "P035",
-   "name": "Out Of Office Message",
-   "cname": "自動休假回覆信設定",
-   "file": "zh/v1/Prompt/P035_OutOfOfficeMessage.html",
-   "en_file": "en/v1/Prompt/P035_OutOfOfficeMessage_EN.html",
-   "preview": "我將從 [日期] 開始休假至 [日期] 。請草擬一則簡短訊息，讓我可以設為 自動回覆 。請務必列出我的主管以及 [別名/代理人] 作為代理聯絡人。語氣請使用 [專業、熱情…] 。"
-  },
-  {
-   "seq": "P036",
-   "name": "Daily News Briefing",
-   "cname": "每日產業新聞簡報",
-   "file": "zh/v1/Prompt/P036_DailyNewsBriefing.html",
-   "en_file": "en/v1/Prompt/P036_DailyNewsBriefing_EN.html",
-   "preview": "請為 [產業] 中關於 [主題] 的新聞製作每日簡報。每篇摘要請整理成一個完整段落，以清楚且有力的主題句開頭，突顯文章的核心重點，簡潔摘要主要洞察並保持清晰與連貫性。在每篇摘要末尾加上「來源：」，後接出版品名稱，並附上原始文章的直接連結。"
-  },
-  {
-   "seq": "P037",
-   "name": "QR Code Generator",
-   "cname": "QR Code 快速產生器",
-   "file": "zh/v1/Prompt/P037_QRCodeGenerator.html",
-   "en_file": "en/v1/Prompt/P037_QRCodeGenerator_EN.html",
-   "preview": "請為 [我的網站 URL] 產生一個 QR Code。"
-  },
-  {
-   "seq": "P038",
-   "name": "Group Chat Topics Overview",
-   "cname": "Teams 群組聊天主題全覽表",
-   "file": "zh/v1/Prompt/P038_GroupChatTopicsOverview.html",
-   "en_file": "en/v1/Prompt/P038_GroupChatTopicsOverview_EN.html",
-   "preview": "建立此聊天室過去 7 天訊息的總覽，按從新到舊排序。請完整遵照以下格式說明。將每個主題各自整理成一個獨立的表格，每個表格只有一個儲存格。在這個儲存格中加入各主題的定義內容，各主題之間以兩個換行分隔。在各主題摘要的儲存格內，依序加入：兩個換行"
-  },
-  {
-   "seq": "P039",
-   "name": "Presentation Poll Questions",
-   "cname": "簡報互動問卷設計師",
-   "file": "zh/v1/Prompt/P039_PresentationPollQuestions.html",
-   "en_file": "en/v1/Prompt/P039_PresentationPollQuestions_EN.html",
-   "preview": "我想在終端使用者面前進行一場簡報。為了讓場次更具吸引力和互動性，我想在每個章節結束後進行一次投票，蒐集觀眾的想法與回饋。請為每個章節各提出三個可能的問卷問題。"
-  },
-  {
-   "seq": "P040",
-   "name": "Workday Task Prioritizer",
-   "cname": "工作日任務優先排序器",
-   "file": "zh/v1/Prompt/P040_WorkdayTaskPrioritizer.html",
-   "en_file": "en/v1/Prompt/P040_WorkdayTaskPrioritizer_EN.html",
-   "preview": "嘿 Copilot，幫我整頓今天的工作節奏！先分析我的郵件、日曆邀請和 Teams 對話，將任務依優先順序分為三類並各自列表： Must-Do （緊急且重要）、 Should-Do （重要但不緊急）、 Could-Do （有就更好，可彈性安"
-  },
-  {
-   "seq": "P041",
-   "name": "Workshop Handout Creator",
-   "cname": "工作坊簡報講義產生器",
-   "file": "zh/v1/Prompt/P041_WorkshopHandoutCreator.html",
-   "en_file": "en/v1/Prompt/P041_WorkshopHandoutCreator_EN.html",
-   "preview": "請製作一份講義，先以簡短摘要介紹 /[簡報或文件] 的內容，接著建立一個包含關鍵要素的表格，表格欄位為「關鍵要素」與「簡短說明」。表格之後，根據 / 中的內容列出延伸性與挑戰性問題及其解答。"
-  },
-  {
-   "seq": "P042",
-   "name": "New Year Goals Planner",
-   "cname": "新年職涯目標規劃師",
-   "file": "zh/v1/Prompt/P042_NewYearGoalsPlanner.html",
-   "en_file": "en/v1/Prompt/P042_NewYearGoalsPlanner_EN.html",
-   "preview": "現在是 2025 年初，我想在職業生涯中充分把握這一年。請幫我規劃設定並達成有影響力的商業目標的策略。我也希望獲得促進協作、提升生產力，以及在這一年中維持健康工作生活平衡的具體建議。"
-  },
-  {
-   "seq": "P043",
-   "name": "Excel Correlation Report",
-   "cname": "Excel 數值相關性分析報告",
-   "file": "zh/v1/Prompt/P043_ExcelCorrelationReport.html",
-   "en_file": "en/v1/Prompt/P043_ExcelCorrelationReport_EN.html",
-   "preview": "請針對數值欄位產生相關性報告，包含 關鍵發現摘要 ，並根據識別出的相關性提供潛在行動建議。"
-  },
-  {
-   "seq": "P044",
-   "name": "Year End Team Message",
-   "cname": "年末團隊感謝信產生器",
-   "file": "zh/v1/Prompt/P044_YearEndTeamMessage.html",
-   "en_file": "en/v1/Prompt/P044_YearEndTeamMessage_EN.html",
-   "preview": "請幫我寫一封年末訊息給我的團隊成員，感謝他們這一年的傑出表現以及在 [請填入具體專案名稱] 上的所有付出。語氣請溫暖且帶有感謝之情，並加入一些輕鬆幽默。考慮加入條列點，以突顯特定成就或里程碑。"
-  },
-  {
-   "seq": "P045",
-   "name": "Document Best Practices Review",
-   "cname": "文件最佳實踐差距分析",
-   "file": "zh/v1/Prompt/P045_DocumentBestPracticesReview.html",
-   "en_file": "en/v1/Prompt/P045_DocumentBestPracticesReview_EN.html",
-   "preview": "請檢視我的 [document.docx] ，並對照此處列出的最佳實踐 [Best-Practices.pdf] 進行分析。列出我們尚未涵蓋的內容，以及還可以進一步改進的地方。"
-  },
-  {
-   "seq": "P046",
-   "name": "Weekly Time Categories",
-   "cname": "每週時間分配類別分析",
-   "file": "zh/v1/Prompt/P046_WeeklyTimeCategories.html",
-   "en_file": "en/v1/Prompt/P046_WeeklyTimeCategories_EN.html",
-   "preview": "依據我接下來這一週的日曆，建立 五個 描述我如何運用時間的類別，並為每個類別提供簡短說明，以及估計我在每個類別上花費的時間百分比。"
-  },
-  {
-   "seq": "P047",
-   "name": "FAQ Generator",
-   "cname": "多文件 FAQ 快速產生器",
-   "file": "zh/v1/Prompt/P047_FAQGenerator.html",
-   "en_file": "en/v1/Prompt/P047_FAQGenerator_EN.html",
-   "preview": "請依據 [presentation.pptx] 和 [document.docx] 建立一份 FAQ，包含清楚的標題與條列點以提升可讀性。確保文件結構能有效回應常見問題，並為目標讀者提供完整的解答。考慮使用 Markdown 格式化文件，方"
-  },
-  {
-   "seq": "P048",
-   "name": "Email Thread Summarizer",
-   "cname": "郵件串摘要與行動項目產生器",
-   "file": "zh/v1/Prompt/P048_EmailThreadSummarizer.html",
-   "en_file": "en/v1/Prompt/P048_EmailThreadSummarizer_EN.html",
-   "preview": "請摘要這封郵件串的完整活動內容並以清單列出，然後另外產生一份 行動項目的獨立條列清單 ，可直接傳送給我的同事。請使用淺顯易懂的語言，讓同事能快速進入狀況。"
-  },
-  {
-   "seq": "P049",
-   "name": "Excel Executive Briefing",
-   "cname": "Excel 一頁式主管決策簡報",
-   "file": "zh/v1/Prompt/P049_ExcelExecutiveBriefing.html",
-   "en_file": "en/v1/Prompt/P049_ExcelExecutiveBriefing_EN.html",
-   "preview": "請將此 Excel 檔整理成一頁式主管決策簡報，包含 KPI 、 趨勢 與任何 警示紅旗 。請提供一個合適的資料集視覺化圖表（例如長條圖或圓餅圖）。此圖表應幫助使用者快速發現相關性與趨勢，進一步強化一頁簡報的效果。"
-  },
-  {
-   "seq": "P050",
-   "name": "Workday Recap Summary",
-   "cname": "工作日訊息回顧與行動摘要",
-   "file": "zh/v1/Prompt/P050_WorkdayRecapSummary.html",
-   "en_file": "en/v1/Prompt/P050_WorkdayRecapSummary_EN.html",
-   "preview": "請摘要我上一個工作日的郵件和 Teams 訊息，並在獨立欄位中列出行動項目。如果可以的話，請在另一個獨立欄位中建議後續行動。表格格式如下： 類型（郵件/Teams）| 主題 | 摘要 | 行動項目 | 後續行動 。如果我被直接點名，請將該主"
-  },
-  {
-   "seq": "P051",
-   "name": "Meeting Briefing Generator",
-   "cname": "📋 商務會議前情資簡報",
-   "file": "zh/v1/Prompt/P051_MeetingBriefingGenerator.html",
-   "en_file": "en/v1/Prompt/P051_MeetingBriefingGenerator_EN.html",
-   "preview": "請幫我準備和 [客戶／公司／商業夥伴] 即將到來的會議，製作一份完整的情資簡報。請提供關鍵公司指標，重點放在員工人數及活躍的國家／地區；若有資料，按白領和藍領員工分類顯示人數與比例。納入公司願景、使命與核心價值。此外，列出最知名的產品與服務"
-  },
-  {
-   "seq": "P052",
-   "name": "Guided Email Reply Assistant",
-   "cname": "📧 智慧郵件回覆引導",
-   "file": "zh/v1/Prompt/P052_GuidedEmailReplyAssistant.html",
-   "en_file": "en/v1/Prompt/P052_GuidedEmailReplyAssistant_EN.html",
-   "preview": "我需要回覆這封郵件。請閱讀它，摘要關鍵重點，然後一次問我一個問題，幫助我撰寫符合我語氣和意圖的回覆。"
-  },
-  {
-   "seq": "P053",
-   "name": "Presentation Quality Check",
-   "cname": "🎯 簡報品質全面健診",
-   "file": "zh/v1/Prompt/P053_PresentationQualityCheck.html",
-   "en_file": "en/v1/Prompt/P053_PresentationQualityCheck_EN.html",
-   "preview": "請檢閱這份簡報並提供結構化分析：找出內容與論證的弱點、錯誤與缺口。標出過長或過於詳細的段落。檢查術語的清晰度，列出可能讓一般聽眾感到困惑的縮寫或專業術語。最後提出三項具體可行的改善建議。請在清楚的標題下呈現你的回饋。"
-  },
-  {
-   "seq": "P054",
-   "name": "Workplace Language Coach",
-   "cname": "職場外語學習教練",
-   "file": "zh/v1/Prompt/P054_WorkplaceLanguageCoach.html",
-   "en_file": "en/v1/Prompt/P054_WorkplaceLanguageCoach_EN.html",
-   "preview": "擔任我的語言教練，幫我提升語言能力。請先問我：1. 我想學哪種語言，以及 2. 我目前的語言程度（基礎、中級、進階）。請聚焦於 [主題，例如：職場] 相關話題，以及我作為 [職稱] 的角色需求。使用簡單清楚的句子讓我容易理解。以對話形式練習"
-  },
-  {
-   "seq": "P055",
-   "name": "Schedule Conflict Resolver",
-   "cname": "📅 下週行程衝突排除器",
-   "file": "zh/v1/Prompt/P055_ScheduleConflictResolver.html",
-   "en_file": "en/v1/Prompt/P055_ScheduleConflictResolver_EN.html",
-   "preview": "請標出我下週行程中的所有衝突，並依據郵件內容幫我排定優先順序。"
-  },
-  {
-   "seq": "P056",
-   "name": "Text Simplifier",
-   "cname": "✍️ 複雜文字簡化大師",
-   "file": "zh/v1/Prompt/P056_TextSimplifier.html",
-   "en_file": "en/v1/Prompt/P056_TextSimplifier_EN.html",
-   "preview": "擔任改寫專家。你的任務是將以下文字改寫，使一般受眾更容易理解。改寫後的文字應保留原本意思，但使用更簡單、更易懂的語言。目標是確保所有人都能理解這些資訊。請確保文字不包含行業術語或複雜詞彙。在文字下方建議一份詞彙表。語氣應保持專業但友善。"
-  },
-  {
-   "seq": "P057",
-   "name": "Graceful No Plant Framework",
-   "cname": "🌱 優雅說不：PLANT 拒絕框架",
-   "file": "zh/v1/Prompt/P057_GracefulNoPlantFramework.html",
-   "en_file": "en/v1/Prompt/P057_GracefulNoPlantFramework_EN.html",
-   "preview": "我需要幫助為一個職場情境擬定有效的「拒絕」回應。身為 [你的職務]，我被要求 [描述具體請求]，但我有顧慮，因為 [說明你的具體疑慮]。請運用 PLANT 框架（暫停 Pause、聆聽 Listen、評估 Assess、命名 Name、轉化"
-  },
-  {
-   "seq": "P058",
-   "name": "Email Misunderstanding Resolver",
-   "cname": "📨 郵件誤解化解術",
-   "file": "zh/v1/Prompt/P058_EmailMisunderstandingResolver.html",
-   "en_file": "en/v1/Prompt/P058_EmailMisunderstandingResolver_EN.html",
-   "preview": "請針對這個 Outlook 郵件串撰寫一封精簡回覆，冷靜且禮貌地解決誤解。運用郵件串脈絡和我想要的結果（如下）：• 承認誤解並假設對方出於善意。• 陳述已確認的事實，不帶責備地更正誤讀。• 重申共同目標，重新確認誰負責什麼、截止時間。• 提"
-  },
-  {
-   "seq": "P059",
-   "name": "Team Chat Faq Generator",
-   "cname": "💬 團隊對話 FAQ 自動生成",
-   "file": "zh/v1/Prompt/P059_TeamChatFaqGenerator.html",
-   "en_file": "en/v1/Prompt/P059_TeamChatFaqGenerator_EN.html",
-   "preview": "請分析 [選定的 Teams 聊天室 Y] 最近 [X] 則訊息。找出最常出現的問題及對應解答，特別是對未來新成員有幫助的資訊。目標：建立一份清晰易懂的 FAQ 清單，幫助新舊成員找到方向。處理原則：將多次出現的問題整合為一個清楚的版本；移"
-  },
-  {
-   "seq": "P060",
-   "name": "Leadership Strengths Analysis",
-   "cname": "🏆 領導風格與優勢自我分析",
-   "file": "zh/v1/Prompt/P060_LeadershipStrengthsAnalysis.html",
-   "en_file": "en/v1/Prompt/P060_LeadershipStrengthsAnalysis_EN.html",
-   "preview": "請檢閱我過去一年發送的郵件、Teams 會議、文件和 Teams 對話。利用這些訊息提煉一份領導風格文件，讓我可以用它告知 Copilot 我的個人聲音與風格。以表格呈現我的前五大優勢，格式：| 優勢 | 描述 | 如何幫助我發揮職務 | "
-  },
-  {
-   "seq": "P061",
-   "name": "Weekly Team Pulse Survey",
-   "cname": "📊 每週團隊脈動問卷生成器",
-   "file": "zh/v1/Prompt/P061_WeeklyTeamPulseSurvey.html",
-   "en_file": "en/v1/Prompt/P061_WeeklyTeamPulseSurvey_EN.html",
-   "preview": "請建立一份適合任何產業、3 分鐘可完成的每週「團隊脈動」問卷，適用 10-200 名受訪者。• 面向：工作量、進度、阻礙、支援、開放回饋。• 問題類型：4 道 Likert 量表（5 點，兩端有清楚說明）、1 道選填自由作答題。• 措辭：中"
-  },
-  {
-   "seq": "P062",
-   "name": "Ocean Outlook Instructions",
-   "cname": "🧬 OCEAN 個人化 Outlook 起草指示詞",
-   "file": "zh/v1/Prompt/P062_OceanOutlookInstructions.html",
-   "en_file": "en/v1/Prompt/P062_OceanOutlookInstructions_EN.html",
-   "preview": "請建立一份基於 Markdown 的 Copilot Outlook 指示詞，反映我偏好的溝通方式——依據 Big Five/OCEAN 模型的溝通風格分析。需求：- 從我過去 12 個月的職場溝通（郵件和 Teams 訊息）中推導出 OC"
-  },
-  {
-   "seq": "P063",
-   "name": "Presentation Optimization Planner",
-   "cname": "🗂️ 簡報精簡與時間優化助手",
-   "file": "zh/v1/Prompt/P063_PresentationOptimizationPlanner.html",
-   "en_file": "en/v1/Prompt/P063_PresentationOptimizationPlanner_EN.html",
-   "preview": "請針對即將到來的 [會議類型，例如：客戶簡報或內部工作坊] 檢閱並優化我的簡報。會議預計 [時長，例如：一小時]，我需要保留時間給 [特定用途，例如：問答環節]。簡報檔案為 [插入檔案名稱或上傳檔案]。請分析檔案，找出投影片間的重複或冗餘內"
-  },
-  {
-   "seq": "P064",
-   "name": "Customer Issue Best Practices Doc",
-   "cname": "📚 客戶問題最佳實踐文件生成",
-   "file": "zh/v1/Prompt/P064_CustomerIssueBestPracticesDoc.html",
-   "en_file": "en/v1/Prompt/P064_CustomerIssueBestPracticesDoc_EN.html",
-   "preview": "根據與 [人員／團隊] 討論 [主題] 相關客戶問題的溝通記錄，請建立一份更新版的最佳實踐文件，概述解決類似問題的系統化方法。包含來自過去成功解決案例的範例，以及處理常見客戶問題的技巧。"
-  },
-  {
-   "seq": "P065",
-   "name": "Copilot Learning Plan",
-   "cname": "🎓 M365 Copilot 個人化學習計畫",
-   "file": "zh/v1/Prompt/P065_CopilotLearningPlan.html",
-   "en_file": "en/v1/Prompt/P065_CopilotLearningPlan_EN.html",
-   "preview": "請建立一份訓練計畫，幫助我導入 M365 Copilot。包含我每天可以進行的日常活動清單，讓 Copilot 融入我的工作流程。每週加入實用資源，幫助我快速上手。"
-  },
-  {
-   "seq": "P066",
-   "name": "Neurodiversity Exam Prep",
-   "cname": "告別死背！為你的大腦量身打造備考計畫",
-   "file": "zh/v1/Prompt/P066_NeurodiversityExamPrep.html",
-   "en_file": "en/v1/Prompt/P066_NeurodiversityExamPrep_EN.html",
-   "preview": "我正在準備 [考試名稱/代碼] 的考試，考試日期是 [日期] 。我的程度： [新手 / 中階 / 熟悉] 。目標： [通過 / 達到 X 分] 。可用時間： [每天 X 分鐘，每週 Y 小時] 。適合我的學習方式： [短段落、類比說明、測驗"
-  },
-  {
-   "seq": "P067",
-   "name": "Email Risk Radar",
-   "cname": "讓 Copilot 掃你的信箱，提前發現潛在風險",
-   "file": "zh/v1/Prompt/P067_EmailRiskRadar.html",
-   "en_file": "en/v1/Prompt/P067_EmailRiskRadar_EN.html",
-   "preview": "請以 唯讀方式 分析我過去 45 天的電子郵件。偵測並標記以下風險模式：1）緊張或衝突升高的跡象 2）逾期截止日期與重複追蹤 3）重複請求卻沒有解決 4）直接問題未獲回答 5）被動攻擊型或挫折語氣轉變 6）已表明但未履行的承諾。針對每個標記"
-  },
-  {
-   "seq": "P068",
-   "name": "Smart Inbox Architecture",
-   "cname": "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
-   "file": "zh/v1/Prompt/P068_SmartInboxArchitecture.html",
-   "en_file": "en/v1/Prompt/P068_SmartInboxArchitecture_EN.html",
-   "preview": "範圍與護欄： 唯讀分析。分析最近 14–30 天的 Outlook 郵件，優先使用元資料：寄件者名稱、網域、主旨模式、預覽文字、To/CC 使用、通訊群組、noreply/系統訊號。不摘要信件內容，僅在需要時用於偵測明確行動訊號（例如 ac"
-  },
-  {
-   "seq": "P069",
-   "name": "Recipient Style Matching",
-   "cname": "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
-   "file": "zh/v1/Prompt/P069_RecipientStyleMatching.html",
-   "en_file": "en/v1/Prompt/P069_RecipientStyleMatching_EN.html",
-   "preview": "收件人： [姓名 / 身份] 輸入文字： [在此貼上你的郵件 / 文字 / 摘要] 目標： 改寫輸入文字，使其符合收件人的溝通風格與角色情境（技術型 / 非技術型），同時保持專業、準確、基於事實。 資料來源（僅限 Work 模式）： 使用過"
-  },
-  {
-   "seq": "P070",
-   "name": "Presentation Rehearsal Coach",
-   "cname": "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
-   "file": "zh/v1/Prompt/P070_PresentationRehearsalCoach.html",
-   "en_file": "en/v1/Prompt/P070_PresentationRehearsalCoach_EN.html",
-   "preview": "請以目前的 PowerPoint 簡報為輸入（投影片、結構、講者備註）。扮演一位嚴格的演練教練，為我準備高階聽眾的提問。請生成一份壓力測試 Q&A 指南，包含以下五類： 1） 澄清型問題： 當某處不清楚時，高階聽眾可能提出的問題。提供 2-"
-  },
-  {
-   "seq": "P071",
-   "name": "Writing Style Prefix",
-   "cname": "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
-   "file": "zh/v1/Prompt/P071_WritingStylePrefix.html",
-   "en_file": "en/v1/Prompt/P071_WritingStylePrefix_EN.html",
-   "preview": "請分析我過去 90 天的 Teams 訊息與 Outlook 郵件。根據分析，識別並摘要我的個人寫作風格，包括：- 語氣（正式 vs 輕鬆，直接 vs 圓融）- 典型訊息長度與結構 - 我常用的詞語或表達方式 - 我如何開場與結尾 - 其他"
-  },
-  {
-   "seq": "P072",
-   "name": "Executive Doc Summary",
-   "cname": "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
-   "file": "zh/v1/Prompt/P072_ExecutiveDocSummary.html",
-   "en_file": "en/v1/Prompt/P072_ExecutiveDocSummary_EN.html",
-   "preview": "請為資深決策者生成一份簡潔、即用的執行摘要。 指示： 識別文件 [文件] 的目的與目標利害關係人；萃取 3-5 條最關鍵的洞察或結論；清楚說明所需決策或建議；標出風險、待解問題或限制條件；總字數限 250 字以內。 結構： • 目的： 一句"
-  },
-  {
-   "seq": "P073",
-   "name": "Work Rhythm Analyzer",
-   "cname": "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
-   "file": "zh/v1/Prompt/P073_WorkRhythmAnalyzer.html",
-   "en_file": "en/v1/Prompt/P073_WorkRhythmAnalyzer_EN.html",
-   "preview": "請檢視我近期的文件、電子郵件、聊天活動與檔案編輯，識別我一天中傾向在哪些時段進行最好的 專注工作 、 創意工作 與 即時反應工作 。根據這些模式，建立我的自然工作節奏側寫。接著，建議一些彈性的方式，讓我可以更好地安排我的一天，以支撐 能量、"
-  },
-  {
-   "seq": "P074",
-   "name": "Weekly Action Item Summary",
-   "cname": "一鍵彙整本週指派給我的待辦事項",
-   "file": "zh/v1/Prompt/P074_WeeklyActionItemSummary.html",
-   "en_file": "en/v1/Prompt/P074_WeeklyActionItemSummary_EN.html",
-   "preview": "請彙整上週透過 電子郵件、會議逐字稿、Teams 訊息、以及我被 @ 提及的檔案註解 中所有指派給我的待辦事項。包含任何別人提到的任務、後續追蹤請求或截止日期。請建立一張表格，包含以下欄位： 1) 待辦事項（Action Item） 2) "
-  },
-  {
-   "seq": "P075",
-   "name": "Excel Forecasting Model",
-   "cname": "用歷史資料打造 Excel 預測模型",
-   "file": "zh/v1/Prompt/P075_ExcelForecastingModel.html",
-   "en_file": "en/v1/Prompt/P075_ExcelForecastingModel_EN.html",
-   "preview": "請依據這份歷史資料，為 [指標名稱] 建立預測模型。請包含： 1) 趨勢分析與季節性偵測 2) 未來 [3／6／12] 個月的預測（含信心區間） 3) 預測底下的 關鍵假設 4) 可能改變預測的 因素 5) 敏感度分析 （最好／最差／最可能"
-  },
-  {
-   "seq": "P076",
-   "name": "Project Pulse Weekly Update",
-   "cname": "專案脈動週報生成器",
-   "file": "zh/v1/Prompt/P076_ProjectPulseWeeklyUpdate.html",
-   "en_file": "en/v1/Prompt/P076_ProjectPulseWeeklyUpdate_EN.html",
-   "preview": "幫我為專案「[專案名稱]」產出最近 7 天的 Status Update。請使用我的 Email、Teams 對話、會議記錄、近期檔案編輯為來源。請依以下結構產出：1) 執行摘要（3 句），2) 自上次更新以來的進度（條列，含負責人），3)"
-  },
-  {
-   "seq": "P077",
-   "name": "7 Slide Deck Builder",
-   "cname": "七頁簡報快速產生器",
-   "file": "zh/v1/Prompt/P077_7SlideDeckBuilder.html",
-   "en_file": "en/v1/Prompt/P077_7SlideDeckBuilder_EN.html",
-   "preview": "根據下方的 Brief，產生一份精簡的 7 頁簡報。輸入：僅以貼上的文字作為來源。投影片（共 7 頁，順序固定）：1) 標題 — [專案／提案名稱] 2) 問題／脈絡 3) 解決方案（最多 3 個支柱）4) 價值與成果（盡量量化）5) 交付"
-  },
-  {
-   "seq": "P078",
-   "name": "Email Domain Inbox Summary",
-   "cname": "信件網域摘要",
-   "file": "zh/v1/Prompt/P078_EmailDomainInboxSummary.html",
-   "en_file": "en/v1/Prompt/P078_EmailDomainInboxSummary_EN.html",
-   "preview": "建立一張表格，列出我在過去 X 週內從 DOMAINNAME（例如 @customer.com）收到的所有 email。請包含一欄顯示這封信需要哪些行動，以及另一欄顯示我公司是否有人已經回覆。"
-  }
- ],
- "Prompt_v2": [
-  {
-   "seq": "P001",
-   "name": "Copilot Memory",
-   "cname": "啟用 Copilot Memory",
-   "file": "zh/v2/Prompt/P001_CopilotMemory.html",
-   "en_file": "en/v2/Prompt/P001_CopilotMemory_EN.html",
-   "preview": "幫我啟動我的 Copilot Memory 。請問我三個簡單的問題：分別關於我的 工作風格 、 寫作風格 ，以及 我的職務角色 的關鍵事實。請把我的回答加到我的 Copilot Memory 個人檔案中。"
-  },
-  {
-   "seq": "P002",
-   "name": "Communication Style Personalizer",
-   "cname": "溝通風格個人化設定",
-   "file": "zh/v2/Prompt/P002_CommunicationStylePersonalizer.html",
-   "en_file": "en/v2/Prompt/P002_CommunicationStylePersonalizer_EN.html",
-   "preview": "請分析我過去 3 個月在 Outlook 與 Teams 的溝通內容（訊息、回覆、會議筆記），歸納出我的溝通風格，包含： 1. 語氣（正式/口語、直接/委婉、嚴謹/輕鬆） 2. 結構偏好（條列、段落、開門見山或鋪陳） 3. 常用詞彙與避免詞"
-  },
-  {
-   "seq": "P003",
-   "name": "Contribution Opportunity Finder",
-   "cname": "貢獻機會探索器",
-   "file": "zh/v2/Prompt/P003_ContributionOpportunityFinder.html",
-   "en_file": "en/v2/Prompt/P003_ContributionOpportunityFinder_EN.html",
-   "preview": "請執行兩個步驟： Step 1. 從我最近的 Email、行事曆與 Teams 訊息，整理出我目前最重要的 3–5 個工作優先事項，每個用一句話描述。 Step 2. 接著掃描我過去 30 天的電子報訂閱（newsletter）內容，找出與"
-  },
-  {
-   "seq": "P004",
-   "name": "Accessibility Review",
-   "cname": "無障礙文件審查助理",
-   "file": "zh/v2/Prompt/P004_AccessibilityReview.html",
-   "en_file": "en/v2/Prompt/P004_AccessibilityReview_EN.html",
-   "preview": "請審查此文件，確保其符合無障礙標準。識別任何無障礙問題並提供改善建議。確保文件完全無障礙且符合相關無障礙指引。此文件面向多元受眾，包括身心障礙者。它應能供螢幕閱讀器使用、具備適當的色彩對比度，並為圖片提供替代文字。請確保輸出內容詳盡，提供詳"
-  },
-  {
-   "seq": "P005",
-   "name": "Email Thread Stakeholder Update",
-   "cname": "電子郵件串利害關係人更新",
-   "file": "zh/v2/Prompt/P005_EmailThreadStakeholderUpdate.html",
-   "en_file": "en/v2/Prompt/P005_EmailThreadStakeholderUpdate_EN.html",
-   "preview": "請根據此電子郵件串草擬一份簡潔的利害關係人狀態更新。• 包含 4 個帶標題的章節：已做決策、目前狀態、風險/阻礙（附建議的緩解措施）、後續步驟（負責人 + 目標日期）。• 正文限制在約 150 字；使用可快速掃描的項目符號。• 在頂部提出清"
-  },
-  {
-   "seq": "P006",
-   "name": "One On One Agenda Generator",
-   "cname": "🗓️ 自動生成 1:1 會議議程",
-   "file": "zh/v2/Prompt/P006_OneOnOneAgendaGenerator.html",
-   "en_file": "en/v2/Prompt/P006_OneOnOneAgendaGenerator_EN.html",
-   "preview": "🗓️ 自動生成 1:1 會議議程 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P007",
-   "name": "Outlook Email Summarizer",
-   "cname": "📧 Outlook 郵件摘要與回覆草稿",
-   "file": "zh/v2/Prompt/P007_OutlookEmailSummarizer.html",
-   "en_file": "en/v2/Prompt/P007_OutlookEmailSummarizer_EN.html",
-   "preview": "📧 Outlook 郵件摘要與回覆草稿 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P008",
-   "name": "Researcher Executive Brief",
-   "cname": "🔬 Researcher：生成有引用來源的高管簡報",
-   "file": "zh/v2/Prompt/P008_ResearcherExecutiveBrief.html",
-   "en_file": "en/v2/Prompt/P008_ResearcherExecutiveBrief_EN.html",
-   "preview": "🔬 Researcher：生成有引用來源的高管簡報"
-  },
-  {
-   "seq": "P009",
-   "name": "Excel Data Quality Audit",
-   "cname": "📊 Excel 資料品質稽核與修復清單",
-   "file": "zh/v2/Prompt/P009_ExcelDataQualityAudit.html",
-   "en_file": "en/v2/Prompt/P009_ExcelDataQualityAudit_EN.html",
-   "preview": "📊 Excel 資料品質稽核與修復清單 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P010",
-   "name": "Document Glossary Builder",
-   "cname": "📖 文件術語表自動生成",
-   "file": "zh/v2/Prompt/P010_DocumentGlossaryBuilder.html",
-   "en_file": "en/v2/Prompt/P010_DocumentGlossaryBuilder_EN.html",
-   "preview": "📖 文件術語表自動生成 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P011",
-   "name": "Honest Friend Mirror",
-   "cname": "🪞 誠實之友：給自己的10個真心話",
-   "file": "zh/v2/Prompt/P011_HonestFriendMirror.html",
-   "en_file": "en/v2/Prompt/P011_HonestFriendMirror_EN.html",
-   "preview": "🪞 誠實之友：給自己的10個真心話 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P012",
-   "name": "Communication Style Analyzer",
-   "cname": "🔎 分析溝通風格，量身訂製回覆",
-   "file": "zh/v2/Prompt/P012_CommunicationStyleAnalyzer.html",
-   "en_file": "en/v2/Prompt/P012_CommunicationStyleAnalyzer_EN.html",
-   "preview": "🔎 分析溝通風格，量身訂製回覆 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P013",
-   "name": "Word Cloud Generator",
-   "cname": "☁️ 文件文字雲視覺化",
-   "file": "zh/v2/Prompt/P013_WordCloudGenerator.html",
-   "en_file": "en/v2/Prompt/P013_WordCloudGenerator_EN.html",
-   "preview": "☁️ 文件文字雲視覺化 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P014",
-   "name": "Conversation Consolidator",
-   "cname": "🔄 對話彙整為單一可重用提示詞",
-   "file": "zh/v2/Prompt/P014_ConversationConsolidator.html",
-   "en_file": "en/v2/Prompt/P014_ConversationConsolidator_EN.html",
-   "preview": "🔄 對話彙整為單一可重用提示詞 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P015",
-   "name": "Data Visualization Analyzer",
-   "cname": "📈 資料視覺化與洞察分析",
-   "file": "zh/v2/Prompt/P015_DataVisualizationAnalyzer.html",
-   "en_file": "en/v2/Prompt/P015_DataVisualizationAnalyzer_EN.html",
-   "preview": "📈 資料視覺化與洞察分析 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P016",
-   "name": "Role Specific Doc Summary",
-   "cname": "📋 依職務角色量身定制的文件摘要",
-   "file": "zh/v2/Prompt/P016_RoleSpecificDocSummary.html",
-   "en_file": "en/v2/Prompt/P016_RoleSpecificDocSummary_EN.html",
-   "preview": "📋 依職務角色量身定制的文件摘要 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P017",
-   "name": "Dominant Color Extractor",
-   "cname": "🎨 圖片主色調提取工具",
-   "file": "zh/v2/Prompt/P017_DominantColorExtractor.html",
-   "en_file": "en/v2/Prompt/P017_DominantColorExtractor_EN.html",
-   "preview": "🎨 圖片主色調提取工具 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P018",
-   "name": "Speaker Notes Optimizer",
-   "cname": "🎤 簡報演講者備忘稿優化",
-   "file": "zh/v2/Prompt/P018_SpeakerNotesOptimizer.html",
-   "en_file": "en/v2/Prompt/P018_SpeakerNotesOptimizer_EN.html",
-   "preview": "🎤 簡報演講者備忘稿優化 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P019",
-   "name": "Meeting Chat Qa Summary",
-   "cname": "💬 會議聊天室問答摘要文件",
-   "file": "zh/v2/Prompt/P019_MeetingChatQaSummary.html",
-   "en_file": "en/v2/Prompt/P019_MeetingChatQaSummary_EN.html",
-   "preview": "💬 會議聊天室問答摘要文件 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P020",
-   "name": "Inbox Priority Analyzer",
-   "cname": "📬 收件匣優先序智慧分析",
-   "file": "zh/v2/Prompt/P020_InboxPriorityAnalyzer.html",
-   "en_file": "en/v2/Prompt/P020_InboxPriorityAnalyzer_EN.html",
-   "preview": "📬 收件匣優先序智慧分析 讓 AI 真正為你工作"
-  },
-  {
-   "seq": "P021",
-   "name": "Personal Prompt Engineer",
-   "cname": "讓 Copilot 當你的 Prompt 工程師",
-   "file": "zh/v2/Prompt/P021_PersonalPromptEngineer.html",
-   "en_file": "en/v2/Prompt/P021_PersonalPromptEngineer_EN.html",
-   "preview": "🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用 ⚡ 試用：Copilot Chat - Web"
-  },
-  {
-   "seq": "P022",
-   "name": "Weekly Status Report",
-   "cname": "一鍵產出週報摘要",
-   "file": "zh/v2/Prompt/P022_WeeklyStatusReport.html",
-   "en_file": "en/v2/Prompt/P022_WeeklyStatusReport_EN.html",
-   "preview": "Weekly Status Report in One Click"
-  },
-  {
-   "seq": "P023",
-   "name": "One Note Task Summary",
-   "cname": "OneNote 待辦事項一覽表",
-   "file": "zh/v2/Prompt/P023_OneNoteTaskSummary.html",
-   "en_file": "en/v2/Prompt/P023_OneNoteTaskSummary_EN.html",
-   "preview": "OneNote Outstanding Task Summary"
-  },
-  {
-   "seq": "P024",
-   "name": "Transcribe Scanned Document",
-   "cname": "掃描文件一鍵轉數位文字",
-   "file": "zh/v2/Prompt/P024_TranscribeScannedDocument.html",
-   "en_file": "en/v2/Prompt/P024_TranscribeScannedDocument_EN.html",
-   "preview": "Transcribe Scanned Documents Instantly"
-  },
-  {
-   "seq": "P025",
-   "name": "Email Categorization",
-   "cname": "信件主題分類一覽",
-   "file": "zh/v2/Prompt/P025_EmailCategorization.html",
-   "en_file": "en/v2/Prompt/P025_EmailCategorization_EN.html",
-   "preview": "Categorize Last Week's Emails by Theme"
-  },
-  {
-   "seq": "P026",
-   "name": "Day Wrap Up Prep",
-   "cname": "一鍵收工＋明日備戰計畫",
-   "file": "zh/v2/Prompt/P026_DayWrapUpPrep.html",
-   "en_file": "en/v2/Prompt/P026_DayWrapUpPrep_EN.html",
-   "preview": "Daily Wrap-Up & Tomorrow Prep"
-  },
-  {
-   "seq": "P027",
-   "name": "Excel Kpi Generator",
-   "cname": "Excel 表格 KPI 自動提案",
-   "file": "zh/v2/Prompt/P027_ExcelKpiGenerator.html",
-   "en_file": "en/v2/Prompt/P027_ExcelKpiGenerator_EN.html",
-   "preview": "Auto-Propose KPIs from Your Excel Table"
-  },
-  {
-   "seq": "P028",
-   "name": "Schedule Meeting",
-   "cname": "用 Copilot 一鍵排會議時間",
-   "file": "zh/v2/Prompt/P028_ScheduleMeeting.html",
-   "en_file": "en/v2/Prompt/P028_ScheduleMeeting_EN.html",
-   "preview": "Let Copilot Schedule Your Meeting"
-  },
-  {
-   "seq": "P029",
-   "name": "Three Level Content",
-   "cname": "一份內容，三種複雜度版本",
-   "file": "zh/v2/Prompt/P029_ThreeLevelContent.html",
-   "en_file": "en/v2/Prompt/P029_ThreeLevelContent_EN.html",
-   "preview": "Three Complexity Versions of the Same Content"
-  },
-  {
-   "seq": "P030",
-   "name": "Meeting Follow Up Email",
-   "cname": "會議跟進信自動產出",
-   "file": "zh/v2/Prompt/P030_MeetingFollowUpEmail.html",
-   "en_file": "en/v2/Prompt/P030_MeetingFollowUpEmail_EN.html",
-   "preview": "Auto-Generate Meeting Follow-Up Email"
-  },
-  {
-   "seq": "P031",
-   "name": "Skill Learning Guide",
-   "cname": "Copilot 技能學習導師",
-   "file": "zh/v2/Prompt/P031_SkillLearningGuide.html",
-   "en_file": "en/v2/Prompt/P031_SkillLearningGuide_EN.html",
-   "preview": "Your Personal Skill Learning Coach"
-  },
-  {
-   "seq": "P032",
-   "name": "Presentation Questions",
-   "cname": "簡報互動提問產生器",
-   "file": "zh/v2/Prompt/P032_PresentationQuestions.html",
-   "en_file": "en/v2/Prompt/P032_PresentationQuestions_EN.html",
-   "preview": "Generate Audience Questions for Your Presentation"
-  },
-  {
-   "seq": "P033",
-   "name": "Translate Presentation",
-   "cname": "簡報語言一鍵翻譯",
-   "file": "zh/v2/Prompt/P033_TranslatePresentation.html",
-   "en_file": "en/v2/Prompt/P033_TranslatePresentation_EN.html",
-   "preview": "Translate Your Presentation in One Click"
-  },
-  {
-   "seq": "P034",
-   "name": "Problem Solving Buddy",
-   "cname": "問題解決腦力激盪夥伴",
-   "file": "zh/v2/Prompt/P034_ProblemSolvingBuddy.html",
-   "en_file": "en/v2/Prompt/P034_ProblemSolvingBuddy_EN.html",
-   "preview": "Your Problem-Solving Brainstorm Buddy"
-  },
-  {
-   "seq": "P035",
-   "name": "Out Of Office Message",
-   "cname": "自動休假回覆信設定",
-   "file": "zh/v2/Prompt/P035_OutOfOfficeMessage.html",
-   "en_file": "en/v2/Prompt/P035_OutOfOfficeMessage_EN.html",
-   "preview": "Set Up Your Out-of-Office Auto Reply"
-  },
-  {
-   "seq": "P036",
-   "name": "Daily News Briefing",
-   "cname": "每日產業新聞簡報",
-   "file": "zh/v2/Prompt/P036_DailyNewsBriefing.html",
-   "en_file": "en/v2/Prompt/P036_DailyNewsBriefing_EN.html",
-   "preview": "請為 [產業] 中關於 [主題] 的新聞製作每日簡報。每篇摘要請整理成一個完整段落，以清楚且有力的主題句開頭，突顯文章的核心重點，簡潔摘要主要洞察並保持清晰與連貫性。在每篇摘要末尾加上「來源：」，後接出版品名稱，並附上原始文章的直接連結。"
-  },
-  {
-   "seq": "P037",
-   "name": "QR Code Generator",
-   "cname": "QR Code 快速產生器",
-   "file": "zh/v2/Prompt/P037_QRCodeGenerator.html",
-   "en_file": "en/v2/Prompt/P037_QRCodeGenerator_EN.html",
-   "preview": "請為 [我的網站 URL] 產生一個 QR Code。"
-  },
-  {
-   "seq": "P038",
-   "name": "Group Chat Topics Overview",
-   "cname": "Teams 群組聊天主題全覽表",
-   "file": "zh/v2/Prompt/P038_GroupChatTopicsOverview.html",
-   "en_file": "en/v2/Prompt/P038_GroupChatTopicsOverview_EN.html",
-   "preview": "建立此聊天室過去 7 天訊息的總覽，按從新到舊排序。請完整遵照以下格式說明。將每個主題各自整理成一個獨立的表格，每個表格只有一個儲存格。在這個儲存格中加入各主題的定義內容，各主題之間以兩個換行分隔。在各主題摘要的儲存格內，依序加入：兩個換行"
-  },
-  {
-   "seq": "P039",
-   "name": "Presentation Poll Questions",
-   "cname": "簡報互動問卷設計師",
-   "file": "zh/v2/Prompt/P039_PresentationPollQuestions.html",
-   "en_file": "en/v2/Prompt/P039_PresentationPollQuestions_EN.html",
-   "preview": "我想在終端使用者面前進行一場簡報。為了讓場次更具吸引力和互動性，我想在每個章節結束後進行一次投票，蒐集觀眾的想法與回饋。請為每個章節各提出三個可能的問卷問題。"
-  },
-  {
-   "seq": "P040",
-   "name": "Workday Task Prioritizer",
-   "cname": "工作日任務優先排序器",
-   "file": "zh/v2/Prompt/P040_WorkdayTaskPrioritizer.html",
-   "en_file": "en/v2/Prompt/P040_WorkdayTaskPrioritizer_EN.html",
-   "preview": "嘿 Copilot，幫我整頓今天的工作節奏！先分析我的郵件、日曆邀請和 Teams 對話，將任務依優先順序分為三類並各自列表： Must-Do （緊急且重要）、 Should-Do （重要但不緊急）、 Could-Do （有就更好，可彈性安"
-  },
-  {
-   "seq": "P041",
-   "name": "Workshop Handout Creator",
-   "cname": "工作坊簡報講義產生器",
-   "file": "zh/v2/Prompt/P041_WorkshopHandoutCreator.html",
-   "en_file": "en/v2/Prompt/P041_WorkshopHandoutCreator_EN.html",
-   "preview": "請製作一份講義，先以簡短摘要介紹 /[簡報或文件] 的內容，接著建立一個包含關鍵要素的表格，表格欄位為「關鍵要素」與「簡短說明」。表格之後，根據 / 中的內容列出延伸性與挑戰性問題及其解答。"
-  },
-  {
-   "seq": "P042",
-   "name": "New Year Goals Planner",
-   "cname": "新年職涯目標規劃師",
-   "file": "zh/v2/Prompt/P042_NewYearGoalsPlanner.html",
-   "en_file": "en/v2/Prompt/P042_NewYearGoalsPlanner_EN.html",
-   "preview": "現在是 2025 年初，我想在職業生涯中充分把握這一年。請幫我規劃設定並達成有影響力的商業目標的策略。我也希望獲得促進協作、提升生產力，以及在這一年中維持健康工作生活平衡的具體建議。"
-  },
-  {
-   "seq": "P043",
-   "name": "Excel Correlation Report",
-   "cname": "Excel 數值相關性分析報告",
-   "file": "zh/v2/Prompt/P043_ExcelCorrelationReport.html",
-   "en_file": "en/v2/Prompt/P043_ExcelCorrelationReport_EN.html",
-   "preview": "請針對數值欄位產生相關性報告，包含 關鍵發現摘要 ，並根據識別出的相關性提供潛在行動建議。"
-  },
-  {
-   "seq": "P044",
-   "name": "Year End Team Message",
-   "cname": "年末團隊感謝信產生器",
-   "file": "zh/v2/Prompt/P044_YearEndTeamMessage.html",
-   "en_file": "en/v2/Prompt/P044_YearEndTeamMessage_EN.html",
-   "preview": "請幫我寫一封年末訊息給我的團隊成員，感謝他們這一年的傑出表現以及在 [請填入具體專案名稱] 上的所有付出。語氣請溫暖且帶有感謝之情，並加入一些輕鬆幽默。考慮加入條列點，以突顯特定成就或里程碑。"
-  },
-  {
-   "seq": "P045",
-   "name": "Document Best Practices Review",
-   "cname": "文件最佳實踐差距分析",
-   "file": "zh/v2/Prompt/P045_DocumentBestPracticesReview.html",
-   "en_file": "en/v2/Prompt/P045_DocumentBestPracticesReview_EN.html",
-   "preview": "請檢視我的 [document.docx] ，並對照此處列出的最佳實踐 [Best-Practices.pdf] 進行分析。列出我們尚未涵蓋的內容，以及還可以進一步改進的地方。"
-  },
-  {
-   "seq": "P046",
-   "name": "Weekly Time Categories",
-   "cname": "每週時間分配類別分析",
-   "file": "zh/v2/Prompt/P046_WeeklyTimeCategories.html",
-   "en_file": "en/v2/Prompt/P046_WeeklyTimeCategories_EN.html",
-   "preview": "依據我接下來這一週的日曆，建立 五個 描述我如何運用時間的類別，並為每個類別提供簡短說明，以及估計我在每個類別上花費的時間百分比。"
-  },
-  {
-   "seq": "P047",
-   "name": "FAQ Generator",
-   "cname": "多文件 FAQ 快速產生器",
-   "file": "zh/v2/Prompt/P047_FAQGenerator.html",
-   "en_file": "en/v2/Prompt/P047_FAQGenerator_EN.html",
-   "preview": "請依據 [presentation.pptx] 和 [document.docx] 建立一份 FAQ，包含清楚的標題與條列點以提升可讀性。確保文件結構能有效回應常見問題，並為目標讀者提供完整的解答。考慮使用 Markdown 格式化文件，方"
-  },
-  {
-   "seq": "P048",
-   "name": "Email Thread Summarizer",
-   "cname": "郵件串摘要與行動項目產生器",
-   "file": "zh/v2/Prompt/P048_EmailThreadSummarizer.html",
-   "en_file": "en/v2/Prompt/P048_EmailThreadSummarizer_EN.html",
-   "preview": "請摘要這封郵件串的完整活動內容並以清單列出，然後另外產生一份 行動項目的獨立條列清單 ，可直接傳送給我的同事。請使用淺顯易懂的語言，讓同事能快速進入狀況。"
-  },
-  {
-   "seq": "P049",
-   "name": "Excel Executive Briefing",
-   "cname": "Excel 一頁式主管決策簡報",
-   "file": "zh/v2/Prompt/P049_ExcelExecutiveBriefing.html",
-   "en_file": "en/v2/Prompt/P049_ExcelExecutiveBriefing_EN.html",
-   "preview": "請將此 Excel 檔整理成一頁式主管決策簡報，包含 KPI 、 趨勢 與任何 警示紅旗 。請提供一個合適的資料集視覺化圖表（例如長條圖或圓餅圖）。此圖表應幫助使用者快速發現相關性與趨勢，進一步強化一頁簡報的效果。"
-  },
-  {
-   "seq": "P050",
-   "name": "Workday Recap Summary",
-   "cname": "工作日訊息回顧與行動摘要",
-   "file": "zh/v2/Prompt/P050_WorkdayRecapSummary.html",
-   "en_file": "en/v2/Prompt/P050_WorkdayRecapSummary_EN.html",
-   "preview": "請摘要我上一個工作日的郵件和 Teams 訊息，並在獨立欄位中列出行動項目。如果可以的話，請在另一個獨立欄位中建議後續行動。表格格式如下： 類型（郵件/Teams）| 主題 | 摘要 | 行動項目 | 後續行動 。如果我被直接點名，請將該主"
-  },
-  {
-   "seq": "P051",
-   "name": "Meeting Briefing Generator",
-   "cname": "📋 商務會議前情資簡報",
-   "file": "zh/v2/Prompt/P051_MeetingBriefingGenerator.html",
-   "en_file": "en/v2/Prompt/P051_MeetingBriefingGenerator_EN.html",
-   "preview": "Meeting Briefing Generator"
-  },
-  {
-   "seq": "P052",
-   "name": "Guided Email Reply Assistant",
-   "cname": "📧 智慧郵件回覆引導",
-   "file": "zh/v2/Prompt/P052_GuidedEmailReplyAssistant.html",
-   "en_file": "en/v2/Prompt/P052_GuidedEmailReplyAssistant_EN.html",
-   "preview": "Guided Email Reply Assistant"
-  },
-  {
-   "seq": "P053",
-   "name": "Presentation Quality Check",
-   "cname": "🎯 簡報品質全面健診",
-   "file": "zh/v2/Prompt/P053_PresentationQualityCheck.html",
-   "en_file": "en/v2/Prompt/P053_PresentationQualityCheck_EN.html",
-   "preview": "Presentation Quality Check"
-  },
-  {
-   "seq": "P054",
-   "name": "Workplace Language Coach",
-   "cname": "職場外語學習教練",
-   "file": "zh/v2/Prompt/P054_WorkplaceLanguageCoach.html",
-   "en_file": "en/v2/Prompt/P054_WorkplaceLanguageCoach_EN.html",
-   "preview": "擔任我的語言教練，幫我提升語言能力。請先問我：1. 我想學哪種語言，以及 2. 我目前的語言程度（基礎、中級、進階）。請聚焦於 [主題，例如：職場] 相關話題，以及我作為 [職稱] 的角色需求。使用簡單清楚的句子讓我容易理解。以對話形式練習"
-  },
-  {
-   "seq": "P055",
-   "name": "Schedule Conflict Resolver",
-   "cname": "📅 下週行程衝突排除器",
-   "file": "zh/v2/Prompt/P055_ScheduleConflictResolver.html",
-   "en_file": "en/v2/Prompt/P055_ScheduleConflictResolver_EN.html",
-   "preview": "Schedule Conflict Resolver"
-  },
-  {
-   "seq": "P056",
-   "name": "Text Simplifier",
-   "cname": "✍️ 複雜文字簡化大師",
-   "file": "zh/v2/Prompt/P056_TextSimplifier.html",
-   "en_file": "en/v2/Prompt/P056_TextSimplifier_EN.html",
-   "preview": "Text Simplifier & Plain Language Expert"
-  },
-  {
-   "seq": "P057",
-   "name": "Graceful No Plant Framework",
-   "cname": "🌱 優雅說不：PLANT 拒絕框架",
-   "file": "zh/v2/Prompt/P057_GracefulNoPlantFramework.html",
-   "en_file": "en/v2/Prompt/P057_GracefulNoPlantFramework_EN.html",
-   "preview": "Graceful No with PLANT Framework"
-  },
-  {
-   "seq": "P058",
-   "name": "Email Misunderstanding Resolver",
-   "cname": "📨 郵件誤解化解術",
-   "file": "zh/v2/Prompt/P058_EmailMisunderstandingResolver.html",
-   "en_file": "en/v2/Prompt/P058_EmailMisunderstandingResolver_EN.html",
-   "preview": "Email Thread Misunderstanding Resolver"
-  },
-  {
-   "seq": "P059",
-   "name": "Team Chat Faq Generator",
-   "cname": "💬 團隊對話 FAQ 自動生成",
-   "file": "zh/v2/Prompt/P059_TeamChatFaqGenerator.html",
-   "en_file": "en/v2/Prompt/P059_TeamChatFaqGenerator_EN.html",
-   "preview": "Team Chat FAQ Generator"
-  },
-  {
-   "seq": "P060",
-   "name": "Leadership Strengths Analysis",
-   "cname": "🏆 領導風格與優勢自我分析",
-   "file": "zh/v2/Prompt/P060_LeadershipStrengthsAnalysis.html",
-   "en_file": "en/v2/Prompt/P060_LeadershipStrengthsAnalysis_EN.html",
-   "preview": "Leadership Style & Strengths Analysis"
-  },
-  {
-   "seq": "P061",
-   "name": "Weekly Team Pulse Survey",
-   "cname": "📊 每週團隊脈動問卷生成器",
-   "file": "zh/v2/Prompt/P061_WeeklyTeamPulseSurvey.html",
-   "en_file": "en/v2/Prompt/P061_WeeklyTeamPulseSurvey_EN.html",
-   "preview": "Weekly Team Pulse Survey Builder"
-  },
-  {
-   "seq": "P062",
-   "name": "Ocean Outlook Instructions",
-   "cname": "🧬 OCEAN 個人化 Outlook 起草指示詞",
-   "file": "zh/v2/Prompt/P062_OceanOutlookInstructions.html",
-   "en_file": "en/v2/Prompt/P062_OceanOutlookInstructions_EN.html",
-   "preview": "🧬 OCEAN 個人化 Outlook 起草指示詞"
-  },
-  {
-   "seq": "P063",
-   "name": "Presentation Optimization Planner",
-   "cname": "🗂️ 簡報精簡與時間優化助手",
-   "file": "zh/v2/Prompt/P063_PresentationOptimizationPlanner.html",
-   "en_file": "en/v2/Prompt/P063_PresentationOptimizationPlanner_EN.html",
-   "preview": "Presentation Optimization & Timing Planner"
-  },
-  {
-   "seq": "P064",
-   "name": "Customer Issue Best Practices Doc",
-   "cname": "📚 客戶問題最佳實踐文件生成",
-   "file": "zh/v2/Prompt/P064_CustomerIssueBestPracticesDoc.html",
-   "en_file": "en/v2/Prompt/P064_CustomerIssueBestPracticesDoc_EN.html",
-   "preview": "Customer Issue Best Practices Document"
-  },
-  {
-   "seq": "P065",
-   "name": "Copilot Learning Plan",
-   "cname": "🎓 M365 Copilot 個人化學習計畫",
-   "file": "zh/v2/Prompt/P065_CopilotLearningPlan.html",
-   "en_file": "en/v2/Prompt/P065_CopilotLearningPlan_EN.html",
-   "preview": "🎓 M365 Copilot 個人化學習計畫"
-  },
-  {
-   "seq": "P066",
-   "name": "Neurodiversity Exam Prep",
-   "cname": "告別死背！為你的大腦量身打造備考計畫",
-   "file": "zh/v2/Prompt/P066_NeurodiversityExamPrep.html",
-   "en_file": "en/v2/Prompt/P066_NeurodiversityExamPrep_EN.html",
-   "preview": "我正在準備 [考試名稱/代碼] 的考試，考試日期是 [日期] 。我的程度： [新手 / 中階 / 熟悉] 。目標： [通過 / 達到 X 分] 。可用時間： [每天 X 分鐘，每週 Y 小時] 。適合我的學習方式： [短段落、類比說明、測驗"
-  },
-  {
-   "seq": "P067",
-   "name": "Email Risk Radar",
-   "cname": "讓 Copilot 掃你的信箱，提前發現潛在風險",
-   "file": "zh/v2/Prompt/P067_EmailRiskRadar.html",
-   "en_file": "en/v2/Prompt/P067_EmailRiskRadar_EN.html",
-   "preview": "請以 唯讀方式 分析我過去 45 天的電子郵件。偵測並標記以下風險模式：1）緊張或衝突升高的跡象 2）逾期截止日期與重複追蹤 3）重複請求卻沒有解決 4）直接問題未獲回答 5）被動攻擊型或挫折語氣轉變 6）已表明但未履行的承諾。針對每個標記"
-  },
-  {
-   "seq": "P068",
-   "name": "Smart Inbox Architecture",
-   "cname": "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
-   "file": "zh/v2/Prompt/P068_SmartInboxArchitecture.html",
-   "en_file": "en/v2/Prompt/P068_SmartInboxArchitecture_EN.html",
-   "preview": "範圍與護欄： 唯讀分析。分析最近 14–30 天的 Outlook 郵件，優先使用元資料：寄件者名稱、網域、主旨模式、預覽文字、To/CC 使用、通訊群組、noreply/系統訊號。不摘要信件內容，僅在需要時用於偵測明確行動訊號（例如 ac"
-  },
-  {
-   "seq": "P069",
-   "name": "Recipient Style Matching",
-   "cname": "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
-   "file": "zh/v2/Prompt/P069_RecipientStyleMatching.html",
-   "en_file": "en/v2/Prompt/P069_RecipientStyleMatching_EN.html",
-   "preview": "收件人： [姓名 / 身份] 輸入文字： [在此貼上你的郵件 / 文字 / 摘要] 目標： 改寫輸入文字，使其符合收件人的溝通風格與角色情境（技術型 / 非技術型），同時保持專業、準確、基於事實。 資料來源（僅限 Work 模式）： 使用過"
-  },
-  {
-   "seq": "P070",
-   "name": "Presentation Rehearsal Coach",
-   "cname": "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
-   "file": "zh/v2/Prompt/P070_PresentationRehearsalCoach.html",
-   "en_file": "en/v2/Prompt/P070_PresentationRehearsalCoach_EN.html",
-   "preview": "請以目前的 PowerPoint 簡報為輸入（投影片、結構、講者備註）。扮演一位嚴格的演練教練，為我準備高階聽眾的提問。請生成一份壓力測試 Q&A 指南，包含以下五類： 1） 澄清型問題： 當某處不清楚時，高階聽眾可能提出的問題。提供 2-"
-  },
-  {
-   "seq": "P071",
-   "name": "Writing Style Prefix",
-   "cname": "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
-   "file": "zh/v2/Prompt/P071_WritingStylePrefix.html",
-   "en_file": "en/v2/Prompt/P071_WritingStylePrefix_EN.html",
-   "preview": "請分析我過去 90 天的 Teams 訊息與 Outlook 郵件。根據分析，識別並摘要我的個人寫作風格，包括：- 語氣（正式 vs 輕鬆，直接 vs 圓融）- 典型訊息長度與結構 - 我常用的詞語或表達方式 - 我如何開場與結尾 - 其他"
-  },
-  {
-   "seq": "P072",
-   "name": "Executive Doc Summary",
-   "cname": "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
-   "file": "zh/v2/Prompt/P072_ExecutiveDocSummary.html",
-   "en_file": "en/v2/Prompt/P072_ExecutiveDocSummary_EN.html",
-   "preview": "請為資深決策者生成一份簡潔、即用的執行摘要。 指示： 識別文件 [文件] 的目的與目標利害關係人；萃取 3-5 條最關鍵的洞察或結論；清楚說明所需決策或建議；標出風險、待解問題或限制條件；總字數限 250 字以內。 結構： • 目的： 一句"
-  },
-  {
-   "seq": "P073",
-   "name": "Work Rhythm Analyzer",
-   "cname": "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
-   "file": "zh/v2/Prompt/P073_WorkRhythmAnalyzer.html",
-   "en_file": "en/v2/Prompt/P073_WorkRhythmAnalyzer_EN.html",
-   "preview": "請檢視我近期的文件、電子郵件、聊天活動與檔案編輯，識別我一天中傾向在哪些時段進行最好的 專注工作 、 創意工作 與 即時反應工作 。根據這些模式，建立我的自然工作節奏側寫。接著，建議一些彈性的方式，讓我可以更好地安排我的一天，以支撐 能量、"
-  },
-  {
-   "seq": "P074",
-   "name": "Weekly Action Item Summary",
-   "cname": "一鍵彙整本週指派給我的待辦事項",
-   "file": "zh/v2/Prompt/P074_WeeklyActionItemSummary.html",
-   "en_file": "en/v2/Prompt/P074_WeeklyActionItemSummary_EN.html",
-   "preview": "請彙整上週透過 電子郵件、會議逐字稿、Teams 訊息、以及我被 @ 提及的檔案註解 中所有指派給我的待辦事項。包含任何別人提到的任務、後續追蹤請求或截止日期。請建立一張表格，包含以下欄位： 1) 待辦事項（Action Item） 2) "
-  },
-  {
-   "seq": "P075",
-   "name": "Excel Forecasting Model",
-   "cname": "用歷史資料打造 Excel 預測模型",
-   "file": "zh/v2/Prompt/P075_ExcelForecastingModel.html",
-   "en_file": "en/v2/Prompt/P075_ExcelForecastingModel_EN.html",
-   "preview": "請依據這份歷史資料，為 [指標名稱] 建立預測模型。請包含： 1) 趨勢分析與季節性偵測 2) 未來 [3／6／12] 個月的預測（含信心區間） 3) 預測底下的 關鍵假設 4) 可能改變預測的 因素 5) 敏感度分析 （最好／最差／最可能"
-  },
-  {
-   "seq": "P076",
-   "name": "Project Pulse Weekly Update",
-   "cname": "專案脈動週報生成器",
-   "file": "zh/v2/Prompt/P076_ProjectPulseWeeklyUpdate.html",
-   "en_file": "en/v2/Prompt/P076_ProjectPulseWeeklyUpdate_EN.html",
-   "preview": "幫我為專案「[專案名稱]」產出最近 7 天的 Status Update。請使用我的 Email、Teams 對話、會議記錄、近期檔案編輯為來源。請依以下結構產出：1) 執行摘要（3 句），2) 自上次更新以來的進度（條列，含負責人），3)"
-  },
-  {
-   "seq": "P077",
-   "name": "7 Slide Deck Builder",
-   "cname": "七頁簡報快速產生器",
-   "file": "zh/v2/Prompt/P077_7SlideDeckBuilder.html",
-   "en_file": "en/v2/Prompt/P077_7SlideDeckBuilder_EN.html",
-   "preview": "根據下方的 Brief，產生一份精簡的 7 頁簡報。輸入：僅以貼上的文字作為來源。投影片（共 7 頁，順序固定）：1) 標題 — [專案／提案名稱] 2) 問題／脈絡 3) 解決方案（最多 3 個支柱）4) 價值與成果（盡量量化）5) 交付"
-  },
-  {
-   "seq": "P078",
-   "name": "Email Domain Inbox Summary",
-   "cname": "信件網域摘要",
-   "file": "zh/v2/Prompt/P078_EmailDomainInboxSummary.html",
-   "en_file": "en/v2/Prompt/P078_EmailDomainInboxSummary_EN.html",
-   "preview": "建立一張表格，列出我在過去 X 週內從 DOMAINNAME（例如 @customer.com）收到的所有 email。請包含一欄顯示這封信需要哪些行動，以及另一欄顯示我公司是否有人已經回覆。"
-  }
- ]
+  "generated": "2026-05-30 02:50:53",
+  "Agent_v1": [
+    {
+      "seq": "A001",
+      "name": "Exec News Aggregator",
+      "cname": "主管新聞聚合器",
+      "file": "zh/v1/Agent/A001_ExecNewsAggregator.html",
+      "en_file": "en/v1/Agent/A001_ExecNewsAggregator_EN.html"
+    },
+    {
+      "seq": "A002",
+      "name": "Daily Challenge Agent",
+      "cname": "每日挑戰 Agent",
+      "file": "zh/v1/Agent/A002_DailyChallengeAgent.html",
+      "en_file": "en/v1/Agent/A002_DailyChallengeAgent_EN.html"
+    },
+    {
+      "seq": "A003",
+      "name": "SWOT Analysis Agent",
+      "cname": "SWOT 分析 Agent",
+      "file": "zh/v1/Agent/A003_SWOTAnalysisAgent.html",
+      "en_file": "en/v1/Agent/A003_SWOTAnalysisAgent_EN.html"
+    },
+    {
+      "seq": "A004",
+      "name": "Statement Of Work Agent",
+      "cname": "工作說明書 Agent",
+      "file": "zh/v1/Agent/A004_StatementOfWorkAgent.html",
+      "en_file": "en/v1/Agent/A004_StatementOfWorkAgent_EN.html"
+    },
+    {
+      "seq": "A005",
+      "name": "Event Agent",
+      "cname": "活動問答 Agent",
+      "file": "zh/v1/Agent/A005_EventAgent.html",
+      "en_file": "en/v1/Agent/A005_EventAgent_EN.html"
+    },
+    {
+      "seq": "A006",
+      "name": "Knowledge Extractor",
+      "cname": "知識萃取器",
+      "file": "zh/v1/Agent/A006_KnowledgeExtractor.html",
+      "en_file": "en/v1/Agent/A006_KnowledgeExtractor_EN.html"
+    },
+    {
+      "seq": "A007",
+      "name": "Scenario Simulator",
+      "cname": "情境模擬器",
+      "file": "zh/v1/Agent/A007_ScenarioSimulator.html",
+      "en_file": "en/v1/Agent/A007_ScenarioSimulator_EN.html"
+    },
+    {
+      "seq": "A008",
+      "name": "M365 Project Helper",
+      "cname": "M365 專案小幫手",
+      "file": "zh/v1/Agent/A008_M365ProjectHelper.html",
+      "en_file": "en/v1/Agent/A008_M365ProjectHelper_EN.html"
+    },
+    {
+      "seq": "A009",
+      "name": "Your Namesake",
+      "cname": "命名大師",
+      "file": "zh/v1/Agent/A009_YourNamesake.html",
+      "en_file": "en/v1/Agent/A009_YourNamesake_EN.html"
+    },
+    {
+      "seq": "A010",
+      "name": "AI Mindset Agent",
+      "cname": "AI 思維顧問",
+      "file": "zh/v1/Agent/A010_AIMindsetAgent.html",
+      "en_file": "en/v1/Agent/A010_AIMindsetAgent_EN.html"
+    },
+    {
+      "seq": "A011",
+      "name": "Prompting Mentor",
+      "cname": "提示詞導師",
+      "file": "zh/v1/Agent/A011_PromptingMentor.html",
+      "en_file": "en/v1/Agent/A011_PromptingMentor_EN.html"
+    },
+    {
+      "seq": "A012",
+      "name": "Document Classificator",
+      "cname": "文件分類師",
+      "file": "zh/v1/Agent/A012_DocumentClassificator.html",
+      "en_file": "en/v1/Agent/A012_DocumentClassificator_EN.html"
+    },
+    {
+      "seq": "A013",
+      "name": "SMART Goals",
+      "cname": "SMART 目標 Agent",
+      "file": "zh/v1/Agent/A013_SMARTGoals.html",
+      "en_file": "en/v1/Agent/A013_SMARTGoals_EN.html"
+    },
+    {
+      "seq": "A014",
+      "name": "NDA Comparison Agent",
+      "cname": "保密協議比對 Agent",
+      "file": "zh/v1/Agent/A014_NDAComparisonAgent.html",
+      "en_file": "en/v1/Agent/A014_NDAComparisonAgent_EN.html"
+    },
+    {
+      "seq": "A015",
+      "name": "Agent Crafter",
+      "cname": "Agent 設計師",
+      "file": "zh/v1/Agent/A015_AgentCrafter.html",
+      "en_file": "en/v1/Agent/A015_AgentCrafter_EN.html"
+    },
+    {
+      "seq": "A016",
+      "name": "Your Proofreader",
+      "cname": "校稿助手",
+      "file": "zh/v1/Agent/A016_YourProofreader.html",
+      "en_file": "en/v1/Agent/A016_YourProofreader_EN.html"
+    },
+    {
+      "seq": "A017",
+      "name": "Your Problem Solver",
+      "cname": "萬能解題助手",
+      "file": "zh/v1/Agent/A017_YourProblemSolver.html",
+      "en_file": "en/v1/Agent/A017_YourProblemSolver_EN.html"
+    },
+    {
+      "seq": "A018",
+      "name": "News Aggregator Agent",
+      "cname": "新聞聚合 Agent",
+      "file": "zh/v1/Agent/A018_NewsAggregatorAgent.html",
+      "en_file": "en/v1/Agent/A018_NewsAggregatorAgent_EN.html"
+    },
+    {
+      "seq": "A019",
+      "name": "Checklist Manifesto Agent",
+      "cname": "清單宣言 Agent",
+      "file": "zh/v1/Agent/A019_ChecklistManifestoAgent.html",
+      "en_file": "en/v1/Agent/A019_ChecklistManifestoAgent_EN.html"
+    },
+    {
+      "seq": "A020",
+      "name": "Dealcrafter Agent",
+      "cname": "談判大師 Agent",
+      "file": "zh/v1/Agent/A020_DealcrafterAgent.html",
+      "en_file": "en/v1/Agent/A020_DealcrafterAgent_EN.html"
+    },
+    {
+      "seq": "A021",
+      "name": "Training Content Writer",
+      "cname": "培訓內容創作者",
+      "file": "zh/v1/Agent/A021_TrainingContentWriter.html",
+      "en_file": "en/v1/Agent/A021_TrainingContentWriter_EN.html"
+    },
+    {
+      "seq": "A022",
+      "name": "Decision Architect",
+      "cname": "決策架構師",
+      "file": "zh/v1/Agent/A022_DecisionArchitect.html",
+      "en_file": "en/v1/Agent/A022_DecisionArchitect_EN.html"
+    },
+    {
+      "seq": "A023",
+      "name": "Wellness Productivity Coach",
+      "cname": "健康生產力教練",
+      "file": "zh/v1/Agent/A023_WellnessProductivityCoach.html",
+      "en_file": "en/v1/Agent/A023_WellnessProductivityCoach_EN.html"
+    },
+    {
+      "seq": "A024",
+      "name": "Innovation Radar Agent",
+      "cname": "創新雷達 Agent",
+      "file": "zh/v1/Agent/A024_InnovationRadarAgent.html",
+      "en_file": "en/v1/Agent/A024_InnovationRadarAgent_EN.html"
+    },
+    {
+      "seq": "A025",
+      "name": "Product Crafter",
+      "cname": "產品規劃師",
+      "file": "zh/v1/Agent/A025_ProductCrafter.html",
+      "en_file": "en/v1/Agent/A025_ProductCrafter_EN.html"
+    },
+    {
+      "seq": "A026",
+      "name": "Coherence Agent",
+      "cname": "一致性 Agent",
+      "file": "zh/v1/Agent/A026_CoherenceAgent.html",
+      "en_file": "en/v1/Agent/A026_CoherenceAgent_EN.html"
+    },
+    {
+      "seq": "A027",
+      "name": "Resolution Agent",
+      "cname": "決心教練",
+      "file": "zh/v1/Agent/A027_ResolutionAgent.html",
+      "en_file": "en/v1/Agent/A027_ResolutionAgent_EN.html"
+    },
+    {
+      "seq": "A028",
+      "name": "Storytelling Mentor",
+      "cname": "說故事導師",
+      "file": "zh/v1/Agent/A028_StorytellingMentor.html",
+      "en_file": "en/v1/Agent/A028_StorytellingMentor_EN.html"
+    },
+    {
+      "seq": "A029",
+      "name": "Marketing Agent",
+      "cname": "社群行銷 Agent",
+      "file": "zh/v1/Agent/A029_MarketingAgent.html",
+      "en_file": "en/v1/Agent/A029_MarketingAgent_EN.html"
+    },
+    {
+      "seq": "A030",
+      "name": "Peer Feedback Agent",
+      "cname": "同儕回饋 Agent",
+      "file": "zh/v1/Agent/A030_PeerFeedbackAgent.html",
+      "en_file": "en/v1/Agent/A030_PeerFeedbackAgent_EN.html"
+    },
+    {
+      "seq": "A031",
+      "name": "Presentation Optimizer Agent",
+      "cname": "簡報最佳化 Agent",
+      "file": "zh/v1/Agent/A031_PresentationOptimizerAgent.html",
+      "en_file": "en/v1/Agent/A031_PresentationOptimizerAgent_EN.html"
+    },
+    {
+      "seq": "A032",
+      "name": "Porter Five Forces Profiler",
+      "cname": "波特五力分析師",
+      "file": "zh/v1/Agent/A032_PorterFiveForcesProfiler.html",
+      "en_file": "en/v1/Agent/A032_PorterFiveForcesProfiler_EN.html"
+    },
+    {
+      "seq": "A033",
+      "name": "Say No Coach2",
+      "cname": "職場婉拒教練",
+      "file": "zh/v1/Agent/A033_SayNoCoach2.html",
+      "en_file": "en/v1/Agent/A033_SayNoCoach2_EN.html"
+    },
+    {
+      "seq": "A034",
+      "name": "OKR Coach Agent",
+      "cname": "OKR 教練",
+      "file": "zh/v1/Agent/A034_OKRCoachAgent.html",
+      "en_file": "en/v1/Agent/A034_OKRCoachAgent_EN.html"
+    },
+    {
+      "seq": "A035",
+      "name": "AB Testing Ideas",
+      "cname": "A/B 測試創意產生器",
+      "file": "zh/v1/Agent/A035_ABTestingIdeas.html",
+      "en_file": "en/v1/Agent/A035_ABTestingIdeas_EN.html"
+    },
+    {
+      "seq": "A036",
+      "name": "Meeting Recap Companion",
+      "cname": "會議摘要助理",
+      "file": "zh/v1/Agent/A036_MeetingRecapCompanion.html",
+      "en_file": "en/v1/Agent/A036_MeetingRecapCompanion_EN.html"
+    },
+    {
+      "seq": "A037",
+      "name": "Policy Author Pro",
+      "cname": "政策文件撰寫師",
+      "file": "zh/v1/Agent/A037_PolicyAuthorPro.html",
+      "en_file": "en/v1/Agent/A037_PolicyAuthorPro_EN.html"
+    },
+    {
+      "seq": "A038",
+      "name": "Monthly KPI Comparator",
+      "cname": "月度 KPI 比較器",
+      "file": "zh/v1/Agent/A038_MonthlyKPIComparator.html",
+      "en_file": "en/v1/Agent/A038_MonthlyKPIComparator_EN.html"
+    },
+    {
+      "seq": "A039",
+      "name": "Agent Of Change",
+      "cname": "變革推動教練",
+      "file": "zh/v1/Agent/A039_AgentOfChange.html",
+      "en_file": "en/v1/Agent/A039_AgentOfChange_EN.html"
+    },
+    {
+      "seq": "A040",
+      "name": "Meeting Prep",
+      "cname": "會議準備助手",
+      "file": "zh/v1/Agent/A040_MeetingPrep.html",
+      "en_file": "en/v1/Agent/A040_MeetingPrep_EN.html"
+    },
+    {
+      "seq": "A041",
+      "name": "Policy Simplifier",
+      "cname": "政策白話翻譯師",
+      "file": "zh/v1/Agent/A041_PolicySimplifier.html",
+      "en_file": "en/v1/Agent/A041_PolicySimplifier_EN.html"
+    },
+    {
+      "seq": "A042",
+      "name": "Evite",
+      "cname": "會議邀請設計師",
+      "file": "zh/v1/Agent/A042_Evite.html",
+      "en_file": "en/v1/Agent/A042_Evite_EN.html"
+    },
+    {
+      "seq": "A043",
+      "name": "Devils Advocate",
+      "cname": "魔鬼辯護人",
+      "file": "zh/v1/Agent/A043_DevilsAdvocate.html",
+      "en_file": "en/v1/Agent/A043_DevilsAdvocate_EN.html"
+    },
+    {
+      "seq": "A044",
+      "name": "Team Morale Assistant",
+      "cname": "團隊士氣激勵助手",
+      "file": "zh/v1/Agent/A044_TeamMoraleAssistant.html",
+      "en_file": "en/v1/Agent/A044_TeamMoraleAssistant_EN.html"
+    },
+    {
+      "seq": "A045",
+      "name": "Monthly KPI Comparator",
+      "cname": "月度 KPI 對比助手",
+      "file": "zh/v1/Agent/A045_MonthlyKPIComparator.html",
+      "en_file": "en/v1/Agent/A045_MonthlyKPIComparator_EN.html"
+    },
+    {
+      "seq": "A046",
+      "name": "Business Case Builder",
+      "cname": "商業提案產生器",
+      "file": "zh/v1/Agent/A046_BusinessCaseBuilder.html",
+      "en_file": "en/v1/Agent/A046_BusinessCaseBuilder_EN.html"
+    },
+    {
+      "seq": "A047",
+      "name": "Process Optimizer",
+      "cname": "流程優化師",
+      "file": "zh/v1/Agent/A047_ProcessOptimizer.html",
+      "en_file": "en/v1/Agent/A047_ProcessOptimizer_EN.html"
+    }
+  ],
+  "Agent_v2": [
+    {
+      "seq": "A001",
+      "name": "Exec News Aggregator",
+      "cname": "主管新聞聚合器",
+      "file": "zh/v2/Agent/A001_ExecNewsAggregator.html",
+      "en_file": "en/v2/Agent/A001_ExecNewsAggregator_EN.html"
+    },
+    {
+      "seq": "A002",
+      "name": "Daily Challenge Agent",
+      "cname": "每日挑戰 Agent",
+      "file": "zh/v2/Agent/A002_DailyChallengeAgent.html",
+      "en_file": "en/v2/Agent/A002_DailyChallengeAgent_EN.html"
+    },
+    {
+      "seq": "A003",
+      "name": "SWOT Analysis Agent",
+      "cname": "SWOT 分析 Agent",
+      "file": "zh/v2/Agent/A003_SWOTAnalysisAgent.html",
+      "en_file": "en/v2/Agent/A003_SWOTAnalysisAgent_EN.html"
+    },
+    {
+      "seq": "A004",
+      "name": "Statement Of Work Agent",
+      "cname": "工作說明書 Agent",
+      "file": "zh/v2/Agent/A004_StatementOfWorkAgent.html",
+      "en_file": "en/v2/Agent/A004_StatementOfWorkAgent_EN.html"
+    },
+    {
+      "seq": "A005",
+      "name": "Event Agent",
+      "cname": "活動問答 Agent",
+      "file": "zh/v2/Agent/A005_EventAgent.html",
+      "en_file": "en/v2/Agent/A005_EventAgent_EN.html"
+    },
+    {
+      "seq": "A006",
+      "name": "Knowledge Extractor",
+      "cname": "知識萃取器",
+      "file": "zh/v2/Agent/A006_KnowledgeExtractor.html",
+      "en_file": "en/v2/Agent/A006_KnowledgeExtractor_EN.html"
+    },
+    {
+      "seq": "A007",
+      "name": "Scenario Simulator",
+      "cname": "情境模擬器",
+      "file": "zh/v2/Agent/A007_ScenarioSimulator.html",
+      "en_file": "en/v2/Agent/A007_ScenarioSimulator_EN.html"
+    },
+    {
+      "seq": "A008",
+      "name": "M365 Project Helper",
+      "cname": "M365 專案小幫手",
+      "file": "zh/v2/Agent/A008_M365ProjectHelper.html",
+      "en_file": "en/v2/Agent/A008_M365ProjectHelper_EN.html"
+    },
+    {
+      "seq": "A009",
+      "name": "Your Namesake",
+      "cname": "命名大師",
+      "file": "zh/v2/Agent/A009_YourNamesake.html",
+      "en_file": "en/v2/Agent/A009_YourNamesake_EN.html"
+    },
+    {
+      "seq": "A010",
+      "name": "AI Mindset Agent",
+      "cname": "AI 思維顧問",
+      "file": "zh/v2/Agent/A010_AIMindsetAgent.html",
+      "en_file": "en/v2/Agent/A010_AIMindsetAgent_EN.html"
+    },
+    {
+      "seq": "A011",
+      "name": "Prompting Mentor",
+      "cname": "提示詞導師",
+      "file": "zh/v2/Agent/A011_PromptingMentor.html",
+      "en_file": "en/v2/Agent/A011_PromptingMentor_EN.html"
+    },
+    {
+      "seq": "A012",
+      "name": "Document Classificator",
+      "cname": "文件分類師",
+      "file": "zh/v2/Agent/A012_DocumentClassificator.html",
+      "en_file": "en/v2/Agent/A012_DocumentClassificator_EN.html"
+    },
+    {
+      "seq": "A013",
+      "name": "SMART Goals",
+      "cname": "SMART 目標 Agent",
+      "file": "zh/v2/Agent/A013_SMARTGoals.html",
+      "en_file": "en/v2/Agent/A013_SMARTGoals_EN.html"
+    },
+    {
+      "seq": "A014",
+      "name": "NDA Comparison Agent",
+      "cname": "保密協議比對 Agent",
+      "file": "zh/v2/Agent/A014_NDAComparisonAgent.html",
+      "en_file": "en/v2/Agent/A014_NDAComparisonAgent_EN.html"
+    },
+    {
+      "seq": "A015",
+      "name": "Agent Crafter",
+      "cname": "Agent 設計師",
+      "file": "zh/v2/Agent/A015_AgentCrafter.html",
+      "en_file": "en/v2/Agent/A015_AgentCrafter_EN.html"
+    },
+    {
+      "seq": "A016",
+      "name": "Your Proofreader",
+      "cname": "校稿助手",
+      "file": "zh/v2/Agent/A016_YourProofreader.html",
+      "en_file": "en/v2/Agent/A016_YourProofreader_EN.html"
+    },
+    {
+      "seq": "A017",
+      "name": "Your Problem Solver",
+      "cname": "萬能解題助手",
+      "file": "zh/v2/Agent/A017_YourProblemSolver.html",
+      "en_file": "en/v2/Agent/A017_YourProblemSolver_EN.html"
+    },
+    {
+      "seq": "A018",
+      "name": "News Aggregator Agent",
+      "cname": "新聞聚合 Agent",
+      "file": "zh/v2/Agent/A018_NewsAggregatorAgent.html",
+      "en_file": "en/v2/Agent/A018_NewsAggregatorAgent_EN.html"
+    },
+    {
+      "seq": "A019",
+      "name": "Checklist Manifesto Agent",
+      "cname": "清單宣言 Agent",
+      "file": "zh/v2/Agent/A019_ChecklistManifestoAgent.html",
+      "en_file": "en/v2/Agent/A019_ChecklistManifestoAgent_EN.html"
+    },
+    {
+      "seq": "A020",
+      "name": "Dealcrafter Agent",
+      "cname": "談判大師 Agent",
+      "file": "zh/v2/Agent/A020_DealcrafterAgent.html",
+      "en_file": "en/v2/Agent/A020_DealcrafterAgent_EN.html"
+    },
+    {
+      "seq": "A021",
+      "name": "Training Content Writer",
+      "cname": "培訓內容創作者",
+      "file": "zh/v2/Agent/A021_TrainingContentWriter.html",
+      "en_file": "en/v2/Agent/A021_TrainingContentWriter_EN.html"
+    },
+    {
+      "seq": "A022",
+      "name": "Decision Architect",
+      "cname": "決策架構師",
+      "file": "zh/v2/Agent/A022_DecisionArchitect.html",
+      "en_file": "en/v2/Agent/A022_DecisionArchitect_EN.html"
+    },
+    {
+      "seq": "A023",
+      "name": "Wellness Productivity Coach",
+      "cname": "健康生產力教練",
+      "file": "zh/v2/Agent/A023_WellnessProductivityCoach.html",
+      "en_file": "en/v2/Agent/A023_WellnessProductivityCoach_EN.html"
+    },
+    {
+      "seq": "A024",
+      "name": "Innovation Radar Agent",
+      "cname": "創新雷達 Agent",
+      "file": "zh/v2/Agent/A024_InnovationRadarAgent.html",
+      "en_file": "en/v2/Agent/A024_InnovationRadarAgent_EN.html"
+    },
+    {
+      "seq": "A025",
+      "name": "Product Crafter",
+      "cname": "產品規劃師",
+      "file": "zh/v2/Agent/A025_ProductCrafter.html",
+      "en_file": "en/v2/Agent/A025_ProductCrafter_EN.html"
+    },
+    {
+      "seq": "A026",
+      "name": "Coherence Agent",
+      "cname": "一致性 Agent",
+      "file": "zh/v2/Agent/A026_CoherenceAgent.html",
+      "en_file": "en/v2/Agent/A026_CoherenceAgent_EN.html"
+    },
+    {
+      "seq": "A027",
+      "name": "Resolution Agent",
+      "cname": "決心教練",
+      "file": "zh/v2/Agent/A027_ResolutionAgent.html",
+      "en_file": "en/v2/Agent/A027_ResolutionAgent_EN.html"
+    },
+    {
+      "seq": "A028",
+      "name": "Storytelling Mentor",
+      "cname": "說故事導師",
+      "file": "zh/v2/Agent/A028_StorytellingMentor.html",
+      "en_file": "en/v2/Agent/A028_StorytellingMentor_EN.html"
+    },
+    {
+      "seq": "A029",
+      "name": "Marketing Agent",
+      "cname": "社群行銷 Agent",
+      "file": "zh/v2/Agent/A029_MarketingAgent.html",
+      "en_file": "en/v2/Agent/A029_MarketingAgent_EN.html"
+    },
+    {
+      "seq": "A030",
+      "name": "Peer Feedback Agent",
+      "cname": "同儕回饋 Agent",
+      "file": "zh/v2/Agent/A030_PeerFeedbackAgent.html",
+      "en_file": "en/v2/Agent/A030_PeerFeedbackAgent_EN.html"
+    },
+    {
+      "seq": "A031",
+      "name": "Presentation Optimizer Agent",
+      "cname": "簡報最佳化 Agent",
+      "file": "zh/v2/Agent/A031_PresentationOptimizerAgent.html",
+      "en_file": "en/v2/Agent/A031_PresentationOptimizerAgent_EN.html"
+    },
+    {
+      "seq": "A032",
+      "name": "Porter Five Forces Profiler",
+      "cname": "波特五力分析師",
+      "file": "zh/v2/Agent/A032_PorterFiveForcesProfiler.html",
+      "en_file": "en/v2/Agent/A032_PorterFiveForcesProfiler_EN.html"
+    },
+    {
+      "seq": "A033",
+      "name": "Say No Coach2",
+      "cname": "職場婉拒教練",
+      "file": "zh/v2/Agent/A033_SayNoCoach2.html",
+      "en_file": "en/v2/Agent/A033_SayNoCoach2_EN.html"
+    },
+    {
+      "seq": "A034",
+      "name": "OKR Coach Agent",
+      "cname": "OKR 教練",
+      "file": "zh/v2/Agent/A034_OKRCoachAgent.html",
+      "en_file": "en/v2/Agent/A034_OKRCoachAgent_EN.html"
+    },
+    {
+      "seq": "A035",
+      "name": "AB Testing Ideas",
+      "cname": "A/B 測試創意產生器",
+      "file": "zh/v2/Agent/A035_ABTestingIdeas.html",
+      "en_file": "en/v2/Agent/A035_ABTestingIdeas_EN.html"
+    },
+    {
+      "seq": "A036",
+      "name": "Meeting Recap Companion",
+      "cname": "會議摘要助理",
+      "file": "zh/v2/Agent/A036_MeetingRecapCompanion.html",
+      "en_file": "en/v2/Agent/A036_MeetingRecapCompanion_EN.html"
+    },
+    {
+      "seq": "A037",
+      "name": "Policy Author Pro",
+      "cname": "政策文件撰寫師",
+      "file": "zh/v2/Agent/A037_PolicyAuthorPro.html",
+      "en_file": "en/v2/Agent/A037_PolicyAuthorPro_EN.html"
+    },
+    {
+      "seq": "A038",
+      "name": "Monthly KPI Comparator",
+      "cname": "月度 KPI 比較器",
+      "file": "zh/v2/Agent/A038_MonthlyKPIComparator.html",
+      "en_file": "en/v2/Agent/A038_MonthlyKPIComparator_EN.html"
+    },
+    {
+      "seq": "A039",
+      "name": "Agent Of Change",
+      "cname": "變革推動教練",
+      "file": "zh/v2/Agent/A039_AgentOfChange.html",
+      "en_file": "en/v2/Agent/A039_AgentOfChange_EN.html"
+    },
+    {
+      "seq": "A040",
+      "name": "Meeting Prep",
+      "cname": "會議準備助手",
+      "file": "zh/v2/Agent/A040_MeetingPrep.html",
+      "en_file": "en/v2/Agent/A040_MeetingPrep_EN.html"
+    },
+    {
+      "seq": "A041",
+      "name": "Policy Simplifier",
+      "cname": "政策白話翻譯師",
+      "file": "zh/v2/Agent/A041_PolicySimplifier.html",
+      "en_file": "en/v2/Agent/A041_PolicySimplifier_EN.html"
+    },
+    {
+      "seq": "A042",
+      "name": "Evite",
+      "cname": "會議邀請設計師",
+      "file": "zh/v2/Agent/A042_Evite.html",
+      "en_file": "en/v2/Agent/A042_Evite_EN.html"
+    },
+    {
+      "seq": "A043",
+      "name": "Devils Advocate",
+      "cname": "魔鬼辯護人",
+      "file": "zh/v2/Agent/A043_DevilsAdvocate.html",
+      "en_file": "en/v2/Agent/A043_DevilsAdvocate_EN.html"
+    },
+    {
+      "seq": "A044",
+      "name": "Team Morale Assistant",
+      "cname": "團隊士氣激勵助手",
+      "file": "zh/v2/Agent/A044_TeamMoraleAssistant.html",
+      "en_file": "en/v2/Agent/A044_TeamMoraleAssistant_EN.html"
+    },
+    {
+      "seq": "A045",
+      "name": "Monthly KPI Comparator",
+      "cname": "月度 KPI 對比助手",
+      "file": "zh/v2/Agent/A045_MonthlyKPIComparator.html",
+      "en_file": "en/v2/Agent/A045_MonthlyKPIComparator_EN.html"
+    },
+    {
+      "seq": "A046",
+      "name": "Business Case Builder",
+      "cname": "商業提案產生器",
+      "file": "zh/v2/Agent/A046_BusinessCaseBuilder.html",
+      "en_file": "en/v2/Agent/A046_BusinessCaseBuilder_EN.html"
+    },
+    {
+      "seq": "A047",
+      "name": "Process Optimizer",
+      "cname": "流程優化師",
+      "file": "zh/v2/Agent/A047_ProcessOptimizer.html",
+      "en_file": "en/v2/Agent/A047_ProcessOptimizer_EN.html"
+    }
+  ],
+  "Prompt_v1": [
+    {
+      "seq": "P001",
+      "name": "Copilot Memory",
+      "cname": "啟用 Copilot Memory",
+      "file": "zh/v1/Prompt/P001_CopilotMemory.html",
+      "en_file": "en/v1/Prompt/P001_CopilotMemory_EN.html"
+    },
+    {
+      "seq": "P002",
+      "name": "Communication Style Personalizer",
+      "cname": "溝通風格個人化設定",
+      "file": "zh/v1/Prompt/P002_CommunicationStylePersonalizer.html",
+      "en_file": "en/v1/Prompt/P002_CommunicationStylePersonalizer_EN.html"
+    },
+    {
+      "seq": "P003",
+      "name": "Contribution Opportunity Finder",
+      "cname": "貢獻機會探索器",
+      "file": "zh/v1/Prompt/P003_ContributionOpportunityFinder.html",
+      "en_file": "en/v1/Prompt/P003_ContributionOpportunityFinder_EN.html"
+    },
+    {
+      "seq": "P004",
+      "name": "Accessibility Review",
+      "cname": "無障礙文件審查助理",
+      "file": "zh/v1/Prompt/P004_AccessibilityReview.html",
+      "en_file": "en/v1/Prompt/P004_AccessibilityReview_EN.html"
+    },
+    {
+      "seq": "P005",
+      "name": "Email Thread Stakeholder Update",
+      "cname": "電子郵件串利害關係人更新",
+      "file": "zh/v1/Prompt/P005_EmailThreadStakeholderUpdate.html",
+      "en_file": "en/v1/Prompt/P005_EmailThreadStakeholderUpdate_EN.html"
+    },
+    {
+      "seq": "P006",
+      "name": "One On One Agenda Generator",
+      "cname": "🗓️ 自動生成 1:1 會議議程",
+      "file": "zh/v1/Prompt/P006_OneOnOneAgendaGenerator.html",
+      "en_file": "en/v1/Prompt/P006_OneOnOneAgendaGenerator_EN.html"
+    },
+    {
+      "seq": "P007",
+      "name": "Outlook Email Summarizer",
+      "cname": "📧 Outlook 郵件摘要與回覆草稿",
+      "file": "zh/v1/Prompt/P007_OutlookEmailSummarizer.html",
+      "en_file": "en/v1/Prompt/P007_OutlookEmailSummarizer_EN.html"
+    },
+    {
+      "seq": "P008",
+      "name": "Researcher Executive Brief",
+      "cname": "🔬 Researcher：生成有引用來源的高管簡報",
+      "file": "zh/v1/Prompt/P008_ResearcherExecutiveBrief.html",
+      "en_file": "en/v1/Prompt/P008_ResearcherExecutiveBrief_EN.html"
+    },
+    {
+      "seq": "P009",
+      "name": "Excel Data Quality Audit",
+      "cname": "📊 Excel 資料品質稽核與修復清單",
+      "file": "zh/v1/Prompt/P009_ExcelDataQualityAudit.html",
+      "en_file": "en/v1/Prompt/P009_ExcelDataQualityAudit_EN.html"
+    },
+    {
+      "seq": "P010",
+      "name": "Document Glossary Builder",
+      "cname": "📖 文件術語表自動生成",
+      "file": "zh/v1/Prompt/P010_DocumentGlossaryBuilder.html",
+      "en_file": "en/v1/Prompt/P010_DocumentGlossaryBuilder_EN.html"
+    },
+    {
+      "seq": "P011",
+      "name": "Honest Friend Mirror",
+      "cname": "🪞 誠實之友：給自己的10個真心話",
+      "file": "zh/v1/Prompt/P011_HonestFriendMirror.html",
+      "en_file": "en/v1/Prompt/P011_HonestFriendMirror_EN.html"
+    },
+    {
+      "seq": "P012",
+      "name": "Communication Style Analyzer",
+      "cname": "🔎 分析溝通風格，量身訂製回覆",
+      "file": "zh/v1/Prompt/P012_CommunicationStyleAnalyzer.html",
+      "en_file": "en/v1/Prompt/P012_CommunicationStyleAnalyzer_EN.html"
+    },
+    {
+      "seq": "P013",
+      "name": "Word Cloud Generator",
+      "cname": "☁️ 文件文字雲視覺化",
+      "file": "zh/v1/Prompt/P013_WordCloudGenerator.html",
+      "en_file": "en/v1/Prompt/P013_WordCloudGenerator_EN.html"
+    },
+    {
+      "seq": "P014",
+      "name": "Conversation Consolidator",
+      "cname": "🔄 對話彙整為單一可重用提示詞",
+      "file": "zh/v1/Prompt/P014_ConversationConsolidator.html",
+      "en_file": "en/v1/Prompt/P014_ConversationConsolidator_EN.html"
+    },
+    {
+      "seq": "P015",
+      "name": "Data Visualization Analyzer",
+      "cname": "📈 資料視覺化與洞察分析",
+      "file": "zh/v1/Prompt/P015_DataVisualizationAnalyzer.html",
+      "en_file": "en/v1/Prompt/P015_DataVisualizationAnalyzer_EN.html"
+    },
+    {
+      "seq": "P016",
+      "name": "Role Specific Doc Summary",
+      "cname": "📋 依職務角色量身定制的文件摘要",
+      "file": "zh/v1/Prompt/P016_RoleSpecificDocSummary.html",
+      "en_file": "en/v1/Prompt/P016_RoleSpecificDocSummary_EN.html"
+    },
+    {
+      "seq": "P017",
+      "name": "Dominant Color Extractor",
+      "cname": "🎨 圖片主色調提取工具",
+      "file": "zh/v1/Prompt/P017_DominantColorExtractor.html",
+      "en_file": "en/v1/Prompt/P017_DominantColorExtractor_EN.html"
+    },
+    {
+      "seq": "P018",
+      "name": "Speaker Notes Optimizer",
+      "cname": "🎤 簡報演講者備忘稿優化",
+      "file": "zh/v1/Prompt/P018_SpeakerNotesOptimizer.html",
+      "en_file": "en/v1/Prompt/P018_SpeakerNotesOptimizer_EN.html"
+    },
+    {
+      "seq": "P019",
+      "name": "Meeting Chat Qa Summary",
+      "cname": "💬 會議聊天室問答摘要文件",
+      "file": "zh/v1/Prompt/P019_MeetingChatQaSummary.html",
+      "en_file": "en/v1/Prompt/P019_MeetingChatQaSummary_EN.html"
+    },
+    {
+      "seq": "P020",
+      "name": "Inbox Priority Analyzer",
+      "cname": "📬 收件匣優先序智慧分析",
+      "file": "zh/v1/Prompt/P020_InboxPriorityAnalyzer.html",
+      "en_file": "en/v1/Prompt/P020_InboxPriorityAnalyzer_EN.html"
+    },
+    {
+      "seq": "P021",
+      "name": "Personal Prompt Engineer",
+      "cname": "讓 Copilot 當你的 Prompt 工程師",
+      "file": "zh/v1/Prompt/P021_PersonalPromptEngineer.html",
+      "en_file": "en/v1/Prompt/P021_PersonalPromptEngineer_EN.html"
+    },
+    {
+      "seq": "P022",
+      "name": "Weekly Status Report",
+      "cname": "一鍵產出週報摘要",
+      "file": "zh/v1/Prompt/P022_WeeklyStatusReport.html",
+      "en_file": "en/v1/Prompt/P022_WeeklyStatusReport_EN.html"
+    },
+    {
+      "seq": "P023",
+      "name": "One Note Task Summary",
+      "cname": "OneNote 待辦事項一覽表",
+      "file": "zh/v1/Prompt/P023_OneNoteTaskSummary.html",
+      "en_file": "en/v1/Prompt/P023_OneNoteTaskSummary_EN.html"
+    },
+    {
+      "seq": "P024",
+      "name": "Transcribe Scanned Document",
+      "cname": "掃描文件一鍵轉數位文字",
+      "file": "zh/v1/Prompt/P024_TranscribeScannedDocument.html",
+      "en_file": "en/v1/Prompt/P024_TranscribeScannedDocument_EN.html"
+    },
+    {
+      "seq": "P025",
+      "name": "Email Categorization",
+      "cname": "信件主題分類一覽",
+      "file": "zh/v1/Prompt/P025_EmailCategorization.html",
+      "en_file": "en/v1/Prompt/P025_EmailCategorization_EN.html"
+    },
+    {
+      "seq": "P026",
+      "name": "Day Wrap Up Prep",
+      "cname": "一鍵收工＋明日備戰計畫",
+      "file": "zh/v1/Prompt/P026_DayWrapUpPrep.html",
+      "en_file": "en/v1/Prompt/P026_DayWrapUpPrep_EN.html"
+    },
+    {
+      "seq": "P027",
+      "name": "Excel Kpi Generator",
+      "cname": "Excel 表格 KPI 自動提案",
+      "file": "zh/v1/Prompt/P027_ExcelKpiGenerator.html",
+      "en_file": "en/v1/Prompt/P027_ExcelKpiGenerator_EN.html"
+    },
+    {
+      "seq": "P028",
+      "name": "Schedule Meeting",
+      "cname": "用 Copilot 一鍵排會議時間",
+      "file": "zh/v1/Prompt/P028_ScheduleMeeting.html",
+      "en_file": "en/v1/Prompt/P028_ScheduleMeeting_EN.html"
+    },
+    {
+      "seq": "P029",
+      "name": "Three Level Content",
+      "cname": "一份內容，三種複雜度版本",
+      "file": "zh/v1/Prompt/P029_ThreeLevelContent.html",
+      "en_file": "en/v1/Prompt/P029_ThreeLevelContent_EN.html"
+    },
+    {
+      "seq": "P030",
+      "name": "Meeting Follow Up Email",
+      "cname": "會議跟進信自動產出",
+      "file": "zh/v1/Prompt/P030_MeetingFollowUpEmail.html",
+      "en_file": "en/v1/Prompt/P030_MeetingFollowUpEmail_EN.html"
+    },
+    {
+      "seq": "P031",
+      "name": "Skill Learning Guide",
+      "cname": "Copilot 技能學習導師",
+      "file": "zh/v1/Prompt/P031_SkillLearningGuide.html",
+      "en_file": "en/v1/Prompt/P031_SkillLearningGuide_EN.html"
+    },
+    {
+      "seq": "P032",
+      "name": "Presentation Questions",
+      "cname": "簡報互動提問產生器",
+      "file": "zh/v1/Prompt/P032_PresentationQuestions.html",
+      "en_file": "en/v1/Prompt/P032_PresentationQuestions_EN.html"
+    },
+    {
+      "seq": "P033",
+      "name": "Translate Presentation",
+      "cname": "簡報語言一鍵翻譯",
+      "file": "zh/v1/Prompt/P033_TranslatePresentation.html",
+      "en_file": "en/v1/Prompt/P033_TranslatePresentation_EN.html"
+    },
+    {
+      "seq": "P034",
+      "name": "Problem Solving Buddy",
+      "cname": "問題解決腦力激盪夥伴",
+      "file": "zh/v1/Prompt/P034_ProblemSolvingBuddy.html",
+      "en_file": "en/v1/Prompt/P034_ProblemSolvingBuddy_EN.html"
+    },
+    {
+      "seq": "P035",
+      "name": "Out Of Office Message",
+      "cname": "自動休假回覆信設定",
+      "file": "zh/v1/Prompt/P035_OutOfOfficeMessage.html",
+      "en_file": "en/v1/Prompt/P035_OutOfOfficeMessage_EN.html"
+    },
+    {
+      "seq": "P036",
+      "name": "Daily News Briefing",
+      "cname": "每日產業新聞簡報",
+      "file": "zh/v1/Prompt/P036_DailyNewsBriefing.html",
+      "en_file": "en/v1/Prompt/P036_DailyNewsBriefing_EN.html"
+    },
+    {
+      "seq": "P037",
+      "name": "QR Code Generator",
+      "cname": "QR Code 快速產生器",
+      "file": "zh/v1/Prompt/P037_QRCodeGenerator.html",
+      "en_file": "en/v1/Prompt/P037_QRCodeGenerator_EN.html"
+    },
+    {
+      "seq": "P038",
+      "name": "Group Chat Topics Overview",
+      "cname": "Teams 群組聊天主題全覽表",
+      "file": "zh/v1/Prompt/P038_GroupChatTopicsOverview.html",
+      "en_file": "en/v1/Prompt/P038_GroupChatTopicsOverview_EN.html"
+    },
+    {
+      "seq": "P039",
+      "name": "Presentation Poll Questions",
+      "cname": "簡報互動問卷設計師",
+      "file": "zh/v1/Prompt/P039_PresentationPollQuestions.html",
+      "en_file": "en/v1/Prompt/P039_PresentationPollQuestions_EN.html"
+    },
+    {
+      "seq": "P040",
+      "name": "Workday Task Prioritizer",
+      "cname": "工作日任務優先排序器",
+      "file": "zh/v1/Prompt/P040_WorkdayTaskPrioritizer.html",
+      "en_file": "en/v1/Prompt/P040_WorkdayTaskPrioritizer_EN.html"
+    },
+    {
+      "seq": "P041",
+      "name": "Workshop Handout Creator",
+      "cname": "工作坊簡報講義產生器",
+      "file": "zh/v1/Prompt/P041_WorkshopHandoutCreator.html",
+      "en_file": "en/v1/Prompt/P041_WorkshopHandoutCreator_EN.html"
+    },
+    {
+      "seq": "P042",
+      "name": "New Year Goals Planner",
+      "cname": "新年職涯目標規劃師",
+      "file": "zh/v1/Prompt/P042_NewYearGoalsPlanner.html",
+      "en_file": "en/v1/Prompt/P042_NewYearGoalsPlanner_EN.html"
+    },
+    {
+      "seq": "P043",
+      "name": "Excel Correlation Report",
+      "cname": "Excel 數值相關性分析報告",
+      "file": "zh/v1/Prompt/P043_ExcelCorrelationReport.html",
+      "en_file": "en/v1/Prompt/P043_ExcelCorrelationReport_EN.html"
+    },
+    {
+      "seq": "P044",
+      "name": "Year End Team Message",
+      "cname": "年末團隊感謝信產生器",
+      "file": "zh/v1/Prompt/P044_YearEndTeamMessage.html",
+      "en_file": "en/v1/Prompt/P044_YearEndTeamMessage_EN.html"
+    },
+    {
+      "seq": "P045",
+      "name": "Document Best Practices Review",
+      "cname": "文件最佳實踐差距分析",
+      "file": "zh/v1/Prompt/P045_DocumentBestPracticesReview.html",
+      "en_file": "en/v1/Prompt/P045_DocumentBestPracticesReview_EN.html"
+    },
+    {
+      "seq": "P046",
+      "name": "Weekly Time Categories",
+      "cname": "每週時間分配類別分析",
+      "file": "zh/v1/Prompt/P046_WeeklyTimeCategories.html",
+      "en_file": "en/v1/Prompt/P046_WeeklyTimeCategories_EN.html"
+    },
+    {
+      "seq": "P047",
+      "name": "FAQ Generator",
+      "cname": "多文件 FAQ 快速產生器",
+      "file": "zh/v1/Prompt/P047_FAQGenerator.html",
+      "en_file": "en/v1/Prompt/P047_FAQGenerator_EN.html"
+    },
+    {
+      "seq": "P048",
+      "name": "Email Thread Summarizer",
+      "cname": "郵件串摘要與行動項目產生器",
+      "file": "zh/v1/Prompt/P048_EmailThreadSummarizer.html",
+      "en_file": "en/v1/Prompt/P048_EmailThreadSummarizer_EN.html"
+    },
+    {
+      "seq": "P049",
+      "name": "Excel Executive Briefing",
+      "cname": "Excel 一頁式主管決策簡報",
+      "file": "zh/v1/Prompt/P049_ExcelExecutiveBriefing.html",
+      "en_file": "en/v1/Prompt/P049_ExcelExecutiveBriefing_EN.html"
+    },
+    {
+      "seq": "P050",
+      "name": "Workday Recap Summary",
+      "cname": "工作日訊息回顧與行動摘要",
+      "file": "zh/v1/Prompt/P050_WorkdayRecapSummary.html",
+      "en_file": "en/v1/Prompt/P050_WorkdayRecapSummary_EN.html"
+    },
+    {
+      "seq": "P051",
+      "name": "Meeting Briefing Generator",
+      "cname": "📋 商務會議前情資簡報",
+      "file": "zh/v1/Prompt/P051_MeetingBriefingGenerator.html",
+      "en_file": "en/v1/Prompt/P051_MeetingBriefingGenerator_EN.html"
+    },
+    {
+      "seq": "P052",
+      "name": "Guided Email Reply Assistant",
+      "cname": "📧 智慧郵件回覆引導",
+      "file": "zh/v1/Prompt/P052_GuidedEmailReplyAssistant.html",
+      "en_file": "en/v1/Prompt/P052_GuidedEmailReplyAssistant_EN.html"
+    },
+    {
+      "seq": "P053",
+      "name": "Presentation Quality Check",
+      "cname": "🎯 簡報品質全面健診",
+      "file": "zh/v1/Prompt/P053_PresentationQualityCheck.html",
+      "en_file": "en/v1/Prompt/P053_PresentationQualityCheck_EN.html"
+    },
+    {
+      "seq": "P054",
+      "name": "Workplace Language Coach",
+      "cname": "職場外語學習教練",
+      "file": "zh/v1/Prompt/P054_WorkplaceLanguageCoach.html",
+      "en_file": "en/v1/Prompt/P054_WorkplaceLanguageCoach_EN.html"
+    },
+    {
+      "seq": "P055",
+      "name": "Schedule Conflict Resolver",
+      "cname": "📅 下週行程衝突排除器",
+      "file": "zh/v1/Prompt/P055_ScheduleConflictResolver.html",
+      "en_file": "en/v1/Prompt/P055_ScheduleConflictResolver_EN.html"
+    },
+    {
+      "seq": "P056",
+      "name": "Text Simplifier",
+      "cname": "✍️ 複雜文字簡化大師",
+      "file": "zh/v1/Prompt/P056_TextSimplifier.html",
+      "en_file": "en/v1/Prompt/P056_TextSimplifier_EN.html"
+    },
+    {
+      "seq": "P057",
+      "name": "Graceful No Plant Framework",
+      "cname": "🌱 優雅說不：PLANT 拒絕框架",
+      "file": "zh/v1/Prompt/P057_GracefulNoPlantFramework.html",
+      "en_file": "en/v1/Prompt/P057_GracefulNoPlantFramework_EN.html"
+    },
+    {
+      "seq": "P058",
+      "name": "Email Misunderstanding Resolver",
+      "cname": "📨 郵件誤解化解術",
+      "file": "zh/v1/Prompt/P058_EmailMisunderstandingResolver.html",
+      "en_file": "en/v1/Prompt/P058_EmailMisunderstandingResolver_EN.html"
+    },
+    {
+      "seq": "P059",
+      "name": "Team Chat Faq Generator",
+      "cname": "💬 團隊對話 FAQ 自動生成",
+      "file": "zh/v1/Prompt/P059_TeamChatFaqGenerator.html",
+      "en_file": "en/v1/Prompt/P059_TeamChatFaqGenerator_EN.html"
+    },
+    {
+      "seq": "P060",
+      "name": "Leadership Strengths Analysis",
+      "cname": "🏆 領導風格與優勢自我分析",
+      "file": "zh/v1/Prompt/P060_LeadershipStrengthsAnalysis.html",
+      "en_file": "en/v1/Prompt/P060_LeadershipStrengthsAnalysis_EN.html"
+    },
+    {
+      "seq": "P061",
+      "name": "Weekly Team Pulse Survey",
+      "cname": "📊 每週團隊脈動問卷生成器",
+      "file": "zh/v1/Prompt/P061_WeeklyTeamPulseSurvey.html",
+      "en_file": "en/v1/Prompt/P061_WeeklyTeamPulseSurvey_EN.html"
+    },
+    {
+      "seq": "P062",
+      "name": "Ocean Outlook Instructions",
+      "cname": "🧬 OCEAN 個人化 Outlook 起草指示詞",
+      "file": "zh/v1/Prompt/P062_OceanOutlookInstructions.html",
+      "en_file": "en/v1/Prompt/P062_OceanOutlookInstructions_EN.html"
+    },
+    {
+      "seq": "P063",
+      "name": "Presentation Optimization Planner",
+      "cname": "🗂️ 簡報精簡與時間優化助手",
+      "file": "zh/v1/Prompt/P063_PresentationOptimizationPlanner.html",
+      "en_file": "en/v1/Prompt/P063_PresentationOptimizationPlanner_EN.html"
+    },
+    {
+      "seq": "P064",
+      "name": "Customer Issue Best Practices Doc",
+      "cname": "📚 客戶問題最佳實踐文件生成",
+      "file": "zh/v1/Prompt/P064_CustomerIssueBestPracticesDoc.html",
+      "en_file": "en/v1/Prompt/P064_CustomerIssueBestPracticesDoc_EN.html"
+    },
+    {
+      "seq": "P065",
+      "name": "Copilot Learning Plan",
+      "cname": "🎓 M365 Copilot 個人化學習計畫",
+      "file": "zh/v1/Prompt/P065_CopilotLearningPlan.html",
+      "en_file": "en/v1/Prompt/P065_CopilotLearningPlan_EN.html"
+    },
+    {
+      "seq": "P066",
+      "name": "Neurodiversity Exam Prep",
+      "cname": "告別死背！為你的大腦量身打造備考計畫",
+      "file": "zh/v1/Prompt/P066_NeurodiversityExamPrep.html",
+      "en_file": "en/v1/Prompt/P066_NeurodiversityExamPrep_EN.html"
+    },
+    {
+      "seq": "P067",
+      "name": "Email Risk Radar",
+      "cname": "讓 Copilot 掃你的信箱，提前發現潛在風險",
+      "file": "zh/v1/Prompt/P067_EmailRiskRadar.html",
+      "en_file": "en/v1/Prompt/P067_EmailRiskRadar_EN.html"
+    },
+    {
+      "seq": "P068",
+      "name": "Smart Inbox Architecture",
+      "cname": "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
+      "file": "zh/v1/Prompt/P068_SmartInboxArchitecture.html",
+      "en_file": "en/v1/Prompt/P068_SmartInboxArchitecture_EN.html"
+    },
+    {
+      "seq": "P069",
+      "name": "Recipient Style Matching",
+      "cname": "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
+      "file": "zh/v1/Prompt/P069_RecipientStyleMatching.html",
+      "en_file": "en/v1/Prompt/P069_RecipientStyleMatching_EN.html"
+    },
+    {
+      "seq": "P070",
+      "name": "Presentation Rehearsal Coach",
+      "cname": "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
+      "file": "zh/v1/Prompt/P070_PresentationRehearsalCoach.html",
+      "en_file": "en/v1/Prompt/P070_PresentationRehearsalCoach_EN.html"
+    },
+    {
+      "seq": "P071",
+      "name": "Writing Style Prefix",
+      "cname": "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
+      "file": "zh/v1/Prompt/P071_WritingStylePrefix.html",
+      "en_file": "en/v1/Prompt/P071_WritingStylePrefix_EN.html"
+    },
+    {
+      "seq": "P072",
+      "name": "Executive Doc Summary",
+      "cname": "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
+      "file": "zh/v1/Prompt/P072_ExecutiveDocSummary.html",
+      "en_file": "en/v1/Prompt/P072_ExecutiveDocSummary_EN.html"
+    },
+    {
+      "seq": "P073",
+      "name": "Work Rhythm Analyzer",
+      "cname": "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
+      "file": "zh/v1/Prompt/P073_WorkRhythmAnalyzer.html",
+      "en_file": "en/v1/Prompt/P073_WorkRhythmAnalyzer_EN.html"
+    },
+    {
+      "seq": "P074",
+      "name": "Weekly Action Item Summary",
+      "cname": "一鍵彙整本週指派給我的待辦事項",
+      "file": "zh/v1/Prompt/P074_WeeklyActionItemSummary.html",
+      "en_file": "en/v1/Prompt/P074_WeeklyActionItemSummary_EN.html"
+    },
+    {
+      "seq": "P075",
+      "name": "Excel Forecasting Model",
+      "cname": "用歷史資料打造 Excel 預測模型",
+      "file": "zh/v1/Prompt/P075_ExcelForecastingModel.html",
+      "en_file": "en/v1/Prompt/P075_ExcelForecastingModel_EN.html"
+    },
+    {
+      "seq": "P076",
+      "name": "Project Pulse Weekly Update",
+      "cname": "專案脈動週報生成器",
+      "file": "zh/v1/Prompt/P076_ProjectPulseWeeklyUpdate.html",
+      "en_file": "en/v1/Prompt/P076_ProjectPulseWeeklyUpdate_EN.html"
+    },
+    {
+      "seq": "P077",
+      "name": "7 Slide Deck Builder",
+      "cname": "七頁簡報快速產生器",
+      "file": "zh/v1/Prompt/P077_7SlideDeckBuilder.html",
+      "en_file": "en/v1/Prompt/P077_7SlideDeckBuilder_EN.html"
+    },
+    {
+      "seq": "P078",
+      "name": "Email Domain Inbox Summary",
+      "cname": "信件網域摘要",
+      "file": "zh/v1/Prompt/P078_EmailDomainInboxSummary.html",
+      "en_file": "en/v1/Prompt/P078_EmailDomainInboxSummary_EN.html"
+    }
+  ],
+  "Prompt_v2": [
+    {
+      "seq": "P001",
+      "name": "Copilot Memory",
+      "cname": "啟用 Copilot Memory",
+      "file": "zh/v2/Prompt/P001_CopilotMemory.html",
+      "en_file": "en/v2/Prompt/P001_CopilotMemory_EN.html"
+    },
+    {
+      "seq": "P002",
+      "name": "Communication Style Personalizer",
+      "cname": "溝通風格個人化設定",
+      "file": "zh/v2/Prompt/P002_CommunicationStylePersonalizer.html",
+      "en_file": "en/v2/Prompt/P002_CommunicationStylePersonalizer_EN.html"
+    },
+    {
+      "seq": "P003",
+      "name": "Contribution Opportunity Finder",
+      "cname": "貢獻機會探索器",
+      "file": "zh/v2/Prompt/P003_ContributionOpportunityFinder.html",
+      "en_file": "en/v2/Prompt/P003_ContributionOpportunityFinder_EN.html"
+    },
+    {
+      "seq": "P004",
+      "name": "Accessibility Review",
+      "cname": "無障礙文件審查助理",
+      "file": "zh/v2/Prompt/P004_AccessibilityReview.html",
+      "en_file": "en/v2/Prompt/P004_AccessibilityReview_EN.html"
+    },
+    {
+      "seq": "P005",
+      "name": "Email Thread Stakeholder Update",
+      "cname": "電子郵件串利害關係人更新",
+      "file": "zh/v2/Prompt/P005_EmailThreadStakeholderUpdate.html",
+      "en_file": "en/v2/Prompt/P005_EmailThreadStakeholderUpdate_EN.html"
+    },
+    {
+      "seq": "P006",
+      "name": "One On One Agenda Generator",
+      "cname": "🗓️ 自動生成 1:1 會議議程",
+      "file": "zh/v2/Prompt/P006_OneOnOneAgendaGenerator.html",
+      "en_file": "en/v2/Prompt/P006_OneOnOneAgendaGenerator_EN.html"
+    },
+    {
+      "seq": "P007",
+      "name": "Outlook Email Summarizer",
+      "cname": "📧 Outlook 郵件摘要與回覆草稿",
+      "file": "zh/v2/Prompt/P007_OutlookEmailSummarizer.html",
+      "en_file": "en/v2/Prompt/P007_OutlookEmailSummarizer_EN.html"
+    },
+    {
+      "seq": "P008",
+      "name": "Researcher Executive Brief",
+      "cname": "🔬 Researcher：生成有引用來源的高管簡報",
+      "file": "zh/v2/Prompt/P008_ResearcherExecutiveBrief.html",
+      "en_file": "en/v2/Prompt/P008_ResearcherExecutiveBrief_EN.html"
+    },
+    {
+      "seq": "P009",
+      "name": "Excel Data Quality Audit",
+      "cname": "📊 Excel 資料品質稽核與修復清單",
+      "file": "zh/v2/Prompt/P009_ExcelDataQualityAudit.html",
+      "en_file": "en/v2/Prompt/P009_ExcelDataQualityAudit_EN.html"
+    },
+    {
+      "seq": "P010",
+      "name": "Document Glossary Builder",
+      "cname": "📖 文件術語表自動生成",
+      "file": "zh/v2/Prompt/P010_DocumentGlossaryBuilder.html",
+      "en_file": "en/v2/Prompt/P010_DocumentGlossaryBuilder_EN.html"
+    },
+    {
+      "seq": "P011",
+      "name": "Honest Friend Mirror",
+      "cname": "🪞 誠實之友：給自己的10個真心話",
+      "file": "zh/v2/Prompt/P011_HonestFriendMirror.html",
+      "en_file": "en/v2/Prompt/P011_HonestFriendMirror_EN.html"
+    },
+    {
+      "seq": "P012",
+      "name": "Communication Style Analyzer",
+      "cname": "🔎 分析溝通風格，量身訂製回覆",
+      "file": "zh/v2/Prompt/P012_CommunicationStyleAnalyzer.html",
+      "en_file": "en/v2/Prompt/P012_CommunicationStyleAnalyzer_EN.html"
+    },
+    {
+      "seq": "P013",
+      "name": "Word Cloud Generator",
+      "cname": "☁️ 文件文字雲視覺化",
+      "file": "zh/v2/Prompt/P013_WordCloudGenerator.html",
+      "en_file": "en/v2/Prompt/P013_WordCloudGenerator_EN.html"
+    },
+    {
+      "seq": "P014",
+      "name": "Conversation Consolidator",
+      "cname": "🔄 對話彙整為單一可重用提示詞",
+      "file": "zh/v2/Prompt/P014_ConversationConsolidator.html",
+      "en_file": "en/v2/Prompt/P014_ConversationConsolidator_EN.html"
+    },
+    {
+      "seq": "P015",
+      "name": "Data Visualization Analyzer",
+      "cname": "📈 資料視覺化與洞察分析",
+      "file": "zh/v2/Prompt/P015_DataVisualizationAnalyzer.html",
+      "en_file": "en/v2/Prompt/P015_DataVisualizationAnalyzer_EN.html"
+    },
+    {
+      "seq": "P016",
+      "name": "Role Specific Doc Summary",
+      "cname": "📋 依職務角色量身定制的文件摘要",
+      "file": "zh/v2/Prompt/P016_RoleSpecificDocSummary.html",
+      "en_file": "en/v2/Prompt/P016_RoleSpecificDocSummary_EN.html"
+    },
+    {
+      "seq": "P017",
+      "name": "Dominant Color Extractor",
+      "cname": "🎨 圖片主色調提取工具",
+      "file": "zh/v2/Prompt/P017_DominantColorExtractor.html",
+      "en_file": "en/v2/Prompt/P017_DominantColorExtractor_EN.html"
+    },
+    {
+      "seq": "P018",
+      "name": "Speaker Notes Optimizer",
+      "cname": "🎤 簡報演講者備忘稿優化",
+      "file": "zh/v2/Prompt/P018_SpeakerNotesOptimizer.html",
+      "en_file": "en/v2/Prompt/P018_SpeakerNotesOptimizer_EN.html"
+    },
+    {
+      "seq": "P019",
+      "name": "Meeting Chat Qa Summary",
+      "cname": "💬 會議聊天室問答摘要文件",
+      "file": "zh/v2/Prompt/P019_MeetingChatQaSummary.html",
+      "en_file": "en/v2/Prompt/P019_MeetingChatQaSummary_EN.html"
+    },
+    {
+      "seq": "P020",
+      "name": "Inbox Priority Analyzer",
+      "cname": "📬 收件匣優先序智慧分析",
+      "file": "zh/v2/Prompt/P020_InboxPriorityAnalyzer.html",
+      "en_file": "en/v2/Prompt/P020_InboxPriorityAnalyzer_EN.html"
+    },
+    {
+      "seq": "P021",
+      "name": "Personal Prompt Engineer",
+      "cname": "讓 Copilot 當你的 Prompt 工程師",
+      "file": "zh/v2/Prompt/P021_PersonalPromptEngineer.html",
+      "en_file": "en/v2/Prompt/P021_PersonalPromptEngineer_EN.html"
+    },
+    {
+      "seq": "P022",
+      "name": "Weekly Status Report",
+      "cname": "一鍵產出週報摘要",
+      "file": "zh/v2/Prompt/P022_WeeklyStatusReport.html",
+      "en_file": "en/v2/Prompt/P022_WeeklyStatusReport_EN.html"
+    },
+    {
+      "seq": "P023",
+      "name": "One Note Task Summary",
+      "cname": "OneNote 待辦事項一覽表",
+      "file": "zh/v2/Prompt/P023_OneNoteTaskSummary.html",
+      "en_file": "en/v2/Prompt/P023_OneNoteTaskSummary_EN.html"
+    },
+    {
+      "seq": "P024",
+      "name": "Transcribe Scanned Document",
+      "cname": "掃描文件一鍵轉數位文字",
+      "file": "zh/v2/Prompt/P024_TranscribeScannedDocument.html",
+      "en_file": "en/v2/Prompt/P024_TranscribeScannedDocument_EN.html"
+    },
+    {
+      "seq": "P025",
+      "name": "Email Categorization",
+      "cname": "信件主題分類一覽",
+      "file": "zh/v2/Prompt/P025_EmailCategorization.html",
+      "en_file": "en/v2/Prompt/P025_EmailCategorization_EN.html"
+    },
+    {
+      "seq": "P026",
+      "name": "Day Wrap Up Prep",
+      "cname": "一鍵收工＋明日備戰計畫",
+      "file": "zh/v2/Prompt/P026_DayWrapUpPrep.html",
+      "en_file": "en/v2/Prompt/P026_DayWrapUpPrep_EN.html"
+    },
+    {
+      "seq": "P027",
+      "name": "Excel Kpi Generator",
+      "cname": "Excel 表格 KPI 自動提案",
+      "file": "zh/v2/Prompt/P027_ExcelKpiGenerator.html",
+      "en_file": "en/v2/Prompt/P027_ExcelKpiGenerator_EN.html"
+    },
+    {
+      "seq": "P028",
+      "name": "Schedule Meeting",
+      "cname": "用 Copilot 一鍵排會議時間",
+      "file": "zh/v2/Prompt/P028_ScheduleMeeting.html",
+      "en_file": "en/v2/Prompt/P028_ScheduleMeeting_EN.html"
+    },
+    {
+      "seq": "P029",
+      "name": "Three Level Content",
+      "cname": "一份內容，三種複雜度版本",
+      "file": "zh/v2/Prompt/P029_ThreeLevelContent.html",
+      "en_file": "en/v2/Prompt/P029_ThreeLevelContent_EN.html"
+    },
+    {
+      "seq": "P030",
+      "name": "Meeting Follow Up Email",
+      "cname": "會議跟進信自動產出",
+      "file": "zh/v2/Prompt/P030_MeetingFollowUpEmail.html",
+      "en_file": "en/v2/Prompt/P030_MeetingFollowUpEmail_EN.html"
+    },
+    {
+      "seq": "P031",
+      "name": "Skill Learning Guide",
+      "cname": "Copilot 技能學習導師",
+      "file": "zh/v2/Prompt/P031_SkillLearningGuide.html",
+      "en_file": "en/v2/Prompt/P031_SkillLearningGuide_EN.html"
+    },
+    {
+      "seq": "P032",
+      "name": "Presentation Questions",
+      "cname": "簡報互動提問產生器",
+      "file": "zh/v2/Prompt/P032_PresentationQuestions.html",
+      "en_file": "en/v2/Prompt/P032_PresentationQuestions_EN.html"
+    },
+    {
+      "seq": "P033",
+      "name": "Translate Presentation",
+      "cname": "簡報語言一鍵翻譯",
+      "file": "zh/v2/Prompt/P033_TranslatePresentation.html",
+      "en_file": "en/v2/Prompt/P033_TranslatePresentation_EN.html"
+    },
+    {
+      "seq": "P034",
+      "name": "Problem Solving Buddy",
+      "cname": "問題解決腦力激盪夥伴",
+      "file": "zh/v2/Prompt/P034_ProblemSolvingBuddy.html",
+      "en_file": "en/v2/Prompt/P034_ProblemSolvingBuddy_EN.html"
+    },
+    {
+      "seq": "P035",
+      "name": "Out Of Office Message",
+      "cname": "自動休假回覆信設定",
+      "file": "zh/v2/Prompt/P035_OutOfOfficeMessage.html",
+      "en_file": "en/v2/Prompt/P035_OutOfOfficeMessage_EN.html"
+    },
+    {
+      "seq": "P036",
+      "name": "Daily News Briefing",
+      "cname": "每日產業新聞簡報",
+      "file": "zh/v2/Prompt/P036_DailyNewsBriefing.html",
+      "en_file": "en/v2/Prompt/P036_DailyNewsBriefing_EN.html"
+    },
+    {
+      "seq": "P037",
+      "name": "QR Code Generator",
+      "cname": "QR Code 快速產生器",
+      "file": "zh/v2/Prompt/P037_QRCodeGenerator.html",
+      "en_file": "en/v2/Prompt/P037_QRCodeGenerator_EN.html"
+    },
+    {
+      "seq": "P038",
+      "name": "Group Chat Topics Overview",
+      "cname": "Teams 群組聊天主題全覽表",
+      "file": "zh/v2/Prompt/P038_GroupChatTopicsOverview.html",
+      "en_file": "en/v2/Prompt/P038_GroupChatTopicsOverview_EN.html"
+    },
+    {
+      "seq": "P039",
+      "name": "Presentation Poll Questions",
+      "cname": "簡報互動問卷設計師",
+      "file": "zh/v2/Prompt/P039_PresentationPollQuestions.html",
+      "en_file": "en/v2/Prompt/P039_PresentationPollQuestions_EN.html"
+    },
+    {
+      "seq": "P040",
+      "name": "Workday Task Prioritizer",
+      "cname": "工作日任務優先排序器",
+      "file": "zh/v2/Prompt/P040_WorkdayTaskPrioritizer.html",
+      "en_file": "en/v2/Prompt/P040_WorkdayTaskPrioritizer_EN.html"
+    },
+    {
+      "seq": "P041",
+      "name": "Workshop Handout Creator",
+      "cname": "工作坊簡報講義產生器",
+      "file": "zh/v2/Prompt/P041_WorkshopHandoutCreator.html",
+      "en_file": "en/v2/Prompt/P041_WorkshopHandoutCreator_EN.html"
+    },
+    {
+      "seq": "P042",
+      "name": "New Year Goals Planner",
+      "cname": "新年職涯目標規劃師",
+      "file": "zh/v2/Prompt/P042_NewYearGoalsPlanner.html",
+      "en_file": "en/v2/Prompt/P042_NewYearGoalsPlanner_EN.html"
+    },
+    {
+      "seq": "P043",
+      "name": "Excel Correlation Report",
+      "cname": "Excel 數值相關性分析報告",
+      "file": "zh/v2/Prompt/P043_ExcelCorrelationReport.html",
+      "en_file": "en/v2/Prompt/P043_ExcelCorrelationReport_EN.html"
+    },
+    {
+      "seq": "P044",
+      "name": "Year End Team Message",
+      "cname": "年末團隊感謝信產生器",
+      "file": "zh/v2/Prompt/P044_YearEndTeamMessage.html",
+      "en_file": "en/v2/Prompt/P044_YearEndTeamMessage_EN.html"
+    },
+    {
+      "seq": "P045",
+      "name": "Document Best Practices Review",
+      "cname": "文件最佳實踐差距分析",
+      "file": "zh/v2/Prompt/P045_DocumentBestPracticesReview.html",
+      "en_file": "en/v2/Prompt/P045_DocumentBestPracticesReview_EN.html"
+    },
+    {
+      "seq": "P046",
+      "name": "Weekly Time Categories",
+      "cname": "每週時間分配類別分析",
+      "file": "zh/v2/Prompt/P046_WeeklyTimeCategories.html",
+      "en_file": "en/v2/Prompt/P046_WeeklyTimeCategories_EN.html"
+    },
+    {
+      "seq": "P047",
+      "name": "FAQ Generator",
+      "cname": "多文件 FAQ 快速產生器",
+      "file": "zh/v2/Prompt/P047_FAQGenerator.html",
+      "en_file": "en/v2/Prompt/P047_FAQGenerator_EN.html"
+    },
+    {
+      "seq": "P048",
+      "name": "Email Thread Summarizer",
+      "cname": "郵件串摘要與行動項目產生器",
+      "file": "zh/v2/Prompt/P048_EmailThreadSummarizer.html",
+      "en_file": "en/v2/Prompt/P048_EmailThreadSummarizer_EN.html"
+    },
+    {
+      "seq": "P049",
+      "name": "Excel Executive Briefing",
+      "cname": "Excel 一頁式主管決策簡報",
+      "file": "zh/v2/Prompt/P049_ExcelExecutiveBriefing.html",
+      "en_file": "en/v2/Prompt/P049_ExcelExecutiveBriefing_EN.html"
+    },
+    {
+      "seq": "P050",
+      "name": "Workday Recap Summary",
+      "cname": "工作日訊息回顧與行動摘要",
+      "file": "zh/v2/Prompt/P050_WorkdayRecapSummary.html",
+      "en_file": "en/v2/Prompt/P050_WorkdayRecapSummary_EN.html"
+    },
+    {
+      "seq": "P051",
+      "name": "Meeting Briefing Generator",
+      "cname": "📋 商務會議前情資簡報",
+      "file": "zh/v2/Prompt/P051_MeetingBriefingGenerator.html",
+      "en_file": "en/v2/Prompt/P051_MeetingBriefingGenerator_EN.html"
+    },
+    {
+      "seq": "P052",
+      "name": "Guided Email Reply Assistant",
+      "cname": "📧 智慧郵件回覆引導",
+      "file": "zh/v2/Prompt/P052_GuidedEmailReplyAssistant.html",
+      "en_file": "en/v2/Prompt/P052_GuidedEmailReplyAssistant_EN.html"
+    },
+    {
+      "seq": "P053",
+      "name": "Presentation Quality Check",
+      "cname": "🎯 簡報品質全面健診",
+      "file": "zh/v2/Prompt/P053_PresentationQualityCheck.html",
+      "en_file": "en/v2/Prompt/P053_PresentationQualityCheck_EN.html"
+    },
+    {
+      "seq": "P054",
+      "name": "Workplace Language Coach",
+      "cname": "職場外語學習教練",
+      "file": "zh/v2/Prompt/P054_WorkplaceLanguageCoach.html",
+      "en_file": "en/v2/Prompt/P054_WorkplaceLanguageCoach_EN.html"
+    },
+    {
+      "seq": "P055",
+      "name": "Schedule Conflict Resolver",
+      "cname": "📅 下週行程衝突排除器",
+      "file": "zh/v2/Prompt/P055_ScheduleConflictResolver.html",
+      "en_file": "en/v2/Prompt/P055_ScheduleConflictResolver_EN.html"
+    },
+    {
+      "seq": "P056",
+      "name": "Text Simplifier",
+      "cname": "✍️ 複雜文字簡化大師",
+      "file": "zh/v2/Prompt/P056_TextSimplifier.html",
+      "en_file": "en/v2/Prompt/P056_TextSimplifier_EN.html"
+    },
+    {
+      "seq": "P057",
+      "name": "Graceful No Plant Framework",
+      "cname": "🌱 優雅說不：PLANT 拒絕框架",
+      "file": "zh/v2/Prompt/P057_GracefulNoPlantFramework.html",
+      "en_file": "en/v2/Prompt/P057_GracefulNoPlantFramework_EN.html"
+    },
+    {
+      "seq": "P058",
+      "name": "Email Misunderstanding Resolver",
+      "cname": "📨 郵件誤解化解術",
+      "file": "zh/v2/Prompt/P058_EmailMisunderstandingResolver.html",
+      "en_file": "en/v2/Prompt/P058_EmailMisunderstandingResolver_EN.html"
+    },
+    {
+      "seq": "P059",
+      "name": "Team Chat Faq Generator",
+      "cname": "💬 團隊對話 FAQ 自動生成",
+      "file": "zh/v2/Prompt/P059_TeamChatFaqGenerator.html",
+      "en_file": "en/v2/Prompt/P059_TeamChatFaqGenerator_EN.html"
+    },
+    {
+      "seq": "P060",
+      "name": "Leadership Strengths Analysis",
+      "cname": "🏆 領導風格與優勢自我分析",
+      "file": "zh/v2/Prompt/P060_LeadershipStrengthsAnalysis.html",
+      "en_file": "en/v2/Prompt/P060_LeadershipStrengthsAnalysis_EN.html"
+    },
+    {
+      "seq": "P061",
+      "name": "Weekly Team Pulse Survey",
+      "cname": "📊 每週團隊脈動問卷生成器",
+      "file": "zh/v2/Prompt/P061_WeeklyTeamPulseSurvey.html",
+      "en_file": "en/v2/Prompt/P061_WeeklyTeamPulseSurvey_EN.html"
+    },
+    {
+      "seq": "P062",
+      "name": "Ocean Outlook Instructions",
+      "cname": "🧬 OCEAN 個人化 Outlook 起草指示詞",
+      "file": "zh/v2/Prompt/P062_OceanOutlookInstructions.html",
+      "en_file": "en/v2/Prompt/P062_OceanOutlookInstructions_EN.html"
+    },
+    {
+      "seq": "P063",
+      "name": "Presentation Optimization Planner",
+      "cname": "🗂️ 簡報精簡與時間優化助手",
+      "file": "zh/v2/Prompt/P063_PresentationOptimizationPlanner.html",
+      "en_file": "en/v2/Prompt/P063_PresentationOptimizationPlanner_EN.html"
+    },
+    {
+      "seq": "P064",
+      "name": "Customer Issue Best Practices Doc",
+      "cname": "📚 客戶問題最佳實踐文件生成",
+      "file": "zh/v2/Prompt/P064_CustomerIssueBestPracticesDoc.html",
+      "en_file": "en/v2/Prompt/P064_CustomerIssueBestPracticesDoc_EN.html"
+    },
+    {
+      "seq": "P065",
+      "name": "Copilot Learning Plan",
+      "cname": "🎓 M365 Copilot 個人化學習計畫",
+      "file": "zh/v2/Prompt/P065_CopilotLearningPlan.html",
+      "en_file": "en/v2/Prompt/P065_CopilotLearningPlan_EN.html"
+    },
+    {
+      "seq": "P066",
+      "name": "Neurodiversity Exam Prep",
+      "cname": "告別死背！為你的大腦量身打造備考計畫",
+      "file": "zh/v2/Prompt/P066_NeurodiversityExamPrep.html",
+      "en_file": "en/v2/Prompt/P066_NeurodiversityExamPrep_EN.html"
+    },
+    {
+      "seq": "P067",
+      "name": "Email Risk Radar",
+      "cname": "讓 Copilot 掃你的信箱，提前發現潛在風險",
+      "file": "zh/v2/Prompt/P067_EmailRiskRadar.html",
+      "en_file": "en/v2/Prompt/P067_EmailRiskRadar_EN.html"
+    },
+    {
+      "seq": "P068",
+      "name": "Smart Inbox Architecture",
+      "cname": "信箱規則大改造！讓 Copilot 設計你的智慧分類架構",
+      "file": "zh/v2/Prompt/P068_SmartInboxArchitecture.html",
+      "en_file": "en/v2/Prompt/P068_SmartInboxArchitecture_EN.html"
+    },
+    {
+      "seq": "P069",
+      "name": "Recipient Style Matching",
+      "cname": "對方是主管還是工程師？讓 Copilot 自動調整你的溝通語氣",
+      "file": "zh/v2/Prompt/P069_RecipientStyleMatching.html",
+      "en_file": "en/v2/Prompt/P069_RecipientStyleMatching_EN.html"
+    },
+    {
+      "seq": "P070",
+      "name": "Presentation Rehearsal Coach",
+      "cname": "上台前讓 Copilot 當你的嚴格教練，模擬高階提問挑戰",
+      "file": "zh/v2/Prompt/P070_PresentationRehearsalCoach.html",
+      "en_file": "en/v2/Prompt/P070_PresentationRehearsalCoach_EN.html"
+    },
+    {
+      "seq": "P071",
+      "name": "Writing Style Prefix",
+      "cname": "讓 Copilot 學會你的說話方式，輸出從此像你自己寫的",
+      "file": "zh/v2/Prompt/P071_WritingStylePrefix.html",
+      "en_file": "en/v2/Prompt/P071_WritingStylePrefix_EN.html"
+    },
+    {
+      "seq": "P072",
+      "name": "Executive Doc Summary",
+      "cname": "把 20 頁文件濃縮成一頁決策摘要，讓主管秒懂",
+      "file": "zh/v2/Prompt/P072_ExecutiveDocSummary.html",
+      "en_file": "en/v2/Prompt/P072_ExecutiveDocSummary_EN.html"
+    },
+    {
+      "seq": "P073",
+      "name": "Work Rhythm Analyzer",
+      "cname": "用 Copilot 找出你的黃金工作節奏，設計專屬最佳作息",
+      "file": "zh/v2/Prompt/P073_WorkRhythmAnalyzer.html",
+      "en_file": "en/v2/Prompt/P073_WorkRhythmAnalyzer_EN.html"
+    },
+    {
+      "seq": "P074",
+      "name": "Weekly Action Item Summary",
+      "cname": "一鍵彙整本週指派給我的待辦事項",
+      "file": "zh/v2/Prompt/P074_WeeklyActionItemSummary.html",
+      "en_file": "en/v2/Prompt/P074_WeeklyActionItemSummary_EN.html"
+    },
+    {
+      "seq": "P075",
+      "name": "Excel Forecasting Model",
+      "cname": "用歷史資料打造 Excel 預測模型",
+      "file": "zh/v2/Prompt/P075_ExcelForecastingModel.html",
+      "en_file": "en/v2/Prompt/P075_ExcelForecastingModel_EN.html"
+    },
+    {
+      "seq": "P076",
+      "name": "Project Pulse Weekly Update",
+      "cname": "專案脈動週報生成器",
+      "file": "zh/v2/Prompt/P076_ProjectPulseWeeklyUpdate.html",
+      "en_file": "en/v2/Prompt/P076_ProjectPulseWeeklyUpdate_EN.html"
+    },
+    {
+      "seq": "P077",
+      "name": "7 Slide Deck Builder",
+      "cname": "七頁簡報快速產生器",
+      "file": "zh/v2/Prompt/P077_7SlideDeckBuilder.html",
+      "en_file": "en/v2/Prompt/P077_7SlideDeckBuilder_EN.html"
+    },
+    {
+      "seq": "P078",
+      "name": "Email Domain Inbox Summary",
+      "cname": "信件網域摘要",
+      "file": "zh/v2/Prompt/P078_EmailDomainInboxSummary.html",
+      "en_file": "en/v2/Prompt/P078_EmailDomainInboxSummary_EN.html"
+    }
+  ]
 }</script>
 <script>
 // ─── State ───────────────────────────────────────────────
