@@ -112,7 +112,7 @@
 <script>
 const CATALOG = /*CATALOG-START*/
 {
-  "generated": "2026-05-30 04:10:51",
+  "generated": "2026-05-30 04:31:58",
   "Agent_v1": [
     {
       "seq": "A001",
@@ -2013,6 +2013,7 @@ document.querySelectorAll('.tab').forEach(t2 => {
     document.getElementById('frame').src = 'about:blank';
     document.getElementById('name').textContent = t().placeholder;
     renderList();
+    autoSelectFirst();
   });
 });
 
@@ -2032,6 +2033,7 @@ document.querySelectorAll('.vbtn').forEach(b => {
       }
     }
     renderList();
+    autoSelectFirst();
   });
 });
 
@@ -2073,15 +2075,16 @@ document.querySelectorAll('.langtoggle button').forEach(x => x.classList.toggle(
 applyI18n();
 renderList();
 
-// auto-select the first item on initial load
-(function autoSelectFirst() {
+// auto-select the first item on initial load + every category/version switch
+function autoSelectFirst() {
   const first = items().find(it => fileOf(it));
   if (first) {
     const f = fileOf(first);
     const primary = isEN() ? first.name : (first.cname || first.name);
     load(f, first.seq + ' — ' + primary);
   }
-})();
+}
+autoSelectFirst();
 </script>
 </body>
 </html>
