@@ -10,23 +10,23 @@
   .app { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
   /* Sidebar */
   aside { background: #fff; border-right: 1px solid #e3e8ee; display: flex; flex-direction: column; }
-  .head { padding: 18px 18px 12px; border-bottom: 1px solid #e3e8ee; }
-  .head h1 { margin: 0 0 4px; font-size: 18px; color: #0F6CBD; }
-  .head .sub { font-size: 12px; color: #6b7280; letter-spacing: 1px; }
+  .head { padding: 18px 18px 14px; border-bottom: 1px solid #e3e8ee; }
+  .head h1 { margin: 0 0 8px; font-size: 20px; color: #0F6CBD; padding-right: 80px; }
+  .head .sub { display: none; }
   /* Tabs */
-  .tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e3e8ee; }
-  .tab { padding: 12px; text-align: center; font-size: 14px; font-weight: bold; cursor: pointer; background: #f8fafc; color: #6b7280; border: none; transition: all .15s; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 10px 14px; gap: 8px; border-bottom: 1px solid #e3e8ee; }
+  .tab { padding: 10px 6px; text-align: center; font-size: 13px; font-weight: bold; cursor: pointer; background: #f8fafc; color: #6b7280; border: 1px solid #e3e8ee; border-radius: 8px; transition: all .15s; white-space: nowrap; }
   .tab.active.agent { background: #0F6CBD; color: #fff; }
   .tab.active.prompt { background: #8378DE; color: #fff; }
   .tab:not(.active):hover { background: #eef2f7; color: #1f2937; }
   /* Version toggle */
   .vtoggle { display: grid; grid-template-columns: 1fr 1fr; padding: 10px 14px; gap: 8px; border-bottom: 1px solid #e3e8ee; background: #fafbfc; }
-  .vtoggle button { padding: 8px; font-size: 13px; cursor: pointer; border: 1px solid #d1d5db; background: #fff; border-radius: 6px; font-weight: bold; color: #6b7280; }
+  .vtoggle button { padding: 0 12px; height: 36px; font-size: 13px; line-height: 1; cursor: pointer; border: 1px solid #d1d5db; background: #fff; border-radius: 6px; font-weight: bold; color: #1f2937; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; }
   .vtoggle button.active { background: #1f2937; color: #fff; border-color: #1f2937; }
   /* Language toggle (top-right of header) */
   .head { position: relative; }
-  .langtoggle { position: absolute; top: 14px; right: 14px; display: inline-flex; border: 1px solid #d1d5db; border-radius: 6px; overflow: hidden; }
-  .langtoggle button { padding: 4px 10px; font-size: 12px; cursor: pointer; border: 0; background: #fff; color: #6b7280; font-weight: bold; }
+  .langtoggle { position: absolute; top: 16px; right: 14px; display: inline-flex; align-items: stretch; height: 28px; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden; }
+  .langtoggle button { height: 100%; padding: 0; min-width: 44px; font-size: 13px; line-height: 1; cursor: pointer; border: 0; background: #fff; color: #6b7280; font-weight: bold; font-family: -apple-system, 'Segoe UI', sans-serif; box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
   .langtoggle button.active { background: #0F6CBD; color: #fff; }
   .list a.disabled { color: #c1c7d0; cursor: not-allowed; background: #fafbfc; }
   .list a.disabled .seq { background: #eef0f3; color: #9ca3af; }
@@ -46,9 +46,9 @@
   .empty { padding: 20px; text-align: center; color: #9ca3af; font-size: 13px; }
   /* Main / preview */
   main { display: flex; flex-direction: column; background: #f4f6f8; }
-  .toolbar { padding: 10px 16px; background: #fff; border-bottom: 1px solid #e3e8ee; display: flex; align-items: center; gap: 12px; font-size: 13px; }
-  .toolbar .name { font-weight: bold; color: #1f2937; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .toolbar a { color: #0F6CBD; text-decoration: none; padding: 4px 10px; border: 1px solid #cfe5f6; border-radius: 4px; font-size: 12px; }
+  .toolbar { padding: 12px 16px; background: #fff; border-bottom: 1px solid #e3e8ee; display: flex; align-items: center; gap: 12px; font-size: 14px; }
+  .toolbar .name { font-weight: bold; color: #1f2937; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; }
+  .toolbar a { color: #0F6CBD; text-decoration: none; padding: 9px 14px; border: 1px solid #cfe5f6; border-radius: 8px; font-size: 14px; font-weight: 600; }
   .toolbar a:hover { background: #eef4fb; }
   .frame-wrap { flex: 1; overflow: hidden; padding: 16px; min-height: 0; }
   iframe { display: block; width: 100%; height: 100%; border: 1px solid #e3e8ee; background: #fff; border-radius: 4px; }
@@ -60,8 +60,7 @@
   <aside>
     <div class="head">
       <h1 id="brand-title">📚 Copilot 一分鐘小教室</h1>
-      <div class="sub" id="brand-sub">NEWSLETTER INDEX · v1 + v2 預覽</div>
-      <a id="download-zip" href="PowerOfCopilot.zip" download style="display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; padding:10px 12px; background:linear-gradient(135deg,#0F6CBD 0%,#0a5599 100%); color:#fff; border-radius:8px; text-decoration:none; font-size:14px; font-weight:700; box-shadow:0 2px 6px rgba(15,108,189,0.35); transition:transform .15s, box-shadow .15s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 10px rgba(15,108,189,0.5)';" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(15,108,189,0.35)';">⬇️ 全部下載 (.zip)</a>
+      <a id="download-zip"href="PowerOfCopilot.zip" download style="display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; padding:10px 12px; background:linear-gradient(135deg,#0F6CBD 0%,#0a5599 100%); color:#fff; border-radius:8px; text-decoration:none; font-size:14px; font-weight:700; box-shadow:0 2px 6px rgba(15,108,189,0.35); transition:transform .15s, box-shadow .15s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 10px rgba(15,108,189,0.5)';" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 6px rgba(15,108,189,0.35)';">⬇️ 全部下載 (.zip)</a>
       <div class="langtoggle" role="tablist" aria-label="Language">
         <button id="lang-zh" class="active" data-lang="zh">中</button>
         <button id="lang-en" data-lang="en">EN</button>
@@ -1900,7 +1899,6 @@ function applyI18n() {
   document.title = u.docTitle;
   document.documentElement.lang = state.lang === 'en' ? 'en' : 'zh-Hant';
   document.getElementById('brand-title').textContent = u.title;
-  document.getElementById('brand-sub').textContent = u.sub;
   document.getElementById('tab-agent').textContent = u.tabAgent;
   document.getElementById('tab-prompt').textContent = u.tabPrompt;
   document.getElementById('v1btn').textContent = u.v1;
