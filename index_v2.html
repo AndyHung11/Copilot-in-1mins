@@ -263,7 +263,7 @@
     <div class="modal-head">
       <strong id="modalTitle">—</strong>
       <span>
-        <a id="modalMsg" href="#" style="font-size:14px;font-weight:600;color:#d46b08;background:#fff4e5;border:1px solid #ffd591;padding:9px 14px;border-radius:8px;text-decoration:none;margin-right:8px" title="用 Outlook 開啟 .msg 檔（可編輯/寄送）" data-i18n="openMsg">📧 用 Outlook 開啟</a>
+        <a id="modalMsg" href="#" style="font-size:14px;font-weight:600;color:#d46b08;background:#fff4e5;border:1px solid #ffd591;padding:9px 14px;border-radius:8px;text-decoration:none;margin-right:8px" title="用 Outlook 開啟 .eml 檔（可編輯/寄送）" data-i18n="openMsg">📧 用 Outlook 開啟</a>
         <a id="modalOpen" href="#" target="_blank" style="font-size:14px;font-weight:600;color:#0F6CBD;background:#fff;border:1px solid #cfe5f6;padding:9px 14px;border-radius:8px;text-decoration:none;margin-right:8px" data-i18n="newTab">在新分頁開啟 ↗</a>
         <button class="x" id="modalClose">×</button>
       </span>
@@ -2439,7 +2439,10 @@ function showModal(href, title){
   document.getElementById('modalTitle').textContent = title || '';
   document.getElementById('modalFrame').src = href;
   document.getElementById('modalOpen').href = href;
-  document.getElementById('modalMsg').href = href.replace(/\/([^/]+)\.html$/, '/msg/$1.msg');
+  const emlPath = href.replace(/\/([^/]+)\.html$/, '/eml/$1.eml');
+  const modalMsg = document.getElementById('modalMsg');
+  modalMsg.href = emlPath;
+  modalMsg.setAttribute('download', emlPath.split('/').pop());
   document.getElementById('modal').classList.add('on');
 }
 document.getElementById('modalClose').onclick = ()=>document.getElementById('modal').classList.remove('on');

@@ -95,7 +95,7 @@
   <main>
     <div class="toolbar">
       <span class="name" id="name">— 從左側清單選一篇 —</span>
-      <a href="#" id="open-msg" title="用 Outlook 開啟 .msg 檔（可編輯/寄送）。如瀏覽器擋下載，請按下載後雙擊開啟，或改用 Edge。" style="background:#fff4e5;border-color:#ffd591;color:#d46b08;">📧 用 Outlook 開啟</a>
+      <a href="#" id="open-msg" title="用 Outlook 開啟 .eml 檔（可編輯/寄送）。如瀏覽器擋下載，請按下載後雙擊開啟，或改用 Edge。" style="background:#fff4e5;border-color:#ffd591;color:#d46b08;">📧 用 Outlook 開啟</a>
       <a href="#" id="open-new" target="_blank">在新分頁開啟 ↗</a>
       <a id="uiSwitch" class="ui-switch" href="index_v2.html" title="切換為新版介面" style="margin-left:auto">
         <span class="ui-switch-icon">✨</span>
@@ -2024,11 +2024,12 @@ function load(file, name) {
   document.getElementById('frame').src = file;
   document.getElementById('name').textContent = name;
   document.getElementById('open-new').href = file;
-  // .msg 路徑：v1/Agent/Foo.html -> v1/Agent/msg/Foo.msg (zh & en 都有)
-  const msgPath = file.replace(/\/([^/]+)\.html$/, '/msg/$1.msg');
+  // .eml 路徑：v1/Agent/Foo.html -> v1/Agent/eml/Foo.eml (zh & en 都有)
+  const msgPath = file.replace(/\/([^/]+)\.html$/, '/eml/$1.eml');
   const msgBtn = document.getElementById('open-msg');
   msgBtn.style.display = '';
   msgBtn.href = msgPath;
+  msgBtn.setAttribute('download', msgPath.split('/').pop());
   renderList();
 }
 

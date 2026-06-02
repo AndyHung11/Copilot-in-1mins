@@ -3,7 +3,7 @@
 # 但保留目錄結構與內容類型
 !*/
 !*.html
-!*.msg
+!*.eml
 !.gitignore
 !README.md
 !robots.txt
