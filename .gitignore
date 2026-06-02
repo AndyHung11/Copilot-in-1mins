@@ -12,3 +12,9 @@
 _trash/
 _bak_*/
 *_bak_*/
+
+# AI 作業暫存目錄
+_working/
+
+# AI 建置工具目錄
+_tools/
