@@ -59,6 +59,7 @@ body{margin:0;font-family:"Segoe UI Variable","Segoe UI","Microsoft JhengHei",-a
 
 .topbar{position:fixed;top:0;left:280px;right:0;height:var(--topbar-h);z-index:90;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:var(--tb-bg);border-bottom:1px solid var(--tb-border);backdrop-filter:saturate(140%) blur(10px)}
 .topbar .crumb{display:flex;align-items:center;gap:10px;color:var(--text-soft);font-size:.92rem;font-weight:500;min-width:0;overflow:hidden}
+.topbar .crumb .ico{font-size:1rem}
 .topbar .crumb .now{color:var(--text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 .layout{margin-left:280px;min-height:100vh;padding-top:var(--topbar-h)}
@@ -209,7 +210,7 @@ body.present-mode .presenter{display:flex}
 <a href="#s16" class="nav-link" data-target="s16"><span class="icon">📚</span><span class="num">16</span><span class="name">差旅政策 KB 問答</span></a>
 </div>
 </nav><div class="sb-footer">© Andy Hung · Pro v1</div></aside>
-<div class="topbar"><div class="crumb"><span>📍</span><span class="now" id="crumbNow">使用方式</span></div>
+<div class="topbar"><div class="crumb"><span class="ico">📍</span><span class="now" id="crumbNow">使用方式</span></div>
 <div class="toolbar-top">
 <div class="ver-toggle" title="切換基本／進階版"><a href="../Basic/"><span class="vico">📘</span>基本</a><span class="cur"><span class="vico">🚀</span>進階</span></div>
 <button class="tool-btn" id="themeBtn"><span class="ico" id="themeIco">🌙</span><span id="themeLbl">深色</span></button>
