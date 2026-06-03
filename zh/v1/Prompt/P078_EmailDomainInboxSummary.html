@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="zh-Hant" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Copilot 一分鐘小教室：Power of Prompt #P078 — 信件網域摘要</title>
 <!--[if mso]>
 <style type="text/css">
@@ -21,114 +20,124 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 <!--<![endif]-->
 </head>
 <body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
-<table bgcolor="#f4f6f8" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#f4f6f8;" width="100%">
-<tr><td align="center" style="padding:24px 0;">
-<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;" width="680">
-<!-- ═══ BANNER ═══ -->
-<tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-<tr>
-<td align="left" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;" valign="middle" width="58%">
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一 分鐘小教室</div>
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
-</td>
-<td align="right" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;" valign="middle" width="42%">
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P078 期</div>
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">把客戶網域的所有信變成一張可追蹤的待辦表！</div>
-</td>
-</tr>
-</table>
-</td></tr>
-<!-- ═══ INTRO ═══ -->
-<tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
-<table bgcolor="#5B5FC7" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#5B5FC7;" width="100%">
-<tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
-            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br/>從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br/><b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一 分鐘小教室</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P078 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">把客戶網域的所有信變成一張可追蹤的待辦表！</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br />從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br /><b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
           </td></tr>
-</table>
-</td></tr>
-<!-- ═══ TITLE ═══ -->
-<tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">📥 信件網域摘要</div>
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Email Domain Inbox Summary</div>
-<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-top:12px;">
-<tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">📥 信件網域摘要</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Email Domain Inbox Summary</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
             ✨ 一個 Prompt 看完所有客戶來信＋誰已回
           </td></tr>
-</table>
-</td></tr>
-<!-- ═══ STORY ═══ -->
-<tr><td style="padding:18px 32px 0 32px;">
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
           客戶下午突然問：「上週那個案子我們同事有沒有回？」——你開始翻郵件、跨過 8 個對話串、查同事副本、確認誰回了什麼。10 分鐘過去，還沒給答案。<br/><br/>這個 Prompt 直接在 <b>Outlook Copilot</b> 用：指定一個網域（例如 @customer.com）與時間範圍（例如過去 4 週），就回一張表——<b>誰寄的、何時寄的、需要什麼行動、我方有沒有人回過</b>。<br/><br/>對於客戶經理、PM、業務、Account 角色超實用：每天開工前跑一次，馬上知道哪些 thread 還沒人接、哪些已經處理掉，把「漏接客戶來信」這個風險直接消掉。
         </div>
-</td></tr>
-<!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
-<tr><td style="padding:24px 32px 0 32px;">
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-<tr>
-<td bgcolor="#8378DE" style="background-color:#8378DE;width:4px;" width="4"> </td>
-<td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td>
-</tr>
-</table>
-<div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 直接複製整段，貼到 Copilot Chat（Web）即可使用</div>
-<div style="position:relative;">
+      </td></tr>
 
-<table bgcolor="#f8fafc" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;" width="100%">
-<tr><td style="padding:14px;">
-<!--[if !mso]><!--><button class="cp-btn" onclick="cpClick(this,'cp-prompt')" style="background:#8378DE;" type="button">📋 複製 Copy</button><!--<![endif]--><div class="mono" id="cp-prompt" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">建立一張表格，列出我在過去 X 週內從 DOMAINNAME（例如 @customer.com）收到的所有 email。請包含一欄顯示這封信需要哪些行動，以及另一欄顯示我公司是否有人已經回覆。</div>
-</td></tr>
-</table>
-</div>
-</td></tr>
-<!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
-<tr><td style="padding:18px 32px 0 32px;">
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-<tr>
-<td bgcolor="#DAD6F5" style="width:4px;background-color:#DAD6F5;" width="4"> </td>
-<td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
-</tr>
-</table>
-<div style="position:relative;">
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">建立一張表格，列出我在過去 X 週內從 DOMAINNAME（例如 @customer.com）收到的所有 email。請包含一欄顯示這封信需要哪些行動，以及另一欄顯示我公司是否有人已經回覆。</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
 
-<table bgcolor="#fafbfc" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;" width="100%">
-<tr><td style="padding:14px;">
-<!--[if !mso]><!--><button class="cp-btn" onclick="cpClick(this,'cp-prompt-alt')" style="background:#3D3E78;" type="button">📋 複製 Copy</button><!--<![endif]--><div class="mono" id="cp-prompt-alt" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Create a tableshowing all emails I received from DOMAINNAME (e.g., @customer.com) in the last X weeks. Include a column that shows any action required from the message and another column to show if anyone at my company has responded yet.</div>
-</td></tr>
-</table>
-</div>
-</td></tr>
-<!-- ═══ USAGE TIPS ═══ -->
-<tr><td style="padding:24px 32px 0 32px;">
-<table bgcolor="#fffaf0" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#fffaf0;border-left:4px solid #ffb300;" width="100%">
-<tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
-<b>💡 使用小撇步</b><br/>
-<tr><td style="padding:8px 0;" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="48"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📧 在 Outlook 的 Copilot 開啟</div><div style="font-size:12pt; color:#444; line-height:1.7;">桌面或行動版皆可，直接貼上 Prompt。</div></td></tr></table></td></tr>
-<tr><td style="padding:8px 0;" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="48"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✏️ 換掉 DOMAINNAME 與 X 週</div><div style="font-size:12pt; color:#444; line-height:1.7;">換成實際客戶網域（例如 @chunghwa.com.tw）與要看的範圍（1、2、4、8…週）。</div></td></tr></table></td></tr>
-<tr><td style="padding:8px 0;" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="48"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🎯 先處理「尚無人回覆」</div><div style="font-size:12pt; color:#444; line-height:1.7;">那一欄就是你今天最該補的待辦，已回的列再確認回得對不對。</div></td></tr></table></td></tr>
-</td></tr>
-</table>
-</td></tr>
-<!-- ═══ LICENSE BADGE ═══ -->
-<tr><td align="center" style="padding:28px 32px 24px 32px;">
-<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
-<tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Create a tableshowing all emails I received from DOMAINNAME (e.g., @customer.com) in the last X weeks. Include a column that shows any action required from the message and another column to show if anyone at my company has responded yet.</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用小撇步</b><br />
+            1. 在 <b>Outlook 的 Copilot</b> 直接貼上（行動裝置或桌面版皆可）。<br/>
+2. 把 <b>DOMAINNAME</b> 換成實際網域（例如 <code>@chunghwa.com.tw</code>），<b>X 週</b>換成你要的範圍（1、2、4、8…）。<br/>
+3. 看到「尚無人回覆」的列就先處理；看到「已回覆」的列再確認回得對不對、要不要追加。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
             🔑 需 M365 Copilot 授權
           </td></tr>
-</table>
-</td></tr>
-<!-- ═══ CTA BUTTON ═══ -->
-<tr><td align="center" style="padding:0 32px 24px 32px;">
-<a href="https://m365.cloud.microsoft/chat" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;" target="_blank">🚀 立即試試 Copilot Chat</a>
-</td></tr>
-<!-- ═══ FOOTER ═══ -->
-<tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
-        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br/>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br />
         Powered by Weeklyprompt@microsoft
       </td></tr>
-</table>
-</td></tr>
+
+    </table>
+  </td></tr>
 </table>
 <!--[if !mso]><!-->
 <script>
