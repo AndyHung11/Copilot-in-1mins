@@ -127,6 +127,11 @@ footer{text-align:center;color:var(--muted);padding:32px 24px;font-size:.85rem;b
 .toolbar-top{display:flex;gap:8px;align-items:center}
 .tool-btn{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:7px 12px;font-size:.84rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow);transition:.15s;font-weight:500}
 .tool-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);border-color:var(--brand);color:var(--brand)}
+.ver-toggle{display:inline-flex;gap:6px;flex-shrink:0}
+.ver-toggle>a,.ver-toggle>span{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:7px 12px;font-size:.84rem;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow);transition:.15s;text-decoration:none;white-space:nowrap;min-width:74px;justify-content:center}
+.ver-toggle>a:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);border-color:var(--brand);color:var(--brand)}
+.ver-toggle .cur{background:var(--brand);color:#fff;border-color:var(--brand);cursor:default}
+.ver-toggle .vico{font-size:1rem}
 
 body.present-mode{overflow:hidden}
 body.present-mode .sidebar,body.present-mode .menu-toggle,body.present-mode .topbar,body.present-mode .layout{display:none!important}
@@ -205,6 +210,7 @@ body.present-mode .presenter{display:flex}
 </nav><div class="sb-footer">© Andy Hung · Pro v1</div></aside>
 <div class="topbar"><div class="crumb"><span>📍</span><span class="now" id="crumbNow">使用方式</span></div>
 <div class="toolbar-top">
+<div class="ver-toggle" title="切換基本／進階版"><a href="../Basic/"><span class="vico">📘</span>基本</a><span class="cur"><span class="vico">🚀</span>進階</span></div>
 <button class="tool-btn" id="themeBtn"><span class="ico" id="themeIco">🌙</span><span id="themeLbl">深色</span></button>
 <a class="tool-btn" href="en/" title="English version" style="text-decoration:none"><span class="ico">🌐</span><span>EN</span></a>
 <button class="tool-btn" id="presentBtn"><span class="ico">▶️</span><span>簡報模式</span></button>
