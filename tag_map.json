@@ -1270,6 +1270,15 @@
       "tool": [
         "outlook"
       ]
+    },
+    "P086": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "teams"
+      ]
     }
   },
   "needs_review": []
