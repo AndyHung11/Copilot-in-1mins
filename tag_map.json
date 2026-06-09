@@ -1,0 +1,1250 @@
+{
+  "version": "v1",
+  "generated_at": "2026-05-30",
+  "entries": {
+    "A001": {
+      "task": [
+        "automation",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A002": {
+      "task": [
+        "learning",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A003": {
+      "task": [
+        "analysis",
+        "strategy",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A004": {
+      "task": [
+        "writing",
+        "planning"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A005": {
+      "task": [
+        "automation",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A006": {
+      "task": [
+        "learning",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A007": {
+      "task": [
+        "learning",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A008": {
+      "task": [
+        "planning",
+        "communication",
+        "strategy"
+      ],
+      "tool": [
+        "teams"
+      ]
+    },
+    "A009": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A010": {
+      "task": [
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A011": {
+      "task": [
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A012": {
+      "task": [
+        "automation",
+        "analysis"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A013": {
+      "task": [
+        "planning",
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A014": {
+      "task": [
+        "analysis",
+        "automation",
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A015": {
+      "task": [
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A016": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A017": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A018": {
+      "task": [
+        "automation",
+        "writing",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A019": {
+      "task": [
+        "planning",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A020": {
+      "task": [
+        "communication",
+        "strategy",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A021": {
+      "task": [
+        "learning",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A022": {
+      "task": [
+        "strategy",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A023": {
+      "task": [
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A024": {
+      "task": [
+        "analysis",
+        "strategy",
+        "writing"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "A025": {
+      "task": [
+        "planning",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A026": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A027": {
+      "task": [
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A028": {
+      "task": [
+        "learning",
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "A029": {
+      "task": [
+        "writing",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A030": {
+      "task": [
+        "communication",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A031": {
+      "task": [
+        "analysis",
+        "writing"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "A032": {
+      "task": [
+        "analysis",
+        "strategy",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A033": {
+      "task": [
+        "communication",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A034": {
+      "task": [
+        "planning",
+        "strategy",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A035": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A036": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "A037": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A038": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "excel",
+        "outlook"
+      ]
+    },
+    "A039": {
+      "task": [
+        "planning",
+        "communication",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A040": {
+      "task": [
+        "communication",
+        "strategy",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "A041": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A042": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "A043": {
+      "task": [
+        "strategy",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A044": {
+      "task": [
+        "communication",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "A045": {
+      "task": [
+        "analysis",
+        "writing"
+      ],
+      "tool": [
+        "excel",
+        "outlook"
+      ]
+    },
+    "A046": {
+      "task": [
+        "planning",
+        "strategy",
+        "analysis"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "A047": {
+      "task": [
+        "planning",
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P001": {
+      "task": [
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P002": {
+      "task": [
+        "communication",
+        "analysis",
+        "writing"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P003": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P004": {
+      "task": [
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P005": {
+      "task": [
+        "communication",
+        "strategy",
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P006": {
+      "task": [
+        "communication",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P007": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P008": {
+      "task": [
+        "analysis",
+        "strategy",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P009": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P010": {
+      "task": [
+        "automation",
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P011": {
+      "task": [
+        "learning",
+        "analysis"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P012": {
+      "task": [
+        "communication",
+        "writing",
+        "analysis"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P013": {
+      "task": [
+        "automation"
+      ],
+      "tool": [
+        "excel",
+        "powerpoint",
+        "word"
+      ]
+    },
+    "P014": {
+      "task": [
+        "learning",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P015": {
+      "task": [
+        "analysis",
+        "automation",
+        "strategy"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P016": {
+      "task": [
+        "writing",
+        "strategy",
+        "analysis"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "P017": {
+      "task": [
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P018": {
+      "task": [
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P019": {
+      "task": [
+        "writing",
+        "automation",
+        "planning"
+      ],
+      "tool": [
+        "teams"
+      ]
+    },
+    "P020": {
+      "task": [
+        "analysis",
+        "automation",
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P021": {
+      "task": [
+        "communication",
+        "learning",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P022": {
+      "task": [
+        "communication",
+        "writing",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P023": {
+      "task": [
+        "planning",
+        "automation",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P024": {
+      "task": [
+        "writing",
+        "analysis"
+      ],
+      "tool": [
+        "teams"
+      ]
+    },
+    "P025": {
+      "task": [
+        "analysis",
+        "automation",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P026": {
+      "task": [
+        "analysis",
+        "planning",
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P027": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P028": {
+      "task": [
+        "automation",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P029": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "powerpoint",
+        "word"
+      ]
+    },
+    "P030": {
+      "task": [
+        "writing",
+        "automation"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P031": {
+      "task": [
+        "learning",
+        "planning",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P032": {
+      "task": [
+        "learning",
+        "automation",
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P033": {
+      "task": [
+        "automation",
+        "strategy"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P034": {
+      "task": [
+        "planning",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P035": {
+      "task": [
+        "automation"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P036": {
+      "task": [
+        "automation",
+        "strategy",
+        "writing"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P037": {
+      "task": [
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P038": {
+      "task": [
+        "communication",
+        "writing",
+        "planning"
+      ],
+      "tool": [
+        "excel",
+        "teams"
+      ]
+    },
+    "P039": {
+      "task": [
+        "learning",
+        "communication",
+        "strategy"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P040": {
+      "task": [
+        "planning",
+        "analysis"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P041": {
+      "task": [
+        "automation",
+        "writing",
+        "learning"
+      ],
+      "tool": [
+        "word",
+        "powerpoint",
+        "teams"
+      ]
+    },
+    "P042": {
+      "task": [
+        "planning",
+        "strategy",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P043": {
+      "task": [
+        "analysis",
+        "learning",
+        "writing"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P044": {
+      "task": [
+        "planning",
+        "writing",
+        "automation"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P045": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "P046": {
+      "task": [
+        "analysis",
+        "planning",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P047": {
+      "task": [
+        "learning",
+        "automation",
+        "communication"
+      ],
+      "tool": [
+        "word",
+        "powerpoint",
+        "teams"
+      ]
+    },
+    "P048": {
+      "task": [
+        "writing",
+        "communication",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P049": {
+      "task": [
+        "analysis",
+        "strategy",
+        "communication"
+      ],
+      "tool": [
+        "excel",
+        "outlook"
+      ]
+    },
+    "P050": {
+      "task": [
+        "writing",
+        "planning",
+        "automation"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P051": {
+      "task": [
+        "communication",
+        "strategy",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P052": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P053": {
+      "task": [
+        "analysis",
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P054": {
+      "task": [
+        "learning",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P055": {
+      "task": [
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P056": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P057": {
+      "task": [
+        "communication",
+        "writing",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P058": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P059": {
+      "task": [
+        "analysis",
+        "automation",
+        "communication"
+      ],
+      "tool": [
+        "teams"
+      ]
+    },
+    "P060": {
+      "task": [
+        "analysis",
+        "communication",
+        "planning"
+      ],
+      "tool": [
+        "teams",
+        "outlook"
+      ]
+    },
+    "P061": {
+      "task": [
+        "automation",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P062": {
+      "task": [
+        "communication",
+        "writing",
+        "analysis"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P063": {
+      "task": [
+        "analysis",
+        "planning",
+        "writing"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P064": {
+      "task": [
+        "communication",
+        "writing"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P065": {
+      "task": [
+        "learning",
+        "planning",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P066": {
+      "task": [
+        "planning",
+        "automation",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P067": {
+      "task": [
+        "analysis",
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P068": {
+      "task": [
+        "automation",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P069": {
+      "task": [
+        "writing",
+        "communication",
+        "strategy"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P070": {
+      "task": [
+        "learning",
+        "communication"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P071": {
+      "task": [
+        "analysis",
+        "communication",
+        "writing"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P072": {
+      "task": [
+        "strategy",
+        "writing",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P073": {
+      "task": [
+        "automation",
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P074": {
+      "task": [
+        "automation",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P075": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P076": {
+      "task": [
+        "writing",
+        "communication",
+        "automation"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P077": {
+      "task": [
+        "communication",
+        "planning",
+        "automation"
+      ],
+      "tool": [
+        "powerpoint"
+      ]
+    },
+    "P078": {
+      "task": [
+        "automation",
+        "planning",
+        "writing"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    },
+    "P079": {
+      "task": [
+        "communication",
+        "writing"
+      ],
+      "tool": [
+        "teams",
+        "general"
+      ]
+    },
+    "P080": {
+      "task": [
+        "learning",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "A048": {
+      "task": [
+        "planning",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P081": {
+      "task": [
+        "writing",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P082": {
+      "task": [
+        "communication",
+        "analysis"
+      ],
+      "tool": [
+        "outlook"
+      ]
+    }
+  },
+  "needs_review": []
+}
