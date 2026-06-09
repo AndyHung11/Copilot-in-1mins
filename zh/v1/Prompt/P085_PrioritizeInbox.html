@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分鐘小教室：Power of Prompt #P085 — 讓 Copilot 幫你標出必讀信件</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一 分鐘小教室</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P085 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">收件匣爆量？讓 Copilot 先把「必讀」標出來，其他的晚點再說</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br />從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br /><b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">⬆️ 讓 Copilot 幫你標出必讀信件</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Prioritize Your Inbox with Copilot</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 告訴 Copilot 什麼信該優先，之後它自動幫你標記、過濾 ⬆️
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          每天打開信箱，重要的信被淹沒在電子報、自動通知、抄送轟炸裡，真正該先看的反而要往下翻半天才找到？<br/><br/>Outlook 的 <b>設定優先順序（Prioritize）</b>功能讓你<b>直接告訴 Copilot</b> 什麼信對你是「必讀」、什麼可以等。你只要寫幾條規則 —— 例如<b>「任何來自我主管的信」</b>或<b>「提到 Project Sigma 的信」</b> —— Copilot 就會學起來，之後自動幫你<b>標上 ⬆️ 高優先記號</b>，還能附上 AI 摘要讓你一眼看懂。<br/><br/><b>怎麼設（新舊版 Outlook 都支援）：</b><br/>・<b>舊版 Outlook</b>：點右上角 <b>Copilot 圖示 → 設定優先順序</b><br/>・<b>新版 Outlook</b>：<b>設定 → Copilot → 設定優先順序</b><br/>加上幾條「什麼算高優先」的描述即可，之後同一處還能加「低優先」過濾規則。<br/><br/>⚠️ 注意：它只影響<b>設定之後</b>進來的新信 —— 越早設定，越早把收件匣的主導權拿回來。
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>⬆️ 優先規則範例（填進 Outlook → 設定優先順序）</b><br/><br/>請把符合以下任一條件的信件標為高優先：<br/>・任何來自我<b>主管或我團隊成員</b>的信<br/>・主旨或內文提到 <b>[專案名稱 / 客戶名稱]</b> 的信<br/>・有<b>明確截止日或要我回覆/核准</b>的信<br/>・標記為<b>高重要性</b>或直接寄給我（非僅副本）的信<br/><br/>以下這些可以標為低優先：<br/>・電子報、系統自動通知、大量副本的公告信<br/><br/>（把上面的範例改成你自己的人名、專案、客戶）</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>⬆️ Priority rule examples (add in Outlook → Prioritize)</b><br/><br/>Mark an email as high priority if it matches any of these:<br/>・Anything from my <b>manager or my team members</b><br/>・Mentions <b>[project name / client name]</b> in the subject or body<br/>・Has a <b>clear deadline or asks me to reply/approve</b><br/>・Flagged <b>high importance</b> or sent directly to me (not just CC)<br/><br/>These can be marked low priority:<br/>・Newsletters, system auto-notifications, mass-CC announcements<br/><br/>(Replace the examples above with your own names, projects, and clients)</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用小撇步</b><br />
+            1. <b>📍 設定路徑（新舊版都有）</b> — 舊版 Outlook：右上角 <b>Copilot 圖示 → 設定優先順序</b>；新版 Outlook：<b>設定 → Copilot → 設定優先順序</b>。<br/>2. <b>🎯 規則寫具體</b> — 與其寫「重要的信」，不如寫「來自我主管」「提到 Project Sigma」「有截止日的」，越具體 Copilot 越準。<br/>3. <b>🔇 別忘了設低優先</b> — 把電子報、系統通知設成低優先，高優先才會真的突出，不會被稀釋。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🔑 需 M365 Copilot 授權
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br />
+        Inspired by #PromptOfTheWeek · Microsoft 365 Copilot community
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
