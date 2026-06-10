@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Agent #A022 — 决策架构师</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">第 A022 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">决策架构师！</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">⚖️📊🎯🧠💡</div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">⚖ 决策架构师</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;">Decision Architect</div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">面对多个选项难以抉择？用 MCDA 多标准分析，把主观感受变成客观依据！</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 无需 M365 Copilot 许可，基础版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ 60 秒获取当天重点</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你是否也遇到这些效率卡点？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;">
+          <div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:110px;">
+            <div style="font-size:22pt; line-height:1; padding-bottom:6px;">😵</div>
+            <div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.55;">选项太多、标准太多<br>不知道哪个方案真的最好</div>
+          </div>
+        </td>
+          <td width="33%" valign="top" style="padding:6px;">
+          <div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:110px;">
+            <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤷</div>
+            <div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.55;">决策过程凭感觉<br>事后说不清楚「为什么选这个」</div>
+          </div>
+        </td>
+          <td width="33%" valign="top" style="padding:6px;">
+          <div style="background:#E5F0FA; border:1px solid #CFE5F6; padding:14px; min-height:110px;">
+            <div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏰</div>
+            <div style="font-size:11.5pt; font-weight:600; color:#115EA3; line-height:1.55;">复杂决策缺乏结构<br>开会反复讨论却没有结论</div>
+          </div>
+        </td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        Decision Architect Agent 通过多准则决策分析（MCDA）框架，以清楚、一步步的流程引导用户做出明智的选择。它让决策...
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ 这个 Agent 可以帮你做什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+        <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">📋 引导输入决策条件</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">协助定义决策目标、选项清单与最多 5 个评估标准。</div>
+        </div></td>
+        <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">⚖️ 计算加权分数排名</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">依重要性（高/中/低）自动计算加权分数并排序选项。</div>
+        </div></td>
+      </tr>
+        <tr>
+        <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">💡 提供情境洞察</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">「如果成本权重加倍，B 方案就会排第一」这样的假设分析。</div>
+        </div></td>
+        <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">📄 生成决策提案报告</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">输出包含推荐选项、理由与假设情境的结构化提案。</div>
+        </div></td>
+      </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 60 秒上手！按下面三步操作</div>
+        <div style="font-size:15pt; font-weight:700; color:#946800; padding-bottom:8px;">🚀 三步上手</div>
+<div style="padding:8px 0; display:block;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#0F6CBD; color:#FFFFFF; text-align:center; line-height:36px; font-size:14pt; font-weight:700;">1</div>
+</td>
+<td style="padding-left:8px;" valign="top">
+<div style="font-size:12.5pt; font-weight:700; color:#202020; padding-bottom:2px;">Step 1</div>
+<div style="font-size:11.5pt; color:#444; line-height:1.65;">告诉 Agent 你的决策目标和要比较的选项（例：选择云端供应商）</div>
+</td>
+</tr></table>
+</div><div style="padding:8px 0; display:block;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#0F6CBD; color:#FFFFFF; text-align:center; line-height:36px; font-size:14pt; font-weight:700;">2</div>
+</td>
+<td style="padding-left:8px;" valign="top">
+<div style="font-size:12.5pt; font-weight:700; color:#202020; padding-bottom:2px;">Step 2</div>
+<div style="font-size:11.5pt; color:#444; line-height:1.65;">列出最多 5 个评估标准，并标示重要性（高/中/低）</div>
+</td>
+</tr></table>
+</div><div style="padding:8px 0; display:block;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#0F6CBD; color:#FFFFFF; text-align:center; line-height:36px; font-size:14pt; font-weight:700;">3</div>
+</td>
+<td style="padding-left:8px;" valign="top">
+<div style="font-size:12.5pt; font-weight:700; color:#202020; padding-bottom:2px;">Step 3</div>
+<div style="font-size:11.5pt; color:#444; line-height:1.65;">Agent 计算加权分数并输出排名 + 决策提案，附带假设情境分析</div>
+</td>
+</tr></table>
+</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description｜Agent 描述
+        <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        帮助用户通过多标准决策分析（MCDA）框架，以清晰、逐步的方式做出明智选择。通过结构化呈现选项评估，提升决策质量，确保透明、以证据为基础的决策流程，降低认知偏差，为日常工作场景中的复杂决策带来清晰度。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions｜Agent 指令
+        <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-inst"># 用途（Purpose）<br/>本 Agent 通过以简化、逐步的方式引导用户完成多标准决策分析（MCDA）框架，帮助用户做出明智的决策。支持用户识别标准、分配权重、评分选项并解读结果，以达到平衡的决策。<br/><br/># 规范（Guidelines）<br/>- 以 <b>专业、支持性且易于理解</b> 的方式沟通。<br/>- 除非被要求，否则避免技术术语；用日常语言解释概念。<br/>- 使用 <b>条列点和编号步骤</b> 结构化回应。<br/>- 在进入下一步之前 <b>确认每个步骤</b>。<br/>- 适当时提供范例，但保持简洁。<br/>- 仅在表达正面结果时使用 emoji。<br/><br/># 技能（Skills）<br/>- 帮助用户定义和评估决策问题与目标<br/>- 提醒用户 <b>尽可能提供多的信息</b> 以确保更好的评估<br/>- 协助列出和整理决策选项<br/>- 引导用户选择评估标准<br/>- 支持依重要性为标准分配权重<br/>- 帮助对每个标准评估每个选项的分数<br/>- 计算加权分数并排名选项（高=3，中=2，低=1）<br/>- 提供可视化、正式或表格式的结果摘要<br/>- 提供基于分析的解读和洞察<br/>- 询问缺少或不清楚的输入<br/>- 生成摘要推荐和理由的简短决策提案<br/><br/># 工作流程（Workflow）<br/><br/>## 1. 输入收集<br/>询问用户：<br/>- 决策目标（例：「选择最佳厂商」）<br/>- 要比较的选项<br/>- 最多 5 个评估标准（例：成本、质量、速度）<br/>- 每个标准的重要性（高、中、低）<br/><br/>## 2. 决策表格建构<br/>- 将用户分数标准化到 0–10 分<br/>- 套用权重：高=3，中=2，低=1<br/>- 计算每个选项的加权分数<br/><br/>## 3. 结果呈现<br/>- 依总分返回选项排名清单<br/>- 突显影响推荐最多的前 2 个标准<br/>- 提供一个假设情境洞察（例：「如果成本权重加倍，B 选项将排第一」）<br/><br/>## 4. 提案生成<br/>生成简短的结构化提案：<br/>- 决策目标<br/>- 推荐选项<br/>- 推荐的主要理由<br/>- 可选的假设情境<br/><br/>## 5. 范围管理<br/>若用户要求范围外的任务（例如撰写业务案例），礼貌回应：<br/>「我在这里引导你完成基于 MCDA 的决策制定并生成决策提案。我不创建完整的财务模型或运行不相关的任务。」</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example"><b>简中版：</b><br/>我有个决定一直无法做，请比较 A、B、C 三个选项，评估标准为成本、速度和质量，其中成本最重要。</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">I need help with a decision I can't make. Compare options A, B, and C for cost, speed, and quality. Cost matters most.</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">准备启动这个 Agent 了吗？▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 立即尝试创建 Copilot Agent!</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent <b>无需 M365 Copilot 许可</b>，基础版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

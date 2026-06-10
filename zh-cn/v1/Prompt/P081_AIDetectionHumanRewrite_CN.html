@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分钟小课堂：Power of Prompt #P081 — AI 味侦测与人话改写</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一分钟小课堂</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P081 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">这段文本一看就是 AI 写的？一句 Prompt 给你 AI 指数＋一版说人话的改写</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每周一个可立即上手的 Copilot Prompt 示例！</b><br />从文档撰写、会议纪要、创意发想，到数据分析，把这些提示词放进 Copilot 试试看。<br /><b>💡 使用技巧：</b>提示词就是给 Copilot 的“工作指令”——越清晰、越具体，输出越贴近你的目标。可结合自己的业务场景调整，并 <b>分享给同事共同学习</b>。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🕵️ AI 味侦测与人话改写</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">AI Detection & Human Rewrite</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 先抓出 AI 味，再把它改回有温度的人话 🗣️
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          你花十分钟让 AI 帮你写了一段内部公告、LinkedIn 贴文或营销文案，读起来很「顺」——但也顺到有种说不上来的<b>塑料感</b>：句句工整、满是 buzzword、每段都在「赋能」与「无缝集成」，就是<b>不像人讲的话</b>。<br/><br/>更糟的是，现在大家一眼就看得出哪些是 AI 代笔的，发出去反而扣分。<br/><br/>这个 Prompt 把整件事拆成两步：先帮你的文本打一个 <b>AI 指数（0–100%）</b>，告诉你它有多像机器写的；再直接交给你一版<b>说人话的干净改写</b>——保留原意，但拿掉公文腔、陈腔滥调与 AI 套路，让它读起来像真的有人坐下来写的。<br/><br/>把文本贴进 <b>Copilot Chat</b>、运行，几秒后就有分数加改写。博客、内部信、演示文稿、LinkedIn、营销草稿——只要你在意「这听起来像不像人」，都能用。
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示词模板（简体中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🕵️ AI 味侦测 × 说人话改写</b><br/><br/>分析以下内容是否有 AI 生成的特征。<br/><br/><b>步骤一 — AI 侦测</b><br/>找出以下信号：<br/>・过度工整、结构完美到不自然的写法<br/>・通用或公文腔的陈腔滥调、buzzword<br/>・抽象、信息密度很低的语句<br/>・不自然或像在喊口号的激励语气<br/>输出：<br/>・一个单一的 <b>AI 指数（0–100%）</b>，代表这段文本是 AI 生成的可能性<br/><br/><b>步骤二 — 干净的人话改写</b><br/>把内容改写得更自然、更像人：<br/>・用清楚、简单、直接的措辞<br/>・容许一点点不完美与自然的语感<br/>・拿掉 buzzword、陈腔滥调与公文填充<br/>・保留原意与意图<br/><br/>不要解释你改了什么。只输出：<br/>1）AI 指数<br/>2）干净改写后的版本<br/><br/>内容：<br/>[在这里粘贴你的文本]</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🕵️ AI Detection × Human Rewrite</b><br/><br/>Analyze the content below for AI-generated patterns.<br/><br/><b>Step 1 — AI Detection</b><br/>Identify signs such as:<br/>・Over-polished or perfectly structured writing<br/>・Generic or corporate clichés and buzzwords<br/>・Abstract language with low information density<br/>・Unnatural tone or motivational phrasing<br/>Output:<br/>・One single <b>AI Score (0–100%)</b> indicating likelihood of AI-generated content<br/><br/><b>Step 2 — Clean Human Rewrite</b><br/>Rewrite the content to sound more natural and human:<br/>・Prefer clear, simple, direct wording<br/>・Allow slight imperfections and natural flow<br/>・Remove buzzwords, clichés, and corporate filler<br/>・Preserve the original meaning and intent<br/><br/>Do NOT explain the changes. Output only:<br/>1) AI Score<br/>2) Clean rewritten version<br/><br/>CONTENT:<br/>[PASTE YOUR TEXT HERE]</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用技巧</b><br />
+            <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📋 粘贴文本直接跑</div><div style="font-size:12pt; color:#444; line-height:1.7;">在 Copilot Chat 粘贴整段 Prompt，把 [在这里粘贴你的文本] 换成你要检查的内容——免许可，纯粘贴纯生成就能用。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🎚️ 指定语气再客制</div><div style="font-size:12pt; color:#444; line-height:1.7;">不够到位？再追加「改成更口语、像跟同事聊天」或「保留专业但少一点官腔」，让改写贴合你的场景与品牌。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✅ 发布前最后一关</div><div style="font-size:12pt; color:#444; line-height:1.7;">把它当成内部信、LinkedIn、演示文稿、营销文案发出去前的「去 AI 味」检查，指数高就改写，低就放心送出。</div></td></tr></table></td></tr>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🆓 无需 M365 Copilot 许可，基础版即可使用
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Inspired by #PromptOfTheWeek · Microsoft 365 Copilot community
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

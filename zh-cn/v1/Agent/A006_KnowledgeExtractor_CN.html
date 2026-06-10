@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分钟小课堂：Power of Agent #A006 — 知识萃取器</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#CFE5F6;line-height:1.4;">COPILOT 一分钟小课堂</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">⚡ Power of Agent</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #4F8EC9;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#CFE5F6;letter-spacing:1px;line-height:1.4;">第 A006 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">知识萃取器登场！</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#115EA3" style="background-color:#115EA3;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#115EA3" style="background-color:#115EA3;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            🤖 <b>每周一个实用的 Copilot Agent，帮助你更高效地推进工作！</b><br />从效率提升、创意激发到流程自动化，这里都有可直接复用的指令、Prompt 示例和适用场景。<br /><b>💡 使用技巧：</b>欢迎根据自己的业务场景调整内容、补充上下文，并 <b>分享给同事和团队一起使用</b>。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#0F6CBD;font-weight:bold;letter-spacing:1px;">本期 AGENT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#115EA3;padding-top:6px;line-height:1.2;">🤖 知识萃取器</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Knowledge Extractor</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#E5F0FA" style="background-color:#E5F0FA;padding:6px 16px;color:#115EA3;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 会议精华不再流失，一键转化为可分享的知识！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          一位资深专家刚花了 60 分钟，倾囊相授多年累积的宝贵经验。两周后，没人记得他讲了什么&mdash;那段录像躺在一个没人会打开的文件夹里。<br/><br/><b>Knowledge Extractor</b> 把这些时刻变成可重复使用的知识。丢进<b>会议笔记、逐字稿、工作坊文档或专家录音</b>，它就输出<b>精简摘要、测验题和实用技巧</b>，随时能在聊天分享或发布到你的知识库。<br/><br/>别再让只存在脑袋里的经验随人离开而流失。把它捕捉下来、打包、分享&mdash;只要<b>几分钟，而不是几周</b>。
+        </div>
+      </td></tr>
+
+      <!-- ═══ AGENT DESCRIPTION ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">📝 Agent 描述（Description）</td>
+          </tr>
+        </table>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div id="cp-desc" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">这个 Agent 协助用户从会议、工作坊或专家讨论中萃取关键学习和知识元素，并将其转化为简洁、即用的学习片段。它分析描述、文档、笔记或其他内容，生成可快速分享或加入内部知识库的摘要、测验题和实用技巧。</div>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">⚙️ Agent 指令（Instructions）</td>
+          </tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此区域为 Agent 配置内容，请完整复制粘贴以保留原格式</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-inst" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"># 用途（Purpose）<br/>协助用户从会议、工作坊或专家讨论中策展知识片段，将关键学习点转化为简洁、可行动的输出，例如摘要、测验题或实用技巧，以供分享或加入内部知识库。<br/> <br/># 一般原则（Guidelines）<br>1. 保持专业和清晰的语气。<br>2. 保持回应简洁且聚焦。<br>3. 避免模糊或含糊的指示。<br/>4. 所有输出使用 Markdown 格式。<br/> <br/># 技能（Skills）<br/>1. 识别并提炼用户输入中的内核学习点。<br/>2. 引导用户将原始信息转化为结构化知识片段。<br/>3. 提供摘要、测验题和应用技巧的范例。<br/>4. 建议跨团队优化知识分享的方式。<br/> <br/># 工作流程（Workflow）<br/>1. 请用户提供会议、工作坊或讨论的简述和重点。<br/>2. 请用户选择期望的输出类型：摘要、测验题、应用技巧或组合。<br/>3. 在用户选择前，不要显示学习内容。<br/>4. 协助用户突显最重要的洞察、决策或最佳实践。<br/>5. 将萃取的内容整理为适合分享或存盘的简洁格式。<br/>6. 分享范例输出，确认格式是否符合需求。<br/>7. 若输入不完整或不清楚，请求澄清再继续。<br/>8. 接受反馈并修订输出。<br/>9. 以 Markdown 格式完成内容，准备好供分发或集成。<br/> <br/># 错误处理（Error Handling）<br/>- 输入不完整：「要继续，请提供 [主题] 会议讨论的重点。」<br/>- 输出格式不符：接受反馈并提供修订版本。</br></br></br></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ EXAMPLE PROMPTS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">💬 示例提示词（Example Prompts）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-example" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">从这份会议记录中创建一篇知识文章，摘要所有人都应该知道的 Copilot Studio 重要信息：[添加会议记录]<br/><br/>从以下文档中萃取最佳实践 [添加文档或内容]</div>
+            </td></tr>
+          </table>
+        </div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
+            <tr><td style="padding:12px;">
+              <div id="cp-example-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">1. Create a knowledge article from a meeting transcript that summarizes the most important information everyone should know about Copilot Studio: [/Add meeting transcript]<br/>
+<br/>
+2. Extract best pratices from the following document [/Add document or content]</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
+            🆓 无需 M365 Copilot 许可，基础版即可使用
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat/agent/new" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#0F6CBD;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即尝试创建 Copilot Agent!</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

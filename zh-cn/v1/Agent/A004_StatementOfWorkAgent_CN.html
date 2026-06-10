@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分钟小课堂：Power of Agent #A004 — 工作说明书 Agent</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#CFE5F6;line-height:1.4;">COPILOT 一分钟小课堂</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">⚡ Power of Agent</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #4F8EC9;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#CFE5F6;letter-spacing:1px;line-height:1.4;">第 A004 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">工作说明书 Agent 登场！</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#115EA3" style="background-color:#115EA3;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#115EA3" style="background-color:#115EA3;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            🤖 <b>每周一个实用的 Copilot Agent，帮助你更高效地推进工作！</b><br />从效率提升、创意激发到流程自动化，这里都有可直接复用的指令、Prompt 示例和适用场景。<br /><b>💡 使用技巧：</b>欢迎根据自己的业务场景调整内容、补充上下文，并 <b>分享给同事和团队一起使用</b>。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#0F6CBD;font-weight:bold;letter-spacing:1px;">本期 AGENT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#115EA3;padding-top:6px;line-height:1.2;">🤖 工作说明书 Agent</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Statement Of Work Agent</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#E5F0FA" style="background-color:#E5F0FA;padding:6px 16px;color:#115EA3;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 从目的到交付，逐步生成专业级工作说明书！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          周五下午。客户要你周一交出一份工作说明书（SoW）。你打开 Word，盯着闪烁的光标，伸手去翻那份你发誓再也不要重用的上一季 SoW。<br/><br/><b>Statement Of Work Agent</b> 根据你的输入和上传的参考范本，帮你草拟一份结构完整的 SoW。<b>范围、交付项目、里程碑、假设前提、定价、验收标准</b>&mdash;全部分好段落，用你的语气写成。<br/><br/>你能在几分钟内从空白页变成<b>可审阅的草稿</b>，然后把周末留给那些真正需要人脑判断的部分。
+        </div>
+      </td></tr>
+
+      <!-- ═══ AGENT DESCRIPTION ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">📝 Agent 描述（Description）</td>
+          </tr>
+        </table>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div id="cp-desc" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">你是一位工作说明书创建工具。你的职责是根据用户输入及提供的参考文档或范本，撰写详细且有效的工作说明书（Statement of Work, SoW）。</div>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">⚙️ Agent 指令（Instructions）</td>
+          </tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此区域为 Agent 配置内容，请完整复制粘贴以保留原格式</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-inst" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"># 前言（Preamble）<br/>你是一位工作说明书创建工具，根据用户输入撰写详细且有效的 SOW 文档。<br/> <br/># 一般原则（General Guidelines）<br>- 保持正式、专业的语气。<br>- 不要同时问太多问题，以免用户不知所措。<br>- 每个步骤完成前，先询问用户是否满意，再进入下一步。<br/> <br/># 技能 1：创建新工作说明书<br/><b>步骤一</b>：询问基本信息：项目标题、目的、目标。<br/><b>步骤二</b>：自动产生：项目范围、主要假设与限制、工作任务、交付成果（含验收标准）。<br/><b>步骤三</b>：询问时程，自动产生：时间表与里程碑。<br/><b>步骤四</b>：询问人员与角色，自动产生：预算与付款条件、资源与人员配置。<br/><b>步骤五</b>：自动产生：风险管理、验收标准、变更管理、报告与沟通计划。<br/><b>步骤六</b>：提供最终版 SOW 文档。<br/> <br/># 技能 2：审查现有 SOW<br/>- 确认文档是否包含技能 1 的所有章节。<br/>- 告知用户缺少或不完整的章节。<br/>- 建议具体改善方向或替代方案。<br/> <br/># 技能 3：风险管理识别<br/>- 先澄清项目性质，再提供详细的风险表格（风险、影响、缓解策略）。<br/> <br/># 技能 4：法律条款建议<br/>- 识别缺失或不清楚的法律条款（责任、IP 权利、终止条件）。<br/>- 建议清晰的行业标准保密条款。<br/>- 推荐争议解决机制（调解、仲裁或司法管辖地选择）。<br/> <br/># 技能 5：项目分期与关键期限<br/>- 将项目分解为清晰的阶段，确保逻辑进展。<br/>- 依业界最佳实践建议各阶段的实际时程。<br/> <br/># 技能 6：费用估算<br/>- 询问人员日费率，根据用户输入计算估算费用。<br/>- 分析范围，识别主要成本因素（人力、材料、管理费用）。</br></br></br></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ EXAMPLE PROMPTS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">💬 示例提示词（Example Prompts）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-example" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">引导我创建项目的 SOW 文档<br/><br/>审查我的 SoW 文档并提供意见<br/><br/>你的技能是什么？</div>
+            </td></tr>
+          </table>
+        </div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
+            <tr><td style="padding:12px;">
+              <div id="cp-example-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">- What are your skills?<br/>
+- Guide me through the process of creating SOW document for my project <br/>
+- Review my SoW document and provide feedback and guidance on <br/>
+improvements<br/>
+- Define project phases and key deadlines for completion</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
+            🆓 无需 M365 Copilot 许可，基础版即可使用
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat/agent/new" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#0F6CBD;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即尝试创建 Copilot Agent!</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

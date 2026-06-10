@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Prompt #P071 — 让 Copilot 学会你的说话方式，输出从此像你自己写的</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P071 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">让 Copilot 学会你的说话方式，输出从此像你自己写的</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">✍️🪞💬🎨🔖</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">让 Copilot 学会你的说话方式，输出从此像你自己写的</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Writing Style Prefix</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">AI 输出语气像 AI 不像你？三步骤打造你的专属风格前缀 🎯</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需要 M365 Copilot 许可</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒完成设置</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你还在这样和 Copilot 对话吗？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:88px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤖</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">输出不像自己写的<br>AI 语气太制式、太平滑<br>每次都要大改</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:88px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔁</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">重复交代风格偏好<br>换个 Prompt 又要重新说一次<br>很繁琐</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:88px;">
+              <div style="font-size:22pt; line-height:1; padding-bottom:6px;">🌀</div>
+              <div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">输出结果飘移<br>想要一致的沟通风格<br>结果每次都不一样</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        每次用 Copilot 生成文本，是不是总觉得「写得不像我」？语气太正式、太 AI 感、或是缺少你惯有的那种直接感？<br/><br/><b>这个 Prompt</b> 分析你过去 90 天的 Teams 消息与 Outlook 邮件，识别你真实的写作习惯，然后生成一段简短的 <b>「Style Prefix」</b>——只要把这几句话贴在任何 Prompt 的最前面，Copilot 就会用你的语气、词汇、结构来生成内容。<b>一次设置，从此省去每次交代风格的麻烦</b>。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+<td style="padding:6px;" valign="top" width="50%">
+<div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🔍 个人写作风格完整分析</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">语气 / 长度 / 结构 / 开场结尾方式 / 惯用词全面解析。</div>
+</div>
+</td>
+<td style="padding:6px;" valign="top" width="50%">
+<div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">📝 3-6 句 Style Prefix</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">可直接贴在任何 Prompt 前的风格指令，立即可用。</div>
+</div>
+</td>
+</tr>
+        <tr>
+<td style="padding:6px;" valign="top" width="50%">
+<div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🎯 输出有你的语感</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">Copilot 从此用你的语气、词汇、习惯生成内容。</div>
+</div>
+</td>
+<td style="padding:6px;" valign="top" width="50%">
+<div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🔄 可随时更新</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">工作角色或沟通风格有变，重跑一次就能更新 Prefix。</div>
+</div>
+</td>
+</tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          请分析我过去 90 天的 Teams 消息与 Outlook 邮件。根据分析，识别并摘要我的个人写作风格，包括：- 语气（正式 vs 轻松，直接 vs 圆融）- 典型消息长度与结构 - 我常用的词语或表达方式 - 我如何开场与结尾 - 其他让我的文本有辨识度的模式。接着，生成一段 3-6 句的「<b>Style Prefix</b>」，让我可以贴在任何未来的 Prompt 前面。这个 Prefix 应该指示 Copilot，在为我生成文本时，要符合我的个人语气、词汇与风格——让输出看起来像是我写的，不像 AI 生成的。请让 Prefix 立即可用：以第一人称撰写，就像我在给 Copilot 一个永久的指令。
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        Analyze my recent Teams messages and Outlook emails from the last 90 days. Based on this, identify and summarize my personal writing style covering: - Tone (formal vs. casual, direct vs. diplomatic) - Typical message length and structure - Recurring phrases or expressions I use - How I open and close messages - Any other patterns that make my writing recognizable. Then generate a short 'style prefix' of 3-6 sentences that I can paste in front of any future prompt. This prefix should instruct Copilot to match my personal tone, vocabulary, and style whenever it generates text for me, so the output sounds like it was written by me, not by an AI. Make the prefix ready to use immediately: written in first person, as if I'm giving Copilot a standing instruction.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+<td style="padding:8px 0;" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div>
+</td>
+<td valign="top">
+<div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📋 拿到 Prefix 后先测试</div>
+<div style="font-size:12pt; color:#444; line-height:1.7;">把 Prefix 贴在一个简单任务前（例如：写一封短邮件），确认语气符合你的期望。</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+        <tr>
+<td style="padding:8px 0;" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div>
+</td>
+<td valign="top">
+<div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🔄 创建你的 Prefix 数据库</div>
+<div style="font-size:12pt; color:#444; line-height:1.7;">把 Style Prefix 存在一个固定地方（OneNote、Sticky Notes），需要时直接拷贝粘贴。</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+        <tr>
+<td style="padding:8px 0;" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="48">
+<div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div>
+</td>
+<td valign="top">
+<div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🔁 每半年重跑一次</div>
+<div style="font-size:12pt; color:#444; line-height:1.7;">你的沟通风格会随角色演进，建议每半年重新生成一次，保持 Prefix 的准确性。</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">准备让 Copilot 学会你的语气了吗？▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt 需要具备 <b>Microsoft 365 Copilot 许可</b>。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

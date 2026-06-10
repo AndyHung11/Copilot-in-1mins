@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Prompt #P020 — 📬 收件箱优先序智能分析</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P020 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">📬 收件箱优先序智能分析</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">📬📧🔍⚡🎯</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">📬 收件箱优先序智能分析<br>让 AI 真正为你工作</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Inbox Priority Analyzer</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">让 Copilot 帮你整理收件箱，分清楚哪些最重要、什么时候处理</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需要 M365 Copilot 许可</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒完成设置</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你还在这样和 Copilot 对话吗？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF4F4;border:1px solid #FFCFCF;padding:14px;min-height:96px;">
+              <div style="font-size:22pt;line-height:1;padding-bottom:6px;">📧</div>
+              <div style="font-size:11.5pt;font-weight:600;color:#A63232;line-height:1.5;">每天收件箱满满的<br>不知道先处理哪封</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#FFF8E1;border:1px solid #F5DC9C;padding:14px;min-height:96px;">
+              <div style="font-size:22pt;line-height:1;padding-bottom:6px;">🔔</div>
+              <div style="font-size:11.5pt;font-weight:600;color:#946800;line-height:1.5;">重要邮件被<br>淹没在通知信里</div>
+            </div>
+          </td>
+          <td width="33%" valign="top" style="padding:6px;">
+            <div style="background:#EDEBFB;border:1px solid #C9C2EE;padding:14px;min-height:96px;">
+              <div style="font-size:22pt;line-height:1;padding-bottom:6px;">😰</div>
+              <div style="font-size:11.5pt;font-weight:600;color:#5B5FC7;line-height:1.5;">没时间逐一阅读<br>又怕漏掉重要事</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        打开收件箱，看到 87 封未读邮件——你是不是有点呼吸困难？哪些是紧急的？哪些是可以等的？哪些是根本不用看的通知？每次都要花10分钟才能整理清楚。<br /><br />这个 Prompt 让 <b>Copilot Chat - Work</b> 分析你指定 Outlook 文件夹中的邮件，帮你摘要每封信的重点、识别重复主题、标出最重要的邮件，并把其余邮件分类为中优先和低优先，还给出建议的处理时间。让你每天早上花5分钟就能清楚掌握今天的邮件战略。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD;border-left:4px solid #5B5FC7;padding:14px 16px;">
+              <div style="font-size:13pt;font-weight:700;color:#5B5FC7;padding-bottom:4px;">📝 每封邮件简短摘要</div>
+              <div style="font-size:11.5pt;color:#333;line-height:1.6;">主题加发信人，让你不开信也知道内容。</div>
+            </div>
+          </td>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD;border-left:4px solid #5B5FC7;padding:14px 16px;">
+              <div style="font-size:13pt;font-weight:700;color:#5B5FC7;padding-bottom:4px;">🔄 识别重复主题与趋势</div>
+              <div style="font-size:11.5pt;color:#333;line-height:1.6;">找出收件箱中反复出现的模式，帮你看到大局。</div>
+            </div>
+          </td></tr>
+        <tr>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD;border-left:4px solid #5B5FC7;padding:14px 16px;">
+              <div style="font-size:13pt;font-weight:700;color:#5B5FC7;padding-bottom:4px;">⚡ 最高注意力邮件标示</div>
+              <div style="font-size:11.5pt;color:#333;line-height:1.6;">清楚标出哪些邮件需要你立即处理。</div>
+            </div>
+          </td>
+          <td width="50%" valign="top" style="padding:6px;">
+            <div style="background:#FAF7FD;border-left:4px solid #5B5FC7;padding:14px 16px;">
+              <div style="font-size:13pt;font-weight:700;color:#5B5FC7;padding-bottom:4px;">📊 中/低优先分类建议</div>
+              <div style="font-size:11.5pt;color:#333;line-height:1.6;">其余邮件分类，并建议何时处理最有效率。</div>
+            </div>
+          </td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          分析我 Outlook [文件夹名称] 文件夹中的邮件，摘要收到的最常见内容和信息。为每封邮件提供简短摘要，包含主题或话题以及发信人。识别并说明邮件中重复出现的主题、趋势或模式。标示需要我高度注意的邮件。将其余邮件分类为中优先和低优先，如果可能，建议我应该何时处理它们。
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        Analyze the emails in my Outlook [folder name] folder and summarize the most common content and information received. Provide a brief summary for each email, including the project or topic and the person it came from. Recognize and name recurring themes, trends or patterns in the emails. Highlight the emails that need my highest attention. Categorize the remaining emails into medium and low priority and, if possible, make suggestions as to when I should work on them.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:12pt; color:#444; line-height:1.7;">📁 <b>替换 [文件夹名称]</b>：例如填入「收件箱」、「客户」或任何你想分析的自订文件夹。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:12pt; color:#444; line-height:1.7;">⏰ <b>每天早晨运行</b>：建议在每天工作开始前跑一次，快速掌握今天的邮件优先序。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:12pt; color:#444; line-height:1.7;">🔍 <b>针对高优先邮件深入</b>：收到分析后，针对标示为高优先的邮件说「展开这封信的建议回复方向」。</div></td></tr></table></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">准备好开始了吗？▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt 需要具备 <b>Microsoft 365 Copilot 许可</b>。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

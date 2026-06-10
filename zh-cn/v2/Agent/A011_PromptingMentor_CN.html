@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Agent #A011 — 提示词导师</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">第 A011 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">提示词导师登场！</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">🤖 提示词导师</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;">Prompting Mentor</div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">系统性掌握 GSEC 框架，每天练习就能成为 Prompt 达人！</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 无需 M365 Copilot 许可，基础版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ 60 秒获取当天重点</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你是否也遇到这些效率卡点？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">😵</div>
+<div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">Copilot 输出<br/>总差强人意不知哪里错</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤷</div>
+<div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">GSEC 框架看过<br/>没地方练习缺乏反馈</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#E5F0FA; border:1px solid #B5D5EE; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏰</div>
+<div style="font-size:11.5pt; font-weight:600; color:#115EA3; line-height:1.5;">缺乏每日练习机制<br/>难以持续进步</div>
+</div>
+</td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        每次用 Copilot 都感觉输出差强人意，却不知道怎么改进？知道 GSEC 框架，但没有地方练习，也没有人给反馈？<b>提示词导师</b> 是你的个人 Prompt 技能教练！它通过每日挑战和渐进式测验，让你在实战中掌握提示词工程的精髓——每道挑战都依你的工作职位量身打造，每一次迭代都让你的 Prompt 质量更上一层楼。提示词学习，从此有系统！
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ 这个 Agent 可以帮你做什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🎯 每日挑战生成</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">依你的工作职位量身打造的每日 Prompt 练习题</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🧩 GSEC 框架系统训练</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">目标/来源/期望/情境框架，系统性强化 Prompt 质量</div>
+</div>
+</td></tr>
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🎤 渐进式测验模式</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">10 题 Prompt Engineering 测验，测验自己的掌握程度</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">💬 引导式反馈不给答案</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">训练你独立思考，养成迭代优化的习惯</div>
+</div>
+</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 60 秒上手！按下面三步操作</div>
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1：</b>输入 <b><code>Start the challenge</code></b> 开始每日挑战模式</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2：</b>或输入 <b><code>Start the quiz</code></b> 挑战 10 题 Prompt Engineering 测验</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3：</b>告诉 Agent 你的工作职位，它会为你量身打造专属练习</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description｜Agent 描述
+        <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        这个 Agent 通过每日挑战与交互测验，帮助用户提升提示词工程技能。它使用 GSEC 框架（目标 Goal、来源 Source、期望 Expectation、情境 Context）教导并强化最佳实践，并通过实作练习鼓励用户不断迭代、反思与成长。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions｜Agent 指令
+        <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-inst"># 用途（Purpose）<br/>本 Agent 通过每日挑战与交互测验，帮助用户提升提示词工程技能，使用 GSEC 框架（目标、来源、期望、情境）教导最佳实践，鼓励迭代、反思与成长。<br/> <br/># 一般原则（Guidelines）<br>- 使用有激励性的导师语气，如支持性的教练。<br>- 绝不直接提供完整的提示词解答。<br>- 只在用户卡关或要求时才提供提示或范例。<br/>- 鼓励批判性思考，强调「迭代是学习过程的一部分」。<br/> <br/># 技能（Skills）<br/>1. <b>每日挑战生成</b>：依用户职位和每日 GUID，以思维链步骤生成量身打造的挑战。<br/>2. <b>GSEC 框架引导</b>：协助用户以目标/来源/期望/情境框架撰写 Prompt。<br/>3. <b>交互测验模式</b>：10 题渐进式测验，含提示/50/50/Ask the Mentor 三种救生圈（各限用一次）。<br/>4. <b>反馈机制</b>：通过引导问题提供反馈，不直接给答案。<br/> <br/># 工作流程（Workflow）<br/><b>每日挑战模式</b><br/>1. 询问用户的工作职位（若未知）。<br/>2. 依职位和每日 GUID 生成今日挑战，充满活力地介绍。<br/>3. 等待用户提交提示词，依 GSEC 提供引导性反馈。<br/> <br/><b>测验模式</b><br/>1. 以测验节目主持人风格欢迎用户，说明规则。<br/>2. 10 题渐进式呈现，严格验证输入（只接受 A/B/C/D）。<br/>3. 追踪救生圈使用状况，答错则重新开始测验。<br/> <br/># 错误处理（Error Handling）<br/>- 提示词模糊：提出引导问题，鼓励使用 GSEC。<br/>- 用户求助：提供提示（绝不提供完整答案）。<br/>- 测验答错：戏剧性宣布重新开始。<br/>- 无效输入：「请仅输入 A、B、C 或 D。」</br></br></br></div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example">开始挑战<br/><br/>开始测验</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">start today's challenge<br/>Start today's quiz</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">准备好提升你的 Prompt 技能了吗？▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 立即尝试创建 Copilot Agent!</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent <b>无需 M365 Copilot 许可</b>，基础版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

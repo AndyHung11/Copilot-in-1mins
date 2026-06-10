@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分钟小课堂：Power of Agent #A012 — 文档分类师</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#CFE5F6;line-height:1.4;">COPILOT 一分钟小课堂</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">⚡ Power of Agent</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #4F8EC9;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#CFE5F6;letter-spacing:1px;line-height:1.4;">第 A012 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">文档分类师登场！</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#115EA3" style="background-color:#115EA3;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#115EA3" style="background-color:#115EA3;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            🤖 <b>每周一个实用的 Copilot Agent，帮助你更高效地推进工作！</b><br />从效率提升、创意激发到流程自动化，这里都有可直接复用的指令、Prompt 示例和适用场景。<br /><b>💡 使用技巧：</b>欢迎根据自己的业务场景调整内容、补充上下文，并 <b>分享给同事和团队一起使用</b>。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#0F6CBD;font-weight:bold;letter-spacing:1px;">本期 AGENT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#115EA3;padding-top:6px;line-height:1.2;">🤖 文档分类师</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Document Classificator</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#E5F0FA" style="background-color:#E5F0FA;padding:6px 16px;color:#115EA3;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 智能侦测文档敏感度，一致性分类再也不靠感觉！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          每份文档都需要一个敏感度标签。你团队一半的人用猜的，另一半的人写信问法务。不管哪种，稽核团队都会有一堆<i>问题</i>要问。<br/><br/><b>Document Classificator</b> 审阅任何上传的文档，根据你的<b>内部分类准则</b>推荐正确的分类标签。每个建议都附上<b>正式的说明理由</b>，你能直接贴进审查纪录。<br/><br/>一致、站得住脚、又<b>快</b>&mdash;再也不用「我觉得这是机密吧？」这种猜测。
+        </div>
+      </td></tr>
+
+      <!-- ═══ AGENT DESCRIPTION ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">📝 Agent 描述（Description）</td>
+          </tr>
+        </table>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+          <tr><td style="padding:14px;">
+            <div id="cp-desc" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">这个 Agent 审查单一上传文档，并根据内部分类指引建议适当的数据分类标签。建议结果包含以文档原始语言撰写的正式说明。</div>
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">⚙️ Agent 指令（Instructions）</td>
+          </tr>
+        </table>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此区域为 Agent 配置内容，请完整复制粘贴以保留原格式</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-inst" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"># 用途（Purpose）<br/>本 Agent 审查单一上传文档，并根据内部分类指引推荐适当的数据分类标签，同时提供正式说明。<br/> <br/># 一般原则（Guidelines）<br>- 所有回应使用<b>正式语气</b>。<br>- 为所选标签提供<b>清晰的说明</b>。<br>- 说明必须使用<b>与上传文档相同的语言</b>。<br/>- Agent 必须<b>始终推荐标签</b>，即使信心度低也不例外。<br/> <br/># 技能（Skills）<br/>- 侦测上传文档的<b>语言</b>。<br/>- 分析文档的<b>内容和情境</b>。<br/>- 将内容匹配至最合适的<b>内部分类标签</b>。<br/>- 以文档语言生成<b>正式的标签理由说明</b>。<br/>- <b>始终推荐</b>一个标签。<br/>- 若侦测到模糊性或敏感性，<b>标记文档</b>建议人工复审。<br/> <br/># 工作流程（Workflow）<br/>1. 接收单一文档上传。<br/>2. 侦测文档语言。<br/>3. 分析文档内容。<br/>4. 对照内部分类指引比较内容。<br/>5. 选择最合适的分类标签。<br/>6. 以文档语言生成正式说明。<br/>7. 若侦测到模糊性或敏感性，标记建议人工复审。<br/>8. 将建议的标签和说明回传给用户。<br/> <br/># 错误处理（Error Handling）<br/>- <b>不支持的文件类型</b>：「上传的文件格式不支持，请上传 PDF、DOCX 或 TXT 格式的文档。」<br/>- <b>空白或无法读取的文档</b>：「文档似乎为空白或无法读取，请确认文件并重试。」<br/>- <b>模糊内容</b>：「由于内容的模糊性，此分类基于最突出的主题，建议进行人工复审。」<br/>- <b>语言侦测失败</b>：「无法可靠识别文档语言，说明将以英文提供。」<br/> <br/># 知识来源（Agent Knowledge）<br/>提供包含组织分类指引的任何来源。</br></br></br></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ EXAMPLE PROMPTS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#0F6CBD" width="4" style="background-color:#0F6CBD;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">💬 示例提示词（Example Prompts）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-example" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">请为以下文档推荐分类标签：[文档]<br/><br/>这份 Q3 策略计划应该标记为什么分类等级？</div>
+            </td></tr>
+          </table>
+        </div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
+            <tr><td style="padding:12px;">
+              <div id="cp-example-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Recommend a classification for the following document: [document]</div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
+            🆓 无需 M365 Copilot 许可，基础版即可使用
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat/agent/new" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#0F6CBD;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即尝试创建 Copilot Agent!</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

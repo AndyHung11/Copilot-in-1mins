@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Agent #A005 — 活动问答 Agent</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">第 A005 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">活动问答 Agent 登场！</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">🤖 活动问答 Agent</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;">Event Agent</div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">活动当天问题如洪水，让 AI 帮你即时解答！</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🔑 需要 M365 Copilot 许可</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ 60 秒获取当天重点</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你是否也遇到这些效率卡点？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">😵</div>
+<div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">活动当天<br/>FAQ 问题多到回答不完</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤷</div>
+<div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">议程和讲者信息<br/>要在多个系统间跳来跳去</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#E5F0FA; border:1px solid #B5D5EE; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏰</div>
+<div style="font-size:11.5pt; font-weight:600; color:#115EA3; line-height:1.5;">人力有限<br/>还要兼顾现场协调</div>
+</div>
+</td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        活动当天问题如洪水般涌来——场地在哪、议程几点、这位讲者是谁……主办团队根本回答不完！<b>活动问答 Agent</b> 是你的活动 FAQ 助手！只要链接活动相关的 SharePoint 知识库，出席者就能随时通过 Copilot Chat 自助查找，主办人员可以把精力放在更重要的事情上。记得依你的活动填入 [活动名称]、[活动开始/结束时间]、[活动主题] 等占位符！
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ 这个 Agent 可以帮你做什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">📍 活动信息即时回答</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">场地、时间、议程、常见问题一键查找</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🎤 讲者与伙伴探索</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">协助出席者找到适合的讲者和展商</div>
+</div>
+</td></tr>
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🔗 SharePoint 知识库集成</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">链接活动数据，确保回答准确即时</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🌐 超出范围自动引导</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">非活动相关问题礼貌婉转，重新引导至活动主题</div>
+</div>
+</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 60 秒上手！按下面三步操作</div>
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1：</b>创建 Agent 并链接活动相关 SharePoint 站台为知识来源</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2：</b>填入活动名称、开始/结束时间、主题等 <code>[占位符]</code> 字段</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3：</b>发布 Agent，让出席者直接在 Copilot Chat 提问，主办方轻松省力</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description｜Agent 描述
+        <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        活动问答 Agent 协助你快速导览 [活动名称]。无论你在寻找议程场次、场地信息还是讲者介绍，活动 Agent 都能确保你充分享受活动体验。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions｜Agent 指令
+        <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-inst"># 用途（Purpose）<br/>你是活动 Agent，负责协助出席者快速找到感兴趣的场次、探索并联系讲者和合作伙伴，以及回答一般活动相关问题。<br/> <br/># 一般原则（Guidelines）<br>- 使用 SharePoint 知识来源直接回答用户问题。<br>- 若问题与活动无关，礼貌告知并询问是否有活动相关问题。<br>- 若问题与活动相关但找不到答案，建议联系活动主办人：[活动主办人]。<br/>- 保持回应简短清晰。<br/> <br/># 活动基本信息（General Event Information）<br/>- <b>活动开始</b>：[活动开始时间]<br/>- <b>活动结束</b>：[活动结束时间]<br/>- <b>活动主题</b>：[主题 A、主题 B……]<br/> <br/># 技能（Skills）<br/>1. <b>即时问答</b>：从 SharePoint 知识库截取信息，即时回答出席者问题。<br/>2. <b>议程查找</b>：协助出席者找到符合兴趣的场次。<br/>3. <b>讲者探索</b>：提供讲者背景和联系信息。<br/>4. <b>范围外处理</b>：非活动相关问题礼貌婉转并重新引导。<br/> <br/># 设置提示（Setup Notes）<br/>- 创建 Agent 前，请在 SharePoint 整理活动相关文档。<br/>- 将所有 [占位符] 替换为实际活动信息。<br/>- 若主要内容在 SharePoint，建议直接在 SharePoint 中创建 Agent。</br></br></br></div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example">这个活动是关于什么的？<br/><br/>活动几点开始？<br/><br/>有哪些值得关注的讲者？</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">What is the event about?<br/>
+When does the event start?</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即创建你的活动问答 Agent ▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 立即尝试创建 Copilot Agent!</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent 需要具备 <b>Microsoft 365 Copilot 许可</b>。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>

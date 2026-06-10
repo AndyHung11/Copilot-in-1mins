@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Agent #A007 — 情境仿真器</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">第 A007 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">情境仿真器登场！</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">🤖 情境仿真器</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;">Scenario Simulator</div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">What if 情境一秒仿真，决策更有底气！</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 无需 M365 Copilot 许可，基础版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ 60 秒获取当天重点</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你是否也遇到这些效率卡点？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">😵</div>
+<div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">What-if 分析<br/>要等 Finance 跑好几天</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤷</div>
+<div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">决策前看不到<br/>风险范围只能靠直觉</div>
+</div>
+</td>
+          <td style="padding:6px;" valign="top" width="33%">
+<div style="background:#E5F0FA; border:1px solid #B5D5EE; padding:14px; min-height:88px;">
+<div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏰</div>
+<div style="font-size:11.5pt; font-weight:600; color:#115EA3; line-height:1.5;">正式系统太复杂<br/>轻量探索分析没工具</div>
+</div>
+</td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        每次提出「如果我们削减交货时间 20%，利润会怎样？」这类问题，都要等 Finance 跑好几天的试算？决策前看不到风险范围，只能靠直觉拍板？<b>情境仿真器</b> 是你的快速决策工具！只要用自然语言描述你的情境，它就能运行敏感度分析甚至蒙地卡罗仿真，输出一份包含关键假设、风险因素和建议下一步的决策演示文稿——让你的商业决策有数据支撑！
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ 这个 Agent 可以帮你做什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🔮 What-if 情境仿真</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">自然语言输入，秒速跑出敏感度分析结果</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">📊 蒙地卡罗仿真</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">随机建模分析风险范围，呈现乐观到悲观的全貌</div>
+</div>
+</td></tr>
+        <tr><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">📋 决策演示文稿输出</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">关键假设、敏感度分析、风险因素、下一步行动一页搞定</div>
+</div>
+</td><td style="padding:6px;" valign="top" width="50%">
+<div style="background:#F0F7FF; border-left:4px solid #0F6CBD; padding:14px 16px;">
+<div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:4px;">🤝 交互式厘清</div>
+<div style="font-size:11.5pt; color:#333; line-height:1.6;">输入模糊时追问，确保仿真结果有意义</div>
+</div>
+</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 60 秒上手！按下面三步操作</div>
+        <div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1：</b>描述你的 What-if 情境，例如：「如果我们把交货时间缩短 20%，利润会如何？」</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2：</b>Agent 会根据需要追问关键变量（部门、人数、影响范围等）</div><div style="background:#FFFFFF; border:1px solid #F5DC9C; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3：</b>获得含假设、敏感度分析、风险因素的结构化决策演示文稿</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description｜Agent 描述
+        <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        情境仿真器 Agent 协助商业用户通过对话式 What-if 仿真，预先探索营运和财务变化的影响。通过解读自然语言输入，Agent 生成结构化的决策演示文稿，包含假设条件、敏感度分析、风险因素和建议下一步。设计用于快速探索性分析，而非取代正式的财务或营运系统。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions｜Agent 指令
+        <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-inst"># 用途（Purpose）<br/>情境仿真器 Agent 协助商业用户通过自然语言对话探索营运和财务 What-if 情境，生成包含关键假设、敏感度分析、风险因素和建议下一步的结构化决策演示文稿。设计用于快速探索性分析，不取代正式系统。<br/> <br/># 一般原则（Guidelines）<br>- 使用清晰、精简、专业的语言。<br>- 以条列点或标题组织回应，提高可读性。<br>- 始终记录仿真中使用的假设条件。<br/>- 明确指出不确定性和限制。<br/>- 若输入模糊，追问澄清问题。<br/>- 确保输出符合负责任 AI 使用原则。<br/> <br/># 技能（Skills）<br/>- <b>仿真与分析</b>：解读自然语言 What-if 情境，运行敏感度分析（+/-10% 关键变量），进行简单随机建模（蒙地卡罗、线性回归）。<br/>- <b>决策演示文稿生成</b>：汇总仿真结果为结构化演示文稿（假设、敏感度、风险、建议下一步、风险管理、预测）。<br/>- <b>对话式智能</b>：若输入模糊则追问，引导用户设置和解读仿真，提出相关后续仿真建议。<br/> <br/># 工作流程（Workflow）<br/>1. <b>理解情境</b>：解析用户输入，确认关键变量和提议的变化。<br/>2. <b>澄清输入</b>：若细节缺失则追问，验证输入变量是否支持和相关。<br/>3. <b>截取或估算数据</b>：访问相关数据或使用缺省估算，记录所有假设。<br/>4. <b>运行仿真</b>：依情境进行敏感度分析或随机建模（蒙地卡罗/线性回归）。<br/>5. <b>生成决策演示文稿</b>：以结构化格式汇总假设、敏感度、风险、建议下一步。<br/>6. <b>呈现结果</b>：以清晰、可读格式交付决策演示文稿，指出不确定性。<br/> <br/># 错误处理（Error Handling）<br/>- 输入不完整：「您能说明哪个团队或班次受影响，以及人数吗？」<br/>- 不支持的变量：「目前专注于营运和财务仿真，想探索人员配置、定价或交货相关情境吗？」<br/>- 数据不可用：「目前没有包装成本数据，要用上季平均值的标准估算继续吗？」</br></br></br></div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example">若我们在高需求地区额外部署 50 名前线员工，服务覆盖率和成本会有什么影响？<br/><br/>如果供应商延误变动 ±5 天，利润的风险范围是多少？</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">What’s the impact on service coverage and cost if we deploy 50 additional frontline workers across high-demand regions?</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即开始你的 What-if 情境仿真 ▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 立即尝试创建 Copilot Agent!</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent <b>无需 M365 Copilot 许可</b>，基础版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
