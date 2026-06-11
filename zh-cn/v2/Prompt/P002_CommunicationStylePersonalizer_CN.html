@@ -70,7 +70,7 @@
         </tr>
       </table>
       <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
-        这段提示词指示 Copilot：分析你近期的 Outlook 邮件和 Teams 聊天，侦测语气、语言模式和结构。推导出一份沟通轮廓&mdash;你的内核价值、强项、...
+        这段提示词指示 Copilot：分析你近期的 Outlook 邮件和 Teams 聊天，检测语气、语言模式和结构。推导出一份沟通轮廓&mdash;你的内核价值、强项、...
       </div>
     </td>
   </tr>
@@ -80,7 +80,7 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        <tr><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">🧠</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">沟通风格分析</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">从消息与邮件中归纳语气、结构、用字。</div></div></td><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">💬</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">Chat 个人化指令</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">直接贴进 Copilot Chat 即用。</div></div></td></tr>
+        <tr><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">🧠</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">沟通风格分析</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">从消息与邮件中归纳语气、结构、用字。</div></div></td><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">💬</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">Chat 个性化指令</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">直接贴进 Copilot Chat 即用。</div></div></td></tr>
         <tr><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">✉️</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">Outlook 草稿指令</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">专门用于 Outlook Draft with Copilot。</div></div></td><td style="padding:6px;" valign="top" width="50%"><div style="background:#ffffff;border:1px solid #5B5FC740;border-top:3px solid #5B5FC7;padding:14px;"><div style="font-size:22px;">🌟</div><div style="font-size:13px;font-weight:bold;color:#5B5FC7;margin-top:6px;">内核价值洞察</div><div style="font-size:12px;color:#374151;line-height:1.6;margin-top:4px;">看见自己的强项与可优化点。</div></div></td></tr>
       </table>
     </td>
@@ -89,11 +89,11 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
-          请分析我过去 3 个月在 Outlook 与 Teams 的沟通内容（消息、回复、会议笔记），归纳出我的沟通风格，包含：<br/>1. 语气（正式/口语、直接/委婉、严谨/轻松）<br/>2. 结构偏好（条列、段落、开门见山或铺陈）<br/>3. 常用词汇与避免词汇<br/>4. 对不同对象（负责人、同事、客户）的语气差异<br/>5. 我的内核沟通价值观<br/><br/>最后请输出两段个人化指令：<br/>• <b>给 Copilot Chat 的 system prompt</b>：未来请以这个风格回应我。<br/>• <b>给 Outlook Draft with Copilot 的指令</b>：未来起草信件时请套用此风格。
+          请分析我过去 3 个月在 Outlook 与 Teams 的沟通内容（消息、回复、会议笔记），归纳出我的沟通风格，包含：<br/>1. 语气（正式/口语、直接/委婉、严谨/轻松）<br/>2. 结构偏好（条列、段落、开门见山或铺陈）<br/>3. 常用词汇与避免词汇<br/>4. 对不同对象（负责人、同事、客户）的语气差异<br/>5. 我的内核沟通价值观<br/><br/>最后请输出两段个性化指令：<br/>• <b>给 Copilot Chat 的 system prompt</b>：未来请以这个风格回应我。<br/>• <b>给 Outlook Draft with Copilot 的指令</b>：未来起草信件时请套用此风格。
         </div>
       </div>
     </td>
@@ -103,7 +103,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         I want you to help me create a set of instructions for the personalization feature in Copilot. Read through my recent emails and chats from Teams and provide a comprehensive analysis of my communication style by identifying my core values, strengths, weaknesses and skills. Based on the analysis, generate instructions that I can use in Copilot Chat and a second set for Outlook so that I can use it for e-mail drafting
       </div>
@@ -115,7 +115,7 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:12pt; color:#444; line-height:1.7;"><div style="margin:4px 0;">🔍 <b>先看分析再用指令</b>：确认 Copilot 真的抓到你的风格再套用。</div><div style="margin:4px 0;">🪄 <b>分情境微调</b>：对负责人 vs 客户可能要分别产生不同指令。</div><div style="margin:4px 0;">🔄 <b>每季更新一次</b>：风格会随工作变化，定期重新分析。</div></div></td></tr></table></td></tr>
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:12pt; color:#444; line-height:1.7;"><div style="margin:4px 0;">🔍 <b>先看分析再用指令</b>：确认 Copilot 真的抓到你的风格再套用。</div><div style="margin:4px 0;">🪄 <b>分场景微调</b>：对负责人 vs 客户可能要分别产生不同指令。</div><div style="margin:4px 0;">🔄 <b>每季更新一次</b>：风格会随工作变化，定期重新分析。</div></div></td></tr></table></td></tr>
       </table>
     </td>
   </tr>
@@ -141,7 +141,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
-    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
     Powered by Weeklyprompt@microsoft
   </td></tr>
 
@@ -150,8 +150,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

@@ -88,7 +88,7 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 Copy This Prompt (English Version)</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
@@ -102,7 +102,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 提示詞範本（繁體中文版）</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         <b>📽️ 同事協作回顧（把 /Name 換成對方名字，在 Copilot Chat 開啟 WorkIQ 後執行）</b><br/><br/>請運用我們的共享互動 —— Teams 聊天、會議、群組訊息、協作文件與往來信件 —— 寫一段給 <b>/Name</b> 的精簡訊息。聚焦在具體的協作、里程碑與成果，突顯真實的團隊合作時刻、值得感謝之處，或一起克服的挑戰。請按時間順序、保持專業、以洞察為導向，控制在 <b>1500 字元</b>以內。避免空泛的稱讚。
       </div>
@@ -151,8 +151,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

@@ -77,7 +77,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">根據下方的 Brief，產生一份精簡的 7 頁簡報。輸入：僅以貼上的文字作為來源。投影片（共 7 頁，順序固定）：1) 標題 — [專案／提案名稱] 2) 問題／脈絡 3) 解決方案（最多 3 個支柱）4) 價值與成果（盡量量化）5) 交付計畫與里程碑（簡單的時間軸 bullet）6) 案例／實證（Case、Pilot 或代理指標）7) 下一步與行動呼籲。要求：每頁加上 2–4 個 bullet 的演講備註；使用清楚、好讀的條列（每頁最多 5 條）；不需品牌或圖片，中性主題即可；若關鍵細節缺失，請插入占位符 [Info needed: …]。Brief 開始：[此處貼上 Brief] Brief 結束。</div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Create a concise 7-slide deckfrom the brief below. Inputs: Use only the pasted text as the source. Slides (exactly): Title — [PROJECT/PROPOSAL NAME] Problem/Context Proposed Solution (3 pillars max) Value &amp; Outcomes (quantify if possible) Delivery Plan &amp; Milestones (timeline in simple bullets) Evidence/Example (case, pilot, or proxy) Next Steps &amp; Call to Action Requirements: Add concise speaker notes to each slide (2–4 bullets). Use clear, readable bullets (max 5 per slide). No branding or images; neutral theme is fine. If crucial details are missing, insert a placeholder bullet [Info needed: …]. Brief Starts: [PASTE BRIEF HERE] Brief Ends.</div>
@@ -120,7 +120,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <tr><td align="center" style="padding:28px 32px 24px 32px;">
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
           <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
-            🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用
+            🆓 不需 M365 Copilot 授權，基本版即可使用
           </td></tr>
         </table>
       </td></tr>
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

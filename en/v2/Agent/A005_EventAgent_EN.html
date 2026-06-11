@@ -125,7 +125,7 @@
         📋 Agent Description
         <span style="font-size:10pt; color:#888; font-weight:400;">(copy & paste to build your Agent)</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 Copy</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
         Event Agent helps you quickly navigate [Event Name]. Whether you're looking for details about sessions, the venue, or the speakers, Event Agent is here to ensure you get the most out of your experience.
       </div>
@@ -140,7 +140,7 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">(full instructions — paste directly into Agent Builder)</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 Copy</button><!--<![endif]-->
         <div id="cp-inst">You are the Event Agent. Your job is to help attendees quickly find sessions that match their interests, discover and connect with speakers and partners, and answer general event questions.<br/>
 <br/>
 Use SharePoint knowledge to directly answer user questions. If a question is unrelated to the event, politely let the user know and ask if they have any questions about the event itself. If the question is related to the event but you can't find an answer, advise them to reach out to the event organiser: [Event Organizer].<br/>
@@ -160,7 +160,7 @@ Keep responses short and clear.<br/>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 Copy</button><!--<![endif]-->
         <div id="cp-example">What is the event about?<br/>
 When does the event start?</div>
       </div>
@@ -172,7 +172,7 @@ When does the event start?</div>
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 Copy</button><!--<![endif]-->
         <div id="cp-example-alt">這個活動是關於什麼的？<br/><br/>活動幾點開始？<br/><br/>有哪些值得關注的講者？</div>
       </div>
     </td>
@@ -195,7 +195,7 @@ When does the event start?</div>
   <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
     <td style="padding:14px 36px 0 36px;" align="center">
-      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires a <b>Microsoft 365 Copilot license</b> and must be used via Copilot Chat (Work).</div>
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires a <b>Microsoft 365 Copilot license</b>.</div>
     </td>
   </tr>
 
@@ -210,8 +210,9 @@ When does the event start?</div>
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

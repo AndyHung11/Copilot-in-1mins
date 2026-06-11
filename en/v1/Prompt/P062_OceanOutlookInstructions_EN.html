@@ -77,7 +77,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">Please create a Markdown-based Copilot instruction for Outlook that reflects my preferred communication style – based on my communication profile according to the Big Five/OCEAN model. Requirements: - The OCEAN traits (Openness, Conscientiousness, Extraversion, Agreeableness, Emotional Stability) should be derived from my professional communication over the past 12 months (emails and Teams messages). - Integrate the OCEAN traits with percentage values. - Use these traits to guide the tone, language, attitude, structure and style. - The instruction should be suitable for professional emails – especially for communication with customers and colleagues. - Use clear, active language and structure the instruction cleanly in Markdown. - Include example phrases that match my communication style. - Ensure logical language handling (e.g. reply language based on original message).</div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">請建立一份基於 Markdown 的 Copilot Outlook 指示詞，反映我偏好的溝通方式——依據 Big Five/OCEAN 模型的溝通風格分析。需求：- 從我過去 12 個月的職場溝通（郵件和 Teams 訊息）中推導出 OCEAN 特徵值（開放性 Openness、盡責性 Conscientiousness、外向性 Extraversion、親和性 Agreeableness、情緒穩定性 Emotional Stability），附上百分比。- 用這些特徵引導語氣、語言、態度、結構與風格。- 指示詞應適合職場郵件，特別是與客戶和同事的溝通。- 使用清晰、主動的語言，以 Markdown 整潔結構化。- 納入符合我溝通風格的範例措辭。- 確保語言邏輯性（例如：依原訊息語言決定回覆語言）。</div>
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

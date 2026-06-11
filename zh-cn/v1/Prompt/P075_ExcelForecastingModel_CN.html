@@ -64,7 +64,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ STORY ═══ -->
       <tr><td style="padding:18px 32px 0 32px;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
-          手上有一堆历史数据，却不知道怎么把它变成能预测未来的模型？<br /><br />这个 Prompt 让 Copilot 依你的<b>历史数据</b>创建预测模型：自动侦测趋势与季节性，给出 3／6／12 个月预测与信心区间，还有最好／最差／最可能三种情境分析，最后用商业语言解释，会议演示文稿直接能用。<br /><br />让过去的数字，替你说出未来的方向！
+          手上有一堆历史数据，却不知道怎么把它变成能预测未来的模型？<br /><br />这个 Prompt 让 Copilot 依你的<b>历史数据</b>创建预测模型：自动检测趋势与季节性，给出 3／6／12 个月预测与信心区间，还有最好／最差／最可能三种场景分析，最后用商业语言解释，会议演示文稿直接能用。<br /><br />让过去的数字，替你说出未来的方向！
         </div>
       </td></tr>
 
@@ -77,10 +77,10 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
-              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">请依据这份历史数据，为 <b>[指标名称]</b> 创建预测模型。请包含：<br/>1) <b>趋势分析与季节性侦测</b><br/>2) 未来 <b>[3／6／12]</b> 个月的预测（含信心区间）<br/>3) 预测底下的<b>关键假设</b><br/>4) 可能改变预测的<b>因素</b><br>5) <b>敏感度分析</b>（最好／最差／最可能）<br>6) 推荐的<b>模型公式与方法论</b><br/>7) <b>历史 vs. 预测</b>对照可视化<br/>最后请用商业语言解释这个模型。</br></br></div>
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">请依据这份历史数据，为 <b>[指标名称]</b> 创建预测模型。请包含：<br/>1) <b>趋势分析与季节性检测</b><br/>2) 未来 <b>[3／6／12]</b> 个月的预测（含信心区间）<br/>3) 预测底下的<b>关键假设</b><br/>4) 可能改变预测的<b>因素</b><br>5) <b>敏感性分析</b>（最好／最差／最可能）<br>6) 推荐的<b>模型公式与方法论</b><br/>7) <b>历史 vs. 预测</b>对照可视化<br/>最后请用商业语言解释这个模型。</br></br></div>
             </td></tr>
           </table>
         </div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Build a forecasting model for [METRIC] based on this historical data. Include: 1) Trend analysis and seasonality detection, 2) Forecast for next [3/6/12] months with confidence intervals, 3) Key assumptions underlying the forecast, 4) Factors that could change the forecast, 5) Sensitivity analysis (best case, worst case, most likely), 6) Recommended model formula and methodology, 7) Visualization of historical data vs. forecast. Explain model in business terms.</div>
@@ -111,7 +111,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
             <b>💡 使用技巧</b><br />
             1. 📊 季度业绩预测：把过去 8 季营收贴到 Excel，用这个 Prompt 预测下两季，QBR 报告直接套用。<br />
             2. 📦 需求/库存规划：用过去 24 个月的销售量预测未来 6 个月需求，敏感度帮你决定备货水位。<br />
-            3. 📈 KPI 趋势观测：会员人数、活跃用量、客服 ticket 数等营运 KPI，每月跑一次抓出异常。
+            3. 📈 KPI 趋势观测：会员人数、活跃用量、客服 ticket 数等运营 KPI，每月跑一次抓出异常。
           </td></tr>
         </table>
       </td></tr>
@@ -132,7 +132,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 
       <!-- ═══ FOOTER ═══ -->
       <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
-        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br />
         Powered by Weeklyprompt@microsoft
       </td></tr>
 
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

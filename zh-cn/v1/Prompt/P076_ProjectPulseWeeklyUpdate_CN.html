@@ -77,7 +77,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">帮我为项目「[项目名称]」输出最近 7 天的 Status Update。请使用我的 Email、Teams 对话、会议记录、近期文件编辑为来源。请依以下结构输出：1) 运行摘要（3 句），2) 自上次更新以来的进度（条列，含负责人），3) 已做出的决策，4) 待处理的风险与阻碍，并提出建议的因应方式，5) 本周需要做出的决策以及需谁拍板，6) 接下来 14 天的关键里程碑。每一条都请标注信心程度（🟢 已确认、🟡 推论、🔴 待验证），推论项目请注明来源。针对每一个 🔴 项目或关键信息缺失之处，请帮我写一封简短、有礼貌的追问信给对应的负责人，索取所需的具体信息。每封追问信请以可直接拷贝的区块呈现，含收件人、建议主旨、完整内文，让我可以贴进 Outlook、自行查看后寄出。</div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Generate a status updatefor the project &quot;[PROJECT NAME]&quot; covering the last 7 days. Use my emails, Teams chats, meeting notes, and recent file edits as sources. Structure the update as: 1) Executive summary (3 sentences), 2) Progress since last update (bullet list with owners), 3) Decisions made, 4) Open risks and blockers with proposed mitigations, 5) Decisions needed this week and from whom, 6) Upcoming milestones in the next 14 days. Mark each item with a confidence indicator (🟢 confirmed, 🟡 inferred, 🔴 needs validation) and cite the source for inferred items. For every 🔴 item or any point where critical information is missing, write a short, polite follow-up email I can send to the relevant owner asking for the specific input needed. Provide each follow-up as a ready-to-copy block with the recipient, suggested subject line, and full email body, so I can paste it into Outlook and send it myself.</div>
@@ -132,7 +132,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 
       <!-- ═══ FOOTER ═══ -->
       <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
-        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br />
+        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br />
         Powered by Weeklyprompt@microsoft
       </td></tr>
 
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

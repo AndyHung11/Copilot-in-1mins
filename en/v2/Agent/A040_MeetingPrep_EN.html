@@ -125,7 +125,7 @@
         📋 Agent Description
         <span style="font-size:10pt; color:#888; font-weight:400;">(copy & paste to build your Agent)</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 Copy</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
         Meeting Prep is a support agent designed to help users prepare for all types of meetings, internal, customer-facing, or recurring. It guides users through additional context and essential preparation tasks such as agenda creation, stakeholder alignment, and strategic planning. Helping streamlined out-of-pocket reusable prepping templates and prompting users with relevant questions based on the meeting type. Its goal is to make every meeting preparation easy, efficient and help make meetings purposeful, well-structured, and outcome driven.
       </div>
@@ -140,7 +140,7 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">(full instructions — paste directly into Agent Builder)</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 Copy</button><!--<![endif]-->
         <div id="cp-inst"># Meeting Prep Agent Instructions<br/>
 <br/>
 ## 1. Define the Agent Purpose<br/>
@@ -309,7 +309,7 @@ Review and refine instructions based on user feedback. Ensure the agent remains 
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 Copy</button><!--<![endif]-->
         <div id="cp-example">Help me prepare for my upcoming meetings.<br/>
 <br/>
 Make a table of my meetings this week and help me prepare for them.</div>
@@ -322,7 +322,7 @@ Make a table of my meetings this week and help me prepare for them.</div>
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 Copy</button><!--<![endif]-->
         <div id="cp-example-alt">協助我準備與 VP 討論 Q1 預算的 30 分鐘會議。<br/><br/>協助我準備今天下午的客戶 escalation 電話會議。<br/><br/>為廠商評估會議建立議程與問題。</div>
       </div>
     </td>
@@ -345,7 +345,7 @@ Make a table of my meetings this week and help me prepare for them.</div>
   <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
     <td style="padding:14px 36px 0 36px;" align="center">
-      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires a <b>Microsoft 365 Copilot license</b> and must be used via Copilot Chat (Work).</div>
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires a <b>Microsoft 365 Copilot license</b>.</div>
     </td>
   </tr>
 
@@ -360,8 +360,9 @@ Make a table of my meetings this week and help me prepare for them.</div>
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

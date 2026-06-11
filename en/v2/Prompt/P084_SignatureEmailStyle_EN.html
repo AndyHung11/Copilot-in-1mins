@@ -88,7 +88,7 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 Copy This Prompt (English Version)</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
@@ -102,7 +102,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 提示詞範本（繁體中文版）</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         <b>💅 設定你的專屬撰寫風格（填進新版 Outlook → Copilot → 草稿指示 → 自訂指示）</b><br/><br/>請依照以下風格幫我起草所有郵件：<br/>・<b>語氣</b>：專業但親切，不要過度生硬或太隨便<br/>・<b>長度</b>：簡潔，重點先講，必要時用條列<br/>・<b>開頭/結尾</b>：用「Hi [名字]」開頭，以「Best regards, [我的名字]」結尾<br/>・<b>語言</b>：繁體中文為主，專有名詞保留英文<br/>・<b>避免</b>：冗長鋪陳、過多形容詞、AI 腔的客套話<br/><br/>（依你的實際偏好調整上面每一行）
       </div>
@@ -151,8 +151,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

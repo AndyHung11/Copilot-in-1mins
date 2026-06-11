@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Copilot 一分钟小课堂：Power of Prompt #P081 — AI 味侦测与人话改写</title>
+<title>Copilot 一分钟小课堂：Power of Prompt #P081 — AI 味检测与人话改写</title>
 <!--[if !mso]><!-->
 <style type="text/css">
 .cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
@@ -40,7 +40,7 @@
   <tr>
     <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
       <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
-      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🕵️ AI 味侦测与人话改写</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🕵️ AI 味检测与人话改写</div>
       <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">AI Detection & Human Rewrite</div>
       <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">一句 Prompt 帮你的文本打一个 AI 指数（0–100%），再交回一版说人话的干净改写——保留原意，拿掉公文腔与 AI 套路。</div>
       <div style="padding-top:18px;">
@@ -70,7 +70,7 @@
         </tr>
       </table>
       <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
-        AI 味侦测与人话改写把整件事拆成两步：粘贴文本，Copilot 先打一个 0–100% 的 AI 指数，再交回一版保留原意、拿掉公文腔与陈腔滥调的干净改写。免许可、纯粘贴纯生成，发布前的「去 AI 味」最后一关。
+        AI 味检测与人话改写把整件事拆成两步：粘帖子本，Copilot 先打一个 0–100% 的 AI 指数，再交回一版保留原意、拿掉公文腔与陈腔滥调的干净改写。免许可、纯粘贴纯生成，发布前的「去 AI 味」最后一关。
       </div>
     </td>
   </tr>
@@ -88,11 +88,11 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
-          <b>🕵️ AI 味侦测 × 说人话改写</b><br/><br/>分析以下内容是否有 AI 生成的特征。<br/><br/><b>步骤一 — AI 侦测</b><br/>找出以下信号：<br/>・过度工整、结构完美到不自然的写法<br/>・通用或公文腔的陈腔滥调、buzzword<br/>・抽象、信息密度很低的语句<br/>・不自然或像在喊口号的激励语气<br/>输出：<br/>・一个单一的 <b>AI 指数（0–100%）</b>，代表这段文本是 AI 生成的可能性<br/><br/><b>步骤二 — 干净的人话改写</b><br/>把内容改写得更自然、更像人：<br/>・用清楚、简单、直接的措辞<br/>・容许一点点不完美与自然的语感<br/>・拿掉 buzzword、陈腔滥调与公文填充<br/>・保留原意与意图<br/><br/>不要解释你改了什么。只输出：<br/>1）AI 指数<br/>2）干净改写后的版本<br/><br/>内容：<br/>[在这里粘贴你的文本]
+          <b>🕵️ AI 味检测 × 说人话改写</b><br/><br/>分析以下内容是否有 AI 生成的特征。<br/><br/><b>步骤一 — AI 检测</b><br/>找出以下信号：<br/>・过度工整、结构完美到不自然的写法<br/>・通用或公文腔的陈腔滥调、buzzword<br/>・抽象、信息密度很低的语句<br/>・不自然或像在喊口号的激励语气<br/>输出：<br/>・一个单一的 <b>AI 指数（0–100%）</b>，代表这段文本是 AI 生成的可能性<br/><br/><b>步骤二 — 干净的人话改写</b><br/>把内容改写得更自然、更像人：<br/>・用清楚、简单、直接的措辞<br/>・容许一点点不完美与自然的语感<br/>・拿掉 buzzword、陈腔滥调与公文填充<br/>・保留原意与意图<br/><br/>不要解释你改了什么。只输出：<br/>1）AI 指数<br/>2）干净改写后的版本<br/><br/>内容：<br/>[在这里粘贴你的文本]
         </div>
       </div>
     </td>
@@ -102,7 +102,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         <b>🕵️ AI Detection × Human Rewrite</b><br/><br/>Analyze the content below for AI-generated patterns.<br/><br/><b>Step 1 — AI Detection</b><br/>Identify signs such as:<br/>・Over-polished or perfectly structured writing<br/>・Generic or corporate clichés and buzzwords<br/>・Abstract language with low information density<br/>・Unnatural tone or motivational phrasing<br/>Output:<br/>・One single <b>AI Score (0–100%)</b> indicating likelihood of AI-generated content<br/><br/><b>Step 2 — Clean Human Rewrite</b><br/>Rewrite the content to sound more natural and human:<br/>・Prefer clear, simple, direct wording<br/>・Allow slight imperfections and natural flow<br/>・Remove buzzwords, clichés, and corporate filler<br/>・Preserve the original meaning and intent<br/><br/>Do NOT explain the changes. Output only:<br/>1) AI Score<br/>2) Clean rewritten version<br/><br/>CONTENT:<br/>[PASTE YOUR TEXT HERE]
       </div>
@@ -114,7 +114,7 @@
     <td style="padding:28px 36px 0 36px;">
       <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
-        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📋 粘贴文本直接跑</div><div style="font-size:12pt; color:#444; line-height:1.7;">在 Copilot Chat 粘贴整段 Prompt，把 [在这里粘贴你的文本] 换成你要检查的内容——免许可，纯粘贴纯生成就能用。</div></td></tr></table></td></tr>
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📋 粘帖子本直接跑</div><div style="font-size:12pt; color:#444; line-height:1.7;">在 Copilot Chat 粘贴整段 Prompt，把 [在这里粘贴你的文本] 换成你要检查的内容——免许可，纯粘贴纯生成就能用。</div></td></tr></table></td></tr>
 <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🎚️ 指定语气再客制</div><div style="font-size:12pt; color:#444; line-height:1.7;">不够到位？再追加「改成更口语、像跟同事聊天」或「保留专业但少一点官腔」，让改写贴合你的场景与品牌。</div></td></tr></table></td></tr>
 <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✅ 发布前最后一关</div><div style="font-size:12pt; color:#444; line-height:1.7;">把它当成内部信、LinkedIn、演示文稿、营销文案发出去前的「去 AI 味」检查，指数高就改写，低就放心送出。</div></td></tr></table></td></tr>
       </table>
@@ -142,7 +142,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
-    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
     Inspired by #PromptOfTheWeek · Microsoft 365 Copilot community
   </td></tr>
 
@@ -151,8 +151,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

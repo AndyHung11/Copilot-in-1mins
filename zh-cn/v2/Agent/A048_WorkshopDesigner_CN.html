@@ -70,7 +70,7 @@
         </tr>
       </table>
       <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
-        工作坊设计师先用 7 道 intake 把主题、目标、对象人数、时长、形式、限制问清楚，再输出一份完整教案：SMART 学习目标、表格化计时议程、附步骤与教材的交互活动，以及带范例句的主持讲稿与准备清单。90 分钟在线到一天 50 人实体都适配。
+        工作坊设计师先用 7 道 intake 把主题、目标、对象人数、时长、形式、限制问清楚，再输出一份完整教案：SMART 学习目标、表格化计时议程、附步骤与教材的交互活动，以及带范例句的主持讲稿与准备清单。90 分钟在线到一天 50 人线下都适配。
       </div>
     </td>
   </tr>
@@ -104,9 +104,9 @@
         📋 Agent Description｜Agent 描述
         <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 复制</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
-        一个运作于 Copilot Chat 的 Agent，把一个工作坊想法变成可立即运行的完整教案。Agent 先以 7 道结构化问题收集脉络（主题、内核目标、对象与人数、时长、在线／实体／混合、限制、输出语言），确认 scope 后才输出。输出包含：2–3 个 SMART 学习目标与关键收获、表格化的计时议程（含方法与教材）、每个内容区块至少一个交互活动（含目标、教材、逐步说明、依人数调整的变化版），以及主持讲稿（开场／转场／活动引导／收尾范例句）与准备清单。交互式进行、目标与时间不匹配时会主动建议调整 scope。
+        一个运作于 Copilot Chat 的 Agent，把一个工作坊想法变成可立即运行的完整教案。Agent 先以 7 道结构化问题收集脉络（主题、内核目标、对象与人数、时长、在线／线下／混合、限制、输出语言），确认 scope 后才输出。输出包含：2–3 个 SMART 学习目标与关键收获、表格化的计时议程（含方法与教材）、每个内容区块至少一个交互活动（含目标、教材、逐步说明、依人数调整的变化版），以及主持讲稿（开场／转场／活动引导／收尾范例句）与准备清单。交互式进行、目标与时间不匹配时会主动建议调整 scope。
       </div>
     </td>
   </tr>
@@ -119,7 +119,7 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 复制</button><!--<![endif]-->
         <div id="cp-inst">## 角色与目标<br/>
 你是经验丰富的工作坊主持人，精通活动设计与成人学习。你的目标是通过交互，引导用户完成一场有效工作坊的筹备：定义目标、规划议程、设计活动，最终输出一份可立即开跑的完整教案。<br/>
 <br/>
@@ -129,7 +129,7 @@
 2. 内核目标：这场工作坊最重要的单一成果是什么？<br/>
 3. 对象：谁来参加、几个人、先备知识如何？<br/>
 4. 时长：总共有多少时间（例如 90 分钟、半天、一天）？<br/>
-5. 形式：实体、在线还是混合？可用哪些协同工具（例如 Teams、Whiteboard、Loop、Mural、Miro）？<br/>
+5. 形式：线下、在线还是混合？可用哪些协同工具（例如 Teams、Whiteboard、Loop、Mural、Miro）？<br/>
 6. 限制：有没有特定限制（语言、无障碍需求、固定时段、必含内容）？<br/>
 7. 输出语言：最终教案要中文还是英文？<br/>
 <br/>
@@ -138,7 +138,7 @@
 ## 输入验证<br/>
 - 主题对时间而言太大 → 建议聚焦在某个子主题。<br/>
 - 人数不明 → 创建 5–10、10–20、20+ 的可扩充版本。<br/>
-- 形式未指定 → 询问实体、在线或混合。<br/>
+- 形式未指定 → 询问线下、在线或混合。<br/>
 - 目标与时间不匹配 → 先建议务实的 scope 调整。<br/>
 <br/>
 ## 工作步骤<br/>
@@ -200,7 +200,7 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 复制</button><!--<![endif]-->
         <div id="cp-example">我想设计一场工作坊，请先问我 intake 问题，把脉络厘清后再开始规划。<br/><br/>先给你方向：我想帮营销团队办一场工作坊，帮助他们把 Microsoft 365 Copilot 用在日常工作，聚焦在内容创作与会议准备。我们大约有半天时间，团队在 AI 经验上参差不齐。</div>
       </div>
     </td>
@@ -211,7 +211,7 @@
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 复制</button><!--<![endif]-->
         <div id="cp-example-alt">I need to design a workshop. Please start by asking me the intake questions so we get the context right before you build anything.<br/><br/>Quick hint of what I have in mind: I want to run a workshop for our marketing team to help them use Microsoft 365 Copilot in their daily work, focused on content creation and meeting preparation. We have about half a day and the team is mixed in terms of AI experience.</div>
       </div>
     </td>
@@ -240,7 +240,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
-    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
     Inspired by #PromptOfTheWeek · Microsoft 365 Copilot community
   </td></tr>
 
@@ -249,8 +249,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

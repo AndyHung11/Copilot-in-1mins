@@ -77,7 +77,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🕵️ AI Detection × Human Rewrite</b><br/><br/>Analyze the content below for AI-generated patterns.<br/><br/><b>Step 1 — AI Detection</b><br/>Identify signs such as:<br/>・Over-polished or perfectly structured writing<br/>・Generic or corporate clichés and buzzwords<br/>・Abstract language with low information density<br/>・Unnatural tone or motivational phrasing<br/>Output:<br/>・One single <b>AI Score (0–100%)</b> indicating likelihood of AI-generated content<br/><br/><b>Step 2 — Clean Human Rewrite</b><br/>Rewrite the content to sound more natural and human:<br/>・Prefer clear, simple, direct wording<br/>・Allow slight imperfections and natural flow<br/>・Remove buzzwords, clichés, and corporate filler<br/>・Preserve the original meaning and intent<br/><br/>Do NOT explain the changes. Output only:<br/>1) AI Score<br/>2) Clean rewritten version<br/><br/>CONTENT:<br/>[PASTE YOUR TEXT HERE]</div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🕵️ AI 味偵測 × 說人話改寫</b><br/><br/>分析以下內容是否有 AI 生成的特徵。<br/><br/><b>步驟一 — AI 偵測</b><br/>找出以下訊號：<br/>・過度工整、結構完美到不自然的寫法<br/>・通用或公文腔的陳腔濫調、buzzword<br/>・抽象、資訊密度很低的語句<br/>・不自然或像在喊口號的激勵語氣<br/>輸出：<br/>・一個單一的 <b>AI 指數（0–100%）</b>，代表這段文字是 AI 生成的可能性<br/><br/><b>步驟二 — 乾淨的人話改寫</b><br/>把內容改寫得更自然、更像人：<br/>・用清楚、簡單、直接的措辭<br/>・容許一點點不完美與自然的語感<br/>・拿掉 buzzword、陳腔濫調與公文填充<br/>・保留原意與意圖<br/><br/>不要解釋你改了什麼。只輸出：<br/>1）AI 指數<br/>2）乾淨改寫後的版本<br/><br/>內容：<br/>[在這裡貼上你的文字]</div>
@@ -120,7 +120,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <tr><td align="center" style="padding:28px 32px 24px 32px;">
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
           <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
-            🆓 No M365 Copilot License Required — Works in Copilot Chat (Web)
+            🆓 No M365 Copilot License Required — Works in the basic version
           </td></tr>
         </table>
       </td></tr>
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

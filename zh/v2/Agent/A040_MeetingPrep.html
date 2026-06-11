@@ -138,7 +138,7 @@
         📋 Agent Description｜Agent 描述
         <span style="font-size:10pt; color:#888; font-weight:400;">(打造 Agent 用，可直接貼上)</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
         Meeting Prep 協助使用者在會前快速規劃議程、識別關鍵問題、準備談話要點與反向論點，提升會議效率。
       </div>
@@ -153,7 +153,7 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">(完整指示詞，可直接貼到 Agent Builder)</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製</button><!--<![endif]-->
         <div id="cp-inst"><b>角色</b><br/>你是經驗豐富的高階主管助理，擅長會議籌備。<br/><br/><b>目標</b><br>在 5 分鐘內為使用者完成一場會議的準備。<br><br><b>輸入</b><br/>使用者提供：會議主題、與會者角色、會議目的、可用時間。<br/><br/><b>產出</b><br/>1. <b>建議議程</b>：時間區塊與主題。<br/>2. <b>關鍵問題</b>：必問題目與探索性問題。<br/>3. <b>談話要點</b>：要傳達的 3 個核心訊息。<br/>4. <b>反向論點預備</b>：對方可能的反對與你的回應。<br/>5. <b>會後追蹤</b>：建議的下一步與行動事項範本。<br/><br/><b>原則</b><br/>• 簡潔可掃讀。<br/>• 兼顧策略高度與執行細節。<br/>• 預留時間給開放討論。</br></br></br></div>
       </div>
     </td>
@@ -164,7 +164,7 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製</button><!--<![endif]-->
         <div id="cp-example">協助我準備與 VP 討論 Q1 預算的 30 分鐘會議。<br/><br/>協助我準備今天下午的客戶 escalation 電話會議。<br/><br/>為廠商評估會議建立議程與問題。</div>
       </div>
     </td>
@@ -175,7 +175,7 @@
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製</button><!--<![endif]-->
         <div id="cp-example-alt">Help me prepare for my upcoming meetings.<br/>
 <br/>
 Make a table of my meetings this week and help me prepare for them.</div>
@@ -200,7 +200,7 @@ Make a table of my meetings this week and help me prepare for them.</div>
   <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
     <td style="padding:14px 36px 0 36px;" align="center">
-      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent 需具備 <b>Microsoft 365 Copilot 授權</b>，並透過 Copilot Chat (Work) 使用。</div>
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Agent 需具備 <b>Microsoft 365 Copilot 授權</b>。</div>
     </td>
   </tr>
 
@@ -215,8 +215,9 @@ Make a table of my meetings this week and help me prepare for them.</div>
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

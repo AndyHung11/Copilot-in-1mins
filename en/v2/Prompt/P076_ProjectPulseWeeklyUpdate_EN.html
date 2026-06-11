@@ -103,7 +103,7 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 Copy This Prompt (English Version)</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
@@ -117,7 +117,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 提示詞範本（繁體中文版）</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         幫我為專案「[專案名稱]」產出最近 7 天的 Status Update。請使用我的 Email、Teams 對話、會議記錄、近期檔案編輯為來源。請依以下結構產出：1) 執行摘要（3 句），2) 自上次更新以來的進度（條列，含負責人），3) 已做出的決策，4) 待處理的風險與阻礙，並提出建議的因應方式，5) 本週需要做出的決策以及需誰拍板，6) 接下來 14 天的關鍵里程碑。每一條都請標註信心程度（🟢 已確認、🟡 推論、🔴 待驗證），推論項目請註明來源。針對每一個 🔴 項目或關鍵資訊缺失之處，請幫我寫一封簡短、有禮貌的追問信給對應的負責人，索取所需的具體資訊。每封追問信請以可直接複製的區塊呈現，含收件人、建議主旨、完整內文，讓我可以貼進 Outlook、自行檢視後寄出。
       </div>
@@ -151,7 +151,7 @@
   <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
     <td style="padding:0 36px 24px 36px;" align="center">
-      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Prompt requires a <b>Microsoft 365 Copilot license</b>. Use via Copilot Chat (Work).</div>
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Prompt requires a <b>Microsoft 365 Copilot license</b>.</div>
     </td>
   </tr>
 
@@ -166,8 +166,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

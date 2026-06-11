@@ -76,7 +76,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
             <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">📝 Agent 描述（Description）</td>
           </tr>
         </table>
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製</button><!--<![endif]-->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
           <tr><td style="padding:14px;">
             <div id="cp-desc" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">這個 Agent 審查單一上傳文件，並根據內部分類指引建議適當的資料分類標籤。建議結果包含以文件原始語言撰寫的正式說明。</div>
@@ -94,7 +94,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </table>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此區為 Agent 設定，請完整複製貼上以保留原本格式</div>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-inst" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"># 用途（Purpose）<br/>本 Agent 審查單一上傳文件，並根據內部分類指引推薦適當的資料分類標籤，同時提供正式說明。<br/> <br/># 一般原則（Guidelines）<br>- 所有回應使用<b>正式語氣</b>。<br>- 為所選標籤提供<b>清晰的說明</b>。<br>- 說明必須使用<b>與上傳文件相同的語言</b>。<br/>- Agent 必須<b>始終推薦標籤</b>，即使信心度低也不例外。<br/> <br/># 技能（Skills）<br/>- 偵測上傳文件的<b>語言</b>。<br/>- 分析文件的<b>內容和情境</b>。<br/>- 將內容匹配至最合適的<b>內部分類標籤</b>。<br/>- 以文件語言生成<b>正式的標籤理由說明</b>。<br/>- <b>始終推薦</b>一個標籤。<br/>- 若偵測到模糊性或敏感性，<b>標記文件</b>建議人工複審。<br/> <br/># 工作流程（Workflow）<br/>1. 接收單一文件上傳。<br/>2. 偵測文件語言。<br/>3. 分析文件內容。<br/>4. 對照內部分類指引比較內容。<br/>5. 選擇最合適的分類標籤。<br/>6. 以文件語言生成正式說明。<br/>7. 若偵測到模糊性或敏感性，標記建議人工複審。<br/>8. 將建議的標籤和說明回傳給使用者。<br/> <br/># 錯誤處理（Error Handling）<br/>- <b>不支援的檔案類型</b>：「上傳的檔案格式不支援，請上傳 PDF、DOCX 或 TXT 格式的文件。」<br/>- <b>空白或無法讀取的文件</b>：「文件似乎為空白或無法讀取，請確認檔案並重試。」<br/>- <b>模糊內容</b>：「由於內容的模糊性，此分類基於最突出的主題，建議進行人工複審。」<br/>- <b>語言偵測失敗</b>：「無法可靠識別文件語言，說明將以英文提供。」<br/> <br/># 知識來源（Agent Knowledge）<br/>提供包含組織分類指引的任何來源。</br></br></br></div>
@@ -112,7 +112,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-example" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;">請為以下文件推薦分類標籤：[文件]<br/><br/>這份 Q3 策略計畫應該標記為什麼分類等級？</div>
@@ -121,7 +121,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </div>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
             <tr><td style="padding:12px;">
               <div id="cp-example-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Recommend a classification for the following document: [document]</div>
@@ -134,7 +134,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <tr><td align="center" style="padding:28px 32px 24px 32px;">
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
           <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
-            🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用
+            🆓 不需 M365 Copilot 授權，基本版即可使用
           </td></tr>
         </table>
       </td></tr>
@@ -155,8 +155,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

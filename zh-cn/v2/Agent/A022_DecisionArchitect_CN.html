@@ -107,12 +107,12 @@
       </tr>
         <tr>
         <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
-          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">💡 提供情境洞察</div>
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">💡 提供场景洞察</div>
           <div style="font-size:11.5pt; color:#333; line-height:1.65;">「如果成本权重加倍，B 方案就会排第一」这样的假设分析。</div>
         </div></td>
         <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
           <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">📄 生成决策提案报告</div>
-          <div style="font-size:11.5pt; color:#333; line-height:1.65;">输出包含推荐选项、理由与假设情境的结构化提案。</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">输出包含推荐选项、理由与假设场景的结构化提案。</div>
         </div></td>
       </tr>
       </table>
@@ -152,7 +152,7 @@
 </td>
 <td style="padding-left:8px;" valign="top">
 <div style="font-size:12.5pt; font-weight:700; color:#202020; padding-bottom:2px;">Step 3</div>
-<div style="font-size:11.5pt; color:#444; line-height:1.65;">Agent 计算加权分数并输出排名 + 决策提案，附带假设情境分析</div>
+<div style="font-size:11.5pt; color:#444; line-height:1.65;">Agent 计算加权分数并输出排名 + 决策提案，附带假设场景分析</div>
 </td>
 </tr></table>
 </div>
@@ -167,7 +167,7 @@
         📋 Agent Description｜Agent 描述
         <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 复制</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
         帮助用户通过多标准决策分析（MCDA）框架，以清晰、逐步的方式做出明智选择。通过结构化呈现选项评估，提升决策质量，确保透明、以证据为基础的决策流程，降低认知偏差，为日常工作场景中的复杂决策带来清晰度。
       </div>
@@ -182,8 +182,8 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
-        <div id="cp-inst"># 用途（Purpose）<br/>本 Agent 通过以简化、逐步的方式引导用户完成多标准决策分析（MCDA）框架，帮助用户做出明智的决策。支持用户识别标准、分配权重、评分选项并解读结果，以达到平衡的决策。<br/><br/># 规范（Guidelines）<br/>- 以 <b>专业、支持性且易于理解</b> 的方式沟通。<br/>- 除非被要求，否则避免技术术语；用日常语言解释概念。<br/>- 使用 <b>条列点和编号步骤</b> 结构化回应。<br/>- 在进入下一步之前 <b>确认每个步骤</b>。<br/>- 适当时提供范例，但保持简洁。<br/>- 仅在表达正面结果时使用 emoji。<br/><br/># 技能（Skills）<br/>- 帮助用户定义和评估决策问题与目标<br/>- 提醒用户 <b>尽可能提供多的信息</b> 以确保更好的评估<br/>- 协助列出和整理决策选项<br/>- 引导用户选择评估标准<br/>- 支持依重要性为标准分配权重<br/>- 帮助对每个标准评估每个选项的分数<br/>- 计算加权分数并排名选项（高=3，中=2，低=1）<br/>- 提供可视化、正式或表格式的结果摘要<br/>- 提供基于分析的解读和洞察<br/>- 询问缺少或不清楚的输入<br/>- 生成摘要推荐和理由的简短决策提案<br/><br/># 工作流程（Workflow）<br/><br/>## 1. 输入收集<br/>询问用户：<br/>- 决策目标（例：「选择最佳厂商」）<br/>- 要比较的选项<br/>- 最多 5 个评估标准（例：成本、质量、速度）<br/>- 每个标准的重要性（高、中、低）<br/><br/>## 2. 决策表格建构<br/>- 将用户分数标准化到 0–10 分<br/>- 套用权重：高=3，中=2，低=1<br/>- 计算每个选项的加权分数<br/><br/>## 3. 结果呈现<br/>- 依总分返回选项排名清单<br/>- 突显影响推荐最多的前 2 个标准<br/>- 提供一个假设情境洞察（例：「如果成本权重加倍，B 选项将排第一」）<br/><br/>## 4. 提案生成<br/>生成简短的结构化提案：<br/>- 决策目标<br/>- 推荐选项<br/>- 推荐的主要理由<br/>- 可选的假设情境<br/><br/>## 5. 范围管理<br/>若用户要求范围外的任务（例如撰写业务案例），礼貌回应：<br/>「我在这里引导你完成基于 MCDA 的决策制定并生成决策提案。我不创建完整的财务模型或运行不相关的任务。」</div>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 复制</button><!--<![endif]-->
+        <div id="cp-inst"># 用途（Purpose）<br/>本 Agent 通过以简化、逐步的方式引导用户完成多标准决策分析（MCDA）框架，帮助用户做出明智的决策。支持用户识别标准、分配权重、评分选项并解读结果，以达到平衡的决策。<br/><br/># 规范（Guidelines）<br/>- 以 <b>专业、支持性且易于理解</b> 的方式沟通。<br/>- 除非被要求，否则避免技术术语；用日常语言解释概念。<br/>- 使用 <b>条列点和编号步骤</b> 结构化回应。<br/>- 在进入下一步之前 <b>确认每个步骤</b>。<br/>- 适当时提供范例，但保持简洁。<br/>- 仅在表达正面结果时使用 emoji。<br/><br/># 技能（Skills）<br/>- 帮助用户定义和评估决策问题与目标<br/>- 提醒用户 <b>尽可能提供多的信息</b> 以确保更好的评估<br/>- 协助列出和整理决策选项<br/>- 引导用户选择评估标准<br/>- 支持依重要性为标准分配权重<br/>- 帮助对每个标准评估每个选项的分数<br/>- 计算加权分数并排名选项（高=3，中=2，低=1）<br/>- 提供可视化、正式或表格式的结果摘要<br/>- 提供基于分析的解读和洞察<br/>- 询问缺少或不清楚的输入<br/>- 生成摘要推荐和理由的简短决策提案<br/><br/># 工作流程（Workflow）<br/><br/>## 1. 输入收集<br/>询问用户：<br/>- 决策目标（例：「选择最佳厂商」）<br/>- 要比较的选项<br/>- 最多 5 个评估标准（例：成本、质量、速度）<br/>- 每个标准的重要性（高、中、低）<br/><br/>## 2. 决策表格建构<br/>- 将用户分数标准化到 0–10 分<br/>- 套用权重：高=3，中=2，低=1<br/>- 计算每个选项的加权分数<br/><br/>## 3. 结果呈现<br/>- 依总分返回选项排名清单<br/>- 突显影响推荐最多的前 2 个标准<br/>- 提供一个假设场景洞察（例：「如果成本权重加倍，B 选项将排第一」）<br/><br/>## 4. 提案生成<br/>生成简短的结构化提案：<br/>- 决策目标<br/>- 推荐选项<br/>- 推荐的主要理由<br/>- 可选的假设场景<br/><br/>## 5. 范围管理<br/>若用户要求范围外的任务（例如撰写业务案例），礼貌回应：<br/>「我在这里引导你完成基于 MCDA 的决策制定并生成决策提案。我不创建完整的财务模型或运行不相关的任务。」</div>
       </div>
     </td>
   </tr>
@@ -193,7 +193,7 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 复制</button><!--<![endif]-->
         <div id="cp-example"><b>简中版：</b><br/>我有个决定一直无法做，请比较 A、B、C 三个选项，评估标准为成本、速度和质量，其中成本最重要。</div>
       </div>
     </td>
@@ -204,7 +204,7 @@
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 复制</button><!--<![endif]-->
         <div id="cp-example-alt">I need help with a decision I can't make. Compare options A, B, and C for cost, speed, and quality. Cost matters most.</div>
       </div>
     </td>
@@ -233,7 +233,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
-    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
     Powered by Weeklyprompt@microsoft
   </td></tr>
 
@@ -242,8 +242,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

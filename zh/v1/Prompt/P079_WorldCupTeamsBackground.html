@@ -77,7 +77,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>Ole Ole Ole Ole. Let's Play! ⚽</b><br/><br/>請生成一張 Microsoft Teams 視訊背景圖，需求如下：<br/><br/>🎨 <b>風格</b>｜手繪插畫風格（非寫實照片），以抽象筆刷與層疊塗料質感呈現。<br/>🌈 <b>配色</b>｜依 <b>[國家]</b> 的官方國旗顏色自動推斷配色，不需我另外指定；背景不要出現任何實際國旗或國家象徵符號。<br/>🔤 <b>文字</b>｜將國家名稱「<b>[國家]</b>」作為圖中唯一文字，乾淨、置中、自然融入設計，不要有其他任何文字。<br/>⚽ <b>元素</b>｜加入風格化的手繪足球，以及一座世界盃獎盃（剪影與比例正確，但簡化為手繪非寫實風格；無品牌、無多餘標記、獎盃上無文字）。<br/>🚫 <b>避免</b>｜不要出現人物、人群、臉孔、吉祥物，或國家名稱以外可辨識的符號。<br/>📐 <b>規格</b>｜比例 16:9，專為 Microsoft Teams 背景優化，主視覺置中並避開介面裁切區；整體以色彩、動態與插畫傳達「世界盃慶典」氛圍。</div>
@@ -95,7 +95,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>Ole Ole Ole Ole. Let's Play! ⚽</b><br/><br/>Generate a Microsoft Teams background image with these specs:<br/><br/>🎨 <b>Style</b> | Painted, illustrative (not photorealistic), using abstract hand-painted brush strokes and layered paint textures.<br/>🌈 <b>Palette</b> | Auto-infer the color palette from the official flag colors of <b>[USA]</b> — don't make me specify them. No actual flags or country symbols.<br/>🔤 <b>Text</b> | Include the country name — <b>[USA]</b> — as the only text: clean, centered, naturally integrated. No other words or text.<br/>⚽ <b>Elements</b> | Add stylized, painted (non-realistic) soccer balls, and a World Cup trophy with an accurate silhouette and proportions, in a simplified painted style (no branding, no extra markings, no text on the trophy).<br/>🚫 <b>Avoid</b> | No people, crowds, faces, mascots, or readable symbols beyond the country name.<br/>📐 <b>Spec</b> | Aspect ratio 16:9, optimized for Microsoft Teams backgrounds, key visuals centered and crop-safe. Communicate &quot;World Cup celebration&quot; through color, motion, and illustration.</div>
@@ -120,7 +120,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <tr><td align="center" style="padding:28px 32px 24px 32px;">
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
           <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
-            🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用
+            🆓 不需 M365 Copilot 授權，基本版即可使用
           </td></tr>
         </table>
       </td></tr>
@@ -141,8 +141,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

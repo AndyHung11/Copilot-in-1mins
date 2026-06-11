@@ -44,7 +44,7 @@
       <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;"></div>
       <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">Turn any messy brief into a client-ready 7-slide deck with speaker notes—in minutes.</div>
       <div style="padding-top:18px;">
-        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 No M365 Copilot License Required — Works in Copilot Chat (Web)</span>
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 No M365 Copilot License Required — Works in the basic version</span>
         &nbsp;
         <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ Set up in 30 sec</span>
       </div>
@@ -103,7 +103,7 @@
   <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
   <tr>
     <td style="padding:28px 36px 0 36px;">
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
       <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
         <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 Copy This Prompt (English Version)</div>
         <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
@@ -117,7 +117,7 @@
   <tr>
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 提示詞範本（繁體中文版）</div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
       <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
         根據下方的 Brief，產生一份精簡的 7 頁簡報。輸入：僅以貼上的文字作為來源。投影片（共 7 頁，順序固定）：1) 標題 — [專案／提案名稱] 2) 問題／脈絡 3) 解決方案（最多 3 個支柱）4) 價值與成果（盡量量化）5) 交付計畫與里程碑（簡單的時間軸 bullet）6) 案例／實證（Case、Pilot 或代理指標）7) 下一步與行動呼籲。要求：每頁加上 2–4 個 bullet 的演講備註；使用清楚、好讀的條列（每頁最多 5 條）；不需品牌或圖片，中性主題即可；若關鍵細節缺失，請插入占位符 [Info needed: …]。Brief 開始：[此處貼上 Brief] Brief 結束。
       </div>
@@ -151,7 +151,7 @@
   <!-- ═══ LICENSE NOTE ═══ -->
   <tr>
     <td style="padding:0 36px 24px 36px;" align="center">
-      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Prompt requires <b>no M365 Copilot license</b> — use it directly in Copilot Chat (Web).</div>
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Prompt requires <b>no M365 Copilot license</b>. Works in the basic version.</div>
     </td>
   </tr>
 
@@ -166,8 +166,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

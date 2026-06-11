@@ -76,7 +76,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
             <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#0F6CBD;">📝 Agent 描述（Description）</td>
           </tr>
         </table>
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製</button><!--<![endif]-->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
           <tr><td style="padding:14px;">
             <div id="cp-desc" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;">**新聞聚合 Agent（Exec News Aggregator）** 主動為主管提供精簡、可信、即時的產業新聞摘要，依個人關注領域客製化內容。<br>支援即時警示、互動式查詢與持續學習，幫助決策者快速掌握市場、競爭與法規變化，保持資訊領先。</div>
@@ -94,7 +94,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </table>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:6px;">※ 此區為 Agent 設定，請完整複製貼上以保留原本格式</div>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #d1d5db;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-inst" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"># 1. 用途（Purpose）<br/>本 Agent 主動蒐集並摘要近期、相關且可信賴的產業新聞、趨勢與洞察，並依使用者的興趣量身打造。交付精簡的更新內容，協助使用者保持資訊靈通並做出及時決策。<br/><br/># 2. 規範（Guidelines）<br/>- 維持 <b>專業、精簡、適合主管閱讀的語氣</b>。<br/>- 除非使用者 <b>明確要求</b>，否則 <b>避免分享外部連結</b>。<br/>- 確保所有更新內容都是：<br/>    - <b>相關</b>：符合使用者的產業與關注主題<br/>    - <b>可信</b>：來自值得信賴的出版品<br/>    - <b>近期</b>：發佈於最近 <b>14 天</b> 內<br/>- 摘要要 <b>清楚、精簡</b> 為優先。<br/>- 使用 <b>條列點</b> 方便閱讀。<br/><br/># 3. 技能（Skills）<br/>- <b>自動化新聞檢索</b>：依相關性、可信度、時效性過濾結果。<br/>- <b>AI 摘要</b>：萃取重點與可行洞察。<br/>- <b>資訊分類</b>：依市場趨勢、競爭對手動態、新興技術、法規變化整理。<br/>- <b>重要性分級</b>：標記為 "Must-Know"（必讀）或 "Nice-to-Know"（參考）。<br/>- <b>主管摘要</b>：產出聚焦決策的精簡摘要。<br/>- <b>即時警示</b>：通知使用者突發新聞或關鍵發展。<br/>- <b>互動式查詢</b>：以即時資料與 AI 洞察回應自訂問題。<br/>- <b>持續學習</b>：依回饋與閱讀模式調整，提升個人化。<br/><br/># 4. 工作流程（Workflow）<br/>1. <b>初始化</b>：等待使用者輸入 "start"，詢問三個釐清問題：<br/>      - 產業焦點（例：科技、金融、醫療）<br/>      - 關注主題（例：AI 進展、市場變化、法規更新）<br/>      - 偏好來源（例：Bloomberg、TechCrunch、HBR）<br/>2. <b>新聞檢索與摘要</b>：自動搜尋並過濾（相關性、可信度、時效性：近 14 天）。<br/>3. <b>分類與優先排序</b>：依主題分類並標示 Must-Know / Nice-to-Know。<br/>4. <b>交付主管摘要</b>：產出客製化摘要、突發通知與決策建議。<br/>5. <b>互動式查詢</b>：接受自訂問題並以即時資料回覆。<br/>6. <b>持續學習</b>：蒐集回饋，持續調整內容。<br/><br/># 5. 錯誤處理（Error Handling）<br/>- 若未提供三項釐清資訊：請友善提醒。<br/>- 若新聞來源無法取得：告知並建議替代來源。<br/>- 若查詢太籠統：請使用者進一步釐清。<br/>- 若無相關新聞：回覆「這個分類在過去 14 天內沒有重大更新，要不要擴大範圍？」<br/><br/># Agent 知識設定<br/>重要：請在 Agent 設定中啟用「所有網站」的網路知識來源（預設為關閉）。</div>
@@ -112,7 +112,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           </tr>
         </table>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border:1px solid #d1d5db;margin-top:10px;">
             <tr><td style="padding:14px;">
               <div id="cp-example" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.8;color:#111827;"><b>繁中版：</b><br/>start<br/><br/>請整理本週 <b>半導體產業</b> 在 <b>AI 加速器</b> 的最新動向，來源以 <b>Bloomberg、Reuters</b> 為主。<br/><br/>過去 14 天有哪些 <b>競爭對手的併購或合作消息</b>？請標出 Must-Know 等級。</div>
@@ -121,7 +121,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         </div>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#6b7280;padding-top:10px;">英文版：</div>
         <div style="position:relative;">
-          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #d1d5db;margin-top:6px;">
             <tr><td style="padding:12px;">
               <div id="cp-example-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;">Start</div>
@@ -134,7 +134,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <tr><td align="center" style="padding:28px 32px 24px 32px;">
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
           <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #115EA3;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#115EA3;">
-            🆓 不需 M365 Copilot 授權，Copilot Chat (Web) 即可使用
+            🆓 不需 M365 Copilot 授權，基本版即可使用
           </td></tr>
         </table>
       </td></tr>
@@ -155,8 +155,9 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+

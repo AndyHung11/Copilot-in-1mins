@@ -97,8 +97,8 @@
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
         <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
-          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">🎭 仿真谈判情境</div>
-          <div style="font-size:11.5pt; color:#333; line-height:1.65;">依产业与情境逐步引导，让你在真正谈判前先「试打」一遍。</div>
+          <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">🎭 模拟谈判场景</div>
+          <div style="font-size:11.5pt; color:#333; line-height:1.65;">依产业与场景逐步引导，让你在真正谈判前先「试打」一遍。</div>
         </div></td>
         <td width="50%" valign="top" style="padding:6px;"><div style="background:#F8FAFC; border-left:4px solid #0F6CBD; padding:14px 16px; min-height:96px;">
           <div style="font-size:13pt; font-weight:700; color:#0F6CBD; padding-bottom:6px;">📄 拟定提案框架</div>
@@ -142,7 +142,7 @@
 </td>
 <td style="padding-left:8px;" valign="top">
 <div style="font-size:12.5pt; font-weight:700; color:#202020; padding-bottom:2px;">Step 2</div>
-<div style="font-size:11.5pt; color:#444; line-height:1.65;">依 Agent 提示逐步提供情境细节，不确定的可输入 skip 跳过</div>
+<div style="font-size:11.5pt; color:#444; line-height:1.65;">依 Agent 提示逐步提供场景细节，不确定的可输入 skip 跳过</div>
 </td>
 </tr></table>
 </div><div style="padding:8px 0; display:block;">
@@ -167,7 +167,7 @@
         📋 Agent Description｜Agent 描述
         <span style="font-size:10pt; color:#888; font-weight:400;">（用于创建 Agent，可直接粘贴）</span>
       </div>
-      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 複製 Copy</button><!--<![endif]-->
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 复制</button><!--<![endif]-->
       <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
         **谈判大师 Agent（Dealcrafter）** 作为谈判助手，协助用户规划、仿真、提案与优化谈判结果。<br>引导你拆解利益、设计策略、预演对话，并在事后检讨中持续强化谈判能力。
       </div>
@@ -182,8 +182,8 @@
         <span style="font-size:10pt; color:#888; font-weight:400;">（完整指令，可直接粘贴到 Agent Builder）</span>
       </div>
       <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 複製 Copy</button><!--<![endif]-->
-        <div id="cp-inst">## 1. 定义 Agent 用途<br/>本谈判助手通过结构化提示与用户提供的数据，帮助用户发展有效的谈判策略。支持规划、情境仿真、提案框架设计、厂商分析及结果优化。<br/><br/>## 2. 规范（Guidelines）<br/>- 保持 <b>专业、支持性且尊重</b> 的态度。<br/>- 使用清晰、结构化的语言，以简单步骤说明。<br/>- 礼貌地询问缺少的情境信息。<br/>- 推广 <b>道德、公平且以信任为基础</b> 的谈判。<br/>- 仅依用户输入和公开网络数据。<br/>- 鼓励 <b>有说服力、自信</b> 的沟通方式。<br/>- 提供建议后邀请反馈。<br/><br/>## 3. 技能（Skills）<br/>- 仿真谈判情境<br/>- 框架提案和反提案<br/>- 生成厂商谈判演示文稿<br/>- 包含薪资谈判策略（如锚定）<br/>- 推荐替代供应商或条款<br/>- 准备薪资或晋升讨论<br/>- 起草远程工作/弹性工时提案<br/>- 角色扮演工作量/职责对话<br/>- 呈现成就以支持要求<br/><br/>## 4. 工作流程（每项技能的一致模式）<br/>- 问候用户并说明任务<br/>- 询问是否准备好开始<br/>- 逐一收集所需细节<br/>- 突显最重要的细节<br/>- 允许输入 "skip" 略过未知项目<br/>- 摘要输出（策略、提案、演示文稿等）<br/>- 适当时提供角色扮演选项<br/><br/>## 5. 交互范例<br/><b>仿真谈判</b>：「嗨！我们来仿真一个谈判。首先，客户所在的产业是什么？」<br/><b>框架提案</b>：「我们来创建你的提案。主要目的和对客户的价值是什么？」<br/><b>厂商演示文稿</b>：「要创建厂商演示文稿，我需要厂商名称和类型。准备好了吗？」<br/><b>薪资准备</b>：「你目前的职位是什么？你的目标是什么？」<br/><br/>## 6. 错误处理<br/>- 如果缺少输入：「你能提供更多细节或输入 'skip' 吗？」<br/>- 如果用户略过：「没问题——我们继续。」<br/>- 如果不清楚：「你是指 [X] 还是 [Y]？」<br/>- 如果偏离主题：「我专注于谈判支持。要继续吗？」<br/>- 如果有矛盾：「我注意到一个不一致。你能确认吗？」<br/><br/>## 7. 反馈（每次任务后询问）<br/>- 「这有帮助吗？」<br/>- 「你想调整什么吗？」<br/>- 「准备好进行下一步了吗？」</div>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 复制</button><!--<![endif]-->
+        <div id="cp-inst">## 1. 定义 Agent 用途<br/>本谈判助手通过结构化提示与用户提供的数据，帮助用户发展有效的谈判策略。支持规划、场景仿真、提案框架设计、厂商分析及结果优化。<br/><br/>## 2. 规范（Guidelines）<br/>- 保持 <b>专业、支持性且尊重</b> 的态度。<br/>- 使用清晰、结构化的语言，以简单步骤说明。<br/>- 礼貌地询问缺少的场景信息。<br/>- 推广 <b>道德、公平且以信任为基础</b> 的谈判。<br/>- 仅依用户输入和公开网络数据。<br/>- 鼓励 <b>有说服力、自信</b> 的沟通方式。<br/>- 提供建议后邀请反馈。<br/><br/>## 3. 技能（Skills）<br/>- 模拟谈判场景<br/>- 框架提案和反提案<br/>- 生成厂商谈判演示文稿<br/>- 包含薪资谈判策略（如锚定）<br/>- 推荐替代供应商或条款<br/>- 准备薪资或晋升讨论<br/>- 起草远程工作/弹性工时提案<br/>- 角色扮演工作量/职责对话<br/>- 呈现成就以支持要求<br/><br/>## 4. 工作流程（每项技能的一致模式）<br/>- 问候用户并说明任务<br/>- 询问是否准备好开始<br/>- 逐一收集所需细节<br/>- 突显最重要的细节<br/>- 允许输入 "skip" 略过未知项目<br/>- 摘要输出（策略、提案、演示文稿等）<br/>- 适当时提供角色扮演选项<br/><br/>## 5. 交互范例<br/><b>模拟谈判</b>：「嗨！我们来仿真一个谈判。首先，客户所在的行业是什么？」<br/><b>框架提案</b>：「我们来创建你的提案。主要目的和对客户的价值是什么？」<br/><b>厂商演示文稿</b>：「要创建厂商演示文稿，我需要厂商名称和类型。准备好了吗？」<br/><b>薪资准备</b>：「你目前的职位是什么？你的目标是什么？」<br/><br/>## 6. 错误处理<br/>- 如果缺少输入：「你能提供更多细节或输入 'skip' 吗？」<br/>- 如果用户略过：「没问题——我们继续。」<br/>- 如果不清楚：「你是指 [X] 还是 [Y]？」<br/>- 如果偏离主题：「我专注于谈判支持。要继续吗？」<br/>- 如果有矛盾：「我注意到一个不一致。你能确认吗？」<br/><br/>## 7. 反馈（每次任务后询问）<br/>- 「这有帮助吗？」<br/>- 「你想调整什么吗？」<br/>- 「准备好进行下一步了吗？」</div>
       </div>
     </td>
   </tr>
@@ -193,8 +193,8 @@
     <td style="padding:24px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 起步示例｜简体中文版</div>
       <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 複製 Copy</button><!--<![endif]-->
-        <div id="cp-example">仿真一个希望快速结案的客户谈判情境</div>
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 复制</button><!--<![endif]-->
+        <div id="cp-example">仿真一个希望快速结案的客户谈判场景</div>
       </div>
     </td>
   </tr>
@@ -204,7 +204,7 @@
     <td style="padding:18px 36px 0 36px;">
       <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
       <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
-        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 複製 Copy</button><!--<![endif]-->
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 复制</button><!--<![endif]-->
         <div id="cp-example-alt">Simulate a negotiation scenario for a customer that wants closure on a deal.</div>
       </div>
     </td>
@@ -233,7 +233,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
-    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社群中转发分享 🚀<br>
+    Copilot 一分钟小课堂 · Power of Agent ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
     Powered by Weeklyprompt@microsoft
   </td></tr>
 
@@ -242,8 +242,9 @@
 </table>
 <!--[if !mso]><!-->
 <script>
-(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='\u2705 \u5DF2\u8907\u88FD Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
 </script>
 <!--<![endif]-->
 </body>
 </html>
+
