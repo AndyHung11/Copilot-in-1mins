@@ -60,13 +60,22 @@
   .toolbar .name { font-weight: bold; color: #1f2937; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; }
   .toolbar a { color: #0F6CBD; text-decoration: none; padding: 9px 12px; border: 1px solid #cfe5f6; border-radius: 8px; font-size: 14px; font-weight: 600; white-space: nowrap; }
   .toolbar a:hover { background: #eef4fb; }
+  .mobile-back { display:none; border:1px solid #cfe5f6; background:#fff; color:#0F6CBD; border-radius:8px; font-weight:700; padding:9px 12px; }
   .frame-wrap { flex: 1; overflow: hidden; padding: 16px; min-height: 0; }
   iframe { display: block; width: 100%; height: 100%; border: 1px solid #e3e8ee; background: #fff; border-radius: 4px; }
   .placeholder { display: flex; align-items: center; justify-content: center; height: 100%; color: #9ca3af; font-size: 14px; }
   @media (max-width: 760px) {
-    .app { display: block; overflow-x: hidden; }
+    .app { display: block; height: 100vh; overflow-x: hidden; }
     aside { height: 100vh; }
-    main { display: none; }
+    main { display: none; height: 100vh; }
+    body.mobile-preview-open aside { display: none; }
+    body.mobile-preview-open main { display: flex; }
+    body.mobile-preview-open .toolbar { padding: 10px; flex-wrap: wrap; gap: 6px; }
+    body.mobile-preview-open .mobile-back { display: inline-flex; align-items: center; }
+    body.mobile-preview-open .toolbar .name { flex: 1 1 100%; order: 2; font-size: 14px; }
+    body.mobile-preview-open .toolbar a { padding: 7px 9px; font-size: 12px; }
+    body.mobile-preview-open .frame-wrap { padding: 0; }
+    body.mobile-preview-open iframe { border: 0; border-radius: 0; }
   }
 </style>
 </head>
@@ -111,6 +120,7 @@
 
   <main>
     <div class="toolbar">
+      <button type="button" id="mobile-back" class="mobile-back">← 返回清單</button>
       <span class="name" id="name">— 從左側清單選一篇 —</span>
       <a href="#" id="open-msg" title="用 Outlook 開啟 .eml 檔（可編輯/寄送）。如瀏覽器擋下載，請按下載後雙擊開啟，或改用 Edge。" style="background:#fff4e5;border-color:#ffd591;color:#d46b08;">📧 用 Outlook 開啟</a>
       <a href="#" id="open-new" target="_blank">在新分頁開啟 ↗</a>
@@ -2585,6 +2595,7 @@ const UI = {
     empty: '沒有符合的項目',
     openMsg: '📧 用 Outlook 開啟',
     openNew: '在新分頁開啟 ↗',
+    backList: '← 返回清單',
     download: '⬇️ 全部下載 (.zip)',
     uiSwitchNew: '試用新版',
     sortDesc: '↓ 新→舊',
@@ -2603,6 +2614,7 @@ const UI = {
     empty: 'No matching items',
     openMsg: '📧 Open in Outlook',
     openNew: 'Open in new tab ↗',
+    backList: '← Back to list',
     download: '⬇️ Download all (.zip)',
     uiSwitchNew: 'Try new view',
     sortDesc: '↓ Newest',
@@ -2621,6 +2633,7 @@ const UI = {
     empty: '没有符合的项目',
     openMsg: '📧 用 Outlook 打开',
     openNew: '在新标签页打开 ↗',
+    backList: '← 返回列表',
     download: '⬇️ 全部下载 (.zip)',
     uiSwitchNew: '试用新版',
     sortDesc: '↓ 新→旧',
@@ -2642,6 +2655,8 @@ function applyI18n() {
   document.getElementById('q').placeholder = u.search;
   document.getElementById('open-msg').textContent = u.openMsg;
   document.getElementById('open-new').textContent = u.openNew;
+  const mb = document.getElementById('mobile-back');
+  if (mb) mb.textContent = u.backList;
   const dl = document.getElementById('download-zip');
   if (dl) dl.textContent = u.download;
   const usw = document.querySelector('#uiSwitch .ui-switch-text');
@@ -2673,6 +2688,7 @@ function applyI18n() {
 })();
 
 function key() { return state.type + '_' + state.v; }
+function isMobile() { return window.matchMedia('(max-width: 760px)').matches; }
 function items() {
   const arr = (CATALOG[key()] || []).slice();
   arr.sort((a, b) => {
@@ -2742,6 +2758,7 @@ function load(file, name) {
   msgBtn.href = msgPath;
   msgBtn.setAttribute('download', msgPath.split('/').pop());
   renderList();
+  if (isMobile()) document.body.classList.add('mobile-preview-open');
 }
 
 document.querySelectorAll('.tab').forEach(t2 => {
@@ -2750,6 +2767,7 @@ document.querySelectorAll('.tab').forEach(t2 => {
     t2.classList.add('active');
     state.type = t2.dataset.type;
     state.file = null;
+    document.body.classList.remove('mobile-preview-open');
     document.getElementById('frame').src = 'about:blank';
     document.getElementById('name').textContent = t().placeholder;
     renderList();
@@ -2762,6 +2780,7 @@ document.querySelectorAll('.vbtn').forEach(b => {
     document.querySelectorAll('.vbtn').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     state.v = b.dataset.v;
+    document.body.classList.remove('mobile-preview-open');
     if (state.file) {
       const m = state.file.match(/([AP]\d{3})_/);
       if (m) {
@@ -2784,6 +2803,7 @@ document.querySelectorAll('.langtoggle button').forEach(b => {
     localStorage.setItem('powerofcopilot.lang', state.lang);
     document.querySelectorAll('.langtoggle button').forEach(x => x.classList.toggle('active', x.dataset.lang === state.lang));
     applyI18n();
+    document.body.classList.remove('mobile-preview-open');
     if (state.file) {
       const m = state.file.match(/([AP]\d{3})_/);
       if (m) {
@@ -2803,6 +2823,10 @@ document.querySelectorAll('.langtoggle button').forEach(b => {
 
 document.getElementById('q').addEventListener('input', renderList);
 
+document.getElementById('mobile-back').addEventListener('click', () => {
+  document.body.classList.remove('mobile-preview-open');
+});
+
 document.getElementById('sortBtn').addEventListener('click', () => {
   state.sort = state.sort === 'desc' ? 'asc' : 'desc';
   localStorage.setItem('powerofcopilot.sort', state.sort);
@@ -2817,6 +2841,7 @@ renderList();
 
 // auto-select the first item on initial load + every category/version switch
 function autoSelectFirst() {
+  if (isMobile()) return;
   const first = items().find(it => fileOf(it));
   if (first) {
     const f = fileOf(first);
