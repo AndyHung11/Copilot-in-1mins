@@ -2657,7 +2657,16 @@ function applyI18n() {
   const urlLang = params.get('lang');
   const stored = localStorage.getItem('powerofcopilot.lang');
   const validLangs = ['zh', 'zh-cn', 'en'];
-  const lang = validLangs.includes(urlLang) ? urlLang : (validLangs.includes(stored) ? stored : 'zh');
+  function browserLang(){
+    const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).map(x => (x || '').toLowerCase());
+    for (const l of langs) {
+      if (l === 'zh' || l.startsWith('zh-tw') || l.startsWith('zh-hk') || l.startsWith('zh-mo') || l.includes('hant')) return 'zh';
+      if (l.startsWith('zh-cn') || l.startsWith('zh-sg') || l.includes('hans')) return 'zh-cn';
+      if (l.startsWith('en')) return 'en';
+    }
+    return 'zh';
+  }
+  const lang = validLangs.includes(urlLang) ? urlLang : (validLangs.includes(stored) ? stored : browserLang());
   state.lang = lang;
   const storedSort = localStorage.getItem('powerofcopilot.sort');
   if (storedSort === 'asc' || storedSort === 'desc') state.sort = storedSort;
