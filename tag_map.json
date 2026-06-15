@@ -1287,6 +1287,23 @@
       "tool": [
         "general"
       ]
+    },
+    "A049": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P088": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
     }
   },
   "needs_review": []
