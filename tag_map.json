@@ -1313,6 +1313,23 @@
       "tool": [
         "general"
       ]
+    },
+    "A050": {
+      "task": [
+        "analysis",
+        "communication"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P090": {
+      "task": [
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
     }
   },
   "needs_review": []
