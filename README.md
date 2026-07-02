@@ -1,6 +1,6 @@
 # Copilot 一分鐘小教室 / Copilot in 1 Minute
 
-每週精選的 **Power of Copilot** 教學整理，涵蓋 Agent 與 Prompt。每篇都同時提供繁中／简中（中國本地化）／英文三個語言、v1／v2 兩種版面。
+每週精選的 **Power of Copilot** 教學整理，涵蓋 Agent 與 Prompt。每篇都同時提供繁中／简中／英文三個語言、v1／v2 兩種版面。
 
 A curated archive of weekly **Power of Copilot** tips — Agents and Prompts. Every entry ships in three languages — Traditional Chinese (繁中), Simplified Chinese (简中, localized for Mainland China), and English — and in two layout versions (v1 / v2).
 
