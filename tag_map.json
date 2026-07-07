@@ -1330,6 +1330,24 @@
       "tool": [
         "word"
       ]
+    },
+    "A051": {
+      "task": [
+        "planning",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P091": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []

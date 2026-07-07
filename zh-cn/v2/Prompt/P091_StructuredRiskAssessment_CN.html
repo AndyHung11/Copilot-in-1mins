@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Prompt #P091 — 结构化风险评估</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P091 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">用结构化框架，把杂乱信息里的风险一条条揪出来、评分、排序！</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🛡️ 结构化风险评估</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Structured Risk Assessment</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把信息交给 Copilot，它用一致的框架揪出风险、标类别、评概率与影响、算风险分数并给缓解措施，再附热力图与前三大优先处理项——不夸大、不虚构。</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需要 M365 Copilot 许可</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒完成设置</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你还在这样和 Copilot 对话吗？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🤔</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">知道有风险<br/>但散在一堆文档里<br/>揪不齐也排不出轻重</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🎢</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">凭感觉列风险<br/>不是漏掉关键<br/>就是小题大做</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🧩</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">列了一长串<br/>却没有评分与缓解<br/>决策者看不出重点</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        风险散在一堆信息里、<b>揪不齐也排不出轻重</b>？<b style="color:#5B5FC7;">这个 Prompt</b> 用一致框架把风险逐条列出，标类别、评概率与影响、算风险分数并给缓解措施，再附<b style="color:#5B5FC7;">热力图与前三大优先处理项</b>。<b style="color:#D03A3A;">不夸大、不虚构，让决策有据可依 🛡️</b>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🗂️ 逐条风险登记</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">只抓明确或强烈暗示的风险，标上类别（战略／运营／财务／合规／声誉／技术）。</div></div></td><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🔢 概率 × 影响评分</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">用 1～5 量表评概率与影响，算出风险分数，聚焦最重要的 5～10 个。</div></div></td><td width="33%" valign="top" style="padding:6px;"><div style="background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px; min-height:120px;"><div style="font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;">🌡️ 热力图与优先级</div><div style="font-size:11.5pt; color:#333; line-height:1.6;">附高／中／低数量的热力图、前三大立即处理项，以及信息缺口。</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          <b>🛡️ 结构化风险评估（粘贴进 Copilot；建议用 Researcher Agent）</b><br/><br/>你正在进行一次结构化风险评估。任务：分析所提供的信息，找出其中的风险。框架：为每一条风险提供 | 风险 ID | 描述 | 类别 | 概率 | 影响 | 风险分数 | 缓解措施 |。类别：战略、运营、财务、合规、声誉、技术。概率量表：1＝罕见（&lt;5%）、2＝不太可能（5–25%）、3＝可能（25–50%）、4＝很可能（50–75%）、5＝几乎确定（&gt;75%）。影响量表：1＝可忽略、2＝轻微、3＝中等、4＝重大、5＝严重。风险分数＝概率 × 影响。指示：只识别明确提到或强烈暗示的风险；提供具体可行的缓解措施；不夸大、不虚构不太可能的情形；聚焦最重要的 5～10 个风险；标注所做的假设。输出另含：风险热力图摘要（高／中／低数量）、需立即处理的前三大风险、妨碍完整评估的信息缺口。
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        <b>🛡️ Structured risk assessment (paste into Copilot; best in the Researcher Agent)</b><br/><br/>You are conducting a structured risk assessment. Task: analyze the provided information for risks. Framework: for each risk provide | Risk ID | Description | Category | Likelihood | Impact | Risk Score | Mitigation |. Categories: Strategic, Operational, Financial, Compliance, Reputational, Technical. Likelihood scale: 1 = Rare (&lt;5%), 2 = Unlikely (5–25%), 3 = Possible (25–50%), 4 = Likely (50–75%), 5 = Almost Certain (&gt;75%). Impact scale: 1 = Negligible, 2 = Minor, 3 = Moderate, 4 = Major, 5 = Severe. Risk Score = Likelihood × Impact. Instructions: only identify risks explicitly mentioned or strongly implied; provide specific, actionable mitigations; do not catastrophize or invent unlikely scenarios; focus on the top 5–10 risks; note any assumptions. Output also includes: risk heat-map summary (High/Medium/Low counts), top 3 risks requiring immediate attention, and information gaps that prevent a complete assessment.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🔑 需 M365 Copilot 许可</div><div style="font-size:12pt; color:#444; line-height:1.7;">这个 Prompt 为 Researcher Agent（高级推理）设计，需要具备 M365 Copilot 许可；也可粘贴进 Copilot Chat 搭配你提供的资料执行。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📎 先给足资料</div><div style="font-size:12pt; color:#444; line-height:1.7;">把要评估的文档、合同、项目说明、会议记录一起粘贴或上传，风险识别才会准，概率与影响评分也更可靠。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🎯 校准量表与假设</div><div style="font-size:12pt; color:#444; line-height:1.7;">查看概率／影响是否合理并按实际情形调整；注意它标注的假设与信息缺口，补齐后再重跑一次。</div></td></tr></table></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即用结构化框架评估风险 ▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt 需要具备 <b>Microsoft 365 Copilot 许可</b>。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
+    Inspired by #PromptOfTheWeek · Microsoft 365 Copilot community
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+
