@@ -1348,6 +1348,24 @@
       "tool": [
         "general"
       ]
+    },
+    "A052": {
+      "task": [
+        "learning",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P092": {
+      "task": [
+        "analysis",
+        "communication"
+      ],
+      "tool": [
+        "outlook"
+      ]
     }
   },
   "needs_review": []
