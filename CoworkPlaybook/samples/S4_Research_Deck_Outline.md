@@ -1,17 +1,13 @@
-# Strategic Account QBR Deck Outline
+# Strategic Account Research Deck Outline
 
-> Hand this outline together with the "research summary" to Cowork, and ask it to produce a
-> QBR (Quarterly Business Review) PowerPoint.
+> Hand this outline together with the "research summary" to Cowork, and ask it to produce a QBR (Quarterly Business Review) PowerPoint.
 
 ## Deck Goal
-For the upcoming Quarterly Business Review (QBR), present to the strategic account: our
-understanding of their business, the results of last quarter's collaboration, and a joint
-growth plan for next quarter.
+For the upcoming Quarterly Business Review (QBR), present to the strategic account: our understanding of their business, the results of last quarter's collaboration, and a joint growth plan for next quarter.
 
 ## Slide Structure (8 slides suggested)
 1. **Cover**: account name, QBR quarter, our team
-2. **Account at a glance**: company developments, industry trends and recent major events
-   from the research summary
+2. **Account at a glance**: company developments, industry trends, and recent major events from the research summary
 3. **Challenges the account faces**: 3 pain points from the research relevant to our solution
 4. **Last quarter in review**: delivered items, key metrics achieved (placeholder numbers ok)
 5. **Value & impact**: quantified benefits (cost savings, efficiency gains) mapped to pains
