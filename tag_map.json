@@ -1366,6 +1366,23 @@
       "tool": [
         "outlook"
       ]
+    },
+    "A053": {
+      "task": [
+        "planning",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P093": {
+      "task": [
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []
