@@ -1383,6 +1383,15 @@
       "tool": [
         "general"
       ]
+    },
+    "P094": {
+      "task": [
+        "planning",
+        "analysis"
+      ],
+      "tool": [
+        "outlook"
+      ]
     }
   },
   "needs_review": []
