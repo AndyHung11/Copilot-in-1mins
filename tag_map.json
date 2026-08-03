@@ -1392,7 +1392,34 @@
       "tool": [
         "outlook"
       ]
-    }
-  },
-  "needs_review": []
+      },
+    "A054": {
+        "task": [
+          "planning",
+          "learning"
+        ],
+        "tool": [
+          "general"
+        ]
+      },
+    "P095": {
+        "task": [
+          "writing",
+          "analysis"
+        ],
+        "tool": [
+          "powerpoint"
+        ]
+      },
+    "P096": {
+        "task": [
+          "writing",
+          "automation"
+        ],
+        "tool": [
+          "powerpoint"
+        ]
+      }
+    },
+    "needs_review": []
 }

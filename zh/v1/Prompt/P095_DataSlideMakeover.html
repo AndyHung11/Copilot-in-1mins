@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分鐘小教室：Power of Prompt #P095 — 數據簡報大改造</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一 分鐘小教室</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P095 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">把落落長的數據簡報，改造成一眼就懂的重點畫面</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每週一個立即可用的 Copilot Prompt 範例！</b><br />從文件撰寫、會議摘要、創意發想，到資料分析，把這些提示詞放進你的 Copilot 試試看。<br /><b>💡 Tips：</b>提示詞是給 Copilot 的「指令」 — 越清楚、越具體，產出就越貼近你要的結果。歡迎依需求調整、加上你的情境，並 <b>分享給同事一起共學</b>！
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本 期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">📊 數據簡報大改造</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Data Slide Makeover</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 文字換圖表 → 一頁一重點 → So-What 洞察 → 品牌配色一致 📊
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          主管的眼神從第一張數據表就開始渙散——密密麻麻的數字、看不出重點的表格，講到第五頁大家已經在滑手機。你明明花了一整晚整理數據，卻沒人記得你到底想說什麼。<br/><br/>這個 Prompt 直接把整份簡報丟給 Copilot 重新設計：能換圖表的文字就換成圖表，每張數據挑出最適合的呈現方式；再幫每個洞察補一句「所以呢？」，讓數字有意義而不只是好看。<br/><br/>複雜的頁面會被拆成一頁一訊息，前面加上主管摘要頁，整份簡報配色與風格統一。你要的不是更多數據，是讓人一眼就記住重點——這正是它的拿手戲。
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示詞範本（繁體中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 複製</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>📊 本週 Prompt（貼進 PowerPoint 裡的 Copilot）</b><br/><br/>把這份數據量龐大的簡報改造到影響力最大化：1）盡可能把文字換成視覺化圖像，2）為每組數據建議最合適的圖表類型，3）加強視覺層次與重點強調，4）為每個洞察寫一句「所以呢？」的結論，5）簡化複雜投影片（每頁只留一個訊息），6）加入主管摘要投影片，7）確保整份簡報配色一致、符合品牌風格。以清晰易懂與令人印象深刻為優先。<br/><br/><i>可在：PowerPoint 中使用。</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>📊 Prompt of the Week (paste into Copilot in PowerPoint)</b><br/><br/>Transform this data-heavy presentation for maximum impact: 1) Replace text with visuals where possible, 2) Suggest best chart types for each dataset, 3) Add visual hierarchy and emphasis, 4) Create 'so what' statements for each insight, 5) Simplify complex slides (one message per slide), 6) Add executive summary slides, 7) Ensure color consistency and brand alignment. Prioritize clarity and memorability.<br/><br/><i>Try it in: PowerPoint.</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用小撇步</b><br />
+            1. <b>🖇️ 先貼上或上傳整份簡報</b> — 再貼這段 Prompt，Copilot 才能看到完整內容改造。<br/>2. <b>🎯 想聚焦特定章節</b> — 可先說「只改造第 3–8 頁」再貼 Prompt。<br/>3. <b>🔁 改完務必覆核</b> — 數據來源與數字正確性仍需要你自己確認。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🔑 需 M365 Copilot 授權
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+
