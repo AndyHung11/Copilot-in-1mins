@@ -5,6 +5,7 @@
 !*.html
 !*.eml
 !.gitignore
+!.nojekyll
 !README.md
 !robots.txt
 !PowerOfCopilot.zip
