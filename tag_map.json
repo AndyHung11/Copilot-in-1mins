@@ -1419,7 +1419,34 @@
         "tool": [
           "powerpoint"
         ]
-      }
-    },
-    "needs_review": []
-}
+          },
+        "A055": {
+            "task": [
+              "strategy",
+              "communication"
+            ],
+            "tool": [
+              "general"
+            ]
+          },
+        "P097": {
+            "task": [
+              "analysis",
+              "writing"
+            ],
+            "tool": [
+              "general"
+            ]
+          },
+        "P098": {
+            "task": [
+              "automation",
+              "strategy"
+            ],
+            "tool": [
+              "general"
+            ]
+          }
+        },
+        "needs_review": []
+    }
