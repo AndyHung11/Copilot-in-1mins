@@ -5,6 +5,7 @@
 !*.html
 !*.eml
 !.gitignore
+!.gitattributes
 !.nojekyll
 !README.md
 !robots.txt

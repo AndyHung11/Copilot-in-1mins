@@ -1,0 +1,17 @@
+# 保護二進位資產，避免 Windows 上 core.autocrlf=true 在 checkout 時插入 CRLF 破壞檔案
+*.pptx  binary
+*.docx  binary
+*.xlsx  binary
+*.pdf   binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+
+# 文字資產統一以 LF 儲存
+*.html  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
