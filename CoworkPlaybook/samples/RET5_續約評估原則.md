@@ -12,6 +12,15 @@
 
 > 今日日期以 2026/08/20 為基準計算剩餘天數。
 
+## 一之一、採購聯絡人對照
+
+| 負責採購 | 電子郵件 |
+| --- | --- |
+| 黃柏翰 | morganbrown5@M365CPI90050711.onmicrosoft.com |
+| 林志明 | cameronallen12@M365CPI90050711.onmicrosoft.com |
+| 翁冠宇 | alexwalker2@M365CPI90050711.onmicrosoft.com |
+| 採購主管 Andy | andy@M365CPI90050711.onmicrosoft.com |
+
 ## 二、續約評估項目（會議需逐項討論）
 
 1. **供貨穩定度**：過去一年缺貨次數、平均交期達成率。

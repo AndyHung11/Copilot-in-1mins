@@ -12,6 +12,15 @@
 
 > Calculate remaining days against today's date of 2026/08/20.
 
+## 1a. Buyer contact directory
+
+| Buyer | Email |
+| --- | --- |
+| Huang Po-Han | morganbrown5@M365CPI90050711.onmicrosoft.com |
+| Lin Chih-Ming | cameronallen12@M365CPI90050711.onmicrosoft.com |
+| Weng Kuan-Yu | alexwalker2@M365CPI90050711.onmicrosoft.com |
+| Procurement manager Andy | andy@M365CPI90050711.onmicrosoft.com |
+
 ## 2. Assessment criteria (each must be discussed in the meeting)
 
 1. **Supply reliability**: stock-out incidents over the past year, on-time delivery rate.
