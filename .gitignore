@@ -12,6 +12,11 @@
 !PowerOfCopilot.zip
 !PowerPoint_Skills/**/SKILL.md
 !PowerPoint_Skills/PowerPoint_Skills_Examples.zip
+# Cowork 練習手冊：站台要提供簡報與範例檔下載，需明確放行
+!CoworkPlaybook/*.pptx
+!CoworkPlaybook/*.zip
+!CoworkPlaybook/samples/**
+!CoworkPlaybook/samples_mfgx/**
 # 工作中暫存目錄一律排除
 _trash/
 _bak_*/
