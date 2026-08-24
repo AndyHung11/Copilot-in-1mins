@@ -1438,15 +1438,6 @@
         "general"
       ]
     },
-    "P098": {
-      "task": [
-        "automation",
-        "strategy"
-      ],
-      "tool": [
-        "general"
-      ]
-    },
     "A056": {
       "task": [
         "analysis",
@@ -1466,7 +1457,7 @@
         "general"
       ]
     },
-    "P099": {
+    "P098": {
       "task": [
         "writing"
       ],
@@ -1474,7 +1465,7 @@
         "word"
       ]
     },
-    "P100": {
+    "P099": {
       "task": [
         "analysis"
       ],
