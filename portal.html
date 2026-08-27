@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Power of Copilot</title>
+<link rel="icon" type="image/png" href="copilot-logo.png" />
+<script>
+  (() => {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    let saved = null;
+    try { saved = localStorage.getItem("copilotPortalTheme"); } catch (_) {}
+    const theme =
+      param || saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #6d28d9;
+  --cp-accent-hover: #5b21b6;
+  --cp-accent-soft: rgba(109, 40, 217, 0.09);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(109, 40, 217, 0.14);
+  --cp-brand-purple: #7c3aed;
+  --cp-brand-blue: #0078d4;
+  --cp-gradient: linear-gradient(105deg, var(--cp-brand-purple), var(--cp-brand-blue));
+  --cp-gradient-soft: linear-gradient(135deg, var(--cp-accent-soft), var(--cp-highlight), color-mix(in srgb, var(--cp-link) 10%, var(--cp-surface)));
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #c4b5fd;
+  --cp-accent-hover: #ddd6fe;
+  --cp-accent-soft: rgba(167, 139, 250, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(167, 139, 250, 0.18);
+  --cp-brand-purple: #a78bfa;
+  --cp-brand-blue: var(--cp-link);
+}
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--cp-bg); }
+body {
+  min-width: 280px; min-height: 100vh; margin: 0;
+  background:
+    radial-gradient(circle at 12% 12%, var(--cp-accent-soft), transparent 34%),
+    radial-gradient(circle at 88% 22%, color-mix(in srgb, var(--cp-link) 13%, transparent), transparent 32%),
+    linear-gradient(var(--cp-sheen), var(--cp-sheen)),
+    var(--cp-bg);
+  color: var(--cp-text);
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+a { color: inherit; }
+.shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--cp-overlay); border-bottom: 1px solid var(--cp-border);
+  backdrop-filter: blur(18px);
+}
+.topbar::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--cp-gradient);
+}
+.topbar-inner {
+  min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand img { width: 38px; height: 38px; object-fit: contain; flex: none; }
+.brand-copy { min-width: 0; }
+.brand-name { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.brand-sub { margin-top: 2px; color: var(--cp-text-muted); font-size: 12px; }
+.topbar-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+.resource-count {
+  flex: none; padding: 7px 10px; border: 1px solid var(--cp-border);
+  border-radius: 0.625rem; color: var(--cp-text-muted); font-size: 12px;
+  background: var(--cp-surface);
+}
+.theme-toggle {
+  min-width: 104px; height: 36px; padding: 0 11px; display: inline-flex; align-items: center;
+  justify-content: center; gap: 7px; border: 1px solid var(--cp-border); border-radius: 0.625rem;
+  background: var(--cp-surface); color: var(--cp-text); font: 600 12px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+.theme-toggle:hover { transform: translateY(-1px); border-color: var(--cp-border-strong); box-shadow: 0 0 2px var(--cp-border); }
+.theme-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
+.theme-icon { width: 18px; text-align: center; font-size: 16px; line-height: 1; }
+.nav-toggle {
+  width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--cp-border);
+  border-radius: 0.625rem; background: var(--cp-surface); color: var(--cp-text); cursor: pointer;
+}
+.nav-toggle:hover { border-color: var(--cp-border-strong); }
+.nav-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
+.nav-toggle svg { width: 20px; height: 20px; stroke-width: 2.25; }
+.hub-layout {
+  width: min(1480px, calc(100% - 48px)); margin: 0 auto; display: grid;
+  grid-template-columns: 260px minmax(0, 1fr); gap: 36px; align-items: start;
+}
+.sidebar {
+  position: sticky; top: 92px; max-height: calc(100vh - 116px); overflow: hidden auto;
+  border-right: 1px solid var(--cp-border); padding: 8px 20px 24px 0;
+}
+.sidebar-title { margin: 0 0 16px; color: var(--cp-text-muted); font-size: 12px; font-weight: 700; }
+.sidebar-nav { display: grid; gap: 18px; }
+.sidebar-topic { min-width: 0; }
+.sidebar-topic-toggle {
+  width: 100%; display: flex; align-items: center; gap: 10px; padding: 0; border: 0;
+  background: transparent; color: var(--cp-text); font: 700 14px/1.35 "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left; cursor: pointer;
+}
+.sidebar-topic-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 3px; border-radius: 0.625rem; }
+.sidebar-topic-copy { min-width: 0; flex: 1; }
+.sidebar-chevron { width: 16px; height: 16px; flex: none; transition: transform 160ms ease; }
+.sidebar-topic.is-collapsed .sidebar-chevron { transform: rotate(-90deg); }
+.sidebar-number {
+  width: 30px; height: 30px; flex: none; display: grid; place-items: center; border-radius: 0.625rem;
+  background: var(--cp-gradient-soft); color: var(--cp-accent); font: 700 11px Consolas, "Courier New", Courier, monospace;
+}
+.sidebar-websites { display: grid; gap: 4px; margin: 7px 0 0 40px; }
+.sidebar-topic.is-collapsed .sidebar-websites { display: none; }
+.sidebar-website {
+  padding: 5px 7px; border-radius: 0.625rem; color: var(--cp-text-muted); font-size: 12px;
+  line-height: 1.35; text-decoration: none;
+}
+.sidebar-website:hover { background: var(--cp-accent-soft); color: var(--cp-accent); }
+.sidebar-website.is-pending { color: var(--cp-text-soft); cursor: default; }
+main { min-width: 0; padding: 56px 0 72px; }
+main .shell { width: 100%; }
+.intro { max-width: 720px; margin-bottom: 36px; }
+.eyebrow {
+  margin: 0 0 10px; color: var(--cp-accent); font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0;
+}
+h1 {
+  margin: 0; font-size: clamp(32px, 5vw, 54px); line-height: 1.08; letter-spacing: 0;
+  color: var(--cp-accent); background: var(--cp-gradient); background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.intro p { margin: 18px 0 0; color: var(--cp-text-muted); font-size: 16px; line-height: 1.7; }
+.topic-list { display: grid; gap: 44px; }
+.topic-section {
+  min-width: 0; scroll-margin-top: 92px;
+}
+.topic-header {
+  display: flex; align-items: center; gap: 16px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--cp-border);
+}
+.topic-index {
+  width: 36px; height: 36px; flex: none; display: grid; place-items: center;
+  border-radius: 0.625rem; background: var(--cp-gradient-soft);
+  color: var(--cp-accent); font: 700 13px Consolas, "Courier New", Courier, monospace;
+}
+.topic-heading { min-width: 0; }
+.topic-kicker { color: var(--cp-accent); font-size: 12px; font-weight: 700; }
+.topic-heading h2 { margin: 2px 0 0; font-size: 22px; line-height: 1.25; }
+.website-list {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
+  margin-top: 20px;
+}
+.product-card {
+  position: relative; width: 100%; height: 200px; min-width: 0; display: flex; align-items: flex-start;
+  gap: 18px; padding: 24px; border: 1px solid var(--cp-border); border-radius: 16px;
+  background: var(--cp-surface); text-decoration: none;
+  box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  scroll-margin-top: 92px;
+}
+.product-card:hover, .product-card:focus-visible {
+  transform: translateY(-3px); border-color: var(--cp-border-strong); box-shadow: var(--cp-shadow);
+}
+.product-card:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 3px; }
+.product-card.is-pending { cursor: default; background: var(--cp-surface-soft); }
+.product-card.is-pending:hover { transform: none; border-color: var(--cp-border); box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+.pending-label {
+  position: absolute; right: 20px; bottom: 20px; padding: 7px 10px;
+  border: 1px solid var(--cp-border); border-radius: 0.625rem;
+  background: var(--cp-surface); color: var(--cp-text-muted); font-size: 12px; font-weight: 700;
+}
+.card-visual {
+  width: 64px; height: 64px; flex: none; display: grid; place-items: center;
+  border: 1px solid var(--cp-border); border-radius: 16px; background: var(--cp-gradient-soft);
+  color: var(--cp-accent); font-size: 32px;
+}
+.card-body { min-width: 0; }
+.card-title { margin: 0; font-size: 21px; line-height: 1.35; letter-spacing: 0; white-space: pre-line; }
+.card-description {
+  margin: 11px 0 0; overflow: hidden; color: var(--cp-text-muted); font-size: 14px; line-height: 1.6;
+  display: -webkit-box; -webkit-box-orient: vertical; line-clamp: 2; -webkit-line-clamp: 2;
+}
+.card-arrow {
+  position: absolute; right: 20px; bottom: 20px; width: 40px; height: 40px; display: grid; place-items: center;
+  border: 1px solid var(--cp-border);
+  border-radius: 0.625rem; background: var(--cp-gradient); color: var(--cp-accent-fg);
+}
+.card-arrow svg { width: 23px; height: 23px; stroke-width: 2.75; }
+.experience-card {
+  grid-column: span 2; display: grid; grid-template-columns: minmax(190px, 0.8fr) minmax(0, 1.2fr);
+  gap: 24px; align-items: center;
+}
+.experience-card:hover { transform: none; border-color: var(--cp-border); box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+.experience-copy { min-width: 0; }
+.experience-copy .card-description { display: block; margin-top: 10px; }
+.experience-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.experience-link {
+  min-width: 0; min-height: 116px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 8px; padding: 10px 6px; border: 2px solid transparent;
+  border-radius: 0.625rem;
+  background:
+    var(--cp-gradient-soft) padding-box,
+    linear-gradient(var(--cp-surface), var(--cp-surface)) padding-box,
+    var(--cp-gradient) border-box;
+  color: var(--cp-text); text-align: center; text-decoration: none; cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.experience-link:hover { transform: translateY(-3px); box-shadow: var(--cp-shadow); }
+.experience-link:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
+.experience-icon { font-size: 30px; line-height: 1; }
+.experience-name { font-size: 12px; font-weight: 700; line-height: 1.25; }
+.experience-link svg { width: 15px; height: 15px; color: var(--cp-link); stroke-width: 2.5; }
+footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: var(--cp-text-soft); font-size: 12px; }
+@media (max-width: 720px) {
+  .shell { width: min(100% - 28px, 1180px); }
+  .topbar-inner { min-height: 62px; }
+  .brand img { width: 34px; height: 34px; }
+  .brand-sub { display: none; }
+  .topbar-actions { gap: 6px; }
+  .resource-count { display: none; }
+  .nav-toggle { display: grid; }
+  .theme-toggle { min-width: 38px; width: 38px; padding: 0; }
+  .theme-label { display: none; }
+  .hub-layout { width: min(100% - 28px, 1180px); display: block; }
+  .sidebar {
+    position: fixed; inset: 62px auto 0 0; z-index: 9; width: min(264px, calc(100vw - 72px));
+    max-height: none; padding: 24px 16px; border-right: 1px solid var(--cp-border);
+    background: var(--cp-surface); box-shadow: var(--cp-shadow); transform: translateX(-105%);
+    transition: transform 180ms ease;
+  }
+  .hub-layout:not(.nav-collapsed) .sidebar { transform: translateX(0); }
+  main { padding: 36px 0 52px; }
+  .intro { margin-bottom: 26px; }
+  h1 { font-size: 34px; }
+  .intro p { font-size: 14px; }
+  .topic-list { gap: 36px; }
+  .topic-heading h2 { font-size: 19px; }
+  .website-list { grid-template-columns: 1fr; }
+  .product-card { height: 200px; gap: 14px; padding: 18px; }
+  .experience-card { grid-column: span 1; height: auto; min-height: 330px; grid-template-columns: 1fr; gap: 18px; }
+  .experience-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .experience-link { min-height: 94px; }
+  .card-visual { width: 52px; height: 52px; border-radius: 0.625rem; font-size: 26px; }
+  .card-title { font-size: 18px; }
+  .card-description { margin-top: 8px; font-size: 12px; }
+  .card-arrow { right: 16px; bottom: 16px; width: 34px; height: 34px; }
+  .card-arrow svg { width: 19px; height: 19px; }
+}
+@media (min-width: 721px) and (max-width: 960px) {
+  .hub-layout { width: min(100% - 36px, 1180px); grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
+  .website-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 961px) and (max-width: 1200px) {
+  .website-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 721px) {
+  .nav-toggle { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-card { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <div class="brand">
+      <img src="copilot-logo.png" alt="Copilot" />
+      <div class="brand-copy">
+        <div class="brand-name">Power of Copilot</div>
+        <div class="brand-sub">探索、練習，然後把 Copilot 帶進日常工作</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <div class="resource-count" id="resourceCount" aria-live="polite"></div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="sidebar" aria-expanded="true" title="收合主題導覽">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <button class="theme-toggle" id="themeToggle" type="button">
+        <span class="theme-icon" aria-hidden="true"></span>
+        <span class="theme-label"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="hub-layout nav-collapsed" id="hubLayout">
+  <aside class="sidebar" id="sidebar" aria-label="主題導覽">
+    <p class="sidebar-title">主題與網站</p>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+  </aside>
+  <main>
+    <div class="shell">
+    <section class="intro" aria-labelledby="pageTitle">
+      <p class="eyebrow">Copilot Learning Hub</p>
+      <h1 id="pageTitle">今天想從哪裡開始？</h1>
+      <p>選擇一個主題開始探索。這裡會持續加入新的體驗與練習資源，向下捲動即可瀏覽全部內容。</p>
+    </section>
+    <div class="topic-list" id="topicList" aria-label="Copilot 體驗與學習資源"></div>
+    </div>
+  </main>
+</div>
+<footer>
+  <div class="shell">Microsoft 365 Copilot 學習入口</div>
+</footer>
+<script>
+const TOPICS = [
+  {
+    title: "Copilot Chat Basic",
+    kicker: "情境練習",
+    websites: [
+      {
+        title: "基礎練習手冊",
+        kicker: "基礎練習",
+        description: "從日常問答到內容生成，熟悉 Copilot Chat 的核心能力。",
+        icon: "📘",
+        href: "Basic/",
+      },
+      {
+        title: "進階練習手冊",
+        kicker: "進階實戰",
+        description: "練習多輪迭代、資料分析與進階提示技巧。",
+        icon: "🚀",
+        href: "Pro/",
+      },
+    ],
+  },
+  {
+    title: "Copilot 一分鐘小教室",
+    kicker: "快速學習",
+    websites: [
+      {
+        title: "Copilot 一分鐘小教室",
+        kicker: "每週精選",
+        description: "用一分鐘掌握實用 Agent、提示詞與工作方法。",
+        icon: "⚡",
+        href: "index_v2.html",
+      },
+      {
+        title: "Copilot Agent\n互動體驗",
+        description: "四種探索場景，同樣的 Agent 建立體驗，馬上開始探索！",
+        variants: [
+          { title: "遊樂園", icon: "🎡", href: "https://andyhung11.github.io/copilot-agent-building/playground/" },
+          { title: "星球", icon: "🪐", href: "https://andyhung11.github.io/copilot-agent-building/planet/" },
+          { title: "博覽會", icon: "🏛️", href: "https://andyhung11.github.io/copilot-agent-building/expo/" },
+          { title: "辦公大樓", icon: "🏢", href: "https://andyhung11.github.io/copilot-agent-building/" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Pre-built Agent",
+    kicker: "內建能力",
+    websites: [
+      {
+        title: "Pre-built Agent\n捷運路網圖",
+        kicker: "能力導覽",
+        description: "透過捷運路網圖，探索 Pre-built Agent 的能力與應用場景。",
+        icon: "🚉",
+        href: "",
+      },
+    ],
+  },
+  {
+    title: "Agent Builder",
+    kicker: "專屬助理",
+    websites: [
+      {
+        title: "Agent Builder\n專屬助理藏寶圖",
+        kicker: "建立指南",
+        description: "沿著藏寶圖路線，探索 Agent Builder 專屬助理的建立方式。",
+        icon: "🧭",
+        href: "",
+      },
+    ],
+  },
+  {
+    title: "Copilot Cowork",
+    kicker: "協作實戰",
+    websites: [
+      {
+        title: "Copilot Cowork\n練習手冊",
+        kicker: "工作流程練習",
+        description: "透過跨角色工作情境，練習以 Copilot 推進協作任務。",
+        icon: "🤝",
+        href: "CoworkPlaybook/",
+      },
+    ],
+  },
+];
+
+const topicList = document.getElementById("topicList");
+const hubLayout = document.getElementById("hubLayout");
+const navToggle = document.getElementById("navToggle");
+const themeToggle = document.getElementById("themeToggle");
+function syncThemeToggle() {
+  const dark = document.documentElement.dataset.theme === "dark";
+  const action = dark ? "切換為淺色模式" : "切換為深色模式";
+  themeToggle.querySelector(".theme-icon").textContent = dark ? "☀" : "☾";
+  themeToggle.querySelector(".theme-label").textContent = dark ? "淺色模式" : "深色模式";
+  themeToggle.setAttribute("aria-label", action);
+  themeToggle.setAttribute("aria-pressed", String(dark));
+  themeToggle.title = action;
+}
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("copilotPortalTheme", next); } catch (_) {}
+  syncThemeToggle();
+});
+syncThemeToggle();
+const websiteCount = TOPICS.reduce((total, topic) =>
+  total + topic.websites.reduce((count, product) => count + (product.variants?.length || 1), 0), 0);
+document.getElementById("resourceCount").textContent = `${TOPICS.length} 個主題 · ${websiteCount} 個網站`;
+topicList.innerHTML = TOPICS.map((topic, topicIndex) => `
+  <section class="topic-section" id="topic-section-${topicIndex}" aria-labelledby="topic-${topicIndex}">
+    <div class="topic-header">
+      <div class="topic-index" aria-hidden="true">${String(topicIndex + 1).padStart(2, "0")}</div>
+      <div class="topic-heading">
+        <div class="topic-kicker">${topic.kicker}</div>
+        <h2 id="topic-${topicIndex}">${topic.title}</h2>
+      </div>
+    </div>
+    <div class="website-list">
+      ${topic.websites.map((product, productIndex) => product.variants ? `
+        <article class="product-card experience-card" id="site-${topicIndex}-${productIndex}">
+          <div class="experience-copy">
+            <h3 class="card-title">${product.title}</h3>
+            <p class="card-description">${product.description}</p>
+          </div>
+          <div class="experience-links" aria-label="${product.title}入口">
+            ${product.variants.map(variant => `
+              <a class="experience-link" href="${variant.href}" target="_blank" rel="noopener noreferrer" aria-label="開啟 Agent ${variant.title}（新分頁）">
+                <span class="experience-icon" aria-hidden="true">${variant.icon}</span>
+                <span class="experience-name">${variant.title}</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+              </a>
+            `).join("")}
+          </div>
+        </article>
+      ` : product.href ? `
+        <a class="product-card" id="site-${topicIndex}-${productIndex}" href="${product.href}" target="_blank" rel="noopener noreferrer" aria-label="開啟 ${product.title}（新分頁）">
+          <div class="card-visual" aria-hidden="true">${product.icon}</div>
+          <div class="card-body">
+            <h3 class="card-title">${product.title}</h3>
+            <p class="card-description">${product.description}</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17 17 7"></path>
+              <path d="M7 7h10v10"></path>
+            </svg>
+          </span>
+        </a>
+      ` : `
+        <div class="product-card is-pending" aria-label="${product.title}，連結待補">
+          <div class="card-visual" aria-hidden="true">${product.icon}</div>
+          <div class="card-body">
+            <h3 class="card-title">${product.title}</h3>
+            <p class="card-description">${product.description}</p>
+          </div>
+          <span class="pending-label">連結待補</span>
+        </div>
+      `).join("")}
+    </div>
+  </section>
+`).join("");
+document.getElementById("sidebarNav").innerHTML = TOPICS.map((topic, topicIndex) => `
+  <div class="sidebar-topic">
+    <button class="sidebar-topic-toggle" type="button" aria-expanded="true" aria-controls="sidebar-sites-${topicIndex}" title="展開或收合 ${topic.title}">
+      <span class="sidebar-number">${String(topicIndex + 1).padStart(2, "0")}</span>
+      <span class="sidebar-topic-copy">${topic.title}</span>
+      <svg class="sidebar-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+    </button>
+    <div class="sidebar-websites" id="sidebar-sites-${topicIndex}">
+      ${topic.websites.map((product, productIndex) => product.href || product.variants
+        ? `<a class="sidebar-website" href="#site-${topicIndex}-${productIndex}">${product.title}</a>`
+        : `<span class="sidebar-website is-pending">${product.title}</span>`).join("")}
+    </div>
+  </div>
+`).join("");
+document.getElementById("sidebarNav").addEventListener("click", event => {
+  const toggle = event.target.closest(".sidebar-topic-toggle");
+  if (!toggle) return;
+  const topic = toggle.closest(".sidebar-topic");
+  topic.classList.toggle("is-collapsed");
+  toggle.setAttribute("aria-expanded", String(!topic.classList.contains("is-collapsed")));
+});
+function syncNavToggle() {
+  const expanded = !hubLayout.classList.contains("nav-collapsed");
+  navToggle.setAttribute("aria-expanded", String(expanded));
+  navToggle.title = expanded ? "收合主題導覽" : "展開主題導覽";
+}
+navToggle.addEventListener("click", () => {
+  hubLayout.classList.toggle("nav-collapsed");
+  syncNavToggle();
+});
+document.getElementById("sidebarNav").addEventListener("click", event => {
+  if (window.innerWidth <= 720 && event.target.closest("a")) {
+    hubLayout.classList.add("nav-collapsed");
+    syncNavToggle();
+  }
+});
+if (!window.matchMedia("(max-width: 720px)").matches) hubLayout.classList.remove("nav-collapsed");
+syncNavToggle();
+</script>
+</body>
+</html>
