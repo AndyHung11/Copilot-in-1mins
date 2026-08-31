@@ -13,12 +13,11 @@
 !PowerPoint_Skills/**/SKILL.md
 !PowerPoint_Skills/PowerPoint_Skills_Examples.zip
 # Cowork 練習手冊：站台要提供簡報與範例檔下載，需明確放行
+# ⚠️ 本檔是白名單制（第 2 行 * 全排除），新增資產若沒有 ! 規則會被靜默忽略。
+# samples_* 用萬用字元一次涵蓋八個產業，日後新增產業不必再改這裡。
 !CoworkPlaybook/*.pptx
 !CoworkPlaybook/*.zip
-!CoworkPlaybook/samples/**
-!CoworkPlaybook/samples_mfgx/**
-!CoworkPlaybook/samples_tel/**
-!CoworkPlaybook/samples_air/**
+!CoworkPlaybook/samples_*/**
 # 工作中暫存目錄一律排除
 _trash/
 _bak_*/
