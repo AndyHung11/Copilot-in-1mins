@@ -1472,6 +1472,15 @@
       "tool": [
         "general"
       ]
+    },
+    "A058": {
+      "task": [
+        "planning",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []
