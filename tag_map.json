@@ -1481,6 +1481,16 @@
       "tool": [
         "general"
       ]
+    },
+    "P100": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "word",
+        "general"
+      ]
     }
   },
   "needs_review": []

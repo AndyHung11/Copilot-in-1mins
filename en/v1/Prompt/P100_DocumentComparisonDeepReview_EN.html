@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Copilot 1-Min Tips: Power of Prompt #P099 — Systematic Document Comparison</title>
+<title>Copilot 1-Min Tips: Power of Prompt #P100 — Document Comparison - Deep Review</title>
 <!--[if mso]>
 <style type="text/css">
 table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
@@ -35,8 +35,8 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
               <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
             </td>
             <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
-              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">Issue #P099</div>
-              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">Put two contracts side by side — get every difference, every conflict, ranked by how much it matters</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">Issue #P100</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">Line-by-line review for contracts, specs, and compliance docs: which obligations, SLAs, and termination terms quietly changed</div>
             </td>
           </tr>
         </table>
@@ -54,11 +54,11 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ TITLE ═══ -->
       <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">THIS ISSUE · PROMPT</div>
-        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">📑 Systematic Document Comparison</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🔬 Document Comparison - Deep Review</div>
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;"></div>
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
           <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
-            ✨ Identify the doc type → map every section → flag conflicts → rank by severity 📑
+            ✨ Present／Missing／Modified per section → audits obligations and SLAs → three-tier risk ranking 🔬
           </td></tr>
         </table>
       </td></tr>
@@ -66,7 +66,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ STORY ═══ -->
       <tr><td style="padding:18px 32px 0 32px;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
-          The client sends the revised contract back with one line of context: &ldquo;minor adjustments.&rdquo; You open both files side by side and start scrolling.<br/><br/>By page fourteen you've forgotten whether the payment terms on page six actually changed. Worse, some sections have vanished and others are new, so just confirming which version contains a given clause means flipping back and forth twice. And the genuinely dangerous difference &mdash; version A says 30 days, version B says 45 &mdash; is exactly the one that slips past tired eyes.<br/><br/>This prompt turns comparison into a fixed procedure: identify the document type, list every section in each document, mark each section's presence status, look only at substantive text differences (never formatting), then call out contradictions separately and rank everything from critical conflicts down to minor variations. Where it isn't sure, it says &ldquo;Requires human review&rdquo; rather than guessing.
+          Most of the time you just want to know what changed between two versions &mdash; and for that, <b>P099</b> is enough: fast, clean, done.<br/><br/>But some documents can't be reviewed on &ldquo;what's different&rdquo; alone. A supplier returns a revised contract. A Tier-1 spec has to be checked against OEM requirements. SLAs and compliance clauses need validating before SOP. What actually hurts you there isn't changed wording &mdash; it's <b>an obligation quietly removed</b>, an <b>SLA that slid from 99.9% to 99.5%</b>, a <b>termination clause that gained a new unilateral exit for the other side</b>. Those hide inside sections that exist in both versions, so presence-checking alone will never surface them.<br/><br/>This version adds four safeguards. First, section status moves from &ldquo;in A / in B / in both&rdquo; to <b>Present／Missing／Modified</b> &mdash; changed sections announce themselves instead of waiting to be found in the differences column. Second, it no longer leaves &ldquo;substantive difference&rdquo; to the model's judgement; it supplies a named checklist: contradictions, conflicts, <b>new or removed obligations, requirements, constraints, SLAs, termination terms, and compliance statements</b>. Third, the no-inference rule widens from &ldquo;don't read meaning into formatting&rdquo; to <b>don't infer intent or business rationale</b>, and it explicitly <b>forbids summarizing or rewriting</b> &mdash; the moment a clause gets summarized, legal precision is gone. Fourth, ranking goes from two tiers to <b>Critical → Medium → Minor</b>, so the middle ground stops getting flattened.<br/><br/>The cost is a longer run and a longer output. So pick by situation: routine version diffs go to P099; anything carrying obligations or risk comes here.
         </div>
       </td></tr>
 
@@ -82,7 +82,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
-              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>📑 Prompt of the Week (paste into Copilot Chat &mdash; Web)</b><br/><br/>You are analyzing two documents for comparison.<br/><br/><b>Task:</b> Compare these documents systematically.<br/><br/><b>Instructions:</b><br/>1. First, identify the document type (contract, specification, report, etc.)<br/>2. List all sections/headings present in EACH document<br/>3. For each section, note:<br/>&nbsp;&nbsp;&nbsp;- Present in Doc A only<br/>&nbsp;&nbsp;&nbsp;- Present in Doc B only<br/>&nbsp;&nbsp;&nbsp;- Present in both (compare content)<br/>4. Highlight substantive differences (not formatting)<br/>5. Flag any contradictions or conflicts<br/><br/><b>Output Format:</b> Use a structured table with columns: | Section | Doc A Status | Doc B Status | Key Differences |<br/><br/><b>Constraints:</b><br/>- Focus on explicit text content only<br/>- Do not infer meaning from formatting<br/>- If uncertain about a difference, state &quot;Requires human review&quot;<br/>- List findings by importance (critical &rarr; minor)<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i></div>
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🔬 Prompt of the Week (upload both documents first, then paste)</b><br/><br/>Analyze and systematically compare Document A and Document B.<br/><br/><b>Instructions:</b><br/>Identify the document type for each (contract, technical specification, policy, report).<br/>Extract explicit sections and headings from each document.<br/>Compare explicit text content only. Do not infer intent, meaning, or business rationale.<br/>Ignore formatting differences.<br/>For each section, determine: Present / Missing / Modified.<br/>Highlight substantive differences, including contradictions, conflicts, new or removed obligations, requirements, constraints, SLAs, termination terms, or compliance statements.<br/>If a difference is unclear or ambiguous, flag: &quot;Requires human review.&quot;<br/><br/><b>Output format:</b> Structured table with columns: Section | Doc A Status | Doc B Status | Key Differences<br/><br/><b>Constraints:</b><br/>&ndash; Focus strictly on explicit text.<br/>&ndash; Do not summarize or rewrite documents.<br/>&ndash; Rank findings by importance: Critical &rarr; Medium &rarr; Minor.<br/><br/><i>Try it in: Copilot Chat &ndash; Work, or Copilot in Word.</i></div>
             </td></tr>
           </table>
         </div>
@@ -100,7 +100,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
-              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>📑 本週 Prompt（貼進 Copilot Chat – Web 版）</b><br/><br/>你正在分析兩份文件以進行比較。<br/><br/><b>任務：</b>系統化地比較這兩份文件。<br/><br/><b>指示：</b><br/>1. 首先，辨識文件類型（合約、規格書、報告等）<br/>2. 列出每一份文件中出現的所有章節／標題<br/>3. 針對每一個章節，標註：<br/>&nbsp;&nbsp;&nbsp;- 僅出現在文件 A<br/>&nbsp;&nbsp;&nbsp;- 僅出現在文件 B<br/>&nbsp;&nbsp;&nbsp;- 兩份皆有（比較內容）<br/>4. 標示實質內容的差異（非排版差異）<br/>5. 標記任何矛盾或衝突之處<br/><br/><b>輸出格式：</b>使用結構化表格，欄位為：| 章節 | 文件 A 狀態 | 文件 B 狀態 | 主要差異 |<br/><br/><b>限制：</b><br/>- 僅聚焦於明確存在的文字內容<br/>- 不要從排版推論語意<br/>- 若對某項差異不確定，請註明「需人工複核」<br/>- 依重要性排列發現事項（重大 &rarr; 次要）<br/><br/><i>可在：Copilot Chat – Web 中使用。</i></div>
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🔬 本週 Prompt（先上傳兩份文件，再貼上）</b><br/><br/>分析並系統化比較文件 A 與文件 B。<br/><br/><b>指示：</b><br/>辨識每一份文件的類型（合約、技術規格、政策、報告）。<br/>從每一份文件中擷取明確的章節與標題。<br/>僅比較明確存在的文字內容。不要推論意圖、語意或商業理由。<br/>忽略排版格式上的差異。<br/>針對每一個章節，判定：Present（存在）／ Missing（缺少）／ Modified（已修改）。<br/>標示實質差異，包括矛盾、衝突，以及新增或移除的義務、要求、限制、SLA、終止條款或法遵聲明。<br/>若某項差異不清楚或有歧義，標記：「Requires human review。」<br/><br/><b>輸出格式：</b>結構化表格，欄位為：章節 | 文件 A 狀態 | 文件 B 狀態 | 主要差異<br/><br/><b>限制：</b><br/>－ 嚴格聚焦於明確存在的文字。<br/>－ 不要摘要或改寫文件內容。<br/>－ 依重要性排序：Critical &rarr; Medium &rarr; Minor。<br/><br/><i>可在：Copilot Chat（Work）或 Word 中的 Copilot 使用。</i></div>
             </td></tr>
           </table>
         </div>
@@ -111,7 +111,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
           <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
             <b>💡 Usage Tips</b><br />
-            1. <b>🔬 Auditing obligations and risk? Use P100 instead</b> &mdash; This one is for quickly seeing what changed. For contract, compliance, or spec review that needs per-section Modified flags plus an obligation and SLA audit, switch to P100, the deep-review version.<br/>2. <b>📎 Give it both at once</b> &mdash; Upload or paste both documents in the same conversation so it can map section against section; feeding them separately often means only the second one gets analyzed properly.<br/>3. <b>🔍 Take &ldquo;Requires human review&rdquo; seriously</b> &mdash; That's it explicitly saying it can't call this one, and those are usually the highest-risk clauses. Read them yourself.
+            1. <b>🪶 Only need to know what changed? Use P099</b> &mdash; This version runs longer and outputs more because it audits obligations and risk. For plain version diffs (decks, reports, draft specs), P099 is the faster call.<br/>2. <b>🎯 Name your red lines up front</b> &mdash; Add &ldquo;pay particular attention to payment terms, liability caps, and data protection clauses&rdquo; and the three-tier ranking will track your actual risk posture.<br/>3. <b>🔍 Read Modified and &ldquo;Requires human review&rdquo; first</b> &mdash; The first means the section survived but its content moved; the second is the model admitting it can't call this one. The highest-risk clauses almost always sit in those two buckets.
           </td></tr>
         </table>
       </td></tr>

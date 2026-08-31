@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Copilot 一分钟小课堂：Power of Prompt #P099 — 两份文档系统化比对</title>
+<title>Copilot 一分钟小课堂：Power of Prompt #P100 — 两份文档逐条审</title>
 <!--[if mso]>
 <style type="text/css">
 table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
@@ -35,8 +35,8 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
               <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
             </td>
             <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
-              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P099 期</div>
-              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">两份合同摆一块儿，逐条比出差在哪、哪儿自相矛盾，还替你排好轻重缓急</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P100 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">供应商把合同改回来了？逐条过一遍：哪些义务没了、SLA 缩水了、终止条款多开了口子</div>
             </td>
           </tr>
         </table>
@@ -54,11 +54,11 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ TITLE ═══ -->
       <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本期 PROMPT</div>
-        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">📑 两份文档系统化比对</div>
-        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Systematic Document Comparison</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🔬 两份文档逐条审</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Document Comparison - Deep Review</div>
         <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
           <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
-            ✨ 先认文档类型 → 逐节对照 → 标出冲突 → 按重要性排序 📑
+            ✨ 每节都给个状态 → 义务和 SLA 一条条过筛 → 按风险高低排好队 🔬
           </td></tr>
         </table>
       </td></tr>
@@ -66,7 +66,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
       <!-- ═══ STORY ═══ -->
       <tr><td style="padding:18px 32px 0 32px;">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
-          客户把改过的合同发回来了，备注就一句『小幅调整』。你把两份文件左右一摆，开始一页页往下翻。<br/><br/>翻到第十四页，你已经想不起来第六页那条付款条件到底动没动。更闹心的是有些章节整段没了、有些是新加的，光确认『这一节到底哪一版有』就得来回倒腾两遍。真正要命的那种——A 版写 30 天、B 版写 45 天——偏偏最容易在眼花的时候溜过去。<br/><br/>这个 Prompt 把比对做成一套固定动作：先认出文档类型，把两边的章节清单各自列出来，逐节标明存在状态，只盯实质文字差异（排版一律不看），最后把矛盾和冲突单独拎出来，并按『重大冲突 → 实质差异 → 缺失章节 → 次要差异』排好序。拿不准的地方它直接写『需人工复核』，绝不硬猜。
+          大多数时候，你就是想知道『这版跟上版差在哪』——那用 <b>P099</b> 就够了，快、干净、看完就走人。<br/><br/>可有些文档不能只看『哪儿不一样』。供应商把合同改了一版发回来、Tier-1 的规格书要对着 OEM 需求核、SOP 上线前得验 SLA 和合规条款——这种时候真正会出事的不是『措辞换了』，而是<b>某一条义务被悄悄抹掉了</b>、<b>SLA 从 99.9% 滑到 99.5%</b>、<b>终止条款里多了一个对方可以单方面退出的口子</b>。这些东西全藏在『两边都有』的章节里，光靠核对有没有永远捞不出来。<br/><br/>这个版本补了四道关卡。第一，章节状态从『在 A／在 B／两边都有』升级成 <b>Present／Missing／Modified</b>——改动过的章节自己会跳出来，不用逐字啃差异栏才发现。第二，它不再让模型自己拿捏什么叫『实质差异』，而是给一张点名清单：矛盾、冲突、<b>新增或删除的义务、要求、约束、SLA、终止条款、合规声明</b>。第三，禁止推断的范围从『别从排版猜含义』扩大到<b>别推断意图和商业理由</b>，并且白纸黑字<b>禁止概括或改写</b>——条款一被概括，法律精确度就没了。第四，重要性从两档改成 <b>Critical → Medium → Minor</b> 三档，中间地带不再被压平。<br/><br/>代价是输出更长、跑得更久。所以按情况挑：日常版本对照用 P099，牵涉义务和风险的文件，用这一份。
         </div>
       </td></tr>
 
@@ -82,7 +82,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
             <tr><td style="padding:14px;">
-              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>📑 本周 Prompt（粘贴进 Copilot Chat – Web 版）</b><br/><br/>你正在对两份文档做比对分析。<br/><br/><b>任务：</b>系统化地比较这两份文档。<br/><br/><b>说明：</b><br/>1. 首先，判断文档类型（合同、规格书、报告等）<br/>2. 把每一份文档里出现的所有章节／标题都列出来<br/>3. 对每一个章节，标注：<br/>&nbsp;&nbsp;&nbsp;- 仅在文档 A 中出现<br/>&nbsp;&nbsp;&nbsp;- 仅在文档 B 中出现<br/>&nbsp;&nbsp;&nbsp;- 两份都有（比较内容）<br/>4. 突出实质内容上的差异（不看排版差异）<br/>5. 标记任何矛盾或冲突的地方<br/><br/><b>输出格式：</b>使用结构化表格，列为：| 章节 | 文档 A 状态 | 文档 B 状态 | 主要差异 |<br/><br/><b>约束：</b><br/>- 只关注明确写出来的文字内容<br/>- 不要从排版去推断含义<br/>- 若对某处差异拿不准，请注明『需人工复核』<br/>- 按重要性排列结论（重大 &rarr; 次要）<br/><br/><i>可在：Copilot Chat – Web 中使用。</i></div>
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🔬 本周 Prompt（先把两份文档传上去，再粘这段）</b><br/><br/>分析并系统化比较文档 A 与文档 B。<br/><br/><b>说明：</b><br/>判断每一份文档的类型（合同、技术规格、政策、报告）。<br/>从每一份文档中提取明确的章节和标题。<br/>只比较明确写出来的文字内容。不要推断意图、含义或商业理由。<br/>忽略排版格式上的差异。<br/>对每一个章节，判定：Present（存在）／ Missing（缺失）／ Modified（已修改）。<br/>标出实质差异，包括矛盾、冲突，以及新增或删除的义务、要求、约束、SLA、终止条款或合规声明。<br/>若某处差异不清楚或有歧义，标记：『Requires human review。』<br/><br/><b>输出格式：</b>结构化表格，列为：章节 | 文档 A 状态 | 文档 B 状态 | 主要差异<br/><br/><b>约束：</b><br/>－ 严格只看明确写出来的文字。<br/>－ 不要概括或改写文档内容。<br/>－ 按重要性排序：Critical &rarr; Medium &rarr; Minor。<br/><br/><i>可在：Copilot Chat（Work）或 Word 中的 Copilot 使用。</i></div>
             </td></tr>
           </table>
         </div>
@@ -100,7 +100,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
           <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
             <tr><td style="padding:14px;">
-              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>📑 Prompt of the Week (paste into Copilot Chat &mdash; Web)</b><br/><br/>You are analyzing two documents for comparison.<br/><br/><b>Task:</b> Compare these documents systematically.<br/><br/><b>Instructions:</b><br/>1. First, identify the document type (contract, specification, report, etc.)<br/>2. List all sections/headings present in EACH document<br/>3. For each section, note:<br/>&nbsp;&nbsp;&nbsp;- Present in Doc A only<br/>&nbsp;&nbsp;&nbsp;- Present in Doc B only<br/>&nbsp;&nbsp;&nbsp;- Present in both (compare content)<br/>4. Highlight substantive differences (not formatting)<br/>5. Flag any contradictions or conflicts<br/><br/><b>Output Format:</b> Use a structured table with columns: | Section | Doc A Status | Doc B Status | Key Differences |<br/><br/><b>Constraints:</b><br/>- Focus on explicit text content only<br/>- Do not infer meaning from formatting<br/>- If uncertain about a difference, state &quot;Requires human review&quot;<br/>- List findings by importance (critical &rarr; minor)<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i></div>
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🔬 Prompt of the Week (upload both documents first, then paste)</b><br/><br/>Analyze and systematically compare Document A and Document B.<br/><br/><b>Instructions:</b><br/>Identify the document type for each (contract, technical specification, policy, report).<br/>Extract explicit sections and headings from each document.<br/>Compare explicit text content only. Do not infer intent, meaning, or business rationale.<br/>Ignore formatting differences.<br/>For each section, determine: Present / Missing / Modified.<br/>Highlight substantive differences, including contradictions, conflicts, new or removed obligations, requirements, constraints, SLAs, termination terms, or compliance statements.<br/>If a difference is unclear or ambiguous, flag: &quot;Requires human review.&quot;<br/><br/><b>Output format:</b> Structured table with columns: Section | Doc A Status | Doc B Status | Key Differences<br/><br/><b>Constraints:</b><br/>&ndash; Focus strictly on explicit text.<br/>&ndash; Do not summarize or rewrite documents.<br/>&ndash; Rank findings by importance: Critical &rarr; Medium &rarr; Minor.<br/><br/><i>Try it in: Copilot Chat &ndash; Work, or Copilot in Word.</i></div>
             </td></tr>
           </table>
         </div>
@@ -111,7 +111,7 @@ table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Ari
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
           <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
             <b>💡 使用技巧</b><br />
-            1. <b>🔬 要盘点义务和风险？换 P100</b> — 这份适合快速摸清『改了哪些地方』。要是合同、合规或规格审查，需要逐节标出已修改、盘点义务和 SLA，请改用 P100 深度审查版。<br/>2. <b>📎 两份一块儿给</b> — 在同一轮对话里把两份文档一起上传或粘贴，它才能逐节对照；分两次喂，往往只把后一份认真比了。<br/>3. <b>🔍 『需人工复核』别当摆设</b> — 那是它明说自己判不了的地方，往往恰恰是风险最高的条款，务必自己再过一遍。
+            1. <b>🪶 只想知道改了哪儿？用 P099 就行</b> — 这份为了盘点义务和风险，输出更长、跑得更久。单纯的版本对照（演示文稿、报告、规格草稿）用 P099 更省事。<br/>2. <b>🎯 先把你的红线交代清楚</b> — 补一句『重点盯付款条件、责任上限和数据保护条款』，三档排序就能贴着你的实际风险来。<br/>3. <b>🔍 优先看 Modified 和『需人工复核』</b> — 前者说明章节还在但内容被动过，后者是它明说自己判不了；风险最高的条款基本都落在这两类里。
           </td></tr>
         </table>
       </td></tr>
