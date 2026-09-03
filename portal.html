@@ -15,6 +15,16 @@
     const theme =
       param || saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     document.documentElement.setAttribute("data-theme", theme);
+
+    let savedLang = null;
+    try { savedLang = localStorage.getItem("copilotPortalLang"); } catch (_) {}
+    const langParam = new URLSearchParams(window.location.search).get("lang");
+    const normalize = (value) => (value && /^en/i.test(value) ? "en" : value ? "zh-Hant" : null);
+    const lang =
+      normalize(langParam) || normalize(savedLang) ||
+      (/^zh/i.test(navigator.language || "") ? "zh-Hant" : "en");
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
   })();
 </script>
 <style>
@@ -122,6 +132,15 @@ a { color: inherit; }
 .theme-toggle:hover { transform: translateY(-1px); border-color: var(--cp-border-strong); box-shadow: 0 0 2px var(--cp-border); }
 .theme-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
 .theme-icon { width: 18px; text-align: center; font-size: 16px; line-height: 1; }
+.lang-toggle {
+  min-width: 62px; height: 36px; padding: 0 11px; display: inline-flex; align-items: center;
+  justify-content: center; gap: 6px; border: 1px solid var(--cp-border); border-radius: 0.625rem;
+  background: var(--cp-surface); color: var(--cp-text); font: 600 12px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+.lang-toggle:hover { transform: translateY(-1px); border-color: var(--cp-border-strong); box-shadow: 0 0 2px var(--cp-border); }
+.lang-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
+.lang-icon { width: 16px; text-align: center; font-size: 14px; line-height: 1; }
 .nav-toggle {
   width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--cp-border);
   border-radius: 0.625rem; background: var(--cp-surface); color: var(--cp-text); cursor: pointer;
@@ -265,6 +284,8 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
   .nav-toggle { display: grid; }
   .theme-toggle { min-width: 38px; width: 38px; padding: 0; }
   .theme-label { display: none; }
+  .lang-toggle { min-width: 38px; width: 38px; padding: 0; gap: 0; }
+  .lang-icon { display: none; }
   .hub-layout { width: min(100% - 28px, 1180px); display: block; }
   .sidebar {
     position: fixed; inset: 62px auto 0 0; z-index: 9; width: min(264px, calc(100vw - 72px));
@@ -312,15 +333,19 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
       <img src="copilot-logo.png" alt="Copilot" />
       <div class="brand-copy">
         <div class="brand-name">Power of Copilot</div>
-        <div class="brand-sub">探索、練習，然後把 Copilot 帶進日常工作</div>
+        <div class="brand-sub" id="brandSub"></div>
       </div>
     </div>
     <div class="topbar-actions">
       <div class="resource-count" id="resourceCount" aria-live="polite"></div>
-      <button class="nav-toggle" id="navToggle" type="button" aria-controls="sidebar" aria-expanded="true" title="收合主題導覽">
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="sidebar" aria-expanded="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
+      </button>
+      <button class="lang-toggle" id="langToggle" type="button">
+        <span class="lang-icon" aria-hidden="true">🌐</span>
+        <span class="lang-label"></span>
       </button>
       <button class="theme-toggle" id="themeToggle" type="button">
         <span class="theme-icon" aria-hidden="true"></span>
@@ -330,41 +355,102 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
   </div>
 </header>
 <div class="hub-layout nav-collapsed" id="hubLayout">
-  <aside class="sidebar" id="sidebar" aria-label="主題導覽">
-    <p class="sidebar-title">主題與網站</p>
+  <aside class="sidebar" id="sidebar">
+    <p class="sidebar-title" id="sidebarTitle"></p>
     <nav class="sidebar-nav" id="sidebarNav"></nav>
   </aside>
   <main>
     <div class="shell">
     <section class="intro" aria-labelledby="pageTitle">
       <p class="eyebrow">Copilot Learning Hub</p>
-      <h1 id="pageTitle">今天想從哪裡開始？</h1>
-      <p>選擇一個主題開始探索。這裡會持續加入新的體驗與練習資源，向下捲動即可瀏覽全部內容。</p>
+      <h1 id="pageTitle"></h1>
+      <p id="introText"></p>
     </section>
-    <div class="topic-list" id="topicList" aria-label="Copilot 體驗與學習資源"></div>
+    <div class="topic-list" id="topicList"></div>
     </div>
   </main>
 </div>
 <footer>
-  <div class="shell">Microsoft 365 Copilot 學習入口</div>
+  <div class="shell" id="footerText"></div>
 </footer>
 <script>
+const UI = {
+  "zh-Hant": {
+    documentTitle: "Power of Copilot",
+    brandSub: "探索、練習，然後把 Copilot 帶進日常工作",
+    sidebarLabel: "主題導覽",
+    sidebarTitle: "主題與網站",
+    pageTitle: "今天想從哪裡開始？",
+    intro: "選擇一個主題開始探索。這裡會持續加入新的體驗與練習資源，向下捲動即可瀏覽全部內容。",
+    topicListLabel: "Copilot 體驗與學習資源",
+    footer: "Microsoft 365 Copilot 學習入口",
+    resourceCount: (topics, sites) => `${topics} 個主題 · ${sites} 個網站`,
+    themeToLight: "切換為淺色模式",
+    themeToDark: "切換為深色模式",
+    themeLight: "淺色模式",
+    themeDark: "深色模式",
+    navCollapse: "收合主題導覽",
+    navExpand: "展開主題導覽",
+    topicToggle: (name) => `展開或收合 ${name}`,
+    openSite: (name) => `開啟 ${name}（新分頁）`,
+    openAgent: (name) => `開啟 Agent ${name}（新分頁）`,
+    entryGroup: (name) => `${name}入口`,
+    pendingAria: (name) => `${name}，即將推出`,
+    pendingLabel: "即將推出",
+    langLabel: "EN",
+    langTitle: "Switch to English",
+  },
+  en: {
+    documentTitle: "Power of Copilot",
+    brandSub: "Explore, practice, and bring Copilot into your daily work",
+    sidebarLabel: "Topic navigation",
+    sidebarTitle: "Topics & sites",
+    pageTitle: "Where would you like to start?",
+    intro: "Pick a topic to start exploring. New experiences and practice resources are added regularly — scroll down to browse everything.",
+    topicListLabel: "Copilot experiences and learning resources",
+    footer: "Microsoft 365 Copilot learning hub",
+    resourceCount: (topics, sites) => `${topics} topics · ${sites} sites`,
+    themeToLight: "Switch to light mode",
+    themeToDark: "Switch to dark mode",
+    themeLight: "Light mode",
+    themeDark: "Dark mode",
+    navCollapse: "Collapse topic navigation",
+    navExpand: "Expand topic navigation",
+    topicToggle: (name) => `Expand or collapse ${name}`,
+    openSite: (name) => `Open ${name} (new tab)`,
+    openAgent: (name) => `Open the ${name} agent experience (new tab)`,
+    entryGroup: (name) => `${name} entry points`,
+    pendingAria: (name) => `${name}, coming soon`,
+    pendingLabel: "Coming soon",
+    langLabel: "中文",
+    langTitle: "切換為中文",
+  },
+};
+
 const TOPICS = [
   {
     title: "AI 世界的入口 - Copilot Chat",
+    titleEn: "Your Gateway to AI — Copilot Chat",
     kicker: "快速入門",
+    kickerEn: "Quick start",
     websites: [
       {
         title: "基礎練習手冊",
+        titleEn: "Foundations playbook",
         kicker: "基礎練習",
+        kickerEn: "Getting started",
         description: "從日常問答到內容生成，熟悉 Copilot Chat 的核心能力。",
+        descriptionEn: "Core Copilot Chat skills, from everyday Q&A to content creation.",
         icon: "📘",
         href: "Basic/",
       },
       {
         title: "進階練習手冊",
+        titleEn: "Advanced playbook",
         kicker: "進階實戰",
+        kickerEn: "Advanced practice",
         description: "練習多輪迭代、資料分析與進階提示技巧。",
+        descriptionEn: "Practice multi-turn iteration, data analysis, and advanced prompting.",
         icon: "🚀",
         href: "Pro/",
       },
@@ -372,35 +458,47 @@ const TOPICS = [
   },
   {
     title: "Power of Prompt x Agent",
+    titleEn: "Power of Prompt x Agent",
     kicker: "企業情境範例庫",
+    kickerEn: "Enterprise scenario library",
     websites: [
       {
         title: "Copilot 一分鐘小教室",
+        titleEn: "Copilot in 1 Minute",
         kicker: "每週精選",
+        kickerEn: "Weekly picks",
         description: "用一分鐘掌握實用 Agent、提示詞與工作方法。",
+        descriptionEn: "One minute to pick up a useful agent, prompt, or way of working.",
         icon: "⚡",
         href: "index.html",
       },
       {
         title: "Copilot Agent\n互動體驗",
+        titleEn: "Copilot Agent\nInteractive Experience",
         description: "四種探索場景，同樣的 Agent 建立體驗，馬上開始探索！",
+        descriptionEn: "Four worlds to explore, one agent-building experience. Jump in and start exploring!",
         variants: [
-          { title: "遊樂園", icon: "🎡", href: "https://andyhung11.github.io/copilot-agent-building/playground/" },
-          { title: "星球", icon: "🪐", href: "https://andyhung11.github.io/copilot-agent-building/planet/" },
-          { title: "博覽會", icon: "🏛️", href: "https://andyhung11.github.io/copilot-agent-building/expo/" },
-          { title: "辦公大樓", icon: "🏢", href: "https://andyhung11.github.io/copilot-agent-building/" },
+          { title: "遊樂園", titleEn: "Playground", icon: "🎡", href: "https://andyhung11.github.io/copilot-agent-building/playground/" },
+          { title: "星球", titleEn: "Planet", icon: "🪐", href: "https://andyhung11.github.io/copilot-agent-building/planet/" },
+          { title: "博覽會", titleEn: "Expo", icon: "🏛️", href: "https://andyhung11.github.io/copilot-agent-building/expo/" },
+          { title: "辦公大樓", titleEn: "Office Tower", icon: "🏢", href: "https://andyhung11.github.io/copilot-agent-building/" },
         ],
       },
     ],
   },
   {
     title: "開箱即用的 AI 助理 - Pre-built Agent",
+    titleEn: "AI Assistants Out of the Box — Pre-built Agent",
     kicker: "基礎應用",
+    kickerEn: "Foundational use",
     websites: [
       {
         title: "Pre-built Agent\n捷運路網圖",
+        titleEn: "Pre-built Agent\nMetro Map",
         kicker: "能力導覽",
+        kickerEn: "Capability tour",
         description: "透過捷運路網圖，探索 Pre-built Agent 的能力與應用場景。",
+        descriptionEn: "Explore pre-built agent capabilities and use cases via a metro map.",
         icon: "🚉",
         href: "https://andyhung11.github.io/copilot-agent-building/prebuilt-agent-map/",
       },
@@ -408,12 +506,17 @@ const TOPICS = [
   },
   {
     title: "打造屬於你的工具 - Agent Builder",
+    titleEn: "Build Your Own Tool — Agent Builder",
     kicker: "進階建立",
+    kickerEn: "Advanced build",
     websites: [
       {
         title: "Agent Builder\n專屬助理藏寶圖",
+        titleEn: "Agent Builder\nTreasure Map",
         kicker: "建立指南",
+        kickerEn: "Build guide",
         description: "沿著藏寶圖路線，探索 Agent Builder 專屬助理的建立方式。",
+        descriptionEn: "Follow the treasure map to build your own assistant with Agent Builder.",
         icon: "🧭",
         href: "https://andyhung11.github.io/copilot-agent-building/agent-builder/",
       },
@@ -421,14 +524,19 @@ const TOPICS = [
   },
   {
     title: "Copilot Cowork",
+    titleEn: "Copilot Cowork",
     kicker: "協作實戰",
+    kickerEn: "Collaboration in action",
     websites: [
       {
         title: "Copilot Cowork\n練習手冊",
+        titleEn: "Copilot Cowork\nPlaybook",
         kicker: "工作流程練習",
+        kickerEn: "Workflow practice",
         description: "透過跨角色工作情境，練習以 Copilot 推進協作任務。",
+        descriptionEn: "Drive collaborative tasks with Copilot across cross-role work scenarios.",
         icon: "🤝",
-        href: "CoworkPlaybook/",
+        href: "",
       },
     ],
   },
@@ -438,11 +546,19 @@ const topicList = document.getElementById("topicList");
 const hubLayout = document.getElementById("hubLayout");
 const navToggle = document.getElementById("navToggle");
 const themeToggle = document.getElementById("themeToggle");
+const langToggle = document.getElementById("langToggle");
+const sidebarNav = document.getElementById("sidebarNav");
+
+let lang = document.documentElement.dataset.lang === "en" ? "en" : "zh-Hant";
+const t = () => UI[lang];
+const pick = (item, key) => (lang === "en" ? item[key + "En"] ?? item[key] : item[key]) ?? "";
+const plain = (value) => String(value).replace(/\s+/g, " ").trim();
+
 function syncThemeToggle() {
   const dark = document.documentElement.dataset.theme === "dark";
-  const action = dark ? "切換為淺色模式" : "切換為深色模式";
+  const action = dark ? t().themeToLight : t().themeToDark;
   themeToggle.querySelector(".theme-icon").textContent = dark ? "☀" : "☾";
-  themeToggle.querySelector(".theme-label").textContent = dark ? "淺色模式" : "深色模式";
+  themeToggle.querySelector(".theme-label").textContent = dark ? t().themeLight : t().themeDark;
   themeToggle.setAttribute("aria-label", action);
   themeToggle.setAttribute("aria-pressed", String(dark));
   themeToggle.title = action;
@@ -453,42 +569,73 @@ themeToggle.addEventListener("click", () => {
   try { localStorage.setItem("copilotPortalTheme", next); } catch (_) {}
   syncThemeToggle();
 });
-syncThemeToggle();
-const websiteCount = TOPICS.reduce((total, topic) =>
-  total + topic.websites.reduce((count, product) => count + (product.variants?.length || 1), 0), 0);
-document.getElementById("resourceCount").textContent = `${TOPICS.length} 個主題 · ${websiteCount} 個網站`;
-topicList.innerHTML = TOPICS.map((topic, topicIndex) => `
+
+function syncNavToggle() {
+  const expanded = !hubLayout.classList.contains("nav-collapsed");
+  navToggle.setAttribute("aria-expanded", String(expanded));
+  navToggle.title = expanded ? t().navCollapse : t().navExpand;
+  navToggle.setAttribute("aria-label", navToggle.title);
+}
+navToggle.addEventListener("click", () => {
+  hubLayout.classList.toggle("nav-collapsed");
+  syncNavToggle();
+});
+
+function renderChrome() {
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.dataset.lang = lang;
+  document.title = t().documentTitle;
+  document.getElementById("brandSub").textContent = t().brandSub;
+  document.getElementById("sidebar").setAttribute("aria-label", t().sidebarLabel);
+  document.getElementById("sidebarTitle").textContent = t().sidebarTitle;
+  document.getElementById("pageTitle").textContent = t().pageTitle;
+  document.getElementById("introText").textContent = t().intro;
+  document.getElementById("footerText").textContent = t().footer;
+  topicList.setAttribute("aria-label", t().topicListLabel);
+  const websiteCount = TOPICS.reduce((total, topic) =>
+    total + topic.websites.reduce((count, product) => count + (product.variants?.length || 1), 0), 0);
+  document.getElementById("resourceCount").textContent = t().resourceCount(TOPICS.length, websiteCount);
+  langToggle.querySelector(".lang-label").textContent = t().langLabel;
+  langToggle.setAttribute("aria-label", t().langTitle);
+  langToggle.title = t().langTitle;
+}
+
+function renderTopics() {
+  topicList.innerHTML = TOPICS.map((topic, topicIndex) => `
   <section class="topic-section" id="topic-section-${topicIndex}" aria-labelledby="topic-${topicIndex}">
     <div class="topic-header">
       <div class="topic-index" aria-hidden="true">${String(topicIndex + 1).padStart(2, "0")}</div>
       <div class="topic-heading">
-        <div class="topic-kicker">${topic.kicker}</div>
-        <h2 id="topic-${topicIndex}">${topic.title}</h2>
+        <div class="topic-kicker">${pick(topic, "kicker")}</div>
+        <h2 id="topic-${topicIndex}">${pick(topic, "title")}</h2>
       </div>
     </div>
     <div class="website-list">
-      ${topic.websites.map((product, productIndex) => product.variants ? `
+      ${topic.websites.map((product, productIndex) => {
+        const title = pick(product, "title");
+        const description = pick(product, "description");
+        return product.variants ? `
         <article class="product-card experience-card" id="site-${topicIndex}-${productIndex}">
           <div class="experience-copy">
-            <h3 class="card-title">${product.title}</h3>
-            <p class="card-description">${product.description}</p>
+            <h3 class="card-title">${title}</h3>
+            <p class="card-description">${description}</p>
           </div>
-          <div class="experience-links" aria-label="${product.title}入口">
+          <div class="experience-links" aria-label="${t().entryGroup(plain(title))}">
             ${product.variants.map(variant => `
-              <a class="experience-link" href="${variant.href}" target="_blank" rel="noopener noreferrer" aria-label="開啟 Agent ${variant.title}（新分頁）">
+              <a class="experience-link" href="${variant.href}" target="_blank" rel="noopener noreferrer" aria-label="${t().openAgent(plain(pick(variant, "title")))}">
                 <span class="experience-icon" aria-hidden="true">${variant.icon}</span>
-                <span class="experience-name">${variant.title}</span>
+                <span class="experience-name">${pick(variant, "title")}</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
               </a>
             `).join("")}
           </div>
         </article>
       ` : product.href ? `
-        <a class="product-card" id="site-${topicIndex}-${productIndex}" href="${product.href}" target="_blank" rel="noopener noreferrer" aria-label="開啟 ${product.title}（新分頁）">
+        <a class="product-card" id="site-${topicIndex}-${productIndex}" href="${product.href}" target="_blank" rel="noopener noreferrer" aria-label="${t().openSite(plain(title))}">
           <div class="card-visual" aria-hidden="true">${product.icon}</div>
           <div class="card-body">
-            <h3 class="card-title">${product.title}</h3>
-            <p class="card-description">${product.description}</p>
+            <h3 class="card-title">${title}</h3>
+            <p class="card-description">${description}</p>
           </div>
           <span class="card-arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -498,56 +645,70 @@ topicList.innerHTML = TOPICS.map((topic, topicIndex) => `
           </span>
         </a>
       ` : `
-        <div class="product-card is-pending" aria-label="${product.title}，連結待補">
+        <div class="product-card is-pending" aria-label="${t().pendingAria(plain(title))}">
           <div class="card-visual" aria-hidden="true">${product.icon}</div>
           <div class="card-body">
-            <h3 class="card-title">${product.title}</h3>
-            <p class="card-description">${product.description}</p>
+            <h3 class="card-title">${title}</h3>
+            <p class="card-description">${description}</p>
           </div>
-          <span class="pending-label">連結待補</span>
+          <span class="pending-label">${t().pendingLabel}</span>
         </div>
-      `).join("")}
+      `;
+      }).join("")}
     </div>
   </section>
 `).join("");
-document.getElementById("sidebarNav").innerHTML = TOPICS.map((topic, topicIndex) => `
-  <div class="sidebar-topic">
-    <button class="sidebar-topic-toggle" type="button" aria-expanded="true" aria-controls="sidebar-sites-${topicIndex}" title="展開或收合 ${topic.title}">
+}
+
+function renderSidebar() {
+  const collapsed = Array.from(sidebarNav.querySelectorAll(".sidebar-topic"))
+    .map(node => node.classList.contains("is-collapsed"));
+  sidebarNav.innerHTML = TOPICS.map((topic, topicIndex) => `
+  <div class="sidebar-topic${collapsed[topicIndex] ? " is-collapsed" : ""}">
+    <button class="sidebar-topic-toggle" type="button" aria-expanded="${String(!collapsed[topicIndex])}" aria-controls="sidebar-sites-${topicIndex}" title="${t().topicToggle(pick(topic, "title"))}">
       <span class="sidebar-number">${String(topicIndex + 1).padStart(2, "0")}</span>
-      <span class="sidebar-topic-copy">${topic.title}</span>
+      <span class="sidebar-topic-copy">${pick(topic, "title")}</span>
       <svg class="sidebar-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
     </button>
     <div class="sidebar-websites" id="sidebar-sites-${topicIndex}">
       ${topic.websites.map((product, productIndex) => product.href || product.variants
-        ? `<a class="sidebar-website" href="#site-${topicIndex}-${productIndex}">${product.title}</a>`
-        : `<span class="sidebar-website is-pending">${product.title}</span>`).join("")}
+        ? `<a class="sidebar-website" href="#site-${topicIndex}-${productIndex}">${plain(pick(product, "title"))}</a>`
+        : `<span class="sidebar-website is-pending">${plain(pick(product, "title"))}</span>`).join("")}
     </div>
   </div>
 `).join("");
-document.getElementById("sidebarNav").addEventListener("click", event => {
-  const toggle = event.target.closest(".sidebar-topic-toggle");
-  if (!toggle) return;
-  const topic = toggle.closest(".sidebar-topic");
-  topic.classList.toggle("is-collapsed");
-  toggle.setAttribute("aria-expanded", String(!topic.classList.contains("is-collapsed")));
-});
-function syncNavToggle() {
-  const expanded = !hubLayout.classList.contains("nav-collapsed");
-  navToggle.setAttribute("aria-expanded", String(expanded));
-  navToggle.title = expanded ? "收合主題導覽" : "展開主題導覽";
 }
-navToggle.addEventListener("click", () => {
-  hubLayout.classList.toggle("nav-collapsed");
+
+function applyLang() {
+  renderChrome();
+  renderTopics();
+  renderSidebar();
+  syncThemeToggle();
   syncNavToggle();
+}
+
+langToggle.addEventListener("click", () => {
+  lang = lang === "en" ? "zh-Hant" : "en";
+  try { localStorage.setItem("copilotPortalLang", lang); } catch (_) {}
+  applyLang();
 });
-document.getElementById("sidebarNav").addEventListener("click", event => {
+
+sidebarNav.addEventListener("click", event => {
+  const toggle = event.target.closest(".sidebar-topic-toggle");
+  if (toggle) {
+    const topic = toggle.closest(".sidebar-topic");
+    topic.classList.toggle("is-collapsed");
+    toggle.setAttribute("aria-expanded", String(!topic.classList.contains("is-collapsed")));
+    return;
+  }
   if (window.innerWidth <= 720 && event.target.closest("a")) {
     hubLayout.classList.add("nav-collapsed");
     syncNavToggle();
   }
 });
+
 if (!window.matchMedia("(max-width: 720px)").matches) hubLayout.classList.remove("nav-collapsed");
-syncNavToggle();
+applyLang();
 </script>
 </body>
 </html>
