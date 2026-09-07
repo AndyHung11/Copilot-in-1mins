@@ -1491,6 +1491,24 @@
         "word",
         "general"
       ]
+    },
+    "A059": {
+      "task": [
+        "analysis",
+        "writing"
+      ],
+      "tool": [
+        "word"
+      ]
+    },
+    "P101": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []

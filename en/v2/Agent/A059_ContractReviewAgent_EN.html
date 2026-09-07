@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 1-Min Tips: Power of Agent #A059 — Contract Review Agent</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 1-MIN TIPS</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">Issue #A059</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">Hand it a contract: it flags risks, ambiguities, and missing clauses, and hands back a Word file with the comments highlighted</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">📜 Contract Review Agent</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;"></div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">This agent reads the contract you provide, flags risks, ambiguities, and unusual terms, names the standard clauses that are missing &mdash; termination, confidentiality, dispute resolution &mdash; and calls out compliance concerns and internal inconsistencies. What comes back is a Word version of the contract with comments appended at the end of each section, referenced by page and section, highlighted in yellow, and with the original text left completely untouched. A summary table of every comment comes back in the chat reply so you can triage before reading.</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 No M365 Copilot License Required — Works in the basic version</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ Daily brief in 60 sec</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">Got questions? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 Do any of these sound familiar?</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">📚</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">Twenty-eight pages<br/>you're not legal<br/>but it's on your desk</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🌫️</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">&ldquo;Within a reasonable period&rdquo;<br/>and nobody ever says<br/>how long that is</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🫥</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">No confidentiality clause<br/>the hardest thing to spot<br/>is what isn't there</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        This agent flags risks, ambiguities, and missing standard clauses section by section, then returns a Word version of the contract with yellow-highlighted comments referenced by page and section &mdash; original text untouched &mdash; plus a summary table for fast triage.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ What can this Agent do for you?</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🚩 Risks and Ambiguities</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Surfaces undefined terms, unusual conditions, and language the other side could read broadly.</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🫥 Names What's Missing</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>If termination, confidentiality, or dispute resolution isn't there, it says so.</div></div></td></tr><tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>📝 Annotated Word File</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Comments at the end of each section, referenced by page and section, highlighted yellow &mdash; issues seen in context.</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔒 Original Text Untouched</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Hard rule: nothing changes except added comments. And it offers observations, never legal advice.</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 Up and running in 60 seconds — follow these 3 steps</div>
+        <div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1:</b> Create the Contract Review Agent and paste the Agent Instructions above in full. Knowledge sources are optional &mdash; if your organization has contract review guidelines or a SharePoint library of previously reviewed contracts, connect them so it follows house standards.</div>
+<div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2:</b> Upload the contract and ask. If something specific worries you, say so &mdash; e.g. &ldquo;pay particular attention to liability caps and data protection clauses.&rdquo;</div>
+<div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3:</b> Triage from the summary table in the reply, then work through the annotated Word file clause by clause, and route the judgement calls to your legal team.</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description
+        <span style="font-size:10pt; color:#888; font-weight:400;">(copy & paste to build your Agent)</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        An agent that reviews contracts, identifies risks, missing clauses, compliance concerns, and suggests improvements. It generates a revised contract with footnotes referencing all comments. No M365 Copilot License Required.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions
+        <span style="font-size:10pt; color:#888; font-weight:400;">(full instructions — paste directly into Agent Builder)</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-inst">- Serve as a contract review assistant capable of reading and analyzing contract documents provided by the user.<br/>
+- ALWAYS Generate a new version of the contract in Word format with all comments added at the end of each section. Reference the page and section for each comment clearly. Highlight any added comments clearly in yellow to ensure they are visible to the user. Comments should be based on:<br/>
+1. Identify and flag any risks, ambiguities, or unusual terms within the contract text.<br/>
+- Highlight missing standard clauses such as termination, confidentiality, and dispute resolution.<br/>
+- Flag any compliance concerns or legal inconsistencies present in the contract.<br/>
+- Suggest improvements or clarifications to strengthen the contract and ensure legal soundness.<br/>
+<br/>
+- Do NOT alter the contract content in any way except to add comments<br/>
+- Include a summarized table of the comments provided as part of your response only and not in the document itself<br/>
+- Maintain a professional and objective tone in all reviews and suggestions.<br/>
+- Do not provide legal advice; only offer observations and suggestions based on the contract content.<br/>
+- Respect user confidentiality and do not store or share contract content outside the review session.<br/>
+- Avoid discussing topics outside contract review and improvement.</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-example">Please review this contract and identify any risks, ambiguities, or unusual terms. What improvements or clarifications would you suggest for this contract?</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">請審閱這份合約，找出任何風險、語意模糊之處或不尋常的條款。你會建議做哪些改善或釐清？</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">Build Your Contract Review Agent ▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 Try Building a Copilot Agent</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires <b>no M365 Copilot license</b>. Works in the basic version.</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 1-Min Tips · Power of Agent ｜ Share with your community 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

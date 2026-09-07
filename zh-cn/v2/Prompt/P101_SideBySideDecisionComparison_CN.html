@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Prompt #P101 — 两个方案摆一块儿比</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P101 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">从你的邮件、聊天、会议和文档里扒出真凭实据，把 A 方案 B 方案并排摊开——还告诉你哪些是它猜的</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">⚖️ 两个方案摆一块儿比</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Side-by-Side Decision Comparison</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把两个选项丢给它，它会翻遍你的邮件、聊天、会议和文档，从成本、风险、投入、对团队或项目的影响四个维度并排比。最要紧的是：每一条它都会标明是『文件里确实这么写的』还是『这是我推的』，并点名你还缺哪两项关键信息、大概率能在哪儿找到。而且它被明确要求——先别急着给建议。</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🔑 需要 M365 Copilot 许可</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒完成设置</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你还在这样和 Copilot 对话吗？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🧩</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">报价在邮件里<br/>顾虑在 Teams 里<br/>进度在会议纪要里</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">⏳</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">『我先拉个表理理』<br/>俩小时过去<br/>表才填一半</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🎭</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">AI 说得斩钉截铁<br/>你却分不清<br/>哪句是真有出处</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        这个 Prompt 从你的邮件、聊天、会议和文档里捞出依据，把两个方案按成本、风险、投入、影响并排比，每条都标明是有据可查还是推测，点名还差哪两项信息、上哪儿找，并且刻意先不给建议。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔎 从你自己的数据里找依据</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>翻邮件、聊天、会议和文档，不是凭空攒一张比较表。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>📊 四个维度并排摆</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>成本、风险、投入，以及对团队或项目的实际影响。</div></div></td></tr><tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🏷️ 逐条标明有据还是推测</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>每条都得交代来路，把『听着笃定的胡编』挡在门外。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🚧 刻意先不给建议</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>先把全貌摊开、点出还差哪两项信息，拍板的权留给你。</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          <b>⚖️ 本周 Prompt（先把 WorkIQ 打开，再粘进 Copilot Chat – Work）</b><br/><br/>我得在 [方案 A] 和 [方案 B] 之间做个决定。请把我邮件、聊天、会议和文档里所有跟这事相关的内容都用上。把两个方案并排比一比：成本、风险、投入，以及对 [团队／项目] 的影响。每一条都告诉我，它是有我们文件里的实打实内容撑着，还是你自己推的。点出我还差哪两项信息才能干脆利落地拍板——以及这些信息我大概率能在哪儿找到。先别给我建议。我想先看清楚全貌。<br/><br/><i>可在：Copilot Chat – Work 中使用。</i>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        <b>⚖️ Prompt of the Week (turn on WorkIQ first, then paste into Copilot Chat &mdash; Work)</b><br/><br/>I need to decide between [Option A] and [Option B]. Use everything in my emails, chats, meetings and documents about this topic. Compare both options side by side across: cost, risk, effort, and impact on [team/project]. For each point, tell me whether it's backed by something concrete in our files or whether it's your assumption. Name the two pieces of information I'm still missing to make a clean decision &mdash; and where I'd most likely find them. Don't give me a recommendation yet. I want the picture first.<br/><br/><i>Try it in: Copilot Chat &ndash; Work.</i>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🔓 先把 WorkIQ 打开</div><div style="font-size:12pt; color:#444; line-height:1.7;">这个 Prompt 要读你的邮件、聊天、会议和文档这类组织数据，必须在 Copilot Chat 里开启 WorkIQ（原来叫 Work 模式）才捞得到，不然只能得到一份空泛的通用对比。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🏷️ 把两个方案说具体</div><div style="font-size:12pt; color:#444; line-height:1.7;">别写『方案一／方案二』，直接写『跟 A 供应商续约』和『上 B 系统』；写法越贴近文件里实际出现的说法，它能翻出来的依据就越多。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🚩 先盯『推测』那几条</div><div style="font-size:12pt; color:#444; line-height:1.7;">标成推测的地方，就是你信息上的窟窿。再配上它列出的『还差哪两项』，正好是你下一步该去补的功课。</div></td></tr></table></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即把两个方案摊开看 ▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt 需要具备 <b>Microsoft 365 Copilot 许可</b>。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+
