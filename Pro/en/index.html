@@ -1,5 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem('cph-theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <title>Microsoft 365 Copilot Chat Advanced Practice Handbook</title>
 <style>:root{
   --brand:#0078d4;--brand-2:#5b2dbe;
@@ -1092,9 +1093,8 @@ Compiled by Andy Hung · 16 scenarios · 36 prompt rounds · Screenshots reflect
 <div class="lightbox" id="lightbox"><button class="lightbox-close">✕</button><img alt=""></div>
 <script>
 const themeBtn=document.getElementById('themeBtn'),themeIco=document.getElementById('themeIco'),themeLbl=document.getElementById('themeLbl');
-function applyTheme(t){document.documentElement.setAttribute('data-theme',t);themeIco.textContent=t==='dark'?'☀️':'🌙';themeLbl.textContent=t==='dark'?'Light':'Dark';try{localStorage.setItem('cph-pro-en-theme',t);}catch(e){}}
-const savedTheme=(()=>{try{return localStorage.getItem('cph-pro-en-theme');}catch(e){return null}})();
-applyTheme(savedTheme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);themeIco.textContent=t==='dark'?'☀️':'🌙';themeLbl.textContent=t==='dark'?'Light':'Dark';try{localStorage.setItem('cph-theme',t);}catch(e){}}
+applyTheme(document.documentElement.getAttribute('data-theme')||'light');
 themeBtn.addEventListener('click',()=>applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
 
 const mt=document.getElementById('menuToggle'),sb=document.getElementById('sidebar');
