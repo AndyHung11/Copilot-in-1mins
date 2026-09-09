@@ -18,6 +18,9 @@
 !CoworkPlaybook/*.pptx
 !CoworkPlaybook/*.zip
 !CoworkPlaybook/samples_*/**
+# Basic / Pro 練習手冊：各語系目錄下的範例檔需提供下載
+!Basic/**/samples/**
+!Pro/**/samples/**
 # 工作中暫存目錄一律排除
 _trash/
 _bak_*/
