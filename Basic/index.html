@@ -3,6 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+(function(){
+  // 語言偵測與轉址：?lang= > localStorage > navigator.language > 預設 en
+  // 只在使用者未手動選過語言時自動轉址；點過語言鈕即永久尊重該選擇。
+  var KEY = 'cph-lang', CUR = 'zh-Hant';
+  var PATH = {"zh-Hant": "./", "zh-Hans": "zh-cn/", "en": "en/"};
+  function normalize(v){
+    if(!v) return null;
+    if(/^en/i.test(v)) return 'en';
+    if(/^zh[-_]?(cn|sg|hans)/i.test(v)) return 'zh-Hans';
+    if(/^zh/i.test(v)) return 'zh-Hant';
+    return null;
+  }
+  var qs = new URLSearchParams(location.search);
+  var fromParam = normalize(qs.get('lang'));
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+
+  // 明確指定就記住，並且不再自動轉走
+  if (fromParam) { try { localStorage.setItem(KEY, fromParam); } catch(e){} }
+
+  var want = fromParam || normalize(saved) || normalize(navigator.language) || 'en';
+
+  // 每個分頁最多自動轉一次，避免任何情況下的迴圈
+  var once = false;
+  try { once = sessionStorage.getItem('cph-lang-redirected') === '1'; } catch(e){}
+
+  if (want !== CUR && !once && PATH[want]) {
+    try { sessionStorage.setItem('cph-lang-redirected','1'); } catch(e){}
+    qs.delete('lang');
+    var q = qs.toString();
+    location.replace(PATH[want] + (q ? '?' + q : '') + location.hash);
+    return;
+  }
+  // 停在本頁就把目前語系記下來
+  try { localStorage.setItem(KEY, CUR); } catch(e){}
+
+  // 語言鈕：點了就記住，之後不再自動轉走
+  document.addEventListener('DOMContentLoaded', function(){
+    var map = { '繁':'zh-Hant', '简':'zh-Hans', 'EN':'en' };
+    document.querySelectorAll('.lang-toggle a').forEach(function(a){
+      a.addEventListener('click', function(){
+        var l = map[(a.textContent||'').trim()];
+        if(l){ try { localStorage.setItem(KEY, l); } catch(e){} }
+      });
+    });
+  });
+})();
+</script>
 <title>Microsoft 365 Copilot Chat 練習手冊</title>
 <style>
 :root{
