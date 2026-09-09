@@ -205,7 +205,8 @@ body.present-mode .presenter{display:flex}
   .hero-stats{gap:20px}
   .tool-btn span:not(.ico){display:none}
   .tool-btn{padding:7px 9px}
-  .ver-toggle>a,.ver-toggle>span{min-width:0;padding:0 8px;height:34px;font-size:.78rem}
+  .ver-toggle>a,.ver-toggle>span{min-width:0;padding:0 9px;height:34px;font-size:0;gap:0}
+  .ver-toggle .vico{font-size:1rem}
   .lang-toggle .tool-btn{min-width:34px;padding-left:7px;padding-right:7px}
 }
 @media print{
@@ -258,6 +259,7 @@ body.present-mode .presenter{display:flex}
 <div class="topbar">
   <div class="crumb"><span class="ico">📍</span><span class="now" id="crumbNow">使用说明</span></div>
   <div class="toolbar-top">
+    <div class="ver-toggle" title="切换基础版／进阶版"><span class="cur"><span class="vico">📘</span>基础</span><a href="../../Pro/zh-cn/"><span class="vico">🚀</span>进阶</a></div>
     <button class="tool-btn" id="themeBtn" title="切换深色/浅色模式"><span class="ico" id="themeIco">🌙</span><span id="themeLbl">深色</span></button>
     <div class="lang-toggle" title="切换语言"><a class="tool-btn" href="../" title="繁體中文">繁</a><span class="tool-btn cur">简</span><a class="tool-btn" href="../en/" title="English">EN</a></div>
     <button class="tool-btn" id="presentBtn" title="进入演示模式（按 P）"><span class="ico">▶️</span><span>演示模式</span></button>

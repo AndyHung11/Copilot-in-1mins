@@ -130,6 +130,11 @@ footer{text-align:center;color:var(--muted);padding:32px 24px;font-size:.85rem;b
 .tool-btn{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:7px 12px;font-size:.84rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow);transition:.15s;font-weight:500}
 .tool-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);border-color:var(--brand);color:var(--brand)}
 .tool-btn .ico{font-size:1rem}
+.ver-toggle{display:inline-flex;gap:6px;flex-shrink:0}
+.ver-toggle>a,.ver-toggle>span{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:0 12px;height:38px;line-height:1;font-size:.84rem;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow);transition:.15s;text-decoration:none;white-space:nowrap;min-width:74px;justify-content:center;box-sizing:border-box}
+.ver-toggle>a:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);border-color:var(--brand);color:var(--brand)}
+.ver-toggle .cur{background:var(--brand);color:#fff;border-color:var(--brand);cursor:default}
+.ver-toggle .vico{font-size:1rem;line-height:1}
 .lang-toggle{display:inline-flex;gap:6px;flex-shrink:0}
 .lang-toggle .tool-btn{min-width:42px;justify-content:center;font-weight:600;padding-left:10px;padding-right:10px;text-decoration:none}
 .lang-toggle .tool-btn.cur,.lang-toggle .tool-btn.cur:hover{background:var(--brand);color:#fff;border-color:var(--brand);cursor:default;transform:none;box-shadow:var(--shadow)}
@@ -185,7 +190,8 @@ body.present-mode .presenter{display:flex}
   .hero-stats{gap:20px}
   .tool-btn span:not(.ico){display:none}
   .tool-btn{padding:7px 9px}
-  .ver-toggle>a,.ver-toggle>span{min-width:0;padding:0 8px;height:34px;font-size:.78rem}
+  .ver-toggle>a,.ver-toggle>span{min-width:0;padding:0 9px;height:34px;font-size:0;gap:0}
+  .ver-toggle .vico{font-size:1rem}
   .lang-toggle .tool-btn{min-width:34px;padding-left:7px;padding-right:7px}
 }
 @media print{
@@ -238,6 +244,7 @@ body.present-mode .presenter{display:flex}
 <div class="topbar">
   <div class="crumb"><span class="ico">📍</span><span class="now" id="crumbNow">How to Use</span></div>
   <div class="toolbar-top">
+    <div class="ver-toggle" title="Switch Basic / Advanced"><span class="cur"><span class="vico">📘</span>Basic</span><a href="../../Pro/en/"><span class="vico">🚀</span>Advanced</a></div>
     <button class="tool-btn" id="themeBtn" title="Toggle light/dark theme"><span class="ico" id="themeIco">🌙</span><span id="themeLbl">Dark</span></button>
     <div class="lang-toggle" title="Language"><a class="tool-btn" href="../" title="繁體中文">繁</a><a class="tool-btn" href="../zh-cn/" title="简体中文">简</a><span class="tool-btn cur">EN</span></div>
     <button class="tool-btn" id="presentBtn" title="Enter presentation mode (P)"><span class="ico">▶️</span><span>Present</span></button>
@@ -620,9 +627,9 @@ function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
   themeIco.textContent=t==='dark'?'☀️':'🌙';
   themeLbl.textContent=t==='dark'?'Light':'Dark';
-  try{localStorage.setItem('cph-en-theme',t);}catch(e){}
+  try{localStorage.setItem('cph-theme',t);}catch(e){}
 }
-const savedTheme=(()=>{try{return localStorage.getItem('cph-en-theme');}catch(e){return null}})();
+const savedTheme=(()=>{try{return localStorage.getItem('cph-theme');}catch(e){return null}})();
 applyTheme(savedTheme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
 themeBtn.addEventListener('click',()=>applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
 
