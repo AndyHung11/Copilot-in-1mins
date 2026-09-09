@@ -19,10 +19,16 @@
     let savedLang = null;
     try { savedLang = localStorage.getItem("copilotPortalLang"); } catch (_) {}
     const langParam = new URLSearchParams(window.location.search).get("lang");
-    const normalize = (value) => (value && /^en/i.test(value) ? "en" : value ? "zh-Hant" : null);
+    const normalize = (value) => {
+      if (!value) return null;
+      if (/^en/i.test(value)) return "en";
+      if (/^zh[-_]?(cn|sg|hans)/i.test(value)) return "zh-Hans";
+      if (/^zh/i.test(value)) return "zh-Hant";
+      return null;
+    };
     const lang =
       normalize(langParam) || normalize(savedLang) ||
-      (/^zh/i.test(navigator.language || "") ? "zh-Hant" : "en");
+      normalize(navigator.language) || "en";
     document.documentElement.setAttribute("data-lang", lang);
     document.documentElement.setAttribute("lang", lang);
   })();
@@ -99,6 +105,9 @@ body {
   font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 a { color: inherit; }
+html[data-lang="zh-Hans"] body {
+  font-family: "Segoe UI", "Microsoft YaHei", "微软雅黑", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 .shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .topbar {
   position: sticky; top: 0; z-index: 10;
@@ -132,15 +141,19 @@ a { color: inherit; }
 .theme-toggle:hover { transform: translateY(-1px); border-color: var(--cp-border-strong); box-shadow: 0 0 2px var(--cp-border); }
 .theme-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
 .theme-icon { width: 18px; text-align: center; font-size: 16px; line-height: 1; }
-.lang-toggle {
-  min-width: 62px; height: 36px; padding: 0 11px; display: inline-flex; align-items: center;
-  justify-content: center; gap: 6px; border: 1px solid var(--cp-border); border-radius: 0.625rem;
-  background: var(--cp-surface); color: var(--cp-text); font: 600 12px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
-  cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+.lang-switch {
+  height: 36px; display: inline-flex; align-items: center; gap: 2px; padding: 3px;
+  border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface);
 }
-.lang-toggle:hover { transform: translateY(-1px); border-color: var(--cp-border-strong); box-shadow: 0 0 2px var(--cp-border); }
-.lang-toggle:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
-.lang-icon { width: 16px; text-align: center; font-size: 14px; line-height: 1; }
+.lang-switch button {
+  min-width: 30px; height: 28px; padding: 0 8px; border: 0; border-radius: 0.45rem; background: transparent;
+  color: var(--cp-text-muted); font: 600 12px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer; white-space: nowrap; transition: background 160ms ease, color 160ms ease;
+}
+.lang-switch button:hover { color: var(--cp-text); background: var(--cp-surface-soft); }
+.lang-switch button[aria-pressed="true"] { background: var(--cp-accent); color: var(--cp-accent-fg); }
+.lang-switch button:focus-visible { outline: 3px solid var(--cp-highlight); outline-offset: 2px; }
+.lang-icon { width: 16px; text-align: center; font-size: 14px; line-height: 1; color: var(--cp-text-muted); }
 .nav-toggle {
   width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--cp-border);
   border-radius: 0.625rem; background: var(--cp-surface); color: var(--cp-text); cursor: pointer;
@@ -284,7 +297,8 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
   .nav-toggle { display: grid; }
   .theme-toggle { min-width: 38px; width: 38px; padding: 0; }
   .theme-label { display: none; }
-  .lang-toggle { min-width: 38px; width: 38px; padding: 0; gap: 0; }
+  .lang-switch { padding: 2px; gap: 1px; }
+  .lang-switch button { min-width: 26px; padding: 0 6px; font-size: 11px; }
   .lang-icon { display: none; }
   .hub-layout { width: min(100% - 28px, 1180px); display: block; }
   .sidebar {
@@ -343,10 +357,12 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      <button class="lang-toggle" id="langToggle" type="button">
+      <div class="lang-switch" id="langSwitch" role="group">
         <span class="lang-icon" aria-hidden="true">🌐</span>
-        <span class="lang-label"></span>
-      </button>
+        <button type="button" data-lang="zh-Hant">繁</button>
+        <button type="button" data-lang="zh-Hans">简</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
       <button class="theme-toggle" id="themeToggle" type="button">
         <span class="theme-icon" aria-hidden="true"></span>
         <span class="theme-label"></span>
@@ -397,8 +413,33 @@ const UI = {
     entryGroup: (name) => `${name}入口`,
     pendingAria: (name) => `${name}，即將推出`,
     pendingLabel: "即將推出",
-    langLabel: "EN",
-    langTitle: "Switch to English",
+    langGroup: "選擇語言",
+    langPick: { "zh-Hant": "切換為繁體中文", "zh-Hans": "切換為簡體中文", en: "Switch to English" },
+  },
+  "zh-Hans": {
+    documentTitle: "Power of Copilot",
+    brandSub: "边学边练，把 Copilot 用进每天的工作里",
+    sidebarLabel: "主题导航",
+    sidebarTitle: "主题与站点",
+    pageTitle: "今天先从哪儿入手？",
+    intro: "挑一个主题就能上手。新的体验和练习资源会陆续上线，往下滑就能看到全部内容。",
+    topicListLabel: "Copilot 实操体验与学习资料",
+    footer: "Microsoft 365 Copilot 学习门户",
+    resourceCount: (topics, sites) => `${topics} 个主题 · ${sites} 个站点`,
+    themeToLight: "切换到浅色模式",
+    themeToDark: "切换到深色模式",
+    themeLight: "浅色模式",
+    themeDark: "深色模式",
+    navCollapse: "收起主题导航",
+    navExpand: "展开主题导航",
+    topicToggle: (name) => `展开或收起 ${name}`,
+    openSite: (name) => `打开 ${name}（新标签页）`,
+    openAgent: (name) => `打开 ${name} Agent 体验（新标签页）`,
+    entryGroup: (name) => `${name} 入口`,
+    pendingAria: (name) => `${name}，即将上线`,
+    pendingLabel: "即将上线",
+    langGroup: "选择语言",
+    langPick: { "zh-Hant": "切换到繁体中文", "zh-Hans": "切换到简体中文", en: "Switch to English" },
   },
   en: {
     documentTitle: "Power of Copilot",
@@ -422,8 +463,8 @@ const UI = {
     entryGroup: (name) => `${name} entry points`,
     pendingAria: (name) => `${name}, coming soon`,
     pendingLabel: "Coming soon",
-    langLabel: "中文",
-    langTitle: "切換為中文",
+    langGroup: "Choose language",
+    langPick: { "zh-Hant": "Switch to Traditional Chinese", "zh-Hans": "Switch to Simplified Chinese", en: "Switch to English" },
   },
 };
 
@@ -431,26 +472,34 @@ const TOPICS = [
   {
     title: "AI 世界的入口 - Copilot Chat",
     titleEn: "Your Gateway to AI — Copilot Chat",
+    titleCn: "走进 AI 的第一站 - Copilot Chat",
     kicker: "快速入門",
     kickerEn: "Quick start",
+    kickerCn: "快速上手",
     websites: [
       {
         title: "基礎練習手冊",
         titleEn: "Foundations playbook",
+        titleCn: "入门练习手册",
         kicker: "基礎練習",
         kickerEn: "Getting started",
+        kickerCn: "打好基础",
         description: "從日常問答到內容生成，熟悉 Copilot Chat 的核心能力。",
         descriptionEn: "Core Copilot Chat skills, from everyday Q&A to content creation.",
+        descriptionCn: "从日常问答到内容生成，摸清 Copilot Chat 的看家本领。",
         icon: "📘",
         href: "Basic/",
       },
       {
         title: "進階練習手冊",
         titleEn: "Advanced playbook",
+        titleCn: "进阶练习手册",
         kicker: "進階實戰",
         kickerEn: "Advanced practice",
+        kickerCn: "进阶实战",
         description: "練習多輪迭代、資料分析與進階提示技巧。",
         descriptionEn: "Practice multi-turn iteration, data analysis, and advanced prompting.",
+        descriptionCn: "多轮追问、数据分析、高阶提示词，一次练透。",
         icon: "🚀",
         href: "Pro/",
       },
@@ -459,29 +508,36 @@ const TOPICS = [
   {
     title: "Power of Prompt x Agent",
     titleEn: "Power of Prompt x Agent",
+    titleCn: "Power of Prompt x Agent",
     kicker: "企業情境範例庫",
     kickerEn: "Enterprise scenario library",
+    kickerCn: "企业场景案例库",
     websites: [
       {
         title: "Copilot 一分鐘小教室",
         titleEn: "Copilot in 1 Minute",
+        titleCn: "Copilot 一分钟小课堂",
         kicker: "每週精選",
         kickerEn: "Weekly picks",
+        kickerCn: "每周精选",
         description: "用一分鐘掌握實用 Agent、提示詞與工作方法。",
         descriptionEn: "One minute to pick up a useful agent, prompt, or way of working.",
+        descriptionCn: "一分钟拿走一个能用的 Agent、提示词或工作方法。",
         icon: "⚡",
         href: "index.html",
       },
       {
         title: "Copilot Agent\n互動體驗",
         titleEn: "Copilot Agent\nInteractive Experience",
+        titleCn: "Copilot Agent\n互动体验",
         description: "四種探索場景，同樣的 Agent 建立體驗，馬上開始探索！",
         descriptionEn: "Four worlds to explore, one agent-building experience. Jump in and start exploring!",
+        descriptionCn: "四个探索场景，同一套 Agent 搭建体验，进去就能玩！",
         variants: [
-          { title: "遊樂園", titleEn: "Playground", icon: "🎡", href: "https://andyhung11.github.io/copilot-agent-building/playground/" },
-          { title: "星球", titleEn: "Planet", icon: "🪐", href: "https://andyhung11.github.io/copilot-agent-building/planet/" },
-          { title: "博覽會", titleEn: "Expo", icon: "🏛️", href: "https://andyhung11.github.io/copilot-agent-building/expo/" },
-          { title: "辦公大樓", titleEn: "Office Tower", icon: "🏢", href: "https://andyhung11.github.io/copilot-agent-building/" },
+          { title: "遊樂園", titleEn: "Playground", titleCn: "游乐园", icon: "🎡", href: "https://andyhung11.github.io/copilot-agent-building/playground/" },
+          { title: "星球", titleEn: "Planet", titleCn: "星球", icon: "🪐", href: "https://andyhung11.github.io/copilot-agent-building/planet/" },
+          { title: "博覽會", titleEn: "Expo", titleCn: "博览会", icon: "🏛️", href: "https://andyhung11.github.io/copilot-agent-building/expo/" },
+          { title: "辦公大樓", titleEn: "Office Tower", titleCn: "写字楼", icon: "🏢", href: "https://andyhung11.github.io/copilot-agent-building/" },
         ],
       },
     ],
@@ -489,16 +545,21 @@ const TOPICS = [
   {
     title: "開箱即用的 AI 助理 - Pre-built Agent",
     titleEn: "AI Assistants Out of the Box — Pre-built Agent",
+    titleCn: "开箱即用的 AI 助手 - Pre-built Agent",
     kicker: "基礎應用",
     kickerEn: "Foundational use",
+    kickerCn: "基础应用",
     websites: [
       {
         title: "Pre-built Agent\n捷運路網圖",
         titleEn: "Pre-built Agent\nMetro Map",
+        titleCn: "Pre-built Agent\n地铁线路图",
         kicker: "能力導覽",
         kickerEn: "Capability tour",
+        kickerCn: "能力速览",
         description: "透過捷運路網圖，探索 Pre-built Agent 的能力與應用場景。",
         descriptionEn: "Explore pre-built agent capabilities and use cases via a metro map.",
+        descriptionCn: "顺着地铁线路图，看清 Pre-built Agent 能做什么、用在哪。",
         icon: "🚉",
         href: "https://andyhung11.github.io/copilot-agent-building/prebuilt-agent-map/",
       },
@@ -507,16 +568,21 @@ const TOPICS = [
   {
     title: "打造屬於你的工具 - Agent Builder",
     titleEn: "Build Your Own Tool — Agent Builder",
+    titleCn: "做一个自己的工具 - Agent Builder",
     kicker: "進階建立",
     kickerEn: "Advanced build",
+    kickerCn: "进阶搭建",
     websites: [
       {
         title: "Agent Builder\n專屬助理藏寶圖",
         titleEn: "Agent Builder\nTreasure Map",
+        titleCn: "Agent Builder\n专属助手藏宝图",
         kicker: "建立指南",
         kickerEn: "Build guide",
+        kickerCn: "搭建指南",
         description: "沿著藏寶圖路線，探索 Agent Builder 專屬助理的建立方式。",
         descriptionEn: "Follow the treasure map to build your own assistant with Agent Builder.",
+        descriptionCn: "跟着藏宝图走一遍，学会用 Agent Builder 搭出自己的助手。",
         icon: "🧭",
         href: "https://andyhung11.github.io/copilot-agent-building/agent-builder/",
       },
@@ -525,16 +591,21 @@ const TOPICS = [
   {
     title: "Copilot Cowork",
     titleEn: "Copilot Cowork",
+    titleCn: "Copilot Cowork",
     kicker: "協作實戰",
     kickerEn: "Collaboration in action",
+    kickerCn: "协作实战",
     websites: [
       {
         title: "Copilot Cowork\n練習手冊",
         titleEn: "Copilot Cowork\nPlaybook",
+        titleCn: "Copilot Cowork\n练习手册",
         kicker: "工作流程練習",
         kickerEn: "Workflow practice",
+        kickerCn: "工作流实练",
         description: "透過跨角色工作情境，練習以 Copilot 推進協作任務。",
         descriptionEn: "Drive collaborative tasks with Copilot across cross-role work scenarios.",
+        descriptionCn: "在跨角色的真实工作流里，练习用 Copilot 推动协作任务。",
         icon: "🤝",
         href: "",
       },
@@ -546,12 +617,16 @@ const topicList = document.getElementById("topicList");
 const hubLayout = document.getElementById("hubLayout");
 const navToggle = document.getElementById("navToggle");
 const themeToggle = document.getElementById("themeToggle");
-const langToggle = document.getElementById("langToggle");
+const langSwitch = document.getElementById("langSwitch");
 const sidebarNav = document.getElementById("sidebarNav");
 
-let lang = document.documentElement.dataset.lang === "en" ? "en" : "zh-Hant";
+const LANGS = ["zh-Hant", "zh-Hans", "en"];
+const LANG_SUFFIX = { "zh-Hant": "", "zh-Hans": "Cn", en: "En" };
+let lang = LANGS.includes(document.documentElement.dataset.lang)
+  ? document.documentElement.dataset.lang
+  : "en";
 const t = () => UI[lang];
-const pick = (item, key) => (lang === "en" ? item[key + "En"] ?? item[key] : item[key]) ?? "";
+const pick = (item, key) => (item[key + LANG_SUFFIX[lang]] ?? item[key]) ?? "";
 const plain = (value) => String(value).replace(/\s+/g, " ").trim();
 
 function syncThemeToggle() {
@@ -595,9 +670,13 @@ function renderChrome() {
   const websiteCount = TOPICS.reduce((total, topic) =>
     total + topic.websites.reduce((count, product) => count + (product.variants?.length || 1), 0), 0);
   document.getElementById("resourceCount").textContent = t().resourceCount(TOPICS.length, websiteCount);
-  langToggle.querySelector(".lang-label").textContent = t().langLabel;
-  langToggle.setAttribute("aria-label", t().langTitle);
-  langToggle.title = t().langTitle;
+  langSwitch.setAttribute("aria-label", t().langGroup);
+  langSwitch.querySelectorAll("button").forEach(btn => {
+    const value = btn.dataset.lang;
+    btn.setAttribute("aria-pressed", String(value === lang));
+    btn.title = t().langPick[value];
+    btn.setAttribute("aria-label", btn.title);
+  });
 }
 
 function renderTopics() {
@@ -687,8 +766,10 @@ function applyLang() {
   syncNavToggle();
 }
 
-langToggle.addEventListener("click", () => {
-  lang = lang === "en" ? "zh-Hant" : "en";
+langSwitch.addEventListener("click", event => {
+  const btn = event.target.closest("button[data-lang]");
+  if (!btn || btn.dataset.lang === lang) return;
+  lang = btn.dataset.lang;
   try { localStorage.setItem("copilotPortalLang", lang); } catch (_) {}
   applyLang();
 });
