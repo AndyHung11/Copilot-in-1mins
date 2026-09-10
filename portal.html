@@ -2,6 +2,167 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8" />
+<!-- LANG-SNIPPET v1 START -->
+<script>window.__LANG_CFG={"cur": "zh-Hant", "fallback": "en", "mode": "inpage", "supported": ["zh-Hant", "zh-Hans", "en"]};</script>
+<script>
+/* Power of Copilot - shared language core (v1)
+ *
+ * ONE source of truth. Injected inline into every entry page by
+ * _tools/inject_lang.py, so each page stays a standalone file.
+ * Never load this with <script src>: the handbooks are distributed as
+ * single files and are opened offline over file://.
+ *
+ * Priority: ?lang= > saved preference > navigator.languages > fallback.
+ * Once the reader picks a language it wins everywhere, including when they
+ * open a link that points at a different language edition.
+ *
+ * Pages declare window.__LANG_CFG before this block:
+ *   cur        current edition of THIS file, normalized ('zh-Hant'|'zh-Hans'|'en')
+ *   mode       'redirect' (separate file per language) | 'inpage' (switches live)
+ *   paths      redirect mode only: normalized code -> relative path
+ *   supported  languages this page actually ships (default: all three)
+ *   fallback   used when nothing matches (default: 'en')
+ *
+ * Exposes window.PocLang = { code, save, normalize, KEY }.
+ */
+(function () {
+  "use strict";
+
+  var KEY = "pocLang";
+  var CODES = ["zh-Hant", "zh-Hans", "en"];
+  // keys written by earlier per-page implementations, newest first - read once
+  // so nobody who already picked a language gets thrown back to detection
+  var LEGACY = [
+    "copilotPortalLang", "powerofcopilot.lang", "poc.lang", "cph-lang",
+    "copilotBuildingLang", "copilotPlaygroundLang", "copilotPlanetLang",
+    "copilotExpoLang", "agentTransitLang", "agent-lang"
+  ];
+  var cfg = window.__LANG_CFG || {};
+  var supported = cfg.supported || CODES;
+  var HOP = "pocLangHop";
+
+  // Accepts every vocabulary in use across the sites plus raw BCP 47 tags:
+  // 'zh'/'cn'/'en', 'zh-cn'/'zh-Hant', 'zh-Hans-CN', 'en-GB'...
+  function normalize(value) {
+    if (!value) return null;
+    var v = String(value).toLowerCase();
+    if (v === "cn") return "zh-Hans";
+    if (v === "zh") return "zh-Hant";
+    if (/^en/.test(v)) return "en";
+    if (/(^|[-_])(hans|cn|sg)(?![a-z])/.test(v)) return "zh-Hans";
+    if (/^zh/.test(v)) return "zh-Hant";
+    return null;
+  }
+
+  function read(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function write(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  function save(value) {
+    var code = normalize(value);
+    if (code) write(KEY, code);
+    return code;
+  }
+
+  // Preference is stored unchanged even when the current page cannot render it;
+  // only the language used for THIS render is downgraded.
+  function toSupported(code) {
+    if (supported.indexOf(code) !== -1) return code;
+    var order = code === "zh-Hans" ? ["zh-Hant", "en"]
+      : code === "zh-Hant" ? ["zh-Hans", "en"]
+      : ["en", "zh-Hant"];
+    for (var i = 0; i < order.length; i++) {
+      if (supported.indexOf(order[i]) !== -1) return order[i];
+    }
+    return supported[0] || "en";
+  }
+
+  function fromQuery() {
+    try {
+      return normalize(new URLSearchParams(location.search).get("lang"));
+    } catch (e) { return null; }
+  }
+
+  function fromLegacy() {
+    for (var i = 0; i < LEGACY.length; i++) {
+      var code = normalize(read(LEGACY[i]));
+      if (code) return code;
+    }
+    return null;
+  }
+
+  function fromBrowser() {
+    var list = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var code = normalize(list[i]);
+      if (code) return code;
+    }
+    return null;
+  }
+
+  function resolve() {
+    var q = fromQuery();
+    if (q) { write(KEY, q); return q; }         // shared links set the preference
+    var saved = normalize(read(KEY));
+    if (saved) return saved;
+    var legacy = fromLegacy();
+    if (legacy) { write(KEY, legacy); return legacy; }
+    return fromBrowser() || normalize(cfg.fallback) || "en";
+  }
+
+  var wanted = resolve();
+  var code = toSupported(wanted);
+
+  // ---- redirect editions (Basic / Pro) ----
+  // Each hop lands on a page whose cur === code, so this settles after one
+  // move; the marker only guards against a broken paths table.
+  if (cfg.mode === "redirect" && cfg.cur && code !== cfg.cur) {
+    var target = cfg.paths && cfg.paths[code];
+    var hopped = null;
+    try { hopped = sessionStorage.getItem(HOP); } catch (e) {}
+    if (target && hopped !== code) {
+      try { sessionStorage.setItem(HOP, code); } catch (e) {}
+      var qs;
+      try {
+        qs = new URLSearchParams(location.search);
+        qs.delete("lang");
+        qs = qs.toString();
+      } catch (e) { qs = ""; }
+      location.replace(target + (qs ? "?" + qs : "") + location.hash);
+      return;
+    }
+  }
+  try {
+    if (cfg.mode !== "redirect" || code === cfg.cur) sessionStorage.removeItem(HOP);
+  } catch (e) {}
+
+  // Detection is deliberately NOT persisted: only an explicit pick (a click or
+  // ?lang=) is stored, so readers who never choose keep following the browser.
+  window.PocLang = { code: code, save: save, normalize: normalize, KEY: KEY };
+
+  // Language buttons that are plain links (the redirect editions) must record
+  // the choice before navigating, otherwise the new page bounces straight back.
+  var TEXT = { "\u7e41": "zh-Hant", "\u7b80": "zh-Hans", "EN": "en" };
+  document.addEventListener("click", function (event) {
+    var el = event.target && event.target.closest
+      ? event.target.closest("a[href], button")
+      : null;
+    if (!el) return;
+    var picked = normalize(el.getAttribute("data-poc-lang") || el.getAttribute("data-lang"));
+    if (!picked && el.closest(".lang-toggle, .langtoggle, .lang-switch, #langSeg")) {
+      picked = TEXT[(el.textContent || "").trim().toUpperCase()]
+        || TEXT[(el.textContent || "").trim()];
+    }
+    if (picked) save(picked);
+  }, true);
+})();
+</script>
+<!-- LANG-SNIPPET v1 END -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Power of Copilot</title>
 <link rel="icon" type="image/png" sizes="any" href="copilot-logo.png?v=84cc5ca" />
@@ -16,19 +177,7 @@
       param || saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     document.documentElement.setAttribute("data-theme", theme);
 
-    let savedLang = null;
-    try { savedLang = localStorage.getItem("copilotPortalLang"); } catch (_) {}
-    const langParam = new URLSearchParams(window.location.search).get("lang");
-    const normalize = (value) => {
-      if (!value) return null;
-      if (/^en/i.test(value)) return "en";
-      if (/^zh[-_]?(cn|sg|hans)/i.test(value)) return "zh-Hans";
-      if (/^zh/i.test(value)) return "zh-Hant";
-      return null;
-    };
-    const lang =
-      normalize(langParam) || normalize(savedLang) ||
-      normalize(navigator.language) || "en";
+    const lang = window.PocLang.code;
     document.documentElement.setAttribute("data-lang", lang);
     document.documentElement.setAttribute("lang", lang);
   })();
@@ -770,7 +919,7 @@ langSwitch.addEventListener("click", event => {
   const btn = event.target.closest("button[data-lang]");
   if (!btn || btn.dataset.lang === lang) return;
   lang = btn.dataset.lang;
-  try { localStorage.setItem("copilotPortalLang", lang); } catch (_) {}
+  window.PocLang.save(lang);
   applyLang();
 });
 
