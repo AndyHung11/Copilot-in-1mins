@@ -33,3 +33,8 @@ _working/
 _tools/
 
 _preview/
+
+# Cowork 技能圖鑑（CoworkPlaybook/Skills）：提供三語 SKILL.md 與技能包下載
+!CoworkPlaybook/Skills/**/SKILL.md
+!CoworkPlaybook/Skills/*.zip
+!CoworkPlaybook/Skills/**/README.md
