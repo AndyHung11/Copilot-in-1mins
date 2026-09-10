@@ -26,3 +26,17 @@ Sort every inbox message into one of these categories:
 3. **Must reply**: the ⭐ list (who, plus a one-line point)
 4. **Waiting on**: who I'm waiting to hear back from
 5. **Reminders**: anything due today or needing a decision
+
+## 5. Schedule Settings
+Once this flow is on a schedule, Cowork runs it by itself using these settings:
+
+| Item | Setting |
+|------|---------|
+| Run time | **08:30** every morning (change it to when you actually start work) |
+| Scope | New mail since 17:00 on the previous working day |
+| Weekends | Skip; on Monday morning include everything from the weekend |
+| Delivery | Email the brief **to myself** |
+| If there is no new mail | Still send the brief, noting "nothing new to action today" |
+
+> ⚠️ **Pause it when you are done practising**: this is a real schedule and it will genuinely
+> run tomorrow morning. Set it to paused on the Automations page — no need to delete it.

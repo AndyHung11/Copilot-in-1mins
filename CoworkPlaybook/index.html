@@ -17,10 +17,26 @@ html[data-theme="dark"] {
   --shadow:0 1px 3px rgba(0,0,0,.4); --shadow-lg:0 12px 34px rgba(0,0,0,.5);
 }
 * { box-sizing:border-box; }
-body { margin:0; font-family:"Segoe UI","Microsoft JhengHei",system-ui,sans-serif;
+body { margin:0; font-family:"Segoe UI","Microsoft JhengHei","PingFang TC",
+    "Noto Sans TC",system-ui,sans-serif;
   background:var(--bg); color:var(--text); line-height:1.7; font-size:15.5px; }
-body[data-lang="zh"] .en { display:none; }
-body[data-lang="en"] .zh { display:none; }
+/* 簡中改用簡體字型（YaHei/PingFang SC），否則簡體字會落到繁體字型渲染，
+   筆畫風格不對。與簡報端 build.js 的 LANG_FONT 對應。 */
+body[data-lang="cn"] { font-family:"Segoe UI","Microsoft YaHei","PingFang SC",
+    "Noto Sans SC",system-ui,sans-serif; }
+body[data-lang="en"] { font-family:"Segoe UI",system-ui,-apple-system,sans-serif; }
+body[data-lang="zh"] .en, body[data-lang="zh"] .cn { display:none; }
+body[data-lang="en"] .zh, body[data-lang="en"] .cn { display:none; }
+body[data-lang="cn"] .zh, body[data-lang="cn"] .en { display:none; }
+/* 離線包依語系各一個檔，只顯示當前語系那顆（用 flex 蓋回上面的 display:none） */
+body[data-lang="zh"] .pcard-deck.dl.zh,
+body[data-lang="en"] .pcard-deck.dl.en,
+body[data-lang="cn"] .pcard-deck.dl.cn { display:flex; }
+/* 簡報同理：三語各一份 pptx。用 .dk 與離線包的 .dl 區隔，
+   否則同一個 .zh 會同時命中兩顆按鈕。 */
+body[data-lang="zh"] .pcard-deck.dk.zh,
+body[data-lang="en"] .pcard-deck.dk.en,
+body[data-lang="cn"] .pcard-deck.dk.cn { display:flex; }
 .wrap { max-width:1080px; margin:0 auto; padding:34px 24px 70px; }
 .top { display:flex; justify-content:flex-end; gap:8px; margin-bottom:14px; }
 .tb-btn { background:var(--card); border:1px solid var(--border); color:var(--text);
@@ -35,19 +51,52 @@ h1 { font-size:38px; margin:16px 0 4px; letter-spacing:-.02em; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
 .pcard { background:var(--card); border:1px solid var(--border); border-radius:14px;
   box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column;
+  position:relative;
   transition:transform .15s, box-shadow .15s; }
 .pcard:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); }
 .pcard-main { padding:20px 20px 16px; text-decoration:none; color:inherit; flex:1; }
 .pcard-icons { font-size:19px; letter-spacing:3px; margin-bottom:10px; }
 .pcard h2 { font-size:17px; margin:0 0 4px; line-height:1.4; }
 .pcard-meta { color:var(--muted); font-size:13px; margin:0; }
-.pcard-deck { display:flex; align-items:center; gap:7px; padding:10px 20px;
-  border-top:1px solid var(--border); text-decoration:none; color:var(--accent);
+/* 兩個下載動作並排一列，等寬，中間一條分隔線 —— 上下堆疊時
+   兩行文字長度不同會讓格式標籤對不齊，並排就整齊了 */
+.pcard-acts { display:grid; grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--border); }
+.pcard-acts > * + * { border-left:1px solid var(--border); }
+.pcard-deck { display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:10px 8px; text-decoration:none; color:var(--accent);
   font-size:12.5px; font-weight:600; }
 .pcard-deck:hover { background:var(--accent-soft); }
-.pcard-deck span { font-size:9.5px; border:1px solid currentColor; border-radius:4px;
-  padding:1px 4px; opacity:.75; }
+/* 檔案格式標籤（PPTX / HTML）—— 只針對 .fmt，
+   不能用 .pcard-deck span，否則 t() 產生的語言 span 也會被套上外框 */
+.pcard-deck .fmt { font-size:9.5px; border:1px solid currentColor; border-radius:4px;
+  padding:1px 4px; opacity:.75; font-weight:600; }
+/* 語言切換：三顆並排按鈕，與 portal.html 一致 */
+.lang-switch {
+  height:34px; display:inline-flex; align-items:center; gap:2px; padding:3px;
+  border:1px solid var(--border); border-radius:9px; background:var(--card);
+}
+.lang-switch .lang-icon { padding:0 4px 0 6px; font-size:13px; opacity:.75; }
+.lang-switch button {
+  min-width:30px; height:26px; padding:0 9px; border:0; border-radius:7px;
+  background:transparent; color:var(--muted); font:600 12.5px inherit;
+  cursor:pointer; white-space:nowrap; transition:background .16s, color .16s;
+}
+.lang-switch button:hover { color:var(--text); background:var(--accent-soft); }
+.lang-switch button[aria-pressed="true"] { background:var(--accent); color:#fff; }
 .extras { margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.soon-badge { position:absolute; top:12px; right:12px; z-index:1;
+  background:var(--border); color:var(--muted); border-radius:20px;
+  padding:2px 9px; font-size:11px; font-weight:700; letter-spacing:.02em;
+  line-height:1.5; }
+.soon-badge.inline { position:static; margin-left:8px; }
+.pcard.soon { opacity:.62; }
+.pcard.soon:hover { transform:none; box-shadow:var(--shadow); }
+.pcard.soon .pcard-icons { filter:grayscale(1); }
+.pcard.soon .pcard-main, .pcard.soon .pcard-deck { cursor:not-allowed; }
+.pcard.soon .pcard-deck { color:var(--muted); }
+.tb-btn.is-soon { opacity:.62; cursor:not-allowed; }
+.tb-btn.is-soon:hover { border-color:var(--border); color:var(--text); }
 .note { margin-top:22px; color:var(--muted); font-size:13px; text-align:center; }
 @media(max-width:520px) { h1 { font-size:29px; } .wrap { padding:24px 16px 50px; } }
 </style>
@@ -55,108 +104,159 @@ h1 { font-size:38px; margin:16px 0 4px; letter-spacing:-.02em; }
 <body data-lang="zh">
 <div class="wrap">
   <div class="top">
-    <button class="tb-btn" id="langBtn">🌐 <span class="zh">EN</span><span class="en">中文</span></button>
-    <button class="tb-btn" id="themeBtn">🌙 <span class="zh">深色</span><span class="en">Dark</span></button>
+    <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
+      <span class="lang-icon" aria-hidden="true">🌐</span>
+      <button type="button" data-lang="zh-Hant">繁</button>
+      <button type="button" data-lang="zh-Hans">简</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <button class="tb-btn" id="themeBtn">🌙 <span class="zh">深色</span><span class="en">Dark</span><span class="cn">深色</span></button>
   </div>
   <header class="hero">
     <span class="tag">Microsoft 365 Copilot · Cowork v2</span>
-    <h1><span class="zh">Cowork 上手實戰</span><span class="en">The Cowork Playbook</span></h1>
-    <p class="sub"><span class="zh">跟著做，套用到你的日常</span><span class="en">Do it. Then make it yours.</span></p>
-    <p class="sub"><span class="zh">44 個真實業務情境，依產業拆成 8 本 —— 挑你要的那一本就好。</span><span class="en">44 real business scenarios across 8 playbooks — open just the one you need.</span></p>
+    <h1><span class="zh">Cowork 上手實戰</span><span class="en">The Cowork Playbook</span><span class="cn">Cowork 上手实战</span></h1>
+    <p class="sub"><span class="zh">跟著做，套用到你的日常</span><span class="en">Do it. Then make it yours.</span><span class="cn">跟着做，用到你的日常</span></p>
+    <p class="sub"><span class="zh">目前開放 1 本、5 個情境。其餘 7 本正在重新檢視內容，稍後開放。</span><span class="en">1 playbook with 5 scenarios is available now. The other 7 are being reviewed and will follow.</span><span class="cn">目前开放 1 本、5 个场景。其余 7 本正在重新审阅内容，稍后开放。</span></p>
   </header>
   <div class="grid">
     <article class="pcard">
       <a class="pcard-main" href="playbook-generic.html">
         <div class="pcard-icons">📥🤝📊🔬🧩</div>
-        <h2><span class="zh">練習情境</span><span class="en">Scenarios</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 3.7 MB</p>
+        <h2><span class="zh">通用情境 · 從這裡開始</span><span class="en">General · Start here</span><span class="cn">通用场景 · 从这里开始</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · 4.7 MB</p>
       </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_v2.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+      <div class="pcard-acts">
+        <a class="pcard-deck dk zh" href="CoworkPlaybook_Generic_zh-TW.pptx" download>📊 <span>簡報</span><span class="fmt">PPTX</span></a>
+        <a class="pcard-deck dk en" href="CoworkPlaybook_Generic_en.pptx" download>📊 <span>Deck</span><span class="fmt">PPTX</span></a>
+        <a class="pcard-deck dk cn" href="CoworkPlaybook_Generic_zh-CN.pptx" download>📊 <span>演示文稿</span><span class="fmt">PPTX</span></a>
+        <a class="pcard-deck dl zh" href="playbook-generic_zh-TW-pack.zip" download>⬇ <span>離線包</span><span class="fmt">ZIP</span></a>
+        <a class="pcard-deck dl en" href="playbook-generic_en-pack.zip" download>⬇ <span>Pack</span><span class="fmt">ZIP</span></a>
+        <a class="pcard-deck dl cn" href="playbook-generic_zh-CN-pack.zip" download>⬇ <span>离线包</span><span class="fmt">ZIP</span></a>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-finance.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">📈📝📊🛡️🧩</div>
-        <h2><span class="zh">產業情境 · 金融</span><span class="en">Industry · Finance</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 2.3 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_金融版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 金融</span><span class="en">Industry · Finance</span><span class="cn">行业场景 · 金融</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-manufacturing.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">🌅🛠️🧪📑⚙️</div>
-        <h2><span class="zh">產業情境 · 製造業</span><span class="en">Industry · Manufacturing</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 2.5 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_製造業版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 製造業</span><span class="en">Industry · Manufacturing</span><span class="cn">行业场景 · 制造业</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-manufacturing-adv.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">📦🚨⏰🗂️🧠</div>
-        <h2><span class="zh">產業情境 · 製造業（進階）</span><span class="en">Industry · Manufacturing (Advanced)</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 2.9 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_製造業進階版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 製造業（進階）</span><span class="en">Industry · Manufacturing (Advanced)</span><span class="cn">行业场景 · 制造业（进阶）</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-government.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">🔎💰⚖️🧾📑✅🗣️📅</div>
-        <h2><span class="zh">產業情境 · 公部門</span><span class="en">Industry · Government</span></h2>
-        <p class="pcard-meta"><span class="zh">8 個情境</span><span class="en">8 scenarios</span>
-          · 3.1 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_公部門版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 公部門</span><span class="en">Industry · Government</span><span class="cn">行业场景 · 公共部门</span></h2>
+        <p class="pcard-meta"><span class="zh">8 個情境</span><span class="en">8 scenarios</span><span class="cn">8 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-retail.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">🛒🎉💬🏷️📑📈</div>
-        <h2><span class="zh">產業情境 · 零售通路</span><span class="en">Industry · Retail</span></h2>
-        <p class="pcard-meta"><span class="zh">6 個情境</span><span class="en">6 scenarios</span>
-          · 3.3 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_零售通路版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 零售通路</span><span class="en">Industry · Retail</span><span class="cn">行业场景 · 零售渠道</span></h2>
+        <p class="pcard-meta"><span class="zh">6 個情境</span><span class="en">6 scenarios</span><span class="cn">6 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-telecom.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">⚖️📑🔐🔎🧩</div>
-        <h2><span class="zh">產業情境 · 電信業</span><span class="en">Industry · Telecom</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 2.4 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_電信業版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 電信業</span><span class="en">Industry · Telecom</span><span class="cn">行业场景 · 电信业</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
-    <article class="pcard">
-      <a class="pcard-main" href="playbook-aviation.html">
+    <article class="pcard soon" aria-disabled="true">
+      <span class="soon-badge"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span>
+      <div class="pcard-main">
         <div class="pcard-icons">✈️🕐🛠️📊🛡️</div>
-        <h2><span class="zh">產業情境 · 航空業</span><span class="en">Industry · Aviation</span></h2>
-        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span>
-          · 1.5 MB</p>
-      </a>
-      <a class="pcard-deck" href="Cowork_教育訓練簡報_航空業版.pptx" download>📊 <span class="zh">簡報</span><span class="en">Deck</span><span>PPTX</span></a>
+        <h2><span class="zh">產業情境 · 航空業</span><span class="en">Industry · Aviation</span><span class="cn">行业场景 · 航空业</span></h2>
+        <p class="pcard-meta"><span class="zh">5 個情境</span><span class="en">5 scenarios</span><span class="cn">5 个场景</span>
+          · <span class="zh">內容重新檢視中</span><span class="en">Under review</span><span class="cn">内容重新审阅中</span></p>
+      </div>
+      <div class="pcard-acts">
+        <div class="pcard-deck">📊 <span class="zh">簡報</span><span class="en">Deck</span><span class="cn">演示文稿</span><span class="fmt">PPTX</span></div>
+        <div class="pcard-deck">⬇ <span class="zh">離線包</span><span class="en">Pack</span><span class="cn">离线包</span><span class="fmt">ZIP</span></div>
+      </div>
     </article>
   </div>
   <div class="extras">
-    <a class="tb-btn" href="playbook-all.html">📚 <span class="zh">完整版：全部產業合成一本</span><span class="en">Everything in one file</span>
-      · 20.9 MB</a>
-    <a class="tb-btn" href="Cowork_Playbook_Offline_Pack.zip" download>📦 <span class="zh">下載離線包</span><span class="en">Download offline pack</span></a>
+    <span class="tb-btn is-soon" aria-disabled="true">📚 <span class="zh">完整版：全部產業合成一本</span><span class="en">Everything in one file</span><span class="cn">完整版：全部行业合成一本</span><span class="soon-badge inline"><span class="zh">即將推出</span><span class="en">Coming soon</span><span class="cn">即将推出</span></span></span>
   </div>
-  <p class="note"><span class="zh">每本手冊都是單一 HTML，截圖已內嵌，下載後離線也能看。</span><span class="en">Each playbook is a single HTML file with screenshots embedded — works offline.</span></p>
+  <p class="note"><span class="zh">每本手冊都是單一 HTML，截圖已內嵌，下載後離線也能看。</span><span class="en">Each playbook is a single HTML file with screenshots embedded — works offline.</span><span class="cn">每本手册都是单一 HTML，截图已内嵌，下载后离线也能看。</span></p>
 </div>
 <script>
 const b = document.body, h = document.documentElement;
-document.getElementById('langBtn').onclick = () => {
-  b.dataset.lang = b.dataset.lang === 'zh' ? 'en' : 'zh';
-  localStorage.setItem('cw-lang', b.dataset.lang);
-};
+// 語言：接共用語言核心 PocLang（zh-Hant / zh-Hans / en）
+// 本檔內部用短碼 zh / cn / en 控制顯示。
+const LANG_OF = {'zh-Hant': 'zh', 'zh-Hans': 'cn', 'en': 'en'};
+const CODE_OF = {zh: 'zh-Hant', cn: 'zh-Hans', en: 'en'};
+const langSwitch = document.getElementById('langSwitch');
+function applyLang(short) {
+  b.dataset.lang = short;
+  h.lang = CODE_OF[short];
+  langSwitch.querySelectorAll('button').forEach(btn =>
+    btn.setAttribute('aria-pressed', String(btn.dataset.lang === CODE_OF[short])));
+}
+applyLang(LANG_OF[(window.PocLang && window.PocLang.code) || 'zh-Hant'] || 'zh');
+langSwitch.addEventListener('click', e => {
+  const btn = e.target.closest('button[data-lang]');
+  if (!btn) return;
+  if (window.PocLang && window.PocLang.save) window.PocLang.save(btn.dataset.lang);
+  applyLang(LANG_OF[btn.dataset.lang] || 'zh');
+});
 document.getElementById('themeBtn').onclick = () => {
   const dark = h.dataset.theme === 'dark';
   h.dataset.theme = dark ? '' : 'dark';
   localStorage.setItem('cw-theme', dark ? '' : 'dark');
 };
-const sl = localStorage.getItem('cw-lang'); if (sl) b.dataset.lang = sl;
 const st = localStorage.getItem('cw-theme'); if (st) h.dataset.theme = st;
 </script>
 </body>
