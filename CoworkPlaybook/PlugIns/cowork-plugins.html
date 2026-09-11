@@ -185,6 +185,10 @@ body { margin:0; background:var(--bg); color:var(--text);
   line-height:1.7; font-size:15.5px;
   font-family:"Segoe UI","Microsoft JhengHei","PingFang TC","Noto Sans TC",
   system-ui,sans-serif; }
+/* 抽屜開啟時鎖住背景捲動，否則右側會出現兩層捲軸。
+   scrollbar-gutter 讓捲軸消失時版面不位移。 */
+html { scrollbar-gutter:stable; }
+body.drawer-open { overflow:hidden; }
 body[data-lang="cn"] { font-family:"Segoe UI","Microsoft YaHei","PingFang SC",
   "Noto Sans SC",system-ui,sans-serif; }
 body[data-lang="en"] { font-family:"Segoe UI",system-ui,-apple-system,sans-serif; }
@@ -1171,37 +1175,37 @@ Open Issues:
   </div>
 </section>
 <section class="band">
-  <h2><span class="zh">為什麼技能可以裝很多個也不吃 context</span><span class="cn">为什么技能可以装很多个也不吃 context</span><span class="en">Why many skills still cost you almost nothing</span></h2>
-  <p class="wide"><span class="zh">技能是<strong>分層載入</strong>的。平常只有第一層常駐，其餘等到真的用上才進來——所以裝 20 個技能的日常開銷，大約只有 2,000 tokens。下面長條的長度代表<strong>該層載入時佔用的 context</strong>。這裡的 token 數字是<strong>撰寫技能時的目標值</strong>（Microsoft 官方文件用的字是 <em>target size</em>），不是強制上限，<strong>也不是計費單位</strong>——Cowork 實際計費看的是 Copilot Credits，往下一段說明。</span><span class="cn">技能是<strong>分层加载</strong>的。平常只有第一层常驻，其余等到真的用上才进来——所以装 20 个技能的日常开销，大约只有 2,000 tokens。下面长条的长度代表<strong>该层加载时占用的 context</strong>。这里的 token 数字是<strong>写技能时的目标值</strong>（微软官方文档用的词是 <em>target size</em>），不是强制上限，<strong>也不是计费单位</strong>——Cowork 实际计费看的是 Copilot Credits，见下一节。</span><span class="en">Skills load in tiers. Only the first is always resident; the rest arrives when actually needed — so twenty installed skills cost roughly 2,000 tokens at rest. Bar length below shows <strong>how much context each tier takes when it loads</strong>. These token figures are <strong>authoring targets</strong> (Microsoft’s own docs call them <em>target size</em>), not enforced limits — and <strong>not the billing unit</strong>. Cowork bills in Copilot Credits; see the next section.</span></p>
+  <h2><span class="zh">技能如何分層載入</span><span class="cn">技能如何分层加载</span><span class="en">How skills load in layers</span></h2>
+  <p class="wide"><span class="zh">技能採<strong>分層載入</strong>：僅第一層常駐於工作階段，其餘各層在實際需要時才進入 context。因此技能安裝數量與常駐負擔並非等比成長——<strong>導入多個技能仍可維持低度常駐開銷</strong>。下方長條表示<strong>各層載入時佔用 context 的相對比重</strong>，非絕對值，亦與計費無關（計費方式見下一節）。</span><span class="cn">技能采用<strong>分层加载</strong>：仅第一层常驻于会话，其余各层在实际需要时才进入 context。因此技能安装数量与常驻开销并非等比增长——<strong>引入多个技能仍可维持较低的常驻开销</strong>。下方长条表示<strong>各层加载时占用 context 的相对比重</strong>，非绝对值，也与计费无关（计费方式见下一节）。</span><span class="en">Skills load in layers: only the first stays resident for the session, while the rest enters context only when actually required. Resident overhead therefore does not scale linearly with the number of skills installed — <strong>a broad skill library can be deployed while keeping standing overhead low</strong>. The bars below show the <strong>relative share of context each layer occupies when loaded</strong>. They are indicative, not absolute, and are unrelated to billing (see the next section).</span></p>
   <div class="tiers"><div class="tier">
       <span class="tier-lab"><span class="zh">第 1 層</span><span class="cn">第 1 层</span><span class="en">Tier 1</span></span>
       <span class="tier-name"><code>frontmatter</code></span>
       <span class="tier-bar"><i style="width:4%"></i></span>
-      <span class="tier-cost">~100 tokens</span>
-      <span class="tier-desc"><span class="zh"><strong>永遠載入</strong>，但只有短短一段。agent 靠它判斷「這次要不要用這個技能」。</span><span class="cn"><strong>永远加载</strong>，但只有短短一段。agent 靠它判断“这次要不要用这个技能”。</span><span class="en"><strong>Always loaded</strong>, but tiny. This is what the agent reads to decide whether to reach for the skill at all.</span></span>
+      <span class="tier-cost"><span class="zh">常駐</span><span class="cn">常驻</span><span class="en">Resident</span></span>
+      <span class="tier-desc"><span class="zh"><strong>全時載入，佔比極低</strong>。僅含名稱與用途描述，供 agent 判定該次任務是否需要叫用此技能。</span><span class="cn"><strong>全时加载，占比极低</strong>。仅含名称与用途描述，供 agent 判定该次任务是否需要调用此技能。</span><span class="en"><strong>Always loaded, minimal footprint.</strong> Just the name and description — enough for the agent to judge whether the skill is relevant to the task at hand.</span></span>
     </div><div class="tier">
       <span class="tier-lab"><span class="zh">第 2 層</span><span class="cn">第 2 层</span><span class="en">Tier 2</span></span>
       <span class="tier-name"><code>SKILL.md</code></span>
       <span class="tier-bar"><i style="width:100%"></i></span>
-      <span class="tier-cost">&lt; 5,000 tokens</span>
-      <span class="tier-desc"><span class="zh"><strong>只有觸發時才載入</strong>。完整的工作流程與輸出格式，約 1,500–2,000 字。</span><span class="cn"><strong>只有触发时才加载</strong>。完整的工作流程与输出格式，约 1,500–2,000 字。</span><span class="en"><strong>Loaded only when triggered</strong>: the full workflow and output format, roughly 1,500–2,000 words.</span></span>
+      <span class="tier-cost"><span class="zh">主要負載</span><span class="cn">主要负载</span><span class="en">Main payload</span></span>
+      <span class="tier-desc"><span class="zh"><strong>技能被觸發時才載入</strong>，為單一技能佔用 context 的主要部分，內容為完整工作流程、判斷準則與輸出格式。Microsoft 建議控制在 1,500–2,000 字，超出時應改以第三層附屬檔承載。</span><span class="cn"><strong>技能被触发时才加载</strong>，是单个技能占用 context 的主要部分，内容为完整工作流程、判断准则与输出格式。微软建议控制在 1,500–2,000 字，超出时应改用第三层附属文件承载。</span><span class="en"><strong>Loaded only on trigger</strong>, and the bulk of what a single skill occupies: the full workflow, decision criteria and output format. Microsoft suggests keeping it to roughly 1,500–2,000 words and moving anything longer into layer-three companions.</span></span>
     </div><div class="tier">
       <span class="tier-lab"><span class="zh">第 3 層</span><span class="cn">第 3 层</span><span class="en">Tier 3</span></span>
       <span class="tier-name"><code>references/</code></span>
       <span class="tier-bar"><i style="width:42%"></i></span>
-      <span class="tier-cost"><span class="zh">按需</span><span class="cn">按需</span><span class="en">on demand</span></span>
-      <span class="tier-desc"><span class="zh"><strong>技能自己決定要不要讀</strong>。範本、檢核表、對照表放這裡，不讀就不佔。</span><span class="cn"><strong>技能自己决定要不要读</strong>。模板、检查表、对照表放这里，不读就不占。</span><span class="en"><strong>The skill decides whether to open them</strong>: templates, checklists, lookup tables — unopened means unpaid.</span></span>
+      <span class="tier-cost"><span class="zh">按需</span><span class="cn">按需</span><span class="en">On demand</span></span>
+      <span class="tier-desc"><span class="zh"><strong>由技能於執行過程中自行判斷是否讀取</strong>。範本、檢核表、對照表等參考資料置於此層，未被讀取即不佔用 context——這是控制單一技能負載的主要手段。</span><span class="cn"><strong>由技能在执行过程中自行判断是否读取</strong>。模板、检查表、对照表等参考资料置于此层，未被读取即不占用 context——这是控制单个技能开销的主要手段。</span><span class="en"><strong>Opened at the skill's own discretion during execution.</strong> Templates, checklists and lookup tables live here; anything not opened occupies nothing — the primary lever for keeping an individual skill lean.</span></span>
     </div><div class="tier">
       <span class="tier-lab"><span class="zh">第 4 層</span><span class="cn">第 4 层</span><span class="en">Tier 4</span></span>
       <span class="tier-name"><code>scripts/</code></span>
       <span class="tier-bar"><i style="width:0%"></i></span>
-      <span class="tier-cost"><span class="zh">0 tokens</span><span class="cn">0 tokens</span><span class="en">0 tokens</span></span>
-      <span class="tier-desc"><span class="zh"><strong>永遠不進 context</strong>。只有執行結果會回到對話裡，程式碼本身不會。</span><span class="cn"><strong>永远不进 context</strong>。只有执行结果会回到对话里，代码本身不会。</span><span class="en"><strong>Never enters context.</strong> Only their output comes back to the conversation; the code itself never does.</span></span>
+      <span class="tier-cost"><span class="zh">不佔用</span><span class="cn">不占用</span><span class="en">None</span></span>
+      <span class="tier-desc"><span class="zh"><strong>不進入 context</strong>。腳本由執行環境直接執行，僅執行結果回到對話，程式碼本身全程不佔用 context。</span><span class="cn"><strong>不进入 context</strong>。脚本由执行环境直接运行，仅执行结果回到对话，代码本身全程不占用 context。</span><span class="en"><strong>Never enters context.</strong> Scripts run in the execution environment and only their output returns to the conversation; the code itself never loads.</span></span>
     </div></div>
   <div class="facts"><div class="fact"><h3><span class="zh">一包裝得下多少</span><span class="cn">一个包装得下多少</span><span class="en">How much fits</span></h3><p><span class="zh">每個外掛程式最多 <strong>20 個技能、10 個連接器</strong>；每個技能最多 20 個附屬檔，單檔 ≤5 MB、合計 ≤10 MB。</span><span class="cn">每个插件最多 <strong>20 个技能、10 个连接器</strong>；每个技能最多 20 个附属文件，单文件 ≤5 MB、合计 ≤10 MB。</span><span class="en">Up to <strong>20 skills and 10 connectors</strong> per plugin; up to 20 companion files per skill, each ≤5 MB, ≤10 MB in total.</span></p></div><div class="fact"><h3><span class="zh">不會蓋掉內建技能</span><span class="cn">不会覆盖内置技能</span><span class="en">Cannot override built-ins</span></h3><p><span class="zh">外掛程式帶進來的技能來源標記為 <code>package</code>，<strong>不能覆蓋同名的內建技能</strong>；多個同名技能並存時由 agent 自行判斷該用哪一個。</span><span class="cn">插件带进来的技能来源标记为 <code>package</code>，<strong>不能覆盖同名的内置技能</strong>；多个同名技能并存时由 agent 自行判断该用哪一个。</span><span class="en">Skills from a plugin are marked <code>package</code> and <strong>cannot override a built-in skill of the same name</strong>; where names collide the agent decides.</span></p></div><div class="fact"><h3><span class="zh">有連接器就要登入</span><span class="cn">有连接器就要登录</span><span class="en">Connectors need sign-in</span></h3><p><span class="zh">外掛程式也可以帶 connector 去連外部系統，那種首次使用要一次性登入。<strong>本頁這四包都沒有連接器</strong>，裝上即用。</span><span class="cn">插件也可以带 connector 去连外部系统，那种首次使用要一次性登录。<strong>本页这四包都没有连接器</strong>，装上即用。</span><span class="en">Plugins may also ship connectors to external systems, which need a one-time sign-in. <strong>None of the four packs here have any</strong> — they work on install.</span></p></div><div class="fact"><h3><span class="zh">技能是純文字，看得懂就審得動</span><span class="cn">技能是纯文本，看得懂就审得动</span><span class="en">Plain text, so it's reviewable</span></h3><p><span class="zh"><code>SKILL.md</code> 是純 Markdown，沒有程式碼。導入前請人逐字讀過就是最有效的把關。</span><span class="cn"><code>SKILL.md</code> 是纯 Markdown，没有代码。导入前请人逐字读过就是最有效的把关。</span><span class="en"><code>SKILL.md</code> is plain Markdown with no code. Reading it end to end before adoption is the single most effective review you can do.</span></p></div></div>
 </section>
 <section class="band">
-  <h2><span class="zh">誰在付錢：Copilot Credits</span><span class="cn">谁在付钱：Copilot Credits</span><span class="en">What this actually costs: Copilot Credits</span></h2>
+  <h2><span class="zh">Copilot Cowork 怎麼計費</span><span class="cn">Copilot Cowork 怎么计费</span><span class="en">How Copilot Cowork is billed</span></h2>
   <p class="wide"><span class="zh">上面講的是 <strong>context</strong>（模型讀了多少字），這一段講的是 <strong>帳單</strong>。兩者是不同的東西：Cowork 採<strong>用量計費</strong>（usage-based billing，UBB），計價單位是 <strong>Copilot Credits</strong>，而且<strong>使用者介面上永遠看不到 token 數</strong>。</span><span class="cn">上面讲的是 <strong>context</strong>（模型读了多少字），这一节讲的是 <strong>账单</strong>。两者是不同的东西：Cowork 采用<strong>用量计费</strong>（usage-based billing，UBB），计价单位是 <strong>Copilot Credits</strong>，而且<strong>用户界面上永远看不到 token 数</strong>。</span><span class="en">The section above is about <strong>context</strong> — how much text the model reads. This one is about <strong>the bill</strong>. They are different things: Cowork runs on <strong>usage-based billing</strong> (UBB), priced in <strong>Copilot Credits</strong>, and <strong>token counts never appear in the product</strong>.</span></p>
   <div class="tiers"><div class="tier">
       <span class="tier-lab"><span class="zh">要素 1</span><span class="cn">要素 1</span><span class="en">Input 1</span></span>
@@ -1214,7 +1218,7 @@ Open Issues:
       <span class="tier-name"><code>context retrieval</code></span>
       <span class="tier-bar"><i style="width:62%"></i></span>
       <span class="tier-cost"><span class="zh">context 量</span><span class="cn">context 量</span><span class="en">Context volume</span></span>
-      <span class="tier-desc"><span class="zh">撈了多少資料進來。這是上一段的 token 與帳單<strong>唯一的接點</strong>——但微軟<strong>沒有公布換算公式</strong>，技能寫得精簡只能說「有幫助」，無法量化成省多少錢。</span><span class="cn">捞了多少数据进来。这是上一节的 token 与账单<strong>唯一的接点</strong>——但微软<strong>没有公布换算公式</strong>，技能写得精简只能说“有帮助”，无法量化成省多少钱。</span><span class="en">How much material gets pulled in. This is the <strong>only point where the tokens above touch the bill</strong> — but Microsoft publishes <strong>no conversion formula</strong>, so a lean skill helps without being quantifiable in currency.</span></span>
+      <span class="tier-desc"><span class="zh">單次任務實際取用的資料量。這是<strong>上一節的分層載入與計費唯一的交會點</strong>——技能寫得精簡確實有助於降低取用量，但微軟<strong>未公布任何換算基準</strong>，無法量化成具體金額。</span><span class="cn">单次任务实际取用的数据量。这是<strong>上一节的分层加载与计费唯一的交会点</strong>——技能写得精简确实有助于降低取用量，但微软<strong>未公布任何换算基准</strong>，无法量化成具体金额。</span><span class="en">How much material a task actually draws in. This is the <strong>one point where the layered loading above meets the bill</strong> — keeping skills lean genuinely reduces retrieval, but Microsoft publishes <strong>no conversion basis</strong>, so the saving cannot be expressed as a figure.</span></span>
     </div><div class="tier">
       <span class="tier-lab"><span class="zh">要素 3</span><span class="cn">要素 3</span><span class="en">Input 3</span></span>
       <span class="tier-name"><code>tool calls</code></span>
@@ -1406,6 +1410,7 @@ document.getElementById('srcDl').addEventListener('click', () =>
 
 function closeDrawer(){
   drawer.classList.remove('is-open'); scrim.classList.remove('is-open');
+  b.classList.remove('drawer-open');
   if (openCard) openCard.classList.remove('is-open');
   openCard = null; openId = null; drBody.innerHTML = '';
 }
@@ -1430,6 +1435,7 @@ function openSkill(card){
     + md.length.toLocaleString() + ' ' + (CHARS[document.body.dataset.lang] || '');
   showDrTab('walk');
   drawer.classList.add('is-open'); scrim.classList.add('is-open');
+  b.classList.add('drawer-open');
 }
 document.querySelectorAll('.skill .sk-head').forEach(head =>
   head.addEventListener('click', () => openSkill(head.closest('.skill'))));
