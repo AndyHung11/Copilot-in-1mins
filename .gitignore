@@ -38,3 +38,10 @@ _preview/
 !CoworkPlaybook/Skills/**/SKILL.md
 !CoworkPlaybook/Skills/*.zip
 !CoworkPlaybook/Skills/**/README.md
+
+# Cowork 外掛程式圖鑑（CoworkPlaybook/PlugIns）：頁面、素材與下載包
+!CoworkPlaybook/PlugIns/**/*.md
+!CoworkPlaybook/PlugIns/*.zip
+!CoworkPlaybook/PlugIns/**/*.json
+!CoworkPlaybook/PlugIns/**/*.png
+!CoworkPlaybook/PlugIns/**/*.svg
