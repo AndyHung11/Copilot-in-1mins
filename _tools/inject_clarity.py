@@ -25,8 +25,8 @@ SCRIPT = (
     f'"{PROJECT_ID}");</script>'
 )
 
-# Pages whose Content-Security-Policy blocks external scripts and beacons.
-SKIP = {"agent-builder/index.html"}
+# Pages that intentionally opt out of analytics.
+SKIP = set()
 
 
 def tracked_html(repo):
