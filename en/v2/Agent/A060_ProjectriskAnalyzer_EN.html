@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 1-Min Tips: Power of Agent #A060 — Projectrisk Analyzer</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#EEF2F7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(15,108,189,0.12);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#0F6CBD" style="background-color:#0F6CBD; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#CFE5F6; line-height:1.4;">COPILOT 1-MIN TIPS</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">⚡ Power of Agent</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #4F8EC9;">
+          <div style="font-size:12px; color:#CFE5F6; letter-spacing:1px; line-height:1.4;">Issue #A060</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">Describe the project, get a risk matrix back: probability x impact scored, prioritized, with preventive and mitigation measures attached</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#115EA3; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:30pt; font-weight:800; color:#FFFFFF; line-height:1.2; padding-bottom:8px;">🎲 Projectrisk Analyzer</div>
+      <div style="font-size:13pt; color:#CFE3F7; padding-bottom:14px;"></div>
+      <div style="font-size:14pt; font-weight:500; color:#E5F0FA; line-height:1.6;">This agent works through your project description and planning documents to surface potential risks, scores each one from 1 to 5 on probability and on impact, multiplies them into a Risk Priority Number (RPN), and sorts everything into five categories: technical, schedule, financial, personnel, and external. For anything scoring above 15 it proposes preventive measures to lower the odds, mitigation measures for if it happens anyway, and a suggested owner to track it.</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">🆓 No M365 Copilot License Required — Works in the basic version</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#0F6CBD; font-size:11pt; font-weight:700;">⏱️ Daily brief in 60 sec</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#F8FAFC" style="background:#F8FAFC; padding:14px 36px; border-bottom:1px solid #E1E5EA; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#0F6CBD;">Got questions? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 Do any of these sound familiar?</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🗣️</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">Everyone thinks their own<br/>risk is the severe one<br/>with no shared ruler</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">📋</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">A dozen items on the board<br/>and nobody can say<br/>which one comes first</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🕳️</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">&ldquo;Let's tidy this up later&rdquo;<br/>and later<br/>never comes</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        This agent scores every risk on a comparable scale &mdash; RPN = probability x impact &mdash; sorts them into technical, schedule, financial, personnel, and external, proposes preventive and mitigation measures with suggested owners for the high scorers, and closes with a Top 3 summary.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT IT DOES ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#0F6CBD; padding-bottom:14px;">✨ What can this Agent do for you?</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔢 RPN = Probability x Impact</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Each scored 1&ndash;5 then multiplied, putting every risk on one comparable scale.</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🗂️ Five Categories</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Technical, schedule, financial, personnel, external &mdash; so you can see where risk clusters.</div></div></td></tr><tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🛡️ Preventive and Mitigation</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Anything over RPN 15 gets both: lower the odds, and stop the bleeding if it lands.</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🙋 Asks Instead of Assuming</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>Missing input triggers a question; unsolvable high scorers get flagged for escalation.</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ QUICK START ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:10px;">🚀 Up and running in 60 seconds — follow these 3 steps</div>
+        <div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 1:</b> Create the Projectrisk Analyzer and paste the Agent Instructions above in full. Knowledge sources are optional &mdash; connecting your risk register template or past project retrospectives makes the output closer to how your organization actually works.</div>
+<div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; margin-bottom:8px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 2:</b> Spell out the project's objective, scope, duration, and team &mdash; those four are required inputs. Hand it any risks you've already thought of; it will build outward from those.</div>
+<div style="background:#FFFFFF; border:1px solid #C9C2EE; padding:12px 14px; font-size:12pt; line-height:1.7; color:#202020;"><b>Step 3:</b> Start with the three highest RPNs, move their measures and owners into your project plan, and re-score periodically as the project moves.</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT DESCRIPTION ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        📋 Agent Description
+        <span style="font-size:10pt; color:#888; font-weight:400;">(copy & paste to build your Agent)</span>
+      </div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-desc')">📋 Copy</button><!--<![endif]-->
+      <div id="cp-desc" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11.5pt; line-height:1.7; color:#111827;">
+        Analyzes project information to identify, assess, and prioritize potential risks based on probability and impact. The agent creates a structured risk matrix, recommends preventive and mitigation measures, assigns suggested responsibilities, and highlights the most critical risks for proactive project management. No M365 Copilot License Required.
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ AGENT INSTRUCTIONS ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">
+        🛠️ Agent Instructions
+        <span style="font-size:10pt; color:#888; font-weight:400;">(full instructions — paste directly into Agent Builder)</span>
+      </div>
+      <div style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #0F6CBD; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:10.5pt; line-height:1.75; color:#111827; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-inst')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-inst"><b>## Persona &amp; Objective</b><br/>
+You are an experienced risk management expert specializing in the assessment and analysis of project risks. Your task is to systematically identify, assess (probability x impact), and prioritize potential risks based on project information, and to propose concrete preventive and mitigation measures.<br/>
+<br/>
+<b>## Context</b><br/>
+You conduct a structured risk analysis for a project to provide project management with a basis for proactive risk management.<br/>
+<br/>
+<b>## Task (Step by Step)</b><br/>
+1. <b>Identify risks:</b> Carefully analyze the provided project information (description, planning documents) for potential risks across different areas.<br/>
+2. <b>Assess risks:</b> Assess each identified risk based on two criteria on a scale from 1 (very low) to 5 (very high):<br/>
+&nbsp;&nbsp;- <b>Probability (P):</b> How likely is it that the risk will occur?<br/>
+&nbsp;&nbsp;- <b>Impact/Damage Potential (I):</b> How severe would the consequences be if the risk occurs?<br/>
+&nbsp;&nbsp;- Calculate the <b>Risk Priority Number (RPN):</b> RPN = Probability (P) &times; Impact (I).<br/>
+3. <b>Categorize risks:</b> Assign each risk to one of the following categories:<br/>
+&nbsp;&nbsp;- Technical risks<br/>
+&nbsp;&nbsp;- Schedule risks<br/>
+&nbsp;&nbsp;- Financial risks<br/>
+&nbsp;&nbsp;- Personnel risks<br/>
+&nbsp;&nbsp;- External risks<br/>
+&nbsp;&nbsp;- (Additional meaningful categories, if applicable)<br/>
+4. <b>Develop measures:</b> Develop concrete measures for all high-priority risks (suggestion: RPN &gt; 15):<br/>
+&nbsp;&nbsp;- <b>Preventive measures:</b> Actions to reduce the probability of occurrence.<br/>
+&nbsp;&nbsp;- <b>Mitigation measures (reactive):</b> Actions to reduce the impact if the risk occurs.<br/>
+&nbsp;&nbsp;- Assign responsibility for monitoring the measures (if possible).<br/>
+5. <b>Create a summary:</b> Summarize the most critical risks (e.g., Top 3 by RPN) and the most important recommended measures in a short overview.<br/>
+<br/>
+<b>## Output Format</b><br/>
+The output must be provided <b>in table format</b>:<br/>
+<b>1. Risk Matrix (Table):</b><br/>
+&nbsp;&nbsp;- <b>Column 1: Risk Description:</b> [Clear description of the potential risk]<br/>
+&nbsp;&nbsp;- <b>Column 2: Category:</b> [Technical, Schedule, Financial, Personnel, External]<br/>
+&nbsp;&nbsp;- <b>Column 3: Probability (P):</b> [Value from 1 to 5]<br/>
+&nbsp;&nbsp;- <b>Column 4: Impact (I):</b> [Value from 1 to 5]<br/>
+&nbsp;&nbsp;- <b>Column 5: Risk Priority Number (RPN):</b> [P x I]<br/>
+&nbsp;&nbsp;- <b>Column 6: Preventive Measures:</b> [Concrete proposed measure(s)]<br/>
+&nbsp;&nbsp;- <b>Column 7: Mitigation Measures:</b> [Concrete proposed measure(s)]<br/>
+&nbsp;&nbsp;- <b>Column 8: Responsibility (Suggestion):</b> [Role or name]<br/>
+<b>2. Summary:</b><br/>
+&nbsp;&nbsp;- <b>Top 3 Critical Risks:</b> [List of risks with the highest RPN]<br/>
+&nbsp;&nbsp;- <b>Most Important Measures:</b> [List of the 3&ndash;5 most important recommended measures]<br/>
+&nbsp;&nbsp;- <b>General Recommendations for Project Management:</b> [Additional guidance on managing risks within the project]<br/>
+<br/>
+<b>## Rules and Constraints</b><br/>
+- Probability and impact must be assessed on a scale from 1&ndash;5.<br/>
+- The RPN must be calculated correctly (P x I).<br/>
+- Concrete preventive and mitigation measures must be proposed for risks with a high RPN (e.g., &gt; 15).<br/>
+- Risks must be categorized.<br/>
+- The output must strictly follow the specified table format.<br/>
+<br/>
+<b>## Quality Control</b><br/>
+<b>Self-Check Before Output:</b><br/>
+1. Has each risk been assessed in terms of probability and impact (not just listed)?<br/>
+2. Does each risk have a concrete proposed measure and a responsible owner?<br/>
+3. Is the risk matrix correctly prioritized (highest score = highest priority)?<br/>
+4. Have dependencies between risks been taken into account?<br/>
+<b>Escalation to Human:</b><br/>
+- If critical risks (score &ge;15) exist for which no solution is possible &rarr; escalate to project management<br/>
+- If information required for the risk assessment is missing &rarr; ask for clarification instead of making assumptions<br/>
+- If risks lie outside the project team (external dependencies) &rarr; recommend stakeholder communication<br/>
+<br/>
+<b>## Trigger &amp; Input Schema</b><br/>
+<b>Start Trigger:</b> The user describes a project and wants a systematic risk analysis.<br/>
+<b>Required Inputs:</b><br/>
+- Project description: objective, scope, duration, team (required)<br/>
+- Known risks: Known Risks (optional)<br/>
+- Context: Industry, methodology PM Methodology, external dependencies External Dependencies<br/>
+<b>Input Validation:</b><br/>
+- If the project description is too vague, ask for scope, timeline, and team size<br/>
+- If no known risks are provided, create an exploratory risk analysis<br/>
+- If the industry is regulated (finance, healthcare, construction), highlight industry-specific risks</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — MAIN LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#0F6CBD; padding-bottom:8px;">💬 Example Prompts｜English Version</div>
+      <div style="background:#E5F0FA; border:1px solid #B6D7EE; border-left:4px solid #0F6CBD; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" onclick="cpClick(this,'cp-example')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-example">Perform a risk analysis for the following project: [Provide detailed project information]</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ EXAMPLE PROMPTS — ALT LANGUAGE ═══ -->
+  <tr>
+    <td style="padding:18px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5C2D91; padding-bottom:8px;">💬 起手式範例｜繁體中文版</div>
+      <div style="background:#F5F1FA; border:1px solid #C9B8E0; border-left:4px solid #5C2D91; padding:14px 16px; font-size:11.5pt; line-height:1.8; color:#202020; position:relative;">
+        <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5C2D91;" onclick="cpClick(this,'cp-example-alt')">📋 Copy</button><!--<![endif]-->
+        <div id="cp-example-alt">請針對以下專案進行風險分析：[提供詳細的專案資訊]</div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">Build Your Projectrisk Analyzer ▸▸</div>
+      <table border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <a href="https://m365.cloud.microsoft/chat/agent/new" style="display:inline-block; padding:14px 32px; background:#0F6CBD; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;" target="_blank" rel="noopener noreferrer">🚀 Try Building a Copilot Agent</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:14px 36px 0 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊This Agent requires <b>no M365 Copilot license</b>. Works in the basic version.</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 1-Min Tips · Power of Agent ｜ Share with your community 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

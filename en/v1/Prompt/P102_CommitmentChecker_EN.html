@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 1-Min Tips: Power of Prompt #P102 — Commitment Checker</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 1-MIN TIPS</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">Issue #P102</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">Who promised you what this week, and what you promised whom — pulled out in one pass, follow-up lines included</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>One ready-to-use Copilot Prompt example every week!</b><br />From writing docs and meeting summaries to creative ideas and data analysis — just paste these into your Copilot and try.<br /><b>💡 Tip:</b> Prompts are instructions for Copilot — the clearer and more specific, the better the output. Customize for your context and <b>share with colleagues</b>!
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">THIS ISSUE · PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🤝 Commitment Checker</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;"></div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ Scans 7 days of mail, Teams, and meeting recaps → splits into owed-to-me and owed-by-me → names the three to handle first 🤝
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          &ldquo;I'll get that to you by Thursday.&rdquo;<br/>&ldquo;Sure, I'll pull the data together and send it over.&rdquo;<br/>&ldquo;No problem, I'll check with them.&rdquo;<br/><br/>Dozens of these land in a single week &mdash; scattered across meetings, one Teams thread, the third paragraph of some email. Everyone means it at the time, and then the next thing washes it away.<br/><br/>The trouble is these promises have no common landing place. Your to-do list only holds what you personally typed into it; <b>there is nowhere that stores what other people owe you</b>. So you either carry it all in your head for a week, or you find out when the thing doesn't arrive and you're the one blocked.<br/><br/>This prompt sweeps the last 7 days of Outlook, Teams, and meeting recaps, pulls out every open commitment, and splits them into two lists: <b>Others &rarr; Me</b> (what people committed to deliver to you) and <b>Me &rarr; Others</b> (what you committed to deliver).<br/><br/>Each entry carries five things: who, what exactly was promised, the due date (or &ldquo;no date&rdquo; if none was given), the source (email subject, chat, or meeting name), and a status &mdash; Open, Overdue, or Unclear. Anything clearly delivered or closed since gets dropped, so what's left is genuinely outstanding.<br/><br/>It closes by naming <b>the three items that need you first</b> and drafting a one-line follow-up message for each &mdash; copy, paste, send, without spending five minutes wording it politely.<br/><br/>This one is built to be scheduled: run it Friday at 3pm or Monday at 8am and you start each week knowing exactly where you stand.
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🤝 Prompt of the Week (turn on WorkIQ first, then paste into Copilot Chat &mdash; Work)</b><br/><br/>Review my emails, Teams chats and meeting recaps from the last 7 days and identify every open commitment. Group them into two lists: Others &rarr; Me: things other people committed to deliver to me. Me &rarr; Others: things I committed to deliver to other people. For each item show: who, what exactly was promised, the due date (if none was mentioned, write &quot;no date&quot;), the source (email subject, chat or meeting name) and a status (Open / Overdue / Unclear). Leave out anything that has clearly been delivered or closed since. Finish with the three items that need my attention first and suggest a one-line follow-up message for each.<br/><br/><i>Try it in: Copilot Chat &ndash; Work.</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 提示詞範本（繁體中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🤝 本週 Prompt（先開啟 WorkIQ，再貼進 Copilot Chat – Work）</b><br/><br/>檢視我過去 7 天的電子郵件、Teams 聊天與會議摘要，找出所有尚未完成的承諾。請分成兩份清單：別人 &rarr; 我：別人答應要交付給我的事項。我 &rarr; 別人：我答應要交付給別人的事項。每一筆請列出：是誰、確切承諾了什麼、到期日（若未提及，請寫「無日期」）、出處（信件主旨、聊天或會議名稱），以及狀態（進行中／逾期／不明確）。請排除在那之後已明確交付或結案的項目。最後列出最需要我優先處理的三件事，並為每一件建議一句跟催訊息。<br/><br/><i>可在：Copilot Chat – Work 中使用。</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 Usage Tips</b><br />
+            1. <b>🔓 Turn on WorkIQ first</b> &mdash; This prompt reads organizational data (email, Teams, meeting recaps), so WorkIQ (formerly Work mode) must be enabled in Copilot Chat or you'll get a generic answer with nothing behind it.<br/>2. <b>⏰ Put it on a schedule</b> &mdash; Friday 3pm and Monday 8am both work well: one closes the week, the other sets it up. Scheduling it means you never have to remember.<br/>3. <b>🔍 Watch the &ldquo;Unclear&rdquo; entries</b> &mdash; Those are the ones it couldn't confidently call a commitment, which is often exactly where two people remember the conversation differently. Worth checking yourself.
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🔑 M365 Copilot License Required
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 Try Copilot Chat Now</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 1-Min Tips · Power of Prompt ｜ Share with your community 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

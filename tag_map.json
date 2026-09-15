@@ -1509,6 +1509,25 @@
       "tool": [
         "general"
       ]
+    },
+    "A060": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P102": {
+      "task": [
+        "planning",
+        "communication"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
     }
   },
   "needs_review": []
