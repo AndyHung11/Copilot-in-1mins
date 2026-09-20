@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分鐘小教室：Power of Prompt #P103 — 工程圖設備標籤辨識</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一 分鐘小教室</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P103 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">從工程圖與現場照片裡讀出設備標籤——而且只回報看得清楚的那些</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🔖 工程圖設備標籤辨識</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Engineering Image Tag Inspection</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把工程圖或現場照片丟給 Copilot，它會找出圖面上的設備標籤（如 XXX-AAAA-0000、AA-000-BBB），輸出成表格並標明位置、文字方向與信心等級。關鍵在於它的紀律：<b>不猜測、不補完只看得到一半的標籤、模糊或被遮住的一律不讀</b>；低信心的項目直接不列。真的看不清楚時，它會明說這張圖需要更高解析度或人工檢查。</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 不需 M365 Copilot 授權，基本版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒設定完</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣跟 Copilot 對話嗎？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔤</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">數字 0 還是字母 O<br/>抄錯一個字元<br/>清單照樣看起來很完整</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔄</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">有些標籤是直的<br/>有些被線壓住<br/>頭歪到脖子痠</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">💣</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">AI 幫你「補完」<br/>看不清的標籤<br/>比沒讀還糟</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        這個 Prompt 讓 Copilot 從工程圖或照片讀出設備標籤，輸出含位置、方向與信心等級的表格；明文禁止猜測、補完與讀取模糊文字，低信心一律不列，真看不清就明說需人工檢查。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔍 認得出標籤格式</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>XXX-AAAA-0000、AA-000-BBB 等英數混合的設備標籤樣式。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔄 橫的直的都讀</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>旋轉文字也納入，但前提是「人眼也能清楚辨認」。</div></div></td></tr><tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🚫 不猜、不補、不硬讀</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>只看到一半的不補完，模糊或被遮擋的不嘗試辨識。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>📋 附位置與信心等級</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>表格標明位置、方向、HIGH／MEDIUM；低信心項目直接不列。</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          <b>🔖 本週 Prompt（先上傳圖面或照片，再貼上）</b><br/><br/>你正在協助對一張工程圖進行視覺檢查。<br/><br/><b>任務：</b>以視覺方式辨識圖中所有清楚可讀的標籤。<br/><br/><b>要尋找的樣式：</b>符合下列格式的標籤：<br/>- XXX-AAAA-0000（數字－字母－數字）<br/>- AA-000-BBB（字母－數字－字母）<br/>- 或其他類似的英數混合設備標籤<br/><br/><b>準則：</b><br/>- 標籤可能以水平或垂直方式出現<br/>- 旋轉的文字，僅在人眼可清楚辨認時才納入考量<br/>- 只回報你能以<b>高信心</b>看見的標籤<br/>- <b>不要</b>猜測或推論只有部分可見的標籤<br/>- <b>不要</b>嘗試讀取模糊或被遮擋的文字<br/><br/><b>輸出格式（純文字表格）：</b>| 標籤文字 | 位置（例如左上） | 方向 | 信心程度 |<br/><br/><b>信心等級：</b><br/>- HIGH：清楚可讀，沒有歧義<br/>- MEDIUM：可讀，但部分字元不清楚<br/>-（不要回報 LOW 信心的項目）<br/><br/>若沒有任何標籤清楚可見，請回覆：「No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.」<br/><br/><i>可在：Copilot Chat – Web 中使用。</i>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        <b>🔖 Prompt of the Week (upload the drawing or photo first, then paste)</b><br/><br/>You are assisting with visual inspection of an engineering image.<br/><br/><b>Task:</b> Visually identify any clearly readable tags in the image.<br/><br/><b>Pattern to look for:</b> Tags following format like:<br/>- XXX-AAAA-0000 (digits-letters-digits)<br/>- AA-000-BBB (letters-digits-letters)<br/>- Or similar alphanumeric equipment tags<br/><br/><b>Guidelines:</b><br/>- Tags may appear horizontally or vertically<br/>- Consider rotated text if clearly legible to a human reader<br/>- Only report tags you can see with HIGH confidence<br/>- Do NOT guess or infer partially visible tags<br/>- Do NOT attempt to read blurry or obscured text<br/><br/><b>Output Format (plain text table):</b> | Tag Text | Location (e.g., top-left) | Orientation | Confidence |<br/><br/><b>Confidence levels:</b><br/>- HIGH: Clearly readable, no ambiguity<br/>- MEDIUM: Readable but some characters unclear<br/>- (Do not report LOW confidence items)<br/><br/>If no tags are clearly visible, state: &quot;No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.&quot;<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📷 解析度決定一切</div><div style="font-size:12pt; color:#444; line-height:1.7;">掃描或拍照時把圖面放大、對焦拍清楚，讀出來的比例會差很多。整張大圖一次丟進去，不如分區拍幾張清晰的。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🧭 補上你的標籤規則</div><div style="font-size:12pt; color:#444; line-height:1.7;">若貴公司有固定編碼規則（例如「前兩碼一定是區域代號」），在 Prompt 後面補一句，可以幫它排除誤判。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✋ 它讀不出來的才是重點</div><div style="font-size:12pt; color:#444; line-height:1.7;">回覆裡沒出現的標籤、或標為 MEDIUM 的，正是你該親自核對的清單。務必當作初篩而非定稿，正式用途仍需人工複核。</div></td></tr></table></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即試試從圖面讀出設備標籤 ▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt <b>無需 M365 Copilot 授權</b>，基本版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

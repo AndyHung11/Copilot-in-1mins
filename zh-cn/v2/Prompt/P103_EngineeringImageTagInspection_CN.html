@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分钟小课堂：Power of Prompt #P103 — 工程图设备位号识别</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一分钟小课堂</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P103 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">从工程图和现场照片里读出设备位号——而且只报看得真切的那些</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;"></div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🔖 工程图设备位号识别</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Engineering Image Tag Inspection</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把工程图或现场照片丢给 Copilot，它会找出图上的设备位号（像 XXX-AAAA-0000、AA-000-BBB 这类），输出成表格并标明位置、文字朝向和把握程度。关键在于它的规矩：<b>不瞎猜、不给只露半截的位号补全、模糊或被挡住的一律不读</b>；没把握的条目直接不列。真看不清时，它会明说这张图得换更高分辨率或者上人工核。</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 无需 M365 Copilot 许可，基础版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒完成设置</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">遇到问题？Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你还在这样和 Copilot 对话吗？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF4F4; border:1px solid #FFCFCF; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔤</div><div style="font-size:11.5pt; font-weight:600; color:#A63232; line-height:1.5;">数字 0 还是字母 O<br/>抄错一个字符<br/>清单照样看着挺齐全</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#FFF8E1; border:1px solid #F5DC9C; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">🔄</div><div style="font-size:11.5pt; font-weight:600; color:#946800; line-height:1.5;">有的位号是竖排<br/>有的被线压着<br/>脑袋歪到脖子酸</div></div></td>
+<td width="33%" valign="top" style="padding:6px;"><div style="background:#EDEBFB; border:1px solid #C9C2EE; padding:14px; min-height:96px;"><div style="font-size:22pt; line-height:1; padding-bottom:6px;">💣</div><div style="font-size:11.5pt; font-weight:600; color:#5B5FC7; line-height:1.5;">AI 给你『补全』<br/>它压根没看清的位号<br/>比不读还糟</div></div></td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        这条 Prompt 让 Copilot 从工程图或照片里读出设备位号，输出带位置、朝向和把握程度的表格；白纸黑字禁止瞎猜、补全和硬啃模糊文字，没把握的一律不列，真看不清就明说得上人工核。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你将获得什么？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔍 认得出位号格式</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>XXX-AAAA-0000、AA-000-BBB 这类字母数字混排的设备位号。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🔄 横排竖排都能读</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>旋转文字也算，但前提是『人眼也能看清楚』。</div></div></td></tr><tr><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>🚫 不猜、不补、不硬啃</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>只露半截的不给补全，模糊或被挡住的不去硬认。</div></div></td><td width='50%' valign='top' style='padding:6px;'><div style='background:#FAF7FD; border-left:4px solid #5B5FC7; padding:14px 16px;'><div style='font-size:13pt; font-weight:700; color:#5B5FC7; padding-bottom:4px;'>📋 带位置和把握程度</div><div style='font-size:11.5pt; color:#333; line-height:1.6;'>表里标明位置、朝向、HIGH／MEDIUM；没把握的直接不列。</div></div></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接复制这段 Prompt（简中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          <b>🔖 本周 Prompt（先把图纸或照片传上去，再粘这段）</b><br/><br/>你正在协助对一张工程图做视觉检查。<br/><br/><b>任务：</b>用视觉方式识别图中所有清楚可读的位号。<br/><br/><b>要找的格式：</b>符合下列样式的位号：<br/>- XXX-AAAA-0000（数字－字母－数字）<br/>- AA-000-BBB（字母－数字－字母）<br/>- 或其他类似的字母数字混排设备位号<br/><br/><b>准则：</b><br/>- 位号可能横排也可能竖排<br/>- 旋转的文字，只有在人眼能看清的前提下才纳入<br/>- 只报你能以<b>高把握</b>看清的位号<br/>- <b>不要</b>猜测或推断只露出一部分的位号<br/>- <b>不要</b>去硬读模糊或被挡住的文字<br/><br/><b>输出格式（纯文本表格）：</b>| 位号文字 | 位置（比如左上） | 朝向 | 把握程度 |<br/><br/><b>把握等级：</b><br/>- HIGH：清楚可读，没有歧义<br/>- MEDIUM：能读，但个别字符不清楚<br/>-（不要报 LOW 把握的条目）<br/><br/>若没有任何位号清楚可见，请回复：『No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.』<br/><br/><i>可在：Copilot Chat – Web 中使用。</i>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        <b>🔖 Prompt of the Week (upload the drawing or photo first, then paste)</b><br/><br/>You are assisting with visual inspection of an engineering image.<br/><br/><b>Task:</b> Visually identify any clearly readable tags in the image.<br/><br/><b>Pattern to look for:</b> Tags following format like:<br/>- XXX-AAAA-0000 (digits-letters-digits)<br/>- AA-000-BBB (letters-digits-letters)<br/>- Or similar alphanumeric equipment tags<br/><br/><b>Guidelines:</b><br/>- Tags may appear horizontally or vertically<br/>- Consider rotated text if clearly legible to a human reader<br/>- Only report tags you can see with HIGH confidence<br/>- Do NOT guess or infer partially visible tags<br/>- Do NOT attempt to read blurry or obscured text<br/><br/><b>Output Format (plain text table):</b> | Tag Text | Location (e.g., top-left) | Orientation | Confidence |<br/><br/><b>Confidence levels:</b><br/>- HIGH: Clearly readable, no ambiguity<br/>- MEDIUM: Readable but some characters unclear<br/>- (Do not report LOW confidence items)<br/><br/>If no tags are clearly visible, state: &quot;No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.&quot;<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三个典型使用场景</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">1</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">📷 分辨率决定一切</div><div style="font-size:12pt; color:#444; line-height:1.7;">扫描或拍照时把图放大、对焦拍实，识别率差别很大。整张大图一股脑丢进去，不如分区拍几张清楚的。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">2</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">🧭 把你们的编码规则补上</div><div style="font-size:12pt; color:#444; line-height:1.7;">要是公司有固定编码规则（比如『前两位一定是区域代号』），在 Prompt 后面补一句，能帮它排掉误判。</div></td></tr></table></td></tr>
+<tr><td valign="top" style="padding:8px 0;"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="48" valign="top"><div style="width:36px; height:36px; background:#5B5FC7; color:#FFFFFF; text-align:center; line-height:36px; font-size:16pt; font-weight:700;">3</div></td><td valign="top"><div style="font-size:13pt; font-weight:700; color:#202020; padding-bottom:4px;">✋ 它读不出来的才是重点</div><div style="font-size:12pt; color:#444; line-height:1.7;">回复里没出现的位号、或者标成 MEDIUM 的，恰恰是你该亲自核的清单。务必当粗筛而不是定稿，正式用途还得人工复核。</div></td></tr></table></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">立即试试从图纸里读出设备位号 ▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt <b>无需 M365 Copilot 许可</b>，基础版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

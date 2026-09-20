@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 1-Min Tips: Power of Prompt #P103 — Engineering Image Tag Inspection</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 1-MIN TIPS</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">Issue #P103</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">Reads equipment tags off engineering drawings and site photos — and only reports the ones it can actually see</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>One ready-to-use Copilot Prompt example every week!</b><br />From writing docs and meeting summaries to creative ideas and data analysis — just paste these into your Copilot and try.<br /><b>💡 Tip:</b> Prompts are instructions for Copilot — the clearer and more specific, the better the output. Customize for your context and <b>share with colleagues</b>!
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">THIS ISSUE · PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🔖 Engineering Image Tag Inspection</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;"></div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ Finds tags like XXX-AAAA-0000 → notes position and orientation → low-confidence reads never reported 🔖
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          The P&amp;ID is spread out on your desk and you're transcribing equipment tags into a list, one by one.<br/><br/>Around number forty you start to wonder whether that last one was <b>PT-1042-A</b> or <b>PT-1O42-A</b>. The scan is slightly soft, and a few tags run <b>vertically</b> &mdash; you have to tilt your head. Twenty more and you're no longer certain you didn't skip a section.<br/><br/>The risk in this work isn't that it's slow. It's that it <b>fails silently</b>. Get one character wrong and the list still looks complete; the problem only surfaces at procurement, during inventory, or out on site.<br/><br/>This prompt puts Copilot on the drawing &mdash; but what matters isn't how much it reads. It's <b>what it refuses to read</b>:<br/><br/>It reports only <b>high-confidence</b> tags. Guessing is forbidden. Completing partially visible tags is forbidden. Attempting blurry or obscured text is forbidden. Rotated text counts only if a human reader could clearly make it out. Low-confidence items <b>don't even get listed</b> &mdash; because in this context a wrong answer that looks like an answer is far more dangerous than an honest &ldquo;can't read it.&rdquo;<br/><br/>Output is a table: tag text, location (e.g. top-left), orientation, confidence (HIGH/MEDIUM). If nothing on the image is reliably legible, it returns one line saying the image may need higher resolution or human inspection.<br/><br/>Use it as a <b>first pass</b>: let it clear the legible tags, and the handful it couldn't read are precisely the ones that deserve your magnifying glass.
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🔖 Prompt of the Week (upload the drawing or photo first, then paste)</b><br/><br/>You are assisting with visual inspection of an engineering image.<br/><br/><b>Task:</b> Visually identify any clearly readable tags in the image.<br/><br/><b>Pattern to look for:</b> Tags following format like:<br/>- XXX-AAAA-0000 (digits-letters-digits)<br/>- AA-000-BBB (letters-digits-letters)<br/>- Or similar alphanumeric equipment tags<br/><br/><b>Guidelines:</b><br/>- Tags may appear horizontally or vertically<br/>- Consider rotated text if clearly legible to a human reader<br/>- Only report tags you can see with HIGH confidence<br/>- Do NOT guess or infer partially visible tags<br/>- Do NOT attempt to read blurry or obscured text<br/><br/><b>Output Format (plain text table):</b> | Tag Text | Location (e.g., top-left) | Orientation | Confidence |<br/><br/><b>Confidence levels:</b><br/>- HIGH: Clearly readable, no ambiguity<br/>- MEDIUM: Readable but some characters unclear<br/>- (Do not report LOW confidence items)<br/><br/>If no tags are clearly visible, state: &quot;No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.&quot;<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 提示詞範本（繁體中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 Copy</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🔖 本週 Prompt（先上傳圖面或照片，再貼上）</b><br/><br/>你正在協助對一張工程圖進行視覺檢查。<br/><br/><b>任務：</b>以視覺方式辨識圖中所有清楚可讀的標籤。<br/><br/><b>要尋找的樣式：</b>符合下列格式的標籤：<br/>- XXX-AAAA-0000（數字－字母－數字）<br/>- AA-000-BBB（字母－數字－字母）<br/>- 或其他類似的英數混合設備標籤<br/><br/><b>準則：</b><br/>- 標籤可能以水平或垂直方式出現<br/>- 旋轉的文字，僅在人眼可清楚辨認時才納入考量<br/>- 只回報你能以<b>高信心</b>看見的標籤<br/>- <b>不要</b>猜測或推論只有部分可見的標籤<br/>- <b>不要</b>嘗試讀取模糊或被遮擋的文字<br/><br/><b>輸出格式（純文字表格）：</b>| 標籤文字 | 位置（例如左上） | 方向 | 信心程度 |<br/><br/><b>信心等級：</b><br/>- HIGH：清楚可讀，沒有歧義<br/>- MEDIUM：可讀，但部分字元不清楚<br/>-（不要回報 LOW 信心的項目）<br/><br/>若沒有任何標籤清楚可見，請回覆：「No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.」<br/><br/><i>可在：Copilot Chat – Web 中使用。</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 Usage Tips</b><br />
+            1. <b>📷 Resolution decides everything</b> &mdash; Zoom in and focus when you scan or photograph; the hit rate changes dramatically. Several sharp section shots beat one wide shot of the whole drawing.<br/>2. <b>🧭 Add your own tag convention</b> &mdash; If your organization has a fixed coding scheme (&ldquo;the first two characters are always the area code&rdquo;), append that to the prompt to help it rule out false reads.<br/>3. <b>✋ What it can't read is the point</b> &mdash; Tags missing from the output, or marked MEDIUM, are exactly your manual check list. <b>Treat this as a first pass, not a final answer</b> &mdash; production use still needs human verification.
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🆓 No M365 Copilot License Required — Works in the basic version
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 Try Copilot Chat Now</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 1-Min Tips · Power of Prompt ｜ Share with your community 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ Copied';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Copilot 一分钟小课堂：Power of Prompt #P103 — 工程图设备位号识别</title>
+<!--[if mso]>
+<style type="text/css">
+table, td, div, p, a { font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif !important; }
+.mono { font-family: 'Microsoft JhengHei','微軟正黑體',Arial,sans-serif !important; }
+</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#0F6CBD;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body bgcolor="#f4f6f8" style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f6f8" style="background-color:#f4f6f8;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" width="680" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e3e8ee;width:680px;">
+
+      <!-- ═══ BANNER ═══ -->
+      <tr><td bgcolor="#8378DE" style="background-color:#8378DE;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#DAD6F5;line-height:1.4;">COPILOT 一分钟小课堂</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:28px;font-weight:bold;color:#ffffff;line-height:1.2;padding-top:6px;">💬 Power of Prompt</div>
+            </td>
+            <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;border-left:1px solid #A7A0E8;">
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#DAD6F5;letter-spacing:1px;line-height:1.4;">第 P103 期</div>
+              <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#ffffff;line-height:1.4;padding-top:4px;">从工程图和现场照片里读出设备位号——而且只报看得真切的那些</div>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ INTRO ═══ -->
+      <tr><td bgcolor="#5B5FC7" style="background-color:#5B5FC7;padding:0;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#5B5FC7" style="background-color:#5B5FC7;">
+          <tr><td style="padding:18px 32px;color:#ffffff;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.7;">
+            ✍️ <b>每周一个可立即上手的 Copilot Prompt 示例！</b><br />从文档撰写、会议纪要、创意发想，到数据分析，把这些提示词放进 Copilot 试试看。<br /><b>💡 使用技巧：</b>提示词就是给 Copilot 的“工作指令”——越清晰、越具体，输出越贴近你的目标。可结合自己的业务场景调整，并 <b>分享给同事共同学习</b>。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ TITLE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 0 32px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;color:#8378DE;font-weight:bold;letter-spacing:1px;">本期 PROMPT</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:30px;font-weight:bold;color:#5B5FC7;padding-top:6px;line-height:1.2;">🔖 工程图设备位号识别</div>
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;color:#6b7280;padding-top:4px;">Engineering Image Tag Inspection</div>
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:12px;">
+          <tr><td bgcolor="#EDEBFB" style="background-color:#EDEBFB;padding:6px 16px;color:#5B5FC7;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;font-weight:bold;">
+            ✨ 识别 XXX-AAAA-0000 这类位号 → 标出位置和朝向 → 没把握的一律不报 🔖
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ STORY ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:15px;line-height:1.8;color:#252b35;">
+          P&amp;ID 图纸摊在桌上，你正一个一个把设备位号往清单里抄。<br/><br/>抄到第四十个的时候，你开始犯嘀咕：刚那个到底是 <b>PT-1042-A</b> 还是 <b>PT-1O42-A</b>？图扫得有点虚，还有几个位号是<b>竖着</b>的——得把脑袋歪过去看。再抄二十个，你已经说不准自己有没有漏掉哪一片区。<br/><br/>这种活儿的风险不在于慢，而在于<b>错得悄无声息</b>。抄错一个字符，清单看着照样齐全，问题要等到采购、盘点或者现场比对时才炸出来。<br/><br/>这条 Prompt 让 Copilot 替你读图，但重点不在它能读出多少，而在<b>它拒绝读什么</b>：<br/><br/>它只报<b>高把握</b>的位号，白纸黑字禁止瞎猜、禁止给只露半截的位号补全、禁止硬啃模糊或被挡住的文字。旋转的文字，只有在『人眼也能看清』的前提下才算数。没把握的条目<b>压根不列</b>——因为在这种场合，一个长得像答案的错答案，比老实说一句『看不清』危险得多。<br/><br/>输出是一张表：位号文字、位置（比如左上）、朝向、把握程度（HIGH／MEDIUM）。要是整张图都读不出靠谱的位号，它会直接回一句：这张图可能得换更高分辨率或者上人工核。<br/><br/>拿它当<b>第一道粗筛</b>——先把看得清的抄完，剩下读不出来的那几个，恰恰就是该你亲自拿放大镜盯的地方。
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (main language) ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td bgcolor="#8378DE" width="4" style="background-color:#8378DE;width:4px;">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:18px;font-weight:bold;color:#8378DE;">📋 提示词模板（简体中文版）</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#8378DE;" onclick="cpClick(this,'cp-prompt')">📋 复制</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fafc" style="background-color:#f8fafc;border:1px solid #8378DE;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#111827;"><b>🔖 本周 Prompt（先把图纸或照片传上去，再粘这段）</b><br/><br/>你正在协助对一张工程图做视觉检查。<br/><br/><b>任务：</b>用视觉方式识别图中所有清楚可读的位号。<br/><br/><b>要找的格式：</b>符合下列样式的位号：<br/>- XXX-AAAA-0000（数字－字母－数字）<br/>- AA-000-BBB（字母－数字－字母）<br/>- 或其他类似的字母数字混排设备位号<br/><br/><b>准则：</b><br/>- 位号可能横排也可能竖排<br/>- 旋转的文字，只有在人眼能看清的前提下才纳入<br/>- 只报你能以<b>高把握</b>看清的位号<br/>- <b>不要</b>猜测或推断只露出一部分的位号<br/>- <b>不要</b>去硬读模糊或被挡住的文字<br/><br/><b>输出格式（纯文本表格）：</b>| 位号文字 | 位置（比如左上） | 朝向 | 把握程度 |<br/><br/><b>把握等级：</b><br/>- HIGH：清楚可读，没有歧义<br/>- MEDIUM：能读，但个别字符不清楚<br/>-（不要报 LOW 把握的条目）<br/><br/>若没有任何位号清楚可见，请回复：『No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.』<br/><br/><i>可在：Copilot Chat – Web 中使用。</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ PROMPT TEMPLATE (alt language) ═══ -->
+      <tr><td style="padding:18px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="4" style="width:4px;background-color:#DAD6F5;" bgcolor="#DAD6F5">&nbsp;</td>
+            <td style="padding-left:10px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:16px;font-weight:bold;color:#3D3E78;">📋 Prompt Template (English)</td>
+          </tr>
+        </table>
+        <div style="position:relative;">
+          <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#3D3E78;" onclick="cpClick(this,'cp-prompt-alt')">📋 复制</button><!--<![endif]-->
+          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fafbfc" style="background-color:#fafbfc;border:1px dashed #DAD6F5;margin-top:10px;">
+            <tr><td style="padding:14px;">
+              <div id="cp-prompt-alt" class="mono" style="font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:13px;line-height:1.7;color:#374151;"><b>🔖 Prompt of the Week (upload the drawing or photo first, then paste)</b><br/><br/>You are assisting with visual inspection of an engineering image.<br/><br/><b>Task:</b> Visually identify any clearly readable tags in the image.<br/><br/><b>Pattern to look for:</b> Tags following format like:<br/>- XXX-AAAA-0000 (digits-letters-digits)<br/>- AA-000-BBB (letters-digits-letters)<br/>- Or similar alphanumeric equipment tags<br/><br/><b>Guidelines:</b><br/>- Tags may appear horizontally or vertically<br/>- Consider rotated text if clearly legible to a human reader<br/>- Only report tags you can see with HIGH confidence<br/>- Do NOT guess or infer partially visible tags<br/>- Do NOT attempt to read blurry or obscured text<br/><br/><b>Output Format (plain text table):</b> | Tag Text | Location (e.g., top-left) | Orientation | Confidence |<br/><br/><b>Confidence levels:</b><br/>- HIGH: Clearly readable, no ambiguity<br/>- MEDIUM: Readable but some characters unclear<br/>- (Do not report LOW confidence items)<br/><br/>If no tags are clearly visible, state: &quot;No confidently readable tags detected. The image may contain tags that require higher resolution or human inspection.&quot;<br/><br/><i>Try it in: Copilot Chat &ndash; Web.</i></div>
+            </td></tr>
+          </table>
+        </div>
+      </td></tr>
+
+      <!-- ═══ USAGE TIPS ═══ -->
+      <tr><td style="padding:24px 32px 0 32px;">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#fffaf0" style="background-color:#fffaf0;border-left:4px solid #ffb300;">
+          <tr><td style="padding:14px 16px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;line-height:1.7;color:#5b3a00;">
+            <b>💡 使用技巧</b><br />
+            1. <b>📷 分辨率决定一切</b> — 扫描或拍照时把图放大、对焦拍实，识别率差别很大。整张大图一股脑丢进去，不如分区拍几张清楚的。<br/>2. <b>🧭 把你们的编码规则补上</b> — 要是公司有固定编码规则（比如『前两位一定是区域代号』），在 Prompt 后面补一句，能帮它排掉误判。<br/>3. <b>✋ 它读不出来的才是重点</b> — 回复里没出现的位号、或者标成 MEDIUM 的，恰恰是你该亲自核的清单。<b>务必当粗筛而不是定稿</b>，正式用途还得人工复核。
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ LICENSE BADGE ═══ -->
+      <tr><td align="center" style="padding:28px 32px 24px 32px;">
+        <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr><td bgcolor="#ffffff" style="background-color:#ffffff;border:2px solid #5B5FC7;padding:8px 20px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:14px;font-weight:bold;color:#5B5FC7;">
+            🆓 无需 M365 Copilot 许可，基础版即可使用
+          </td></tr>
+        </table>
+      </td></tr>
+
+      <!-- ═══ CTA BUTTON ═══ -->
+      <tr><td align="center" style="padding:0 32px 24px 32px;">
+        <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 32px;background:#5B5FC7;color:#FFFFFF;font-size:13pt;font-weight:700;text-decoration:none;">🚀 立即试用 Copilot Chat</a>
+      </td></tr>
+
+      <!-- ═══ FOOTER ═══ -->
+      <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc;border-top:1px solid #e3e8ee;padding:18px 32px;text-align:center;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-size:12px;color:#6b7280;line-height:1.8;">
+        Copilot 一分钟小课堂 · Power of Prompt ｜ 欢迎在你的团队和社区中转发分享 🚀<br />
+        Powered by Weeklyprompt@microsoft
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已复制';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

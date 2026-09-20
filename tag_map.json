@@ -1528,6 +1528,24 @@
         "outlook",
         "teams"
       ]
+    },
+    "A061": {
+      "task": [
+        "analysis",
+        "communication"
+      ],
+      "tool": [
+        "excel"
+      ]
+    },
+    "P103": {
+      "task": [
+        "analysis",
+        "automation"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []
