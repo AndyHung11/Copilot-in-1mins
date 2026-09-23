@@ -1,0 +1,5 @@
+﻿Request,Part,Customer,Quantity,Qual status,Deviation,Requester note
+SR-0921-01,FB-820,Fabrikam,200,Qualified,DEV-2606-01,Customer approval obtained in writing
+SR-0921-02,FB-940,Fabrikam,120,Qualified,DEV-2608-03,Customer approval obtained in writing
+SR-0921-03,FB-1050,Fabrikam,80,In qualification,—,NPI first sample shipment
+SR-0921-04,NW-2200,Northwind,60,Qualified,DEV-2609-02,Customer has agreed

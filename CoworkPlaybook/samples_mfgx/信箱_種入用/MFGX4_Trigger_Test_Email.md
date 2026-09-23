@@ -1,0 +1,46 @@
+# ⚠️ Do not send before the session — send it after the trigger is armed
+
+> This is the mail used in the last step of scenario 4 to **prove the trigger fires**.
+> Send it beforehand and there is nothing left to test.
+>
+> It deliberately covers a different part (MC-EG7) from a different supplier
+> (Nitto), so you can tell the assessment was genuinely re-run rather than
+> copied from the previous answer.
+
+**Subject**
+
+```
+[PCN-2609-NT12] MC-EG7 resin formulation change - effective Q1 2027
+```
+
+---
+
+Dear Customer Quality Team,
+
+Nitto Materials is issuing this Product Change Notification regarding a resin
+formulation change to the following mold compound.
+
+**Affected part**: MC-EG7 (epoxy mold compound, low-stress grade)
+**Change**: Replacement of the flame retardant system with a halogen-free
+formulation, in line with our 2027 environmental roadmap.
+
+**Key dates**
+
+| Milestone | Date |
+|---|---|
+| PCN issue date | 2026-09-21 |
+| **Last time buy (current formulation)** | **2026-12-15** |
+| **Last shipment (current formulation)** | **2027-03-31** |
+| New formulation available | 2027-01-15 |
+
+The new formulation shows a slightly higher glass transition temperature and a
+different cure profile. **Requalification is required**; customers should allow
+approximately **3 months** including moisture sensitivity level testing.
+
+Please confirm your last time buy quantity for the current formulation before the
+deadline above.
+
+Best regards,
+
+H. Sasaki
+Technical Sales, Nitto Materials
