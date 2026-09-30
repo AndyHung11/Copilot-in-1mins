@@ -1546,6 +1546,24 @@
       "tool": [
         "general"
       ]
+    },
+    "A062": {
+      "task": [
+        "learning",
+        "communication",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P104": {
+      "task": [
+        "analysis"
+      ],
+      "tool": [
+        "excel"
+      ]
     }
   },
   "needs_review": []
