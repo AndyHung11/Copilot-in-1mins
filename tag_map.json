@@ -1564,6 +1564,26 @@
       "tool": [
         "excel"
       ]
+    },
+    "A063": {
+      "task": [
+        "analysis",
+        "learning",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P105": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
     }
   },
   "needs_review": []
