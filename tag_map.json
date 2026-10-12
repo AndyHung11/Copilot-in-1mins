@@ -1584,6 +1584,34 @@
         "outlook",
         "teams"
       ]
+    },
+    "A064": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P106": {
+      "task": [
+        "analysis",
+        "planning"
+      ],
+      "tool": [
+        "teams",
+        "outlook"
+      ]
+    },
+    "A065": {
+      "task": [
+        "automation",
+        "learning"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []
