@@ -1603,15 +1603,6 @@
         "teams",
         "outlook"
       ]
-    },
-    "A065": {
-      "task": [
-        "automation",
-        "learning"
-      ],
-      "tool": [
-        "general"
-      ]
     }
   },
   "needs_review": []
