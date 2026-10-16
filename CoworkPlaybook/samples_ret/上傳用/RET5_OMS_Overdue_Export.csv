@@ -1,0 +1,101 @@
+﻿Order No,Order Time,Promised Delivery Date,Ship-from Store,Pick Start Time,Carrier,Tracking No,Latest Carrier Scan,Scan Time,Address Check Flag,Customer Tier,Order Amount (NTD),Order Status,Export Date
+OD-26131,2026-10-03 08:43,2026-10-07,Taipei Zhongzheng,,,,,,OK,Platinum,1600,In progress,2026-10-13
+OD-26144,2026-10-03 09:12,2026-10-06,Zhonghe Jingan,,,,,,OK,Standard,520,In progress,2026-10-13
+OD-26161,2026-10-03 09:26,2026-10-07,Chiayi Minxiong,,,,,,OK,Silver,2660,In progress,2026-10-13
+OD-26128,2026-10-03 10:07,2026-10-06,Kaohsiung Fengshan,,,,,,OK,Silver,4500,In progress,2026-10-13
+OD-26193,2026-10-03 10:18,2026-10-07,Kaohsiung Renwu,2026-10-03 22:18,Swiftline Logistics,SW429033299,,,REVIEW,Gold,4130,In progress,2026-10-13
+OD-26200,2026-10-03 11:58,2026-10-08,Hualien City,2026-10-03 19:58,Swiftline Logistics,SW300723014,,,REVIEW,Silver,2270,In progress,2026-10-13
+OD-26185,2026-10-03 12:58,2026-10-08,Kaohsiung Fengshan,2026-10-04 05:58,Swiftline Logistics,SW469452342,Arrived at hub,2026-10-10 08:13,OK,Standard,1490,In progress,2026-10-13
+OD-26121,2026-10-03 14:24,2026-10-06,Taishan,,,,,,OK,Standard,2320,In progress,2026-10-13
+OD-26108,2026-10-03 14:25,2026-10-08,Ruifang,,,,,,OK,Gold,430,In progress,2026-10-13
+OD-26158,2026-10-03 14:54,2026-10-08,Keelung Anle,,,,,,OK,Silver,3600,In progress,2026-10-13
+OD-26196,2026-10-03 15:22,2026-10-07,Keelung Qidu,2026-10-04 11:22,Swiftline Logistics,SW483971446,,,REVIEW,Standard,3420,In progress,2026-10-13
+OD-26169,2026-10-03 15:35,2026-10-07,Hualien Yuli,,,,,,OK,Silver,1730,In progress,2026-10-13
+OD-26155,2026-10-03 15:53,2026-10-06,Nantou City,,,,,,OK,Standard,3530,In progress,2026-10-13
+OD-26163,2026-10-03 15:57,2026-10-07,Bali,,,,,,OK,Standard,590,In progress,2026-10-13
+OD-26156,2026-10-03 16:04,2026-10-06,Sanxia,,,,,,OK,Standard,1300,In progress,2026-10-13
+OD-26129,2026-10-03 16:21,2026-10-07,Tainan Xinying,,,,,,OK,Standard,3960,In progress,2026-10-13
+OD-26134,2026-10-03 17:20,2026-10-06,Miaoli City,,,,,,OK,Silver,4210,In progress,2026-10-13
+OD-26135,2026-10-03 17:38,2026-10-06,Taichung Xitun,,,,,,OK,Silver,4420,In progress,2026-10-13
+OD-26183,2026-10-03 18:39,2026-10-08,Shenkeng,2026-10-04 12:39,Swiftline Logistics,SW411897796,Arrived at hub,2026-10-09 09:50,OK,Standard,3280,In progress,2026-10-13
+OD-26105,2026-10-03 20:00,2026-10-08,Keelung Zhongshan,,,,,,OK,Standard,1430,In progress,2026-10-13
+OD-26107,2026-10-03 20:45,2026-10-07,Tainan Xinying,,,,,,OK,Standard,4550,In progress,2026-10-13
+OD-26122,2026-10-03 20:49,2026-10-06,Nantou City,,,,,,OK,Standard,860,In progress,2026-10-13
+OD-26152,2026-10-03 22:04,2026-10-08,Hualien Xincheng,,,,,,OK,Standard,4270,In progress,2026-10-13
+OD-26130,2026-10-04 08:12,2026-10-08,Taipei Nangang,,,,,,OK,Gold,2160,In progress,2026-10-13
+OD-26148,2026-10-04 08:39,2026-10-08,Yingge,,,,,,OK,Standard,1950,In progress,2026-10-13
+OD-26179,2026-10-04 08:59,2026-10-07,Kaohsiung Xiaogang,2026-10-04 16:59,Swiftline Logistics,SW940774788,Departed hub,2026-10-10 08:58,OK,Standard,2960,In progress,2026-10-13
+OD-26166,2026-10-04 11:02,2026-10-08,Yonghe,,,,,,OK,Standard,3840,In progress,2026-10-13
+OD-26153,2026-10-04 12:16,2026-10-08,Banqiao,,,,,,OK,Standard,2620,In progress,2026-10-13
+OD-26142,2026-10-04 12:33,2026-10-07,Tainan Anping,,,,,,OK,Standard,2590,In progress,2026-10-13
+OD-26118,2026-10-04 15:35,2026-10-09,Taoyuan Guishan,,,,,,OK,Standard,4620,In progress,2026-10-13
+OD-26191,2026-10-04 15:47,2026-10-08,Kaohsiung Yanchao,2026-10-05 03:47,Swiftline Logistics,SW715854952,,,REVIEW,Standard,2400,In progress,2026-10-13
+OD-26162,2026-10-04 16:12,2026-10-08,Tainan Rende,,,,,,OK,Gold,1780,In progress,2026-10-13
+OD-26116,2026-10-04 17:29,2026-10-08,Taipei Zhongshan,,,,,,OK,Standard,2870,In progress,2026-10-13
+OD-26143,2026-10-04 18:26,2026-10-08,Tainan Madou,,,,,,OK,Standard,1450,In progress,2026-10-13
+OD-26194,2026-10-04 20:05,2026-10-08,Yilan Suao,2026-10-05 00:05,Swiftline Logistics,SW745179745,,,REVIEW,Standard,2280,In progress,2026-10-13
+OD-26192,2026-10-04 20:08,2026-10-09,Taipei Shilin,2026-10-04 22:08,Swiftline Logistics,SW312970035,,,REVIEW,Standard,4050,In progress,2026-10-13
+OD-26147,2026-10-04 20:10,2026-10-08,Xizhi,,,,,,OK,Standard,4150,In progress,2026-10-13
+OD-26157,2026-10-04 21:18,2026-10-08,Changhua Yuanlin,,,,,,OK,Silver,1010,In progress,2026-10-13
+OD-26159,2026-10-04 21:23,2026-10-08,Hsinchu Guangfu,,,,,,OK,Gold,3160,In progress,2026-10-13
+OD-26111,2026-10-04 21:57,2026-10-08,Hsinchu Xinpu,,,,,,OK,Standard,4720,In progress,2026-10-13
+OD-26165,2026-10-05 08:56,2026-10-09,Taishan,,,,,,OK,Standard,2100,In progress,2026-10-13
+OD-26126,2026-10-05 10:26,2026-10-10,Taitung Zhiben,,,,,,OK,Silver,4040,In progress,2026-10-13
+OD-26199,2026-10-05 11:10,2026-10-10,Yilan City,2026-10-05 17:10,Swiftline Logistics,SW534717476,,,REVIEW,Standard,1790,In progress,2026-10-13
+OD-26154,2026-10-05 11:16,2026-10-09,Taichung Fengjia,,,,,,OK,Gold,4270,In progress,2026-10-13
+OD-26115,2026-10-05 12:32,2026-10-08,Bali,,,,,,OK,Gold,530,In progress,2026-10-13
+OD-26197,2026-10-05 12:48,2026-10-09,Hualien Fenglin,2026-10-05 22:48,Swiftline Logistics,SW637464290,,,REVIEW,Standard,1760,In progress,2026-10-13
+OD-26112,2026-10-05 14:18,2026-10-10,Pingtung City,,,,,,OK,Gold,3590,In progress,2026-10-13
+OD-26190,2026-10-05 14:21,2026-10-09,Tainan Madou,2026-10-06 05:21,Swiftline Logistics,SW320888063,,,REVIEW,Standard,1960,In progress,2026-10-13
+OD-26120,2026-10-05 15:38,2026-10-10,Hualien Xincheng,,,,,,OK,Standard,4090,In progress,2026-10-13
+OD-26101,2026-10-05 16:50,2026-10-10,Penghu Magong,,,,,,OK,Standard,2140,In progress,2026-10-13
+OD-26173,2026-10-05 18:06,2026-10-09,Taipei Nangang,2026-10-06 10:06,Swiftline Logistics,SW424104682,Departed hub,2026-10-10 17:58,OK,Gold,1050,In progress,2026-10-13
+OD-26125,2026-10-05 18:14,2026-10-09,Taipei Songshan,,,,,,OK,Silver,790,In progress,2026-10-13
+OD-26123,2026-10-05 18:27,2026-10-09,Yilan City,,,,,,OK,Standard,1760,In progress,2026-10-13
+OD-26195,2026-10-05 19:08,2026-10-09,Hualien Xincheng,2026-10-06 06:08,Swiftline Logistics,SW330321018,,,REVIEW,Gold,2680,In progress,2026-10-13
+OD-26106,2026-10-05 19:16,2026-10-10,Ruifang,,,,,,OK,Silver,950,In progress,2026-10-13
+OD-26160,2026-10-05 21:18,2026-10-09,Keelung Qidu,,,,,,OK,Gold,1440,In progress,2026-10-13
+OD-26167,2026-10-05 22:50,2026-10-09,Taipei Zhongzheng,,,,,,OK,Gold,2520,In progress,2026-10-13
+OD-26124,2026-10-06 09:09,2026-10-10,Yilan Wujie,,,,,,OK,Standard,1010,In progress,2026-10-13
+OD-26184,2026-10-06 10:48,2026-10-10,Yilan Suao,2026-10-06 19:48,Swiftline Logistics,SW868634488,Departed hub,2026-10-10 10:36,OK,Standard,2310,In progress,2026-10-13
+OD-26188,2026-10-06 12:06,2026-10-10,Taitung City,2026-10-06 19:06,Swiftline Logistics,SW872039482,Departed hub,2026-10-09 14:41,OK,Standard,3140,In progress,2026-10-13
+OD-26189,2026-10-06 12:24,2026-10-10,Yunlin Xiluo,2026-10-06 16:24,Swiftline Logistics,SW310701627,Departed hub,2026-10-10 11:28,OK,Standard,2870,In progress,2026-10-13
+OD-26187,2026-10-06 13:00,2026-10-11,Wugu,2026-10-07 01:00,Swiftline Logistics,SW467495714,Arrived at hub,2026-10-08 13:02,OK,Standard,2010,In progress,2026-10-13
+OD-26182,2026-10-06 14:29,2026-10-10,Taichung Beitun,2026-10-07 07:29,Swiftline Logistics,SW144281927,Arrived at hub,2026-10-09 15:13,OK,Standard,930,In progress,2026-10-13
+OD-26102,2026-10-06 16:25,2026-10-09,Taichung Beitun,,,,,,OK,Standard,2930,In progress,2026-10-13
+OD-26119,2026-10-06 16:42,2026-10-10,Banqiao,,,,,,OK,Gold,2200,In progress,2026-10-13
+OD-26146,2026-10-06 17:43,2026-10-11,Taipei Beitou,,,,,,OK,Silver,3600,In progress,2026-10-13
+OD-26137,2026-10-06 19:14,2026-10-10,Tamsui New Town,,,,,,OK,Standard,1070,In progress,2026-10-13
+OD-26136,2026-10-06 19:26,2026-10-09,Linkou Wenhua,,,,,,OK,Silver,2710,In progress,2026-10-13
+OD-26151,2026-10-06 22:47,2026-10-10,Taoyuan Bade,,,,,,OK,Silver,2360,In progress,2026-10-13
+OD-26133,2026-10-07 09:04,2026-10-11,Taipei Beitou,,,,,,OK,Standard,2040,In progress,2026-10-13
+OD-26114,2026-10-07 10:37,2026-10-12,Taichung Taiping,,,,,,OK,Gold,1240,In progress,2026-10-13
+OD-26110,2026-10-07 11:28,2026-10-12,Kaohsiung Lingya,,,,,,OK,Standard,4200,In progress,2026-10-13
+OD-26109,2026-10-07 11:31,2026-10-11,Hualien Fenglin,,,,,,OK,Silver,1790,In progress,2026-10-13
+OD-26149,2026-10-07 11:34,2026-10-12,Changhua City,,,,,,OK,Standard,400,In progress,2026-10-13
+OD-26150,2026-10-07 14:40,2026-10-12,Kaohsiung Lingya,,,,,,OK,Standard,1100,In progress,2026-10-13
+OD-26180,2026-10-07 16:49,2026-10-11,Yilan Luodong,2026-10-08 05:49,Swiftline Logistics,SW449435630,Departed hub,2026-10-11 15:34,OK,Silver,770,In progress,2026-10-13
+OD-26139,2026-10-07 17:01,2026-10-12,Tainan Shanhua,,,,,,OK,Silver,3760,In progress,2026-10-13
+OD-26145,2026-10-07 17:15,2026-10-11,Yunlin Douliu,,,,,,OK,Silver,3320,In progress,2026-10-13
+OD-26104,2026-10-07 18:20,2026-10-10,Kaohsiung Qianzhen,,,,,,OK,Gold,3690,In progress,2026-10-13
+OD-26171,2026-10-07 18:24,2026-10-11,Sanchong,,,,,,OK,Standard,1670,In progress,2026-10-13
+OD-26176,2026-10-07 19:51,2026-10-12,Kaohsiung Daliao,2026-10-08 14:51,Swiftline Logistics,SW274270484,Arrived at delivery station,2026-10-11 07:34,OK,Platinum,2610,In progress,2026-10-13
+OD-26141,2026-10-07 20:09,2026-10-10,Hualien Xincheng,,,,,,OK,Standard,2710,In progress,2026-10-13
+OD-26164,2026-10-07 21:29,2026-10-10,Taipei Shilin,,,,,,OK,Gold,4370,In progress,2026-10-13
+OD-26198,2026-10-08 09:04,2026-10-12,Keelung Anle,2026-10-09 02:04,Swiftline Logistics,SW599175380,,,REVIEW,Standard,4520,In progress,2026-10-13
+OD-26175,2026-10-08 09:18,2026-10-12,Yunlin Huwei,2026-10-08 23:18,Swiftline Logistics,SW152759145,Arrived at delivery station,2026-10-10 06:07,OK,Platinum,620,In progress,2026-10-13
+OD-26181,2026-10-08 10:35,2026-10-11,Taipei Daan,2026-10-08 23:35,Swiftline Logistics,SW612471127,Arrived at delivery station,2026-10-10 18:27,OK,Standard,340,In progress,2026-10-13
+OD-26172,2026-10-08 11:19,2026-10-12,Keelung Zhongshan,2026-10-08 19:19,Swiftline Logistics,SW971335771,Arrived at delivery station,2026-10-09 13:52,OK,Standard,3400,In progress,2026-10-13
+OD-26127,2026-10-08 11:58,2026-10-12,Zhonghe Jingan,,,,,,OK,Standard,3500,In progress,2026-10-13
+OD-26168,2026-10-08 12:03,2026-10-11,Taichung Nantun,,,,,,OK,Standard,2510,In progress,2026-10-13
+OD-26140,2026-10-08 12:05,2026-10-12,Yilan Toucheng,,,,,,OK,Standard,2290,In progress,2026-10-13
+OD-26138,2026-10-08 12:26,2026-10-12,Tamsui,,,,,,OK,Standard,540,In progress,2026-10-13
+OD-26117,2026-10-08 13:16,2026-10-12,Taichung Taiping,,,,,,OK,Standard,4090,In progress,2026-10-13
+OD-26113,2026-10-08 14:30,2026-10-12,Hsinchu Guangfu,,,,,,OK,Standard,2030,In progress,2026-10-13
+OD-26170,2026-10-08 15:24,2026-10-11,Taichung Tanzi,,,,,,OK,Standard,2480,In progress,2026-10-13
+OD-26177,2026-10-08 15:28,2026-10-12,Luzhou,2026-10-09 01:28,Swiftline Logistics,SW234698790,Departed hub,2026-10-09 10:19,OK,Standard,2110,In progress,2026-10-13
+OD-26178,2026-10-08 16:36,2026-10-12,Kaohsiung Daliao,2026-10-08 18:36,Swiftline Logistics,SW348264526,Departed hub,2026-10-11 15:27,OK,Standard,3170,In progress,2026-10-13
+OD-26174,2026-10-08 17:18,2026-10-11,Nantou City,2026-10-09 04:18,Swiftline Logistics,SW268749431,Arrived at delivery station,2026-10-09 14:22,OK,Standard,310,In progress,2026-10-13
+OD-26103,2026-10-08 17:33,2026-10-11,Tainan Madou,,,,,,OK,Standard,390,In progress,2026-10-13
+OD-26186,2026-10-08 18:46,2026-10-12,Sanchong Chongxin,2026-10-09 05:46,Swiftline Logistics,SW267409773,Arrived at delivery station,2026-10-10 09:43,OK,Platinum,1130,In progress,2026-10-13
+OD-26132,2026-10-08 22:46,2026-10-12,Tainan Yongkang,,,,,,OK,Standard,4580,In progress,2026-10-13
