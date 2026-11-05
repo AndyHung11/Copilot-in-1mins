@@ -1622,6 +1622,43 @@
       "tool": [
         "general"
       ]
+    },
+    "P108": {
+      "task": [
+        "planning",
+        "communication"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P109": {
+      "task": [
+        "planning",
+        "analysis"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P110": {
+      "task": [
+        "planning"
+      ],
+      "tool": [
+        "general"
+      ]
+    },
+    "P111": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "teams",
+        "outlook"
+      ]
     }
   },
   "needs_review": []
