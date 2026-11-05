@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Copilot 一分鐘小教室：Power of Prompt #P107 — 提案壓力測試</title>
+<!--[if !mso]><!-->
+<style type="text/css">
+.cp-btn{display:block;margin:0 0 6px auto;background:#5B5FC7;color:#fff;border:0;padding:5px 12px;font-size:11px;cursor:pointer;border-radius:4px;font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;font-weight:600;line-height:1.3;box-shadow:0 1px 3px rgba(0,0,0,0.15);}
+.cp-btn:hover{filter:brightness(1.1);}
+.cp-btn.copied{background:#107C10;}
+</style>
+<!--<![endif]-->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body style="margin:0; padding:0; background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#F2EEF7; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+<tr><td align="center" style="padding:20px 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="728" align="center"
+       style="width:728px; max-width:100%; margin:0 auto; background:#FFFFFF;
+              border-collapse:collapse; box-shadow:0 4px 20px rgba(91,95,199,0.15);
+              font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif;">
+
+  <!-- ═══ BANNER ═══ -->
+  <tr><td bgcolor="#8378DE" style="background-color:#8378DE; padding:0;">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td valign="middle" align="left" width="58%" style="padding:24px 24px 24px 32px; color:#ffffff;">
+          <div style="font-size:12px; font-weight:bold; letter-spacing:3px; color:#DAD6F5; line-height:1.4;">COPILOT 一 分鐘小教室</div>
+          <div style="font-size:28px; font-weight:bold; color:#ffffff; line-height:1.2; padding-top:6px;">💬 Power of Prompt</div>
+        </td>
+        <td valign="middle" align="right" width="42%" style="padding:24px 32px 24px 16px; color:#ffffff; border-left:1px solid #A7A0E8;">
+          <div style="font-size:12px; color:#DAD6F5; letter-spacing:1px; line-height:1.4;">第 P107 期</div>
+          <div style="font-size:18px; font-weight:bold; color:#ffffff; line-height:1.4; padding-top:4px;">說得頭頭是道的提案，不一定是好決策。喊「go」之前，先請 Copilot 唱反調。</div>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <!-- ═══ HERO ═══ -->
+  <tr>
+    <td style="background:#5B5FC7; padding:36px 36px 32px 36px; color:#FFFFFF; text-align:center;">
+      <div style="font-size:46pt; line-height:1; padding-bottom:12px;">🥊</div>
+      <div style="font-size:28pt; font-weight:800; color:#FFFFFF; line-height:1.3; padding-bottom:8px;">🥊 提案壓力測試</div>
+      <div style="font-size:13pt; color:#E5D5F4; padding-bottom:14px;">Proposal Stress Test</div>
+      <div style="font-size:14pt; font-weight:500; color:#EDEBFB; line-height:1.6;">把專案提案、流程變更或團隊新倡議交給 Copilot，請它當建設性的反方陪練：哪些假設撐不住、最強的三個反駁是什麼、六個月後若失敗最可能的原因，並提出務實的替代方案（含「暫時不改」）與一個低風險的小測試。目標是更好的決策，不是附和。</div>
+      <div style="padding-top:18px;">
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">🆓 不需 M365 Copilot 授權，基本版即可使用</span>
+        &nbsp;
+        <span style="display:inline-block; padding:6px 16px; background:#ffffff; color:#5B5FC7; font-size:11pt; font-weight:700;">⏱️ 30 秒設定完</span>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TAGLINE BAR ═══ -->
+  <tr>
+    <td bgcolor="#FAF7FD" style="background:#FAF7FD; padding:14px 36px; border-bottom:1px solid #E0D6EE; text-align:center;">
+      <span style="font-size:13pt; font-weight:700; color:#5B5FC7;">有疑難雜症? Just ask Copilot! 🚀</span>
+    </td>
+  </tr>
+
+  <!-- ═══ PAIN POINTS ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:16pt; font-weight:700; color:#202020; padding-bottom:14px;">💭 你還在這樣跟 Copilot 對話嗎？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td width='33%' valign='top'><b>🙌 提案一講完全場點頭，你也越來越有把握？</b><br/>沒人願意唱反調，風險就藏在大家的附和裡。</td><td width='33%' valign='top'><b>🧱 上線才發現，最關鍵的假設根本不成立？</b><br/>事後檢討寫了一堆，事前卻沒人追問過一句。</td><td width='33%' valign='top'><b>🔬 想先小規模試試，卻不知道該測哪一個？</b><br/>不確定的地方太多，不知道先驗證哪個最划算。</td>
+        </tr>
+      </table>
+      <div style="font-size:13pt; color:#202020; line-height:1.8; padding:16px 4px 0 4px; text-align:justify;">
+        這個 Prompt 讓 Copilot 站到反方：先攤開必須成立的假設，再給出最強的反駁與六個月後失敗的可能原因，最後指出一個低風險的小測試。事實、你提供的資訊與它的假設分得清清楚楚，不會編造數字或來源。
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">🎁 你會得到什麼？</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td><b>關鍵假設</b><br/>列出提案要成功、必須成立的前提。</td><td><b>三個最強反駁</b><br/>站在反方，指出最站得住腳的質疑。</td></tr><tr><td><b>失敗預演</b><br/>假設六個月後失敗，最可能的原因是什麼。</td><td><b>替代方案與小測試</b><br/>含「暫時不改」，並提出低風險、低成本的驗證方式。</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ TRY IT (main language prompt in yellow box) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#946800;" onclick="cpClick(this,'cp-prompt')">📋 複製</button><!--<![endif]-->
+      <div style="background:#FFF8E1; border:2px dashed #F5A623; padding:18px 20px;">
+        <div style="font-size:14pt; font-weight:700; color:#946800; padding-bottom:6px;">🚀 直接複製這段 Prompt（繁中版）</div>
+        <div id="cp-prompt"style="background:#FFFFFF; border:1px solid #F5DC9C; padding:14px 16px; font-size:12pt; line-height:1.85; color:#202020; text-align:justify;">
+          請以建設性陪練的角度，審視下方我的提案。目標是做出更好的決策，而不只是附和。若沒有附上提案，請先請我提供。若缺少關鍵資訊，最多提出三個聚焦的問題。接著分析：<br/>
+- 提案要成功，哪些假設必須成立？<br/>
+- 最強的三個反駁論點是什麼？<br/>
+- 假設六個月後執行失敗：最可能的原因是什麼？<br/>
+- 我應該考慮哪個務實的替代方案，包括「暫時不做任何改變」？<br/>
+- 什麼樣的小型、低風險測試，可以釐清最重要的不確定性？<br/>
+請區分已驗證的事實、我提供的資訊，以及你的假設。不要捏造數字或來源。把缺漏的資訊視為待釐清的問題，而不是自動當成反駁論點。<br/>
+請以繁體中文簡潔回覆：<br/>
+1. 兩句話的整體評估。<br/>
+2. 一張表格：關鍵假設 | 若假設錯誤的風險 | 可能的驗證方式。<br/>
+3. 最有力的反駁，以及一個替代方案。<br/>
+4. 下一個務實的步驟。<br/>
+我的提案：[在此貼上你的提案，或指向附加的文件]
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ ALT LANGUAGE PROMPT ═══ -->
+  <tr>
+    <td style="padding:24px 36px 0 36px;">
+      <div style="font-size:14pt; font-weight:700; color:#5B5FC7; padding-bottom:8px;">📋 Prompt Template (English)</div>
+      <!--[if !mso]><!--><button type="button" class="cp-btn" style="background:#5B5FC7;" onclick="cpClick(this,'cp-prompt-alt')">📋 複製</button><!--<![endif]-->
+      <div id="cp-prompt-alt" style="background:#F8FAFC; border:1px solid #D1D5DB; border-left:4px solid #5B5FC7; padding:16px 18px; font-family:'Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:11pt; line-height:1.75; color:#111827;">
+        Review my proposal below as a constructive sparring partner. The goal is a better decision, not simply agreement. If no proposal is included, ask me to provide one first. Ask up to three focused questions if essential information is missing. Then analyze:<br/>
+- Which assumptions must hold true for the proposal to work?<br/>
+- What are the three strongest counterarguments?<br/>
+- Imagine the implementation has failed after six months: What would be the most likely causes?<br/>
+- What realistic alternative should I consider, including “make no changes for now”?<br/>
+- What small, low-risk test could address the most important uncertainty?<br/>
+Distinguish between verified facts, information I provided, and your assumptions. Do not invent figures or sources. Treat missing information as an open question, not automatically as a counterargument.<br/>
+Respond concisely in English:<br/>
+1. A two-sentence assessment.<br/>
+2. A table: critical assumption | risk if incorrect | possible way to test it.<br/>
+3. The strongest counterargument and one alternative.<br/>
+4. The next practical step.<br/>
+My proposal: [Insert your proposal here or refer to an attached document]
+      </div>
+    </td>
+  </tr>
+
+  <!-- ═══ TIPS (numbered) ═══ -->
+  <tr>
+    <td style="padding:28px 36px 0 36px;">
+      <div style="font-size:18pt; font-weight:700; color:#5B5FC7; padding-bottom:14px;">💡 三個情境式玩法</div>
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr><td><b>📎 先準備好提案</b><br/>貼上全文或上傳文件；沒附的話，Copilot 會先請你提供。</td></tr><tr><td><b>💬 回答它的提問</b><br/>最多三個問題，資訊越完整，假設與反駁就越貼近你的情境。</td></tr><tr><td><b>🧪 把小測試做掉</b><br/>從表格挑最不確定的假設，先小規模驗證，再決定要不要 go。</td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA ═══ -->
+  <tr>
+    <td style="padding:32px 36px 12px 36px;" align="center">
+      <div style="font-size:15pt; font-weight:700; color:#202020; padding-bottom:14px;">按下 go 之前，先過一輪反方挑戰 ▸▸</div>
+    </td>
+  </tr>
+
+  <!-- ═══ CTA BUTTON ═══ -->
+  <tr><td align="center" style="padding:18px 36px 16px 36px;">
+    <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 32px; background:#5B5FC7; color:#FFFFFF; font-size:13pt; font-weight:700; text-decoration:none;">🚀 立即試試 Copilot Chat</a>
+  </td></tr>
+
+  <!-- ═══ LICENSE NOTE ═══ -->
+  <tr>
+    <td style="padding:0 36px 24px 36px;" align="center">
+      <div style="font-size:10pt; color:#C00000; line-height:1.6;">＊本 Prompt <b>無需 M365 Copilot 授權</b>，基本版即可使用。</div>
+    </td>
+  </tr>
+
+  <!-- ═══ FOOTER ═══ -->
+  <tr><td bgcolor="#f8fafc" style="background-color:#f8fafc; border-top:1px solid #e3e8ee; padding:18px 32px; text-align:center; font-size:12px; color:#6b7280; line-height:1.8;">
+    Copilot 一分鐘小教室 · Power of Prompt ｜ 歡迎在你的社群轉發分享 🚀<br>
+    Powered by Weeklyprompt@microsoft
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+<!--[if !mso]><!-->
+<script>
+(function(){window.cpClick=function(b,id){var e=document.getElementById(id);if(!e)return;var t=(e.innerText||e.textContent||'').trim();var done=function(){var o=b.getAttribute('data-orig')||b.innerHTML;b.setAttribute('data-orig',o);b.className=(b.className||'')+' copied';b.innerHTML='✅ 已複製';setTimeout(function(){b.innerHTML=o;b.className=b.className.replace(' copied','');},1500);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}};})();
+</script>
+<!--<![endif]-->
+</body>
+</html>
+

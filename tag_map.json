@@ -1603,6 +1603,25 @@
         "teams",
         "outlook"
       ]
+    },
+    "A065": {
+      "task": [
+        "analysis",
+        "communication"
+      ],
+      "tool": [
+        "outlook",
+        "teams"
+      ]
+    },
+    "P107": {
+      "task": [
+        "analysis",
+        "strategy"
+      ],
+      "tool": [
+        "general"
+      ]
     }
   },
   "needs_review": []
