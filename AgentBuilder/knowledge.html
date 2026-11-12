@@ -167,7 +167,7 @@
 <!-- LANG-SNIPPET v1 END -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Agent 的知識來源｜Power of Copilot</title>
-<meta name="description" content="介紹 Agent Builder 可以使用的 8 種知識來源：公開網站、SharePoint 與 OneDrive、上傳的檔案、Teams、Outlook 郵件、人員資料、Copilot 連接器，以及 Dynamics 365 與 Power Apps，含各自的上限與授權需求，並對照實際的知識畫面與知識設定。" />
+<meta name="description" content="介紹 Agent Builder 可以使用的 8 種知識來源（公開網站、SharePoint 與 OneDrive、上傳的檔案、Teams、Outlook 郵件、人員資料、Copilot 連接器、Dynamics 365 與 Power Apps），以及知識設定裡的 4 個開關，含各自的上限與授權需求，並對照實際的知識畫面。" />
 <script>
 (() => {
   const param = new URLSearchParams(location.search).get("scoutTheme");
@@ -526,6 +526,14 @@ html { scroll-padding-top: 88px; }
 h1 { text-wrap: balance; }
 .lead, .sec-lead, .kp-what, .kf dd, .tip p { text-wrap: pretty; }
 
+/* license tiers: the colour answers "do I need a license?" (frames, badges and the callout in an open card share it) */
+:root {
+  --t-copilot: #c81e78; --t-lic: #0b63ce; --t-free: #15803d; --t-free-text: #166534; --t-admin: #f59e0b; --t-on: #ffffff;
+}
+html[data-theme="dark"] {
+  --t-copilot: #ff7ac0; --t-lic: #66b3ff; --t-free: #4ade80; --t-free-text: #86efac; --t-admin: #fbbf24; --t-on: #1a1a1a;
+}
+
 /* UI labels quoted from the Agent Builder screen */
 .ui { padding: 0 6px; border: 1px solid var(--cp-border); border-radius: 6px; background: var(--cp-surface-soft); color: var(--cp-text); font-weight: 700; font-size: 0.92em; white-space: nowrap; }
 
@@ -550,13 +558,17 @@ h1 { text-wrap: balance; }
 .m-title { margin: 0; display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 800; line-height: 1.3; }
 .m-info { width: 16px; height: 16px; flex: none; display: inline-grid; place-items: center; border: 1.5px solid var(--cp-text-muted); border-radius: 50%; color: var(--cp-text-muted); font: 700 10px/1 Georgia, serif; font-style: normal; }
 .m-tools { display: inline-flex; align-items: center; gap: 8px; }
-.m-ico-btn { width: 34px; height: 34px; display: inline-grid; place-items: center; border: 1.5px solid transparent; border-radius: 0.625rem; color: var(--cp-text); }
+.m-ico-btn { position: relative; width: 34px; height: 34px; padding: 0; display: inline-grid; place-items: center; border: 1.5px solid transparent; border-radius: 0.625rem; background: transparent; color: var(--cp-text); font: inherit; }
+button.m-ico-btn, button.m-x { cursor: pointer; }
+button.m-ico-btn:hover, button.m-x:hover { background: var(--cp-surface-soft); }
 .m-ico-btn.ring { border-color: var(--cp-text); }
+.m-ico-btn .m-ann { position: absolute; right: -9px; top: -11px; width: 20px; height: 20px; font-size: 11px; box-shadow: 0 0 0 3px var(--cp-surface); }
 .m-pill { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border: 1px solid var(--cp-border); border-radius: 0.625rem; font-size: 13px; font-weight: 700; }
 .m-drop { position: relative; margin: 12px 0 18px; padding: 22px 16px; display: grid; justify-items: center; gap: 12px; border: 1px dashed var(--cp-border-strong); border-radius: 12px; text-align: center; color: var(--cp-text-muted); font-size: 14px; }
 .m-drop p { margin: 0; }
 .m-drop-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 12px; font-size: 13px; }
-.m-add { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border: 1px solid var(--cp-border-strong); border-radius: 0.5rem; background: var(--cp-surface); color: var(--cp-text); font-weight: 700; font-size: 13px; }
+.m-add { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border: 1px solid var(--cp-border-strong); border-radius: 0.5rem; background: var(--cp-surface); color: var(--cp-text); font-family: inherit; font-weight: 700; font-size: 13px; cursor: pointer; }
+.m-add:hover { background: var(--cp-surface-soft); }
 .m-sec { margin: 0 0 4px; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 800; }
 .m-attach { padding: 6px 8px; font-size: 15px; }
 .m-ann { flex: none; width: 22px; height: 22px; display: inline-grid; place-items: center; border-radius: 50%; background: var(--cp-accent); color: var(--cp-accent-fg); font-size: 12px; font-weight: 800; line-height: 1; }
@@ -571,8 +583,6 @@ h1 { text-wrap: balance; }
 .mrow .chip-all { padding: 1px 9px; border-radius: 6px; background: var(--cp-surface-soft); color: var(--cp-text-muted); font-size: 12px; font-weight: 600; white-space: nowrap; }
 .mrow:hover .chip-all { background: var(--cp-border); }
 .mrow .m-chev { width: 16px; height: 16px; color: var(--cp-text); }
-.mrow.static { cursor: default; }
-.mrow.static:hover { background: transparent; }
 .sw { position: relative; flex: none; width: 50px; height: 28px; margin-left: auto; border: 1.5px solid var(--cp-border-strong); border-radius: 999px; }
 .sw::after { content: ""; position: absolute; top: 4px; left: 4px; width: 17px; height: 17px; border-radius: 50%; background: var(--cp-text-muted); }
 .sw.on { background: var(--cp-text); border-color: var(--cp-text); }
@@ -580,11 +590,11 @@ h1 { text-wrap: balance; }
 .mlegend { margin: 14px 2px 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 13px; }
 .mlegend li { display: flex; align-items: flex-start; gap: 10px; }
 .mlegend .m-ann { margin-top: 1px; }
-.kmock-cap { margin: 10px 2px 0; color: var(--cp-text-muted); font-size: 12px; }
+.kmock-cap { margin: 10px 2px 0; color: color-mix(in srgb, var(--cp-text) 28%, var(--cp-text-muted)); font-size: 12px; }
 
 /* the settings dialog */
 .m-dialog .m-title { font-size: 20px; }
-.m-x { width: 36px; height: 36px; display: inline-grid; place-items: center; border: 1.5px solid var(--cp-text); border-radius: 0.75rem; color: var(--cp-text); }
+.m-x { width: 36px; height: 36px; padding: 0; display: inline-grid; place-items: center; border: 1.5px solid var(--cp-text); border-radius: 0.75rem; background: transparent; color: var(--cp-text); }
 .m-intro { margin: 10px 0 14px; color: var(--cp-text-muted); font-size: 13px; }
 .m-intro a { color: var(--cp-text); text-underline-offset: 2px; }
 .m-cards { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
@@ -594,35 +604,86 @@ h1 { text-wrap: balance; }
 .m-card b { display: block; font-size: 15px; line-height: 1.4; }
 .m-card small { display: block; margin-top: 1px; color: var(--cp-text-muted); font-size: 12.5px; line-height: 1.5; }
 
-/* the eight sources */
-.legend { margin: 0 0 16px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13px; color: var(--cp-text-muted); }
-.legend li { display: inline-flex; align-items: center; gap: 8px; }
-.badge.t-free::before { background: var(--cp-success); }
-.badge.t-lic::before { background: var(--cp-link); }
-.badge.t-copilot::before { background: var(--cp-brand-purple); }
-.badge.admin::before { background: var(--cp-warning); }
+/* the picker that "Add knowledge" opens: search or paste, two icons, five tabs, then the results */
+.m-pop { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.m-search { display: flex; align-items: center; gap: 8px; padding: 22px 18px 16px; }
+.m-input { position: relative; flex: 1 1 auto; min-width: 0; height: 44px; display: flex; align-items: center; padding: 0 14px; border: 1.5px solid var(--cp-border-strong); border-radius: 12px; color: var(--cp-text-muted); font-size: 15px; }
+.m-input span:not(.m-ann) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.m-input .m-ann, .m-icons .m-ann { position: absolute; box-shadow: 0 0 0 3px var(--cp-surface); }
+.m-input .m-ann { left: -9px; top: -13px; }
+.m-icons { position: relative; flex: none; display: inline-flex; gap: 2px; }
+.m-icons .m-ann { right: -9px; top: -15px; }
+.m-chips { position: relative; display: flex; align-items: center; flex-wrap: wrap; gap: 4px 6px; padding: 12px 18px; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); }
+.m-chips span:not(.m-ann) { padding: 7px 16px; border-radius: 12px; color: var(--cp-text); font-size: 14px; font-weight: 700; }
+.m-chips span.is-on:not(.m-ann) { background: var(--cp-text); color: var(--cp-surface); }
+.m-chips .m-ann { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); }
+.m-results { margin: 0; padding: 8px 8px 10px; list-style: none; flex: 1 1 auto; }
+.m-result { position: relative; gap: 14px; padding: 8px 10px; }
+.m-result .tx { min-width: 0; display: grid; gap: 1px; }
+.m-result b { font-size: 15px; font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; }
+.m-result small { color: var(--cp-text-muted); font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
+.m-result .m-ann { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 720px) {
+  .m-result .m-ann { right: auto; left: 0; top: 4px; transform: none; box-shadow: 0 0 0 3px var(--cp-surface); }
+}
+.m-av { flex: none; width: 40px; height: 40px; display: inline-grid; place-items: center; font-size: 13px; font-weight: 700; line-height: 1; }
+.m-fts { width: 38px; height: 38px; }
+.m-av.m-site { border-radius: 10px; background: #c9d6dd; color: #1c3340; }
+.m-av.m-hub { border-radius: 10px; background: #cbd5f8; color: #1e2a78; }
+.m-av.m-ch-a, .m-av.m-ch-b { border-radius: 50%; color: #fff; }
+.m-av.m-ch-a { background: #6b6b6b; }
+.m-av.m-ch-b { background: #cf2a44; }
 
-.kgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: stretch; }
-.ktile { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "ico . chev" "text text text" "tags tags tags"; gap: 10px 12px; align-content: start; min-width: 0; min-height: 172px; padding: 16px; border: 1px solid var(--cp-border); border-radius: 0.75rem; background: var(--cp-surface); color: var(--cp-text); text-align: left; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); transition: border-color 0.15s, background 0.15s; }
+/* ---- license badges: solid and bright when a license is needed, soft green when it is not ---- */
+.legend { margin: 0 0 18px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13px; color: var(--cp-text-muted); }
+.legend li { display: inline-flex; align-items: center; gap: 8px; }
+.badge.t-copilot, .badge.t-lic, .badge.admin { border-color: transparent; font-weight: 800; }
+.badge.t-copilot { background: var(--t-copilot); color: var(--t-on); }
+.badge.t-lic { background: var(--t-lic); color: var(--t-on); }
+.badge.admin { background: var(--t-admin); color: #1a1a1a; }
+.badge.t-copilot::before, .badge.t-lic::before { background: currentColor; }
+.badge.admin::before { background: #1a1a1a; }
+.badge.t-free { background: color-mix(in srgb, var(--t-free) 14%, var(--cp-surface)); border: 1.5px solid var(--t-free); color: var(--t-free-text); font-weight: 800; }
+.badge.t-free::before { background: var(--t-free); }
+
+/* ---- the tiles: a bright frame when a license is needed ---- */
+.kgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.ktile { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "ico . chev" "text text text" "tags tags tags"; gap: 10px 12px; align-content: start; min-width: 0; min-height: 172px; padding: 15px; border: 2px solid var(--cp-border); border-radius: 0.75rem; background: var(--cp-surface); color: var(--cp-text); text-align: left; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
 .ktile:hover { border-color: var(--cp-border-strong); }
-.ktile[aria-expanded="true"] { border-color: var(--cp-accent); background: var(--cp-gradient-soft), var(--cp-surface); box-shadow: inset 0 0 0 1px var(--cp-accent); }
+.ktile[data-tier="copilot"], .kpanel[data-tier="copilot"] { --tier: var(--t-copilot); }
+.ktile[data-tier="lic"], .kpanel[data-tier="lic"] { --tier: var(--t-lic); }
+.ktile[data-tier="free"], .kpanel[data-tier="free"] { --tier: var(--t-free); }
+.ktile[data-tier="copilot"] { border-color: var(--t-copilot); box-shadow: 0 0 0 3px color-mix(in srgb, var(--t-copilot) 18%, transparent), 0 8px 22px color-mix(in srgb, var(--t-copilot) 14%, transparent); }
+.ktile[data-tier="lic"] { border-color: var(--t-lic); box-shadow: 0 0 0 3px color-mix(in srgb, var(--t-lic) 16%, transparent), 0 8px 22px color-mix(in srgb, var(--t-lic) 10%, transparent); }
+.ktile[data-tier="free"] { border-color: color-mix(in srgb, var(--t-free) 45%, var(--cp-border)); }
+.ktile[data-tier]:hover { filter: brightness(1.03); }
+.ktile[aria-expanded="true"] { border-color: var(--tier, var(--cp-accent)); background: color-mix(in srgb, var(--tier, var(--cp-accent)) 9%, var(--cp-surface)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--tier, var(--cp-accent)) 32%, transparent); }
 .k-ico { grid-area: ico; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 0.75rem; background: var(--cp-gradient-soft); font-size: 22px; line-height: 1; }
 .k-chev { grid-area: chev; align-self: start; width: 20px; height: 20px; color: var(--cp-text-muted); transition: transform 0.15s; }
-.ktile[aria-expanded="true"] .k-chev { transform: rotate(180deg); color: var(--cp-accent); }
+.ktile[aria-expanded="true"] .k-chev { transform: rotate(180deg); color: var(--tier, var(--cp-accent)); }
 .k-text { grid-area: text; min-width: 0; }
 .k-name { display: block; font-size: 16px; font-weight: 800; line-height: 1.35; overflow-wrap: anywhere; }
 .k-sub { display: block; margin-top: 2px; color: var(--cp-text-muted); font-size: 13px; line-height: 1.5; }
 .k-tags { grid-area: tags; align-self: end; display: flex; flex-wrap: wrap; gap: 6px; }
 
-.kpanel { grid-column: 1 / -1; min-width: 0; padding: 20px 22px 6px; border: 1px solid var(--cp-accent); border-radius: 0.75rem; background: var(--cp-surface); box-shadow: var(--cp-shadow); }
+/* ---- the open card: same colour as its tile, with the license stated in a bright box ---- */
+.kpanel { grid-column: 1 / -1; min-width: 0; padding: 20px 22px 6px; border: 2px solid var(--tier, var(--cp-accent)); border-radius: 0.75rem; background: var(--cp-surface); box-shadow: var(--cp-shadow); }
 .kp-head { display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; }
 .kp-head .k-ico { width: 40px; height: 40px; font-size: 20px; }
 .kp-head h3 { margin: 0; font-size: 20px; line-height: 1.3; }
-.kp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .kp-close { margin-left: auto; width: 40px; height: 40px; flex: none; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); color: var(--cp-text); cursor: pointer; }
 .kp-close:hover { border-color: var(--cp-border-strong); background: var(--cp-surface-soft); }
 .kp-close svg { width: 18px; height: 18px; }
-.kp-what { margin: 10px 0 14px; font-size: 15px; }
+.kp-license { --box: var(--cp-border-strong); margin: 14px 0 0; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; border: 2px solid var(--box); border-radius: 0.75rem; background: color-mix(in srgb, var(--box) 11%, var(--cp-surface)); font-size: 14px; }
+.kp-license + .kp-license { margin-top: 8px; }
+.kp-license.is-copilot { --box: var(--t-copilot); }
+.kp-license.is-lic { --box: var(--t-lic); }
+.kp-license.is-free { --box: var(--t-free); }
+.kp-license.is-admin { --box: var(--t-admin); }
+.kp-license b { font-size: 15px; }
+.kl-ico { flex: none; width: 30px; height: 30px; display: inline-grid; place-items: center; border-radius: 50%; background: var(--box); color: var(--t-on); font-size: 16px; font-weight: 800; line-height: 1; }
+.kp-license.is-admin .kl-ico { color: #1a1a1a; }
+.kp-what { margin: 14px 0 14px; font-size: 15px; }
 .kfacts { margin: 0; padding: 0; }
 .kf { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 4px 16px; padding: 12px 0; border-top: 1px solid var(--cp-border); }
 .kf dt { padding-top: 1px; color: var(--cp-text-muted); font-size: 13px; font-weight: 700; }
@@ -632,24 +693,25 @@ h1 { text-wrap: balance; }
 .ask-q { display: inline-block; padding: 6px 12px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-bg-elevated); }
 .kp-links { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 0 16px; border-top: 1px solid var(--cp-border); }
 
-/* three reminders, and the three extra switches of the settings dialog */
+/* three reminders */
 .tips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.tip { padding: 18px; display: grid; gap: 8px; align-content: start; scroll-margin-top: 110px; }
+.tip { padding: 18px; display: grid; gap: 8px; align-content: start; }
 .tip .ico { font-size: 26px; line-height: 1; }
 .tip h3 { font-size: 16px; }
 .tip p { margin: 0; color: var(--cp-text-muted); font-size: 14px; }
-.tip .set-tag { margin: 0; }
-.flash { animation: flash 1.3s ease-out; }
-@keyframes flash { 0% { box-shadow: 0 0 0 4px var(--cp-accent); } 100% { box-shadow: 0 0 0 0 transparent; } }
 
-/* the license table sits inside a closed details */
+/* the license table sits inside a closed details; each row wears its tier colour */
 #licDetails > div { padding: 0 16px 16px; }
 .lic { overflow: hidden; }
 .lic-cell { display: flex; flex-direction: column; justify-content: center; }
 .lic .yes { color: var(--cp-text); }
+.lic-row[data-tier="copilot"] > div:first-child { box-shadow: inset 6px 0 0 var(--t-copilot); }
+.lic-row[data-tier="lic"] > div:first-child { box-shadow: inset 6px 0 0 var(--t-lic); }
+.lic-row[data-tier="free"] > div:first-child { box-shadow: inset 6px 0 0 var(--t-free); }
 .lic-notes { margin: 14px 2px 0; padding-left: 20px; display: grid; gap: 6px; color: var(--cp-text-muted); font-size: 13px; }
 
 #next .cta { margin-top: 14px; }
+#settings .note { margin-top: 14px; }
 
 @media (max-width: 1100px) {
   .kgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -663,6 +725,13 @@ h1 { text-wrap: balance; }
   .kf { grid-template-columns: minmax(0, 1fr); }
   .kpanel { padding: 16px 16px 4px; }
   .mscreen { padding: 16px 14px 14px; border-radius: 18px; }
+  .m-pop { padding: 0; }
+  .m-search { padding: 20px 12px 14px; }
+  .m-chips { padding: 10px 10px; }
+  .m-chips span:not(.m-ann) { padding: 7px 12px; }
+  .m-results { padding: 6px 4px 8px; }
+  .mtabs { display: flex; width: 100%; }
+  .mtabs button { flex: 1 1 0; min-width: 0; min-height: 40px; padding: 4px 6px; font-size: 12.5px; line-height: 1.25; white-space: normal; }
   .mrow { gap: 10px; padding-left: 4px; padding-right: 4px; }
   .sw { width: 44px; height: 26px; }
   .sw::after { top: 3px; left: 3px; width: 16px; height: 16px; }
@@ -710,7 +779,8 @@ h1 { text-wrap: balance; }
         <p class="lead" data-i="hero.lead"></p>
         <div class="cta">
           <a class="btn" href="#sources" data-i="hero.cta1"></a>
-          <a class="btn secondary" href="#tips" data-i="hero.cta2"></a>
+          <a class="btn secondary" href="#settings" data-i="hero.cta2"></a>
+          <a class="btn secondary" href="#tips" data-i="hero.cta3"></a>
         </div>
       </div>
       <figure class="kmock" id="kmock"></figure>
@@ -729,7 +799,7 @@ h1 { text-wrap: balance; }
     <div class="sec-kicker" data-i="settings.k"></div>
     <h2 id="settings-h" data-i="settings.h"></h2>
     <p class="sec-lead" data-i="settings.lead"></p>
-    <div class="tips" id="setList"></div>
+    <div class="kgrid" id="sgrid"></div>
     <p class="note" data-i="settings.note"></p>
   </section>
 
@@ -766,7 +836,7 @@ h1 { text-wrap: balance; }
 </footer>
 
 <script>
-const DATA = {"items":[{"key":"web","ico":"🌐","anchor":"public-websites","admin":false,"tier":"free"},{"key":"spo","ico":"📁","anchor":"sharepoint-and-onedrive-content","admin":false,"tier":"lic"},{"key":"files","ico":"📤","anchor":"embedded-file-content","admin":false,"tier":"lic"},{"key":"teams","ico":"📅","anchor":"microsoft-teams-data","admin":false,"tier":"copilot"},{"key":"mail","ico":"📬","anchor":"outlook-emails","admin":false,"tier":"copilot"},{"key":"people","ico":"🪪","anchor":"people-data","admin":false,"tier":"copilot"},{"key":"conn","ico":"🔗","anchor":"copilot-connectors","admin":true,"tier":"lic"},{"key":"d365","ico":"📊","anchor":"dynamics-365-and-power-apps-data","admin":true,"tier":"lic"}],"settings":[{"key":"code","ico":"🧮","tier":"free"},{"key":"image","ico":"🖼️","tier":"free"},{"key":"avoid","ico":"🎯","tier":null}],"license":{"web":[true,true,true],"spo":[false,true,true],"files":[false,true,true],"teams":[false,false,true],"mail":[false,false,true],"people":[false,false,true],"conn":[false,true,true],"d365":[false,true,true]},"asOf":"2026-11-12","twEnglish":true,"agentMap":"https://andyhung11.github.io/copilot-agent-building/agent-builder/","sources":[{"page":"agent-builder-add-knowledge","title":"Add knowledge sources to an agent in Agent Builder"},{"page":"knowledge-sources","title":"Add knowledge sources to your declarative agent"},{"page":"prerequisites","anchor":"agent-capabilities-and-licensing-models","title":"Agent capabilities and licensing models"}]};
+const DATA = {"items":[{"key":"web","ico":"🌐","anchor":"public-websites","admin":false,"tier":"free"},{"key":"spo","ico":"📁","anchor":"sharepoint-and-onedrive-content","admin":false,"tier":"lic"},{"key":"files","ico":"📤","anchor":"embedded-file-content","admin":false,"tier":"lic"},{"key":"teams","ico":"📅","anchor":"microsoft-teams-data","admin":false,"tier":"copilot"},{"key":"mail","ico":"📬","anchor":"outlook-emails","admin":false,"tier":"copilot"},{"key":"people","ico":"🪪","anchor":"people-data","admin":false,"tier":"copilot"},{"key":"conn","ico":"🔗","anchor":"copilot-connectors","admin":true,"tier":"lic"},{"key":"d365","ico":"📊","anchor":"dynamics-365-and-power-apps-data","admin":true,"tier":"lic"}],"settings":[{"key":"people","ico":"🪪","tier":"copilot","page":null,"anchor":"people-data","sourceKey":"people"},{"key":"code","ico":"🧮","tier":"free","page":"code-interpreter","anchor":null,"sourceKey":null},{"key":"image","ico":"🖼️","tier":"free","page":"image-generator","anchor":null,"sourceKey":null},{"key":"avoid","ico":"🎯","tier":null,"page":null,"anchor":"prioritize-your-knowledge-sources-over-general-knowledge","sourceKey":null}],"license":{"web":[true,true,true],"spo":[false,true,true],"files":[false,true,true],"teams":[false,false,true],"mail":[false,false,true],"people":[false,false,true],"conn":[false,true,true],"d365":[false,true,true]},"asOf":"2026-11-12","twEnglish":{"agent-builder-add-knowledge":true,"knowledge-sources":true,"prerequisites":true,"code-interpreter":true,"image-generator":true},"agentMap":"https://andyhung11.github.io/copilot-agent-building/agent-builder/","sources":[{"page":"agent-builder-add-knowledge","title":"Add knowledge sources to an agent in Agent Builder"},{"page":"knowledge-sources","title":"Add knowledge sources to your declarative agent"},{"page":"code-interpreter","title":"Add the code interpreter capability to your agent"},{"page":"image-generator","title":"Add the image generator capability to your agent"},{"page":"prerequisites","anchor":"agent-capabilities-and-licensing-models","title":"Agent capabilities and licensing models"}]};
 const I18N = {
 "zh-Hant": {
   title: "Agent 的知識來源｜Power of Copilot",
@@ -778,14 +848,18 @@ const I18N = {
   hero: {
     eyebrow: "Agent Builder · 知識",
     h1: "讓 Agent 先讀過你的資料，再回答",
-    lead: "用 Agent Builder 做出來的 Agent，回答前可以先去你指定的地方找答案。畫面上有兩種給法：[[新增知識]] 指定來源，[[工作內容]] 整類打開。下面的卡片逐一說明 8 種來源。",
+    lead: "用 Agent Builder 做出來的 Agent，回答前可以先去你指定的地方找答案。畫面上有兩種給法：[[新增知識]] 指定來源，[[工作內容]] 整類打開。下面逐一說明 8 種來源，再介紹 [[知識設定]] 的 4 個開關。",
     cta1: "看 8 種來源",
-    cta2: "先看 3 個提醒"
+    cta2: "看知識設定",
+    cta3: "先看 3 個提醒"
   },
   mock: {
     tabsLabel: "畫面",
-    tabs: ["知識", "知識設定"],
+    tabs: ["知識", "新增知識", "知識設定"],
     go: "看說明",
+    addLabel: "新增知識：看挑選畫面",
+    gearLabel: "開啟知識設定",
+    closeLabel: "關閉知識設定，回到知識畫面",
     hint: "點一列，跳到那一項的說明。",
     cap: "依實際介面重繪的示意畫面。",
     p: {
@@ -796,9 +870,28 @@ const I18N = {
       spo: "雲端檔案", mail: "Outlook", teams: "團隊", conn: "Copilot 連接器", web: "Web 搜尋", attach: "附件"
     },
     legend: [
-      ["新增知識", "指定特定的檔案、網址或聊天，範圍精準。"],
-      ["工作內容", "整類資料用開關打開，旁邊標著「搜尋全部」。"]
+      ["新增知識", "指定特定的檔案、網址或聊天，範圍精準。點按鈕，看下一個畫面。"],
+      ["工作內容", "整類資料用開關打開，旁邊標著「搜尋全部」。"],
+      ["齒輪", "開啟「知識設定」，裡面有 4 個開關。"]
     ],
+    add: {
+      search: "貼上連結或搜尋您的資料",
+      chips: ["全部", "檔案", "網站", "聊天", "會議"],
+      rows: [
+        { go: "spo", t: "xlsx", n: "Q3 銷售報表", p: "personal > you_contoso_com > Documents > Q3 銷售報表.xlsx" },
+        { go: "spo", t: "pptx", n: "新品發表簡報", p: "personal > you_contoso_com > Documents > 新品發表簡報.pptx" },
+        { go: "spo", t: "site", i: "產品", n: "產品生命週期", p: "sites > ProductLifecycle" },
+        { go: "spo", t: "hub", i: "行銷", n: "行銷中心", p: "" },
+        { go: "teams", t: "ch-a", i: "公告", n: "公告與領導層更新", p: "頻道 • 管理團隊" },
+        { go: "teams", t: "ch-b", i: "研究", n: "概念與早期研究", p: "頻道 • 產品生命週期" }
+      ],
+      legend: [
+        ["搜尋框", "貼上連結，或輸入關鍵字搜尋。"],
+        ["兩個圖示", "迴紋針上傳電腦裡的檔案，雲朵瀏覽雲端檔案。"],
+        ["分頁", "全部、檔案、網站、聊天、會議，用來縮小範圍。"],
+        ["結果", "點一筆就加進知識，可以是檔案、網站或 Teams 頻道。"]
+      ]
+    },
     d: {
       title: "知識設定",
       intro: "選擇代理程式應使用的資料，以及可執行的動作。可用的知識和動作依據授權而有所不同。如需詳細資訊，請參閱",
@@ -814,14 +907,21 @@ const I18N = {
   sources: {
     k: "8 種來源",
     h: "Agent 能讀哪些資料",
-    lead: "點一張卡，看怎麼加、上限和注意事項。卡片上的標籤，是使用時需要的授權。",
+    lead: "點一張卡，看怎麼加、上限和注意事項。卡片的框色和標籤，就是使用時需要的授權。",
     legendLabel: "授權標籤說明",
     tiers: {
-      free: ["不需授權", "沒有 Copilot 授權也能用"],
+      copilot: ["需 Copilot 授權", "只有持有 Copilot 授權的人能用"],
       lic: ["授權或用量計費", "有授權，或組織開了用量計費"],
-      copilot: ["需 Copilot 授權", "只有持有 Copilot 授權的人能用"]
+      free: ["不需授權", "沒有 Copilot 授權也能用"]
     },
     admin: "需管理員啟用",
+    adminHint: "要管理員先開通",
+    box: {
+      copilot: ["需要 Copilot 授權", "必須有 Microsoft 365 Copilot 授權；只有用量計費不能用。"],
+      lic: ["需要授權", "要有 Microsoft 365 Copilot 授權，或組織啟用了用量計費（pay-as-you-go）。"],
+      free: ["不需要授權", "沒有 Copilot 授權的人也能用。"],
+      admin: ["需要管理員先啟用", "沒有啟用的話，就算有授權也用不了。"]
+    },
     rows: { how: "怎麼加", limit: "上限", note: "要知道", ask: "例如這樣問" },
     close: "關閉",
     learn: "官方說明",
@@ -832,7 +932,7 @@ const I18N = {
       name: "公開網站",
       sub: "官網、法規、產品頁",
       what: "讓 Agent 去查你指定的公開網頁，也可以放寬到整個網路。",
-      how: "整個網路：打開 [[Web 搜尋]] 開關。只用指定網站：按 [[新增知識]]，貼上網址。",
+      how: "整個網路：打開 [[Web 搜尋]] 開關。只用指定網站：按 [[新增知識]]，在搜尋框貼上網址。",
       limit: "指定網址最多 4 個。網址路徑最多兩層，不能帶查詢參數（?…）。",
       note: ["Agent 是透過 Bing 的索引取得網頁內容，動態產生或常更新的頁面，可能不是最新的。", "管理員可以關閉整個組織的網頁搜尋。"],
       ask: "「我們官網上的退貨政策怎麼寫？」"
@@ -841,7 +941,7 @@ const I18N = {
       name: "SharePoint 與 OneDrive",
       sub: "團隊文件、制度、手冊",
       what: "指定要讀的檔案、資料夾、網站或清單，或整個雲端一起找。",
-      how: "整批找：打開 [[雲端檔案]] 開關，在你能存取的 SharePoint 與 OneDrive 內容裡找。縮小範圍：按 [[新增知識]]，貼上連結，或從清單挑檔案、資料夾、網站、清單。",
+      how: "整批找：打開 [[雲端檔案]] 開關，在你能存取的 SharePoint 與 OneDrive 內容裡找。縮小範圍：按 [[新增知識]]，貼上連結或搜尋；也可以點搜尋框右邊的雲朵圖示，瀏覽檔案、資料夾、網站或清單。",
       limit: "指定時：SharePoint 最多 100 個檔案、1 份清單；OneDrive 最多 50 個檔案。",
       note: ["沿用原本的權限和敏感度標籤，每個人只會用到自己有權限的內容。", "新上傳的檔案要等幾分鐘，畫面上會標示還在準備中，準備好才會被用到。", "選整個網站不含網站裡的清單，清單要另外選。OneNote 只能選單一頁面。"],
       ask: "「請根據人資制度資料夾，說明特休怎麼申請。」"
@@ -850,18 +950,18 @@ const I18N = {
       name: "上傳的檔案",
       sub: "直接帶著檔案走，最多 20 個",
       what: "把電腦裡的檔案直接放進 Agent，成為 Agent 的內嵌內容。",
-      how: "把檔案直接拖到 [[知識]] 區，或按 [[新增知識]] 上傳。只能傳檔案，不能傳資料夾。",
+      how: "把檔案直接拖到 [[知識]] 區的虛線框，或按 [[新增知識]]，再點搜尋框右邊的迴紋針，從電腦選檔案上傳。只能傳檔案，不能傳資料夾。",
       limit: "最多 20 個檔案。Word、PDF、PowerPoint、文字檔每個最大 512 MB，Excel 最大 30 MB。",
       note: ["所有能使用這個 Agent 的人，都看得到根據檔案產生的回答。", "有密碼保護的檔案不能用。"],
       ask: "「照我上傳的新人手冊，第一週要做哪些事？」"
     },
     teams: {
       name: "Teams 聊天與會議",
-      sub: "討論結論、會議逐字稿",
-      what: "讓 Agent 從 Teams 的聊天訊息和會議內容找答案。",
-      how: "整批找：打開 [[團隊]] 開關，在你能存取的全部聊天、會議逐字稿和行事曆裡找。縮小範圍：按 [[新增知識]]，挑指定的聊天和會議。",
+      sub: "頻道、聊天、會議逐字稿",
+      what: "讓 Agent 從 Teams 的頻道、聊天訊息和會議內容找答案。",
+      how: "整批找：打開 [[團隊]] 開關，在你能存取的全部聊天、頻道、會議逐字稿和行事曆裡找。縮小範圍：按 [[新增知識]]，到 [[聊天]] 或 [[會議]] 分頁，挑出指定的頻道、群組聊天或會議。",
       limit: "指定時，最多 5 個聊天、5 場會議。",
-      note: ["指定具體的聊天或會議，答案通常更準。", "過去的逐字稿太大時，Agent 可能讀不到全部。"],
+      note: ["能指定的聊天包含團隊頻道、群組聊天、1:1 聊天和會議聊天。", "指定具體的聊天或會議，答案通常更準。", "過去的逐字稿太大時，Agent 可能讀不到全部。"],
       ask: "「上週專案群組裡，大家對時程的結論是什麼？」"
     },
     mail: {
@@ -903,14 +1003,44 @@ const I18N = {
   },
   settings: {
     k: "知識設定",
-    h: "齒輪裡的另外 3 個開關",
-    lead: "按 [[知識]] 區右上角的齒輪，會開啟 [[知識設定]]。「人員資料」已在上面的來源裡，這裡再看另外 3 個開關。",
-    cards: {
-      code: ["建立文件、圖表和程式碼", "讓 Agent 分析資料、畫數學函數圖形，並產生程式碼片段和 Word、Excel、PowerPoint 檔案。"],
-      image: ["建立影像", "讓 Agent 依你的提示，產生影像和藝術圖。"],
-      avoid: ["避免使用模型知識", "畫面上的說明是「使用選取的來源取代 AI 知識，適用於高度技術領域」。官方文件的說法較保守：只是優先使用你指定的來源，並不會完全封鎖一般 AI 知識。重要的題目，請先試問幾題，再分享給別人用。"]
+    h: "知識設定：Agent 的 4 個開關",
+    lead: "按 [[知識]] 區右上角的齒輪，會開啟 [[知識設定]] 視窗，決定 Agent 能用哪些資料、能做哪些動作。可用的選項依授權而不同。點一個開關，看它的說明。",
+    note: "「建立文件、圖表和程式碼」與「建立影像」是 Agent 的能力，不是知識來源。",
+    rows: { how: "怎麼開" },
+    openSource: "看「人員資料」來源卡"
+  },
+  setitems: {
+    people: {
+      name: "人員資料",
+      sub: "組織圖與設定檔資料",
+      what: "讓 Agent 回答和同事有關的問題，例如職稱、技能，以及誰向誰報告。",
+      how: "按 [[知識]] 區右上角的齒輪，在 [[知識設定]] 裡打開 [[人員資料]]。",
+      note: ["只包含個人的公開資訊。", "這個開關也是 8 種來源之一，授權等細節在上面的「人員資料」來源卡。"],
+      ask: "「公司裡有哪位同事擅長資料分析？」"
     },
-    note: "前兩個是 Agent 的能力，不是知識來源。"
+    code: {
+      name: "建立文件、圖表和程式碼",
+      sub: "分析資料、畫圖表、產生檔案",
+      what: "讓 Agent 寫 Python 程式並執行，用來分析資料、畫圖表、解數學題，也能產生可下載的檔案。",
+      how: "按 [[知識]] 區右上角的齒輪，在 [[知識設定]] 裡打開 [[建立文件、圖表和程式碼]]。",
+      note: ["程式在隔離的環境裡執行。Agent 會同時顯示結果和它寫的程式碼，程式碼可以複製或下載。", "上傳資料檔時，支援 Word、Excel、PowerPoint、PDF、CSV／TSV 和純文字檔；產生的檔案可以是 Word、Excel、PowerPoint 或 PDF。"],
+      ask: "「用我上傳的銷售表，畫出每月的長條圖和折線圖。」"
+    },
+    image: {
+      name: "建立影像",
+      sub: "依提示產生影像和藝術圖",
+      what: "讓 Agent 依使用者的提示產生圖片，每次產生 4 張，還可以接著下指令修改。",
+      how: "按 [[知識]] 區右上角的齒輪，在 [[知識設定]] 裡打開 [[建立影像]]。",
+      note: ["影像由 Designer 功能產生，可以放大、下載或複製。", "目前在 Agent Builder 的測試窗格還不能產生影像，要發布後再測。", "能不能用，依授權和租用戶設定而定。"],
+      ask: "「畫一張日落海灘的圖，要有棕櫚樹和輕柔的海浪。」"
+    },
+    avoid: {
+      name: "避免使用模型知識",
+      sub: "以你選的來源為主",
+      what: "讓 Agent 以你選的來源為主來回答，適合高度技術的領域。",
+      how: "先在 [[知識]] 區指定好來源，再到 [[知識設定]] 裡打開 [[避免使用模型知識]]。",
+      note: ["畫面上的說明是「使用選取的來源取代 AI 知識」。官方文件的說法較保守：只是優先使用你指定的來源，並不會完全封鎖一般 AI 知識。", "不需要查資料的簡單問題（例如翻譯、算數），仍會用一般 AI 知識回答。找不到相關資料時，Agent 會回覆找不到。", "想更嚴格地管控知識來源，要改用 Copilot Studio。", "重要的題目，請先試問幾題，再分享給別人用。"]
+    }
   },
   tips: {
     k: "先記住",
@@ -963,14 +1093,18 @@ const I18N = {
   hero: {
     eyebrow: "Agent Builder · 知识",
     h1: "让 Agent 先查你指定的数据，再作答",
-    lead: "用 Agent Builder 搭出来的 Agent，回答之前可以先翻一遍你指定的数据。界面上有两种给法：[[添加知识]] 指定来源，[[工作内容]] 整类打开。下面的卡片逐一介绍 8 类来源。",
+    lead: "用 Agent Builder 搭出来的 Agent，回答之前可以先翻一遍你指定的数据。界面上有两种给法：[[添加知识]] 指定来源，[[工作内容]] 整类打开。下面逐一介绍 8 类来源，再讲 [[知识设置]] 里的 4 个开关。",
     cta1: "看 8 类来源",
-    cta2: "先看 3 条提醒"
+    cta2: "看知识设置",
+    cta3: "先看 3 条提醒"
   },
   mock: {
     tabsLabel: "界面",
-    tabs: ["知识", "知识设置"],
+    tabs: ["知识", "添加知识", "知识设置"],
     go: "看说明",
+    addLabel: "添加知识：看选择界面",
+    gearLabel: "打开知识设置",
+    closeLabel: "关闭知识设置，返回知识界面",
     hint: "点一行，跳到对应的说明。",
     cap: "按繁体中文界面重绘的示意画面，文字为翻译，你看到的界面用词可能略有不同。",
     p: {
@@ -981,15 +1115,34 @@ const I18N = {
       spo: "云文件", mail: "Outlook", teams: "Teams", conn: "Copilot 连接器", web: "网络搜索", attach: "附件"
     },
     legend: [
-      ["添加知识", "指定具体的文件、网址或聊天，范围精准。"],
-      ["工作内容", "整类数据用开关打开，旁边标着“搜索全部”。"]
+      ["添加知识", "指定具体的文件、网址或聊天，范围精准。点按钮，看下一个界面。"],
+      ["工作内容", "整类数据用开关打开，旁边标着“搜索全部”。"],
+      ["齿轮", "打开“知识设置”，里面有 4 个开关。"]
     ],
+    add: {
+      search: "粘贴链接或搜索你的数据",
+      chips: ["全部", "文件", "网站", "聊天", "会议"],
+      rows: [
+        { go: "spo", t: "xlsx", n: "Q3 销售报表", p: "personal > you_contoso_com > Documents > Q3 销售报表.xlsx" },
+        { go: "spo", t: "pptx", n: "新品发布演示文稿", p: "personal > you_contoso_com > Documents > 新品发布演示文稿.pptx" },
+        { go: "spo", t: "site", i: "产品", n: "产品生命周期", p: "sites > ProductLifecycle" },
+        { go: "spo", t: "hub", i: "营销", n: "营销中心", p: "" },
+        { go: "teams", t: "ch-a", i: "公告", n: "公告与领导层动态", p: "频道 • 管理团队" },
+        { go: "teams", t: "ch-b", i: "研究", n: "概念与早期研究", p: "频道 • 产品生命周期" }
+      ],
+      legend: [
+        ["搜索框", "粘贴链接，或输入关键词搜索。"],
+        ["两个图标", "回形针上传电脑里的文件，云朵浏览云端文件。"],
+        ["选项卡", "全部、文件、网站、聊天、会议，用来缩小范围。"],
+        ["结果", "点一条就加进知识，可以是文件、网站或 Teams 频道。"]
+      ]
+    },
     d: {
       title: "知识设置",
       intro: "选择 Agent 要使用的数据，以及可以执行的操作。可用的知识和操作因许可证而异。详情请参阅",
       link: "Agent 功能和许可模型",
       items: [
-        ["people", "人员信息", "根据组织架构和个人信息，回答与人员有关的问题。", false],
+        ["people", "人员数据", "根据组织架构和个人信息，回答与人员有关的问题。", false],
         ["code", "创建文档、图表和代码", "分析数据、绘制数学函数图形，以及创建代码片段和 Word、Excel、PowerPoint 文件。", true],
         ["image", "创建图像", "根据用户的提示，生成图像、艺术图等视觉素材。", true],
         ["avoid", "避免使用模型知识", "用所选来源取代 AI 自身的知识，适合高度专业的技术领域。", false]
@@ -999,14 +1152,21 @@ const I18N = {
   sources: {
     k: "8 类来源",
     h: "Agent 能读哪些数据",
-    lead: "点一张卡，查看添加方法、数量上限和注意事项。卡片上的标签，表示使用时需要的许可证。",
+    lead: "点一张卡，查看添加方法、数量上限和注意事项。卡片的框色和标签，就是使用时需要的许可证。",
     legendLabel: "许可证标签说明",
     tiers: {
-      free: ["无需许可证", "没有 Copilot 许可证也能用"],
+      copilot: ["需 Copilot 许可证", "只有持有 Copilot 许可证的人能用"],
       lic: ["许可证或按量计费", "有许可证，或组织开了按量计费"],
-      copilot: ["需 Copilot 许可证", "只有持有 Copilot 许可证的人能用"]
+      free: ["无需许可证", "没有 Copilot 许可证也能用"]
     },
     admin: "需管理员开通",
+    adminHint: "要管理员先开通",
+    box: {
+      copilot: ["需要 Copilot 许可证", "必须有 Microsoft 365 Copilot 许可证，只开通按量计费不能用。"],
+      lic: ["需要许可证", "要有 Microsoft 365 Copilot 许可证，或者组织开通了按量计费（pay-as-you-go）。"],
+      free: ["无需许可证", "没有 Copilot 许可证的人也能用。"],
+      admin: ["需要管理员先开通", "没开通的话，就算有许可证也用不了。"]
+    },
     rows: { how: "怎么添加", limit: "数量上限", note: "注意", ask: "可以这样问" },
     close: "关闭",
     learn: "官方说明",
@@ -1017,7 +1177,7 @@ const I18N = {
       name: "公开网站",
       sub: "官网、法规、产品页",
       what: "让 Agent 去查你指定的公开网页，也可以放开到整个网络。",
-      how: "整个网络：打开 [[网络搜索]] 开关；只用指定网站：点 [[添加知识]]，粘贴网址。",
+      how: "整个网络：打开 [[网络搜索]] 开关；只用指定网站：点 [[添加知识]]，在搜索框粘贴网址。",
       limit: "指定网址最多 4 个；网址路径最多两级，不能带查询参数（?…）。",
       note: ["Agent 通过 Bing 的索引获取网页内容，动态生成或经常更新的页面，内容可能不是最新的。", "管理员可以在整个组织范围内关闭网页搜索。"],
       ask: "“我们官网上的退货政策是怎么写的？”"
@@ -1026,7 +1186,7 @@ const I18N = {
       name: "SharePoint 和 OneDrive",
       sub: "团队文件、制度、手册",
       what: "指定要读的文件、文件夹、网站或列表，也可以整个云端一起找。",
-      how: "整体搜索：打开 [[云文件]] 开关，在你有权访问的 SharePoint 和 OneDrive 内容里找；缩小范围：点 [[添加知识]]，粘贴链接，或者从列表里选文件、文件夹、网站、列表。",
+      how: "整体搜索：打开 [[云文件]] 开关，在你有权访问的 SharePoint 和 OneDrive 内容里找；缩小范围：点 [[添加知识]]，粘贴链接或搜索，也可以点搜索框右侧的云朵图标，浏览文件、文件夹、网站或列表。",
       limit: "指定范围时：SharePoint 最多 100 个文件、1 个列表；OneDrive 最多 50 个文件。",
       note: ["沿用原有的权限和敏感度标签，每个人只能用到自己有权访问的内容。", "刚上传的文件要等几分钟，界面上会显示还在准备中，准备好才会被用上。", "选整个网站不包含网站里的列表，列表要单独选；OneNote 只能选单个页面。"],
       ask: "“请根据人力资源制度文件夹，说明年假怎么申请。”"
@@ -1035,18 +1195,18 @@ const I18N = {
       name: "上传的文件",
       sub: "把文件直接带上，最多 20 个",
       what: "把电脑里的文件直接放进 Agent，成为 Agent 的内嵌内容。",
-      how: "把文件直接拖到 [[知识]] 区域，或者点 [[添加知识]] 上传。只能传文件，不能传文件夹。",
+      how: "把文件直接拖到 [[知识]] 区域的虚线框，或者点 [[添加知识]]，再点搜索框右侧的回形针，从电脑里选文件上传。只能传文件，不能传文件夹。",
       limit: "最多 20 个文件。Word、PDF、PowerPoint、文本文件每个最大 512 MB，Excel 最大 30 MB。",
       note: ["谁能使用这个 Agent，谁就能看到基于文件生成的回答。", "带密码保护的文件不能用。"],
       ask: "“按我上传的新员工手册，入职第一周要做哪些事？”"
     },
     teams: {
       name: "Teams 聊天和会议",
-      sub: "讨论结论、会议转录",
-      what: "让 Agent 从 Teams 的聊天消息和会议内容里找答案。",
-      how: "整体搜索：打开 [[Teams]] 开关，在你有权访问的全部聊天、会议转录和日历里找；缩小范围：点 [[添加知识]]，挑指定的聊天和会议。",
+      sub: "频道、聊天、会议转录",
+      what: "让 Agent 从 Teams 的频道、聊天消息和会议内容里找答案。",
+      how: "整体搜索：打开 [[Teams]] 开关，在你有权访问的全部聊天、频道、会议转录和日历里找；缩小范围：点 [[添加知识]]，到 [[聊天]] 或 [[会议]] 选项卡，挑出指定的频道、群聊或会议。",
       limit: "指定范围时，最多 5 个聊天、5 场会议。",
-      note: ["指定具体的聊天或会议，答案通常更准。", "过往的会议转录太大时，Agent 可能读不全。"],
+      note: ["能指定的聊天包括团队频道、群聊、一对一聊天和会议聊天。", "指定具体的聊天或会议，答案通常更准。", "过往的会议转录太大时，Agent 可能读不全。"],
       ask: "“上周项目群里，大家对排期的结论是什么？”"
     },
     mail: {
@@ -1059,10 +1219,10 @@ const I18N = {
       ask: "“我和这位客户上个月往来的邮件里，有哪些待办事项？”"
     },
     people: {
-      name: "人员信息",
+      name: "人员数据",
       sub: "同事的职位、技能、汇报关系",
       what: "让 Agent 根据组织架构和个人信息，回答与同事有关的问题，比如职位、技能和汇报关系。",
-      how: "点 [[知识]] 区域右上角的齿轮，在 [[知识设置]] 里打开 [[人员信息]]。",
+      how: "点 [[知识]] 区域右上角的齿轮，在 [[知识设置]] 里打开 [[人员数据]]。",
       note: ["只包含个人的公开信息。", "随时可以在 [[知识设置]] 里打开或关闭。"],
       ask: "“公司里谁比较擅长数据分析？”"
     },
@@ -1088,14 +1248,44 @@ const I18N = {
   },
   settings: {
     k: "知识设置",
-    h: "齿轮里的另外 3 个开关",
-    lead: "点 [[知识]] 区域右上角的齿轮，就会打开 [[知识设置]]。“人员信息”已经在上面的来源里，这里再看另外 3 个开关。",
-    cards: {
-      code: ["创建文档、图表和代码", "让 Agent 分析数据、绘制数学函数图形，并生成代码片段和 Word、Excel、PowerPoint 文件。"],
-      image: ["创建图像", "让 Agent 按你的提示生成图像和艺术图。"],
-      avoid: ["避免使用模型知识", "界面上的说明是“用所选来源取代 AI 自身的知识，适合高度专业的技术领域”。官方文档的说法更保守：只是优先使用你指定的来源，并不会完全屏蔽通用的 AI 知识。重要的问题，建议先试问几个，再分享给别人用。"]
+    h: "知识设置：Agent 的 4 个开关",
+    lead: "点 [[知识]] 区域右上角的齿轮，会打开 [[知识设置]] 窗口，决定 Agent 能用哪些数据、能执行哪些操作。可用的选项因许可证而异。点一个开关，看它的说明。",
+    note: "“创建文档、图表和代码”和“创建图像”是 Agent 的能力，不是知识来源。",
+    rows: { how: "怎么打开" },
+    openSource: "看“人员数据”来源卡"
+  },
+  setitems: {
+    people: {
+      name: "人员数据",
+      sub: "组织架构和个人信息",
+      what: "让 Agent 回答与同事有关的问题，比如职位、技能，以及谁向谁汇报。",
+      how: "点 [[知识]] 区域右上角的齿轮，在 [[知识设置]] 里打开 [[人员数据]]。",
+      note: ["只包含个人的公开信息。", "这个开关也是 8 类来源之一，许可证等细节见上面的“人员数据”来源卡。"],
+      ask: "“公司里谁比较擅长数据分析？”"
     },
-    note: "前两个是 Agent 的能力，不是知识来源。"
+    code: {
+      name: "创建文档、图表和代码",
+      sub: "分析数据、画图表、生成文件",
+      what: "让 Agent 编写并运行 Python 代码，用来分析数据、画图表、解数学题，还能生成可下载的文件。",
+      how: "点 [[知识]] 区域右上角的齿轮，在 [[知识设置]] 里打开 [[创建文档、图表和代码]]。",
+      note: ["代码在隔离的环境里运行。Agent 会同时给出运行结果和它写的代码，代码可以复制或下载。", "上传数据文件时，支持 Word、Excel、PowerPoint、PDF、CSV／TSV 和纯文本文件；生成的文件可以是 Word、Excel、PowerPoint 或 PDF。"],
+      ask: "“用我上传的销售表，画出每月的柱状图和折线图。”"
+    },
+    image: {
+      name: "创建图像",
+      sub: "按提示生成图像和艺术图",
+      what: "让 Agent 按用户的提示生成图片，每次生成 4 张，还可以接着下指令修改。",
+      how: "点 [[知识]] 区域右上角的齿轮，在 [[知识设置]] 里打开 [[创建图像]]。",
+      note: ["图像由 Designer 功能生成，可以放大、下载或复制。", "目前在 Agent Builder 的测试窗格里还不能生成图像，要发布之后再测。", "能不能用，取决于许可证和租户设置。"],
+      ask: "“画一张日落海滩的图，要有棕榈树和轻柔的海浪。”"
+    },
+    avoid: {
+      name: "避免使用模型知识",
+      sub: "以你选的来源为主",
+      what: "让 Agent 以你选的来源为主来回答，适合高度专业的技术领域。",
+      how: "先在 [[知识]] 区域指定好来源，再到 [[知识设置]] 里打开 [[避免使用模型知识]]。",
+      note: ["界面上的说明是“用所选来源取代 AI 自身的知识”。官方文档的说法更保守：只是优先使用你指定的来源，并不会完全屏蔽通用的 AI 知识。", "不需要查阅来源的简单问题（比如翻译、算数），仍然会用通用的 AI 知识回答；找不到相关内容时，Agent 会回复找不到。", "想更严格地管控知识来源，需要改用 Copilot Studio。", "重要的问题，建议先试问几个，再分享给别人用。"]
+    }
   },
   tips: {
     k: "先记住",
@@ -1110,7 +1300,7 @@ const I18N = {
   license: {
     k: "许可证",
     h: "谁能用哪些来源",
-    lead: "只有公开网站不需要许可证。其他来源要有 Microsoft 365 Copilot 许可证，或组织开通了按量计费；其中 Teams、Outlook 邮件和人员信息，必须有 Copilot 许可证。",
+    lead: "只有公开网站不需要许可证。其他来源要有 Microsoft 365 Copilot 许可证，或组织开通了按量计费；其中 Teams、Outlook 邮件和人员数据，必须有 Copilot 许可证。",
     summary: "查看完整对照表",
     tableLabel: "不同许可方式下可以使用的知识来源",
     colName: "知识来源",
@@ -1148,14 +1338,18 @@ en: {
   hero: {
     eyebrow: "Agent Builder · Knowledge",
     h1: "Let your agent read your data before it answers",
-    lead: "An agent built in Agent Builder can look things up in the sources you choose before it replies. The screen gives you two ways to do that: [[Add knowledge]] to pick specific sources, or the [[Work content]] switches to turn on a whole category. The cards below cover the eight kinds of sources.",
+    lead: "An agent built in Agent Builder can look things up in the sources you choose before it replies. The screen gives you two ways to do that: [[Add knowledge]] to pick specific sources, or the [[Work content]] switches to turn on a whole category. Below you'll find the eight kinds of sources, then the four switches in [[Knowledge settings]].",
     cta1: "See the 8 sources",
-    cta2: "Read the 3 reminders"
+    cta2: "See Knowledge settings",
+    cta3: "Read the 3 reminders"
   },
   mock: {
     tabsLabel: "Screen",
-    tabs: ["Knowledge", "Knowledge settings"],
+    tabs: ["Knowledge", "Add knowledge", "Knowledge settings"],
     go: "Show details",
+    addLabel: "Add knowledge: see the picker",
+    gearLabel: "Open Knowledge settings",
+    closeLabel: "Close Knowledge settings and return to Knowledge",
     hint: "Select a row to jump to its details.",
     cap: "Redrawn from the Traditional Chinese interface. Labels are translated, so the wording on your screen might differ.",
     p: {
@@ -1166,9 +1360,28 @@ en: {
       spo: "Cloud files", mail: "Outlook", teams: "Teams", conn: "Copilot connectors", web: "Web search", attach: "Attachments"
     },
     legend: [
-      ["Add knowledge", "Pick specific files, URLs or chats for a precise scope."],
-      ["Work content", "Turn on a whole category with a switch, marked “Search all”."]
+      ["Add knowledge", "Pick specific files, URLs or chats for a precise scope. Select the button to see the next screen."],
+      ["Work content", "Turn on a whole category with a switch, marked “Search all”."],
+      ["Gear", "Opens Knowledge settings, which has 4 switches."]
     ],
+    add: {
+      search: "Paste a link or search your data",
+      chips: ["All", "Files", "Sites", "Chats", "Meetings"],
+      rows: [
+        { go: "spo", t: "xlsx", n: "Q3 sales report", p: "personal > you_contoso_com > Documents > Q3 sales report.xlsx" },
+        { go: "spo", t: "pptx", n: "Product launch deck", p: "personal > you_contoso_com > Documents > Product launch deck.pptx" },
+        { go: "spo", t: "site", i: "PL", n: "Product lifecycle", p: "sites > ProductLifecycle" },
+        { go: "spo", t: "hub", i: "MK", n: "Marketing hub", p: "" },
+        { go: "teams", t: "ch-a", i: "AN", n: "Announcements and leadership updates", p: "Channel • Leadership team" },
+        { go: "teams", t: "ch-b", i: "CR", n: "Concept and early research", p: "Channel • Product lifecycle" }
+      ],
+      legend: [
+        ["Search box", "Paste a link, or type keywords to search."],
+        ["Two icons", "The paperclip uploads files from your computer; the cloud browses your cloud files."],
+        ["Tabs", "All, Files, Sites, Chats and Meetings narrow the list down."],
+        ["Results", "Select one to add it as knowledge. It can be a file, a site or a Teams channel."]
+      ]
+    },
     d: {
       title: "Knowledge settings",
       intro: "Choose the data the agent uses and the actions it can take. Available knowledge and actions depend on your license. For details, see",
@@ -1184,14 +1397,21 @@ en: {
   sources: {
     k: "8 sources",
     h: "What an agent can read",
-    lead: "Select a card to see how to add it, its limits and what to watch for. The tag on each card is the license it needs.",
+    lead: "Select a card to see how to add it, its limits and what to watch for. The frame color and tag on each card show the license it needs.",
     legendLabel: "What the license tags mean",
     tiers: {
-      free: ["No license needed", "Works without a Copilot license"],
+      copilot: ["Copilot license required", "Only for people with a Copilot license"],
       lic: ["License or pay-as-you-go", "With a license, or when your org turns on pay-as-you-go"],
-      copilot: ["Copilot license required", "Only for people with a Copilot license"]
+      free: ["No license needed", "Works without a Copilot license"]
     },
     admin: "Admin must enable",
+    adminHint: "An admin has to switch it on first",
+    box: {
+      copilot: ["Copilot license required", "Needs a Microsoft 365 Copilot license. Usage-based billing alone isn't enough."],
+      lic: ["License needed", "Needs a Microsoft 365 Copilot license, or usage-based billing (pay-as-you-go) turned on by your organization."],
+      free: ["No license needed", "Works without a Copilot license."],
+      admin: ["An admin must enable it first", "Until then it can't be used, even with a license."]
+    },
     rows: { how: "How to add", limit: "Limit", note: "Good to know", ask: "Try asking" },
     close: "Close",
     learn: "Official docs",
@@ -1202,7 +1422,7 @@ en: {
       name: "Public websites",
       sub: "Company sites, regulations, product pages",
       what: "Let the agent look up public web pages you name, or open it up to the whole web.",
-      how: "Whole web: turn on the [[Web search]] switch. Only specific sites: select [[Add knowledge]] and paste the URL.",
+      how: "Whole web: turn on the [[Web search]] switch. Only specific sites: select [[Add knowledge]] and paste the URL into the search box.",
       limit: "Up to 4 specific URLs. A URL can go two levels deep and can't have query parameters.",
       note: ["The agent gets page content through the Bing index, so pages that are generated dynamically or change often might not be up to date.", "Admins can turn off web search for the whole organization."],
       ask: "“What does our website say about the return policy?”"
@@ -1211,7 +1431,7 @@ en: {
       name: "SharePoint and OneDrive",
       sub: "Team files, policies, handbooks",
       what: "Point the agent at specific files, folders, sites or lists, or let it search all your cloud files.",
-      how: "Everything you can access: turn on [[Cloud files]] to search your SharePoint and OneDrive content. To narrow it down: select [[Add knowledge]], paste a link, or pick files, folders, sites or lists.",
+      how: "Everything you can access: turn on [[Cloud files]] to search your SharePoint and OneDrive content. To narrow it down: select [[Add knowledge]], then paste a link or search; or select the cloud icon next to the search box to browse files, folders, sites or lists.",
       limit: "When you pick specific ones: SharePoint up to 100 files and 1 list; OneDrive up to 50 files.",
       note: ["Existing permissions and sensitivity labels still apply, so each person only gets content they can already access.", "New files take a few minutes and show as still preparing; the agent uses them once they're ready.", "Selecting a whole site doesn't include the lists in it; pick a list separately. For OneNote you can only pick single pages."],
       ask: "“Based on the HR policies folder, how do I apply for annual leave?”"
@@ -1220,18 +1440,18 @@ en: {
       name: "Uploaded files",
       sub: "Bring files along, up to 20",
       what: "Put files from your device straight into the agent as embedded content.",
-      how: "Drag files onto the [[Knowledge]] area, or select [[Add knowledge]] to upload. Files only, not folders.",
+      how: "Drag files onto the dashed box in the [[Knowledge]] area, or select [[Add knowledge]] and then the paperclip next to the search box to upload from your computer. Files only, not folders.",
       limit: "Up to 20 files. Word, PDF, PowerPoint and text files can be up to 512 MB each; Excel files up to 30 MB.",
       note: ["Anyone who can use the agent can see answers based on the file.", "Password-protected files can't be used."],
       ask: "“Using the onboarding guide I uploaded, what should I do in my first week?”"
     },
     teams: {
       name: "Teams chats and meetings",
-      sub: "Discussions and meeting transcripts",
-      what: "Let the agent answer from Teams chat messages and meeting content.",
-      how: "Everything you can access: turn on [[Teams]] to search all your chats, meeting transcripts and calendar. To narrow it down: select [[Add knowledge]] and pick specific chats and meetings.",
+      sub: "Channels, chats, meeting transcripts",
+      what: "Let the agent answer from Teams channels, chat messages and meeting content.",
+      how: "Everything you can access: turn on [[Teams]] to search all your chats, channels, meeting transcripts and calendar. To narrow it down: select [[Add knowledge]], go to the [[Chats]] or [[Meetings]] tab, and pick specific channels, group chats or meetings.",
       limit: "When you pick specific ones: up to 5 chats and 5 meetings.",
-      note: ["Pointing at specific chats or meetings usually gives more accurate answers.", "If past transcripts are very large, the agent might not be able to read all of them."],
+      note: ["You can pick team channels, group chats, 1:1 chats and meeting chats.", "Pointing at specific chats or meetings usually gives more accurate answers.", "If past transcripts are very large, the agent might not be able to read all of them."],
       ask: "“What did the project group agree on about the schedule last week?”"
     },
     mail: {
@@ -1273,14 +1493,44 @@ en: {
   },
   settings: {
     k: "Knowledge settings",
-    h: "3 more switches under the gear",
-    lead: "Select the gear at the top right of the [[Knowledge]] area to open [[Knowledge settings]]. People data is already one of the sources above; these are the other three switches.",
-    cards: {
-      code: ["Create documents, charts and code", "Lets the agent analyze data, plot math equations, and create code snippets and Word, Excel and PowerPoint files."],
-      image: ["Create images", "Lets the agent create images and art from your prompts."],
-      avoid: ["Avoid using model knowledge", "The screen describes it as: use the selected sources instead of AI knowledge, suited to highly technical domains. The official docs are more cautious: the agent prioritizes your sources, but general AI knowledge isn't fully blocked. For important questions, try a few first, then share the agent."]
+    h: "Knowledge settings: the agent's 4 switches",
+    lead: "Select the gear at the top right of the [[Knowledge]] area to open the [[Knowledge settings]] window. It decides which data the agent can use and what it can do. What's available depends on your license. Select a switch to see what it does.",
+    note: "“Create documents, charts and code” and “Create images” are agent capabilities, not knowledge sources.",
+    rows: { how: "How to turn on" },
+    openSource: "See the People data source card"
+  },
+  setitems: {
+    people: {
+      name: "People data",
+      sub: "Org chart and profile data",
+      what: "Lets the agent answer questions about colleagues, such as job title, skills and who reports to whom.",
+      how: "Select the gear at the top right of the [[Knowledge]] area, then turn on [[People data]] in [[Knowledge settings]].",
+      note: ["Only public information about people is included.", "This switch is also one of the 8 sources; the license and other details are on the People data card above."],
+      ask: "“Who in the company is good at data analysis?”"
     },
-    note: "The first two are agent capabilities, not knowledge sources."
+    code: {
+      name: "Create documents, charts and code",
+      sub: "Analyze data, draw charts, create files",
+      what: "Lets the agent write and run Python code to analyze data, draw charts and solve math problems, and create files you can download.",
+      how: "Select the gear at the top right of the [[Knowledge]] area, then turn on [[Create documents, charts and code]] in [[Knowledge settings]].",
+      note: ["The code runs in a sandbox. The agent shows the result together with the code it wrote, and the code can be copied or downloaded.", "You can upload Word, Excel, PowerPoint, PDF, CSV/TSV and text files to analyze; the files it creates can be Word, Excel, PowerPoint or PDF."],
+      ask: "“Create a bar chart and line graph of my uploaded sales data.”"
+    },
+    image: {
+      name: "Create images",
+      sub: "Images and art from your prompts",
+      what: "Lets the agent create images from the user's prompt, four at a time, and change them with follow-up prompts.",
+      how: "Select the gear at the top right of the [[Knowledge]] area, then turn on [[Create images]] in [[Knowledge settings]].",
+      note: ["Images are made with the Designer feature and can be enlarged, downloaded or copied.", "Right now image creation doesn't work in the Agent Builder test pane; test it after you publish the agent.", "Whether it's available depends on your license and tenant settings."],
+      ask: "“Create an image of a serene beach at sunset with palm trees and gentle waves.”"
+    },
+    avoid: {
+      name: "Avoid using model knowledge",
+      sub: "Lean on the sources you chose",
+      what: "Makes the agent lean on the sources you chose when it answers, suited to highly technical domains.",
+      how: "Pick your sources in the [[Knowledge]] area first, then turn on [[Avoid using model knowledge]] in [[Knowledge settings]].",
+      note: ["The screen describes it as: use the selected sources instead of AI knowledge. The official docs are more cautious: the agent prioritizes your sources, but general AI knowledge isn't fully blocked.", "Simple questions that don't need a lookup, such as translating a phrase or doing arithmetic, are still answered from general AI knowledge. If nothing relevant is found, the agent says it can't find the information.", "For stricter control over knowledge sources, use Copilot Studio.", "For important questions, try a few first, then share the agent."]
+    }
   },
   tips: {
     k: "Remember",
@@ -1333,8 +1583,7 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;"
 const rich = s => esc(s).replace(/\[\[(.+?)\]\]/g, '<b class="ui">$1</b>');
 const LOC = { "zh-Hant": "zh-tw", "zh-Hans": "zh-cn", en: "en-us" };
 const LEARN = l => "https://learn.microsoft.com/" + LOC[l] + "/microsoft-365/copilot/extensibility/";
-const ITEMS = DATA.items;
-const KEYS = ITEMS.map(i => i.key);
+const ADD = "agent-builder-add-knowledge";
 const smooth = () => (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
 
 /* ---------- small inline icons, drawn here so the file stays self-contained ---------- */
@@ -1359,9 +1608,18 @@ const IC = {
   clip: svg('<path d="M19.5 11.5 11.8 19.2a4.8 4.8 0 0 1-6.8-6.8l8-8a3.2 3.2 0 0 1 4.5 4.5l-8 8a1.6 1.6 0 0 1-2.3-2.3l7-7"/>'),
   cloud: '<svg class="m-svg" viewBox="0 0 24 24" aria-hidden="true" style="fill:#2b7fd8;stroke:none"><path d="M7.4 19a4.4 4.4 0 0 1-.9-8.7A5.6 5.6 0 0 1 17.2 9.7 4.7 4.7 0 0 1 17 19z"/></svg>',
   mail: '<svg class="m-svg" viewBox="0 0 24 24" aria-hidden="true" style="stroke:none"><rect x="2.5" y="4" width="19" height="16" rx="3.5" fill="#1b6fc9"/><path d="M4 8.2 12 13.6l8-5.4" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  teams: '<svg class="m-svg" viewBox="0 0 24 24" aria-hidden="true" style="stroke:none"><rect x="3" y="3" width="18" height="18" rx="4.5" fill="#5b5fc7"/><path d="M8 9.2h8M12 9.2v7.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg>'
+  teams: '<svg class="m-svg" viewBox="0 0 24 24" aria-hidden="true" style="stroke:none"><rect x="3" y="3" width="18" height="18" rx="4.5" fill="#5b5fc7"/><path d="M8 9.2h8M12 9.2v7.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg>',
+  cloudLine: svg('<path d="M7.4 19a4.4 4.4 0 0 1-.9-8.7A5.6 5.6 0 0 1 17.2 9.7 4.7 4.7 0 0 1 17 19z"/><path d="M8.5 15.2c1.8-1.6 5.2-1.6 7 0"/>')
 };
+// file-type icons of the picker rows (Excel, PowerPoint)
+const FT = {
+  xlsx: '<svg class="m-fts" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="6" fill="#1d6f42"/><path d="m11 11 10 10m0-10L11 21" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>',
+  pptx: '<svg class="m-fts" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="6" fill="#c43e1c"/><path d="M12 22V10h5a4 4 0 0 1 0 8h-5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+const TABS = ["panel", "add", "dialog"];
 const INFO = '<i class="m-info" aria-hidden="true">i</i>';
+const CHEV = '<svg class="k-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>';
+const X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>';
 
 let lang = (window.PocLang && window.PocLang.code) || "zh-Hant";
 if (!I18N[lang]) lang = "zh-Hant";
@@ -1373,14 +1631,22 @@ const get = (path, l = lang) => {
 };
 const t = path => get(path);
 
-// the source whose panel is open and the screen tab that is showing; both survive a language switch
+/* two groups use the same tile-and-card pattern: the 8 sources and the 4 switches of Knowledge settings */
+const GROUPS = {
+  src: { items: DATA.items, grid: $("#kgrid"), pid: "kpanel", tile: "tile-", title: "kp-title", text: "items.", hash: "s" },
+  set: { items: DATA.settings, grid: $("#sgrid"), pid: "spanel", tile: "stile-", title: "sp-title", text: "setitems.", hash: "t" }
+};
+Object.entries(GROUPS).forEach(([name, g]) => {
+  g.name = name;
+  g.panel = document.createElement("section");
+  g.panel.id = g.pid;
+  g.panel.className = "kpanel";
+  g.panel.hidden = true;
+  g.panel.setAttribute("role", "region");
+});
+// the open card (only one on the page) and the screen tab that is showing; both survive a language switch
 const state = { open: null, tab: "panel" };
-const grid = $("#kgrid");
-const panel = document.createElement("section");
-panel.id = "kpanel";
-panel.className = "kpanel";
-panel.hidden = true;
-panel.setAttribute("role", "region");
+const isOpen = (g, key) => !!state.open && state.open.g === g && state.open.key === key;
 
 function applyStatic() {
   document.title = t("title");
@@ -1397,7 +1663,8 @@ function renderTheme() {
 }
 
 const tierBadge = tier => `<span class="badge t-${tier}">${esc(t("sources.tiers." + tier)[0])}</span>`;
-const tags = it => tierBadge(it.tier) + (it.admin ? `<span class="badge admin">${esc(t("sources.admin"))}</span>` : "");
+const adminBadge = () => `<span class="badge admin">${esc(t("sources.admin"))}</span>`;
+const tags = it => (it.tier ? tierBadge(it.tier) : "") + (it.admin ? adminBadge() : "");
 
 /* ---------- the picture: the real Knowledge section and its settings dialog, redrawn ---------- */
 function renderMock() {
@@ -1413,33 +1680,49 @@ function renderMock() {
     (opts.chev ? IC.chev : "") +
     `<span class="sw${opts.on === false ? "" : " on"}" aria-hidden="true"></span></button></li>`;
   const tabs = `<div class="mtabs" role="tablist" aria-label="${esc(m.tabsLabel)}">` +
-    [["panel", m.tabs[0]], ["dialog", m.tabs[1]]].map(([k, label]) =>
-      `<button type="button" role="tab" id="mt-${k}" data-tab="${k}" aria-selected="${state.tab === k}" aria-controls="mp-${k}" tabindex="${state.tab === k ? 0 : -1}">${esc(label)}</button>`).join("") + `</div>`;
-
+    TABS.map((k, i) =>
+      `<button type="button" role="tab" id="mt-${k}" data-tab="${k}" aria-selected="${state.tab === k}" aria-controls="mp-${k}" tabindex="${state.tab === k ? 0 : -1}">${esc(m.tabs[i])}</button>`).join("") + `</div>`;
   const off = k => (state.tab === k ? "" : " is-off");
+  const legend = items => `<ul class="mlegend">${items.map(([n, text], i) => `<li><span class="m-ann" aria-hidden="true">${i + 1}</span><span><b>${esc(n)}</b>${colon}${esc(text)}</span></li>`).join("")}</ul>`;
+
   const panelA = `<div class="mpanel${off("panel")}" role="tabpanel" id="mp-panel" data-tab="panel" aria-labelledby="mt-panel"><div class="mscreen">` +
     `<div class="m-head"><p class="m-title">${esc(p.title)} ${INFO}</p>` +
-    `<div class="m-tools" aria-hidden="true"><span class="m-ico-btn">${IC.refresh}</span><span class="m-pill">${IC.quote}${esc(p.improve)}</span><span class="m-ico-btn ring">${IC.gear}</span></div></div>` +
+    `<div class="m-tools"><span class="m-ico-btn" aria-hidden="true">${IC.refresh}</span><span class="m-pill" aria-hidden="true">${IC.quote}${esc(p.improve)}</span>` +
+    `<button class="m-ico-btn ring m-gear" type="button" data-tab-go="dialog" aria-label="${esc(m.gearLabel)}">${IC.gear}<span class="m-ann" aria-hidden="true">3</span></button></div></div>` +
     `<div class="m-drop"><span class="m-ann" aria-hidden="true">1</span><p>${esc(p.drop)}</p>` +
-    `<div class="m-drop-row"><span class="m-add">${IC.plus}${esc(p.add)}</span><span>${esc(p.dropHint)}</span></div></div>` +
+    `<div class="m-drop-row"><button class="m-add" type="button" data-tab-go="add" aria-label="${esc(m.addLabel)}">${IC.plus}${esc(p.add)}</button><span>${esc(p.dropHint)}</span></div></div>` +
     `<p class="m-sec"><span class="m-ann" aria-hidden="true">2</span>${esc(p.work)} ${INFO}</p>` +
     `<ul class="m-rows">${row("spo", IC.cloud)}${row("mail", IC.mail)}${row("teams", IC.teams)}${row("conn", IC.plug, { chev: true, all: false, on: false })}</ul>` +
     `<div class="m-rule"></div><ul class="m-rows">${row("web", IC.globe)}</ul><div class="m-rule"></div>` +
     `<p class="m-title m-attach">${IC.clip}${esc(p.attach)} ${INFO}</p></div>` +
-    `<ul class="mlegend">${m.legend.map(([n, text], i) => `<li><span class="m-ann" aria-hidden="true">${i + 1}</span><span><b>${esc(n)}</b>${colon}${esc(text)}</span></li>`).join("")}</ul>` +
+    legend(m.legend) +
+    `</div>`;
+
+  // the picker that "Add knowledge" opens: search or paste, two icons, five tabs, a list of results
+  const A = m.add;
+  const rowIcon = r => (FT[r.t] ? `<span class="m-av m-ft">${FT[r.t]}</span>` : `<span class="m-av m-${r.t}" aria-hidden="true">${esc(r.i)}</span>`);
+  const result = (r, i) => `<li><button class="mrow m-result" type="button" data-go="${r.go}" aria-label="${esc(r.n + ": " + m.go)}">` +
+    rowIcon(r) + `<span class="tx"><b>${esc(r.n)}</b>${r.p ? `<small>${esc(r.p)}</small>` : ""}</span>` +
+    (i === 0 ? '<span class="m-ann" aria-hidden="true">4</span>' : "") + `</button></li>`;
+  const panelC = `<div class="mpanel${off("add")}" role="tabpanel" id="mp-add" data-tab="add" aria-labelledby="mt-add"><div class="mscreen m-pop">` +
+    `<div class="m-search"><div class="m-input" aria-hidden="true"><span class="m-ann">1</span><span>${esc(A.search)}</span></div>` +
+    `<div class="m-icons" aria-hidden="true"><span class="m-ann">2</span><span class="m-ico-btn">${IC.clip}</span><span class="m-ico-btn">${IC.cloudLine}</span></div></div>` +
+    `<div class="m-chips" aria-hidden="true">${A.chips.map((c, i) => `<span${i === 0 ? ' class="is-on"' : ""}>${esc(c)}</span>`).join("")}<span class="m-ann">3</span></div>` +
+    `<ul class="m-results">${A.rows.map(result).join("")}</ul></div>` +
+    legend(A.legend) +
     `</div>`;
 
   const link = LEARN(lang) + "prerequisites#agent-capabilities-and-licensing-models";
   const panelB = `<div class="mpanel${off("dialog")}" role="tabpanel" id="mp-dialog" data-tab="dialog" aria-labelledby="mt-dialog"><div class="mscreen m-dialog">` +
-    `<div class="m-head"><p class="m-title">${esc(d.title)}</p><span class="m-x" aria-hidden="true">${IC.x}</span></div>` +
+    `<div class="m-head"><p class="m-title">${esc(d.title)}</p><button class="m-x" type="button" data-tab-go="panel" aria-label="${esc(m.closeLabel)}">${IC.x}</button></div>` +
     `<p class="m-intro">${esc(d.intro)} <a href="${esc(link)}" target="_blank" rel="noopener noreferrer">${esc(d.link)}</a>${stop}</p>` +
     `<ul class="m-cards">${d.items.map(([key, name, desc, on]) =>
-      `<li><button class="m-card" type="button" ${key === "people" ? `data-go="people"` : `data-jump="set-${key}"`} aria-label="${esc(name + ": " + m.go)}">` +
+      `<li><button class="m-card" type="button" data-go-set="${key}" aria-label="${esc(name + ": " + m.go)}">` +
       `<span class="tx"><b>${esc(name)}</b><small>${esc(desc)}</small></span><span class="sw${on ? " on" : ""}" aria-hidden="true"></span></button></li>`).join("")}</ul>` +
     `</div></div>`;
 
-  // both panels share one grid cell, so the figure is always as tall as the taller one and nothing below it moves
-  $("#kmock").innerHTML = tabs + `<div class="mstack">${panelA}${panelB}</div>` + `<figcaption class="kmock-cap">${esc(m.hint)}${lang === "en" ? " " : ""}${esc(m.cap)}</figcaption>`;
+  // the three screens share one grid cell, so the figure is always as tall as the tallest one and nothing below it moves
+  $("#kmock").innerHTML = tabs + `<div class="mstack">${panelA}${panelC}${panelB}</div>` + `<figcaption class="kmock-cap">${esc(m.hint)}${lang === "en" ? " " : ""}${esc(m.cap)}</figcaption>`;
 }
 
 function setTab(k, focus) {
@@ -1449,94 +1732,110 @@ function setTab(k, focus) {
   if (focus) $("#mt-" + k).focus();
 }
 
-/* ---------- the eight tiles and the panel that opens under the tapped row ---------- */
-function renderLegend() {
-  $("#legend").innerHTML = ["free", "lic", "copilot"].map(k =>
-    `<li>${tierBadge(k)}<span>${esc(t("sources.tiers." + k)[1])}</span></li>`).join("");
+// like a real dialog: opening it puts the focus inside (the picker has no button of its own, so the focus goes to its tab),
+// closing returns it to the button that opened it. Keyboard only, so a mouse click leaves no focus ring
+function afterSwitch(k) {
+  const el = k === "dialog" ? $("#mp-dialog .m-x") : k === "add" ? $("#mt-add") : $("#mp-panel .m-gear");
+  if (el) el.focus();
 }
 
-const CHEV = '<svg class="k-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>';
-const X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>';
+/* ---------- the tiles and the card that opens under the tapped row ---------- */
+function renderLegend() {
+  $("#legend").innerHTML = ["copilot", "lic", "free"].map(k =>
+    `<li>${tierBadge(k)}<span>${esc(t("sources.tiers." + k)[1])}</span></li>`).join("") +
+    `<li>${adminBadge()}<span>${esc(t("sources.adminHint"))}</span></li>`;
+}
 
-function renderGrid() {
-  grid.innerHTML = ITEMS.map(it => {
-    const x = get("items." + it.key);
-    return `<button class="ktile" type="button" id="tile-${it.key}" data-key="${it.key}" aria-expanded="false" aria-controls="kpanel">` +
+function renderGrid(name) {
+  const g = GROUPS[name];
+  g.grid.innerHTML = g.items.map(it => {
+    const x = get(g.text + it.key);
+    return `<button class="ktile" type="button" id="${g.tile}${it.key}" data-g="${name}" data-key="${it.key}"${it.tier ? ` data-tier="${it.tier}"` : ""}${it.admin ? ' data-admin="1"' : ""} aria-expanded="false" aria-controls="${g.pid}">` +
       `<span class="k-ico" aria-hidden="true">${it.ico}</span>${CHEV}` +
       `<span class="k-text"><span class="k-name">${esc(x.name)}</span><span class="k-sub">${esc(x.sub)}</span></span>` +
       `<span class="k-tags">${tags(it)}</span></button>`;
   }).join("");
-  grid.appendChild(panel);
-  syncPanel();
+  g.grid.appendChild(g.panel);
+  syncPanel(name);
 }
 
-function learnHref(it) { return LEARN(lang) + "agent-builder-add-knowledge#" + it.anchor; }
+const KEY_ICON = { free: "✓", lic: "🔑", copilot: "🔑", admin: "🛠️" };
+const callout = (kind, [head, text]) =>
+  `<div class="kp-license is-${kind}" role="note"><span class="kl-ico" aria-hidden="true">${KEY_ICON[kind]}</span><b>${esc(head)}</b><span>${esc(text)}</span></div>`;
 
-function renderPanel() {
-  const it = ITEMS.find(i => i.key === state.open);
-  if (!it) return;
-  const x = get("items." + it.key);
-  const r = get("sources.rows");
-  const facts = [[r.how, `<p>${rich(x.how)}</p>`]];
-  if (x.limit) facts.push([r.limit, `<p>${rich(x.limit)}</p>`]);
-  if (x.note && x.note.length) facts.push([r.note, `<ul>${x.note.map(n => `<li>${rich(n)}</li>`).join("")}</ul>`]);
-  facts.push([r.ask, `<p class="ask-q">${esc(x.ask)}</p>`]);
-  const learn = t(lang === "zh-Hant" && DATA.twEnglish ? "sources.learnEn" : "sources.learn");
+function learnHref(it) { return LEARN(lang) + (it.page || ADD) + (it.anchor ? "#" + it.anchor : ""); }
+
+function renderPanel(name) {
+  const g = GROUPS[name];
+  const it = g.items.find(i => i.key === state.open.key);
+  const x = get(g.text + it.key);
+  const rows = Object.assign({}, get("sources.rows"), name === "set" ? get("settings.rows") : {});
+  const box = get("sources.box");
+  const facts = [[rows.how, `<p>${rich(x.how)}</p>`]];
+  if (x.limit) facts.push([rows.limit, `<p>${rich(x.limit)}</p>`]);
+  if (x.note && x.note.length) facts.push([rows.note, `<ul>${x.note.map(n => `<li>${rich(n)}</li>`).join("")}</ul>`]);
+  if (x.ask) facts.push([rows.ask, `<p class="ask-q">${esc(x.ask)}</p>`]);
+  const learn = t(lang === "zh-Hant" && DATA.twEnglish[it.page || ADD] ? "sources.learnEn" : "sources.learn");
   const extra = (x.links || []).map((label, i) =>
     `<a class="btn secondary small" href="${i === 0 ? "../CopilotConnectors/" : "../CopilotConnectors/intro.html"}">${esc(label)}</a>`).join("");
-  panel.setAttribute("aria-labelledby", "kp-title");
-  panel.innerHTML =
-    `<div class="kp-head"><span class="k-ico" aria-hidden="true">${it.ico}</span><h3 id="kp-title">${esc(x.name)}</h3><span class="kp-tags">${tags(it)}</span>` +
+  const srcBtn = it.sourceKey ? `<button class="btn secondary small" type="button" data-open-src="${esc(it.sourceKey)}">${esc(get("settings.openSource"))}</button>` : "";
+  g.panel.dataset.tier = it.tier || "";
+  g.panel.setAttribute("aria-labelledby", g.title);
+  g.panel.innerHTML =
+    `<div class="kp-head"><span class="k-ico" aria-hidden="true">${it.ico}</span><h3 id="${g.title}">${esc(x.name)}</h3>` +
     `<button class="kp-close" type="button" aria-label="${esc(t("sources.close"))}">${X}</button></div>` +
+    (it.tier ? callout(it.tier, box[it.tier]) : "") + (it.admin ? callout("admin", box.admin) : "") +
     `<p class="kp-what">${rich(x.what)}</p>` +
     `<dl class="kfacts">${facts.map(([k, v]) => `<div class="kf"><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join("")}</dl>` +
-    `<div class="kp-links">${extra}<a class="btn secondary small" href="${esc(learnHref(it))}" target="_blank" rel="noopener noreferrer">${esc(learn)} ↗</a></div>`;
+    `<div class="kp-links">${srcBtn}${extra}<a class="btn secondary small" href="${esc(learnHref(it))}" target="_blank" rel="noopener noreferrer">${esc(learn)} ↗</a></div>`;
 }
 
-// the panel sits right after the last tile of the row that holds the open tile
-function syncPanel() {
-  const tiles = $$(".ktile", grid);
-  tiles.forEach(b => b.setAttribute("aria-expanded", String(b.dataset.key === state.open)));
-  const i = tiles.findIndex(b => b.dataset.key === state.open);
-  if (i < 0) { panel.hidden = true; return; }
-  const cols = Math.max(1, getComputedStyle(grid).gridTemplateColumns.split(" ").length);
+// the card sits right after the last tile of the row that holds the open tile
+function syncPanel(name) {
+  const g = GROUPS[name];
+  const tiles = $$(".ktile", g.grid);
+  const open = state.open && state.open.g === name ? state.open.key : null;
+  tiles.forEach(b => b.setAttribute("aria-expanded", String(b.dataset.key === open)));
+  const i = tiles.findIndex(b => b.dataset.key === open);
+  if (i < 0) { g.panel.hidden = true; return; }
+  const cols = Math.max(1, getComputedStyle(g.grid).gridTemplateColumns.split(" ").length);
   const end = Math.min((Math.floor(i / cols) + 1) * cols, tiles.length) - 1;
-  // moving a node restarts its CSS animation, so only move the panel when its row changed
-  if (panel.previousElementSibling !== tiles[end]) tiles[end].after(panel);
-  renderPanel();
-  panel.hidden = false;
+  // moving a node needlessly would redraw it, so only move the card when its row changed
+  if (g.panel.previousElementSibling !== tiles[end]) tiles[end].after(g.panel);
+  renderPanel(name);
+  g.panel.hidden = false;
 }
 
-function setHash(key) {
-  try { history.replaceState(null, "", key ? "#s-" + key : location.pathname + location.search); } catch (e) { /* file:// or sandboxed */ }
+function setHash(name, key) {
+  try { history.replaceState(null, "", key ? "#" + GROUPS[name].hash + "-" + key : location.pathname + location.search); } catch (e) { /* file:// or sandboxed */ }
 }
 
-function openSource(key, opts = {}) {
-  state.open = key;
-  syncPanel();
-  setHash(key);
-  if (opts.align === "tile") $("#tile-" + key).scrollIntoView({ block: "start", behavior: smooth() });
-  else if (opts.scroll !== false) panel.scrollIntoView({ block: "nearest", behavior: smooth() });
+function openItem(name, key, opts = {}) {
+  const prev = state.open;
+  const keep = opts.keep;
+  const top0 = keep ? keep.getBoundingClientRect().top : 0;
+  state.open = { g: name, key };
+  if (prev && prev.g !== name) syncPanel(prev.g);
+  syncPanel(name);
+  setHash(name, key);
+  // a card that closed above the tapped tile would drag the tile up the screen: put it back before anything scrolls
+  if (keep) {
+    const d = keep.getBoundingClientRect().top - top0;
+    if (Math.abs(d) > 1) window.scrollBy({ top: d, behavior: "instant" });
+  }
+  if (opts.align === "tile") $("#" + GROUPS[name].tile + key).scrollIntoView({ block: "start", behavior: smooth() });
+  else if (opts.scroll !== false) GROUPS[name].panel.scrollIntoView({ block: "nearest", behavior: smooth() });
 }
 
-function closeSource(focusTile) {
-  const key = state.open;
+function closeItem(focusTile) {
+  const prev = state.open;
   state.open = null;
-  syncPanel();
-  setHash(null);
-  if (focusTile && key) { const b = $("#tile-" + key); if (b) b.focus(); }
+  if (prev) syncPanel(prev.g);
+  setHash();
+  if (focusTile && prev) { const b = $("#" + GROUPS[prev.g].tile + prev.key); if (b) b.focus(); }
 }
 
 /* ---------- the rest of the page ---------- */
-function renderSettings() {
-  const S = get("settings");
-  $("#setList").innerHTML = DATA.settings.map(c => {
-    const [name, p] = S.cards[c.key];
-    return `<article class="card tip" id="set-${c.key}"><span class="ico" aria-hidden="true">${c.ico}</span><h3>${esc(name)}</h3>` +
-      (c.tier ? `<p class="set-tag">${tierBadge(c.tier)}</p>` : "") + `<p>${rich(p)}</p></article>`;
-  }).join("");
-}
-
 function renderTips() {
   $("#tipList").innerHTML = get("tips.cards").map(c =>
     `<article class="card tip"><span class="ico" aria-hidden="true">${c.ico}</span><h3>${esc(c.h)}</h3><p>${rich(c.p)}</p></article>`).join("");
@@ -1548,9 +1847,9 @@ function renderLicense() {
     (ok ? `<span class="yes" aria-hidden="true">✓</span><span class="sr-only">${esc(L.yes)}</span>`
         : `<span class="no" aria-hidden="true">—</span><span class="sr-only">${esc(L.no)}</span>`) + `</div>`;
   const head = `<div class="lic-row lic-head" role="row"><div role="columnheader">${esc(L.colName)}</div>${L.cols.map(c => `<div role="columnheader">${esc(c)}</div>`).join("")}</div>`;
-  const rows = ITEMS.map(it => {
+  const rows = DATA.items.map(it => {
     const cells = DATA.license[it.key];
-    return `<div class="lic-row" role="row"><div role="rowheader"><b>${esc(get("items." + it.key + ".name"))}</b></div>${cells.map((ok, i) => cell(ok, L.cols[i])).join("")}</div>`;
+    return `<div class="lic-row" role="row" data-tier="${it.tier}"><div role="rowheader"><b>${esc(get("items." + it.key + ".name"))}</b></div>${cells.map((ok, i) => cell(ok, L.cols[i])).join("")}</div>`;
   }).join("");
   $("#licBody").innerHTML =
     `<div class="card lic" role="table" aria-label="${esc(L.tableLabel)}">${head}${rows}</div>` +
@@ -1562,7 +1861,7 @@ function renderNext() {
   $("#nextLinks").innerHTML =
     `<a class="btn secondary" href="${esc(DATA.agentMap)}" target="_blank" rel="noopener noreferrer">${esc(n.map)} ↗</a>` +
     `<a class="btn secondary" href="../CopilotConnectors/">${esc(n.conn)}</a>` +
-    `<a class="btn secondary" href="${esc(LEARN(lang) + "agent-builder-add-knowledge")}" target="_blank" rel="noopener noreferrer">${esc(n.learn)} ↗</a>`;
+    `<a class="btn secondary" href="${esc(LEARN(lang) + ADD)}" target="_blank" rel="noopener noreferrer">${esc(n.learn)} ↗</a>`;
 }
 
 function renderFooter() {
@@ -1578,8 +1877,8 @@ function renderAll() {
   renderTheme();
   renderMock();
   renderLegend();
-  renderGrid();
-  renderSettings();
+  renderGrid("src");
+  renderGrid("set");
   renderTips();
   renderLicense();
   renderNext();
@@ -1600,49 +1899,66 @@ $("#themeBtn").addEventListener("click", () => {
   try { localStorage.setItem("copilotPortalTheme", next); } catch (e) { /* storage unavailable */ }
   renderTheme();
 });
-grid.addEventListener("click", e => {
+
+function onGridClick(e) {
   const b = e.target.closest(".ktile");
-  if (b) { b.dataset.key === state.open ? closeSource(false) : openSource(b.dataset.key); return; }
-  if (e.target.closest(".kp-close")) closeSource(true);
-});
+  if (b) { isOpen(b.dataset.g, b.dataset.key) ? closeItem(false) : openItem(b.dataset.g, b.dataset.key, { keep: b }); return; }
+  if (e.target.closest(".kp-close")) { closeItem(true); return; }
+  const src = e.target.closest("[data-open-src]");
+  if (src) openItem("src", src.dataset.openSrc, { align: "tile" });
+}
+Object.values(GROUPS).forEach(g => g.grid.addEventListener("click", onGridClick));
+
 $("#kmock").addEventListener("click", e => {
   const tab = e.target.closest("[data-tab][role=tab]");
   if (tab) { setTab(tab.dataset.tab, false); return; }
+  const sw = e.target.closest("[data-tab-go]");
+  if (sw) { setTab(sw.dataset.tabGo, false); if (e.detail === 0) afterSwitch(sw.dataset.tabGo); return; }
   const go = e.target.closest("[data-go]");
-  if (go) { openSource(go.dataset.go, { align: "tile" }); return; }
-  const jump = e.target.closest("[data-jump]");
-  if (jump) {
-    const el = document.getElementById(jump.dataset.jump);
-    if (!el) return;
-    el.scrollIntoView({ block: "center", behavior: smooth() });
-    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
-  }
+  if (go) { openItem("src", go.dataset.go, { align: "tile" }); return; }
+  const gs = e.target.closest("[data-go-set]");
+  if (gs) openItem("set", gs.dataset.goSet, { align: "tile" });
 });
 $("#kmock").addEventListener("keydown", e => {
+  // like the real pop-ups: Esc closes the picker or the dialog and the focus goes back to the button that opened it
+  if (e.key === "Escape" && state.tab !== "panel") {
+    e.preventDefault();
+    const from = state.tab;
+    setTab("panel", false);
+    const opener = $(from === "add" ? "#mp-panel .m-add" : "#mp-panel .m-gear");
+    if (opener) opener.focus();
+    return;
+  }
   const tab = e.target.closest("[role=tab]");
   if (!tab) return;
-  const order = ["panel", "dialog"];
-  let i = order.indexOf(tab.dataset.tab);
-  if (e.key === "ArrowRight" || e.key === "ArrowLeft") i = (i + 1) % order.length;
+  let i = TABS.indexOf(tab.dataset.tab);
+  if (e.key === "ArrowRight") i = (i + 1) % TABS.length;
+  else if (e.key === "ArrowLeft") i = (i + TABS.length - 1) % TABS.length;
   else if (e.key === "Home") i = 0;
-  else if (e.key === "End") i = order.length - 1;
+  else if (e.key === "End") i = TABS.length - 1;
   else return;
   e.preventDefault();
-  setTab(order[i], true);
+  setTab(TABS[i], true);
 });
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && state.open && grid.contains(document.activeElement)) { e.preventDefault(); closeSource(true); }
+  if (e.key === "Escape" && state.open && Object.values(GROUPS).some(g => g.grid.contains(document.activeElement))) { e.preventDefault(); closeItem(true); }
 });
 let ticking = false;
 window.addEventListener("resize", () => {
   if (ticking) return;
   ticking = true;
-  requestAnimationFrame(() => { ticking = false; if (state.open) syncPanel(); });
+  requestAnimationFrame(() => { ticking = false; if (state.open) syncPanel(state.open.g); });
 });
 
 renderAll();
-const m = /^#s-(\w+)$/.exec(location.hash);
-if (m && KEYS.includes(m[1])) { openSource(m[1], { scroll: false }); requestAnimationFrame(() => $("#sources").scrollIntoView()); }
+const m = /^#([st])-(\w+)$/.exec(location.hash);
+if (m) {
+  const name = m[1] === "s" ? "src" : "set";
+  if (GROUPS[name].items.some(i => i.key === m[2])) {
+    openItem(name, m[2], { scroll: false });
+    requestAnimationFrame(() => $(name === "src" ? "#sources" : "#settings").scrollIntoView({ behavior: "instant" }));
+  }
+}
 })();
 
 </script>
