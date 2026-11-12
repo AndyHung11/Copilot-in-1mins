@@ -543,6 +543,9 @@ footer { padding: 24px 0 36px; border-top: 1px solid var(--cp-border); color: va
 @media (min-width: 721px) and (max-width: 960px) {
   .hub-layout { width: min(100% - 36px, 1180px); grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
   .website-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-card:not(.experience-card) { gap: 14px; padding: 18px; }
+  .product-card:not(.experience-card) .card-visual { width: 52px; height: 52px; border-radius: 0.625rem; font-size: 26px; }
+  .product-card:not(.experience-card) .card-title { font-size: 18px; }
 }
 @media (min-width: 961px) and (max-width: 1200px) {
   .website-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -832,9 +835,9 @@ const TOPICS = [
         href: "https://andyhung11.github.io/copilot-agent-building/prebuilt-agent-map/",
       },
       {
-        title: "Pre-built Agent 個別介紹",
-        titleEn: "Pre-built Agent Introductions",
-        titleCn: "Pre-built Agent 逐个介绍",
+        title: "開箱即用的 Agent 們",
+        titleEn: "Out-of-the-Box Agents",
+        titleCn: "开箱即用的 Agent 们",
         description: "逐一認識 {n} 個 Microsoft 內建 Agent。點選後可選擇「了解更多」查看官方介紹，或直接「打開 Agent」。標示「預覽」或「Frontier」者尚未全面開放。",
         descriptionEn: "Meet all {n} Microsoft-built agents one by one. Select a tile to read the official introduction (Learn more) or open the agent straight away. Tiles marked Preview or Frontier aren't generally available yet.",
         descriptionCn: "挨个认识 {n} 个 Microsoft 内置 Agent。点一下可选“了解更多”看官方介绍，或直接“打开 Agent”。带“预览”或“Frontier”标记的尚未全面开放。",
@@ -938,6 +941,55 @@ const TOPICS = [
         descriptionCn: "4 个插件包、16 个技能，逐一拆解触发词、流程、产出与护栏；附 SKILL.md 复制下载与整包 .zip，另有包结构与部署治理说明。",
         icon: "🔌",
         href: "CoworkPlaybook/PlugIns/cowork-plugins.html",
+      },
+    ],
+  },
+  {
+    title: "接上組織資料 - Copilot Connector",
+    titleEn: "Connect Your Organization's Data — Copilot Connector",
+    titleCn: "接上组织数据 - Copilot Connector",
+    kicker: "資料串接",
+    kickerEn: "Data integration",
+    kickerCn: "数据接入",
+    websites: [
+      {
+        title: "連接器入門",
+        titleEn: "Connectors 101",
+        titleCn: "连接器入门",
+        kicker: "由淺入深 · 企業情境",
+        kickerEn: "Step by step · Real scenarios",
+        kickerCn: "由浅入深 · 企业场景",
+        description: "從「問得到」「串得起來」到「做得到」，用業務、客服、IT 服務台等企業情境，看連接器怎麼把企業系統的資料（Enterprise context）接進 Copilot，放大它的能力。",
+        descriptionEn: "From find it and connect the dots to get it done: see, through sales, support and IT help desk scenarios, how connectors bring enterprise context into Copilot and amplify what it can do.",
+        descriptionCn: "从“问得到”“串得起来”到“做得到”，用销售、客服、IT 服务台等企业场景，看连接器怎么把企业系统的数据（Enterprise context）接入 Copilot，放大它的能力。",
+        icon: "💡",
+        href: "CopilotConnectors/intro.html",
+      },
+      {
+        title: "Copilot 連接器",
+        titleEn: "Copilot Connectors",
+        titleCn: "Copilot 连接器",
+        kicker: "是什麼，有哪些",
+        kickerEn: "What and which",
+        kickerCn: "是什么，有哪些",
+        description: "看懂連接器是什麼、「同步索引」與「即時查詢」兩種類型的差別，再從圖鑑搜尋 Microsoft 與夥伴圖庫收錄的連接器。",
+        descriptionEn: "Learn what a connector is and how synced and federated connectors differ, then search the connectors in the Microsoft and partner galleries.",
+        descriptionCn: "看懂连接器是什么、“同步索引”和“实时查询”两类连接器的区别，再从图鉴里搜一搜 Microsoft 和合作伙伴图库收录的连接器。",
+        icon: "🔗",
+        href: "CopilotConnectors/",
+      },
+      {
+        title: "管理員\n上手指南",
+        titleEn: "Admin\nSetup Guide",
+        titleCn: "管理员\n上手指南",
+        kicker: "規劃到治理",
+        kickerEn: "Plan to govern",
+        kickerCn: "规划到治理",
+        description: "給 IT 管理員：規劃、導入、設置、管理與治理四個階段，同步索引型與即時查詢型兩種連接器都涵蓋。目前為純文字版，之後補上實機截圖。",
+        descriptionEn: "For IT admins: four phases (plan, adopt, set up, manage and govern) that cover both synced and federated connectors. Text-only for now; real screenshots will follow.",
+        descriptionCn: "给 IT 管理员：规划、落地、配置、管理与治理四个阶段，同步索引型和实时查询型两类连接器都涵盖。目前是纯文字版，之后会补上实机截图。",
+        icon: "🛡️",
+        href: "CopilotConnectors/admin-guide.html",
       },
     ],
   },

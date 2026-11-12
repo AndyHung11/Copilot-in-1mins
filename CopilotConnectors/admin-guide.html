@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<!-- FAVICON v1 -->
+<link rel="icon" type="image/png" sizes="any" href="data:image/png;base64,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" />
+<!-- LANG-SNIPPET v1 START -->
+<script>window.__LANG_CFG={"cur": "zh-Hant", "fallback": "en", "mode": "inpage", "supported": ["zh-Hant", "zh-Hans", "en"]};</script>
+<script>
+/* Power of Copilot - shared language core (v1)
+ *
+ * ONE source of truth. Injected inline into every entry page by
+ * _tools/inject_lang.py, so each page stays a standalone file.
+ * Never load this with <script src>: the handbooks are distributed as
+ * single files and are opened offline over file://.
+ *
+ * Priority: ?lang= > saved preference > navigator.languages > fallback.
+ * Once the reader picks a language it wins everywhere, including when they
+ * open a link that points at a different language edition.
+ *
+ * Pages declare window.__LANG_CFG before this block:
+ *   cur        current edition of THIS file, normalized ('zh-Hant'|'zh-Hans'|'en')
+ *   mode       'redirect' (separate file per language) | 'inpage' (switches live)
+ *   paths      redirect mode only: normalized code -> relative path
+ *   supported  languages this page actually ships (default: all three)
+ *   fallback   used when nothing matches (default: 'en')
+ *
+ * Exposes window.PocLang = { code, save, normalize, KEY }.
+ */
+(function () {
+  "use strict";
+
+  var KEY = "pocLang";
+  var CODES = ["zh-Hant", "zh-Hans", "en"];
+  // keys written by earlier per-page implementations, newest first - read once
+  // so nobody who already picked a language gets thrown back to detection
+  var LEGACY = [
+    "copilotPortalLang", "powerofcopilot.lang", "poc.lang", "cph-lang",
+    "copilotBuildingLang", "copilotPlaygroundLang", "copilotPlanetLang",
+    "copilotExpoLang", "agentTransitLang", "agent-lang"
+  ];
+  var cfg = window.__LANG_CFG || {};
+  var supported = cfg.supported || CODES;
+  var HOP = "pocLangHop";
+
+  // Accepts every vocabulary in use across the sites plus raw BCP 47 tags:
+  // 'zh'/'cn'/'en', 'zh-cn'/'zh-Hant', 'zh-Hans-CN', 'en-GB'...
+  function normalize(value) {
+    if (!value) return null;
+    var v = String(value).toLowerCase();
+    if (v === "cn") return "zh-Hans";
+    if (v === "zh") return "zh-Hant";
+    if (/^en/.test(v)) return "en";
+    if (/(^|[-_])(hans|cn|sg)(?![a-z])/.test(v)) return "zh-Hans";
+    if (/^zh/.test(v)) return "zh-Hant";
+    return null;
+  }
+
+  function read(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function write(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  function save(value) {
+    var code = normalize(value);
+    if (code) write(KEY, code);
+    return code;
+  }
+
+  // Preference is stored unchanged even when the current page cannot render it;
+  // only the language used for THIS render is downgraded.
+  function toSupported(code) {
+    if (supported.indexOf(code) !== -1) return code;
+    var order = code === "zh-Hans" ? ["zh-Hant", "en"]
+      : code === "zh-Hant" ? ["zh-Hans", "en"]
+      : ["en", "zh-Hant"];
+    for (var i = 0; i < order.length; i++) {
+      if (supported.indexOf(order[i]) !== -1) return order[i];
+    }
+    return supported[0] || "en";
+  }
+
+  function fromQuery() {
+    try {
+      return normalize(new URLSearchParams(location.search).get("lang"));
+    } catch (e) { return null; }
+  }
+
+  function fromLegacy() {
+    for (var i = 0; i < LEGACY.length; i++) {
+      var code = normalize(read(LEGACY[i]));
+      if (code) return code;
+    }
+    return null;
+  }
+
+  function fromBrowser() {
+    var list = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var code = normalize(list[i]);
+      if (code) return code;
+    }
+    return null;
+  }
+
+  function resolve() {
+    var q = fromQuery();
+    if (q) { write(KEY, q); return q; }         // shared links set the preference
+    var saved = normalize(read(KEY));
+    if (saved) return saved;
+    var legacy = fromLegacy();
+    if (legacy) { write(KEY, legacy); return legacy; }
+    return fromBrowser() || normalize(cfg.fallback) || "en";
+  }
+
+  var wanted = resolve();
+  var code = toSupported(wanted);
+
+  // ---- redirect editions (Basic / Pro) ----
+  // Each hop lands on a page whose cur === code, so this settles after one
+  // move; the marker only guards against a broken paths table.
+  if (cfg.mode === "redirect" && cfg.cur && code !== cfg.cur) {
+    var target = cfg.paths && cfg.paths[code];
+    var hopped = null;
+    try { hopped = sessionStorage.getItem(HOP); } catch (e) {}
+    if (target && hopped !== code) {
+      try { sessionStorage.setItem(HOP, code); } catch (e) {}
+      var qs;
+      try {
+        qs = new URLSearchParams(location.search);
+        qs.delete("lang");
+        qs = qs.toString();
+      } catch (e) { qs = ""; }
+      location.replace(target + (qs ? "?" + qs : "") + location.hash);
+      return;
+    }
+  }
+  try {
+    if (cfg.mode !== "redirect" || code === cfg.cur) sessionStorage.removeItem(HOP);
+  } catch (e) {}
+
+  // Detection is deliberately NOT persisted: only an explicit pick (a click or
+  // ?lang=) is stored, so readers who never choose keep following the browser.
+  window.PocLang = { code: code, save: save, normalize: normalize, KEY: KEY };
+
+  // Language buttons that are plain links (the redirect editions) must record
+  // the choice before navigating, otherwise the new page bounces straight back.
+  var TEXT = { "\u7e41": "zh-Hant", "\u7b80": "zh-Hans", "EN": "en" };
+  document.addEventListener("click", function (event) {
+    var el = event.target && event.target.closest
+      ? event.target.closest("a[href], button")
+      : null;
+    if (!el) return;
+    var picked = normalize(el.getAttribute("data-poc-lang") || el.getAttribute("data-lang"));
+    if (!picked && el.closest(".lang-toggle, .langtoggle, .lang-switch, #langSeg")) {
+      picked = TEXT[(el.textContent || "").trim().toUpperCase()]
+        || TEXT[(el.textContent || "").trim()];
+    }
+    if (picked) save(picked);
+  }, true);
+})();
+</script>
+<!-- LANG-SNIPPET v1 END -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>管理員上手指南｜Power of Copilot</title>
+<meta name="description" content="Microsoft 365 Copilot 連接器的 IT 管理員上手指南：規劃、導入、設置、管理與治理四個階段，同步索引型與即時查詢型兩種連接器都涵蓋，整理自 Microsoft Learn 官方文件。" />
+<script>
+(() => {
+  const param = new URLSearchParams(location.search).get("scoutTheme");
+  let saved = null;
+  try { saved = localStorage.getItem("copilotPortalTheme"); } catch (_) {}
+  const ok = v => v === "light" || v === "dark";
+  const theme = ok(param) ? param : ok(saved) ? saved : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", theme);
+  const lang = (window.PocLang && window.PocLang.code) || "zh-Hant";
+  document.documentElement.setAttribute("data-lang", lang);
+  document.documentElement.setAttribute("lang", lang);
+})();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #6d28d9;
+  --cp-accent-hover: #5b21b6;
+  --cp-accent-soft: rgba(109, 40, 217, 0.09);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #005fa8;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(109, 40, 217, 0.14);
+  --cp-brand-purple: #7c3aed;
+  --cp-brand-blue: #0078d4;
+  --cp-gradient: linear-gradient(105deg, var(--cp-brand-purple), var(--cp-brand-blue));
+  --cp-gradient-soft: linear-gradient(135deg, var(--cp-accent-soft), var(--cp-highlight), color-mix(in srgb, var(--cp-link) 10%, var(--cp-surface)));
+  --wash-a: var(--cp-accent-soft);
+  --wash-b: color-mix(in srgb, var(--cp-link) 13%, transparent);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #b8b8b8;
+  --cp-text-soft: #b8b8b8;
+  --cp-accent: #c4b5fd;
+  --cp-accent-hover: #ddd6fe;
+  --cp-accent-soft: rgba(167, 139, 250, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #75bdff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0);
+  --cp-highlight: rgba(167, 139, 250, 0.18);
+  --cp-brand-purple: #a78bfa;
+  --cp-brand-blue: var(--cp-link);
+  --wash-a: rgba(167, 139, 250, 0.04);
+  --wash-b: color-mix(in srgb, var(--cp-link) 3%, transparent);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { min-height: 100%; background: var(--cp-bg); scroll-behavior: smooth; scroll-padding-top: 132px; }
+body {
+  min-width: 280px; min-height: 100vh; margin: 0; font-size: 15px; line-height: 1.6;
+  background:
+    radial-gradient(circle at 12% 8%, var(--wash-a), transparent 34%),
+    radial-gradient(circle at 88% 14%, var(--wash-b), transparent 32%),
+    linear-gradient(var(--cp-sheen), var(--cp-sheen)),
+    var(--cp-bg);
+  color: var(--cp-text);
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+html[data-lang="zh-Hans"] body {
+  font-family: "Segoe UI", "Microsoft YaHei", "微软雅黑", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+button, input, select { font: inherit; color: inherit; }
+input::placeholder { color: var(--cp-text-muted); opacity: 1; }
+a { color: var(--cp-link); }
+.shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 100; padding: 10px 14px; border-radius: 0.625rem; background: var(--cp-accent); color: var(--cp-accent-fg); font-weight: 700; }
+.skip:focus { left: 12px; }
+:focus-visible { outline: 3px solid var(--cp-accent); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* top bar */
+.topbar { position: sticky; top: 0; z-index: 20; background: var(--cp-overlay); border-bottom: 1px solid var(--cp-border); backdrop-filter: blur(18px); }
+.topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--cp-gradient); }
+.topbar-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; text-decoration: none; color: var(--cp-text); }
+.brand img { width: 38px; height: 38px; object-fit: contain; flex: none; }
+.brand-name { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.brand-sub { margin-top: 2px; color: var(--cp-text-muted); font-size: 12px; }
+.topbar-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+.lang-switch { height: 36px; display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); }
+.lang-switch button { min-width: 30px; height: 28px; padding: 0 8px; border: 0; border-radius: 0.45rem; background: transparent; color: var(--cp-text-muted); font-weight: 600; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.lang-switch button:hover { color: var(--cp-text); background: var(--cp-surface-soft); }
+.lang-switch button[aria-pressed="true"] { background: var(--cp-accent); color: var(--cp-accent-fg); }
+.theme-toggle { min-width: 96px; height: 36px; padding: 0 11px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); font-weight: 600; font-size: 12px; cursor: pointer; }
+.theme-toggle:hover { border-color: var(--cp-border-strong); }
+
+/* in-page navigation */
+.subnav { position: sticky; top: 68px; z-index: 15; background: var(--cp-overlay); border-bottom: 1px solid var(--cp-border); backdrop-filter: blur(14px); }
+.subnav .shell { display: flex; gap: 4px; overflow-x: auto; padding: 6px 0; scrollbar-width: none; }
+.subnav .shell::-webkit-scrollbar { display: none; }
+.subnav a { flex: none; min-height: 36px; padding: 0 13px; display: inline-flex; align-items: center; border-radius: 0.625rem; color: var(--cp-text-muted); text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; }
+.subnav a:hover { background: var(--cp-surface-soft); color: var(--cp-text); }
+.subnav a[aria-current] { background: var(--cp-accent-soft); color: var(--cp-accent); }
+
+/* hero */
+.hero { padding: 52px 0 12px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface); color: var(--cp-text-muted); font-weight: 700; font-size: 12px; letter-spacing: 0.05em; }
+.eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--cp-gradient); }
+h1 { margin: 16px 0 12px; font-size: clamp(30px, 4.6vw, 48px); line-height: 1.16; letter-spacing: -0.01em; }
+.grad { background: var(--cp-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { margin: 0; max-width: 64ch; color: var(--cp-text-muted); font-size: clamp(16px, 1.6vw, 18px); }
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 28px 0 18px; }
+.stat { padding: 16px 18px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-panel-strong); }
+.stat b { display: block; font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--cp-text-muted); font-size: 13px; }
+.stat small { display: block; margin-top: 2px; color: var(--cp-text-muted); font-size: 12px; }
+.asof { margin: 0 0 18px; color: var(--cp-text-muted); font-size: 13px; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { min-height: 42px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--cp-accent); border-radius: 0.625rem; background: var(--cp-accent); color: var(--cp-accent-fg); font-weight: 700; text-decoration: none; cursor: pointer; }
+.btn:hover { background: var(--cp-accent-hover); border-color: var(--cp-accent-hover); }
+.btn.secondary { background: var(--cp-surface); color: var(--cp-text); border-color: var(--cp-border); }
+.btn.secondary:hover { border-color: var(--cp-border-strong); background: var(--cp-surface-soft); }
+.btn.small { min-height: 36px; padding: 0 14px; font-size: 13px; }
+
+/* sections */
+.block { padding: 48px 0 4px; }
+.sec-kicker { color: var(--cp-accent); font-weight: 700; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; }
+h2 { margin: 4px 0 8px; font-size: clamp(22px, 3vw, 30px); line-height: 1.25; }
+h3 { margin: 0; font-size: 16px; line-height: 1.35; }
+.sec-lead { margin: 0 0 22px; max-width: 72ch; color: var(--cp-text-muted); }
+.card { border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); }
+
+/* diagram */
+.flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: stretch; }
+.flow-box { padding: 18px; }
+.flow-box h3 { margin-bottom: 8px; }
+.flow-box p { margin: 0 0 10px; color: var(--cp-text-muted); font-size: 14px; }
+.flow-arrow { align-self: center; color: var(--cp-text-muted); font-size: 24px; text-align: center; }
+.flow-box.mid { background: var(--cp-gradient-soft), var(--cp-surface); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { padding: 3px 9px; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface-soft); font-size: 12px; }
+.callout { margin-top: 14px; padding: 14px 18px; border-left: 4px solid var(--cp-accent); border-radius: 0 0.625rem 0.625rem 0; background: var(--cp-accent-soft); font-size: 14px; }
+
+/* comparison */
+.cmp { overflow: hidden; }
+.cmp-row { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid var(--cp-border); }
+.cmp-row:first-child { border-top: 0; }
+.cmp-row > div { padding: 13px 16px; font-size: 14px; }
+.cmp-head > div { font-weight: 700; background: var(--cp-surface-soft); }
+.cmp-label { color: var(--cp-text-muted); font-weight: 700; }
+.cmp-row > div + div { border-left: 1px solid var(--cp-border); }
+.cmp-sub { display: block; color: var(--cp-text-muted); font-weight: 400; font-size: 12px; }
+.note { margin: 12px 2px 0; color: var(--cp-text-muted); font-size: 13px; }
+
+/* badges and chips */
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface-soft); color: var(--cp-text); font-weight: 600; font-size: 12px; line-height: 1.5; white-space: nowrap; }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cp-text-muted); }
+.badge.fed::before { background: var(--cp-brand-purple); }
+.badge.syn::before { background: var(--cp-link); }
+.badge.pre { background: color-mix(in srgb, var(--cp-warning) 20%, var(--cp-surface)); border-color: color-mix(in srgb, var(--cp-warning) 55%, var(--cp-border)); }
+.badge.pre::before { background: var(--cp-warning); }
+.badge.part::before { background: var(--cp-text-muted); }
+.badge.onprem::before { background: var(--cp-border-strong); }
+.badge.cert { border-color: color-mix(in srgb, var(--cp-success) 55%, var(--cp-border)); background: color-mix(in srgb, var(--cp-success) 12%, var(--cp-surface)); }
+.badge.cert::before { background: var(--cp-success); }
+.badge.st-launched::before { background: var(--cp-success); }
+.badge.st-rolling::before { background: var(--cp-link); }
+.badge.st-dev::before { background: var(--cp-warning); }
+
+/* gallery */
+.origin { margin: 0 0 8px; }
+.origin-h { margin: 0 0 8px; color: var(--cp-text-muted); font-size: 13px; letter-spacing: 0.04em; }
+.origin ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.origin li { padding: 14px 16px; display: grid; gap: 4px; align-content: start; border-top: 3px solid var(--cp-border-strong); }
+.origin li b { font-size: 15px; line-height: 1.4; }
+.origin li span { color: var(--cp-text-muted); font-size: 13px; }
+.origin li.o0 { border-top-color: var(--cp-accent); background: color-mix(in srgb, var(--cp-accent) 8%, var(--cp-surface)); }
+.origin-note { margin: 0 2px 8px; }
+#mergeNote { margin-bottom: 18px; }
+.filters { padding: 16px; display: grid; gap: 12px; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.field { display: grid; gap: 4px; min-width: 0; }
+.field label, .field .lbl { color: var(--cp-text-muted); font-weight: 700; font-size: 12px; }
+.search { flex: 1 1 280px; }
+.search input, select { width: 100%; min-height: 42px; padding: 0 12px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-bg-elevated); font-size: 14px; }
+select { cursor: pointer; }
+.search input:focus, select:focus { border-color: var(--cp-accent); }
+.seg { display: inline-flex; flex-wrap: wrap; max-width: 100%; padding: 3px; gap: 2px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface-soft); }
+.seg button { min-height: 34px; padding: 0 12px; border: 0; border-radius: 0.45rem; background: transparent; color: var(--cp-text-muted); font-weight: 600; font-size: 13px; cursor: pointer; white-space: nowrap; }
+.seg button:hover { color: var(--cp-text); }
+.seg button[aria-pressed="true"] { background: var(--cp-accent); color: var(--cp-accent-fg); }
+.check { min-height: 42px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.check input { width: 18px; height: 18px; accent-color: var(--cp-accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chips .lbl { margin-right: 4px; color: var(--cp-text-muted); font-size: 12px; font-weight: 700; }
+.chip { min-height: 32px; padding: 0 12px; border: 1px solid var(--cp-border); border-radius: 999px; background: var(--cp-surface); font-size: 13px; cursor: pointer; }
+.chip:hover { border-color: var(--cp-border-strong); }
+.chip[aria-pressed="true"] { background: var(--cp-accent-soft); border-color: var(--cp-accent); color: var(--cp-accent); font-weight: 700; }
+.resultbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center; margin: 16px 2px 12px; color: var(--cp-text-muted); font-size: 14px; }
+.type-note { margin-left: 12px; font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
+.conn { padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.conn-top { display: flex; align-items: flex-start; gap: 12px; }
+.avatar { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 0.625rem; background: var(--cp-gradient-soft); color: var(--cp-accent); font-weight: 800; font-size: 17px; border: 1px solid var(--cp-border); }
+.conn h3 { overflow-wrap: anywhere; }
+.conn-meta { margin-top: 2px; color: var(--cp-text-muted); font-size: 12px; }
+.conn p { margin: 0; flex: 1; color: var(--cp-text-muted); font-size: 14px; overflow-wrap: anywhere; }
+.conn-foot { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: space-between; }
+.conn-foot .badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.conn a { font-weight: 600; font-size: 13px; text-decoration: none; }
+.conn-block { display: flex; flex-direction: column; gap: 8px; padding-top: 10px; border-top: 1px solid var(--cp-border); }
+.conn-top + .conn-block { padding-top: 0; border-top: 0; }
+.conn-block p { flex: none; }
+.conn.is-merged > p { flex: none; }
+.conn-pub { align-self: center; color: var(--cp-text-muted); font-size: 12px; font-weight: 600; }
+.conn-partners { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding-top: 10px; border-top: 1px solid var(--cp-border); }
+.conn-partners ul { flex: 1 1 180px; min-width: 0; display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0; padding: 0; list-style: none; }
+.conn-partners li { display: inline-flex; align-items: center; gap: 6px; min-height: 24px; }
+.conn a:hover { text-decoration: underline; }
+.empty { padding: 36px 18px; text-align: center; color: var(--cp-text-muted); }
+.more { display: flex; justify-content: center; margin: 18px 0 4px; }
+
+/* picker */
+.picker { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.qs { padding: 6px 18px 18px; }
+fieldset { margin: 0; padding: 14px 0 0; border: 0; min-width: 0; }
+fieldset + fieldset { border-top: 1px solid var(--cp-border); margin-top: 14px; }
+legend { padding: 0; font-weight: 700; font-size: 15px; }
+legend small { display: block; color: var(--cp-text-muted); font-weight: 400; font-size: 13px; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.opt { position: relative; flex: 1 1 150px; min-width: 0; }
+.opt input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.opt span { display: block; height: 100%; padding: 10px 12px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-bg-elevated); font-size: 14px; font-weight: 600; }
+.opt span small { display: block; color: var(--cp-text-muted); font-weight: 400; font-size: 12px; }
+.opt input:hover + span { border-color: var(--cp-border-strong); }
+.opt input:checked + span { border-color: var(--cp-accent); background: var(--cp-accent-soft); box-shadow: inset 0 0 0 1px var(--cp-accent); }
+.opt input:focus-visible + span { outline: 3px solid var(--cp-accent); outline-offset: 2px; }
+.result { padding: 18px; position: sticky; top: 132px; }
+.progress { color: var(--cp-text-muted); font-size: 13px; }
+.verdict { margin: 6px 0 4px; font-size: 22px; line-height: 1.3; font-weight: 800; }
+.result h4 { margin: 14px 0 6px; font-size: 13px; color: var(--cp-text-muted); letter-spacing: 0.04em; }
+.result ul { margin: 0; padding-left: 20px; font-size: 14px; }
+.result li + li { margin-top: 4px; }
+.result .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.result.is-empty { color: var(--cp-text-muted); }
+.result .applied { margin: 12px 0 0; font-size: 14px; }
+.result .jump { margin: 8px 0 0; }
+.result .no-list { margin: 10px 0 0; padding: 10px 12px; border-radius: 0.625rem; background: var(--cp-accent-soft); color: var(--cp-text); font-size: 14px; }
+
+/* the picker's recommended type, tagged in the gallery's type switch */
+.seg button .tag { margin-left: 6px; padding: 1px 7px; border-radius: 999px; background: var(--cp-accent-soft); color: var(--cp-accent); font-size: 11px; font-weight: 700; }
+.seg button[aria-pressed="true"] .tag { background: rgba(255, 255, 255, 0.22); color: inherit; }
+
+/* license */
+.lic-pick { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-bottom: 14px; }
+.lic-pick .field { flex: 1 1 320px; }
+.lic-sum { flex: 2 1 320px; padding: 11px 14px; border-radius: 0.625rem; background: var(--cp-accent-soft); font-size: 14px; }
+.lic-row { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--cp-border); }
+.lic-row:first-child { border-top: 0; }
+.lic-row > div { padding: 12px 14px; font-size: 14px; }
+.lic-row > div + div { border-left: 1px solid var(--cp-border); }
+.lic-head > div { font-weight: 700; background: var(--cp-surface-soft); font-size: 13px; }
+.lic-row.is-picked { background: var(--cp-accent-soft); box-shadow: inset 4px 0 0 var(--cp-accent); }
+.yes { font-weight: 700; }
+.no { color: var(--cp-text-muted); }
+
+/* timeline */
+.tl-group + .tl-group { margin-top: 22px; }
+.tl-group > h3 { margin-bottom: 10px; color: var(--cp-text-muted); font-size: 13px; letter-spacing: 0.05em; }
+.tl { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.tl li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; padding: 14px 16px; }
+.tl .when { font-weight: 800; font-variant-numeric: tabular-nums; }
+.tl .when small { display: block; color: var(--cp-text-muted); font-weight: 400; font-size: 12px; }
+.tl h4 { margin: 0 0 3px; font-size: 15px; }
+.tl p { margin: 0 0 8px; color: var(--cp-text-muted); font-size: 14px; }
+.tl .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; }
+
+/* caveats */
+details { border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); }
+details + details { margin-top: 8px; }
+summary { min-height: 48px; padding: 12px 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "＋"; flex: none; width: 18px; color: var(--cp-accent); font-weight: 800; }
+details[open] > summary::before { content: "－"; }
+details > div { padding: 0 16px 14px 44px; color: var(--cp-text-muted); font-size: 14px; }
+details > div p { margin: 0; }
+
+/* sources */
+.sources { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 8px 24px; }
+.sources a { font-size: 14px; }
+footer { margin-top: 56px; padding: 26px 0 48px; border-top: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 13px; }
+footer p { margin: 0 0 6px; max-width: 90ch; }
+
+@media (max-width: 1100px) {
+  .origin ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .picker { grid-template-columns: minmax(0, 1fr); }
+  .result { position: static; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .origin ul { grid-template-columns: minmax(0, 1fr); }
+  .shell { width: min(1180px, calc(100% - 28px)); }
+  .brand-sub { display: none; }
+  .theme-toggle { min-width: 40px; padding: 0 10px; }
+  .theme-toggle .tt-label { display: none; }
+  .flow { grid-template-columns: minmax(0, 1fr); }
+  .flow-arrow { transform: rotate(90deg); }
+  .cmp-row { grid-template-columns: minmax(0, 1fr); }
+  .cmp-head { display: none; }
+  .cmp-row > div + div { border-left: 0; border-top: 1px dashed var(--cp-border); }
+  .cmp-cell::before { content: attr(data-col); display: block; margin-bottom: 2px; color: var(--cp-accent); font-weight: 700; font-size: 12px; }
+  .lic-row { grid-template-columns: minmax(0, 1fr); }
+  .lic-head { display: none; }
+  .lic-row > div + div { border-left: 0; border-top: 1px dashed var(--cp-border); }
+  .lic-cell::before { content: attr(data-col); display: block; color: var(--cp-text-muted); font-weight: 700; font-size: 12px; }
+  .tl li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  details > div { padding-left: 16px; }
+}
+@media (max-width: 420px) {
+  .lang-switch button { min-width: 28px; padding: 0 6px; }
+  .stat b { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+/* admin-guide.html page-specific additions (layered after the shared template/style.css) */
+
+/* the four phases at a glance */
+.phases { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.phases a { display: grid; align-content: start; gap: 4px; height: 100%; padding: 16px; border: 1px solid var(--cp-border); border-radius: 0.625rem; background: var(--cp-surface); color: var(--cp-text); text-decoration: none; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); }
+.phases a:hover { border-color: var(--cp-border-strong); }
+.phases .no { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--cp-accent); color: var(--cp-accent-fg); font-weight: 800; font-size: 13px; }
+.phases b { margin-top: 6px; font-size: 19px; line-height: 1.3; }
+.phases .d { color: var(--cp-text-muted); font-size: 14px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0 0; color: var(--cp-text-muted); font-size: 14px; }
+
+/* an admin-center path or setting name inside running text */
+.path { padding: 1px 6px; border: 1px solid var(--cp-border); border-radius: 6px; background: var(--cp-surface-soft); color: var(--cp-text); font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.9em; }
+
+/* table cells that hold a short list */
+.cmp-cell p, .cmp-cell ul { margin: 0; }
+.cmp-cell ul { padding-left: 1.1em; }
+.cmp-cell li + li { margin-top: 4px; }
+
+.proc { padding: 18px; }
+.proc-steps { counter-reset: proc; margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.proc-steps li { position: relative; padding: 2px 0 2px 34px; font-size: 14px; }
+.proc-steps li::before { counter-increment: proc; content: counter(proc); position: absolute; left: 0; top: 0; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 800; font-size: 12px; }
+
+.callout.warn { border-left-color: var(--cp-warning); background: color-mix(in srgb, var(--cp-warning) 14%, var(--cp-surface)); }
+.sub-h { margin: 26px 0 0; font-size: 18px; }
+#perm { margin-top: 18px; }
+#perm strong { display: block; margin-bottom: 4px; }
+.find { margin-top: 18px; }
+
+.type-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; align-items: start; }
+.type-pair .card { padding: 18px; }
+.type-pair p { margin: 10px 0 0; color: var(--cp-text); font-size: 14px; }
+.type-pair h3 { margin: 18px 0 10px; font-size: 14px; }
+.card-top { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 14px; }
+.card-top .who { color: var(--cp-text-muted); font-size: 14px; font-weight: 600; }
+.type-pair .card-top + h3 { margin-top: 0; }
+.type-pair .proc-steps + h3 { margin-top: 20px; }
+
+/* folded blocks */
+details { margin-top: 12px; }
+details.tool > div { padding: 0 16px 16px; color: var(--cp-text); }
+details > div .note:first-child { margin-top: 0; }
+.plain { margin: 0; padding-left: 1.2em; font-size: 14px; }
+.plain li + li { margin-top: 6px; }
+.pairs { margin: 0; font-size: 14px; }
+.pairs dt { margin-top: 12px; color: var(--cp-text); font-weight: 700; }
+.pairs dt:first-child { margin-top: 0; }
+.pairs dd { margin: 2px 0 0; }
+
+@media (max-width: 1000px) {
+  .phases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .type-pair { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .phases { grid-template-columns: minmax(0, 1fr); }
+}
+
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x78imrd05u");</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip"></a>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="../portal.html">
+      <img src="../copilot-logo.png" alt="" width="38" height="38" onerror="this.style.display='none'" />
+      <div>
+        <div class="brand-name">Power of Copilot</div>
+        <div class="brand-sub" data-i="brandSub"></div>
+      </div>
+    </a>
+    <div class="topbar-actions">
+      <div class="lang-switch" role="group" data-i-aria="langGroup">
+        <button type="button" data-lang="zh-Hant" aria-pressed="false">繁</button>
+        <button type="button" data-lang="zh-Hans" aria-pressed="false">简</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="theme-toggle" id="themeBtn"><span class="theme-icon" aria-hidden="true"></span><span class="tt-label"></span></button>
+    </div>
+  </div>
+</header>
+<nav class="subnav" data-i-aria="navLabel">
+  <div class="shell">
+    <a href="#plan" data-i="nav.plan"></a>
+    <a href="#adopt" data-i="nav.adopt"></a>
+    <a href="#setup" data-i="nav.setup"></a>
+    <a href="#manage" data-i="nav.manage"></a>
+    <a href="#sources" data-i="nav.sources"></a>
+  </div>
+</nav>
+
+<main id="main">
+  <noscript><div class="shell"><p class="callout">此頁面需要啟用 JavaScript／此页面需要启用 JavaScript／This page requires JavaScript.</p></div></noscript>
+
+  <section class="hero shell" aria-labelledby="h1">
+    <span class="eyebrow"><i></i><span data-i="hero.eyebrow"></span></span>
+    <h1 id="h1"><span class="grad" data-i="hero.h1"></span></h1>
+    <p class="lead" data-i="hero.lead"></p>
+    <div class="callout" data-i="hero.shotNote"></div>
+    <div class="cta">
+      <a class="btn secondary" href="intro.html" data-i="hero.cta1"></a>
+      <a class="btn secondary" href="index.html#compare" data-i="hero.cta2"></a>
+    </div>
+  </section>
+
+  <section class="block shell" id="phases" aria-labelledby="phases-h">
+    <div class="sec-kicker" data-i="phases.k"></div>
+    <h2 id="phases-h" data-i="phases.h"></h2>
+    <ol class="phases" id="phaseList"></ol>
+    <p class="legend" id="legend"></p>
+  </section>
+
+  <section class="block shell" id="plan" aria-labelledby="plan-h">
+    <div class="sec-kicker" data-i="plan.k"></div>
+    <h2 id="plan-h" data-i="plan.h"></h2>
+    <p class="sec-lead" data-i="plan.lead"></p>
+    <div class="card cmp" id="planTable" role="table"></div>
+    <details class="tool" id="pick">
+      <summary data-i="plan.pickH"></summary>
+      <div>
+        <p class="note" data-i="pk.lead"></p>
+        <div class="picker">
+          <form class="card qs" id="qs" onsubmit="return false"></form>
+          <aside class="card result is-empty" id="result" aria-live="polite" aria-atomic="true"></aside>
+        </div>
+      </div>
+    </details>
+    <details class="tool" id="license">
+      <summary data-i="plan.licH"></summary>
+      <div>
+        <div class="card cmp" id="licTable" role="table"></div>
+        <p class="note" data-i="lic.note"></p>
+      </div>
+    </details>
+    <p class="note find"><span data-i="plan.find"></span> <a href="index.html#gallery" data-i="plan.findLink"></a></p>
+  </section>
+
+  <section class="block shell" id="adopt" aria-labelledby="adopt-h">
+    <div class="sec-kicker" data-i="adopt.k"></div>
+    <h2 id="adopt-h" data-i="adopt.h"></h2>
+    <p class="sec-lead" data-i="adopt.lead"></p>
+    <div class="card proc">
+      <ol class="proc-steps" id="adoptSteps"></ol>
+    </div>
+    <h3 class="sub-h" data-i="adopt.limitH"></h3>
+    <div class="type-pair" id="limitPair"></div>
+    <p class="note" data-i="adopt.note"></p>
+  </section>
+
+  <section class="block shell" id="setup" aria-labelledby="setup-h">
+    <div class="sec-kicker" data-i="setup.k"></div>
+    <h2 id="setup-h" data-i="setup.h"></h2>
+    <p class="sec-lead" data-i="setup.lead"></p>
+    <div class="type-pair" id="setupPair"></div>
+    <div class="callout warn" id="perm"><strong data-i="setup.permH"></strong> <span data-f="setup.perm"></span></div>
+    <details id="customSetup">
+      <summary data-i="setup.d1H"></summary>
+      <div><ul class="plain" id="d1"></ul></div>
+    </details>
+    <details id="buildOwn">
+      <summary data-i="setup.d2H"></summary>
+      <div><dl class="pairs" id="d2"></dl></div>
+    </details>
+    <details id="limits">
+      <summary data-i="setup.d3H"></summary>
+      <div><dl class="pairs" id="d3"></dl></div>
+    </details>
+  </section>
+
+  <section class="block shell" id="manage" aria-labelledby="manage-h">
+    <div class="sec-kicker" data-i="manage.k"></div>
+    <h2 id="manage-h" data-i="manage.h"></h2>
+    <p class="sec-lead" data-f="manage.lead"></p>
+    <div class="card cmp" id="manageTable" role="table"></div>
+    <details id="who">
+      <summary data-i="manage.whoH"></summary>
+      <div>
+        <p data-i="manage.whoLead"></p>
+        <ol class="plain" id="whoList"></ol>
+        <p class="note" data-f="manage.whoNote"></p>
+      </div>
+    </details>
+    <details id="news">
+      <summary data-i="manage.newsH"></summary>
+      <div>
+        <p class="sec-lead"><span data-i="news.lead"></span> <strong id="newsAsof"></strong></p>
+        <div id="tl"></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="block shell" id="sources" aria-labelledby="src-h">
+    <div class="sec-kicker" data-i="src.k"></div>
+    <h2 id="src-h" data-i="src.h"></h2>
+    <p class="sec-lead" data-i="src.lead"></p>
+    <ul class="sources" id="srcList"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">
+    <p data-i="footer.p1"></p>
+    <p><a href="index.html#sources" data-i="footer.link"></a></p>
+    <p><a href="../portal.html" data-i="src.back"></a></p>
+  </div>
+</footer>
+
+<script>
+const DATA = {"asOf":"2026-11-10","news":[{"id":"fedGa","rm":501120,"date":"2026-04","status":"launched"},{"id":"govern","rm":501584,"date":"2026-02","status":"launched"},{"id":"custom","rm":501585,"date":"2026-02","status":"launched"},{"id":"discover","rm":502541,"date":"2026-09","status":"launched"},{"id":"write","rm":570964,"date":"2026-10","status":"launched"},{"id":"usage","rm":519571,"date":"2026-11","status":"rolling"},{"id":"selfserve","rm":568788,"date":"2026-09","status":"dev"},{"id":"webhook","rm":505441,"date":"2026-10","status":"dev"}]};
+const I18N = {
+"zh-Hant": {
+  title: "管理員上手指南｜Power of Copilot",
+  skip: "跳到主要內容",
+  brandSub: "Copilot 連接器管理員指南",
+  langGroup: "語言",
+  navLabel: "頁內導覽",
+  themeToDark: "深色模式",
+  themeToLight: "淺色模式",
+  topic: "項目",
+  nav: { plan: "規劃", adopt: "導入", setup: "設置", manage: "管理與治理", sources: "資料來源" },
+  type: { s: "同步索引型", f: "即時查詢型" },
+  hero: {
+    eyebrow: "管理員指南",
+    h1: "IT 管理員上手指南",
+    lead: "從規劃、導入、設置，到管理與治理，一步一步來。同步索引型與即時查詢型兩種連接器都涵蓋。",
+    shotNote: "目前是純文字版，admin center 實機截圖之後補上；選單名稱可能因租戶版本略有不同。",
+    cta1: "回到連接器入門",
+    cta2: "看兩種連接器的差別"
+  },
+  phases: {
+    k: "四個階段", h: "先看全貌，再一個階段一個階段做",
+    lead: "每個階段都分別說明兩種連接器：",
+    legendS: "先把內容建成索引", legendF: "提問當下才向來源系統查詢",
+    items: [
+      ["1", "規劃", "選類型、確認授權與角色"],
+      ["2", "導入", "小範圍試用，再逐步擴大"],
+      ["3", "設置", "在 admin center 實際設定"],
+      ["4", "管理與治理", "看狀態、控管誰能用、把關風險"]
+    ]
+  },
+  plan: {
+    k: "第 1 階段", h: "規劃：先想清楚三件事",
+    lead: "選哪一種、要什麼授權、誰來負責，決定了後面怎麼走。",
+    rows: [
+      ["運作方式", "先把內容建成索引，放在 Microsoft 365。", "提問當下才向來源系統查詢，不建索引。"],
+      ["適合", ["大量文件、知識庫、工單。", "內容有更新延遲。"], ["要即時、或不能被複製的資料。", "部分連接器可寫入，需使用者核准。"]],
+      ["授權", ["Microsoft 365 任一方案可用在 Microsoft Search。", "要讓 Copilot 引用內容，需要 Copilot 授權。", "建立索引不另收費。"], ["每位使用者都需要 Copilot 附加授權（或 E7）。", "Copilot Studio 授權與隨用隨付不支援。"]],
+      ["誰來做", ["{AI Administrator}", "加上來源系統的管理權限。"], ["治理：{Global Administrator} 或 {Search Administrator}", "不需要來源系統的管理權限。"]]
+    ],
+    pickH: "不確定選哪一種？回答 5 個問題",
+    licH: "看完整授權表",
+    find: "最後，到探索器的圖鑑查查你的系統有沒有現成的連接器。",
+    findLink: "開啟圖鑑 →"
+  },
+  adopt: {
+    k: "第 2 階段", h: "導入：小範圍開始，再逐步擴大",
+    lead: "先讓一小群人用起來、確認沒問題，再開放給更多人。",
+    steps: [
+      "挑 1–2 個大家常查、風險低的系統開始，例如知識庫或工單。",
+      "先只開放給一小群試用者。",
+      "補上連接器的名稱與描述，讓 Copilot 知道什麼時候該用它。",
+      "請試用者回報；結果可用，再擴大到全組織。",
+      "告訴使用者與服務台：能問什麼、資料從哪來。有寫入功能的連接器，也要說明動作用的是使用者自己的權限。"
+    ],
+    limitH: "怎麼只開放給一小群？",
+    limit: ["建立連接器時，先部署給一小群使用者。", "到 {Your connections} 設定 {Staged rollout}，指定使用者或群組。"],
+    note: "以上是建議做法，不是官方規定；「先小範圍驗證、再擴大」來自 Learn 文件。"
+  },
+  setup: {
+    k: "第 3 階段", h: "設置：到 admin center 動手設定",
+    lead: "同步索引型要自己建立連線。即時查詢型裡，Microsoft 內建的預設就開放、使用者各自登入即可；管理員發佈與自建的，才需要先建立。",
+    cards: [
+      { t: "s", who: "需要 {AI Administrator}", groups: [
+        { steps: [
+          "登入 Microsoft 365 admin center，選 {Copilot > Connectors}。",
+          "選 {Gallery}，挑要連接的資料來源。",
+          "輸入名稱與資料來源網址，選驗證方式。",
+          "先部署給一小群使用者。",
+          "選 {Create}，開始建立索引。",
+          "在成功畫面補上連接器描述。"
+        ] }
+      ] },
+      { t: "f", who: "依來源分三種", groups: [
+        { h: "Microsoft 內建與夥伴", steps: [
+          "在 {Agents > Settings > Agent and plugin access} 允許該發行者類型，或到 {Your connections} 個別啟用。",
+          "使用者在 Copilot 的 {Settings > Sources} 選 {Connect}，登入自己的帳號。"
+        ] },
+        { h: "管理員發佈（MCP 範本）", steps: [
+          "在 {Copilot > Connectors} 的目錄選範本。",
+          "填 MCP 端點與驗證方式，選適用對象。",
+          "選 {Create}，約 30 分鐘後可測試。"
+        ] },
+        { h: "自建（自己的 MCP 伺服器）", steps: [
+          "先在 Teams Developer Portal 設好驗證。",
+          "在 {Gallery} 的 Created by your org 選 {Create a new connector}。",
+          "填名稱、描述、Base URL 與註冊 ID，選 {Save}。"
+        ] }
+      ] }
+    ],
+    permH: "最容易設錯的一個選項",
+    perm: "同步索引型 {Custom setup > Users} 裡的 {Access Permissions}：預設是「只有原本就有權限的人看得到」。改成「組織內所有人」後，這個連接器的內容就不再跟著來源系統的權限走。",
+    d1H: "同步索引型的 Custom setup：三個頁籤",
+    d1: ["{Users}：誰看得到索引內容（存取權限）、使用者對應", "{Content}：屬性、別名、語意標籤", "{Sync}：完整與增量同步的排程", "多數設定已有最佳化的預設值，通常不用改。"],
+    d2H: "自建連接器要準備什麼",
+    d2: [
+      ["同步索引型", "用 Microsoft Graph connectors API 或 Microsoft 365 Agents Toolkit 建立。"],
+      ["即時查詢型", "一個 MCP 伺服器，公開你想給 Copilot 用的工具（例如查詢、擷取）；{Global Administrator} 或 {AI Administrator} 角色；Microsoft Entra 角色與 Teams Developer Portal 存取權；開發者名稱、網站、隱私權與使用條款連結。若伺服器限制來源 IP，要放行 Microsoft 365 Copilot 的靜態輸出 IP（預設已啟用）。"]
+    ],
+    d3H: "特定連接器的限制",
+    d3: [
+      ["Enterprise Websites", "每個連線最多 50 個根網址；不支援 SAML、JWT、表單式驗證與動態內容；僅限同一網域。"],
+      ["CSV", "欄位標題不可含空格；來源須為 SharePoint 或 Azure Data Lake Storage；需要 Microsoft Entra 應用程式與管理員同意。"]
+    ]
+  },
+  manage: {
+    k: "第 4 階段", h: "管理與治理：看狀態、控管誰能用、把關風險",
+    lead: "兩種連接器都在 {Copilot > Connectors > Your connections} 管理。",
+    rows: [
+      ["看狀態", ["每個連線有狀態：{Syncing}、{Ready}、{Paused}、{Failed}。", "嚴重失敗會出現在 Service health 的 Issues，也可訂閱 email 通知。"], ["確認連接器已啟用。", "確認哪些使用者或群組能用。"]],
+      ["控制誰能用", ["夥伴連接器可用 {Copilot Visibility} 開關，決定是否出現在 Copilot。"], ["三道控制：", "{Agent and plugin access}：依發行者類型整批開關", "{User access}：誰能用任何連接器", "單一連接器的 Enable 與 {Staged rollout}"]],
+      ["資料更新", ["依排程同步，也能手動啟動。", "增量同步不會更新權限，要定期做完整同步。"], ["不需要同步，每次提問都取得最新資料。"]],
+      ["把關風險", ["確認 {Access Permissions} 沒被改成「組織內所有人」。"], ["寫入動作一開始都需使用者核准，管理員可在 Microsoft Purview 稽核。", "啟用有寫入工具的連接器前，先審查工具與隱私條款。"]]
+    ],
+    whoH: "即時查詢型：誰看得到一個連接器？",
+    whoLead: "下面五點都成立，使用者才看得到：",
+    who: ["發行者類型已在 Agent and plugin access 允許（或已個別啟用該連接器）", "連接器已啟用", "使用者在 User access 的範圍內", "使用者在該連接器的 Staged rollout 內", "使用者有 Microsoft 365 Copilot 授權"],
+    whoNote: "設定最多約 10 分鐘生效。要驗證，用測試帳號登入 Copilot Chat，看 {Settings > Sources}。",
+    newsH: "追蹤新功能（Roadmap）"
+  },
+  pk: {
+    lead: "依官方文件規則整理的決策輔助：回答 5 個問題，立即看到建議與原因，並可帶著結果到探索器看符合的連接器。這是討論的起點，不是授權或支援承諾。",
+    progress: n => `已回答 ${n} / 5`,
+    reset: "重新回答",
+    empty: "回答全部 5 個問題後，這裡會顯示建議。",
+    q: {
+      where: { t: "資料放在哪裡？", o: { cloud: ["雲端服務／SaaS", "例如 Jira Cloud、Salesforce、Box"], onprem: ["內部部署系統", "例如檔案共用、SQL Server、Confluence Server"], custom: ["自家系統或內部 API", "自行開發的應用程式與資料"] } },
+      fresh: { t: "資料需要多即時？", o: { live: ["必須即時，或不能被索引", "變動很快、屬於敏感資料，或政策不允許複製"], stable: ["定期更新即可", "可接受索引延遲，內容相對穩定"] } },
+      rw: { t: "Copilot 只讀取，還是也要寫入？", o: { read: ["只讀取／搜尋", "查詢、摘要、引用來源內容"], write: ["也要建立、更新或刪除", "例如建立工單、更新記錄"] } },
+      who: { t: "由誰來連接？", o: { admin: ["IT 管理員為全組織設定", "組織層級，一次設定全員共用"], user: ["使用者各自用自己的帳號", "使用者層級，沿用個人權限"] } },
+      lic: { t: "目前的授權是？", o: { m365: ["Microsoft 365（無 Copilot）", "尚未購買 Copilot"], copilot: ["含 Microsoft 365 Copilot", "附加授權或 Microsoft 365 E7"], studio: ["僅 Copilot Studio／隨用隨付", "Copilot Studio 授權或 Copilot 隨用隨付"] } }
+    },
+    verdict: { synced: "建議：同步索引型（Synced）", federated: "建議：即時查詢型（Federated）", none: "沒有單一類型能同時滿足所有條件" },
+    alsoOk: "另一種類型也可行，可依下方原因取捨。",
+    whyH: "判斷依據", noteH: "留意事項", nextH: "下一步",
+    why: {
+      onprem: "內部部署的資料需透過 Microsoft Graph connector agent 同步索引；即時查詢型則需要 Copilot 連得到的 MCP 端點。",
+      live: "資料必須即時、或不能被索引時，只有即時查詢型不建立索引。",
+      write: "建立、更新、刪除資料只有即時查詢型支援（需連接器提供對應工具，且動作需使用者核准）。",
+      licM365: "沒有 Copilot 授權時，即時查詢型不可用。",
+      licStudio: "僅有 Copilot Studio／隨用隨付授權時，即時查詢型不可用。",
+      whoUser: "兩種都可行時，由使用者各自連接的模式，較貼近即時查詢型（使用者層級存取）。",
+      whoAdmin: "兩種都可行時，由管理員一次為全組織設定，同步索引型最直接（組織層級存取）。"
+    },
+    note: {
+      licM365Syn: "目前的授權下，同步索引的內容只能用在 Microsoft Search，不能作為 Copilot 的 grounding。",
+      licStudioSyn: "目前的授權下，同步索引的內容只能用於代理程式，不能作為 Copilot 的 grounding。",
+      userSyn: "同步索引型通常由管理員為全組織設定。使用者層級的自助式同步（Self-serve sync）目前為預覽、僅限部分客戶，且只支援 Microsoft 發行的連接器（目前為 Confluence cloud 與 Jira cloud）。",
+      adminFed: "即時查詢型由管理員啟用與治理，但每位使用者仍須用自己的帳號登入授權。",
+      custom: "自家系統：同步索引型可用 Microsoft Graph connectors API 自建；即時查詢型可用自己的 MCP 伺服器建立自訂 federated connector。",
+      syncDelay: "同步索引有索引延遲；增量爬取不會更新權限，需定期做完整爬取。",
+      fedNet: "若 MCP 伺服器以來源 IP 限制連入流量，需放行 Microsoft 365 Copilot 的靜態輸出 IP。",
+      noneTip: "可放寬其中一項條件（例如取得 Copilot 授權），或兩種類型搭配使用：例如內部部署資料用同步索引、SaaS 的寫入動作用即時查詢。",
+      writeTools: "不是每個即時查詢型連接器都提供寫入工具。能否建立、更新或刪除資料，要看連接器公開哪些工具；可在 Copilot 的 Settings > Sources 展開 Write/Delete tools 查看。",
+      onpremAgent: "內部部署的連接器需要安裝 Microsoft Graph connector agent。夥伴圖庫另有 SharePoint 2013／2016／2019、Documentum、FileNet 等內部部署系統的連接器。",
+      cloudOnly: "探索器的結果不含自架或內部部署的連接器；要連內部部署系統，請把第一題改選「內部部署系統」。"
+    },
+    next: { overview: "連接器概觀", prereq: "授權與先決條件", gallery: "Microsoft 建置的連接器圖庫", fed: "即時查詢型連接器概觀", custom: "設定自訂 federated connector", admin: "管理員發佈的 federated connector", graph: "Microsoft Graph connectors API" },
+    m: {
+      explore: ty => `到探索器，看符合條件的${ty}連接器 →`,
+      custom: "自家系統通常沒有現成的連接器。可以自行開發連接器（見下方「下一步」），或到探索器的圖鑑找找有沒有類似的系統。",
+      none: "沒有單一類型能同時滿足所有條件。放寬其中一項條件，就能看到符合的連接器。"
+    }
+  },
+  lic: {
+    cols: ["授權", "同步索引：Microsoft Search", "同步索引：Copilot grounding 與代理程式", "即時查詢型"],
+    rows: { m365: "Microsoft 365（任一方案）", addon: "Microsoft 365 + Microsoft 365 Copilot 附加授權", e7: "Microsoft 365 E7", studio: "Microsoft 365 + Copilot Studio 授權", payg: "Microsoft 365 Copilot 隨用隨付" },
+    cell: { yes: "✅ 可用", no: "❌ 不可用", agents: "⚠️ 僅代理程式（無 Copilot grounding）" },
+    note: "對已有 Microsoft 365 授權的租用戶，同步索引不需額外費用。使用語意搜尋時，租用戶內至少需有 1 個 Copilot 授權。"
+  },
+  news: {
+    k: "最新動態", h: "連接器近期發展",
+    lead: "整理與連接器相關的 Roadmap 項目。月份為 Roadmap 公布的時間，實際推出日期請以官方為準。",
+    asof: d => `資料日期：${d}`,
+    g1: "已推出／推出中", g2: "開發中", roadmap: "在 Roadmap 查看",
+    status: { launched: "已推出", rolling: "逐步推出中", dev: "開發中" },
+    target: m => `Roadmap 目標：${m}`,
+    items: {
+      fedGa: ["即時查詢型連接器正式推出（GA）", "2025 年 12 月先行預覽，2026 年 4 月正式提供：連接器不索引資料，改為查詢當下即時取用。"],
+      govern: ["管理員可在 admin center 治理即時查詢型連接器", "管理員可在 Microsoft 365 admin center 管理與治理 federated connector。"],
+      custom: ["管理員可建立並部署自訂 MCP 連接器", "以自己的 MCP 伺服器串接內部系統；目前為預覽／Targeted Release 階段。"],
+      discover: ["更容易在 Copilot 中發現連接器來源", "使用者更容易在 Copilot 中找到並選用連接器的內容來源（含內容來源篩選）。"],
+      write: ["即時查詢型連接器支援寫入、更新與刪除", "連接器提供對應工具時，使用者可請 Copilot 在第三方系統建立、更新或刪除資料；動作需使用者核准。"],
+      usage: ["admin center 的連接器使用情況報表", "管理員可檢視 Microsoft 365 Copilot 連接器的使用情況。"],
+      selfserve: ["自助式同步連接器（Self-serve sync）", "使用者用自己的帳號登入，同步與個人相關的內容；目前支援 Confluence cloud 與 Jira cloud。Learn 標示為預覽、僅限部分客戶；Roadmap 狀態為開發中，原訂 2026 年 9 月正式推出。"],
+      webhook: ["以 Webhook 通知提升內容新鮮度", "連接器可透過 Webhook 通知更快反映來源的變更。截至資料日期仍在開發中，Roadmap 原訂 2026 年 10 月。"]
+    }
+  },
+  src: {
+    k: "資料來源", h: "官方文件與出處",
+    lead: "本頁整理自下列官方資料，實際內容請以原文為準。",
+    list: {
+      overview: "Copilot 連接器概觀", prereq: "連接器的授權與先決條件", deploy: "在 admin center 部署連接器", manage: "管理連接器的連線",
+      fed: "即時查詢型（Federated）連接器概觀", manageFed: "管理即時查詢型連接器的可用範圍", admin: "管理員發佈的 federated connector",
+      custom: "設定自訂 federated connector", discovery: "讓 Copilot 更容易找到連接器內容", roadmap: "Microsoft 365 Roadmap"
+    },
+    back: "回到 Power of Copilot 入口"
+  },
+  footer: {
+    p1: "本頁整理自官方文件，為一般性說明；實際畫面、選單名稱與可用設定，請以你租戶看到的 admin center 為準。",
+    link: "探索器的完整資料來源 →"
+  }
+},
+"zh-Hans": {
+  title: "管理员上手指南｜Power of Copilot",
+  skip: "跳到主要内容",
+  brandSub: "Copilot 连接器管理员指南",
+  langGroup: "语言",
+  navLabel: "页内导航",
+  themeToDark: "深色模式",
+  themeToLight: "浅色模式",
+  topic: "项目",
+  nav: { plan: "规划", adopt: "落地", setup: "配置", manage: "管理与治理", sources: "资料来源" },
+  type: { s: "同步索引型", f: "实时查询型" },
+  hero: {
+    eyebrow: "管理员指南",
+    h1: "IT 管理员上手指南",
+    lead: "从规划、落地、配置，到管理与治理，一步一步来。同步索引型和实时查询型两类连接器都涵盖。",
+    shotNote: "目前是纯文字版，管理中心的实机截图之后补上；菜单名称可能因租户版本略有不同。",
+    cta1: "回到连接器入门",
+    cta2: "看两类连接器的区别"
+  },
+  phases: {
+    k: "四个阶段", h: "先看全貌，再一个阶段一个阶段做",
+    lead: "每个阶段都分别说明两类连接器：",
+    legendS: "先把内容建成索引", legendF: "提问时才去来源系统查询",
+    items: [
+      ["1", "规划", "选类型、确认许可证和角色"],
+      ["2", "落地", "小范围试用，再逐步扩大"],
+      ["3", "配置", "在管理中心实际设置"],
+      ["4", "管理与治理", "看状态、管控谁能用、把关风险"]
+    ]
+  },
+  plan: {
+    k: "第 1 阶段", h: "规划：先想清楚三件事",
+    lead: "选哪一类、要什么许可证、谁来负责，决定了后面怎么走。",
+    rows: [
+      ["运作方式", "先把内容建成索引，存放在 Microsoft 365。", "提问时才去来源系统实时查询，不建索引。"],
+      ["适合", ["大量文档、知识库、工单。", "内容有更新延迟。"], ["要求实时、或不能被复制的数据。", "部分连接器可以写入，需用户批准。"]],
+      ["许可证", ["Microsoft 365 任一方案都能用于 Microsoft Search。", "要让 Copilot 引用内容，需要 Copilot 许可证。", "建立索引不另外收费。"], ["每位用户都需要 Copilot 附加许可证（或 E7）。", "Copilot Studio 许可证和按量付费不支持。"]],
+      ["谁来做", ["{AI Administrator}", "再加上来源系统的管理权限。"], ["治理：{Global Administrator} 或 {Search Administrator}", "不需要来源系统的管理权限。"]]
+    ],
+    pickH: "不确定选哪一类？回答 5 个问题",
+    licH: "查看完整许可证表",
+    find: "最后，到探索器的图鉴里查一查，你的系统有没有现成的连接器。",
+    findLink: "打开图鉴 →"
+  },
+  adopt: {
+    k: "第 2 阶段", h: "落地：小范围开始，再逐步扩大",
+    lead: "先让一小部分人用起来、确认没问题，再开放给更多人。",
+    steps: [
+      "挑 1–2 个大家常查、风险低的系统开始，比如知识库或工单。",
+      "先只开放给一小部分试用者。",
+      "补充连接器的名称和描述，让 Copilot 知道什么时候该用它。",
+      "请试用者反馈；效果没问题，再扩大到全组织。",
+      "告诉用户和服务台：能问什么、数据来自哪里。带写入功能的连接器，还要说明操作用的是用户自己的权限。"
+    ],
+    limitH: "怎么只开放给一小部分人？",
+    limit: ["创建连接器时，先部署给一小部分用户。", "在 {Your connections} 里设置 {Staged rollout}，指定用户或组。"],
+    note: "以上是建议做法，不是官方规定；“先小范围验证、再扩大”来自 Learn 文档。"
+  },
+  setup: {
+    k: "第 3 阶段", h: "配置：到管理中心动手设置",
+    lead: "同步索引型要自己创建连接。实时查询型里，Microsoft 内置的默认就开放、用户各自登录即可；管理员发布和自建的，才需要先创建。",
+    cards: [
+      { t: "s", who: "需要 {AI Administrator}", groups: [
+        { steps: [
+          "登录 Microsoft 365 管理中心，选择 {Copilot > Connectors}。",
+          "选择 {Gallery}，挑选要连接的数据源。",
+          "输入名称和数据源网址，选择身份验证方式。",
+          "先部署给一小部分用户。",
+          "选择 {Create}，开始建立索引。",
+          "在成功页面补充连接器描述。"
+        ] }
+      ] },
+      { t: "f", who: "按来源分三种", groups: [
+        { h: "Microsoft 内置和合作伙伴", steps: [
+          "在 {Agents > Settings > Agent and plugin access} 里允许该发布者类型，或到 {Your connections} 单独启用。",
+          "用户在 Copilot 的 {Settings > Sources} 里选择 {Connect}，登录自己的账号。"
+        ] },
+        { h: "管理员发布（MCP 模板）", steps: [
+          "在 {Copilot > Connectors} 的目录里选择模板。",
+          "填写 MCP 终结点和身份验证方式，选择适用对象。",
+          "选择 {Create}，大约 30 分钟后即可测试。"
+        ] },
+        { h: "自建（自己的 MCP 服务器）", steps: [
+          "先在 Teams Developer Portal 里配置好身份验证。",
+          "在 {Gallery} 的 Created by your org 下选择 {Create a new connector}。",
+          "填写名称、描述、Base URL 和注册 ID，选择 {Save}。"
+        ] }
+      ] }
+    ],
+    permH: "最容易设错的一个选项",
+    perm: "同步索引型 {Custom setup > Users} 里的 {Access Permissions}：默认是“只有原本就有权限的人能看到”。改成“组织内所有人”之后，这个连接器的内容就不再跟随来源系统的权限了。",
+    d1H: "同步索引型的 Custom setup：三个标签页",
+    d1: ["{Users}：谁能看到索引内容（访问权限）、用户映射", "{Content}：属性、别名、语义标签", "{Sync}：完整同步和增量同步的计划", "多数设置已经有优化过的默认值，通常不用改。"],
+    d2H: "自建连接器要准备什么",
+    d2: [
+      ["同步索引型", "用 Microsoft Graph connectors API 或 Microsoft 365 Agents Toolkit 创建。"],
+      ["实时查询型", "一个 MCP 服务器，公开你想让 Copilot 使用的工具（比如查询、获取）；{Global Administrator} 或 {AI Administrator} 角色；Microsoft Entra 角色和 Teams Developer Portal 的访问权限；开发者名称、网站、隐私政策和使用条款链接。如果服务器按来源 IP 限制入站流量，要放行 Microsoft 365 Copilot 的静态出站 IP（默认已启用）。"]
+    ],
+    d3H: "特定连接器的限制",
+    d3: [
+      ["Enterprise Websites", "每个连接最多 50 个根网址；不支持 SAML、JWT、表单式身份验证和动态内容；仅限同一域名。"],
+      ["CSV", "列标题不能含空格；数据源须为 SharePoint 或 Azure Data Lake Storage；需要 Microsoft Entra 应用和管理员同意。"]
+    ]
+  },
+  manage: {
+    k: "第 4 阶段", h: "管理与治理：看状态、管控谁能用、把关风险",
+    lead: "两类连接器都在 {Copilot > Connectors > Your connections} 里管理。",
+    rows: [
+      ["看状态", ["每个连接都有状态：{Syncing}、{Ready}、{Paused}、{Failed}。", "严重失败会出现在 Service health 的 Issues 里，也可以订阅邮件通知。"], ["确认连接器已启用。", "确认哪些用户或组能用。"]],
+      ["管控谁能用", ["合作伙伴连接器可以用 {Copilot Visibility} 开关，决定是否出现在 Copilot 里。"], ["三道控制：", "{Agent and plugin access}：按发布者类型整批开关", "{User access}：谁能使用任何连接器", "单个连接器的 Enable 和 {Staged rollout}"]],
+      ["数据更新", ["按计划同步，也可以手动启动。", "增量同步不会更新权限，要定期做完整同步。"], ["不需要同步，每次提问拿到的都是最新数据。"]],
+      ["把关风险", ["确认 {Access Permissions} 没有被改成“组织内所有人”。"], ["写入操作一开始都需要用户批准，管理员可以在 Microsoft Purview 里审计。", "启用带写入工具的连接器之前，先审查工具和隐私条款。"]]
+    ],
+    whoH: "实时查询型：谁能看到一个连接器？",
+    whoLead: "下面五点都成立，用户才看得到：",
+    who: ["发布者类型已在 Agent and plugin access 里允许（或已单独启用该连接器）", "连接器已启用", "用户在 User access 的范围内", "用户在该连接器的 Staged rollout 内", "用户有 Microsoft 365 Copilot 许可证"],
+    whoNote: "设置最多约 10 分钟生效。要验证，可以用测试账号登录 Copilot Chat，查看 {Settings > Sources}。",
+    newsH: "跟进新功能（Roadmap）"
+  },
+  pk: {
+    lead: "依据官方文档规则整理的决策辅助：回答 5 个问题，马上看到建议和理由，还能带着结果到探索器查看符合条件的连接器。它只是讨论的起点，不代表许可或支持承诺。",
+    progress: n => `已回答 ${n} / 5`,
+    reset: "重新回答",
+    empty: "回答完全部 5 个问题，这里就会给出建议。",
+    q: {
+      where: { t: "数据放在哪里？", o: { cloud: ["云服务/SaaS", "例如 Jira Cloud、Salesforce、Box"], onprem: ["本地部署的系统", "例如文件共享、SQL Server、Confluence Server"], custom: ["自有系统或内部 API", "自行开发的应用和数据"] } },
+      fresh: { t: "数据需要多实时？", o: { live: ["必须实时，或不能被索引", "变化很快、属于敏感数据，或政策不允许复制"], stable: ["定期更新即可", "能接受索引延迟，内容相对稳定"] } },
+      rw: { t: "Copilot 只读取，还是也要写入？", o: { read: ["只读取/检索", "查询、总结、引用来源内容"], write: ["还要创建、更新或删除", "例如创建工单、更新记录"] } },
+      who: { t: "由谁来连接？", o: { admin: ["IT 管理员为全组织配置", "组织级，配置一次全员共用"], user: ["用户各自用自己的账号", "用户级，沿用个人权限"] } },
+      lic: { t: "当前的许可证是？", o: { m365: ["Microsoft 365（不含 Copilot）", "尚未购买 Copilot"], copilot: ["含 Microsoft 365 Copilot", "附加许可证或 Microsoft 365 E7"], studio: ["仅 Copilot Studio/按量付费", "Copilot Studio 许可证或 Copilot 按量付费"] } }
+    },
+    verdict: { synced: "建议：同步索引型（Synced）", federated: "建议：实时查询型（Federated）", none: "没有哪一类能同时满足所有条件" },
+    alsoOk: "另一类也可行，可结合下面的理由取舍。",
+    whyH: "判断依据", noteH: "注意事项", nextH: "下一步",
+    why: {
+      onprem: "本地部署的数据需通过 Microsoft Graph connector agent 同步并建立索引；实时查询型则要求有 Copilot 能访问到的 MCP 终结点。",
+      live: "数据必须实时、或不能被索引时，只有实时查询型不建立索引。",
+      write: "创建、更新、删除数据只有实时查询型支持（需连接器提供相应工具，且操作需用户批准）。",
+      licM365: "没有 Copilot 许可证时，实时查询型不可用。",
+      licStudio: "只有 Copilot Studio/按量付费许可证时，实时查询型不可用。",
+      whoUser: "两类都可行时，由用户各自连接的模式更贴近实时查询型（用户级访问）。",
+      whoAdmin: "两类都可行时，由管理员一次性为全组织配置，同步索引型最直接（组织级访问）。"
+    },
+    note: {
+      licM365Syn: "当前许可证下，同步索引的内容只能用于 Microsoft Search，不能作为 Copilot 的 grounding。",
+      licStudioSyn: "当前许可证下，同步索引的内容只能用于智能体，不能作为 Copilot 的 grounding。",
+      userSyn: "同步索引型通常由管理员为全组织配置。用户级的自助同步（Self-serve sync）目前为预览，仅限部分客户，且只支持 Microsoft 发布的连接器（目前为 Confluence cloud 和 Jira cloud）。",
+      adminFed: "实时查询型由管理员启用并治理，但每位用户仍需用自己的账号登录授权。",
+      custom: "自有系统：同步索引型可用 Microsoft Graph connectors API 自建；实时查询型可基于自己的 MCP 服务器创建自定义 federated connector。",
+      syncDelay: "同步索引存在索引延迟；增量爬取不会更新权限，需定期执行完整爬取。",
+      fedNet: "如果 MCP 服务器按来源 IP 限制入站流量，需放行 Microsoft 365 Copilot 使用的静态出站 IP。",
+      noneTip: "可以放宽其中一项条件（例如获取 Copilot 许可证），或者两类搭配使用：比如本地部署的数据用同步索引，SaaS 里的写入操作用实时查询。",
+      writeTools: "不是每个实时查询型连接器都提供写入工具。能否创建、更新或删除数据，要看连接器公开了哪些工具；可在 Copilot 的 Settings > Sources 中展开 Write/Delete tools 查看。",
+      onpremAgent: "本地部署的连接器需要安装 Microsoft Graph connector agent。合作伙伴图库另有 SharePoint 2013/2016/2019、Documentum、FileNet 等本地部署系统的连接器。",
+      cloudOnly: "探索器的结果不含自托管或本地部署的连接器；要连接本地部署的系统，请把第一题改选“本地部署的系统”。"
+    },
+    next: { overview: "连接器概述", prereq: "许可证与先决条件", gallery: "Microsoft 构建的连接器图库", fed: "实时查询型连接器概述", custom: "设置自定义 federated connector", admin: "管理员发布的 federated connector", graph: "Microsoft Graph connectors API" },
+    m: {
+      explore: ty => `到探索器，查看符合条件的${ty}连接器 →`,
+      custom: "自有系统通常没有现成的连接器。可以自行开发连接器（见下方“下一步”），或到探索器的图鉴里找找有没有类似的系统。",
+      none: "没有哪一类能同时满足所有条件。放宽其中一项条件，就能看到符合的连接器。"
+    }
+  },
+  lic: {
+    cols: ["许可证", "同步索引：Microsoft Search", "同步索引：Copilot grounding 和智能体", "实时查询型"],
+    rows: { m365: "Microsoft 365（任一方案）", addon: "Microsoft 365 + Microsoft 365 Copilot 附加许可证", e7: "Microsoft 365 E7", studio: "Microsoft 365 + Copilot Studio 许可证", payg: "Microsoft 365 Copilot 按量付费" },
+    cell: { yes: "✅ 可用", no: "❌ 不可用", agents: "⚠️ 仅限智能体（无 Copilot grounding）" },
+    note: "对已有 Microsoft 365 许可证的租户，同步索引无需额外付费。使用语义搜索时，租户内至少要有 1 个 Copilot 许可证。"
+  },
+  news: {
+    k: "最新动态", h: "连接器近期进展",
+    lead: "整理与连接器相关的 Roadmap 条目。月份是 Roadmap 公布的时间，实际发布日期请以官方为准。",
+    asof: d => `数据日期：${d}`,
+    g1: "已发布/发布中", g2: "开发中", roadmap: "在 Roadmap 中查看",
+    status: { launched: "已发布", rolling: "逐步发布中", dev: "开发中" },
+    target: m => `Roadmap 目标：${m}`,
+    items: {
+      fedGa: ["实时查询型连接器正式发布（GA）", "2025 年 12 月先行预览，2026 年 4 月正式提供：连接器不再索引数据，而是在查询时实时取用。"],
+      govern: ["管理员可在管理中心治理实时查询型连接器", "管理员可在 Microsoft 365 管理中心管理和治理 federated connector。"],
+      custom: ["管理员可创建并部署自定义 MCP 连接器", "基于自己的 MCP 服务器对接内部系统；目前处于预览/Targeted Release 阶段。"],
+      discover: ["在 Copilot 中更容易发现连接器来源", "用户更容易在 Copilot 里找到并选用连接器的内容来源（含内容来源筛选）。"],
+      write: ["实时查询型连接器支持写入、更新和删除", "连接器提供相应工具时，用户可让 Copilot 在第三方系统中创建、更新或删除数据；操作需用户确认。"],
+      usage: ["管理中心的连接器使用情况报表", "管理员可以查看 Microsoft 365 Copilot 连接器的使用情况。"],
+      selfserve: ["自助式同步连接器（Self-serve sync）", "用户用自己的账号登录，同步与个人相关的内容；目前支持 Confluence cloud 和 Jira cloud。Learn 标注为预览，仅限部分客户；Roadmap 状态为开发中，原定 2026 年 9 月正式发布。"],
+      webhook: ["借助 Webhook 通知提升内容新鲜度", "连接器可通过 Webhook 通知更快反映来源的变化。截至数据日期仍在开发中，Roadmap 原定 2026 年 10 月。"]
+    }
+  },
+  src: {
+    k: "资料来源", h: "官方文档与出处",
+    lead: "本页整理自以下官方资料，具体内容请以原文为准。",
+    list: {
+      overview: "Copilot 连接器概述", prereq: "连接器的许可证与先决条件", deploy: "在管理中心部署连接器", manage: "管理连接器的连接",
+      fed: "实时查询型（Federated）连接器概述", manageFed: "管理实时查询型连接器的可用范围", admin: "管理员发布的 federated connector",
+      custom: "设置自定义 federated connector", discovery: "让 Copilot 更容易找到连接器内容", roadmap: "Microsoft 365 Roadmap"
+    },
+    back: "回到 Power of Copilot 入口"
+  },
+  footer: {
+    p1: "本页整理自官方文档，属于一般性说明；实际界面、菜单名称和可用设置，请以你的租户里看到的管理中心为准。",
+    link: "探索器的完整资料来源 →"
+  }
+},
+"en": {
+  title: "Connectors setup guide for IT admins | Power of Copilot",
+  skip: "Skip to main content",
+  brandSub: "Copilot connectors admin guide",
+  langGroup: "Language",
+  navLabel: "On this page",
+  themeToDark: "Dark mode",
+  themeToLight: "Light mode",
+  topic: "Topic",
+  nav: { plan: "Plan", adopt: "Adopt", setup: "Set up", manage: "Manage & govern", sources: "Sources" },
+  type: { s: "Synced", f: "Federated" },
+  hero: {
+    eyebrow: "ADMIN GUIDE",
+    h1: "Connectors setup guide for IT admins",
+    lead: "Plan, adopt, set up, then manage and govern, one step at a time. Both connector types, synced and federated, are covered.",
+    shotNote: "Text-only for now; real admin center screenshots will be added later. Menu names can vary by tenant version.",
+    cta1: "Back to Connectors 101",
+    cta2: "See how the two types differ"
+  },
+  phases: {
+    k: "FOUR PHASES", h: "See the whole picture, then take one phase at a time",
+    lead: "Each phase explains both connector types:",
+    legendS: "Index the content first", legendF: "Ask the source system at question time",
+    items: [
+      ["1", "Plan", "Pick a type, check licenses and roles"],
+      ["2", "Adopt", "Start with a small pilot, then widen"],
+      ["3", "Set up", "Configure it in the admin center"],
+      ["4", "Manage & govern", "Watch status, control who can use what, manage risk"]
+    ]
+  },
+  plan: {
+    k: "PHASE 1", h: "Plan: decide three things first",
+    lead: "Which type, which license, and who does the work shape everything that follows.",
+    rows: [
+      ["How it works", "Indexes the content first and keeps the index in Microsoft 365.", "Queries the source system at the moment a question is asked. No index."],
+      ["Good for", ["Lots of documents, knowledge bases and tickets.", "Content updates with a delay."], ["Data that must be live or must not be copied.", "Some connectors can write, with the user's approval."]],
+      ["License", ["Any Microsoft 365 plan works for Microsoft Search.", "For Copilot to cite the content, you need a Copilot license.", "Indexing has no extra charge."], ["Every user needs a Copilot add-on license (or E7).", "Copilot Studio licenses and pay-as-you-go aren't supported."]],
+      ["Who does it", ["{AI Administrator}", "plus admin access to the source system."], ["Governance: {Global Administrator} or {Search Administrator}", "No admin access to the source system needed."]]
+    ],
+    pickH: "Not sure which type? Answer 5 questions",
+    licH: "See the full license table",
+    find: "Finally, check the Explorer's gallery for ready-made connectors for your systems.",
+    findLink: "Open the gallery →"
+  },
+  adopt: {
+    k: "PHASE 2", h: "Adopt: start small, then widen",
+    lead: "Get a small group using it and confirm it works, then open it to more people.",
+    steps: [
+      "Start with one or two systems people look things up in often and that carry low risk, such as a knowledge base or tickets.",
+      "Open it to a small pilot group first.",
+      "Add a clear name and description so Copilot knows when to use the connector.",
+      "Ask the pilot users for feedback. If it works, widen it to the whole organization.",
+      "Tell users and the help desk what they can ask and where answers come from. For connectors that can write, explain that actions use the user's own permissions."
+    ],
+    limitH: "How do I limit it to a small group?",
+    limit: ["When you create the connector, deploy it to a small group of users first.", "In {Your connections}, set {Staged rollout} to pick users or groups."],
+    note: "These are suggestions, not official rules; \u201cvalidate small, then widen\u201d comes from the Learn documentation."
+  },
+  setup: {
+    k: "PHASE 3", h: "Set up: configure it in the admin center",
+    lead: "Synced connectors need you to create a connection. For federated ones, Microsoft-built connectors are open by default and users just sign in; only admin-published and custom ones need to be created first.",
+    cards: [
+      { t: "s", who: "Requires {AI Administrator}", groups: [
+        { steps: [
+          "Sign in to the Microsoft 365 admin center and select {Copilot > Connectors}.",
+          "Select {Gallery} and pick the data source.",
+          "Enter a name and the data source URL, then choose an authentication method.",
+          "Deploy to a small group of users first.",
+          "Select {Create} to start indexing.",
+          "On the success screen, add a connector description."
+        ] }
+      ] },
+      { t: "f", who: "Three kinds, by origin", groups: [
+        { h: "Microsoft-built and partner", steps: [
+          "In {Agents > Settings > Agent and plugin access}, allow the publisher type, or turn the connector on individually in {Your connections}.",
+          "Users select {Connect} in Copilot {Settings > Sources} and sign in with their own account."
+        ] },
+        { h: "Admin-published (MCP templates)", steps: [
+          "Pick a template in the {Copilot > Connectors} catalog.",
+          "Enter the MCP endpoint and authentication, and choose the audience.",
+          "Select {Create}; it's ready to test in about 30 minutes."
+        ] },
+        { h: "Custom (your own MCP server)", steps: [
+          "Set up authentication in the Teams Developer Portal first.",
+          "Under Created by your org in {Gallery}, select {Create a new connector}.",
+          "Enter the name, description, Base URL and registration ID, then select {Save}."
+        ] }
+      ] }
+    ],
+    permH: "The one option that's easiest to get wrong",
+    perm: "{Access Permissions} under synced {Custom setup > Users}: the default is \u201conly users with access to the content.\u201d Once you change it to \u201ceveryone in the organization,\u201d this connector's content no longer follows the source system's permissions.",
+    d1H: "Synced Custom setup: three tabs",
+    d1: ["{Users}: who can see the indexed content (access permissions) and identity mapping", "{Content}: properties, aliases and semantic labels", "{Sync}: full and incremental sync schedules", "Most settings already have optimized defaults, so you usually don't need to change them."],
+    d2H: "What you need to build your own",
+    d2: [
+      ["Synced", "Build it with the Microsoft Graph connectors API or the Microsoft 365 Agents Toolkit."],
+      ["Federated", "An MCP server that exposes the tools you want Copilot to use (for example, search or fetch); the {Global Administrator} or {AI Administrator} role; a Microsoft Entra role and Teams Developer Portal access; and the developer name, website, privacy policy and terms of use links. If the server restricts incoming traffic by source IP, allow the static egress IP addresses used by Microsoft 365 Copilot (enabled by default)."]
+    ],
+    d3H: "Limits of specific connectors",
+    d3: [
+      ["Enterprise Websites", "Up to 50 root URLs per connection; no SAML, JWT or forms-based authentication, and no dynamic content; same domain only."],
+      ["CSV", "No spaces in column headers; the source must be SharePoint or Azure Data Lake Storage; needs a Microsoft Entra app and admin consent."]
+    ]
+  },
+  manage: {
+    k: "PHASE 4", h: "Manage & govern: watch status, control who can use what, manage risk",
+    lead: "Both types are managed in {Copilot > Connectors > Your connections}.",
+    rows: [
+      ["Check status", ["Each connection has a state: {Syncing}, {Ready}, {Paused} or {Failed}.", "Serious failures show up under Issues in Service health, and you can subscribe to email alerts."], ["Confirm the connector is enabled.", "Confirm which users or groups can use it."]],
+      ["Control who can use it", ["For partner connectors, the {Copilot Visibility} toggle decides whether they appear in Copilot."], ["Three controls:", "{Agent and plugin access}: switch by publisher type, in bulk", "{User access}: who can use any connector", "A single connector's Enable and {Staged rollout}"]],
+      ["Data freshness", ["Syncs on a schedule, and you can also start one manually.", "Incremental syncs don't update permissions, so run full syncs periodically."], ["No sync needed; every question gets the latest data."]],
+      ["Manage risk", ["Check that {Access Permissions} wasn't changed to \u201ceveryone in the organization.\u201d"], ["Write actions initially need the user's approval, and admins can audit them in Microsoft Purview.", "Before you enable a connector that has write tools, review its tools and privacy terms."]]
+    ],
+    whoH: "Federated: who can see a connector?",
+    whoLead: "All five of these must be true before a user can see it:",
+    who: ["The publisher type is allowed in Agent and plugin access (or the connector was turned on individually)", "The connector is enabled", "The user is within User access", "The user is within the connector's Staged rollout", "The user has a Microsoft 365 Copilot license"],
+    whoNote: "Changes take up to about 10 minutes. To verify, sign in as a test user and check {Settings > Sources} in Copilot Chat.",
+    newsH: "Follow new features (Roadmap)"
+  },
+  pk: {
+    lead: "A decision aid based on the rules in the official documentation. Answer five questions to see a recommendation and the reasons behind it, then take the result to the Explorer to see the connectors that fit. It is a starting point for discussion, not a licensing or support commitment.",
+    progress: n => `Answered ${n} of 5`,
+    reset: "Start over",
+    empty: "Answer all five questions to see a recommendation here.",
+    q: {
+      where: { t: "Where does the data live?", o: { cloud: ["Cloud service / SaaS", "e.g. Jira Cloud, Salesforce, Box"], onprem: ["On-premises system", "e.g. file share, SQL Server, Confluence Server"], custom: ["Own system or internal API", "Apps and data you build yourself"] } },
+      fresh: { t: "How fresh must it be?", o: { live: ["Must be live, or must not be indexed", "Changes fast, is sensitive, or policy forbids copying"], stable: ["Periodic refresh is fine", "Indexing delay is acceptable; content is fairly stable"] } },
+      rw: { t: "Read only, or write too?", o: { read: ["Read / search only", "Query, summarize, cite source content"], write: ["Also create, update or delete", "e.g. create a ticket, update a record"] } },
+      who: { t: "Who connects?", o: { admin: ["IT admin, for the whole org", "Org-level: set up once for everyone"], user: ["Each user, with their own account", "User-level: personal permissions apply"] } },
+      lic: { t: "What is the current license?", o: { m365: ["Microsoft 365 (no Copilot)", "No Copilot license yet"], copilot: ["Includes Microsoft 365 Copilot", "Add-on license or Microsoft 365 E7"], studio: ["Copilot Studio / pay-as-you-go only", "Copilot Studio license or Copilot pay-as-you-go"] } }
+    },
+    verdict: { synced: "Suggested: Synced connectors", federated: "Suggested: Federated connectors", none: "No single type meets all of the conditions" },
+    alsoOk: "The other type is also viable; weigh the reasons below.",
+    whyH: "WHY", noteH: "KEEP IN MIND", nextH: "NEXT STEPS",
+    why: {
+      onprem: "On-premises data is indexed through the Microsoft Graph connector agent; federated connectors need an MCP endpoint that Copilot can reach.",
+      live: "When data must be live or must not be indexed, only federated connectors avoid indexing.",
+      write: "Only federated connectors support create, update and delete (the connector must expose the tools, and actions need user approval).",
+      licM365: "Federated connectors aren't available without a Copilot license.",
+      licStudio: "Federated connectors aren't available with only a Copilot Studio or pay-as-you-go license.",
+      whoUser: "When both work, users connecting with their own accounts fits federated connectors (user-level access) best.",
+      whoAdmin: "When both work, an admin setting it up once for the whole organization fits synced connectors (org-level access) best."
+    },
+    note: {
+      licM365Syn: "With this license, synced content can be used in Microsoft Search only, not as Copilot grounding.",
+      licStudioSyn: "With this license, synced content can be used in agents only, not as Copilot grounding.",
+      userSyn: "Synced connectors are normally set up by an admin for the whole organization. User-level self-serve sync is in preview for a limited set of customers and supports only Microsoft-published connectors (currently Confluence cloud and Jira cloud).",
+      adminFed: "An admin enables and governs federated connectors, but each user still signs in with their own account.",
+      custom: "Own system: build a synced connector with the Microsoft Graph connectors API, or a custom federated connector on your own MCP server.",
+      syncDelay: "Synced connectors have indexing delay; incremental crawls don't update permissions, so run full crawls periodically.",
+      fedNet: "If your MCP server limits inbound traffic by source IP, allow the static egress IPs used by Microsoft 365 Copilot.",
+      noneTip: "Relax one condition (for example, get a Copilot license) or combine both types: synced for on-premises data, federated for write actions in a SaaS app.",
+      writeTools: "Not every federated connector exposes write tools. Whether you can create, update or delete data depends on the tools the connector provides; in Copilot, open Settings > Sources and expand Write/Delete tools to see them.",
+      onpremAgent: "Connectors for on-premises systems need the Microsoft Graph connector agent. The partner gallery also lists connectors for on-premises systems such as SharePoint 2013 / 2016 / 2019, Documentum and FileNet.",
+      cloudOnly: "The Explorer's results leave out connectors for self-hosted or on-premises systems. To connect one, change the first question to On-premises system."
+    },
+    next: { overview: "Connectors overview", prereq: "Licensing and prerequisites", gallery: "Microsoft-built connectors gallery", fed: "Federated connectors overview", custom: "Set up custom federated connectors", admin: "Admin-published federated connectors", graph: "Microsoft Graph connectors API" },
+    m: {
+      explore: ty => `Open the Explorer to see matching ${ty} connectors →`,
+      custom: "A system you built yourself usually has no ready-made connector. You can develop one (see Next steps below), or browse the Explorer's gallery for similar systems.",
+      none: "No single type meets all of the conditions. Relax one condition and you'll see connectors that fit."
+    }
+  },
+  lic: {
+    cols: ["License", "Synced: Microsoft Search", "Synced: Copilot grounding and agents", "Federated"],
+    rows: { m365: "Microsoft 365 (any plan)", addon: "Microsoft 365 + Microsoft 365 Copilot add-on", e7: "Microsoft 365 E7", studio: "Microsoft 365 + Copilot Studio license", payg: "Microsoft 365 Copilot pay-as-you-go" },
+    cell: { yes: "✅ Yes", no: "❌ No", agents: "⚠️ Agents only (no Copilot grounding)" },
+    note: "For tenants that already have Microsoft 365 licenses, synced indexing has no extra cost. Semantic search needs at least one Copilot license in the tenant."
+  },
+  news: {
+    k: "What's new", h: "Recent connector developments",
+    lead: "Connector-related Roadmap items. Months are the ones published on the Roadmap; check the official source for exact dates.",
+    asof: d => `Data as of ${d}`,
+    g1: "Launched / rolling out", g2: "In development", roadmap: "View on the Roadmap",
+    status: { launched: "Launched", rolling: "Rolling out", dev: "In development" },
+    target: m => `Roadmap target: ${m}`,
+    items: {
+      fedGa: ["Federated connectors reach general availability", "Preview in December 2025, GA in April 2026: connectors don't index data; they fetch it live at query time."],
+      govern: ["Admins can govern federated connectors in the admin center", "Admins can manage and govern federated connectors in the Microsoft 365 admin center."],
+      custom: ["Admins can create and deploy custom MCP connectors", "Connect internal systems through your own MCP server; currently in preview / Targeted Release."],
+      discover: ["Easier to discover connector sources in Copilot", "Users can more easily find and choose connector content sources in Copilot (including a content source filter)."],
+      write: ["Federated connectors support write, update and delete", "When a connector exposes the tools, users can ask Copilot to create, update or delete data in a third-party system; actions need user approval."],
+      usage: ["Connector usage reports in the admin center", "Admins can review usage of Microsoft 365 Copilot connectors."],
+      selfserve: ["Self-serve sync connectors", "Users sign in with their own account and sync content that is personally relevant; currently Confluence cloud and Jira cloud. Learn marks it as preview for a limited set of customers; the Roadmap status is In development, originally targeting general availability in September 2026."],
+      webhook: ["Fresher content through webhook notifications", "Connectors can reflect source changes faster through webhook notifications. Still in development as of the data date; the Roadmap originally targeted October 2026."]
+    }
+  },
+  src: {
+    k: "Sources", h: "Official documentation",
+    lead: "This page is compiled from the sources below; the originals are authoritative.",
+    list: {
+      overview: "Copilot connectors overview", prereq: "Connector licensing and prerequisites", deploy: "Deploy connectors in the admin center", manage: "Manage connector connections",
+      fed: "Federated connectors overview", manageFed: "Manage federated connector availability", admin: "Admin-published federated connectors",
+      custom: "Set up custom federated connectors", discovery: "Enhance Copilot discovery of connector content", roadmap: "Microsoft 365 Roadmap"
+    },
+    back: "Back to Power of Copilot"
+  },
+  footer: {
+    p1: "This page is compiled from the official documentation as general guidance; actual screens, menu names and available settings are whatever your tenant's admin center shows.",
+    link: "Full sources in the Explorer →"
+  }
+}
+};
+
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// {Copilot > Connectors} marks an admin-center path or setting name
+const fmt = s => esc(s).replace(/\{(.+?)\}/g, '<span class="path">$1</span>');
+const LOC = { "zh-Hant": "zh-tw", "zh-Hans": "zh-cn", en: "en-us" };
+const CONN = "microsoft-365/copilot/connectors/";
+const DOCS = {
+  overview: CONN + "overview",
+  prereq: CONN + "prerequisites",
+  deploy: CONN + "deployment-overview",
+  manage: CONN + "manage-connector",
+  gallery: CONN + "connectors-gallery-microsoft",
+  fed: CONN + "federated-connectors-overview",
+  manageFed: CONN + "manage-federated-connectors",
+  admin: CONN + "admin-published-federated-connectors",
+  custom: CONN + "set-up-custom-federated-connectors",
+  discovery: CONN + "enhance-copilot-discovery",
+  graph: "graph/connecting-external-content-connectors-api-overview"
+};
+const ROADMAP = "https://www.microsoft.com/microsoft-365/roadmap";
+const PHASES = ["plan", "adopt", "setup", "manage"];
+const QORDER = ["where", "fresh", "rw", "who", "lic"];
+const LIC = [["m365", "y", "n", "n"], ["addon", "y", "y", "y"], ["e7", "y", "y", "y"], ["studio", "y", "a", "n"], ["payg", "y", "a", "n"]];
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+let lang = (window.PocLang && window.PocLang.code) || "zh-Hant";
+if (!I18N[lang]) lang = "zh-Hant";
+
+const get = (path, l = lang) => {
+  let v = path.split(".").reduce((o, k) => (o == null ? o : o[k]), I18N[l]);
+  if (v == null && l !== "en") v = get(path, "en");
+  return v;
+};
+const t = (path, ...args) => { const v = get(path); return typeof v === "function" ? v(...args) : v; };
+const learn = tail => "https://learn.microsoft.com/" + LOC[lang] + "/" + tail;
+const fmtMonth = ym => {
+  const [y, m] = ym.split("-").map(Number);
+  return lang === "en" ? MON[m - 1] + " " + y : lang === "zh-Hans" ? y + "年" + m + "月" : y + " 年 " + m + " 月";
+};
+
+function applyStatic() {
+  document.title = t("title");
+  $$("[data-i]").forEach(el => { const v = t(el.dataset.i); if (typeof v === "string") el.innerHTML = v; });
+  $$("[data-f]").forEach(el => { const v = t(el.dataset.f); if (typeof v === "string") el.innerHTML = fmt(v); });
+  $$("[data-i-ph]").forEach(el => { el.placeholder = t(el.dataset.iPh); });
+  $$("[data-i-aria]").forEach(el => { el.setAttribute("aria-label", t(el.dataset.iAria)); });
+  $$(".lang-switch button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  $("#newsAsof").textContent = t("news.asof", DATA.asOf);
+}
+
+function renderTheme() {
+  const dark = document.documentElement.getAttribute("data-theme") === "dark";
+  $("#themeBtn .theme-icon").textContent = dark ? "☀" : "☾";
+  $("#themeBtn .tt-label").textContent = dark ? t("themeToLight") : t("themeToDark");
+  $("#themeBtn").setAttribute("aria-label", dark ? t("themeToLight") : t("themeToDark"));
+}
+
+/* ---------- the four phases ---------- */
+function renderPhases() {
+  $("#phaseList").innerHTML = t("phases.items").map(([no, name, desc], i) =>
+    `<li><a href="#${PHASES[i]}"><span class="no">${esc(no)}</span><b>${esc(name)}</b><span class="d">${esc(desc)}</span></a></li>`).join("");
+  $("#legend").innerHTML = `<span><span class="badge syn">${esc(t("type.s"))}</span> ${esc(t("phases.legendS"))}</span>` +
+    `<span><span class="badge fed">${esc(t("type.f"))}</span> ${esc(t("phases.legendF"))}</span>`;
+}
+
+/* a row per topic, a column per connector type */
+const cellHTML = c => (Array.isArray(c) ? `<ul>${c.map(x => `<li>${fmt(x)}</li>`).join("")}</ul>` : `<p>${fmt(c)}</p>`);
+function renderTable(id, rows, label) {
+  const sub = lang === "en" ? null : n => `<span class="cmp-sub">${n}</span>`;
+  const head = `<div class="cmp-row cmp-head" role="row"><div role="columnheader">${esc(t("topic"))}</div>` +
+    `<div role="columnheader"><span class="badge syn">${esc(t("type.s"))}</span>${sub ? sub("Synced") : ""}</div>` +
+    `<div role="columnheader"><span class="badge fed">${esc(t("type.f"))}</span>${sub ? sub("Federated") : ""}</div></div>`;
+  const body = rows.map(r =>
+    `<div class="cmp-row" role="row"><div class="cmp-label" role="rowheader">${esc(r[0])}</div>` +
+    `<div class="cmp-cell" role="cell" data-col="${esc(t("type.s"))}">${cellHTML(r[1])}</div>` +
+    `<div class="cmp-cell" role="cell" data-col="${esc(t("type.f"))}">${cellHTML(r[2])}</div></div>`).join("");
+  $(id).setAttribute("aria-label", label);
+  $(id).innerHTML = head + body;
+}
+
+const typeBadge = k => `<span class="badge ${k === "s" ? "syn" : "fed"}">${esc(t(k === "s" ? "type.s" : "type.f"))}</span>`;
+
+/* ---------- 1. plan: licence table and the five-question picker ---------- */
+function renderLicense() {
+  const rows = get("lic.rows"), cols = get("lic.cols");
+  const cell = c => c === "y" ? `<span class="yes">${esc(t("lic.cell.yes"))}</span>` : c === "n" ? `<span class="no">${esc(t("lic.cell.no"))}</span>` : `<span>${esc(t("lic.cell.agents"))}</span>`;
+  const head = `<div class="lic-row lic-head" role="row">${cols.map(c => `<div role="columnheader">${esc(c)}</div>`).join("")}</div>`;
+  const body = LIC.map(r => `<div class="lic-row" role="row"><div role="rowheader"><strong>${esc(rows[r[0]])}</strong></div>` +
+    [1, 2, 3].map(i => `<div class="lic-cell" role="cell" data-col="${esc(cols[i])}">${cell(r[i])}</div>`).join("") + `</div>`).join("");
+  $("#licTable").setAttribute("aria-label", t("plan.licH"));
+  $("#licTable").innerHTML = head + body;
+}
+
+const A = {};
+function recommend(a) {
+  let s = true, f = true;
+  const why = [], note = [];
+  if (a.where === "onprem") { f = false; why.push("onprem"); }
+  if (a.fresh === "live") { s = false; why.push("live"); }
+  if (a.rw === "write") { s = false; why.push("write"); }
+  if (a.lic === "m365") { f = false; why.push("licM365"); }
+  if (a.lic === "studio") { f = false; why.push("licStudio"); }
+  let result, both = false;
+  if (!s && !f) result = "none";
+  else if (s && !f) result = "synced";
+  else if (!s && f) result = "federated";
+  else { both = true; result = a.who === "user" ? "federated" : "synced"; why.push(a.who === "user" ? "whoUser" : "whoAdmin"); }
+  if (a.where === "custom") note.push("custom");
+  if (s) {
+    if (a.lic === "m365") note.push("licM365Syn");
+    if (a.lic === "studio") note.push("licStudioSyn");
+  }
+  if (result === "synced") { note.push("syncDelay"); if (a.who === "user") note.push("userSyn"); }
+  if (result === "federated") { note.push("fedNet"); if (a.who === "admin") note.push("adminFed"); }
+  if (result === "none") note.push("noneTip");
+  const links = ["overview", "prereq"];
+  if (s) { links.push("gallery"); if (a.where === "custom") links.push("graph"); }
+  if (f) { links.push("fed"); if (a.where === "custom") links.push("custom"); links.push("admin"); }
+  return { result, both, why, note, links };
+}
+
+// the Explorer views the answers point at: the recommended type first, the other one when both fit
+function targets(a, r) {
+  if (a.where === "custom" || r.result === "none") return [];
+  const kinds = r.both ? (r.result === "synced" ? ["synced", "federated"] : ["federated", "synced"]) : [r.result];
+  return kinds.map(k => ({ kind: k, href: "index.html?type=" + k + "&where=" + a.where + "#gallery" }));
+}
+
+function renderPicker() {
+  const qs = QORDER.map(q => {
+    const qq = get("pk.q." + q);
+    const opts = Object.keys(qq.o).map(k =>
+      `<label class="opt"><input type="radio" name="${q}" value="${k}"${A[q] === k ? " checked" : ""}><span>${esc(qq.o[k][0])}<small>${esc(qq.o[k][1])}</small></span></label>`).join("");
+    return `<fieldset><legend>${esc(qq.t)}</legend><div class="opts">${opts}</div></fieldset>`;
+  }).join("");
+  $("#qs").innerHTML = qs + `<div class="cta qs-actions"><button type="button" class="btn secondary small" id="pkReset">${esc(t("pk.reset"))}</button></div>`;
+  renderResult();
+}
+
+function renderResult() {
+  const el = $("#result");
+  const n = QORDER.filter(q => A[q]).length;
+  if (n < QORDER.length) {
+    el.className = "card result is-empty";
+    el.innerHTML = `<p class="progress">${esc(t("pk.progress", n))}</p><p>${esc(t("pk.empty"))}</p>`;
+    return;
+  }
+  const r = recommend(A);
+  const tg = targets(A, r);
+  const notes = r.note.slice();
+  if (tg.length && r.result === "federated" && A.rw === "write") notes.push("writeTools");
+  if (tg.length && r.result === "synced" && A.where === "onprem") notes.push("onpremAgent");
+  if (tg.length && r.result === "synced" && A.where === "cloud") notes.push("cloudOnly");
+  const list = (head, keys, group) => keys.length ? `<h4>${esc(head)}</h4><ul>${keys.map(k => `<li>${esc(t("pk." + group + "." + k))}</li>`).join("")}</ul>` : "";
+  const name = k => t(k === "synced" ? "type.s" : "type.f");
+  const explore = tg.length
+    ? `<p class="jump">${tg.map((x, i) => `<a class="btn${i ? " secondary" : ""} small" href="${esc(x.href)}">${esc(t("pk.m.explore", name(x.kind)))}</a>`).join(" ")}</p>`
+    : `<p class="no-list">${esc(t(A.where === "custom" ? "pk.m.custom" : "pk.m.none"))}</p>`;
+  el.className = "card result";
+  el.innerHTML = `<p class="progress">${esc(t("pk.progress", n))}</p><h3 class="verdict">${esc(t("pk.verdict." + r.result))}</h3>` +
+    (r.both ? `<p class="note">${esc(t("pk.alsoOk"))}</p>` : "") + explore +
+    list(t("pk.whyH"), r.why, "why") + list(t("pk.noteH"), notes, "note") +
+    `<h4>${esc(t("pk.nextH"))}</h4><div class="links">${r.links.map(k => `<a class="btn secondary small" href="${esc(learn(DOCS[k]))}" target="_blank" rel="noopener">${esc(t("pk.next." + k))}</a>`).join("")}</div>`;
+}
+
+/* ---------- 2. adopt, 3. set up, 4. manage ---------- */
+function renderAdopt() {
+  $("#adoptSteps").innerHTML = t("adopt.steps").map(s => `<li>${fmt(s)}</li>`).join("");
+  const lim = t("adopt.limit");
+  $("#limitPair").innerHTML = ["s", "f"].map((k, i) => `<article class="card">${typeBadge(k)}<p>${fmt(lim[i])}</p></article>`).join("");
+}
+
+function renderSetup() {
+  $("#setupPair").innerHTML = t("setup.cards").map(c => {
+    const groups = c.groups.map(g => (g.h ? `<h3>${esc(g.h)}</h3>` : "") +
+      `<ol class="proc-steps">${g.steps.map(s => `<li>${fmt(s)}</li>`).join("")}</ol>`).join("");
+    return `<article class="card"><div class="card-top">${typeBadge(c.t)}<span class="who">${fmt(c.who)}</span></div>${groups}</article>`;
+  }).join("");
+  $("#d1").innerHTML = t("setup.d1").map(s => `<li>${fmt(s)}</li>`).join("");
+  const pairs = a => a.map(([h, p]) => `<dt>${esc(h)}</dt><dd>${fmt(p)}</dd>`).join("");
+  $("#d2").innerHTML = pairs(t("setup.d2"));
+  $("#d3").innerHTML = pairs(t("setup.d3"));
+}
+
+function renderManage() {
+  renderTable("#manageTable", t("manage.rows"), t("manage.h"));
+  $("#whoList").innerHTML = t("manage.who").map(s => `<li>${esc(s)}</li>`).join("");
+}
+
+function renderNews() {
+  const item = n => {
+    const txt = get("news.items." + n.id);
+    return `<li class="card"><div class="when">${esc(fmtMonth(n.date))}</div><div><h4>${esc(txt[0])}</h4><p>${esc(txt[1])}</p>` +
+      `<div class="row"><span class="badge st-${n.status}">${esc(t("news.status." + n.status))}</span>` +
+      `<a href="${ROADMAP}?searchterms=${n.rm}" target="_blank" rel="noopener">${esc(t("news.roadmap"))} · ${n.rm}</a></div></div></li>`;
+  };
+  const done = DATA.news.filter(n => n.status !== "dev").sort((a, b) => (a.date < b.date ? 1 : -1));
+  const dev = DATA.news.filter(n => n.status === "dev").sort((a, b) => (a.date < b.date ? -1 : 1));
+  $("#tl").innerHTML = `<div class="tl-group"><h3>${esc(t("news.g1"))}</h3><ul class="tl">${done.map(item).join("")}</ul></div>` +
+    `<div class="tl-group"><h3>${esc(t("news.g2"))}</h3><ul class="tl">${dev.map(item).join("")}</ul></div>`;
+}
+
+function renderSources() {
+  const labels = get("src.list");
+  const keys = ["overview", "prereq", "deploy", "manage", "fed", "manageFed", "admin", "custom", "discovery"];
+  $("#srcList").innerHTML = keys.map(k => `<li><a href="${esc(learn(DOCS[k]))}" target="_blank" rel="noopener">${esc(labels[k])}</a></li>`).join("") +
+    `<li><a href="${ROADMAP}" target="_blank" rel="noopener">${esc(labels.roadmap)}</a></li>`;
+}
+
+function renderAll() {
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("data-lang", lang);
+  applyStatic();
+  renderTheme();
+  renderPhases();
+  renderTable("#planTable", t("plan.rows"), t("plan.h"));
+  renderPicker();
+  renderLicense();
+  renderAdopt();
+  renderSetup();
+  renderManage();
+  renderNews();
+  renderSources();
+}
+
+function setLang(l) {
+  if (!I18N[l] || l === lang) return;
+  lang = l;
+  try { window.PocLang && window.PocLang.save(l); } catch (e) { /* storage unavailable */ }
+  renderAll();
+}
+
+$$(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+$("#themeBtn").addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("copilotPortalTheme", next); } catch (e) { /* storage unavailable */ }
+  renderTheme();
+});
+$("#qs").addEventListener("change", e => {
+  if (e.target.name && QORDER.includes(e.target.name)) { A[e.target.name] = e.target.value; renderResult(); }
+});
+$("#qs").addEventListener("click", e => {
+  if (e.target.id === "pkReset") { QORDER.forEach(q => delete A[q]); renderPicker(); }
+});
+
+// a link to #pick, #license, #news... opens the folded block it points at
+function openTarget() {
+  const id = decodeURIComponent(location.hash.replace(/^#/, ""));
+  const el = id && document.getElementById(id);
+  const d = el && (el.tagName === "DETAILS" ? el : el.closest("details"));
+  if (d && !d.open) {
+    d.open = true;
+    // the page just grew; scroll again so the block sits under the sticky bars
+    el.scrollIntoView({ behavior: "auto", block: "start" });
+  }
+}
+window.addEventListener("hashchange", openTarget);
+
+/* highlight the section being read */
+const links = new Map($$(".subnav a").map(a => [a.getAttribute("href").slice(1), a]));
+const markCurrent = a => {
+  links.forEach(x => x.removeAttribute("aria-current"));
+  if (!a) return;
+  a.setAttribute("aria-current", "location");
+  const box = a.parentElement;
+  box.scrollLeft = a.offsetLeft - box.clientWidth / 2 + a.offsetWidth / 2;
+};
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) markCurrent(links.get(en.target.id)); });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  $$("main section.block").forEach(s => io.observe(s));
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) markCurrent([...links.values()].pop());
+    });
+  }, { passive: true });
+}
+
+window.CopilotConnectorPlanner = { recommend, targets };
+renderAll();
+openTarget();
+})();
+
+</script>
+</body>
+</html>
